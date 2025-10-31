@@ -447,3 +447,52 @@ body {
     /* Make main content grow to fill space */
     flex-grow: 1;
 }
+
+/* Styles for the injected exam content */
+#exam-content-container {
+    background-color: var(--card-color);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px; /* Set a max-width for readability */
+    display: none; /* Hidden by default until content loads */
+}
+
+/* This is VERY IMPORTANT:
+Your 1.html, 2.html files likely just contain <img> tags.
+This rule will make sure those images fit the container
+and don't overflow, breaking the page.
+*/
+#exam-content-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes any bottom spacing */
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+/* A simple loading spinner */
+.exam-loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--subtle-text-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 4rem auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error message styling */
+.exam-error {
+    color: #f87171; /* A light red color */
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
