@@ -17,44 +17,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.text(); // Get the HTML content as text
             })
             .then(html => {
-                // --- THIS IS THE FIX ---
+                // --- THIS IS THE NEW FIX ---
+
                 // 3. Parse the fetched text into a new, temporary HTML document
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(html, 'text/html');
 
-                // 4. Create the absolute URL to the *source* file (e.g., .../analysis1/English/1.html)
+                // 4. Get the content from BOTH head and body.
+                // This handles malformed files where content is in the <head>.
+                const headContent = doc.head ? doc.head.innerHTML : '';
+                const bodyContent = doc.body ? doc.body.innerHTML : '';
+                const fullContent = headContent + bodyContent;
+
+                // 5. Inject the combined HTML content
+                contentContainer.innerHTML = fullContent;
+                
+                // 6. NOW, find all images *that were just injected*
+                const images = contentContainer.querySelectorAll('img');
+                
+                // 7. Create the absolute URL to the *source* file (e.g., .../analysis1/English/1.html)
                 // This is the base URL we need to fix relative image paths
                 const sourceFileAbsoluteUrl = new URL(examSrc, window.location.href);
-
-                // 5. Find ALL images in the fetched document (in head or body)
-                const images = doc.querySelectorAll('img');
                 
                 images.forEach(img => {
                     const oldSrc = img.getAttribute('src');
                     if (oldSrc && !oldSrc.startsWith('http') && !oldSrc.startsWith('/')) {
                         // It's a relative path. Resolve it against the *source file's* location.
+                        // e.g., new URL('../1.jpeg', '.../dzmath-exams/analysis1/English/1.html') 
+                        // resolves to: '.../dzmath-exams/analysis1/1.jpeg'
                         const newAbsoluteSrc = new URL(oldSrc, sourceFileAbsoluteUrl.href);
                         img.src = newAbsoluteSrc.href;
+
+                        // Add a simple error handler in case the image *still* 404s
+                        img.onerror = () => {
+                            img.alt = `Error: Image could not be loaded from ${newAbsoluteSrc.pathname}`;
+                            img.style.color = '#f87171';
+                            img.style.border = '2px dashed #f87171';
+                            img.style.padding = '1rem';
+                        };
                     }
                 });
-
-                // 6. Get the content. Check <body> first, then <head> as a fallback.
-                let contentToInject = doc.body.innerHTML;
-                
-                // If body is empty or just whitespace, try the head.
-                if (!contentToInject || /^\s*$/.test(contentToInject)) {
-                    if(doc.head && doc.head.innerHTML) {
-                        contentToInject = doc.head.innerHTML;
-                    }
-                }
-                
-                // 7. Inject the fixed HTML
-                contentContainer.innerHTML = contentToInject;
-                // --- END OF FIX ---
+                // --- END OF NEW FIX ---
 
                 // Set the page title based on the URL
                 try {
-                    const parts = examSrc.split('/'); // ['analysis1', 'English', '1.html']
+                    const parts = examSrc.split('/'); // ['analysis1', 'English',1.html']
                     const subject = parts[0].charAt(0).toUpperCase() + parts[0].slice(1);
                     const examNum = parts[2].split('.')[0];
                     document.title = `${subject} - Exam ${examNum} | DZMATH-EXAMS`;
