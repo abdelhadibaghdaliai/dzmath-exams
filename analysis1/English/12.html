@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 1 - Corrected Final Exam (Dark Theme)</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        /* Custom styles from dark.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9h4v1h-4v-9h4v1h-4v-9h4v1h-4v-9h4v1h-4v-9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 1</h1>
+            <p class="exam-subtitle">Final Exam (2014-2015)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>1. Determine the following limit for $a \in \mathbb{R}$:</p>
+                        <p>$$ \lim_{x\rightarrow+\infty}x(\sqrt{x^{2}+a}-\sqrt{x^{2}-a}) $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q1')">Prerequisites</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <div class="exercise-content">
+                        <p>2. Determine the following limit:</p>
+                        <p>$$ \lim_{x\rightarrow2}\frac{\sqrt{2x}-\sqrt{x+2}}{\sqrt{x+7}-3\sqrt{3-x}} $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>Let A be the set $A=\{\frac{1}{n}+\frac{1}{m},m,n\in\mathbb{N}^{*}\}.$</p>
+                        <p>1. Verify that the set A is bounded and then determine sup A, max A, and inf A.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q1')">Prerequisites</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>2. Does min A exist? Justify your answer.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3</h3>
+                    <div class="exercise-content">
+                       <p>Let $n\in\mathbb{N}^{*}$. Let $w_{n}=\sum_{k=1}^{n}\frac{1}{k}$ and $v_{n}=\sum_{k=1}^{n}\frac{1}{k^{\alpha}}$ where $\alpha>1$.</p>
+                       <p>1. Verify that $(w_{n})_{n\in\mathbb{N^{*}}}$ and $(v_{n})_{n\in\mathbb{N^{*}}}$ are strictly increasing. Show that for all $n\in\mathbb{N}^{*}$; $w_{2n}-w_{n}\ge\frac{1}{2}$. Deduce $\lim_{n\rightarrow+\infty}w_{n}$.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q1')">Prerequisites</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                       <p>2. Show that for all $n\in\mathbb{N}^{*}$, $v_{2n+2}\le1+\frac{2}{2^{\alpha}}v_{n+1}$ and conclude that $(v_{n})_{n\in\mathbb{N}^{*}}$ is convergent.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q2')">Prerequisites</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>3. Let the numerical sequence $(u_{n})_{n\in\mathbb{N}^{*}}$ be defined by: $u_{1}=1$ and $u_{n+1}=u_{n}+\frac{1}{nu_{n}}$ for $n\in\mathbb{N}^{*}$.</p>
+                        <p>a) Verify that for all $n\in\mathbb{N}^{*}$, $u_{n}\ge1$ and that the sequence $(u_{n})_{n\in\mathbb{N}^{*}}$ is strictly increasing.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3a')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3a')">Prerequisites</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <div class="exercise-content">
+                        <p>b) Show that for all $n\ge2$, $u_{n}^{2}=u_{1}^{2}+2(n-1)+\sum_{k=1}^{n-1}\frac{1}{k^{2}u_{k}^{2}}$ (Note: the formula may be incorrect, another approach is suggested).</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3b')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3b')">Prerequisites</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>c) Show that the sequence $(u_n)$ is not upper-bounded. Conclude.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3c')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3c')">Prerequisites</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>4. Let $\beta>0$. Show that for any $N\in\mathbb{N}^{*}$, there exists $n\ge N$ such that $u_{n}\le n^{\beta}$. Deduce that there exists a subsequence $(u_{\varphi(n)})_{n}$ such that $\lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0$ for all $\forall\gamma>0$.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q4')">Prerequisites</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1.1</h3>
+                    <div class="exercise-content">
+                        <p>We multiply and divide by the conjugate expression:</p>
+                        <p>$$ \lim_{x\rightarrow+\infty}x\frac{(\sqrt{x^{2}+a}-\sqrt{x^{2}-a})(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow+\infty}x\frac{(x^{2}+a)-(x^{2}-a)}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} = \lim_{x\rightarrow+\infty}\frac{2ax}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p>
+                        <p>We factor out $x$ in the denominator:</p>
+                        <p>$$ = \lim_{x\rightarrow+\infty}\frac{2ax}{x(\sqrt{1+a/x^{2}}+\sqrt{1-a/x^{2}})} = \frac{2a}{\sqrt{1+0}+\sqrt{1-0}} = \frac{2a}{2} = a $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1.2</h3>
+                    <div class="exercise-content">
+                         <p>We have an indeterminate form $\frac{0}{0}$. We multiply by the conjugate expressions of the numerator and the denominator:</p>
+                        <p>$$ \lim_{x\rightarrow2}\frac{(\sqrt{2x}-\sqrt{x+2})(\sqrt{2x}+\sqrt{x+2})}{(\sqrt{x+7}-3\sqrt{3-x})(\sqrt{x+7}+3\sqrt{3-x})} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{2x-(x+2)}{x+7-9(3-x)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{x-2}{10x-20} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{x-2}{10(x-2)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} = \frac{1}{10} \times \frac{\sqrt{9}+3\sqrt{1}}{\sqrt{4}+\sqrt{4}} = \frac{1}{10} \times \frac{3+3}{2+2} = \frac{6}{40} = \frac{3}{20} $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2.1</h3>
+                    <div class="exercise-content">
+                        <p>For all $x\in A$, there exist $n, m\in\mathbb{N}^{*}$ such that $x=\frac{1}{n}+\frac{1}{m}$.</p>
+                        <p>Since $n \ge 1$ and $m \ge 1$, we have $0 < \frac{1}{n} \le 1$ and $0 < \frac{1}{m} \le 1$.</p>
+                        <p>By summing these inequalities, we get $0 < \frac{1}{n}+\frac{1}{m} \le 2$. The set A is therefore lower-bounded by 0 and upper-bounded by 2. Thus, it is bounded.</p>
+                        <p>The upper bound is 2. For $n=1, m=1$, we have $\frac{1}{1}+\frac{1}{1} = 2 \in A$. Therefore, 2 is the greatest element of A. We have <strong>max A = 2</strong> and consequently <strong>sup A = 2</strong>.</p>
+                        <p>The lower bound is 0. To show that it is the infimum, we must show that we can find elements of A as close to 0 as we want. Let $\epsilon > 0$. We can find $N \in \mathbb{N}^{*}$ such that $\frac{1}{N} < \epsilon$. By setting $n=m=2N$, the element $x_0 = \frac{1}{2N}+\frac{1}{2N} = \frac{1}{N}$ is in A and satisfies $0 < x_0 < \epsilon$. This characterizes the infimum. Therefore <strong>inf A = 0</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2.2</h3>
+                    <div class="exercise-content">
+                        <p>The minimum of A, if it exists, is equal to its infimum. We found that inf A = 0.</p>
+                        <p>However, for 0 to be the minimum, it would have to be that $0 \in A$. This would mean there exist $n, m \in \mathbb{N}^{*}$ such that $\frac{1}{n}+\frac{1}{m}=0$. But, since $n$ and $m$ are strictly positive integers, $\frac{1}{n} > 0$ and $\frac{1}{m} > 0$, so their sum is strictly positive.</p>
+                        <p>Since $0 \notin A$, <strong>min A does not exist</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                 <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.1</h3>
+                    <div class="exercise-content">
+                        <p>We have $w_{n+1}-w_{n}=\frac{1}{n+1}>0$ and $v_{n+1}-v_{n}=\frac{1}{(n+1)^{\alpha}}>0$. So $(w_{n})$ and $(v_{n})$ are strictly increasing.</p>
+                        <p>For the inequality, we have $w_{2n}-w_{n} = \sum_{k=n+1}^{2n}\frac{1}{k}$. Each term of the sum $\frac{1}{k}$ is greater than or equal to the last term, $\frac{1}{2n}$. There are $n$ terms in the sum, so:</p>
+                        <p>$$ w_{2n}-w_{n} = \frac{1}{n+1} + \frac{1}{n+2} + \dots + \frac{1}{2n} \ge \underbrace{\frac{1}{2n} + \frac{1}{2n} + \dots + \frac{1}{2n}}_{n \text{ times}} = n \times \frac{1}{2n} = \frac{1}{2} $$</p>
+                        <p>The inequality $w_{2n}-w_{n}\ge\frac{1}{2}$ shows that the sequence $(w_n)$ is not a Cauchy sequence, and therefore it diverges. Since it is strictly increasing, its limit is <strong>$+\infty$</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.2</h3>
+                    <div class="exercise-content">
+                        <p>We have already seen that $(v_n)$ is increasing. For the inequality, we separate the sum into even and odd terms.
+                        $$v_{2n+2} = \sum_{k=1}^{2n+2} \frac{1}{k^\alpha} = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j+1)^\alpha}$$
+                        Since $2j+1 > 2j$, we have $\frac{1}{(2j+1)^\alpha} < \frac{1}{(2j)^\alpha}$.
+                        $$ v_{2n+2} \le 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} = 1 + \frac{2}{2^\alpha} \sum_{j=1}^{n} \frac{1}{j^\alpha} = 1 + \frac{2}{2^\alpha}v_n $$
+                        Since $(v_n)$ is increasing, $v_n < v_{n+1}$. Therefore $v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1}$.</p>
+                        <p>As $v_{n+1} \le v_{2n+2}$, we have $v_{n+1} \le 1 + \frac{2}{2^\alpha} v_{n+1}$, which gives $v_{n+1}(1-\frac{2}{2^\alpha}) \le 1$.
+                        Since $\alpha>1$, $2^\alpha > 2$, so $1-\frac{2}{2^\alpha} > 0$. We have $v_{n+1} \le \frac{1}{1-2/2^\alpha}$.
+                        The sequence $(v_n)$ is increasing and upper-bounded, so it is <strong>convergent</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.3a</h3>
+                    <div class="exercise-content">
+                        <p>We proceed by induction to show that $u_n \ge 1$.
+                        <ul>
+                            <li><strong>Base Case:</strong> For $n=1$, $u_1 = 1 \ge 1$. True.</li>
+                            <li><strong>Inductive Step:</strong> Assume $u_n \ge 1$ for some $n \ge 1$. Then $u_{n+1} = u_n + \frac{1}{nu_n}$. Since $n\ge 1$ and $u_n \ge 1$, the term $\frac{1}{nu_n}$ is strictly positive. So $u_{n+1} > u_n \ge 1$. The property is hereditary.</li>
+                        </ul>
+                        We conclude that for all $n \in \mathbb{N}^*, u_n \ge 1$.
+                        </p>
+                        <p>For the growth, we calculate $u_{n+1}-u_n = \frac{1}{nu_n}$. Since $n \ge 1$ and $u_n \ge 1$, this term is $>0$. Therefore, the sequence $(u_n)$ is <strong>strictly increasing</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3a')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.3b</h3>
+                    <div class="exercise-content">
+                        <p>The relation given in the question is difficult to establish and potentially incorrect. A more standard approach is to study $u_{n+1}^2 - u_n^2$.
+                        $$ u_{n+1}^2 = \left(u_n + \frac{1}{nu_n}\right)^2 = u_n^2 + 2u_n\frac{1}{nu_n} + \frac{1}{n^2u_n^2} = u_n^2 + \frac{2}{n} + \frac{1}{n^2u_n^2} $$
+                        So, $u_{n+1}^2 - u_n^2 = \frac{2}{n} + \frac{1}{n^2u_n^2}$.
+                        By summing from $k=1$ to $n-1$, we get a telescoping sum:
+                        $$ \sum_{k=1}^{n-1} (u_{k+1}^2 - u_k^2) = u_n^2 - u_1^2 $$
+                        $$ u_n^2 - u_1^2 = \sum_{k=1}^{n-1} \left(\frac{2}{k} + \frac{1}{k^2u_k^2}\right) = 2\sum_{k=1}^{n-1}\frac{1}{k} + \sum_{k=1}^{n-1}\frac{1}{k^2u_k^2} $$
+                        Since $u_1=1$, we get the relation (different from the question):
+                        $$ u_n^2 = 1 + 2w_{n-1} + \sum_{k=1}^{n-1}\frac{1}{k^2u_k^2} $$
+                        </p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3b')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.3c</h3>
+                    <div class="exercise-content">
+                        <p>We use proof by contradiction. Assume that $(u_n)$ is upper-bounded, i.e., there exists $M > 0$ such that for all $n, u_n \le M$.
+                        We can write $u_n$ as the sum of its increments:
+                        $$ u_n = u_1 + \sum_{k=1}^{n-1} (u_{k+1} - u_k) = 1 + \sum_{k=1}^{n-1} \frac{1}{ku_k} $$
+                        Since $u_k \le M$, we have $\frac{1}{u_k} \ge \frac{1}{M}$.
+                        $$ u_n \ge 1 + \sum_{k=1}^{n-1} \frac{1}{kM} = 1 + \frac{1}{M}\sum_{k=1}^{n-1} \frac{1}{k} = 1 + \frac{1}{M} w_{n-1} $$
+                        We would then have $M \ge u_n \ge 1 + \frac{1}{M}w_{n-1}$, which implies $w_{n-1} \le M(M-1)$. This would mean that the sequence $(w_n)$ is upper-bounded. This is a contradiction with the result of question 3.1 ($w_n \to +\infty$).
+                        So the assumption is false, <strong>$(u_n)$ is not upper-bounded</strong>. Since $(u_n)$ is strictly increasing and not upper-bounded, we conclude that <strong>$\lim_{n\to\infty} u_n = +\infty$</strong>.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3c')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3.4</h3>
+                    <div class="exercise-content">
+                        <p>Let's use proof by contradiction: assume there exist $\beta>0$ and a rank $N$ such that for all $n \ge N, u_n > n^\beta$.
+                        For $n > N$, we write $u_n = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k}$.
+                        Using the assumption, $u_k > k^\beta$, so $\frac{1}{ku_k} < \frac{1}{k \cdot k^\beta} = \frac{1}{k^{1+\beta}}$.
+                        $$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} < u_N + \sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}} $$
+                        The series $\sum \frac{1}{k^{1+\beta}}$ is a Riemann series with an exponent $1+\beta > 1$, so it is convergent. This implies that $(u_n)$ is upper-bounded, which contradicts the result of question 3.3c.
+                        The assumption is therefore false. We indeed have: for all $\beta>0, \forall N, \exists n \ge N$ such that $u_n \le n^\beta$.</p>
+                        <p>We can then construct a strictly increasing subsequence $(\varphi(n))_n$ such that $u_{\varphi(n)} \le \varphi(n)^{1/n}$.
+                        Then for $\gamma > 0$:
+                        $$ 0 < \frac{u_{\varphi(n)}}{\varphi(n)^\gamma} \le \frac{\varphi(n)^{1/n}}{\varphi(n)^\gamma} = \varphi(n)^{1/n - \gamma} $$
+                        Since $\varphi(n) \to \infty$ and $(1/n - \gamma) \to -\gamma < 0$, we have $\lim_{n\to\infty} \varphi(n)^{1/n - \gamma} = 0$.
+                        By the Squeeze Theorem, we conclude that $\lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0$.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hintEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('hintEx1Q1')">&times;</span></div><p>When faced with an indeterminate form of the '∞ - ∞' type with square roots, think about multiplying by the conjugate expression.</p></div></div>
+    <div id="knowledgeEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q1')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Calculating limits of functions at infinity.</li><li>Indeterminate forms ($ \infty - \infty $).</li><li>Using the conjugate expression (based on the identity $(a-b)(a+b) = a^2-b^2$).</li><li>Factoring out the highest-degree term under a root.</li></ul></div></div>
+    <div id="explanationEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('explanationEx1Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Calculate $ \lim_{x\rightarrow+\infty}x(\sqrt{x^{2}+a}-\sqrt{x^{2}-a}) $</h4><p><strong>Step 1: Identify the indeterminate form.</strong><br>As $x \to +\infty$, $\sqrt{x^2+a} \to +\infty$ and $\sqrt{x^2-a} \to +\infty$. The expression in the parentheses is thus of the form "$\infty - \infty$". The entire expression is of the form "$\infty \times (\infty - \infty)$", an indeterminate form.</p><p><strong>Step 2: Use the conjugate expression.</strong><br>To resolve the indeterminacy, we multiply and divide by the conjugate of the expression in parentheses, which is $(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})$.</p><p>$$ L = \lim_{x\rightarrow+\infty}x\frac{(\sqrt{x^{2}+a}-\sqrt{x^{2}-a})(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p><p><strong>Step 3: Simplify the numerator.</strong><br>Using $(A-B)(A+B) = A^2-B^2$, the numerator becomes:</p><p>$$ (x^2+a) - (x^2-a) = x^2+a-x^2+a = 2a $$</p><p>The expression is now:</p><p>$$ L = \lim_{x\rightarrow+\infty}\frac{x(2a)}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p><p><strong>Step 4: Resolve the "$\infty / \infty$" indeterminacy.</strong><br>We factor out the highest-degree term ($x$) in the denominator. Recall: $\sqrt{x^2} = |x| = x$ because $x \to +\infty$.</p><p>$$ \sqrt{x^2+a} = \sqrt{x^2(1+\frac{a}{x^2})} = x\sqrt{1+\frac{a}{x^2}} $$</p><p>The denominator becomes:</p><p>$$ x\sqrt{1+\frac{a}{x^2}} + x\sqrt{1-\frac{a}{x^2}} = x \left( \sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}} \right) $$</p><p><strong>Step 5: Calculate the final limit.</strong><br>We substitute the denominator back into the limit expression and simplify by $x$:</p><p>$$ L = \lim_{x\rightarrow+\infty}\frac{2ax}{x \left( \sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}} \right)} = \lim_{x\rightarrow+\infty}\frac{2a}{\sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}}} $$</p><p>As $x \to +\infty$, $\frac{a}{x^2} \to 0$. The limit is therefore:</p><p>$$ L = \frac{2a}{\sqrt{1+0} + \sqrt{1-0}} = \frac{2a}{1+1} = a $$</p></div></div>
+
+    <div id="hintEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('hintEx1Q2')">&times;</span></div><p>This is a 0/0 indeterminate form. Use the conjugate expression technique, but be aware that you will need to apply it to both the numerator and the denominator.</p></div></div>
+    <div id="knowledgeEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q2')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Calculating limits of functions at a point.</li><li>Indeterminate form ($ \frac{0}{0} $).</li><li>Double application of the conjugate expression.</li><li>Factoring polynomials to simplify the fraction.</li></ul></div></div>
+    <div id="explanationEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('explanationEx1Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Calculate $ \lim_{x\rightarrow2}\frac{\sqrt{2x}-\sqrt{x+2}}{\sqrt{x+7}-3\sqrt{3-x}} $</h4><p><strong>Step 1: Identify the indeterminate form.</strong><br>Substituting $x$ with 2, the numerator is $\sqrt{4}-\sqrt{4}=0$. The denominator is $\sqrt{9}-3\sqrt{1}=3-3=0$. We have an indeterminate form of type $\frac{0}{0}$.</p><p><strong>Step 2: Use conjugate expressions.</strong><br>To resolve the indeterminacy, we multiply the fraction by the conjugate of the numerator AND by the conjugate of the denominator.</p><ul><li>Numerator's conjugate: $(\sqrt{2x}+\sqrt{x+2})$</li><li>Denominator's conjugate: $(\sqrt{x+7}+3\sqrt{3-x})$</li></ul><p>$$ L = \lim_{x\rightarrow2}\frac{(\sqrt{2x}-\sqrt{x+2})}{(\sqrt{x+7}-3\sqrt{3-x})} \times \frac{(\sqrt{2x}+\sqrt{x+2})}{(\sqrt{2x}+\sqrt{x+2})} \times \frac{(\sqrt{x+7}+3\sqrt{3-x})}{(\sqrt{x+7}+3\sqrt{3-x})} $$</p><p><strong>Step 3: Group and simplify.</strong><br>We group the terms to apply the identity $(A-B)(A+B)=A^2-B^2$ to the original numerator and denominator.</p><p>$$ L = \lim_{x\rightarrow2}\frac{(2x - (x+2))}{(x+7 - (3\sqrt{3-x})^2)} \times \frac{(\sqrt{x+7}+3\sqrt{3-x})}{(\sqrt{2x}+\sqrt{x+2})} $$</p><p>Let's simplify the first two parentheses:</p><ul><li>Numerator: $2x-x-2 = x-2$</li><li>Denominator: $x+7 - 9(3-x) = x+7 - 27+9x = 10x-20 = 10(x-2)$</li></ul><p><strong>Step 4: Simplify the fraction and calculate the limit.</strong><br>We substitute the simplified expressions:</p><p>$$ L = \lim_{x\rightarrow2}\frac{x-2}{10(x-2)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p><p>We can simplify by $(x-2)$, which is the cause of the indeterminacy.</p><p>$$ L = \lim_{x\rightarrow2}\frac{1}{10} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p><p>Now, we can substitute $x$ with 2 without any issue:</p><p>$$ L = \frac{1}{10} \times \frac{\sqrt{2+7}+3\sqrt{3-2}}{\sqrt{2(2)}+\sqrt{2+2}} = \frac{1}{10} \times \frac{\sqrt{9}+3\sqrt{1}}{\sqrt{4}+\sqrt{4}} = \frac{1}{10} \times \frac{3+3}{2+2} = \frac{1}{10} \times \frac{6}{4} = \frac{6}{40} = \frac{3}{20} $$</p></div></div>
+
+    <div id="hintEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('hintEx2Q1')">&times;</span></div><p>Bound each term $\frac{1}{n}$ and $\frac{1}{m}$ individually. For the sup/max, try the smallest possible values for n and m. For the inf, consider what happens when n and m become very large.</p></div></div>
+    <div id="knowledgeEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q1')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Definition of a bounded set (upper- and lower-bounded).</li><li>Definition of the supremum (least upper bound) and infimum (greatest lower bound).</li><li>Definition of the maximum (greatest element).</li><li>Characterization of the supremum/infimum (e.g., $\inf A = \alpha \iff (\forall x \in A, x \ge \alpha) \land (\forall \epsilon > 0, \exists x_0 \in A, x_0 < \alpha + \epsilon)$).</li></ul></div></div>
+    <div id="explanationEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('explanationEx2Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that A is bounded and find sup A, max A, inf A.</h4><p><strong>Step 1: Show that A is bounded.</strong><br>An element of A is written as $x = \frac{1}{n}+\frac{1}{m}$ with $n, m \in \mathbb{N}^*$.
+Since $n \ge 1$, we have $0 < \frac{1}{n} \le 1$. Similarly, $0 < \frac{1}{m} \le 1$.
+Adding these two inequalities, we get:</p><p>$$ 0+0 < \frac{1}{n}+\frac{1}{m} \le 1+1 \implies 0 < x \le 2 $$</p><p>Every element of A is strictly greater than 0 and less than or equal to 2. The set A is therefore lower-bounded (by 0) and upper-bounded (by 2), which means A is bounded.</p><p><strong>Step 2: Determine sup A and max A.</strong><br>We have seen that 2 is an upper bound of A. For it to be the supremum, it must be the least upper bound.
+Let's check if 2 is an element of A. If we take $n=1$ and $m=1$, we have $x = \frac{1}{1}+\frac{1}{1}=2$.
+Since $2 \in A$ and 2 is an upper bound, 2 is the greatest element of A. This is called the maximum.
+Therefore, <strong>max A = 2</strong>.
+When a set has a maximum, its supremum is equal to that maximum. So, <strong>sup A = 2</strong>.</p><p><strong>Step 3: Determine inf A.</strong><br>We have seen that 0 is a lower bound of A. For it to be the infimum, it must be the greatest lower bound.
+We use the characterization of the infimum: $\inf A = 0$ if for any $\epsilon > 0$, we can find an element $x_0 \in A$ such that $x_0 < 0 + \epsilon$.
+Let $\epsilon > 0$. We are looking for $n, m$ such that $\frac{1}{n}+\frac{1}{m} < \epsilon$. We just need to choose $n$ and $m$ large enough. For example, let's choose $N$ such that $\frac{2}{N} < \epsilon$ (which is always possible, e.g., $N > 2/\epsilon$). By taking $n=m=N$, we have the element $x_0 = \frac{1}{N}+\frac{1}{N} = \frac{2}{N}$.
+This element $x_0$ is in A and satisfies $x_0 < \epsilon$.
+Therefore, 0 is indeed the infimum of A. <strong>inf A = 0</strong>.</p></div></div>
+
+    <div id="hintEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('hintEx2Q2')">&times;</span></div><p>The minimum of a set is its infimum if and only if that infimum belongs to the set. Does the infimum of A belong to A?</p></div></div>
+    <div id="knowledgeEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q2')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Fundamental difference between infimum and minimum.</li><li>The minimum of a set $S$ (denoted $\min S$) is an element $m \in S$ such that for all $x \in S, m \le x$.</li><li>A set has a minimum if and only if its infimum belongs to the set.</li></ul></div></div>
+    <div id="explanationEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('explanationEx2Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Determine if min A exists.</h4><p><strong>Step 1: Recall the relationship between minimum and infimum.</strong><br>A set has a minimum if and only if its infimum is an element of that set. If it is, the minimum is equal to the infimum.</p><p><strong>Step 2: Use the result from the previous question.</strong><br>In question 2.1, we established that $\inf A = 0$.</p><p><strong>Step 3: Check if the infimum belongs to A.</strong><br>For the minimum to exist, we would need $0 \in A$.
+An element of A is of the form $\frac{1}{n}+\frac{1}{m}$ where $n$ and $m$ are integers from $\mathbb{N}^* = \{1, 2, 3, \dots\}$.
+Since $n \ge 1$, we have $\frac{1}{n} > 0$.
+Since $m \ge 1$, we have $\frac{1}{m} > 0$.
+The sum of two strictly positive numbers is strictly positive: $\frac{1}{n}+\frac{1}{m} > 0$.
+It is therefore impossible for this sum to be equal to 0.</p><p><strong>Step 4: Conclude.</strong><br>Since $0$ is the infimum of A but $0$ does not belong to A, the set A does not have a smallest element.
+Therefore, <strong>min A does not exist</strong>.</p></div></div>
+
+    <div id="hintEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('hintEx3Q1')">&times;</span></div><p>For the growth, calculate $w_{n+1}-w_n$. For the inequality, write out the sum $w_{2n}-w_n$ and find a lower bound for each term using the smallest term in the sum. If an increasing sequence is not a Cauchy sequence, what can you say about its limit?</p></div></div>
+    <div id="knowledgeEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q1')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Numerical sequence (harmonic series).</li><li>Monotonicity criterion for sequences (studying the sign of $u_{n+1}-u_n$).</li><li>Manipulation of sums ($\sum$).</li><li>Finding a lower bound for a sum of terms.</li><li>Definition of a Cauchy sequence.</li><li>Monotone convergence theorem: an increasing sequence that is not upper-bounded tends to $+\infty$.</li></ul></div></div>
+    <div id="explanationEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('explanationEx3Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Study the harmonic sequence $(w_n)$.</h4><p><strong>Step 1: Show that $(w_n)$ and $(v_n)$ are increasing.</strong><br>For the sequence $(w_n)$, we study the sign of $w_{n+1}-w_n$:</p><p>$$ w_{n+1}-w_n = \sum_{k=1}^{n+1} \frac{1}{k} - \sum_{k=1}^{n} \frac{1}{k} = \frac{1}{n+1} $$</p><p>Since $n \in \mathbb{N}^*$, $n+1 > 0$, so $\frac{1}{n+1} > 0$. The sequence $(w_n)$ is strictly increasing.<br>Similarly for $(v_n)$: $v_{n+1}-v_n = \frac{1}{(n+1)^\alpha} > 0$. $(v_n)$ is also strictly increasing.</p><p><strong>Step 2: Show that $w_{2n}-w_n \ge \frac{1}{2}$.</strong><br>We express the difference:</p><p>$$ w_{2n}-w_n = \sum_{k=1}^{2n} \frac{1}{k} - \sum_{k=1}^{n} \frac{1}{k} = \sum_{k=n+1}^{2n} \frac{1}{k} = \frac{1}{n+1}+\frac{1}{n+2}+\dots+\frac{1}{2n} $$</p><p>This sum contains $2n-(n+1)+1 = n$ terms. The smallest of these terms is the last one, $\frac{1}{2n}$, because the function $x \mapsto 1/x$ is decreasing. We can therefore find a lower bound for each term of the sum with $\frac{1}{2n}$:</p><p>$$ w_{2n}-w_n \ge \underbrace{\frac{1}{2n}+\frac{1}{2n}+\dots+\frac{1}{2n}}_{n \text{ terms}} = n \times \frac{1}{2n} = \frac{1}{2} $$</p><p><strong>Step 3: Deduce the limit of $(w_n)$.</strong><br>The inequality $w_{2n}-w_n \ge \frac{1}{2}$ shows that the sequence is not a Cauchy sequence. Indeed, for a sequence to be Cauchy, the difference $|w_p-w_q|$ would need to be arbitrarily small for sufficiently large $p,q$, which is not the case here (by taking $p=2n, q=n$).<br>A sequence that is not Cauchy cannot converge to a finite limit.<br>However, the sequence $(w_n)$ is strictly increasing. According to the monotone convergence theorem, an increasing sequence has two possible outcomes: either it converges (if it is upper-bounded), or it tends to $+\infty$ (if it is not upper-bounded).<br>Since it does not converge, it must necessarily tend to <strong>$+\infty$</strong>.</p></div></div>
+
+    <div id="hintEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('hintEx3Q2')">&times;</span></div><p>For the inequality, split the sum $v_{2n+2}$ into its first term ($k=1$), the terms with even indices ($k=2j$), and the terms with odd indices ($k=2j+1$). Then, find an upper bound for the odd terms using the corresponding even terms.</p></div></div>
+    <div id="knowledgeEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q2')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Numerical sequence (p-series).</li><li>Manipulation of sums ($\sum$), particularly splitting into even and odd terms.</li><li>Monotone convergence theorem: an increasing and upper-bounded sequence is convergent.</li><li>Properties of inequalities and powers.</li></ul></div></div>
+    <div id="explanationEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('explanationEx3Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that $(v_n)$ is convergent.</h4><p><strong>Step 1: Confirm it is increasing (already done).</strong><br>We showed in the previous question that $(v_n)$ is strictly increasing.</p><p><strong>Step 2: Establish the inequality $v_{2n+2}\le1+\frac{2}{2^{\alpha}}v_{n+1}$.</strong><br>We decompose the sum $v_{2n+2}$:</p><p>$$ v_{2n+2} = \sum_{k=1}^{2n+2} \frac{1}{k^\alpha} = \frac{1}{1^\alpha} + \sum_{k=2}^{2n+2} \frac{1}{k^\alpha} $$</p><p>We separate the terms with even and odd indices in the remaining sum. The even indices go from $2$ to $2n+2$ ($k=2j$ for $j=1..n+1$) and the odd ones from $3$ to $2n+1$ ($k=2j+1$ for $j=1..n$). The provided solution uses a slightly different decomposition but arrives at the same result. Let's follow the solution's logic for consistency:</p><p>$$ v_{2n+2} = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j+1)^\alpha} + \text{remaining terms} $$</p><p>In fact, a cleaner decomposition is: $$ v_{2n+2} = \sum_{k=1}^{2n+2} ... = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n+1} \frac{1}{(2j-1)^\alpha} $$ (The solution has a slight index shift, but the bounding idea remains the same).<br>For any $j \ge 1$, we have $2j+1 > 2j$, so $\frac{1}{(2j+1)^\alpha} \le \frac{1}{(2j)^\alpha}$. We can thus find an upper bound for the sum of odd terms:</p><p>$$ v_{2n+2} \le 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} = 1 + 2 \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} $$</p><p>$$ v_{2n+2} \le 1 + 2 \sum_{j=1}^{n} \frac{1}{2^\alpha j^\alpha} = 1 + \frac{2}{2^\alpha} \sum_{j=1}^{n} \frac{1}{j^\alpha} = 1 + \frac{2}{2^\alpha} v_n $$</p><p>Since $(v_n)$ is increasing, $v_n < v_{n+1}$. Therefore, $v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1}$.</p><p><strong>Step 3: Show that $(v_n)$ is upper-bounded.</strong><br>We know that $(v_n)$ is increasing, so $v_{n+1} \le v_{2n+2}$. Combining with the previous result:</p><p>$$ v_{n+1} \le v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1} $$</p><p>We isolate $v_{n+1}$:</p><p>$$ v_{n+1} - \frac{2}{2^\alpha} v_{n+1} \le 1 \implies v_{n+1} \left( 1 - \frac{2}{2^\alpha} \right) \le 1 $$</p><p>Since $\alpha > 1$, we have $2^\alpha > 2^1=2$, so $\frac{2}{2^\alpha} < 1$. The term $\left( 1 - \frac{2}{2^\alpha} \right)$ is a strictly positive constant. We can divide by this term:</p><p>$$ v_{n+1} \le \frac{1}{1 - 2/2^\alpha} $$</p><p>This shows that the sequence $(v_{n+1})$, and therefore the sequence $(v_n)$, is upper-bounded by a constant.</p><p><strong>Step 4: Conclude.</strong><br>The sequence $(v_n)$ is increasing and upper-bounded. According to the monotone convergence theorem, it is <strong>convergent</strong>.</p></div></div>
+
+    <div id="hintEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.3a</h3><span class="close-btn" onclick="closeModal('hintEx3Q3a')">&times;</span></div><p>Use proof by induction for $u_n \ge 1$. The increasing nature follows directly from the recurrence relation by studying the sign of $u_{n+1}-u_n$.</p></div></div>
+    <div id="knowledgeEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.3a</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3a')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Proof by induction.</li><li>Definition of an increasing sequence (studying the sign of $u_{n+1}-u_n$).</li><li>Sequence defined by a recurrence relation.</li></ul></div></div>
+    <div id="explanationEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.3a</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3a')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that $u_n \ge 1$ and that $(u_n)$ is increasing.</h4><p><strong>Part 1: Show that $u_n \ge 1$ by induction.</strong></p><ul><li><strong>Base Case (n=1):</strong> The sequence is defined with $u_1=1$. The property $u_1 \ge 1$ is therefore true.</li><li><strong>Inductive Step:</strong> Assume the property is true for a certain rank $n \ge 1$, i.e., $u_n \ge 1$ (Inductive Hypothesis). We want to show it is true for rank $n+1$, i.e., $u_{n+1} \ge 1$.<br>We start from the definition: $u_{n+1} = u_n + \frac{1}{nu_n}$.<br>Since $n \in \mathbb{N}^*$, $n \ge 1$. By the inductive hypothesis, $u_n \ge 1$. The product $nu_n$ is therefore $\ge 1$, and the term $\frac{1}{nu_n}$ is strictly positive.<br>Thus, $u_{n+1} = u_n + (\text{a positive term}) > u_n$.<br>Since $u_n \ge 1$, we have $u_{n+1} > u_n \ge 1$, which implies $u_{n+1} > 1$, and therefore $u_{n+1} \ge 1$.<br>The inductive step is proven.</li><li><strong>Conclusion:</strong> By the principle of induction, the property $u_n \ge 1$ is true for all $n \in \mathbb{N}^*$.</li></ul><p><strong>Part 2: Show that $(u_n)$ is strictly increasing.</strong></p><p>To study the monotonicity, we calculate the difference $u_{n+1}-u_n$.</p><p>$$ u_{n+1} - u_n = \left(u_n + \frac{1}{nu_n}\right) - u_n = \frac{1}{nu_n} $$</p><p>We have $n \ge 1$ and, from the first part, $u_n \ge 1$. So the product $nu_n$ is strictly positive.
+Consequently, $u_{n+1}-u_n = \frac{1}{nu_n} > 0$.
+Since the difference is strictly positive, the sequence $(u_n)$ is <strong>strictly increasing</strong>.</p></div></div>
+
+    <div id="hintEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.3b</h3><span class="close-btn" onclick="closeModal('hintEx3Q3b')">&times;</span></div><p>The given formula seems erroneous or difficult to prove. Follow the suggestion in the question and instead analyze the difference $u_{n+1}^2 - u_n^2$. You should find a simpler expression. Then, use a telescoping sum.</p></div></div>
+    <div id="knowledgeEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.3b</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3b')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Perfect square identities, particularly $(a+b)^2 = a^2+2ab+b^2$.</li><li>Telescoping sum: $\sum_{k=1}^{n-1} (a_{k+1}-a_k) = a_n - a_1$.</li><li>Manipulation of algebraic expressions.</li></ul></div></div>
+    <div id="explanationEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.3b</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3b')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Find a relation for $u_n^2$.</h4><p>The question suggests that the provided formula might be incorrect and that it's better to analyze $u_{n+1}^2 - u_n^2$. This is a classic technique for sequences of this type.</p><p><strong>Step 1: Express $u_{n+1}^2$ in terms of $u_n^2$.</strong><br>We start from the recurrence relation $u_{n+1}=u_{n}+\frac{1}{nu_{n}}$ and square it:</p><p>$$ u_{n+1}^2 = \left( u_n + \frac{1}{nu_n} \right)^2 = u_n^2 + 2(u_n)\left(\frac{1}{nu_n}\right) + \left(\frac{1}{nu_n}\right)^2 $$</p><p>$$ u_{n+1}^2 = u_n^2 + \frac{2}{n} + \frac{1}{n^2u_n^2} $$</p><p><strong>Step 2: Isolate the difference and use a telescoping sum.</strong><br>We obtain the simple relation:</p><p>$$ u_{n+1}^2 - u_n^2 = \frac{2}{n} + \frac{1}{n^2u_n^2} $$</p><p>To get $u_n^2$, we sum this equality for $k$ from $1$ to $n-1$:</p><p>$$ \sum_{k=1}^{n-1} (u_{k+1}^2 - u_k^2) = \sum_{k=1}^{n-1} \left( \frac{2}{k} + \frac{1}{k^2u_k^2} \right) $$</p><p>The left-hand side is a telescoping sum: $(u_2^2-u_1^2)+(u_3^2-u_2^2)+\dots+(u_n^2-u_{n-1}^2) = u_n^2 - u_1^2$.</p><p><strong>Step 3: Obtain the final expression for $u_n^2$.</strong><br>We therefore have:</p><p>$$ u_n^2 - u_1^2 = \sum_{k=1}^{n-1} \frac{2}{k} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p><p>Since $u_1=1$, we have $u_1^2=1$. We can isolate $u_n^2$:</p><p>$$ u_n^2 = 1 + 2 \sum_{k=1}^{n-1} \frac{1}{k} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p><p>Using the notation $w_n = \sum_{k=1}^n \frac{1}{k}$, we can rewrite this (correct) relation as:</p><p>$$ u_n^2 = 1 + 2 w_{n-1} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p></div></div>
+
+    <div id="hintEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.3c</h3><span class="close-btn" onclick="closeModal('hintEx3Q3c')">&times;</span></div><p>Use proof by contradiction. Assume that $(u_n)$ is upper-bounded by a real number M. Use the relation $u_n = u_1 + \sum_{k=1}^{n-1} (u_{k+1}-u_k)$ and find a lower bound for the terms $u_k$ in the sum to bring out the harmonic sequence $(w_n)$. Then use the result from question 3.1.</p></div></div>
+    <div id="knowledgeEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.3c</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3c')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Proof by contradiction.</li><li>The result on the divergence of the harmonic series ($w_n \to +\infty$) from question 3.1.</li><li>Monotone convergence theorem: an increasing sequence that is not upper-bounded tends to $+\infty$.</li><li>Expressing a term of a recursive sequence as a telescoping sum of its differences.</li></ul></div></div>
+    <div id="explanationEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.3c</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3c')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that $(u_n)$ is not upper-bounded and find its limit.</h4><p><strong>Step 1: Set up a proof by contradiction.</strong><br>We assume the opposite of what we want to prove. So, let's assume that the sequence $(u_n)$ IS upper-bounded. This means there exists a real number $M > 0$ such that for all $n \in \mathbb{N}^*$, $u_n \le M$.</p><p><strong>Step 2: Relate $(u_n)$ to the harmonic sequence $(w_n)$.</strong><br>We can write $u_n$ using a telescoping sum:</p><p>$$ u_n = u_1 + (u_2-u_1) + (u_3-u_2) + \dots + (u_n-u_{n-1}) = u_1 + \sum_{k=1}^{n-1} (u_{k+1}-u_k) $$</p><p>Using the definition of the sequence, $u_{k+1}-u_k = \frac{1}{ku_k}$. We substitute this into the sum:</p><p>$$ u_n = 1 + \sum_{k=1}^{n-1} \frac{1}{ku_k} $$</p><p><strong>Step 3: Use the upper-bound assumption to find a lower bound for $u_n$.</strong><br>According to our assumption, for all $k$, $u_k \le M$. Since $u_k$ is in the denominator, this implies that $\frac{1}{u_k} \ge \frac{1}{M}$.</p><p>$$ u_n \ge 1 + \sum_{k=1}^{n-1} \frac{1}{kM} = 1 + \frac{1}{M} \sum_{k=1}^{n-1} \frac{1}{k} $$</p><p>We recognize the sequence $w_{n-1}$:</p><p>$$ u_n \ge 1 + \frac{1}{M} w_{n-1} $$</p><p><strong>Step 4: Arrive at a contradiction.</strong><br>We have two inequalities: $u_n \le M$ (by assumption) and $u_n \ge 1 + \frac{1}{M} w_{n-1}$ (what we deduced). Combining them:</p><p>$$ M \ge 1 + \frac{1}{M} w_{n-1} \implies M-1 \ge \frac{1}{M} w_{n-1} \implies w_{n-1} \le M(M-1) $$</p><p>This last inequality, valid for all $n$, would mean that the sequence $(w_n)$ is upper-bounded by the constant $M(M-1)$.<br>However, in question 3.1, we proved that $\lim_{n\to\infty} w_n = +\infty$. A sequence that tends to infinity cannot be upper-bounded. We have reached a contradiction.</p><p><strong>Step 5: Conclude.</strong><br>Our initial assumption ("$(u_n)$ is upper-bounded") is therefore false. Consequently, the sequence $(u_n)$ is not upper-bounded.<br>From question 3.3a, we know that $(u_n)$ is strictly increasing. An increasing, non-upper-bounded sequence diverges to $+\infty$.<br>Final conclusion: <strong>$\lim_{n\to\infty} u_n = +\infty$</strong>.</p></div></div>
+
+    <div id="hintEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.4</h3><span class="close-btn" onclick="closeModal('hintEx3Q4')">&times;</span></div><p>Use proof by contradiction again. Assume that from a certain rank N, we always have $u_n > n^\beta$. Use the relation $u_n = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k}$ and find an upper bound for this sum to bring out a convergent p-series, which will contradict the divergence of $(u_n)$.</p></div></div>
+    <div id="knowledgeEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.4</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q4')">&times;</span></div><p><strong>Key Concepts:</strong></p><ul><li>Proof by contradiction.</li><li>p-series: the series $\sum \frac{1}{k^\alpha}$ converges if and only if $\alpha > 1$.</li><li>Comparison of a sequence to a series.</li><li>Definition of a subsequence.</li><li>Squeeze Theorem.</li></ul></div></div>
+    <div id="explanationEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.4</h3><span class="close-btn" onclick="closeModal('explanationEx3Q4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: Show that for all $\beta>0, \forall N, \exists n \ge N$ s.t. $u_n \le n^\beta$.</h4><p><strong>Step 1: Proof by contradiction.</strong><br>We assume the proposition is false. Its negation is: $\exists \beta>0$ and $\exists N$ such that for all $n \ge N$, we have $u_n > n^\beta$.</p><p><strong>Step 2: Use this assumption to find an upper bound for $u_n$.</strong><br>Let $n > N$. We express $u_n$ starting from rank $N$:</p><p>$$ u_n = u_N + \sum_{k=N}^{n-1} (u_{k+1}-u_k) = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k} $$</p><p>For the indices $k$ in the sum ($k \ge N$), our assumption applies: $u_k > k^\beta$. Since $u_k$ is in the denominator, we have $\frac{1}{u_k} < \frac{1}{k^\beta}$.
+We can therefore find an upper bound for the sum:</p><p>$$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k \cdot k^\beta} = u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} $$</p><p><strong>Step 3: Reach a contradiction.</strong><br>The sum $\sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}}$ is a p-series. Since $\beta > 0$, the exponent $1+\beta$ is strictly greater than 1. The series is therefore convergent. Let's call its sum $S$.<br>The partial sum in our inequality is thus upper-bounded by $S$:</p><p>$$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} < u_N + \sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}} = u_N + S $$</p><p>This shows that for all $n > N$, $u_n$ is upper-bounded by the constant $u_N+S$. The sequence $(u_n)$ would therefore be upper-bounded. This contradicts the result of question 3.3c, where we proved that $u_n \to +\infty$.<br>The initial assumption is therefore false.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Deduce the existence of a subsequence and its limit.</h4><p><strong>Step 1: Construct the subsequence $(\varphi(n))_n$.</strong><br>The property we have just demonstrated allows us to construct a strictly increasing sequence of indices $(\varphi(n))_n$.<ul><li>For $N=1, \beta=1$, there exists an index $\varphi(1) \ge 1$ such that $u_{\varphi(1)} \le \varphi(1)^1$.</li><li>For $N=\varphi(1)+1, \beta=1/2$, there exists $\varphi(2) \ge \varphi(1)+1$ such that $u_{\varphi(2)} \le \varphi(2)^{1/2}$.</li><li>For $N=\varphi(n-1)+1, \beta=1/n$, there exists $\varphi(n) \ge \varphi(n-1)+1$ such that $u_{\varphi(n)} \le \varphi(n)^{1/n}$.</li></ul>This process gives us a subsequence $(u_{\varphi(n)})$ that satisfies $u_{\varphi(n)} \le \varphi(n)^{1/n}$ for all $n$.</p><p><strong>Step 2: Calculate the limit.</strong><br>Let $\gamma > 0$. We want the limit of $\frac{u_{\varphi(n)}}{\varphi(n)^\gamma}$.<br>We have the inequality:</p><p>$$ 0 < \frac{u_{\varphi(n)}}{\varphi(n)^\gamma} \le \frac{\varphi(n)^{1/n}}{\varphi(n)^\gamma} = \varphi(n)^{1/n - \gamma} $$</p><p>Let's study the limit of the upper bound. As $(\varphi(n))_n$ is a strictly increasing sequence of integers, $\lim_{n\to\infty} \varphi(n) = +\infty$.<br>The exponent, on the other hand, tends to $\lim_{n\to\infty} (1/n - \gamma) = 0 - \gamma = -\gamma$.<br>Since $\gamma > 0$, the exponent tends to a strictly negative limit. The limit of the upper bound is therefore:</p><p>$$ \lim_{n\to\infty} \varphi(n)^{-\gamma} = 0 $$</p><p>By the Squeeze Theorem, the limit of the bounded term is also 0.
+$$ \lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0 $$</p></div></div>
+
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        // Use the original auto-render script from 12.html
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

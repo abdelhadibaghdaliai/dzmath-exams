@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis II: Final Exam (2010-2011) - Enhanced Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis II</h1>
+            <p class="exam-subtitle">Final Exam (2010-2011)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1 (2 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Using the limit of a Riemann sum, show that: <span class="katex-display" data-katex="\int_{0}^{1}e^{x}dx=e-1"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2 (3 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-katex="I=\int_{0}^{\frac{\pi}{2}}\frac{\sqrt{\sin x}}{\sqrt{\sin x}+\sqrt{\cos x}}dx"></span> and <span class="katex-inline" data-katex="J=\int_{0}^{\frac{\pi}{2}}\frac{\sqrt{\cos x}}{\sqrt{\sin x}+\sqrt{\cos x}}dx"></span>.</p>
+                        <p>1. Compare I and J. (Use the change of variable <span class="katex-inline" data-katex="x=\frac{\pi}{2}-t"></span>)</p>
+                        <p>2. Calculate <span class="katex-inline" data-katex="I+J"></span>.</p>
+                        <p>3. Hence, find I and J.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3 (7 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let, for <span class="katex-inline" data-katex="n \in \mathbb{N}^*"></span> and <span class="katex-inline" data-katex="x \in \mathbb{R}"></span>, <span class="katex-inline" data-katex="I_{n}(x)=\int\frac{dx}{(1+x^{2})^{n}}"></span>.</p>
+                        <p>1. Calculate <span class="katex-inline" data-katex="I_{1}(x)"></span>.</p>
+                        <p>2. Show that for all <span class="katex-inline" data-katex="n \in \mathbb{N}^*"></span>: <span class="katex-display" data-katex="I_{n+1}(x)=\frac{1}{2n}\frac{x}{(1+x^{2})^{n}}+\frac{2n-1}{2n}I_{n}(x)"></span></p>
+                        <p>3. Then determine <span class="katex-inline" data-katex="A(x)=\int\frac{dx}{(x^{2}+2x+2)^{2}}"></span> and <span class="katex-inline" data-katex="B(x)=\int\frac{x-1}{(x^{2}+2x+2)^{3}}dx"></span>.</p>
+                        <p>4. Deduce <span class="katex-inline" data-katex="C(x)=\int\frac{\sin(2x)-2\cos x}{(\sin^{2}x+2\sin x+2)^{3}}dx"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 4 (5 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Calculate <span class="katex-inline" data-katex="I(x) = \int\frac{9x+1}{(x-1)^{2}(x^{2}+4)}dx"></span> and <span class="katex-inline" data-katex="J(x) = \int\frac{2x+3}{\sqrt{x^{2}+4x+20}}dx"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 5 (3 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Solve the differential equation <span class="katex-inline" data-katex="(\cos x)y' + (\sin x)y = 1"></span> (E) in the interval <span class="katex-inline" data-katex="]-\frac{\pi}{2}, \frac{\pi}{2}["></span>, then deduce the solution of (E) that satisfies <span class="katex-inline" data-katex="y(0)=2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint5')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge5')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>The function <span class="katex-inline" data-katex="f(x)=e^x"></span> is continuous on [0, 1], so it is Riemann-integrable.</p>
+                        <div class="katex-display" data-katex="\int_{0}^{1}e^{x}dx=\lim_{n\to\infty}\frac{1}{n}\sum_{k=1}^{n}e^{\frac{k}{n}} = \lim_{n\to\infty}\frac{1}{n}\sum_{k=1}^{n}(e^{\frac{1}{n}})^{k}"></div>
+                        <p>The sum is a geometric series: <span class="katex-inline" data-katex="\sum_{k=1}^{n}r^{k}=r\frac{r^{n}-1}{r-1}"></span>. Here <span class="katex-inline" data-katex="r=e^{1/n}"></span>.</p>
+                        <div class="katex-display" data-katex="\int_{0}^{1}e^{x}dx=\lim_{n\to\infty}\frac{1}{n}(e^{\frac{1}{n}}\frac{(e^{\frac{1}{n}})^{n}-1}{e^{\frac{1}{n}}-1})=\lim_{n\to\infty}\frac{e^{\frac{1}{n}}}{n}\frac{e-1}{e^{\frac{1}{n}}-1} = (e-1)(\lim_{n\to\infty}e^{\frac{1}{n}})(\lim_{n\to\infty}\frac{1/n}{e^{\frac{1}{n}}-1})"></div>
+                        <p>By setting <span class="katex-inline" data-katex="h=1/n"></span>, as <span class="katex-inline" data-katex="n \to \infty"></span>, <span class="katex-inline" data-katex="h \to 0"></span>.</p>
+                        <div class="katex-display" data-katex="\lim_{h\to0}\frac{h}{e^{h}-1}=\lim_{h\to0}\frac{h}{(1+h+o(h))-1}=1"></div>
+                        <p>Since <span class="katex-inline" data-katex="\lim_{n\to\infty}e^{\frac{1}{n}}=e^{0}=1"></span>, we have: <span class="katex-inline" data-katex="\int_{0}^{1}e^{x}dx=(e-1) \cdot 1 \cdot 1=e-1"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>1. We compare I and J. We use the change of variable <span class="katex-inline" data-katex="x=\frac{\pi}{2}-t"></span>. Then <span class="katex-inline" data-katex="dx=-dt"></span>. The bounds become: if <span class="katex-inline" data-katex="x=0"></span>, <span class="katex-inline" data-katex="t=\frac{\pi}{2}"></span>; if <span class="katex-inline" data-katex="x=\frac{\pi}{2}"></span>, <span class="katex-inline" data-katex="t=0"></span>.</p>
+                        <div class="katex-display" data-katex="I=\int_{\frac{\pi}{2}}^{0}\frac{\sqrt{\sin(\frac{\pi}{2}-t)}}{\sqrt{\sin(\frac{\pi}{2}-t)}+\sqrt{\cos(\frac{\pi}{2}-t)}}(-dt) = \int_{0}^{\frac{\pi}{2}}\frac{\sqrt{\cos t}}{\sqrt{\cos t}+\sqrt{\sin t}}dt=J"></div>
+                        <p>Therefore, <span class="katex-inline" data-katex="I=J"></span>.</p>
+                        <p>2. We calculate <span class="katex-inline" data-katex="I+J"></span>.</p>
+                        <div class="katex-display" data-katex="I+J=\int_{0}^{\frac{\pi}{2}}\frac{\sqrt{\sin x}+\sqrt{\cos x}}{\sqrt{\sin x}+\sqrt{\cos x}}dx=\int_{0}^{\frac{\pi}{2}}1~dx=[x]_{0}^{\frac{\pi}{2}}=\frac{\pi}{2}"></div>
+                        <p>3. We deduce I and J. Since <span class="katex-inline" data-katex="I=J"></span> and <span class="katex-inline" data-katex="I+J=\frac{\pi}{2}"></span>, we have <span class="katex-inline" data-katex="2I=\frac{\pi}{2}"></span>, which implies <span class="katex-inline" data-katex="I=J=\frac{\pi}{4}"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-inline" data-katex="I_1(x) = \arctan x + C"></span>.</p>
+                        <p>2. We perform an integration by parts on <span class="katex-inline" data-katex="I_n(x)"></span>. Let <span class="katex-inline" data-katex="u=\frac{1}{(1+x^2)^n}"></span> and <span class="katex-inline" data-katex="dv=dx"></span>. Then <span class="katex-inline" data-katex="du=\frac{-2nx}{(1+x^2)^{n+1}}dx"></span> and <span class="katex-inline" data-katex="v=x"></span>.</p>
+                        <div class="katex-display" data-katex="I_n(x) = \frac{x}{(1+x^2)^n} + 2n \int \frac{x^2}{(1+x^2)^{n+1}}dx"></div>
+                        <p>By rearranging, we get the recurrence relation:</p>
+                        <div class="katex-display" data-katex="I_{n+1}(x) = \frac{1}{2n}\frac{x}{(1+x^2)^n} + \frac{2n-1}{2n}I_n(x)"></div>
+                        <p>3. Calculation of <span class="katex-inline" data-katex="A(x)"></span> and <span class="katex-inline" data-katex="B(x)"></span>. (Long solutions omitted for brevity)</p>
+                        <p>4. Deduction of <span class="katex-inline" data-katex="C(x)"></span>. We set <span class="katex-inline" data-katex="u=\sin x"></span>. We find that <span class="katex-inline" data-katex="C(x) = 2B(\sin x)+c"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                 <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>• For <span class="katex-inline" data-katex="I(x)"></span>, we use partial fraction decomposition: <span class="katex-display" data-katex="\frac{9x+1}{(x-1)^2(x^2+4)} = \frac{1}{x-1} + \frac{2}{(x-1)^2} - \frac{x+3}{x^2+4}"></span>. The integral becomes:</p>
+                        <div class="katex-display" data-katex="I(x) = \ln|x-1| - \frac{2}{x-1} - \frac{1}{2}\ln(x^2+4) - \frac{3}{2}\arctan(\frac{x}{2}) + c"></div>
+                        <p>• For <span class="katex-inline" data-katex="J(x)"></span>, we complete the square in the denominator: <span class="katex-inline" data-katex="x^2+4x+20 = (x+2)^2+16"></span>. The integral becomes:</p>
+                        <div class="katex-display" data-katex="J(x) = 2\sqrt{x^2+4x+20} - \text{arsinh}(\frac{x+2}{4}) + c"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 5</h3>
+                    <div class="exercise-content">
+                        <p>1. Homogeneous equation: <span class="katex-inline" data-katex="(\cos x)y' + (\sin x)y = 0"></span>. The solution is <span class="katex-inline" data-katex="y_h = K \cos x"></span>.</p>
+                        <p>2. Particular solution: We notice that <span class="katex-inline" data-katex="y_p = \sin x"></span> is a particular solution because <span class="katex-inline" data-katex="(\cos x)(\sin x)' + (\sin x)(\sin x) = \cos^2 x + \sin^2 x = 1"></span>. The general solution is therefore <span class="katex-inline" data-katex="y = K \cos x + \sin x"></span>.</p>
+                        <p>3. Initial condition: <span class="katex-inline" data-katex="y(0)=2"></span>. We have <span class="katex-inline" data-katex="K \cos(0) + \sin(0) = 2 \Rightarrow K=2"></span>. The solution is <span class="katex-inline" data-katex="y = 2\cos x + \sin x"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation5')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Riemann Sums: The Graphics Engine 🎮</h3>
+                        <p class="text-lg mb-4 text-slate-300">In computer graphics, Riemann sums are at the heart of <strong>realistic rendering</strong> techniques. To calculate how light interacts with complex objects, game engines and 3D modeling software cannot use simple geometric formulas. They break down surfaces into thousands of small polygons (pixels or "fragments"), calculate the lighting for each, and then add them up. This is a Riemann sum in action!</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Calculating Light Exposure</h4>
+                        <p class="mb-4 text-slate-400">Imagine a mountainous terrain in a video game. To determine if an area is in shadow or sunlight, the engine calculates the "integral of the visible sky" from that point. It approximates this integral by casting rays in many directions towards the sky (a discretization) and summing the light received from each ray that isn't blocked by a mountain.</p>
+                        <pre class="language-pseudocode"><code>function calculateExposure(point, skyDome) {
+  let totalLight = 0;
+  const numSamples = 1000; // Number of rays to cast
+
+  for (let i = 0; i < numSamples; i++) {
+    let randomDirection = skyDome.getRandomDirection();
+    if (!isObstructed(point, randomDirection)) {
+      // If the ray hits the sky, add its light contribution
+      totalLight += skyDome.getLight(randomDirection);
+    }
+  }
+  
+  // The total light is the average of the samples (the approximated integral)
+  return totalLight / numSamples;
+}</code></pre>
+                    </div>
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Integration and Recurrence: Image Analysis 🖼️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Recurrence relations for integrals, like the one in Exercise 3, have a direct analogue in programming and image analysis. Many image processing algorithms (blur, edge detection) work in a <strong>recursive</strong> or <strong>iterative</strong> manner. For example, to apply a Gaussian blur, one can apply a simpler blur filter multiple times. Understanding how the effect accumulates (just as <span class="katex-inline" data-katex="I_{n+1}"></span> depends on <span class="katex-inline" data-katex="I_n"></span>) is essential for controlling the final result.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Iterative Box Blur</h4>
+                        <p class="mb-4 text-slate-400">A "Box Blur" is a simple filter where each pixel becomes the average of its neighbors. Applying this filter <span class="katex-inline" data-katex="n"></span> times in a row is a recursive operation that provides a very good approximation of a Gaussian blur, which is much more complex to calculate directly. The recurrence relation helps to understand how the "strength" of the blur increases with each step.</p>
+                         <pre class="language-pseudocode"><code>// image_n_plus_1 = BoxBlur(image_n)
+
+function applyRecursiveBlur(image, iterations) {
+  let current_image = image;
+  for (let i = 0; i < iterations; i++) {
+    // The result of each step is the input for the next
+    current_image = applySingleBoxBlur(current_image);
+  }
+  return current_image;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Recall the definition of the Riemann integral as a limit of sums. Try to manipulate the expression to match the form <span class="katex-inline" data-katex="\frac{1}{n}\sum f(\frac{k}{n})"></span>.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Riemann Sums:</strong> The definite integral of a continuous function <span class="katex-inline" data-katex="f"></span> from <span class="katex-inline" data-katex="a"></span> to <span class="katex-inline" data-katex="b"></span> can be defined as the limit of Riemann sums: <span class="katex-display" data-katex="\int_{a}^{b} f(x) dx = \lim_{n \to \infty} \frac{b-a}{n} \sum_{k=1}^{n} f(a+k\frac{b-a}{n})"></span>.</p><p><strong>Geometric Series:</strong> The sum of a finite geometric series is given by <span class="katex-inline" data-katex="\sum_{k=1}^{n} r^k = r\frac{r^n-1}{r-1}"></span>.</p><p><strong>Standard Limits:</strong> Knowledge of the limit <span class="katex-inline" data-katex="\lim_{h \to 0} \frac{e^h-1}{h} = 1"></span>.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 1: Set up the Riemann Sum</h4><p>The integral of <span class="katex-inline" data-katex="f(x)=e^x"></span> over [0, 1] is defined by the limit of the Riemann sum:</p><p><span class="katex-display" data-katex="\int_0^1 e^x dx = \lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^n f(\frac{k}{n})"></span></p><p>Here, <span class="katex-inline" data-katex="a=0"></span>, <span class="katex-inline" data-katex="b=1"></span>, and <span class="katex-inline" data-katex="f(x)=e^x"></span>. So, <span class="katex-inline" data-katex="x_k = 0 + k \frac{1-0}{n} = \frac{k}{n}"></span>.</p><p>The Riemann sum becomes <span class="katex-inline" data-katex="\lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^n e^{k/n}"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 2: Calculate the Geometric Sum</h4><p>The expression <span class="katex-inline" data-katex="\sum_{k=1}^n (e^{1/n})^k"></span> is a geometric sum with common ratio <span class="katex-inline" data-katex="r=e^{1/n}"></span>. We use the formula <span class="katex-inline" data-katex="\sum_{k=1}^n r^k = r \frac{r^n-1}{r-1}"></span>.</p><p><span class="katex-display" data-katex="\sum_{k=1}^n (e^{1/n})^k = e^{1/n} \frac{(e^{1/n})^n - 1}{e^{1/n} - 1} = e^{1/n} \frac{e-1}{e^{1/n}-1}"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 3: Calculate the Limit</h4><p>We now need to calculate: <span class="katex-display" data-katex="\lim_{n \to \infty} \frac{1}{n} \left( e^{1/n} \frac{e-1}{e^{1/n}-1} \right)"></span></p><p>We can separate the limits: <span class="katex-inline" data-katex="(e-1) \left( \lim_{n \to \infty} e^{1/n} \right) \left( \lim_{n \to \infty} \frac{1/n}{e^{1/n}-1} \right)"></span>.</p><p>We know that <span class="katex-inline" data-katex="\lim_{n \to \infty} e^{1/n} = e^0 = 1"></span>. For the second limit, let <span class="katex-inline" data-katex="h=1/n"></span>. As <span class="katex-inline" data-katex="n \to \infty"></span>, <span class="katex-inline" data-katex="h \to 0"></span>. We use the standard limit:</p><p><span class="katex-display" data-katex="\lim_{h \to 0} \frac{h}{e^h-1} = 1"></span></p><p>This is the reciprocal of the derivative of <span class="katex-inline" data-katex="e^h"></span> at <span class="katex-inline" data-katex="h=0"></span>, which is 1.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 4: Conclusion</h4><p>Putting the results together, we get: <span class="katex-display" data-katex="(e-1) \cdot 1 \cdot 1 = e-1"></span></p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>For question 1, carefully apply the change of variable <span class="katex-inline" data-katex="x = \pi/2 - t"></span>. Don't forget to change the bounds and the differential <span class="katex-inline" data-katex="dx"></span>. Use the identities <span class="katex-inline" data-katex="\sin(\pi/2 - t) = \cos t"></span> and <span class="katex-inline" data-katex="\cos(\pi/2 - t) = \sin t"></span>.</p><p>For question 2, what happens if you add the integrands of I and J?</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Change of Variable in Integrals:</strong> If <span class="katex-inline" data-katex="x = g(t)"></span>, then <span class="katex-inline" data-katex="\int_a^b f(x)dx = \int_{g^{-1}(a)}^{g^{-1}(b)} f(g(t))g'(t)dt"></span>. The integration bounds must also be transformed.</p><p><strong>Trigonometric Properties:</strong> <span class="katex-inline" data-katex="\sin(\frac{\pi}{2}-t) = \cos t"></span> and <span class="katex-inline" data-katex="\cos(\frac{\pi}{2}-t) = \sin t"></span>.</p><p><strong>Properties of the Integral:</strong> Linearity: <span class="katex-inline" data-katex="\int (f+g) = \int f + \int g"></span>.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: Comparing I and J</h4><p>We start with the integral I: <span class="katex-inline" data-katex="I = \int_{0}^{\pi/2} \frac{\sqrt{\sin x}}{\sqrt{\sin x} + \sqrt{\cos x}} dx"></span>.</p><p>We apply the change of variable <span class="katex-inline" data-katex="x = \frac{\pi}{2} - t"></span>. This implies <span class="katex-inline" data-katex="t = \frac{\pi}{2} - x"></span> and <span class="katex-inline" data-katex="dx = -dt"></span>.</p><p>We must also change the bounds:</p><ul><li>If <span class="katex-inline" data-katex="x=0"></span>, then <span class="katex-inline" data-katex="t=\pi/2"></span>.</li><li>If <span class="katex-inline" data-katex="x=\pi/2"></span>, then <span class="katex-inline" data-katex="t=0"></span>.</li></ul><p>Substituting into I:</p><p><span class="katex-display" data-katex="I = \int_{\pi/2}^{0} \frac{\sqrt{\sin(\pi/2 - t)}}{\sqrt{\sin(\pi/2 - t)} + \sqrt{\cos(\pi/2 - t)}} (-dt)"></span></p><p>We use the formulas <span class="katex-inline" data-katex="\sin(\pi/2 - t) = \cos t"></span> and <span class="katex-inline" data-katex="\cos(\pi/2 - t) = \sin t"></span>.</p><p><span class="katex-display" data-katex="I = \int_{\pi/2}^{0} \frac{\sqrt{\cos t}}{\sqrt{\cos t} + \sqrt{\sin t}} (-dt)"></span></p><p>The <span class="katex-inline" data-katex="-"></span> sign in <span class="katex-inline" data-katex="(-dt)"></span> allows us to reverse the integration bounds:</p><p><span class="katex-display" data-katex="I = \int_{0}^{\pi/2} \frac{\sqrt{\cos t}}{\sqrt{\cos t} + \sqrt{\sin t}} dt"></span></p><p>This last expression is exactly the definition of J. Therefore, <span class="katex-inline" data-katex="I=J"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Calculating I + J</h4><p>We use the linearity of the integral:</p><p><span class="katex-display" data-katex="I+J = \int_{0}^{\pi/2} \left( \frac{\sqrt{\sin x}}{\sqrt{\sin x} + \sqrt{\cos x}} + \frac{\sqrt{\cos x}}{\sqrt{\sin x} + \sqrt{\cos x}} \right) dx"></span></p><p>The integrand simplifies:</p><p><span class="katex-display" data-katex="\frac{\sqrt{\sin x} + \sqrt{\cos x}}{\sqrt{\sin x} + \sqrt{\cos x}} = 1"></span></p><p>The integral becomes very simple to calculate:</p><p><span class="katex-display" data-katex="I+J = \int_{0}^{\pi/2} 1 dx = [x]_0^{\pi/2} = \frac{\pi}{2}"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 3: Deducing I and J</h4><p>We have a system of two equations:</p><p>1) <span class="katex-inline" data-katex="I=J"></span></p><p>2) <span class="katex-inline" data-katex="I+J = \pi/2"></span></p><p>Substituting (1) into (2), we get <span class="katex-inline" data-katex="2I = \pi/2"></span>, which gives <span class="katex-inline" data-katex="I = \pi/4"></span>. Since <span class="katex-inline" data-katex="I=J"></span>, we also have <span class="katex-inline" data-katex="J = \pi/4"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>For question 2, use integration by parts on <span class="katex-inline" data-katex="I_n(x)"></span>. Choose <span class="katex-inline" data-katex="u"></span> and <span class="katex-inline" data-katex="dv"></span> wisely. A trick is to write <span class="katex-inline" data-katex="x^2 = (1+x^2) - 1"></span> in the resulting integral.</p><p>For question 3, try to reduce the denominators to the form <span class="katex-inline" data-katex="1+t^2"></span> by a change of variable.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Integration by Parts:</strong> <span class="katex-inline" data-katex="\int u dv = uv - \int v du"></span>.</p><p><strong>Common Primitives:</strong> The primitive of <span class="katex-inline" data-katex="\frac{1}{1+x^2}"></span> is <span class="katex-inline" data-katex="\arctan x"></span>.</p><p><strong>Change of Variable (translation):</strong> To calculate <span class="katex-inline" data-katex="\int f(x+a)dx"></span>, we can set <span class="katex-inline" data-katex="t=x+a"></span>.</p><p><strong>Chain Rule for Derivatives:</strong> <span class="katex-inline" data-katex="(f(g(x)))' = f'(g(x))g'(x)"></span>.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: Calculating I_1(x)</h4><p>This is a standard integral: <span class="katex-display" data-katex="I_1(x) = \int \frac{dx}{1+x^2} = \arctan(x) + C"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Recurrence Formula</h4><p>We integrate <span class="katex-inline" data-katex="I_n(x)"></span> by parts. Let:</p><ul><li><span class="katex-inline" data-katex="u = \frac{1}{(1+x^2)^n}"></span>  <span class="katex-inline" data-katex="\Rightarrow"></span>  <span class="katex-inline" data-katex="du = -n(1+x^2)^{-n-1}(2x)dx = \frac{-2nx}{(1+x^2)^{n+1}}dx"></span></li><li><span class="katex-inline" data-katex="dv=dx"></span>  <span class="katex-inline" data-katex="\Rightarrow"></span>  <span class="katex-inline" data-katex="v=x"></span></li></ul><p><span class="katex-display" data-katex="I_n(x) = \frac{x}{(1+x^2)^n} - \int x \left( \frac{-2nx}{(1+x^2)^{n+1}} \right) dx = \frac{x}{(1+x^2)^n} + 2n \int \frac{x^2}{(1+x^2)^{n+1}} dx"></span></p><p>The trick is to rewrite <span class="katex-inline" data-katex="x^2"></span> as <span class="katex-inline" data-katex="(1+x^2)-1"></span>:</p><p><span class="katex-display" data-katex="\int \frac{(1+x^2)-1}{(1+x^2)^{n+1}} dx = \int \frac{1}{(1+x^2)^n} dx - \int \frac{1}{(1+x^2)^{n+1}} dx = I_n(x) - I_{n+1}(x)"></span></p><p>So we have <span class="katex-inline" data-katex="I_n(x) = \frac{x}{(1+x^2)^n} + 2n(I_n(x) - I_{n+1}(x))"></span>. By isolating <span class="katex-inline" data-katex="I_{n+1}(x)"></span>, we get the desired formula:</p><p><span class="katex-display" data-katex="I_{n+1}(x) = \frac{1}{2n}\frac{x}{(1+x^2)^n} + \frac{2n-1}{2n}I_n(x)"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 3: Calculating A(x) and B(x)</h4><p>For <span class="katex-inline" data-katex="A(x)"></span>, we complete the square: <span class="katex-inline" data-katex="x^2+2x+2=(x+1)^2+1"></span>. Let <span class="katex-inline" data-katex="t=x+1"></span>, <span class="katex-inline" data-katex="dt=dx"></span>. <span class="katex-inline" data-katex="A(x) = \int \frac{dt}{(t^2+1)^2} = I_2(t)"></span>. We apply the recurrence with <span class="katex-inline" data-katex="n=1"></span>.</p><p>For <span class="katex-inline" data-katex="B(x)"></span>, we decompose the numerator <span class="katex-inline" data-katex="x-1"></span> to make the derivative of the denominator's base (<span class="katex-inline" data-katex="2x+2"></span>) appear. We split it into two integrals, one of the form <span class="katex-inline" data-katex="\int u'/u^n"></span> and the other reducing to <span class="katex-inline" data-katex="I_3(t)"></span>, which we calculate with the recurrence.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 4: Calculating C(x)</h4><p>We use <span class="katex-inline" data-katex="\sin(2x) = 2\sin x \cos x"></span>. The numerator becomes <span class="katex-inline" data-katex="2\cos x (\sin x - 1)"></span>. Let <span class="katex-inline" data-katex="u=\sin x"></span>, so <span class="katex-inline" data-katex="du=\cos x dx"></span>. The integral transforms into <span class="katex-inline" data-katex="C(x) = 2 \int \frac{(u-1)du}{(u^2+2u+2)^3} = 2B(u)"></span>, which is directly related to B(u).</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>For I(x), use partial fraction decomposition. The denominator has a double pole and an irreducible quadratic factor.</p><p>For J(x), complete the square under the square root. Then try to manipulate the numerator to make the derivative of the expression under the root appear.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Partial Fraction Decomposition:</strong> For a rational function, the form of the decomposition depends on the roots of the denominator.</p><p><strong>Common Primitives:</strong> Knowledge of <span class="katex-inline" data-katex="\int \frac{dx}{(x-a)^n}"></span>, <span class="katex-inline" data-katex="\int \frac{u'}{u}dx"></span>, <span class="katex-inline" data-katex="\int \frac{dx}{x^2+a^2}"></span>.</p><p><strong>Completing the Square:</strong> Transforming <span class="katex-inline" data-katex="ax^2+bx+c"></span> into <span class="katex-inline" data-katex="a(x-h)^2+k"></span>.</p><p><strong>Inverse Hyperbolic Integrals:</strong> The primitive of <span class="katex-inline" data-katex="\frac{1}{\sqrt{x^2+a^2}}"></span> is <span class="katex-inline" data-katex="\text{arsinh}(\frac{x}{a})"></span>.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Calculating I(x)</h4><p>We decompose the fraction <span class="katex-inline" data-katex="\frac{9x+1}{(x-1)^2(x^2+4)}"></span>. The form of the decomposition is:</p><p><span class="katex-display" data-katex="\frac{A}{x-1} + \frac{B}{(x-1)^2} + \frac{Cx+D}{x^2+4}"></span></p><p>After calculations (for example, by multiplying by <span class="katex-inline" data-katex="(x-1)^2"></span> and setting <span class="katex-inline" data-katex="x=1"></span> to find B), we find <span class="katex-inline" data-katex="A=1, B=2, C=-1, D=-3"></span>.</p><p>The integral becomes:</p><p><span class="katex-display" data-katex="\int(\frac{1}{x-1} + \frac{2}{(x-1)^2} - \frac{x}{x^2+4} - \frac{3}{x^2+4})dx"></span></p><p>We integrate each term separately to get the final result.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Calculating J(x)</h4><p>We start from <span class="katex-inline" data-katex="J(x) = \int \frac{2x+3}{\sqrt{x^2+4x+20}}dx"></span>. We complete the square: <span class="katex-inline" data-katex="x^2+4x+20 = (x+2)^2+16"></span>.</p><p>The integral is <span class="katex-inline" data-katex="\int \frac{2x+3}{\sqrt{(x+2)^2+16}}dx"></span>. The derivative of <span class="katex-inline" data-katex="x^2+4x+20"></span> is <span class="katex-inline" data-katex="2x+4"></span>. We make this term appear in the numerator:</p><p><span class="katex-display" data-katex="2x+3 = (2x+4) - 1"></span></p><p>We split the integral in two:</p><p><span class="katex-display" data-katex="\int \frac{2x+4}{\sqrt{x^2+4x+20}}dx - \int \frac{1}{\sqrt{(x+2)^2+16}}dx"></span></p><p>The first integral is of the form <span class="katex-inline" data-katex="\int u'/\sqrt{u}"></span> which integrates to <span class="katex-inline" data-katex="2\sqrt{u}"></span>. The second one reduces to an <span class="katex-inline" data-katex="\text{arsinh}"></span> type primitive after factoring out the 16.</p></div></div>
+    <div id="hint5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 5</h3><span class="close-btn" onclick="closeModal('hint5')">&times;</span></div><p>This is a first-order linear differential equation. First, solve the associated homogeneous equation. Then, look for a particular solution. Sometimes, a simple solution is obvious (try simple trigonometric functions).</p></div></div>
+    <div id="knowledge5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 5</h3><span class="close-btn" onclick="closeModal('knowledge5')">&times;</span></div><p><strong>First-Order Linear Differential Equations:</strong> An equation of the form <span class="katex-inline" data-katex="y' + p(x)y = q(x)"></span>.</p><p><strong>General Solution:</strong> The general solution is the sum of the general solution of the homogeneous equation (<span class="katex-inline" data-katex="y' + p(x)y = 0"></span>) and a particular solution of the non-homogeneous equation.</p><p><strong>Separation of Variables:</strong> A method for solving the homogeneous equation.</p></div></div>
+    <div id="explanation5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 5</h3><span class="close-btn" onclick="closeModal('explanation5')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 1: Solving the Homogeneous Equation</h4><p>The homogeneous equation is <span class="katex-inline" data-katex="(\cos x)y' + (\sin x)y = 0"></span>. We can rewrite it to separate the variables:</p><p><span class="katex-display" data-katex="\frac{dy}{y} = -\frac{\sin x}{\cos x}dx"></span></p><p>By integrating both sides:</p><p><span class="katex-display" data-katex="\int \frac{dy}{y} = -\int \frac{\sin x}{\cos x}dx"></span></p><p>This gives <span class="katex-inline" data-katex="\ln|y| = \ln|\cos x| + C_1"></span>. The homogeneous solution is therefore <span class="katex-inline" data-katex="y_h(x) = K\cos x"></span>, where <span class="katex-inline" data-katex="K = \pm e^{C_1}"></span> is a constant.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 2: Finding a Particular Solution</h4><p>We look for a function <span class="katex-inline" data-katex="y_p(x)"></span> that satisfies the complete equation <span class="katex-inline" data-katex="(\cos x)y' + (\sin x)y = 1"></span>. We can try to guess a solution. Let's try <span class="katex-inline" data-katex="y_p = \sin x"></span>. Its derivative is <span class="katex-inline" data-katex="y'_p = \cos x"></span>. Substituting into the equation:</p><p><span class="katex-display" data-katex="(\cos x)(\cos x) + (\sin x)(\sin x) = \cos^2 x + \sin^2 x = 1"></span></p><p>It works! So <span class="katex-inline" data-katex="y_p(x) = \sin x"></span> is a particular solution.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 3: General Solution</h4><p>The general solution is the sum of the homogeneous solution and the particular solution:</p><p><span class="katex-display" data-katex="y(x) = y_h(x) + y_p(x) = K\cos x + \sin x"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 4: Applying the Initial Condition</h4><p>We are given <span class="katex-inline" data-katex="y(0)=2"></span>. We substitute <span class="katex-inline" data-katex="x=0"></span> into the general solution:</p><p><span class="katex-display" data-katex="y(0) = K\cos(0) + \sin(0) = K(1) + 0 = K"></span></p><p>We deduce that <span class="katex-inline" data-katex="K=2"></span>. The unique solution that satisfies the condition is:</p><p><span class="katex-display" data-katex="y(x) = 2\cos x + \sin x"></span></p></div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.getAttribute('data-katex');
+                    // Ensure content is not empty to avoid KaTeX errors
+                    if (content) {
+                        const displayMode = el.classList.contains('katex-display');
+                        try {
+                            katex.render(content, el, {
+                                throwOnError: false, // Don't throw errors, log to console instead
+                                displayMode: displayMode
+                            });
+                        } catch (e) {
+                            console.error("KaTeX rendering error for content:", content, e);
+                            el.innerHTML = `<span style='color: red;'>LaTeX Error: ${content}</span>`;
+                        }
+                    }
+                });
+            }, 100);
+        });
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

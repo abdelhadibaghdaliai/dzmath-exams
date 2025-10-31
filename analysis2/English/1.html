@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 2: Final Exam - Corrected Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 2</h1>
+            <p class="exam-subtitle">Final Exam (10/24/2020)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>1. Show that <span class="katex-inline" data-id="ex1-q1"></span> where f is a continuous function to be determined.</p>
+                        <p>2. Calculate this limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>1. Using the change of variable <span class="katex-inline" data-id="ex2-q1-sub"></span>, show that: <span class="katex-inline" data-id="ex2-q1-eq"></span></p>
+                        <p>2. Deduce the value of <span class="katex-inline" data-id="ex2-q2-eq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3 (8 pts)</h3>
+                    <div class="exercise-content">
+                        <p>1. Verify that the differential equation <span class="katex-inline" data-id="ex3-q1-eq"></span> has a solution.</p>
+                        <p>2. Solve the differential equation <span class="katex-inline" data-id="ex3-q2-eq"></span>.</p>
+                        <p>3. Deduce the solution of the equation <span class="katex-inline" data-id="ex3-q3-eq"></span> that satisfies the condition <span class="katex-inline" data-id="ex3-q3-cond"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>1. We want to show that <span class="katex-inline" data-id="sol1-p1-lim"></span>.</p>
+                        <p>We manipulate the term of the sum:</p>
+                        <div class="katex-display" data-id="sol1-p1-manip"></div>
+                        <p>The sum becomes <span class="katex-inline" data-id="sol1-p1-sum"></span>. This is the Riemann sum of the function <span class="katex-inline" data-id="sol1-p1-func"></span> on the interval [0, 1]. Since f is continuous on [0, 1], the limit of the Riemann sum is the integral of f over this interval.</p>
+                        <p>2. We calculate the integral <span class="katex-inline" data-id="sol1-p2-int"></span>. We decompose the fraction into partial fractions: <span class="katex-inline" data-id="sol1-p2-decomp"></span>. We find <span class="katex-inline" data-id="sol1-p2-const-a"></span>, <span class="katex-inline" data-id="sol1-p2-const-b"></span>, <span class="katex-inline" data-id="sol1-p2-const-c"></span>.</p>
+                        <div class="katex-display" data-id="sol1-p2-int-eval"></div>
+                        <div class="katex-display" data-id="sol1-p2-eval-step1"></div>
+                        <div class="katex-display" data-id="sol1-p2-eval-step2"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>1. We calculate <span class="katex-inline" data-id="sol2-p1-int"></span> with <span class="katex-inline" data-id="sol2-p1-t"></span>. We have <span class="katex-inline" data-id="sol2-p1-subs"></span> and <span class="katex-inline" data-id="sol2-p1-dx"></span>. The bounds: <span class="katex-inline" data-id="sol2-p1-b1"></span>, <span class="katex-inline" data-id="sol2-p1-b2"></span>.</p>
+                        <div class="katex-display" data-id="sol2-p1-eval1"></div>
+                        <div class="katex-display" data-id="sol2-p1-eval2"></div>
+                        <div class="katex-display" data-id="sol2-p1-eval3"></div>
+                        <p>2. We deduce the value of <span class="katex-inline" data-id="sol2-p2-int"></span>. We observe that <span class="katex-inline" data-id="sol2-p2-obs"></span>. So <span class="katex-display" data-id="sol2-p2-sum-int"></span>. Therefore, <span class="katex-display" data-id="sol2-p2-res"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>1. The differential equation <span class="katex-inline" data-id="sol3-p1-eq1"></span> is a first-order linear equation, <span class="katex-inline" data-id="sol3-p1-eq2"></span>. The functions <span class="katex-inline" data-id="sol3-p1-a"></span> and <span class="katex-inline" data-id="sol3-p1-b"></span> are continuous on <span class="katex-inline" data-id="sol3-p1-r"></span>. By the Cauchy-Lipschitz theorem, the equation has an infinite number of solutions defined on <span class="katex-inline" data-id="sol3-p1-r2"></span>.</p>
+                        <p>2. We solve <span class="katex-inline" data-id="sol3-p2-eq"></span>. The homogeneous equation <span class="katex-inline" data-id="sol3-p2-homo"></span> has the solution <span class="katex-inline" data-id="sol3-p2-homo-sol"></span>. We look for a particular solution of the form <span class="katex-inline" data-id="sol3-p2-part-form"></span>. We have <span class="katex-inline" data-id="sol3-p2-part-sol"></span>. So <span class="katex-inline" data-id="sol3-p2-part-res"></span>. The general solution is <span class="katex-inline" data-id="sol3-p2-gen-sol"></span>.</p>
+                        <p>3. We look for the solution such that <span class="katex-inline" data-id="sol3-p3-cond"></span>. <span class="katex-inline" data-id="sol3-p3-eval"></span>. The unique solution is <span class="katex-inline" data-id="sol3-p3-unique-sol"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Riemann Sums: The Graphics Engine 🎮</h3>
+                        <p class="text-lg mb-4 text-slate-300">In computer graphics, Riemann sums are at the heart of <strong>realistic rendering</strong> techniques. To calculate how light interacts with complex objects, game engines and 3D modeling software cannot use simple geometric formulas. They break down surfaces into thousands of small polygons (pixels or "fragments"), calculate the lighting for each, and then add them up. This is a Riemann sum in action!</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Calculating Light Exposure</h4>
+                        <p class="mb-4 text-slate-400">Imagine a mountainous terrain in a video game. To know if an area is in shadow or sunlight, the engine calculates the "integral of the visible sky" from that point. It approximates this integral by casting rays in many directions towards the sky (a discretization) and summing the light received from each ray that is not blocked by a mountain.</p>
+                        <pre class="language-pseudocode"><code>function calculateExposure(point, skyDome) {
+      let totalLight = 0;
+      const numSamples = 1000; // Number of "rays" to cast
+    
+      for (let i = 0; i < numSamples; i++) {
+        let randomDirection = skyDome.getRandomDirection();
+        if (!isObstructed(point, randomDirection)) {
+          // If the ray hits the sky, add its light contribution
+          totalLight += skyDome.getLight(randomDirection);
+        }
+      }
+      
+      // The total light is the average of the samples (the approximated integral)
+      return totalLight / numSamples;
+    }</code></pre>
+                    </div>
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Change of Variable: Computer Vision 🤖</h3>
+                        <p class="text-lg mb-4 text-slate-300">The change of variable in integration is the mathematical analogue of a powerful concept in computer science: <strong>change of basis</strong> or <strong>space transformation</strong>. In computer vision and machine learning, data is often transformed into a new "space" where the problem becomes simpler to solve. For example, to straighten a skewed image, a perspective transformation is applied.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Facial Recognition</h4>
+                        <p class="mb-4 text-slate-400">A classic facial recognition technique, Principal Component Analysis (PCA), transforms images of faces. Each image is a point in a very high-dimensional space (one pixel per dimension). PCA finds a new set of axes (the "eigenfaces") that best capture the variation among the faces. In this new space, comparing two faces becomes much simpler and more efficient than comparing each pixel one by one.</p>
+                         <pre class="language-pseudocode"><code>// Conceptual idea
+    original_faces = [image1, image2, ...]; // Pixel space (complex)
+    
+    // We calculate a transformation basis (the "eigenfaces")
+    eigenbasis = PCA(original_faces); 
+    
+    // We project the images into the new space (simpler)
+    transformed_faces = project(original_faces, eigenbasis);
+    
+    // Comparison is now easier in the transformed space
+    isSamePerson = distance(transformed_faces[0], transformed_faces[1]) < threshold;
+    </code></pre>
+                    </div>
+                    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">3. Differential Equations: Physics Simulation 🚀</h3>
+                        <p class="text-lg mb-4 text-slate-300">Differential equations are the language of physics and change. In computer science, they are fundamental to any <strong>physics simulation</strong>. In video games, special effects, or engineering, they are used to model movement, heat, object deformation, etc. A computer cannot solve these equations continuously; it uses numerical methods (like Euler's method) to calculate the state of the system at very small time intervals (each "frame").</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: A Game Character's Jump</h4>
+                        <p class="mb-4 text-slate-400">The movement of a jumping character is governed by a simple differential equation that relates its position, velocity, and acceleration (due to gravity). The game engine updates these values every frame.</p>
+                        <pre class="language-pseudocode"><code>// Character's state variables
+    position = { x: 0, y: 0 };
+    velocity = { x: 10, y: 20 }; // Initial jump impulse
+    gravity = -9.8;
+    deltaTime = 1/60; // Time elapsed since the last frame (60 FPS)
+    
+    // Game loop (runs every frame)
+    function gameLoop() {
+      // Update velocity (v_new = v_old + a * dt)
+      // This is the numerical solution of dv/dt = a
+      velocity.y += gravity * deltaTime;
+    
+      // Update position (p_new = p_old + v * dt)
+      // This is the numerical solution of dp/dt = v
+      position.x += velocity.x * deltaTime;
+      position.y += velocity.y * deltaTime;
+    
+      // ... redraw the character at its new position
+    }</code></pre>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Try to factor out <span class="katex-inline" data-id="h1-k1"></span> in the denominator of the term in the sum to make it look like a Riemann sum.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Riemann Sums:</strong> The definite integral of a continuous function <span class="katex-inline" data-id="k1-f1"></span> from <span class="katex-inline" data-id="k1-f2"></span> to <span class="katex-inline" data-id="k1-f3"></span> can be defined as the limit of Riemann sums: <span class="katex-display" data-id="k1-f4"></span>.</p><p><strong>Partial Fraction Decomposition:</strong> A technique used to integrate rational functions by breaking them down into simpler fractions.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: Identifying the Riemann Sum</h4><p>The goal is to transform the given sum into the standard form of a Riemann sum. We start with the term <span class="katex-inline" data-id="e1-p1-term"></span>.</p><p>We can factor out <span class="katex-inline" data-id="e1-p1-fact1"></span> in the numerator and <span class="katex-inline" data-id="e1-p1-fact2"></span> in the denominator: <span class="katex-display" data-id="e1-p1-manip"></span></p><p>This simplifies the expression in the limit to <span class="katex-inline" data-id="e1-p1-sum"></span>. This is a right Riemann sum for the function <span class="katex-inline" data-id="e1-p1-func"></span> on the interval [0, 1] with <span class="katex-inline" data-id="e1-p1-n"></span> subintervals of width <span class="katex-inline" data-id="e1-p1-dx"></span>.</p><p>Since <span class="katex-inline" data-id="e1-p1-f2"></span> is continuous on [0, 1], the limit of the Riemann sum is the definite integral <span class="katex-inline" data-id="e1-p1-int"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Calculating the Integral</h4><p>We need to calculate <span class="katex-inline" data-id="e1-p2-int"></span>. We use partial fraction decomposition for the integrand. We set up the equation: <span class="katex-display" data-id="e1-p2-decomp"></span></p><p>Solving for the constants A, B, and C gives <span class="katex-inline" data-id="e1-p2-const-a"></span>, <span class="katex-inline" data-id="e1-p2-const-b"></span>, and <span class="katex-inline" data-id="e1-p2-const-c"></span>. The integral thus becomes:</p><p><span class="katex-display" data-id="e1-p2-int-eval"></span></p><p>Integrating each term gives: <span class="katex-display" data-id="e1-p2-integrated"></span></p><p>Evaluating at the bounds 1 and 0: <span class="katex-display" data-id="e1-p2-eval-step1"></span></p><p>The final result is <span class="katex-inline" data-id="e1-p2-final"></span>.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>For part 2, notice the relationship between the integrands of the two integrals. Can you add them together to get something simpler?</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Weierstrass Substitution:</strong> For integrals involving trigonometric functions, the substitution <span class="katex-inline" data-id="k2-f1"></span> is very powerful. It allows expressing <span class="katex-inline" data-id="k2-f2"></span>, <span class="katex-inline" data-id="k2-f3"></span>, and <span class="katex-inline" data-id="k2-f4"></span> in terms of <span class="katex-inline" data-id="k2-f5"></span>: <span class="katex-display" data-id="k2-f6"></span></p><p><strong>Properties of the Integral:</strong> The sum of integrals is the integral of the sum: <span class="katex-inline" data-id="k2-f7"></span>.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: The Integration</h4><p>We use the substitution <span class="katex-inline" data-id="e2-p1-sub"></span>. This implies <span class="katex-inline" data-id="e2-p1-cos"></span> and <span class="katex-inline" data-id="e2-p1-dx"></span>. We also need to change the integration bounds: when <span class="katex-inline" data-id="e2-p1-b1"></span>, <span class="katex-inline" data-id="e2-p1-b2"></span>; when <span class="katex-inline" data-id="e2-p1-b3"></span>, <span class="katex-inline" data-id="e2-p1-b4"></span>.</p><p>Substituting into the integral: <span class="katex-display" data-id="e2-p1-sub-int"></span></p><p>The denominator simplifies nicely: <span class="katex-inline" data-id="e2-p1-denom"></span>. The integral becomes: <span class="katex-display" data-id="e2-p1-simp-int"></span></p><p>To solve this, we rewrite the integrand: <span class="katex-display" data-id="e2-p1-rewrite"></span></p><p>Now, we integrate: <span class="katex-display" data-id="e2-p1-integrate"></span></p><p>The evaluation gives <span class="katex-inline" data-id="e2-p1-final"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Deducing the Second Integral</h4><p>Observe the structure of the two integrals. Let's add their integrands: <span class="katex-display" data-id="e2-p2-add"></span></p><p>This means that the sum of the two integrals is simply the integral of 1 over the interval: <span class="katex-display" data-id="e2-p2-sum-int"></span></p><p>We know the value of the first integral from Part 1. We can therefore solve for the second: <span class="katex-display" data-id="e2-p2-solve"></span></p><p>The value is <span class="katex-inline" data-id="e2-p2-final"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>For part 2, first solve the homogeneous equation, then find a particular solution. Since the non-homogeneous term is <span class="katex-inline" data-id="h3-k1"></span>, try a particular solution of the form <span class="katex-inline" data-id="h3-k2"></span>.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>First-Order Linear Differential Equations:</strong> An equation of the form <span class="katex-inline" data-id="k3-f1"></span>. The general solution is the sum of the general solution of the homogeneous equation (<span class="katex-inline" data-id="k3-f2"></span>) and a particular solution of the non-homogeneous equation.</p><p><strong>Cauchy-Lipschitz Theorem:</strong> Guarantees the existence and uniqueness of solutions for certain initial value problems if the function and its partial derivative are continuous.</p><p><strong>Method of Undetermined Coefficients:</strong> A method for finding a particular solution to a non-homogeneous linear differential equation. The form of the particular solution is guessed based on the form of the non-homogeneous term.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 1: Existence of a Solution</h4><p>The equation is <span class="katex-inline" data-id="e3-p1-eq1"></span>. This is a first-order linear differential equation. Since the functions involved are continuous everywhere, the <strong>Cauchy-Lipschitz theorem</strong> guarantees that a unique solution exists for any given initial condition.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 2: Solving the Differential Equation <span class="katex-inline" data-id="e3-p2-eq1"></span></h4><p><strong>Step 1: Homogeneous solution.</strong> We first solve the associated homogeneous equation <span class="katex-inline" data-id="e3-p2-homo-eq"></span>. This is a separable equation, <span class="katex-inline" data-id="e3-p2-homo-sep"></span>. Integration gives <span class="katex-inline" data-id="e3-p2-homo-int"></span>, so the homogeneous solution is <span class="katex-inline" data-id="e3-p2-homo-sol"></span>.</p><p><strong>Step 2: Particular solution.</strong> We look for a particular solution to the non-homogeneous equation. Using the method of undetermined coefficients, we assume a solution of the form <span class="katex-inline" data-id="e3-p2-part-guess"></span>. Its derivative is <span class="katex-inline" data-id="e3-p2-part-deriv"></span>. Substituting into the equation: <span class="katex-display" data-id="e3-p2-part-sub"></span>. This simplifies to <span class="katex-inline" data-id="e3-p2-part-solve"></span>, so <span class="katex-inline" data-id="e3-p2-part-res"></span>.</p><p><strong>Step 3: General solution.</strong> The general solution is the sum of the homogeneous and particular solutions: <span class="katex-display" data-id="e3-p2-gen-sol"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Part 3: Applying the Initial Condition</h4><p>We use the condition <span class="katex-inline" data-id="e3-p3-cond"></span>. Inserting <span class="katex-inline" data-id="e3-p3-t1"></span> into the general solution, we get: <span class="katex-display" data-id="e3-p3-eval"></span>. Solving for C gives <span class="katex-inline" data-id="e3-p3-c-sol"></span>.</p><p>Therefore, the unique solution is <span class="katex-display" data-id="e3-p3-final-sol"></span>.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX rendering error:", e, "on element:", el);
+                        el.textContent = `Formula rendering error: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                }
+            }
+
+            // Exam Questions
+            setText('ex1-q1', "lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=0}^{n-1} \\frac{n^2}{(n+2k)(n+k)^2} = \\int_{0}^{1} f(x) dx");
+            setText('ex2-q1-sub', "t = \\tan(x/2)");
+            setText('ex2-q1-eq', "\\int_{0}^{\\pi/3} \\frac{\\cos x}{1+\\cos x} dx = \\frac{\\pi}{3} - \\frac{\\sqrt{3}}{3}");
+            setText('ex2-q2-eq', "\\int_{0}^{\\pi/3} \\frac{1}{1+\\cos x} dx");
+            setText('ex3-q1-eq', "y' = 2y + e^{2t}");
+            setText('ex3-q2-eq', "y' = 2y + e^t");
+            setText('ex3-q3-eq', "y' = 2y + e^t");
+            setText('ex3-q3-cond', "y(1)=1");
+
+            // Exam Solutions
+            setText('sol1-p1-lim', "lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=0}^{n-1} \\frac{n^2}{(n+2k)(n+k)^2} = \\int_{0}^{1} f(x) dx");
+            setText('sol1-p1-manip', "\\frac{n^2}{(n+2k)(n+k)^2} = \\frac{n^2/n^3}{\\frac{n+2k}{n} \\cdot \\frac{(n+k)^2}{n^2}} = \\frac{1/n}{(1+2k/n)(1+k/n)^2}");
+            setText('sol1-p1-sum', "\\sum_{k=0}^{n-1} \\frac{1}{n} \\frac{1}{(1+2k/n)(1+k/n)^2}");
+            setText('sol1-p1-func', "f(x) = \\frac{1}{(1+2x)(1+x)^2}");
+            setText('sol1-p2-int', "\\int_{0}^{1} \\frac{1}{(1+2x)(1+x)^2} dx");
+            setText('sol1-p2-decomp', "\\frac{1}{(1+2x)(1+x)^2} = \\frac{A}{1+2x} + \\frac{B}{1+x} + \\frac{C}{(1+x)^2}");
+            setText('sol1-p2-const-a', "A=4");
+            setText('sol1-p2-const-b', "B=-2");
+            setText('sol1-p2-const-c', "C=-1");
+            setText('sol1-p2-int-eval', "\\int_{0}^{1} (\\frac{4}{1+2x} - \\frac{2}{1+x} - \\frac{1}{(1+x)^2}) dx = [2 \\ln|1+2x| - 2 \\ln|1+x| + \\frac{1}{1+x}]_{0}^{1}");
+            setText('sol1-p2-eval-step1', "(2 \\ln(3) - 2 \\ln(2) + \\frac{1}{2}) - (2 \\ln(1) - 2 \\ln(1) + 1)");
+            setText('sol1-p2-eval-step2', "2(\\ln 3 - \\ln 2) - \\frac{1}{2} = 2 \\ln(\\frac{3}{2}) - \\frac{1}{2}");
+            
+            setText('sol2-p1-int', "\\int_{0}^{\\pi/3} \\frac{\\cos x}{1+\\cos x} dx");
+            setText('sol2-p1-t', "t = \\tan(x/2)");
+            setText('sol2-p1-subs', "\\cos x = \\frac{1-t^2}{1+t^2}");
+            setText('sol2-p1-dx', "dx = \\frac{2dt}{1+t^2}");
+            setText('sol2-p1-b1', "x=0 \\Rightarrow t=0");
+            setText('sol2-p1-b2', "x=\\pi/3 \\Rightarrow t=\\tan(\\pi/6) = 1/\\sqrt{3}");
+            setText('sol2-p1-eval1', "\\int_{0}^{1/\\sqrt{3}} \\frac{\\frac{1-t^2}{1+t^2}}{1+\\frac{1-t^2}{1+t^2}} \\frac{2dt}{1+t^2} = \\int_{0}^{1/\\sqrt{3}} \\frac{1-t^2}{1+t^2+1-t^2} \\frac{2dt}{1+t^2} = \\int_{0}^{1/\\sqrt{3}} \\frac{1-t^2}{1+t^2} dt");
+            setText('sol2-p1-eval2', "\\int_{0}^{1/\\sqrt{3}} \\frac{2-(1+t^2)}{1+t^2} dt = \\int_{0}^{1/\\sqrt{3}} (\\frac{2}{1+t^2}-1) dt");
+            setText('sol2-p1-eval3', "[2 \\arctan t - t]_{0}^{1/\\sqrt{3}} = (2 \\arctan(1/\\sqrt{3}) - 1/\\sqrt{3}) - 0 = 2(\\frac{\\pi}{6}) - \\frac{\\sqrt{3}}{3} = \\frac{\\pi}{3} - \\frac{\\sqrt{3}}{3}");
+            setText('sol2-p2-int', "\\int_{0}^{\\pi/3} \\frac{1}{1+\\cos x} dx");
+            setText('sol2-p2-obs', "\\frac{1}{1+\\cos x} + \\frac{\\cos x}{1+\\cos x} = \\frac{1+\\cos x}{1+\\cos x} = 1");
+            setText('sol2-p2-sum-int', "\\int_{0}^{\\pi/3} \\frac{1}{1+\\cos x} dx + \\int_{0}^{\\pi/3} \\frac{\\cos x}{1+\\cos x} dx = \\int_{0}^{\\pi/3} 1 dx = \\frac{\\pi}{3}");
+            setText('sol2-p2-res', "\\int_{0}^{\\pi/3} \\frac{1}{1+\\cos x} dx = \\frac{\\pi}{3} - (\\frac{\\pi}{3} - \\frac{\\sqrt{3}}{3}) = \\frac{\\sqrt{3}}{3}");
+
+            setText('sol3-p1-eq1', "y' = 2y + e^{2t}");
+            setText('sol3-p1-eq2', "y' - 2y = e^{2t}");
+            setText('sol3-p1-a', "a(t)=-2");
+            setText('sol3-p1-b', "b(t)=e^{2t}");
+            setText('sol3-p1-r', "\\mathbb{R}");
+            setText('sol3-p1-r2', "\\mathbb{R}");
+            setText('sol3-p2-eq', "y' = 2y + e^t");
+            setText('sol3-p2-homo', "y' - 2y = 0");
+            setText('sol3-p2-homo-sol', "y_h(t) = Ce^{2t}");
+            setText('sol3-p2-part-form', "y_p = Ae^t");
+            setText('sol3-p2-part-sol', "Ae^t - 2Ae^t = e^t \\Rightarrow -A=1 \\Rightarrow A=-1");
+            setText('sol3-p2-part-res', "y_p(t) = -e^t");
+            setText('sol3-p2-gen-sol', "y(t) = y_h + y_p = Ce^{2t} - e^t");
+            setText('sol3-p3-cond', "y(1)=1");
+            setText('sol3-p3-eval', "y(1) = Ce^{2(1)} - e^1 = 1 \\Rightarrow Ce^2 - e = 1 \\Rightarrow Ce^2 = 1+e \\Rightarrow C = \\frac{1+e}{e^2}");
+            setText('sol3-p3-unique-sol', "y(t) = \\frac{1+e}{e^2}e^{2t} - e^t");
+            
+            // Modal Formulas
+            setText('h1-k1', "n^3");
+            setText('k1-f1', "f");
+            setText('k1-f2', "a");
+            setText('k1-f3', "b");
+            setText('k1-f4', "\\int_{a}^{b} f(x) dx = \\lim_{n \\to \\infty} \\sum_{k=1}^{n} f(x_k) \\Delta x");
+
+            setText('e1-p1-term', "\\frac{1}{n}\\sum_{k=0}^{n-1} \\frac{n^2}{(n+2k)(n+k)^2}");
+            setText('e1-p1-fact1', "n^2");
+            setText('e1-p1-fact2', "n^3");
+            setText('e1-p1-manip', "\\frac{1}{n} \\frac{n^3 \\cdot \\frac{1}{(1+2k/n)(1+k/n)^2}}{n^3} = \\frac{1}{n} \\frac{1}{(1+2k/n)(1+k/n)^2}");
+            setText('e1-p1-sum', "\\frac{1}{n} \\sum_{k=0}^{n-1} \\frac{1}{(1+2k/n)(1+k/n)^2}");
+            setText('e1-p1-func', "f(x) = \\frac{1}{(1+2x)(1+x)^2}");
+            setText('e1-p1-n', "n");
+            setText('e1-p1-dx', "\\Delta x = 1/n");
+            setText('e1-p1-f2', "f(x)");
+            setText('e1-p1-int', "\\int_{0}^{1} \\frac{1}{(1+2x)(1+x)^2} dx");
+            setText('e1-p2-int', "\\int_{0}^{1} \\frac{1}{(1+2x)(1+x)^2} dx");
+            setText('e1-p2-decomp', "\\frac{1}{(1+2x)(1+x)^2} = \\frac{A}{1+2x} + \\frac{B}{1+x} + \\frac{C}{(1+x)^2}");
+            setText('e1-p2-const-a', "A=4");
+            setText('e1-p2-const-b', "B=-2");
+            setText('e1-p2-const-c', "C=-1");
+            setText('e1-p2-int-eval', "\\int_{0}^{1} (\\frac{4}{1+2x} - \\frac{2}{1+x} - \\frac{1}{(1+x)^2}) dx");
+            setText('e1-p2-integrated', "[2\\ln|1+2x| - 2\\ln|1+x| + \\frac{1}{1+x}]_0^1");
+            setText('e1-p2-eval-step1', "(2\\ln(3) - 2\\ln(2) + \\frac{1}{2}) - (2\\ln(1) - 2\\ln(1) + 1)");
+            setText('e1-p2-final', "2\\ln(3/2) - 1/2");
+
+            setText('k2-f1', "t = \\tan(x/2)");
+            setText('k2-f2', "\\sin x");
+            setText('k2-f3', "\\cos x");
+            setText('k2-f4', "dx");
+            setText('k2-f5', "t");
+            setText('k2-f6', "\\sin x = \\frac{2t}{1+t^2}, \\quad \\cos x = \\frac{1-t^2}{1+t^2}, \\quad dx = \\frac{2dt}{1+t^2}");
+            setText('k2-f7', "\\int (f(x)+g(x))dx = \\int f(x)dx + \\int g(x)dx");
+
+            setText('e2-p1-sub', "t=\\tan(x/2)");
+            setText('e2-p1-cos', "\\cos x = \\frac{1-t^2}{1+t^2}");
+            setText('e2-p1-dx', "dx = \\frac{2dt}{1+t^2}");
+            setText('e2-p1-b1', "x=0");
+            setText('e2-p1-b2', "t=0");
+            setText('e2-p1-b3', "x=\\pi/3");
+            setText('e2-p1-b4', "t=1/\\sqrt{3}");
+            setText('e2-p1-sub-int', "\\int_0^{1/\\sqrt{3}} \\frac{\\frac{1-t^2}{1+t^2}}{1+\\frac{1-t^2}{1+t^2}} \\frac{2dt}{1+t^2}");
+            setText('e2-p1-denom', "1+\\frac{1-t^2}{1+t^2} = \\frac{1+t^2+1-t^2}{1+t^2} = \\frac{2}{1+t^2}");
+            setText('e2-p1-simp-int', "\\int_0^{1/\\sqrt{3}} \\frac{\\frac{1-t^2}{1+t^2}}{\\frac{2}{1+t^2}} \\frac{2dt}{1+t^2} = \\int_0^{1/\\sqrt{3}} \\frac{1-t^2}{1+t^2} dt");
+            setText('e2-p1-rewrite', "\\frac{1-t^2}{1+t^2} = \\frac{-(1+t^2)+2}{1+t^2} = -1 + \\frac{2}{1+t^2}");
+            setText('e2-p1-integrate', "\\int_0^{1/\\sqrt{3}} (\\frac{2}{1+t^2} - 1) dt = [2\\arctan(t) - t]_0^{1/\\sqrt{3}}");
+            setText('e2-p1-final', "2\\arctan(1/\\sqrt{3}) - 1/\\sqrt{3} = 2(\\pi/6) - \\sqrt{3}/3 = \\pi/3 - \\sqrt{3}/3");
+            setText('e2-p2-add', "\\frac{1}{1+\\cos x} + \\frac{\\cos x}{1+\\cos x} = \\frac{1+\\cos x}{1+\\cos x} = 1");
+            setText('e2-p2-sum-int', "\\int_0^{\\pi/3} 1 dx = [x]_0^{\\pi/3} = \\pi/3");
+            setText('e2-p2-solve', "\\int_0^{\\pi/3} \\frac{1}{1+\\cos x}dx = \\frac{\\pi}{3} - (\\frac{\\pi}{3} - \\frac{\\sqrt{3}}{3})");
+            setText('e2-p2-final', "\\sqrt{3}/3");
+
+            setText('h3-k1', "e^t");
+            setText('h3-k2', "y_p = Ae^t");
+            setText('k3-f1', "y' + p(x)y = q(x)");
+            setText('k3-f2', "y' + p(x)y = 0");
+
+            setText('e3-p1-eq1', "y' = 2y + e^{2t}");
+            setText('e3-p2-eq1', "y' = 2y + e^t");
+            setText('e3-p2-homo-eq', "y' - 2y = 0");
+            setText('e3-p2-homo-sep', "dy/y = 2dt");
+            setText('e3-p2-homo-int', "\\ln|y| = 2t + K");
+            setText('e3-p2-homo-sol', "y_h(t) = Ce^{2t}");
+            setText('e3-p2-part-guess', "y_p = Ae^t");
+            setText('e3-p2-part-deriv', "y'_p = Ae^t");
+            setText('e3-p2-part-sub', "Ae^t = 2(Ae^t) + e^t");
+            setText('e3-p2-part-solve', "-Ae^t = e^t \\Rightarrow A=-1");
+            setText('e3-p2-part-res', "y_p(t) = -e^t");
+            setText('e3-p2-gen-sol', "y(t) = Ce^{2t} - e^t");
+            setText('e3-p3-cond', "y(1)=1");
+            setText('e3-p3-t1', "t=1");
+            setText('e3-p3-eval', "1 = Ce^{2(1)} - e^1 = Ce^2 - e");
+            setText('e3-p3-c-sol', "C = \\frac{1+e}{e^2}");
+            setText('e3-p3-final-sol', "y(t) = \\frac{1+e}{e^2}e^{2t} - e^t");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+    <script src="include.js"></script>
+</body>
+</html>

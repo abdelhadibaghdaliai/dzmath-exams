@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 2: Exam (2018/2019) - Enhanced Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 2</h1>
+            <p class="exam-subtitle">Exam (2018/2019)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>Using Taylor series, calculate the following limits:</p>
+                        <p><span class="katex-display" data-id="ex1-q-lim1"></span></p>
+                        <p><span class="katex-display" data-id="ex1-q-lim2"></span></p>
+                        <p><span class="katex-display" data-id="ex1-q-lim3"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>Give the Taylor series at point <span class="katex-inline" data-id="ex2-q-x0"></span>, to the indicated order n:</p>
+                        <p>1. <span class="katex-inline" data-id="ex2-q1-f"></span>, <span class="katex-inline" data-id="ex2-q1-cond"></span></p>
+                        <p>2. <span class="katex-inline" data-id="ex2-q2-f"></span>, <span class="katex-inline" data-id="ex2-q2-cond"></span></p>
+                        <p>3. <span class="katex-inline" data-id="ex2-q3-f"></span>, <span class="katex-inline" data-id="ex2-q3-cond"></span></p>
+                        <p>4. <span class="katex-inline" data-id="ex2-q4-f"></span>, <span class="katex-inline" data-id="ex2-q4-cond"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>For the function <span class="katex-inline" data-id="ex3-q-f"></span>, determine the equations of the tangent at 0 and the asymptote at <span class="katex-inline" data-id="ex3-q-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>1. Calculate the antiderivatives of the functions below:</p>
+                        <p><span class="katex-inline" data-id="ex4-q1-f1"></span></p>
+                        <p><span class="katex-inline" data-id="ex4-q1-f2"></span></p>
+                        <p>2. Prove that: <span class="katex-inline" data-id="ex4-q2-lim"></span>.</p>
+                        <p>3. Verify the triangle inequality for the Riemann integral: <span class="katex-inline" data-id="ex4-q3-ineq"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>1. For <span class="katex-inline" data-id="sol1-p1-lim"></span> :</p>
+                        <p>Taylor series of the numerator to order 2: <span class="katex-inline" data-id="sol1-p1-num"></span>.</p>
+                        <p>Taylor series of the denominator to order 2: <span class="katex-inline" data-id="sol1-p1-den"></span>.</p>
+                        <p>The limit is <span class="katex-inline" data-id="sol1-p1-res"></span>.</p>
+                        
+                        <p>2. For <span class="katex-inline" data-id="sol1-p2-lim"></span>, we set <span class="katex-inline" data-id="sol1-p2-sub"></span>. The limit becomes <span class="katex-inline" data-id="sol1-p2-lim-t"></span>. With the Taylor series <span class="katex-inline" data-id="sol1-p2-dl"></span>, the limit is <span class="katex-inline" data-id="sol1-p2-res"></span>.</p>
+
+                        <p>3. For <span class="katex-inline" data-id="sol1-p3-lim"></span>, we use the exponential form: <span class="katex-inline" data-id="sol1-p3-exp"></span>. The exponent is <span class="katex-inline" data-id="sol1-p3-expo"></span>. By setting <span class="katex-inline" data-id="sol1-p3-u"></span>, the limit of the exponent is -2. The final limit is <span class="katex-inline" data-id="sol1-p3-res"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-inline" data-id="sol2-p1-f"></span> : <span class="katex-display" data-id="sol2-p1-dl"></span></p>
+                        <p>2. <span class="katex-inline" data-id="sol2-p2-f"></span> : We use the Taylor-Young formula. <span class="katex-inline" data-id="sol2-p2-g"></span>, <span class="katex-inline" data-id="sol2-p2-gp"></span>, <span class="katex-inline" data-id="sol2-p2-gpp"></span>. <span class="katex-display" data-id="sol2-p2-dl"></span></p>
+                        <p>3. <span class="katex-inline" data-id="sol2-p3-f"></span> : We set <span class="katex-inline" data-id="sol2-p3-sub"></span>. We expand <span class="katex-inline" data-id="sol2-p3-h"></span>. The final Taylor series is long and tedious.</p>
+                        <p>4. <span class="katex-inline" data-id="sol2-p4-f"></span> : We perform the division according to decreasing powers or we set <span class="katex-inline" data-id="sol2-p4-sub"></span> and perform a division according to increasing powers. <span class="katex-display" data-id="sol2-p4-dl"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p><strong>Tangent at 0:</strong> We find the Taylor series to order 1 at 0 by dividing according to increasing powers. <span class="katex-inline" data-id="sol3-p1-div"></span>. The equation of the tangent at 0 is <span class="katex-inline" data-id="sol3-p1-tan"></span>.</p>
+                        <p><strong>Asymptote at <span class="katex-inline" data-id="sol3-p2-inf"></span> :</strong> We perform a division according to decreasing powers. <span class="katex-inline" data-id="sol3-p2-div"></span>. The equation of the asymptote at <span class="katex-inline" data-id="sol3-p2-inf3"></span> is <span class="katex-inline" data-id="sol3-p2-asy"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>1. <strong>Antiderivatives:</strong></p>
+                        <ul>
+                            <li class="text-slate-300">For <span class="katex-inline" data-id="sol4-p1-f1"></span>, an antiderivative is of the form <span class="katex-inline" data-id="sol4-p1-f1-form"></span>. Using the generalized integration by parts formula, we find <span class="katex-inline" data-id="sol4-p1-f1-res"></span>.</li>
+                            <li class="text-slate-300">For <span class="katex-inline" data-id="sol4-p1-f2"></span>, by double integration by parts, we find <span class="katex-inline" data-id="sol4-p1-f2-res"></span>.</li>
+                        </ul>
+                        <p>2. This is the definition of the Riemann integral for the function <span class="katex-inline" data-id="sol4-p2-f"></span> on [0,1].</p>
+                        <p>3. The triangle inequality for Riemann integrals follows from the triangle inequality for finite sums, by taking the limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Taylor Series: Efficient Approximation ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Many mathematical functions (sin, cos, exp, log...) are computationally expensive for a computer to calculate. Taylor series (or Taylor expansions) allow us to obtain an <strong>excellent approximation</strong> of these functions using only polynomials (additions and multiplications), which are extremely fast to compute. In computer science, we often don't need the exact value, but a sufficiently good approximation. This is the foundation of many scientific and computational libraries.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Calculating sin(x)</h4>
+                        <p class="mb-4 text-slate-400">Rather than using a complex method, a calculator or program can use the first few terms of the Taylor series of sin(x) around 0 to get a very precise result for small values of x. The tangent equation is simply the Taylor series of order 1.</p>
+                         <pre class="language-pseudocode"><code>// Taylor series of sin(x) = x - x^3/6 + x^5/120 - ...
+
+function fast_sin(x) {
+  // For x close to 0, we can make do with the first few terms
+  let x_squared = x * x;
+  let x_cubed = x_squared * x;
+  let x_quinte = x_cubed * x_squared;
+
+  // Approximation to order 5
+  return x - (x_cubed / 6.0) + (x_quinte / 120.0);
+}</code></pre>
+                    </div>
+
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Antiderivatives and Integration: Data Accumulation 📊</h3>
+                        <p class="text-lg mb-4 text-slate-300">In computer science, we often handle data streams that represent rates of change (e.g., download speed in MB/s, number of transactions per minute). Calculating antiderivatives, or integration, allows us to go from this rate of change to a <strong>total accumulated quantity</strong>. This is essential for system monitoring, financial data analysis, or simulating physical processes.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Calculating Total Data Downloaded</h4>
+                        <p class="mb-4 text-slate-400">A network manager monitors the transfer speed (v(t)) over a period of time. To find out the total amount of data transferred between time t₁ and t₂, they must calculate the integral of the speed function. Numerically, this is done by summing the small amounts of data transferred over each small time interval (a Riemann sum).</p>
+                         <pre class="language-pseudocode"><code>// v(t) is the download speed function in MB/s
+function total_download(t_start, t_end) {
+  let total_data = 0;
+  let time = t_start;
+  let dt = 0.1; // small time interval (0.1s)
+
+  while (time < t_end) {
+    // Amount of data = speed * time
+    // This is a small rectangle of the Riemann sum
+    total_data += v(time) * dt; 
+    time += dt;
+  }
+  
+  return total_data; // The approximated integral
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>For the third limit, the form <span class="katex-inline" data-id="h1-k1"></span> suggests switching to the exponential form <span class="katex-inline" data-id="h1-k2"></span> and studying the limit of the exponent.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Common Taylor series at the origin:</strong> <span class="katex-inline" data-id="k1-f1"></span>, <span class="katex-inline" data-id="k1-f2"></span>, <span class="katex-inline" data-id="k1-f3"></span>, <span class="katex-inline" data-id="k1-f4"></span>.</p><p><strong>Change of variable for limits:</strong> Set <span class="katex-inline" data-id="k1-f5"></span> for a limit at 1, or <span class="katex-inline" data-id="k1-f6"></span> for a limit at <span class="katex-inline" data-id="k1-f7"></span>.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. First limit</h4><p>We expand the numerator and the denominator to order 2. Numerator: <span class="katex-inline" data-id="e1-p1-num"></span>. Denominator: <span class="katex-inline" data-id="e1-p1-den"></span>. The ratio of the terms of the lowest degree is <span class="katex-inline" data-id="e1-p1-ratio"></span>, which gives a limit of -2.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Second limit</h4><p>The limit is at 1, so we set <span class="katex-inline" data-id="e1-p2-sub"></span>. The limit becomes <span class="katex-inline" data-id="e1-p2-lim-t"></span>. Using the Taylor series <span class="katex-inline" data-id="e1-p2-dl-ln"></span> and keeping only the terms of the lowest degree, we get <span class="katex-inline" data-id="e1-p2-ratio"></span>, which tends to 1/2.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Third limit</h4><p>This is an indeterminate form <span class="katex-inline" data-id="e1-p3-ind"></span>. We switch to the exponential form: <span class="katex-inline" data-id="e1-p3-exp"></span>. We study the exponent: <span class="katex-inline" data-id="e1-p3-expo"></span>. We set <span class="katex-inline" data-id="e1-p3-u"></span>. When <span class="katex-inline" data-id="e1-p3-x-inf"></span>, <span class="katex-inline" data-id="e1-p3-u-0"></span>. The exponent becomes <span class="katex-inline" data-id="e1-p3-expo-u"></span>. Using the Taylor series <span class="katex-inline" data-id="e1-p3-dl-ln"></span>, the limit of the exponent is -2. The final limit is therefore <span class="katex-inline" data-id="e1-p3-res"></span>.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>For question 2, the function is not defined at <span class="katex-inline" data-id="h2-k1"></span>. Use the Taylor-Young formula which requires calculating the successive derivatives of the function at the point <span class="katex-inline" data-id="h2-k2"></span>.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Operations on Taylor Series:</strong> Product, composition, quotient.</p><p><strong>Taylor-Young Formula:</strong> For a Taylor series at a point <span class="katex-inline" data-id="k2-f1"></span>, <span class="katex-inline" data-id="k2-f2"></span>.</p><p><strong>Taylor Series at <span class="katex-inline" data-id="k2-f3"></span> :</strong> Can be reduced to a series at 0 by setting <span class="katex-inline" data-id="k2-f4"></span>.</p><p><strong>Division according to increasing/decreasing powers</strong> for rational fractions.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Taylor Series of <span class="katex-inline" data-id="e2-p1-f"></span> at 0</h4><p>We multiply the known Taylor series of <span class="katex-inline" data-id="e2-p1-ex"></span> and <span class="katex-inline" data-id="e2-p1-sin"></span> to order 3, keeping only the terms of degree less than or equal to 3.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Taylor Series of <span class="katex-inline" data-id="e2-p2-f"></span> at <span class="katex-inline" data-id="e2-p2-pi3"></span></h4><p>We apply the Taylor-Young formula. We calculate <span class="katex-inline" data-id="e2-p2-g"></span>, <span class="katex-inline" data-id="e2-p2-gp"></span>, and <span class="katex-inline" data-id="e2-p2-gpp"></span>. We evaluate these functions at <span class="katex-inline" data-id="e2-p2-pi3-2"></span> to obtain the coefficients of the series.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Taylor Series of <span class="katex-inline" data-id="e2-p3-f"></span> at 2</h4><p>We make the change of variable <span class="katex-inline" data-id="e2-p3-sub"></span> to reduce it to a series at 0. We then expand the numerator and the denominator in terms of <span class="katex-inline" data-id="e2-p3-t"></span> and perform a division according to increasing powers.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. Taylor Series of <span class="katex-inline" data-id="e2-p4-f"></span> at <span class="katex-inline" data-id="e2-p4-inf"></span></h4><p>We set <span class="katex-inline" data-id="e2-p4-sub"></span>. The function of <span class="katex-inline" data-id="e2-p4-t"></span> is <span class="katex-inline" data-id="e2-p4-kt"></span>. We perform the division of <span class="katex-inline" data-id="e2-p4-num"></span> by <span class="katex-inline" data-id="e2-p4-den"></span> according to the increasing powers of <span class="katex-inline" data-id="e2-p4-t2"></span>, then we replace <span class="katex-inline" data-id="e2-p4-t3"></span> with <span class="katex-inline" data-id="e2-p4-1x"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>To find the tangent and asymptote of a rational fraction, the most direct method is the Euclidean division of polynomials (according to increasing powers for the tangent at 0, and decreasing powers for the asymptote at infinity).</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Taylor Series of a rational fraction:</strong> Can be obtained by Euclidean division of polynomials.</p><p><strong>Tangent at 0:</strong> The equation <span class="katex-inline" data-id="k3-f1"></span> is given by the Taylor series to order 1 of <span class="katex-inline" data-id="k3-f2"></span> at 0.</p><p><strong>Asymptote at <span class="katex-inline" data-id="k3-f3"></span> :</strong> If <span class="katex-inline" data-id="k3-f4"></span>, then <span class="katex-inline" data-id="k3-f5"></span> is the equation of the asymptote.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Tangent at 0</h4><p>We are looking for the Taylor series of <span class="katex-inline" data-id="e3-p1-f"></span> to order 1 at 0. We perform the division of the polynomial <span class="katex-inline" data-id="e3-p1-num"></span> by <span class="katex-inline" data-id="e3-p1-den"></span> according to increasing powers. The result <span class="katex-inline" data-id="e3-p1-dl"></span> directly gives us the equation of the tangent <span class="katex-inline" data-id="e3-p1-tan"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Asymptote at <span class="katex-inline" data-id="e3-p2-inf"></span></h4><p>We perform the Euclidean division of the numerator <span class="katex-inline" data-id="e3-p2-num"></span> by the denominator <span class="katex-inline" data-id="e3-p2-den"></span>. We obtain <span class="katex-inline" data-id="e3-p2-div"></span>. The polynomial part of the division, <span class="katex-inline" data-id="e3-p2-quot"></span>, gives the equation of the oblique asymptote: <span class="katex-inline" data-id="e3-p2-asy"></span>, because the remainder divided by the denominator tends to 0 at infinity.</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>For the antiderivative of <span class="katex-inline" data-id="h4-k1"></span>, look for an antiderivative of the form <span class="katex-inline" data-id="h4-k2"></span> where <span class="katex-inline" data-id="h4-k3"></span> is a polynomial. For question 2, recognize the form of a Riemann sum.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Integration by parts (IBP):</strong> <span class="katex-inline" data-id="k4-f1"></span>. A double IBP is necessary for antiderivatives of the form <span class="katex-inline" data-id="k4-f2"></span>.</p><p><strong>Antiderivatives of <span class="katex-inline" data-id="k4-f3"></span> :</strong> One method is to look for an antiderivative of the form <span class="katex-inline" data-id="k4-f4"></span>.</p><p><strong>Riemann Sums:</strong> The definition of the integral as the limit of a sum.</p><p><strong>Triangle Inequality:</strong> For numbers, <span class="katex-inline" data-id="k4-f5"></span>, and for integrals, <span class="katex-inline" data-id="k4-f6"></span>.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calculation of antiderivatives</h4><p>For <span class="katex-inline" data-id="e4-p1-f1"></span>, we can use successive integrations by parts or a direct formula for the antiderivatives of <span class="katex-inline" data-id="e4-p1-form1"></span>.</p><p>For <span class="katex-inline" data-id="e4-p1-f2"></span>, we apply integration by parts twice. The first time, we set for example <span class="katex-inline" data-id="e4-p1-u1"></span> and <span class="katex-inline" data-id="e4-p1-dv1"></span>. This leads to a new integral with <span class="katex-inline" data-id="e4-p1-cos"></span>. We apply a second IBP to this new integral, which will bring back the original integral, allowing it to be calculated algebraically.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Proof by Riemann Sum</h4><p>The expression <span class="katex-inline" data-id="e4-p2-expr"></span> can be rewritten as <span class="katex-inline" data-id="e4-p2-sum"></span>. This is exactly the Riemann sum for the function <span class="katex-inline" data-id="e4-p2-f"></span> on the interval [0, 1], with a subdivision into <span class="katex-inline" data-id="e4-p2-n"></span> intervals. By definition, the limit of this sum as <span class="katex-inline" data-id="e4-p2-n-inf"></span> is <span class="katex-inline" data-id="e4-p2-int"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Triangle Inequality</h4><p>The proof starts from the Riemann sum: <span class="katex-inline" data-id="e4-p3-sum"></span>. Using the triangle inequality for complex (or real) numbers, <span class="katex-inline" data-id="e4-p3-ineq-sum"></span>. As the absolute value function is continuous, the limit of the sum on the right is the integral of the absolute value of the function: <span class="katex-inline" data-id="e4-p3-lim"></span>. Hence the result.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX rendering error:", e, "on element:", el);
+                        el.textContent = `Error rendering formula: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) { el.textContent = content; } 
+            }
+
+            // Questions
+            setText('ex1-q-lim1', "\\lim_{x \\to 0} \\frac{x+\\cos x - e^x}{x-\\log(1+\\sin x)}");
+            setText('ex1-q-lim2', "\\lim_{x \\to 1} \\frac{\\ln x}{x^2-1}");
+            setText('ex1-q-lim3', "\\lim_{x \\to +\\infty} (\\frac{3x-1}{3x+1})^{3x}");
+            setText('ex2-q-x0', "x_0");
+            setText('ex2-q1-f', "f(x) = e^x \\sin x");
+            setText('ex2-q1-cond', "(x_0=0, n=3)");
+            setText('ex2-q2-f', "g(x) = \\cos^2 x");
+            setText('ex2-q2-cond', "(x_0=\\pi/3, n=2)");
+            setText('ex2-q3-f', "h(x) = \\frac{\\ln(x+4)}{x+6}");
+            setText('ex2-q3-cond', "(x_0=2, n=3)");
+            setText('ex2-q4-f', "k(x) = \\frac{2-5x+4x^2}{3+x-2x^2}");
+            setText('ex2-q4-cond', "(x_0=+\\infty, n=3)");
+            setText('ex3-q-f', "f(x) = \\frac{2x^3-x^2+3x+4}{x^2+2x-2}");
+            setText('ex3-q-inf', "+\\infty");
+            setText('ex4-q1-f1', "f(x) = (2x^3-5x^2+4x-3)e^{3x}");
+            setText('ex4-q1-f2', "g(x) = e^{2x}\\sin(5x)");
+            setText('ex4-q2-lim', "\\lim_{n \\to \\infty} (\\frac{1^5+2^5+3^5+\\dots+n^5}{n^6}) = \\int_0^1 x^5 dx");
+            setText('ex4-q3-ineq', "|\\int_a^b f(x)dx| \\le \\int_a^b |f(x)|dx");
+
+            // Solutions
+            setText('sol1-p1-lim', "\\lim_{x \\to 0} \\frac{x+\\cos x - e^x}{x-\\log(1+\\sin x)}");
+            setText('sol1-p1-num', "x+(1-\\frac{x^2}{2})-(1+x+\\frac{x^2}{2}) = -x^2+o(x^2)");
+            setText('sol1-p1-den', "x-(x-\\frac{x^2}{2}) = \\frac{x^2}{2}+o(x^2)");
+            setText('sol1-p1-res', "\\lim_{x \\to 0} \\frac{-x^2}{x^2/2} = -2");
+            setText('sol1-p2-lim', "\\lim_{x \\to 1} \\frac{\\ln x}{x^2-1}");
+            setText('sol1-p2-sub', "t=x-1");
+            setText('sol1-p2-lim-t', "\\lim_{t \\to 0} \\frac{\\ln(1+t)}{(1+t)^2-1} = \\lim_{t \\to 0} \\frac{\\ln(1+t)}{2t+t^2}");
+            setText('sol1-p2-dl', "\\ln(1+t) = t+o(t)");
+            setText('sol1-p2-res', "\\lim_{t \\to 0} \\frac{t}{2t} = \\frac{1}{2}");
+            setText('sol1-p3-lim', "\\lim_{x \\to +\\infty} (\\frac{3x-1}{3x+1})^{3x}");
+            setText('sol1-p3-exp', "\\exp(3x \\ln(\\frac{3x-1}{3x+1}))");
+            setText('sol1-p3-expo', "3x \\ln(1-\\frac{2}{3x+1})");
+            setText('sol1-p3-u', "u = -\\frac{2}{3x+1}");
+            setText('sol1-p3-res', "e^{-2}");
+
+            setText('sol2-p1-f', "f(x)=e^x \\sin x");
+            setText('sol2-p1-dl', "f(x) = (1+x+\\frac{x^2}{2}+\\frac{x^3}{6})(x-\\frac{x^3}{6}) + o(x^3) = x+x^2+\\frac{x^3}{3}+o(x^3)");
+            setText('sol2-p2-f', "g(x)=\\cos^2 x");
+            setText('sol2-p2-g', "g(\\pi/3) = 1/4");
+            setText('sol2-p2-gp', "g'(\\pi/3) = -\\sin(2\\pi/3) = -\\sqrt{3}/2");
+            setText('sol2-p2-gpp', "g''(\\pi/3) = -2\\cos(2\\pi/3) = 1");
+            setText('sol2-p2-dl', "g(x) = \\frac{1}{4} - \\frac{\\sqrt{3}}{2}(x-\\frac{\\pi}{3}) + \\frac{1}{2}(x-\\frac{\\pi}{3})^2 + o((x-\\frac{\\pi}{3})^2)");
+            setText('sol2-p3-f', "h(x)=\\frac{\\ln(x+4)}{x+6}");
+            setText('sol2-p3-sub', "t=x-2");
+            setText('sol2-p3-h', "h(t+2) = \\frac{\\ln(t+6)}{t+8}");
+            setText('sol2-p4-f', "k(x)=\\frac{2-5x+4x^2}{3+x-2x^2}");
+            setText('sol2-p4-sub', "t=1/x");
+            setText('sol2-p4-dl', "k(x) = -2 + \\frac{3}{2x} - \\frac{13}{4x^2} + \\frac{5}{8x^3} + O(\\frac{1}{x^3})");
+
+            setText('sol3-p1-div', "\\frac{4+3x}{-2+2x} = -2 - \\frac{7}{2}x + o(x)");
+            setText('sol3-p1-tan', "y = -2 - \\frac{7}{2}x");
+            setText('sol3-p2-inf', "+\\infty");
+            setText('sol3-p2-inf2', "+\\infty");
+            setText('sol3-p2-div', "f(x) = 2x-5 + \\frac{17x-6}{x^2+2x-2} = 2x-5 + O(\\frac{1}{x})");
+            setText('sol3-p2-inf3', "+\\infty");
+            setText('sol3-p2-asy', "y=2x-5");
+
+            setText('sol4-p1-f1', "f(x)=(2x^3-5x^2+4x-3)e^{3x}");
+            setText('sol4-p1-f1-form', "F(x)=Q(x)e^{3x}");
+            setText('sol4-p1-f1-res', "F(x)=\\frac{e^{3x}}{3}(2x^3-7x^2+\\frac{22}{3}x-\\frac{115}{27})+C");
+            setText('sol4-p1-f2', "g(x)=e^{2x}\\sin(5x)");
+            setText('sol4-p1-f2-res', "G(x)=\\frac{e^{2x}}{29}(2\\sin(5x)-5\\cos(5x))+C");
+            setText('sol4-p2-f', "f(x)=x^5");
+
+            // Modals
+            setText('h1-k1', "1^\\infty");
+            setText('h1-k2', "e^{g(x)\\ln f(x)}");
+            setText('k1-f1', "e^x");
+            setText('k1-f2', "\\cos x");
+            setText('k1-f3', "\\sin x");
+            setText('k1-f4', "\\ln(1+x)");
+            setText('k1-f5', "t=x-1");
+            setText('k1-f6', "t=1/x");
+            setText('k1-f7', "\\infty");
+            setText('e1-p1-num', "x+(1-\\frac{x^2}{2})-(1+x+\\frac{x^2}{2}) = -x^2+o(x^2)");
+            setText('e1-p1-den', "x-(\\sin x - \\frac{\\sin^2 x}{2}) = x-(x-\\frac{x^2}{2}) = \\frac{x^2}{2}+o(x^2)");
+            setText('e1-p1-ratio', "\\frac{-x^2}{x^2/2}");
+            setText('e1-p2-sub', "t=x-1");
+            setText('e1-p2-lim-t', "\\lim_{t \\to 0} \\frac{\\ln(1+t)}{2t+t^2}");
+            setText('e1-p2-dl-ln', "\\ln(1+t) \\sim t");
+            setText('e1-p2-ratio', "\\frac{t}{2t}");
+            setText('e1-p3-ind', "1^\\infty");
+            setText('e1-p3-exp', "\\exp\\left(3x \\ln(\\frac{3x-1}{3x+1})\\right)");
+            setText('e1-p3-expo', "3x \\ln(1 - \\frac{2}{3x+1})");
+            setText('e1-p3-u', "u = -\\frac{2}{3x+1}");
+            setText('e1-p3-x-inf', "x \\to +\\infty");
+            setText('e1-p3-u-0', "u \\to 0");
+            setText('e1-p3-expo-u', "3x \\ln(1+u) \\sim 3x \\cdot u = 3x (-\\frac{2}{3x+1}) \\sim \\frac{-6x}{3x}");
+            setText('e1-p3-dl-ln', "\\ln(1+u) \\sim u");
+            setText('e1-p3-res', "e^{-2}");
+
+            setText('h2-k1', "\\pi/3");
+            setText('h2-k2', "\\pi/3");
+            setText('k2-f1', "x_0 \\ne 0");
+            setText('k2-f2', "g(x) = g(x_0) + g'(x_0)(x-x_0) + \\frac{g''(x_0)}{2!}(x-x_0)^2 + \\dots");
+            setText('k2-f3', "+\\infty");
+            setText('k2-f4', "t=1/x");
+            setText('e2-p1-f', "e^x \\sin x");
+            setText('e2-p1-ex', "e^x");
+            setText('e2-p1-sin', "\\sin x");
+            setText('e2-p2-f', "\\cos^2 x");
+            setText('e2-p2-pi3', "\\pi/3");
+            setText('e2-p2-g', "g(\\pi/3)");
+            setText('e2-p2-gp', "g'(\\pi/3)");
+            setText('e2-p2-gpp', "g''(\\pi/3)");
+            setText('e2-p2-pi3-2', "\\pi/3");
+            setText('e2-p3-f', "h(x)");
+            setText('e2-p3-sub', "t=x-2");
+            setText('e2-p3-t', "t");
+            setText('e2-p4-f', "k(x)");
+            setText('e2-p4-inf', "+\\infty");
+            setText('e2-p4-sub', "t=1/x");
+            setText('e2-p4-t', "t");
+            setText('e2-p4-kt', "k(1/t)");
+            setText('e2-p4-num', "4-5t+2t^2");
+            setText('e2-p4-den', "-2+t+3t^2");
+            setText('e2-p4-t2', "t");
+            setText('e2-p4-t3', "t");
+            setText('e2-p4-1x', "1/x");
+
+            setText('k3-f1', "y=f(0)+f'(0)x");
+            setText('k3-f2', "f(x)");
+            setText('k3-f3', "+\\infty");
+            setText('k3-f4', "f(x) = ax+b+o(1/x)");
+            setText('k3-f5', "y=ax+b");
+            setText('e3-p1-f', "f(x)");
+            setText('e3-p1-num', "4+3x-x^2");
+            setText('e3-p1-den', "-2+2x+x^2");
+            setText('e3-p1-dl', "-2 - \\frac{7}{2}x + o(x)");
+            setText('e3-p1-tan', "y = -2 - \\frac{7}{2}x");
+            setText('e3-p2-inf', "+\\infty");
+            setText('e3-p2-num', "2x^3-x^2+3x+4");
+            setText('e3-p2-den', "x^2+2x-2");
+            setText('e3-p2-div', "2x^3-x^2+3x+4 = (x^2+2x-2)(2x-5) + 17x-6");
+            setText('e3-p2-quot', "2x-5");
+            setText('e3-p2-asy', "y=2x-5");
+
+            setText('h4-k1', "f(x)");
+            setText('h4-k2', "Q(x)e^{3x}");
+            setText('h4-k3', "Q(x)");
+            setText('k4-f1', "\\int u dv = uv - \\int v du");
+            setText('k4-f2', "e^{\\alpha x} \\sin(\\beta x)");
+            setText('k4-f3', "P(x)e^{\\alpha x}");
+            setText('k4-f4', "Q(x)e^{\\alpha x}");
+            setText('k4-f5', "|a+b| \\le |a|+|b|");
+            setText('k4-f6', "|\\int f| \\le \\int |f|");
+            setText('e4-p1-f1', "f(x)");
+            setText('e4-p1-form1', "P(x)e^{\\alpha x}");
+            setText('e4-p1-f2', "g(x)");
+            setText('e4-p1-u1', "u=\\sin(5x)");
+            setText('e4-p1-dv1', "dv=e^{2x}dx");
+            setText('e4-p1-cos', "\\cos(5x)");
+            setText('e4-p2-expr', "\\frac{1^5+\\dots+n^5}{n^6}");
+            setText('e4-p2-sum', "\\frac{1}{n} \\sum_{k=1}^n (\\frac{k}{n})^5");
+            setText('e4-p2-f', "f(x)=x^5");
+            setText('e4-p2-n', "n");
+            setText('e4-p2-n-inf', "n \\to \\infty");
+            setText('e4-p2-int', "\\int_0^1 x^5 dx");
+            setText('e4-p3-sum', "\\frac{b-a}{n} \\sum f(x_k)");
+            setText('e4-p3-ineq-sum', "|\\sum f(x_k)| \\le \\sum |f(x_k)|");
+            setText('e4-p3-lim', "\\lim_{n \\to \\infty} \\frac{b-a}{n} \\sum |f(x_k)| = \\int_a^b |f(x)|dx");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

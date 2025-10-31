@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 1 - Épreuve Finale (14/01/2013)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles from dark.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1em 0;
+            text-align: center;
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 1</h1>
+            <p class="exam-subtitle">Épreuve Finale (14/01/2013)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <h3>Problème 1</h3>
+                <p class="mb-4">Soient a et b deux réels donnés. On définit les suites numériques réelles <span class="katex-inline" data-id="p1-un"></span> et <span class="katex-inline" data-id="p1-Sn"></span> par les relations: <span class="katex-inline" data-id="p1-u0"></span>, <span class="katex-inline" data-id="p1-u1"></span>, et <span class="katex-inline" data-id="p1-un-rec"></span> pour <span class="katex-inline" data-id="p1-n-ge2"></span>; <span class="katex-inline" data-id="p1-Sn-def"></span> pour <span class="katex-inline" data-id="p1-n-ge0"></span>. On se propose d'exprimer <span class="katex-inline" data-id="p1-un2"></span> et <span class="katex-inline" data-id="p1-Sn2"></span> à l'aide de a, b, et n et d'étudier la nature des suites <span class="katex-inline" data-id="p1-un3"></span> et <span class="katex-inline" data-id="p1-Sn3"></span>. Pour cela on définit les suites <span class="katex-inline" data-id="p1-vn"></span> et <span class="katex-inline" data-id="p1-wn"></span> par les relations: <span class="katex-inline" data-id="p1-vn-def"></span> pour <span class="katex-inline" data-id="p1-n-ge1-v"></span> et <span class="katex-inline" data-id="p1-wn-def"></span> pour <span class="katex-inline" data-id="p1-n-ge1-w"></span>.</p>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1</h3>
+                    <div class="exercise-content">
+                        <p>Exprimer <span class="katex-inline" data-id="qP1Q1-un"></span> à l'aide de <span class="katex-inline" data-id="qP1Q1-vn"></span> et <span class="katex-inline" data-id="qP1Q1-wn"></span> pour <span class="katex-inline" data-id="qP1Q1-n"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2</h3>
+                    <div class="exercise-content">
+                        <p>Prouver qu'il existe un réel <span class="katex-inline" data-id="qP1Q2-k"></span> que l'on déterminera tel que pour tout entier <span class="katex-inline" data-id="qP1Q2-n"></span> on ait <span class="katex-inline" data-id="qP1Q2-vn-rec"></span>, et exprimer alors <span class="katex-inline" data-id="qP1Q2-vn"></span> à l'aide de a, b, et n.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q2')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3</h3>
+                    <div class="exercise-content">
+                        <p>Prouver que la suite <span class="katex-inline" data-id="qP1Q3-wn"></span> est une suite constante et exprimer alors <span class="katex-inline" data-id="qP1Q3-wn2"></span> à l'aide de a et b.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 4</h3>
+                    <div class="exercise-content">
+                        <p>Déduire des résultats obtenus aux questions précédentes une expression explicite de <span class="katex-inline" data-id="qP1Q4-un"></span> à l'aide de a, b, et n, pour <span class="katex-inline" data-id="qP1Q4-n"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q4')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 5</h3>
+                    <div class="exercise-content">
+                        <p>Etudier la nature de la suite <span class="katex-inline" data-id="qP1Q5-un"></span> et déterminer sa limite à l'aide de a et b dans le cas où elle converge.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q5')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q5')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 6</h3>
+                    <div class="exercise-content">
+                        <p>Donner une expression explicite de <span class="katex-inline" data-id="qP1Q6-Sn"></span> à l'aide de a, b, et n.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q6')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q6')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 7</h3>
+                    <div class="exercise-content">
+                        <p>Etudier la nature de la suite <span class="katex-inline" data-id="qP1Q7-Sn"></span> (discuter selon les valeurs de a et b).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintP1Q7')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeP1Q7')">Prérequis</button>
+                    </div>
+                </div>
+
+                <h3 class="mt-8">Exercice 1</h3>
+                <p class="mb-4">On considère la suite <span class="katex-inline" data-id="e1-xn"></span> définie par <span class="katex-inline" data-id="e1-xn-def"></span> pour <span class="katex-inline" data-id="e1-n-ge0"></span>.</p>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1</h3>
+                    <div class="exercise-content">
+                        <p>Prouver que la suite <span class="katex-inline" data-id="qE1Q1-xn"></span> est une suite bornée.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q1')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2</h3>
+                    <div class="exercise-content">
+                        <p>Etudier la nature de la suite <span class="katex-inline" data-id="qE1Q2-xn"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3</h3>
+                    <div class="exercise-content">
+                        <p>On désigne par E l'ensemble des valeurs de la suite <span class="katex-inline" data-id="qE1Q3-xn"></span>, autrement, <span class="katex-inline" data-id="qE1Q3-E-def"></span>. Déterminer (s'ils existent): Min(E), Inf(E), Sup(E) et Max(E).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <h3 class="mt-8">Exercice 2</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1</h3>
+                    <div class="exercise-content">
+                        <p>Citer le théorème des valeurs intermédiaires.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2</h3>
+                    <div class="exercise-content">
+                        <p>Montrer que la fonction <span class="katex-inline" data-id="qE2Q2-f-map"></span> définie par <span class="katex-inline" data-id="qE2Q2-fx"></span> possède quatre racines réelles distinctes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q2')">Prérequis</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <h3>Problème 1</h3>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 1</h3>
+                    <div class="exercise-content">
+                        <p>On a le système: <span class="katex-inline" data-id="solP1Q1-sys"></span>. En soustrayant la première équation de la seconde: <span class="katex-inline" data-id="solP1Q1-sub"></span>, d'où <span class="katex-inline" data-id="solP1Q1-un-1"></span>. En substituant dans la première équation: <span class="katex-inline" data-id="solP1Q1-un"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 2</h3>
+                    <div class="exercise-content">
+                        <p>Pour <span class="katex-inline" data-id="solP1Q2-n"></span>, <span class="katex-inline" data-id="solP1Q2-vn-calc"></span>. La suite <span class="katex-inline" data-id="solP1Q2-vn-geo"></span> est une suite géométrique de raison <span class="katex-inline" data-id="solP1Q2-k"></span>. Donc <span class="katex-inline" data-id="solP1Q2-vn-form1"></span>. Avec <span class="katex-inline" data-id="solP1Q2-v1"></span>, on a <span class="katex-inline" data-id="solP1Q2-vn-form2"></span> pour <span class="katex-inline" data-id="solP1Q2-n-ge1"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 3</h3>
+                    <div class="exercise-content">
+                        <p>Pour <span class="katex-inline" data-id="solP1Q3-n"></span>, <span class="katex-inline" data-id="solP1Q3-wn-calc"></span>. La suite <span class="katex-inline" data-id="solP1Q3-wn-const"></span> est constante. Donc <span class="katex-inline" data-id="solP1Q3-wn-val"></span>, pour tout <span class="katex-inline" data-id="solP1Q3-n-ge1"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 4</h3>
+                    <div class="exercise-content">
+                        <p>Pour <span class="katex-inline" data-id="solP1Q4-n"></span> on utilise <span class="katex-inline" data-id="solP1Q4-un-base"></span>. <span class="katex-inline" data-id="solP1Q4-un-exp"></span>. Pour <span class="katex-inline" data-id="solP1Q4-n0-check"></span>. La formule est valide pour <span class="katex-inline" data-id="solP1Q4-n-ge0"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q4')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 5</h3>
+                    <div class="exercise-content">
+                        <p>On étudie <span class="katex-inline" data-id="solP1Q5-lim-un"></span>. Comme <span class="katex-inline" data-id="solP1Q5-lim-exp"></span>, la suite <span class="katex-inline" data-id="solP1Q5-un-conv"></span> converge pour toutes les valeurs de a et b. Sa limite est <span class="katex-inline" data-id="solP1Q5-lim-val"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q5')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 6</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="solP1Q6-Sn-sum-un"></span>. <span class="katex-inline" data-id="solP1Q6-sum-exp"></span>. Donc <span class="katex-inline" data-id="solP1Q6-Sn-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q6')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 7</h3>
+                    <div class="exercise-content">
+                        <p>On étudie la nature de <span class="katex-inline" data-id="solP1Q7-Sn"></span>. <span class="katex-inline" data-id="solP1Q7-lim-Sn"></span>. Le terme <span class="katex-inline" data-id="solP1Q7-exp-term"></span> tend vers 0. Si <span class="katex-inline" data-id="solP1Q7-cond1"></span>, le terme <span class="katex-inline" data-id="solP1Q7-poly-term"></span> diverge vers <span class="katex-inline" data-id="solP1Q7-inf"></span>. La suite <span class="katex-inline" data-id="solP1Q7-Sn-div"></span> diverge. Si <span class="katex-inline" data-id="solP1Q7-cond2"></span>, alors <span class="katex-inline" data-id="solP1Q7-lim-Sn-conv"></span>. La suite <span class="katex-inline" data-id="solP1Q7-Sn-conv"></span> converge.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationP1Q7')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3>Exercice 1</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 1</h3>
+                    <div class="exercise-content">
+                        <p>On distingue les cas: Si n est pair, <span class="katex-inline" data-id="solE1Q1-n-even"></span>, <span class="katex-inline" data-id="solE1Q1-x2k-calc"></span>. Si n est impair, <span class="katex-inline" data-id="solE1Q1-n-odd"></span>, <span class="katex-inline" data-id="solE1Q1-x2k1-val"></span>. Pour tout <span class="katex-inline" data-id="solE1Q1-k-ge0"></span>, <span class="katex-inline" data-id="solE1Q1-ineq1"></span>. Donc, pour tout n, <span class="katex-inline" data-id="solE1Q1-ineq2"></span>. La suite est bornée.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 2</h3>
+                    <div class="exercise-content">
+                        <p>On étudie les limites des sous-suites. <span class="katex-inline" data-id="solE1Q2-lim-x2k"></span>. <span class="katex-inline" data-id="solE1Q2-lim-x2k1"></span>. Les deux sous-suites convergent vers des limites différentes. La suite <span class="katex-inline" data-id="solE1Q2-xn-div"></span> est donc divergente.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 3</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="solE1Q3-E-set"></span>. La sous-suite <span class="katex-inline" data-id="solE1Q3-x2k"></span> est croissante: <span class="katex-inline" data-id="solE1Q3-x2k-mono"></span>. <span class="katex-inline" data-id="solE1Q3-min-inf"></span>. <span class="katex-inline" data-id="solE1Q3-sup"></span>. <span class="katex-inline" data-id="solE1Q3-max"></span> n'existe pas, car la suite <span class="katex-inline" data-id="solE1Q3-x2k-tend"></span> tend vers 2 sans jamais l'atteindre.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q3')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3>Exercice 2</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 1</h3>
+                    <div class="exercise-content">
+                        <p>Si f est une fonction continue sur un intervalle <span class="katex-inline" data-id="solE2Q1-ab"></span>, alors pour tout réel k compris entre <span class="katex-inline" data-id="solE2Q1-fa-fb"></span>, il existe au moins un réel c dans <span class="katex-inline" data-id="solE2Q1-ab2"></span> tel que <span class="katex-inline" data-id="solE2Q1-fc-k"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution Question 2</h3>
+                    <div class="exercise-content">
+                        <p>Soit <span class="katex-inline" data-id="solE2Q2-fx"></span>. f est continue sur <span class="katex-inline" data-id="solE2Q2-R"></span>. On calcule f en quelques points: <span class="katex-inline" data-id="solE2Q2-f-vals"></span>. Par TVI, il existe <span class="katex-inline" data-id="solE2Q2-r1"></span>, <span class="katex-inline" data-id="solE2Q2-r2"></span>, <span class="katex-inline" data-id="solE2Q2-r3"></span>. On factorise <span class="katex-inline" data-id="solE2Q2-fx-fact"></span>. Soit <span class="katex-inline" data-id="solE2Q2-gx"></span>. <span class="katex-inline" data-id="solE2Q2-g-vals"></span>. Donc il existe <span class="katex-inline" data-id="solE2Q2-r4"></span>. Les quatre racines <span class="katex-inline" data-id="solE2Q2-roots"></span> sont bien distinctes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hintP1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 1</h3><span class="close-btn" onclick="closeModal('hintP1Q1')">&times;</span></div><p>C'est un simple système de deux équations linéaires avec deux inconnues, <span class="katex-inline" data-id="hP1Q1-un"></span> et <span class="katex-inline" data-id="hP1Q1-un-1"></span>. Essayez de combiner les équations pour éliminer <span class="katex-inline" data-id="hP1Q1-un-1-2"></span>.</p></div></div>
+    <div id="knowledgeP1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q1')">&times;</span></div><p>Résolution de systèmes d'équations linéaires à deux inconnues (par substitution ou combinaison).</p></div></div>
+    <div id="explanationP1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 1</h3><span class="close-btn" onclick="closeModal('explanationP1Q1')">&times;</span></div><h4>Objectif: Exprimer <span class="katex-inline" data-id="eP1Q1-un"></span> en fonction de <span class="katex-inline" data-id="eP1Q1-vn"></span> et <span class="katex-inline" data-id="eP1Q1-wn"></span>.</h4><p>On nous donne le système de deux équations suivant:</p><p><span class="katex-display" data-id="eP1Q1-sys"></span></p><p>Le but est d'éliminer <span class="katex-inline" data-id="eP1Q1-un-1"></span> pour isoler <span class="katex-inline" data-id="eP1Q1-un-2"></span>. Une méthode efficace est la combinaison linéaire. Multiplions la deuxième équation par 2 :</p><p><span class="katex-display" data-id="eP1Q1-eq2-mult"></span></p><p>Nous avons maintenant le système équivalent :</p><p><span class="katex-display" data-id="eP1Q1-sys-mod"></span></p><p>Soustrayons la première équation de cette nouvelle deuxième équation :</p><p><span class="katex-display" data-id="eP1Q1-sub"></span></p><p>En simplifiant le membre de droite, les termes <span class="katex-inline" data-id="eP1Q1-un-1-cancel"></span> s'annulent :</p><p><span class="katex-display" data-id="eP1Q1-result"></span></p><p>Nous avons donc trouvé l'expression de <span class="katex-inline" data-id="eP1Q1-un-final"></span> en fonction de <span class="katex-inline" data-id="eP1Q1-vn-final"></span> et <span class="katex-inline" data-id="eP1Q1-wn-final"></span>.</p></div></div>
+
+    <div id="hintP1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 2</h3><span class="close-btn" onclick="closeModal('hintP1Q2')">&times;</span></div><p>Remplacez <span class="katex-inline" data-id="hP1Q2-un"></span> dans la définition de <span class="katex-inline" data-id="hP1Q2-vn"></span> par sa relation de récurrence. Vous devriez voir apparaître la définition de <span class="katex-inline" data-id="hP1Q2-vn-1"></span>.</p></div></div>
+    <div id="knowledgeP1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q2')">&times;</span></div><p><strong>Suites géométriques :</strong> Une suite <span class="katex-inline" data-id="kP1Q2-vn"></span> est géométrique s'il existe un réel <span class="katex-inline" data-id="kP1Q2-k"></span> (la raison) tel que <span class="katex-inline" data-id="kP1Q2-vn-rec"></span>. Son terme général est <span class="katex-inline" data-id="kP1Q2-vn-form"></span>.</p><p><strong>Suites récurrentes linéaires d'ordre 2.</strong></p></div></div>
+    <div id="explanationP1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 2</h3><span class="close-btn" onclick="closeModal('explanationP1Q2')">&times;</span></div><h4>Partie 1: Montrer que <span class="katex-inline" data-id="eP1Q2-vn"></span> est une suite géométrique</h4><p>Par définition, <span class="katex-inline" data-id="eP1Q2-vn-def"></span>. On nous donne la relation de récurrence pour <span class="katex-inline" data-id="eP1Q2-un"></span> : <span class="katex-inline" data-id="eP1Q2-un-rec"></span> (pour <span class="katex-inline" data-id="eP1Q2-n"></span>).</p><p>Substituons cette expression dans la définition de <span class="katex-inline" data-id="eP1Q2-vn2"></span> :</p><p><span class="katex-display" data-id="eP1Q2-vn-sub"></span></p><p>Regroupons les termes en <span class="katex-inline" data-id="eP1Q2-un-1"></span> :</p><p><span class="katex-display" data-id="eP1Q2-vn-group"></span></p><p>Mettons <span class="katex-inline" data-id="eP1Q2-half"></span> en facteur :</p><p><span class="katex-display" data-id="eP1Q2-vn-factor"></span></p><p>Nous reconnaissons que <span class="katex-inline" data-id="eP1Q2-vn-1-def"></span>. Donc, nous avons montré que <span class="katex-inline" data-id="eP1Q2-vn-rec"></span>.</p><p>Ceci est la définition d'une suite géométrique de raison <span class="katex-inline" data-id="eP1Q2-k"></span>.</p><h4>Partie 2: Exprimer <span class="katex-inline" data-id="eP1Q2-vn3"></span> en fonction de a, b, et n</h4><p>Le terme général d'une suite géométrique est <span class="katex-inline" data-id="eP1Q2-vn-form"></span>.</p><p>Nous devons d'abord calculer le premier terme, <span class="katex-inline" data-id="eP1Q2-v1"></span> :</p><p><span class="katex-display" data-id="eP1Q2-v1-calc"></span></p><p>En remplaçant <span class="katex-inline" data-id="eP1Q2-v1-2"></span> et <span class="katex-inline" data-id="eP1Q2-k2"></span> dans la formule du terme général, on obtient :</p><p><span class="katex-display" data-id="eP1Q2-vn-final"></span></p></div></div>
+
+    <div id="hintP1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 3</h3><span class="close-btn" onclick="closeModal('hintP1Q3')">&times;</span></div><p>Similaire à la question précédente, remplacez <span class="katex-inline" data-id="hP1Q3-un"></span> dans la définition de <span class="katex-inline" data-id="hP1Q3-wn"></span> par sa relation de récurrence et simplifiez.</p></div></div>
+    <div id="knowledgeP1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 3</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q3')">&times;</span></div><p><strong>Suites constantes :</strong> Une suite <span class="katex-inline" data-id="kP1Q3-wn"></span> est constante si <span class="katex-inline" data-id="kP1Q3-wn-rec"></span> pour tout <span class="katex-inline" data-id="kP1Q3-n"></span>. Tous ses termes sont alors égaux au premier terme.</p><p><strong>Suites récurrentes.</strong></p></div></div>
+    <div id="explanationP1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 3</h3><span class="close-btn" onclick="closeModal('explanationP1Q3')">&times;</span></div><h4>Partie 1: Montrer que <span class="katex-inline" data-id="eP1Q3-wn"></span> est une suite constante</h4><p>Par définition, <span class="katex-inline" data-id="eP1Q3-wn-def"></span>. La relation de récurrence pour <span class="katex-inline" data-id="eP1Q3-un"></span> est <span class="katex-inline" data-id="eP1Q3-un-rec"></span> (pour <span class="katex-inline" data-id="eP1Q3-n"></span>).</p><p>Substituons cette expression dans la définition de <span class="katex-inline" data-id="eP1Q3-wn2"></span> :</p><p><span class="katex-display" data-id="eP1Q3-wn-sub"></span></p><p>Regroupons les termes en <span class="katex-inline" data-id="eP1Q3-un-1"></span> :</p><p><span class="katex-display" data-id="eP1Q3-wn-group"></span></p><p>Nous reconnaissons que <span class="katex-inline" data-id="eP1Q3-wn-1-def"></span>. Donc, nous avons montré que <span class="katex-inline" data-id="eP1Q3-wn-rec"></span>.</p><p>Ceci prouve que la suite <span class="katex-inline" data-id="eP1Q3-wn3"></span> est constante pour <span class="katex-inline" data-id="eP1Q3-n2"></span>.</p><h4>Partie 2: Exprimer <span class="katex-inline" data-id="eP1Q3-wn4"></span> en fonction de a et b</h4><p>Puisque la suite est constante, tous ses termes sont égaux au premier terme, <span class="katex-inline" data-id="eP1Q3-w1"></span>.</p><p>Calculons <span class="katex-inline" data-id="eP1Q3-w1-2"></span> :</p><p><span class="katex-display" data-id="eP1Q3-w1-calc"></span></p><p>Par conséquent, pour tout <span class="katex-inline" data-id="eP1Q3-n-ge1"></span> :</p><p><span class="katex-display" data-id="eP1Q3-wn-final"></span></p></div></div>
+
+    <div id="hintP1Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 4</h3><span class="close-btn" onclick="closeModal('hintP1Q4')">&times;</span></div><p>Utilisez le résultat de la question 1 (<span class="katex-inline" data-id="hP1Q4-un-form"></span>) et remplacez <span class="katex-inline" data-id="hP1Q4-vn"></span> et <span class="katex-inline" data-id="hP1Q4-wn"></span> par les expressions que vous venez de trouver.</p></div></div>
+    <div id="knowledgeP1Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 4</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q4')">&times;</span></div><p>Combinaison des résultats des questions précédentes.</p><p>Propriétés des puissances : <span class="katex-inline" data-id="kP1Q4-pow"></span>.</p></div></div>
+    <div id="explanationP1Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 4</h3><span class="close-btn" onclick="closeModal('explanationP1Q4')">&times;</span></div><h4>Objectif: Trouver l'expression explicite de <span class="katex-inline" data-id="eP1Q4-un"></span>.</h4><p>Nous partons de trois résultats clés établis précédemment :</p><ul><li>Question 1: <span class="katex-inline" data-id="eP1Q4-res1"></span></li><li>Question 2: <span class="katex-inline" data-id="eP1Q4-res2"></span></li><li>Question 3: <span class="katex-inline" data-id="eP1Q4-res3"></span></li></ul><p>Substituons les expressions de <span class="katex-inline" data-id="eP1Q4-vn"></span> et <span class="katex-inline" data-id="eP1Q4-wn"></span> dans la première équation :</p><p><span class="katex-display" data-id="eP1Q4-un-sub"></span></p><p>Simplifions le premier terme : <span class="katex-inline" data-id="eP1Q4-term1"></span>.</p><p>Simplifions la puissance dans le deuxième terme : <span class="katex-inline" data-id="eP1Q4-term2-pow"></span>.</p><p>L'expression devient :</p><p><span class="katex-display" data-id="eP1Q4-un-final"></span></p><p>Cette formule est établie pour <span class="katex-inline" data-id="eP1Q4-n"></span>. Vérifions si elle est aussi valable pour <span class="katex-inline" data-id="eP1Q4-n0"></span> :</p><p><span class="katex-display" data-id="eP1Q4-n0-check"></span></p><p>Le résultat correspond bien à la valeur donnée pour <span class="katex-inline" data-id="eP1Q4-u0"></span>. La formule est donc valide pour tout <span class="katex-inline" data-id="eP1Q4-n-ge0"></span>.</p></div></div>
+
+    <div id="hintP1Q5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 5</h3><span class="close-btn" onclick="closeModal('hintP1Q5')">&times;</span></div><p>Calculez la limite de l'expression explicite de <span class="katex-inline" data-id="hP1Q5-un"></span> lorsque <span class="katex-inline" data-id="hP1Q5-n"></span>. Quel est le comportement du terme qui dépend de <span class="katex-inline" data-id="hP1Q5-n2"></span>?</p></div></div>
+    <div id="knowledgeP1Q5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 5</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q5')">&times;</span></div><p><strong>Limite d'une suite géométrique :</strong> Si <span class="katex-inline" data-id="kP1Q5-q"></span>, alors <span class="katex-inline" data-id="kP1Q5-lim"></span>.</p><p><strong>Propriétés des limites de suites :</strong> La limite d'une somme est la somme des limites.</p></div></div>
+    <div id="explanationP1Q5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 5</h3><span class="close-btn" onclick="closeModal('explanationP1Q5')">&times;</span></div><h4>Objectif: Étudier la convergence de <span class="katex-inline" data-id="eP1Q5-un"></span> et trouver sa limite.</h4><p>Nous avons l'expression explicite de la suite :</p><p><span class="katex-display" data-id="eP1Q5-un-exp"></span></p><p>Pour déterminer la nature de la suite, nous calculons sa limite lorsque <span class="katex-inline" data-id="eP1Q5-n"></span> :</p><p><span class="katex-display" data-id="eP1Q5-lim-un"></span></p><p>Analysons chaque partie de l'expression :</p><ul><li>Le terme <span class="katex-inline" data-id="eP1Q5-term1"></span> est une constante, sa limite est donc elle-même.</li><li>Le terme <span class="katex-inline" data-id="eP1Q5-term2"></span> dépend de <span class="katex-inline" data-id="eP1Q5-n2"></span>. Nous devons évaluer <span class="katex-inline" data-id="eP1Q5-lim-exp"></span>. Puisque <span class="katex-inline" data-id="eP1Q5-two"></span>, <span class="katex-inline" data-id="eP1Q5-lim-2n"></span>. Par conséquent, <span class="katex-inline" data-id="eP1Q5-lim-2-1n"></span>.</li></ul><p>La limite de la suite est donc :</p><p><span class="katex-display" data-id="eP1Q5-lim-calc"></span></p><p>Puisque la limite existe et est finie (<span class="katex-inline" data-id="eP1Q5-lim-val"></span>) quelles que soient les valeurs réelles de a et b, la suite <span class="katex-inline" data-id="eP1Q5-un-conv"></span> est convergente.</p></div></div>
+
+    <div id="hintP1Q6" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 6</h3><span class="close-btn" onclick="closeModal('hintP1Q6')">&times;</span></div><p>Exprimez <span class="katex-inline" data-id="hP1Q6-Sn"></span> comme la somme de l'expression de <span class="katex-inline" data-id="hP1Q6-uk"></span>. Séparez la somme en deux parties : une partie qui ne dépend pas de l'indice de sommation et une somme géométrique.</p></div></div>
+    <div id="knowledgeP1Q6" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 6</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q6')">&times;</span></div><p><strong>Somme des termes d'une suite géométrique :</strong> <span class="katex-inline" data-id="kP1Q6-sum-geo"></span>.</p><p><strong>Somme d'une constante :</strong> <span class="katex-inline" data-id="kP1Q6-sum-const"></span>.</p><p><strong>Linéarité de la somme :</strong> <span class="katex-inline" data-id="kP1Q6-linearity"></span>.</p></div></div>
+    <div id="explanationP1Q6" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 6</h3><span class="close-btn" onclick="closeModal('explanationP1Q6')">&times;</span></div><h4>Objectif: Trouver l'expression explicite de <span class="katex-inline" data-id="eP1Q6-Sn"></span>.</h4><p>Par définition, <span class="katex-inline" data-id="eP1Q6-Sn-def"></span>. Nous utilisons l'expression de <span class="katex-inline" data-id="eP1Q6-uk"></span> trouvée précédemment :</p><p><span class="katex-display" data-id="eP1Q6-Sn-sub"></span></p><p>Grâce à la linéarité de la somme, nous pouvons la séparer en deux :</p><p><span class="katex-display" data-id="eP1Q6-Sn-split"></span></p><p><strong>Calculons la première somme :</strong> C'est la somme d'une constante. Il y a <span class="katex-inline" data-id="eP1Q6-n1"></span> termes (de k=0 à k=n).</p><p><span class="katex-display" data-id="eP1Q6-sum1"></span></p><p><strong>Calculons la deuxième somme :</strong></p><p><span class="katex-display" data-id="eP1Q6-sum2-start"></span></p><p>C'est une somme géométrique de raison <span class="katex-inline" data-id="eP1Q6-q"></span>. Appliquons la formule :</p><p><span class="katex-display" data-id="eP1Q6-sum2-calc"></span></p><p>Donc, la deuxième somme complète est : <span class="katex-inline" data-id="eP1Q6-sum2-final"></span>.</p><p><strong>Combinons les deux résultats :</strong></p><p><span class="katex-display" data-id="eP1Q6-Sn-final"></span></p></div></div>
+    
+    <div id="hintP1Q7" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Problème 1, Question 7</h3><span class="close-btn" onclick="closeModal('hintP1Q7')">&times;</span></div><p>Examinez la limite de l'expression de <span class="katex-inline" data-id="hP1Q7-Sn"></span>. Le terme <span class="katex-inline" data-id="hP1Q7-term"></span> est dominant. Que se passe-t-il si son coefficient est nul ou non nul ?</p></div></div>
+    <div id="knowledgeP1Q7" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Problème 1, Question 7</h3><span class="close-btn" onclick="closeModal('knowledgeP1Q7')">&times;</span></div><p><strong>Limites de suites :</strong> Comprendre la notion de convergence et de divergence.</p><p><strong>Croissances comparées :</strong> Un terme polynomial en <span class="katex-inline" data-id="kP1Q7-n"></span> (comme <span class="katex-inline" data-id="kP1Q7-n1"></span>) l'emporte sur un terme exponentiel décroissant (comme <span class="katex-inline" data-id="kP1Q7-exp"></span>).</p></div></div>
+    <div id="explanationP1Q7" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Problème 1, Question 7</h3><span class="close-btn" onclick="closeModal('explanationP1Q7')">&times;</span></div><h4>Objectif: Étudier la nature de la suite <span class="katex-inline" data-id="eP1Q7-Sn"></span>.</h4><p>Nous partons de l'expression de <span class="katex-inline" data-id="eP1Q7-Sn2"></span> :</p><p><span class="katex-display" data-id="eP1Q7-Sn-exp"></span></p><p>Pour étudier sa nature, nous examinons sa limite lorsque <span class="katex-inline" data-id="eP1Q7-n"></span>. Réorganisons l'expression :</p><p><span class="katex-display" data-id="eP1Q7-Sn-reorg"></span></p><p>Nous savons que <span class="katex-inline" data-id="eP1Q7-lim-exp"></span>. Le comportement de la suite est donc dicté par le terme <span class="katex-inline" data-id="eP1Q7-dom-term"></span>. Nous devons discuter selon la valeur du coefficient <span class="katex-inline" data-id="eP1Q7-coeff"></span>.</p><p><strong>Cas 1 : <span class="katex-inline" data-id="eP1Q7-case1-cond"></span></strong></p><p>Dans ce cas, le coefficient du terme dominant n'est pas nul. Comme <span class="katex-inline" data-id="eP1Q7-lim-n1"></span>, le produit <span class="katex-inline" data-id="eP1Q7-dom-term2"></span> tendra vers <span class="katex-inline" data-id="eP1Q7-plus-inf"></span> (si <span class="katex-inline" data-id="eP1Q7-coeff-pos"></span>) ou <span class="katex-inline" data-id="eP1Q7-minus-inf"></span> (si <span class="katex-inline" data-id="eP1Q7-coeff-neg"></span>). Dans tous les cas, la limite n'est pas finie.</p><p>Conclusion pour le Cas 1 : La suite <span class="katex-inline" data-id="eP1Q7-Sn-div"></span> est **divergente**.</p><p><strong>Cas 2 : <span class="katex-inline" data-id="eP1Q7-case2-cond"></span></strong></p><p>Dans ce cas, le terme dominant s'annule. L'expression de <span class="katex-inline" data-id="eP1Q7-Sn3"></span> devient :</p><p><span class="katex-display" data-id="eP1Q7-Sn-case2"></span></p><p>Calculons la limite de cette nouvelle expression :</p><p><span class="katex-display" data-id="eP1Q7-lim-Sn-case2"></span></p><p>La limite est finie.</p><p>Conclusion pour le Cas 2 : La suite <span class="katex-inline" data-id="eP1Q7-Sn-conv"></span> est **convergente** vers <span class="katex-inline" data-id="eP1Q7-lim-val"></span>.</p></div></div>
+
+    <div id="hintE1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Exercice 1, Question 1</h3><span class="close-btn" onclick="closeModal('hintE1Q1')">&times;</span></div><p>La présence de <span class="katex-inline" data-id="hE1Q1-term"></span> suggère d'étudier séparément le cas où <span class="katex-inline" data-id="hE1Q1-n"></span> est pair et le cas où <span class="katex-inline" data-id="hE1Q1-n2"></span> est impair.</p></div></div>
+    <div id="knowledgeE1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Exercice 1, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q1')">&times;</span></div><p><strong>Suite bornée :</strong> Une suite <span class="katex-inline" data-id="kE1Q1-un"></span> est bornée s'il existe deux réels m et M tels que pour tout entier n, <span class="katex-inline" data-id="kE1Q1-ineq"></span>.</p><p>Manipulation d'expressions algébriques et d'inégalités.</p></div></div>
+    <div id="explanationE1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Exercice 1, Question 1</h3><span class="close-btn" onclick="closeModal('explanationE1Q1')">&times;</span></div><h4>Objectif: Montrer que la suite <span class="katex-inline" data-id="eE1Q1-xn"></span> est bornée.</h4><p>La suite est définie par <span class="katex-inline" data-id="eE1Q1-xn-def"></span>. Le terme <span class="katex-inline" data-id="eE1Q1-term"></span> prend des valeurs différentes selon la parité de n. Il est donc naturel d'étudier deux cas.</p><p><strong>Cas 1 : n est impair</strong></p><p>Soit <span class="katex-inline" data-id="eE1Q1-n-odd"></span>. Dans ce cas, <span class="katex-inline" data-id="eE1Q1-term-odd"></span>. Le facteur <span class="katex-inline" data-id="eE1Q1-factor-odd"></span> devient 0. Par conséquent :</p><p><span class="katex-display" data-id="eE1Q1-xn-odd"></span></p><p>Pour tous les termes de rang impair, la valeur de la suite est 0.</p><p><strong>Cas 2 : n est pair</strong></p><p>Soit <span class="katex-inline" data-id="eE1Q1-n-even"></span>. Dans ce cas, <span class="katex-inline" data-id="eE1Q1-term-even"></span>. Le facteur <span class="katex-inline" data-id="eE1Q1-factor-even"></span> devient 2. Par conséquent :</p><p><span class="katex-display" data-id="eE1Q1-xn-even"></span></p><p>Pour mieux encadrer cette expression, on peut effectuer une division euclidienne "astucieuse" :</p><p><span class="katex-display" data-id="eE1Q1-xn-even-rewrite"></span></p><p>Maintenant, encadrons ce terme. Pour <span class="katex-inline" data-id="eE1Q1-k"></span>, on a <span class="katex-inline" data-id="eE1Q1-k1"></span>. En passant à l'inverse, on a <span class="katex-inline" data-id="eE1Q1-inv-ineq"></span>. En multipliant par -1 (ce qui change le sens de l'inégalité) : <span class="katex-inline" data-id="eE1Q1-neg-inv-ineq"></span>. Enfin, en ajoutant 2 :</p><p><span class="katex-display" data-id="eE1Q1-x2k-ineq"></span></p><p><strong>Conclusion</strong></p><p>Les valeurs de la suite sont soit 0 (pour n impair), soit dans l'intervalle <span class="katex-inline" data-id="eE1Q1-interval"></span> (pour n pair). L'union de ces valeurs est contenue dans l'intervalle <span class="katex-inline" data-id="eE1Q1-interval-final"></span>. Donc, pour tout n, <span class="katex-inline" data-id="eE1Q1-final-ineq"></span>. La suite est bien bornée (minorée par 0 et majorée par 2).</p></div></div>
+
+    <div id="hintE1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Exercice 1, Question 2</h3><span class="close-btn" onclick="closeModal('hintE1Q2')">&times;</span></div><p>Vous avez déjà identifié deux sous-suites (termes pairs et termes impairs). Calculez leurs limites respectives. Que pouvez-vous conclure si ces limites sont différentes ?</p></div></div>
+    <div id="knowledgeE1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Exercice 1, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q2')">&times;</span></div><p><strong>Sous-suites (ou suites extraites) :</strong> Connaître la définition d'une sous-suite.</p><p><strong>Critère de convergence :</strong> Une suite converge vers une limite L si et seulement si toutes ses sous-suites convergent vers cette même limite L.</p></div></div>
+    <div id="explanationE1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Exercice 1, Question 2</h3><span class="close-btn" onclick="closeModal('explanationE1Q2')">&times;</span></div><h4>Objectif: Déterminer si la suite <span class="katex-inline" data-id="eE1Q2-xn"></span> converge ou diverge.</h4><p>Pour qu'une suite converge, il faut que toutes ses sous-suites convergent vers la même limite. Nous allons examiner les deux sous-suites naturelles identifiées dans la question précédente : la sous-suite des termes de rang impair et celle des termes de rang pair.</p><p><strong>1. Sous-suite des termes de rang impair <span class="katex-inline" data-id="eE1Q2-x2k1"></span></strong></p><p>Nous avons montré que pour tout <span class="katex-inline" data-id="eE1Q2-k"></span>, <span class="katex-inline" data-id="eE1Q2-x2k1-val"></span>. C'est une suite constante. Sa limite est donc :</p><p><span class="katex-display" data-id="eE1Q2-lim-odd"></span></p><p><strong>2. Sous-suite des termes de rang pair <span class="katex-inline" data-id="eE1Q2-x2k"></span></strong></p><p>Nous avons montré que <span class="katex-inline" data-id="eE1Q2-x2k-val"></span>. Calculons sa limite lorsque <span class="katex-inline" data-id="eE1Q2-k-inf"></span> :</p><p><span class="katex-display" data-id="eE1Q2-lim-even"></span></p><p><strong>Conclusion</strong></p><p>Nous avons trouvé deux sous-suites qui convergent vers des limites différentes : 0 et 2.</p><p>Puisque <span class="katex-inline" data-id="eE1Q2-lim-neq"></span>, le critère de convergence n'est pas satisfait. Par conséquent, la suite <span class="katex-inline" data-id="eE1Q2-xn-div"></span> est **divergente**.</p></div></div>
+    
+    <div id="hintE1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Exercice 1, Question 3</h3><span class="close-btn" onclick="closeModal('hintE1Q3')">&times;</span></div><p>L'ensemble E est l'union des valeurs des deux sous-suites. L'une est constante (juste {0}), l'autre est une suite croissante. Étudiez la monotonie et la limite de la sous-suite des termes pairs pour trouver le supremum.</p></div></div>
+    <div id="knowledgeE1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Exercice 1, Question 3</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q3')">&times;</span></div><p><strong>Définitions de :</strong></p><ul><li><strong>Infimum (borne inférieure) :</strong> Le plus grand des minorants.</li><li><strong>Supremum (borne supérieure) :</strong> Le plus petit des majorants.</li><li><strong>Minimum :</strong> Le plus petit élément de l'ensemble (doit appartenir à l'ensemble).</li><li><strong>Maximum :</strong> Le plus grand élément de l'ensemble (doit appartenir à l'ensemble).</li></ul><p><strong>Monotonie d'une suite.</strong></p></div></div>
+    <div id="explanationE1Q3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Exercice 1, Question 3</h3><span class="close-btn" onclick="closeModal('explanationE1Q3')">&times;</span></div><h4>Objectif: Caractériser l'ensemble E des valeurs de la suite.</h4><p>L'ensemble E est l'union des valeurs prises par les termes de rang impair et de rang pair.</p><p><span class="katex-display" data-id="eE1Q3-E-def"></span></p><p><strong>Étude de la sous-suite <span class="katex-inline" data-id="eE1Q3-x2k"></span> :</strong></p><p>Nous avons <span class="katex-inline" data-id="eE1Q3-x2k-val"></span>. Pour étudier sa monotonie, calculons la différence de deux termes consécutifs :</p><p><span class="katex-display" data-id="eE1Q3-mono-calc"></span></p><p>Comme <span class="katex-inline" data-id="eE1Q3-k"></span>, le dénominateur est positif, donc la différence est positive. La suite <span class="katex-inline" data-id="eE1Q3-x2k-2"></span> est donc strictement croissante.</p><p>Son premier terme est <span class="katex-inline" data-id="eE1Q3-x0"></span>. Sa limite est <span class="katex-inline" data-id="eE1Q3-lim"></span>.</p><p><strong>Détermination des bornes de E :</strong></p><ul><li><strong>Infimum (Inf(E)) :</strong> Le plus grand des minorants. L'ensemble E contient 0 et des valeurs dans <span class="katex-inline" data-id="eE1Q3-interval"></span>. La plus petite valeur possible est 0. Donc <span class="katex-inline" data-id="eE1Q3-inf"></span>.</li><li><strong>Minimum (Min(E)) :</strong> Puisque <span class="katex-inline" data-id="eE1Q3-inf-val"></span> et que 0 appartient à E (par exemple, <span class="katex-inline" data-id="eE1Q3-x1"></span>), 0 est le minimum de l'ensemble. Donc <span class="katex-inline" data-id="eE1Q3-min"></span>.</li><li><strong>Supremum (Sup(E)) :</strong> Le plus petit des majorants. La sous-suite <span class="katex-inline" data-id="eE1Q3-x2k-3"></span> est croissante et tend vers 2. Toutes les valeurs de E sont strictement inférieures à 2. Le plus petit nombre qui majore toutes ces valeurs est 2. Donc <span class="katex-inline" data-id="eE1Q3-sup"></span>.</li><li><strong>Maximum (Max(E)) :</strong> Le supremum, 2, n'est jamais atteint par un terme de la suite (car <span class="katex-inline" data-id="eE1Q3-x2k-lt2"></span> pour tout k). Par conséquent, l'ensemble E n'admet pas de maximum.</li></ul></div></div>
+    
+    <div id="hintE2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Exercice 2, Question 1</h3><span class="close-btn" onclick="closeModal('hintE2Q1')">&times;</span></div><p>C'est un théorème fondamental sur les fonctions continues définies sur un intervalle fermé, qui garantit l'existence de solutions à l'équation <span class="katex-inline" data-id="hE2Q1-eq"></span>.</p></div></div>
+    <div id="knowledgeE2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Exercice 2, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q1')">&times;</span></div><p>Il s'agit d'une question de cours. Il faut connaître par cœur l'énoncé du Théorème des Valeurs Intermédiaires (TVI).</p></div></div>
+    <div id="explanationE2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Exercice 2, Question 1</h3><span class="close-btn" onclick="closeModal('explanationE2Q1')">&times;</span></div><h4>Énoncé du Théorème des Valeurs Intermédiaires (TVI)</h4><p>Soit <span class="katex-inline" data-id="eE2Q1-f"></span> une fonction et <span class="katex-inline" data-id="eE2Q1-ab"></span> un intervalle.</p><p>Si <span class="katex-inline" data-id="eE2Q1-f2"></span> est <strong>continue</strong> sur l'intervalle fermé <span class="katex-inline" data-id="eE2Q1-ab-closed"></span>,</p><p>Alors, pour tout nombre réel <span class="katex-inline" data-id="eE2Q1-k"></span> compris entre <span class="katex-inline" data-id="eE2Q1-fa"></span> et <span class="katex-inline" data-id="eE2Q1-fb"></span>,</p><p>Il existe <strong>au moins un</strong> nombre réel <span class="katex-inline" data-id="eE2Q1-c"></span> dans l'intervalle <span class="katex-inline" data-id="eE2Q1-ab-closed2"></span> tel que <span class="katex-inline" data-id="eE2Q1-fc"></span>.</p><p>En d'autres termes, une fonction continue sur un intervalle "ne saute pas de valeurs" et prend toutes les valeurs intermédiaires entre les images des bornes.</p></div></div>
+
+    <div id="hintE2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour Exercice 2, Question 2</h3><span class="close-btn" onclick="closeModal('hintE2Q2')">&times;</span></div><p>Le TVI est l'outil principal ici. Calculez la valeur de f en plusieurs points entiers (<span class="katex-inline" data-id="hE2Q2-pts"></span>) pour trouver des changements de signe. Un changement de signe entre <span class="katex-inline" data-id="hE2Q2-fa"></span> et <span class="katex-inline" data-id="hE2Q2-fb"></span> garantit une racine entre a et b. N'oubliez pas qu'une des valeurs que vous testez pourrait être une racine elle-même !</p></div></div>
+    <div id="knowledgeE2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour Exercice 2, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q2')">&times;</span></div><p><strong>Théorème des Valeurs Intermédiaires (TVI) :</strong> En particulier son corollaire pour trouver des racines : si f est continue sur [a,b] et si f(a) et f(b) sont de signes opposés, alors il existe au moins une racine de f dans ]a,b[.</p><p><strong>Factorisation de polynômes :</strong> Si <span class="katex-inline" data-id="kE2Q2-a"></span> est une racine du polynôme P(x), alors (x-a) est un facteur de P(x).</p></div></div>
+    <div id="explanationE2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour Exercice 2, Question 2</h3><span class="close-btn" onclick="closeModal('explanationE2Q2')">&times;</span></div><h4>Objectif: Montrer que <span class="katex-inline" data-id="eE2Q2-fx"></span> a quatre racines réelles distinctes.</h4><p>Soit <span class="katex-inline" data-id="eE2Q2-fx-def"></span>. En tant que polynôme, <span class="katex-inline" data-id="eE2Q2-f"></span> est continue sur <span class="katex-inline" data-id="eE2Q2-R"></span>, ce qui nous permet d'utiliser le TVI.</p><p><strong>Étape 1: Évaluer f en plusieurs points pour trouver des changements de signe.</strong></p><ul><li><span class="katex-inline" data-id="eE2Q2-f-1"></span></li><li><span class="katex-inline" data-id="eE2Q2-f0"></span></li><li><span class="katex-inline" data-id="eE2Q2-f1"></span></li><li><span class="katex-inline" data-id="eE2Q2-f2"></span></li><li><span class="katex-inline" data-id="eE2Q2-f5"></span></li></ul><p><strong>Étape 2: Appliquer le TVI pour localiser les racines.</strong></p><ul><li>Sur <span class="katex-inline" data-id="eE2Q2-int1"></span> : <span class="katex-inline" data-id="eE2Q2-f-1-val"></span> et <span class="katex-inline" data-id="eE2Q2-f0-val"></span>. Les signes sont opposés, donc il existe une racine <span class="katex-inline" data-id="eE2Q2-r1"></span>.</li><li>Au point 1 : On a calculé <span class="katex-inline" data-id="eE2Q2-f1-val"></span>. C'est une racine ! Soit <span class="katex-inline" data-id="eE2Q2-r2"></span>.</li><li>Sur <span class="katex-inline" data-id="eE2Q2-int2"></span> : <span class="katex-inline" data-id="eE2Q2-f2-val"></span> et <span class="katex-inline" data-id="eE2Q2-f5-val"></span>. Les signes sont opposés, donc il existe une racine <span class="katex-inline" data-id="eE2Q2-r3"></span>.</li></ul><p>Jusqu'ici, nous avons trois racines distinctes : <span class="katex-inline" data-id="eE2Q2-r1-val"></span>, <span class="katex-inline" data-id="eE2Q2-r2-val"></span>, <span class="katex-inline" data-id="eE2Q2-r3-val"></span>. Il en faut une quatrième.</p><p><strong>Étape 3: Factoriser le polynôme pour trouver la dernière racine.</strong></p><p>Puisque <span class="katex-inline" data-id="eE2Q2-r2-is-root"></span> est une racine, on peut factoriser <span class="katex-inline" data-id="eE2Q2-fx2"></span> par <span class="katex-inline" data-id="eE2Q2-factor"></span>. La division polynomiale donne :</p><p><span class="katex-display" data-id="eE2Q2-fx-fact"></span></p><p>Cherchons les racines du facteur cubique <span class="katex-inline" data-id="eE2Q2-gx"></span>. Évaluons <span class="katex-inline" data-id="eE2Q2-g"></span> en quelques points :</p><ul><li><span class="katex-inline" data-id="eE2Q2-g0"></span></li><li><span class="katex-inline" data-id="eE2Q2-g1"></span></li></ul><p>Sur <span class="katex-inline" data-id="eE2Q2-int3"></span> : <span class="katex-inline" data-id="eE2Q2-g0-val"></span> et <span class="katex-inline" data-id="eE2Q2-g1-val"></span>. Les signes sont opposés, donc il existe une racine <span class="katex-inline" data-id="eE2Q2-r4"></span>.</p><p><strong>Étape 4: Conclusion.</strong></p><p>Nous avons trouvé quatre racines :</p><ul><li><span class="katex-inline" data-id="eE2Q2-r1-loc"></span></li><li><span class="katex-inline" data-id="eE2Q2-r4-loc"></span></li><li><span class="katex-inline" data-id="eE2Q2-r2-loc"></span></li><li><span class="katex-inline" data-id="eE2Q2-r3-loc"></span></li></ul><p>Ces quatre racines sont dans des intervalles disjoints (ou sont des points distincts), elles sont donc toutes distinctes.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                const content = el.textContent;
+                const displayMode = el.classList.contains('katex-display');
+                try {
+                    katex.render(content, el, {
+                        throwOnError: false,
+                        displayMode: displayMode
+                    });
+                } catch (e) {
+                    console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                    el.textContent = `Erreur de rendu de la formule: ${content}`;
+                }
+            });
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.error(`Élément avec data-id '${id}' non trouvé.`);
+                }
+            }
+
+            // Problème 1 - Intro
+            setText('p1-un', "(u_n)_{n\\ge0}");
+            setText('p1-Sn', "(S_n)_{n\\ge0}");
+            setText('p1-u0', "u_0=a");
+            setText('p1-u1', "u_1=b");
+            setText('p1-un-rec', "u_n = \\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}");
+            setText('p1-n-ge2', "n \\ge 2");
+            setText('p1-Sn-def', "S_n = \\sum_{k=0}^{n} u_k");
+            setText('p1-n-ge0', "n \\ge 0");
+            setText('p1-un2', "u_n");
+            setText('p1-Sn2', "S_n");
+            setText('p1-un3', "(u_n)_{n\\ge0}");
+            setText('p1-Sn3', "(S_n)_{n\\ge0}");
+            setText('p1-vn', "(v_n)_{n\\ge1}");
+            setText('p1-wn', "(w_n)_{n\\ge1}");
+            setText('p1-vn-def', "v_n = u_n - u_{n-1}");
+            setText('p1-n-ge1-v', "n \\ge 1");
+            setText('p1-wn-def', "w_n = u_n - \\frac{1}{2}u_{n-1}");
+            setText('p1-n-ge1-w', "n \\ge 1");
+
+            // Problème 1 - Questions
+            setText('qP1Q1-un', "u_n");
+            setText('qP1Q1-vn', "v_n");
+            setText('qP1Q1-wn', "w_n");
+            setText('qP1Q1-n', "n \\ge 1");
+            setText('qP1Q2-k', "k");
+            setText('qP1Q2-n', "n \\ge 2");
+            setText('qP1Q2-vn-rec', "v_n = k v_{n-1}");
+            setText('qP1Q2-vn', "v_n");
+            setText('qP1Q3-wn', "(w_n)_{n\\ge1}");
+            setText('qP1Q3-wn2', "w_n");
+            setText('qP1Q4-un', "u_n");
+            setText('qP1Q4-n', "n > 0");
+            setText('qP1Q5-un', "(u_n)_{n\\ge0}");
+            setText('qP1Q6-Sn', "S_n");
+            setText('qP1Q7-Sn', "(S_n)_{n\\ge0}");
+            
+            // Exercice 1 - Intro
+            setText('e1-xn', "(x_n)_{n\\ge0}");
+            setText('e1-xn-def', "x_n = \\frac{n+1}{n+2}(1+(-1)^n)");
+            setText('e1-n-ge0', "n \\ge 0");
+
+            // Exercice 1 - Questions
+            setText('qE1Q1-xn', "(x_n)_{n\\ge0}");
+            setText('qE1Q2-xn', "(x_n)_{n\\ge0}");
+            setText('qE1Q3-xn', "(x_n)_{n\\ge0}");
+            setText('qE1Q3-E-def', "E=\\{x_n, n\\in\\mathbb{N}\\}");
+            
+            // Exercice 2 - Questions
+            setText('qE2Q2-f-map', "f:\\mathbb{R} \\rightarrow \\mathbb{R}");
+            setText('qE2Q2-fx', "f(x) = x^4 - 6x^3 + 7x^2 - x - 1");
+            
+            // Problème 1 - Solutions
+            setText('solP1Q1-sys', "\\begin{cases} v_n = u_n - u_{n-1} \\\\ w_n = u_n - \\frac{1}{2}u_{n-1} \\end{cases}");
+            setText('solP1Q1-sub', "w_n - v_n = \\frac{1}{2}u_{n-1}");
+            setText('solP1Q1-un-1', "u_{n-1} = 2(w_n-v_n)");
+            setText('solP1Q1-un', "u_n = v_n + u_{n-1} = v_n + 2(w_n-v_n) = 2w_n-v_n");
+            setText('solP1Q2-n', "n \\ge 2");
+            setText('solP1Q2-vn-calc', "v_n = u_n - u_{n-1} = (\\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}) - u_{n-1} = \\frac{1}{2}u_{n-1} - \\frac{1}{2}u_{n-2} = \\frac{1}{2}(u_{n-1}-u_{n-2}) = \\frac{1}{2}v_{n-1}");
+            setText('solP1Q2-vn-geo', "(v_n)_{n\\ge1}");
+            setText('solP1Q2-k', "k = \\frac{1}{2}");
+            setText('solP1Q2-vn-form1', "v_n = v_1 \\cdot (\\frac{1}{2})^{n-1}");
+            setText('solP1Q2-v1', "v_1 = u_1 - u_0 = b-a");
+            setText('solP1Q2-vn-form2', "v_n = (b-a)(\\frac{1}{2})^{n-1}");
+            setText('solP1Q2-n-ge1', "n \\ge 1");
+            setText('solP1Q3-n', "n \\ge 2");
+            setText('solP1Q3-wn-calc', "w_n = u_n - \\frac{1}{2}u_{n-1} = (\\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}) - \\frac{1}{2}u_{n-1} = u_{n-1} - \\frac{1}{2}u_{n-2} = w_{n-1}");
+            setText('solP1Q3-wn-const', "(w_n)_{n\\ge1}");
+            setText('solP1Q3-wn-val', "w_n = w_1 = u_1 - \\frac{1}{2}u_0 = b-\\frac{a}{2}");
+            setText('solP1Q3-n-ge1', "n \\ge 1");
+            setText('solP1Q4-n', "n \\ge 1");
+            setText('solP1Q4-un-base', "u_n = 2w_n - v_n");
+            setText('solP1Q4-un-exp', "u_n = 2(b-\\frac{a}{2}) - (b-a)(\\frac{1}{2})^{n-1} = 2b-a-(b-a)2^{1-n}");
+            setText('solP1Q4-n0-check', "n=0: 2b-a-(b-a)2^1 = 2b-a-2b+2a = a = u_0");
+            setText('solP1Q4-n-ge0', "n \\ge 0");
+            setText('solP1Q5-lim-un', "\\lim_{n\\to+\\infty} u_n = \\lim_{n\\to+\\infty} (2b-a - (b-a)2^{1-n})");
+            setText('solP1Q5-lim-exp', "\\lim_{n\\to+\\infty} 2^{1-n} = 0");
+            setText('solP1Q5-un-conv', "(u_n)");
+            setText('solP1Q5-lim-val', "l = 2b-a");
+            setText('solP1Q6-Sn-sum-un', "S_n = \\sum_{k=0}^{n} u_k = \\sum_{k=0}^{n} (2b-a - (b-a)2^{1-k}) = (n+1)(2b-a) - (b-a)\\sum_{k=0}^{n} 2^{1-k}");
+            setText('solP1Q6-sum-exp', "\\sum_{k=0}^{n} 2^{1-k} = 2\\sum_{k=0}^{n} (\\frac{1}{2})^k = 2\\frac{1-(1/2)^{n+1}}{1-1/2} = 4(1-(\\frac{1}{2})^{n+1}) = 4 - 2^{1-n}");
+            setText('solP1Q6-Sn-final', "S_n = (n+1)(2b-a) - (b-a)(4-2^{1-n})");
+            setText('solP1Q7-Sn', "(S_n)");
+            setText('solP1Q7-lim-Sn', "\\lim_{n\\to+\\infty} S_n = \\lim_{n\\to+\\infty} [(n+1)(2b-a) - 4(b-a) + (b-a)2^{1-n}]");
+            setText('solP1Q7-exp-term', "(b-a)2^{1-n}");
+            setText('solP1Q7-cond1', "2b-a \\ne 0");
+            setText('solP1Q7-poly-term', "(n+1)(2b-a)");
+            setText('solP1Q7-inf', "+\\infty \\text{ ou } -\\infty");
+            setText('solP1Q7-Sn-div', "(S_n)");
+            setText('solP1Q7-cond2', "2b-a = 0");
+            setText('solP1Q7-lim-Sn-conv', "\\lim_{n\\to+\\infty} S_n = -4(b-a)");
+            setText('solP1Q7-Sn-conv', "(S_n)");
+            
+            // Exercice 1 - Solutions
+            setText('solE1Q1-n-even', "n=2k");
+            setText('solE1Q1-x2k-calc', "x_{2k} = \\frac{2k+1}{2k+2}(1+1) = \\frac{2k+1}{k+1} = \\frac{2(k+1)-1}{k+1} = 2 - \\frac{1}{k+1}");
+            setText('solE1Q1-n-odd', "n=2k+1");
+            setText('solE1Q1-x2k1-val', "x_{2k+1} = \\frac{2k+2}{2k+3}(1-1) = 0");
+            setText('solE1Q1-k-ge0', "k \\ge 0");
+            setText('solE1Q1-ineq1', "k+1 \\ge 1 \\Rightarrow 0 < \\frac{1}{k+1} \\le 1 \\Rightarrow 1 \\le 2-\\frac{1}{k+1} < 2");
+            setText('solE1Q1-ineq2', "0 \\le x_n < 2");
+            setText('solE1Q2-lim-x2k', "\\lim_{k\\to+\\infty} x_{2k} = \\lim_{k\\to+\\infty} (2-\\frac{1}{k+1}) = 2");
+            setText('solE1Q2-lim-x2k1', "\\lim_{k\\to+\\infty} x_{2k+1} = 0");
+            setText('solE1Q2-xn-div', "(x_n)");
+            setText('solE1Q3-E-set', "E = \\{0\\} \\cup \\{2-\\frac{1}{k+1}, k\\in\\mathbb{N}\\} = \\{0, 1, 4/3, 3/2, 8/5, ...\\}");
+            setText('solE1Q3-x2k', "(x_{2k})");
+            setText('solE1Q3-x2k-mono', "x_{2(k+1)} - x_{2k} = (2-\\frac{1}{k+2}) - (2-\\frac{1}{k+1}) = \\frac{1}{k+1} - \\frac{1}{k+2} > 0");
+            setText('solE1Q3-min-inf', "min(E) = inf(E) = 0");
+            setText('solE1Q3-sup', "sup(E) = \\lim_{k\\to\\infty} x_{2k} = 2");
+            setText('solE1Q3-max', "max(E)");
+            setText('solE1Q3-x2k-tend', "(x_{2k})");
+            
+            // Exercice 2 - Solutions
+            setText('solE2Q1-ab', "[a,b]");
+            setText('solE2Q1-fa-fb', "f(a) \\text{ et } f(b)");
+            setText('solE2Q1-ab2', "[a,b]");
+            setText('solE2Q1-fc-k', "f(c)=k");
+            setText('solE2Q2-fx', "f(x) = x^4 - 6x^3 + 7x^2 - x - 1");
+            setText('solE2Q2-R', "\\mathbb{R}");
+            setText('solE2Q2-f-vals', "f(-1)=14, f(0)=-1, f(1)=0, f(2)=-7, f(5)=44");
+            setText('solE2Q2-r1', "r_1 \\in ]-1, 0[");
+            setText('solE2Q2-r2', "r_2=1 \\text{ est une racine}");
+            setText('solE2Q2-r3', "r_3 \\in ]2, 5[");
+            setText('solE2Q2-fx-fact', "f(x) = (x-1)(x^3-5x^2+2x+1)");
+            setText('solE2Q2-gx', "g(x)=x^3-5x^2+2x+1");
+            setText('solE2Q2-g-vals', "g(0)=1 > 0 \\text{ et } g(1)=-1 < 0");
+            setText('solE2Q2-r4', "r_4 \\in ]0, 1[");
+            setText('solE2Q2-roots', "r_1 \\in ]-1,0[, r_4 \\in ]0,1[, r_2=1, r_3 \\in ]2,5[");
+
+            // Modal Hints
+            setText('hP1Q1-un', "u_n");
+            setText('hP1Q1-un-1', "u_{n-1}");
+            setText('hP1Q1-un-1-2', "u_{n-1}");
+            setText('hP1Q2-un', "u_n");
+            setText('hP1Q2-vn', "v_n");
+            setText('hP1Q2-vn-1', "v_{n-1}");
+            setText('hP1Q3-un', "u_n");
+            setText('hP1Q3-wn', "w_n");
+            setText('hP1Q4-un-form', "u_n = 2w_n - v_n");
+            setText('hP1Q4-vn', "v_n");
+            setText('hP1Q4-wn', "w_n");
+            setText('hP1Q5-un', "u_n");
+            setText('hP1Q5-n', "n \\to +\\infty");
+            setText('hP1Q5-n2', "n");
+            setText('hP1Q6-Sn', "S_n");
+            setText('hP1Q6-uk', "u_k");
+            setText('hP1Q7-Sn', "S_n");
+            setText('hP1Q7-term', "(n+1)(2b-a)");
+            setText('hE1Q1-term', "(-1)^n");
+            setText('hE1Q1-n', "n");
+            setText('hE1Q1-n2', "n");
+            setText('hE2Q1-eq', "f(x)=k");
+            setText('hE2Q2-pts', "-1, 0, 1, 2, 5");
+            setText('hE2Q2-fa', "f(a)");
+            setText('hE2Q2-fb', "f(b)");
+
+            // Modal Prerequisites
+            setText('kP1Q2-vn', "(v_n)");
+            setText('kP1Q2-k', "k");
+            setText('kP1Q2-vn-rec', "v_{n+1}=kv_n");
+            setText('kP1Q2-vn-form', "v_n = v_1 k^{n-1}");
+            setText('kP1Q3-wn', "(w_n)");
+            setText('kP1Q3-wn-rec', "w_{n+1} = w_n");
+            setText('kP1Q3-n', "n");
+            setText('kP1Q4-pow', "(a^b)^c = a^{bc}; a^{-b} = 1/a^b");
+            setText('kP1Q5-q', "|q|<1");
+            setText('kP1Q5-lim', "\\lim_{n\\to\\infty} q^n = 0");
+            setText('kP1Q6-sum-geo', "\\sum_{k=0}^{n} q^k = \\frac{1-q^{n+1}}{1-q}");
+            setText('kP1Q6-sum-const', "\\sum_{k=0}^{n} C = (n+1)C");
+            setText('kP1Q6-linearity', "\\sum (a_k+b_k) = \\sum a_k + \\sum b_k");
+            setText('kP1Q7-n', "n");
+            setText('kP1Q7-n1', "n+1");
+            setText('kP1Q7-exp', "2^{1-n}");
+            setText('kE1Q1-un', "(u_n)");
+            setText('kE1Q1-ineq', "m \\le u_n \\le M");
+            setText('kE2Q2-a', "a");
+            
+            // Modal Explanations
+            setText('eP1Q1-un', "u_n");
+            setText('eP1Q1-vn', "v_n");
+            setText('eP1Q1-wn', "w_n");
+            setText('eP1Q1-sys', "\\begin{cases} v_n = u_n - u_{n-1} \\\\ w_n = u_n - \\frac{1}{2}u_{n-1} \\end{cases}");
+            setText('eP1Q1-un-1', "u_{n-1}");
+            setText('eP1Q1-un-2', "u_n");
+            setText('eP1Q1-eq2-mult', "2w_n = 2u_n - u_{n-1}");
+            setText('eP1Q1-sys-mod', "\\begin{cases} v_n = u_n - u_{n-1} \\\\ 2w_n = 2u_n - u_{n-1} \\end{cases}");
+            setText('eP1Q1-sub', "2w_n - v_n = (2u_n - u_{n-1}) - (u_n - u_{n-1})");
+            setText('eP1Q1-un-1-cancel', "u_{n-1}");
+            setText('eP1Q1-result', "2w_n - v_n = u_n");
+            setText('eP1Q1-un-final', "u_n");
+            setText('eP1Q1-vn-final', "v_n");
+            setText('eP1Q1-wn-final', "w_n");
+            
+            setText('eP1Q2-vn', "(v_n)");
+            setText('eP1Q2-vn-def', "v_n = u_n - u_{n-1}");
+            setText('eP1Q2-un', "u_n");
+            setText('eP1Q2-un-rec', "u_n = \\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}");
+            setText('eP1Q2-n', "n \\ge 2");
+            setText('eP1Q2-vn2', "v_n");
+            setText('eP1Q2-vn-sub', "v_n = (\\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}) - u_{n-1}");
+            setText('eP1Q2-un-1', "u_{n-1}");
+            setText('eP1Q2-vn-group', "v_n = (\\frac{3}{2}-1)u_{n-1} - \\frac{1}{2}u_{n-2} = \\frac{1}{2}u_{n-1} - \\frac{1}{2}u_{n-2}");
+            setText('eP1Q2-half', "1/2");
+            setText('eP1Q2-vn-factor', "v_n = \\frac{1}{2}(u_{n-1} - u_{n-2})");
+            setText('eP1Q2-vn-1-def', "u_{n-1} - u_{n-2} = v_{n-1}");
+            setText('eP1Q2-vn-rec', "v_n = \\frac{1}{2} v_{n-1}");
+            setText('eP1Q2-k', "k = \\frac{1}{2}");
+            setText('eP1Q2-vn3', "v_n");
+            setText('eP1Q2-vn-form', "v_n = v_1 \\cdot k^{n-1}");
+            setText('eP1Q2-v1', "v_1");
+            setText('eP1Q2-v1-calc', "v_1 = u_1 - u_0 = b-a");
+            setText('eP1Q2-v1-2', "v_1");
+            setText('eP1Q2-k2', "k");
+            setText('eP1Q2-vn-final', "v_n = (b-a)(\\frac{1}{2})^{n-1}");
+            
+            setText('eP1Q3-wn', "(w_n)");
+            setText('eP1Q3-wn-def', "w_n = u_n - \\frac{1}{2}u_{n-1}");
+            setText('eP1Q3-un', "u_n");
+            setText('eP1Q3-un-rec', "u_n = \\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}");
+            setText('eP1Q3-n', "n \\ge 2");
+            setText('eP1Q3-wn2', "w_n");
+            setText('eP1Q3-wn-sub', "w_n = (\\frac{3}{2}u_{n-1} - \\frac{1}{2}u_{n-2}) - \\frac{1}{2}u_{n-1}");
+            setText('eP1Q3-un-1', "u_{n-1}");
+            setText('eP1Q3-wn-group', "w_n = (\\frac{3}{2}-\\frac{1}{2})u_{n-1} - \\frac{1}{2}u_{n-2} = u_{n-1} - \\frac{1}{2}u_{n-2}");
+            setText('eP1Q3-wn-1-def', "u_{n-1} - \\frac{1}{2}u_{n-2} = w_{n-1}");
+            setText('eP1Q3-wn-rec', "w_n = w_{n-1}");
+            setText('eP1Q3-wn3', "(w_n)");
+            setText('eP1Q3-n2', "n \\ge 2");
+            setText('eP1Q3-wn4', "w_n");
+            setText('eP1Q3-w1', "w_1");
+            setText('eP1Q3-w1-2', "w_1");
+            setText('eP1Q3-w1-calc', "w_1 = u_1 - \\frac{1}{2}u_0 = b - \\frac{a}{2}");
+            setText('eP1Q3-n-ge1', "n \\ge 1");
+            setText('eP1Q3-wn-final', "w_n = b - \\frac{a}{2}");
+            
+            setText('eP1Q4-un', "u_n");
+            setText('eP1Q4-res1', "u_n = 2w_n - v_n");
+            setText('eP1Q4-res2', "v_n = (b-a)(\\frac{1}{2})^{n-1}");
+            setText('eP1Q4-res3', "w_n = b - \\frac{a}{2}");
+            setText('eP1Q4-vn', "v_n");
+            setText('eP1Q4-wn', "w_n");
+            setText('eP1Q4-un-sub', "u_n = 2(b - \\frac{a}{2}) - (b-a)(\\frac{1}{2})^{n-1}");
+            setText('eP1Q4-term1', "2(b - \\frac{a}{2}) = 2b - a");
+            setText('eP1Q4-term2-pow', "(\\frac{1}{2})^{n-1} = 2^{-(n-1)} = 2^{1-n}");
+            setText('eP1Q4-un-final', "u_n = 2b - a - (b-a)2^{1-n}");
+            setText('eP1Q4-n', "n \\ge 1");
+            setText('eP1Q4-n0', "n=0");
+            setText('eP1Q4-n0-check', "u_0 = 2b-a - (b-a)2^{1-0} = 2b-a-2(b-a) = 2b-a-2b+2a = a");
+            setText('eP1Q4-u0', "u_0");
+            setText('eP1Q4-n-ge0', "n \\ge 0");
+
+            setText('eP1Q5-un', "(u_n)");
+            setText('eP1Q5-un-exp', "u_n = 2b - a - (b-a)2^{1-n}");
+            setText('eP1Q5-n', "n \\to +\\infty");
+            setText('eP1Q5-lim-un', "\\lim_{n\\to+\\infty} u_n = \\lim_{n\\to+\\infty} (2b - a - (b-a)2^{1-n})");
+            setText('eP1Q5-term1', "2b-a");
+            setText('eP1Q5-term2', "(b-a)2^{1-n}");
+            setText('eP1Q5-n2', "n");
+            setText('eP1Q5-lim-exp', "\\lim_{n\\to+\\infty} 2^{1-n}");
+            setText('eP1Q5-two', "2 > 1");
+            setText('eP1Q5-lim-2n', "\\lim_{n\\to+\\infty} 2^n = +\\infty");
+            setText('eP1Q5-lim-2-1n', "\\lim_{n\\to+\\infty} 2^{1-n} = \\lim_{n\\to+\\infty} \\frac{2}{2^n} = 0");
+            setText('eP1Q5-lim-calc', "\\lim_{n\\to+\\infty} u_n = (2b-a) - (b-a) \\cdot 0 = 2b-a");
+            setText('eP1Q5-lim-val', "l=2b-a");
+            setText('eP1Q5-un-conv', "(u_n)");
+
+            setText('eP1Q6-Sn', "S_n");
+            setText('eP1Q6-Sn-def', "S_n = \\sum_{k=0}^n u_k");
+            setText('eP1Q6-uk', "u_k");
+            setText('eP1Q6-Sn-sub', "S_n = \\sum_{k=0}^n (2b-a - (b-a)2^{1-k})");
+            setText('eP1Q6-Sn-split', "S_n = \\sum_{k=0}^n (2b-a) - \\sum_{k=0}^n (b-a)2^{1-k}");
+            setText('eP1Q6-n1', "n+1");
+            setText('eP1Q6-sum1', "\\sum_{k=0}^n (2b-a) = (n+1)(2b-a)");
+            setText('eP1Q6-sum2-start', "\\sum_{k=0}^n (b-a)2^{1-k} = (b-a) \\sum_{k=0}^n 2 \\cdot (\\frac{1}{2})^k = 2(b-a) \\sum_{k=0}^n (\\frac{1}{2})^k");
+            setText('eP1Q6-q', "q = 1/2");
+            setText('eP1Q6-sum2-calc', "2 \\sum_{k=0}^n (\\frac{1}{2})^k = 2 \\cdot \\frac{1 - (\\frac{1}{2})^{n+1}}{1-\\frac{1}{2}} = 2 \\cdot \\frac{1 - (\\frac{1}{2})^{n+1}}{\\frac{1}{2}} = 4(1 - (\\frac{1}{2})^{n+1}) = 4 - 4 \\cdot \\frac{1}{2^{n+1}} = 4 - \\frac{2^2}{2^{n+1}} = 4 - 2^{2-(n+1)} = 4 - 2^{1-n}");
+            setText('eP1Q6-sum2-final', "(b-a)(4 - 2^{1-n})");
+            setText('eP1Q6-Sn-final', "S_n = (n+1)(2b-a) - (b-a)(4-2^{1-n})");
+
+            setText('eP1Q7-Sn', "(S_n)");
+            setText('eP1Q7-Sn2', "S_n");
+            setText('eP1Q7-Sn-exp', "S_n = (n+1)(2b-a) - (b-a)(4-2^{1-n})");
+            setText('eP1Q7-n', "n \\to +\\infty");
+            setText('eP1Q7-Sn-reorg', "S_n = (n+1)(2b-a) - 4(b-a) + (b-a)2^{1-n}");
+            setText('eP1Q7-lim-exp', "\\lim_{n\\to+\\infty} (b-a)2^{1-n} = 0");
+            setText('eP1Q7-dom-term', "(n+1)(2b-a)");
+            setText('eP1Q7-coeff', "2b-a");
+            setText('eP1Q7-case1-cond', "2b-a \\ne 0");
+            setText('eP1Q7-lim-n1', "\\lim_{n\\to+\\infty} (n+1) = +\\infty");
+            setText('eP1Q7-dom-term2', "(n+1)(2b-a)");
+            setText('eP1Q7-plus-inf', "+\\infty");
+            setText('eP1Q7-coeff-pos', "2b-a > 0");
+            setText('eP1Q7-minus-inf', "-\\infty");
+            setText('eP1Q7-coeff-neg', "2b-a < 0");
+            setText('eP1Q7-Sn-div', "(S_n)");
+            setText('eP1Q7-case2-cond', "2b-a = 0");
+            setText('eP1Q7-Sn3', "S_n");
+            setText('eP1Q7-Sn-case2', "S_n = (n+1)(0) - 4(b-a) + (b-a)2^{1-n} = -4(b-a) + (b-a)2^{1-n}");
+            setText('eP1Q7-lim-Sn-case2', "\\lim_{n\\to+\\infty} S_n = -4(b-a) + 0 = -4(b-a)");
+            setText('eP1Q7-Sn-conv', "(S_n)");
+            setText('eP1Q7-lim-val', "-4(b-a)");
+            
+            setText('eE1Q1-xn', "(x_n)");
+            setText('eE1Q1-xn-def', "x_n = \\frac{n+1}{n+2}(1+(-1)^n)");
+            setText('eE1Q1-term', "(-1)^n");
+            setText('eE1Q1-n-odd', "n = 2k+1");
+            setText('eE1Q1-term-odd', "(-1)^n = -1");
+            setText('eE1Q1-factor-odd', "(1+(-1)^n)");
+            setText('eE1Q1-xn-odd', "x_{2k+1} = \\frac{2k+2}{2k+3}(1-1) = 0");
+            setText('eE1Q1-n-even', "n = 2k");
+            setText('eE1Q1-term-even', "(-1)^n = 1");
+            setText('eE1Q1-factor-even', "(1+(-1)^n)");
+            setText('eE1Q1-xn-even', "x_{2k} = \\frac{2k+1}{2k+2}(1+1) = \\frac{2k+1}{k+1}");
+            setText('eE1Q1-xn-even-rewrite', "x_{2k} = \\frac{2(k+1)-1}{k+1} = 2 - \\frac{1}{k+1}");
+            setText('eE1Q1-k', "k \\ge 0");
+            setText('eE1Q1-k1', "k+1 \\ge 1");
+            setText('eE1Q1-inv-ineq', "0 < \\frac{1}{k+1} \\le 1");
+            setText('eE1Q1-neg-inv-ineq', "-1 \\le -\\frac{1}{k+1} < 0");
+            setText('eE1Q1-x2k-ineq', "1 \\le 2 - \\frac{1}{k+1} < 2 \\implies 1 \\le x_{2k} < 2");
+            setText('eE1Q1-interval', "[1, 2)");
+            setText('eE1Q1-interval-final', "[0, 2)");
+            setText('eE1Q1-final-ineq', "0 \\le x_n < 2");
+
+            setText('eE1Q2-xn', "(x_n)");
+            setText('eE1Q2-x2k1', "(x_{2k+1})");
+            setText('eE1Q2-k', "k \\ge 0");
+            setText('eE1Q2-x2k1-val', "x_{2k+1}=0");
+            setText('eE1Q2-lim-odd', "\\lim_{k\\to+\\infty} x_{2k+1} = 0");
+            setText('eE1Q2-x2k', "(x_{2k})");
+            setText('eE1Q2-x2k-val', "x_{2k} = 2 - \\frac{1}{k+1}");
+            setText('eE1Q2-k-inf', "k \\to +\\infty");
+            setText('eE1Q2-lim-even', "\\lim_{k\\to+\\infty} x_{2k} = \\lim_{k\\to+\\infty} (2 - \\frac{1}{k+1}) = 2 - 0 = 2");
+            setText('eE1Q2-lim-neq', "0 \\ne 2");
+            setText('eE1Q2-xn-div', "(x_n)");
+            
+            setText('eE1Q3-E-def', "E = \\{0\\} \\cup \\{x_{2k} | k \\in \\mathbb{N}\\} = \\{0, 1, 4/3, 3/2, 8/5, ...\\}");
+            setText('eE1Q3-x2k', "(x_{2k})");
+            setText('eE1Q3-x2k-val', "x_{2k} = 2 - \\frac{1}{k+1}");
+            setText('eE1Q3-mono-calc', "x_{2(k+1)} - x_{2k} = (2-\\frac{1}{k+2}) - (2-\\frac{1}{k+1}) = \\frac{1}{k+1}-\\frac{1}{k+2} = \\frac{1}{(k+1)(k+2)} > 0");
+            setText('eE1Q3-k', "k \\ge 0");
+            setText('eE1Q3-x2k-2', "(x_{2k})");
+            setText('eE1Q3-x0', "x_0 = 2 - 1/1 = 1");
+            setText('eE1Q3-lim', "2");
+            setText('eE1Q3-interval', "[1,2)");
+            setText('eE1Q3-inf', "Inf(E)=0");
+            setText('eE1Q3-inf-val', "Inf(E)=0");
+            setText('eE1Q3-x1', "x_1=0");
+            setText('eE1Q3-min', "Min(E)=0");
+            setText('eE1Q3-x2k-3', "(x_{2k})");
+            setText('eE1Q3-sup', "Sup(E)=2");
+            setText('eE1Q3-x2k-lt2', "x_{2k} < 2");
+            
+            setText('eE2Q1-f', "f");
+            setText('eE2Q1-ab', "[a,b]");
+            setText('eE2Q1-f2', "f");
+            setText('eE2Q1-ab-closed', "[a,b]");
+            setText('eE2Q1-k', "k");
+            setText('eE2Q1-fa', "f(a)");
+            setText('eE2Q1-fb', "f(b)");
+            setText('eE2Q1-c', "c");
+            setText('eE2Q1-ab-closed2', "[a,b]");
+            setText('eE2Q1-fc', "f(c)=k");
+
+            setText('eE2Q2-fx', "f(x)");
+            setText('eE2Q2-fx-def', "f(x) = x^4 - 6x^3 + 7x^2 - x - 1");
+            setText('eE2Q2-f', "f");
+            setText('eE2Q2-R', "\\mathbb{R}");
+            setText('eE2Q2-f-1', "f(-1) = 1+6+7+1-1 = 14 > 0");
+            setText('eE2Q2-f0', "f(0) = -1 < 0");
+            setText('eE2Q2-f1', "f(1) = 1-6+7-1-1 = 0");
+            setText('eE2Q2-f2', "f(2) = 16-48+28-2-1 = -7 < 0");
+            setText('eE2Q2-f5', "f(5) = 625-750+175-5-1 = 44 > 0");
+            setText('eE2Q2-int1', "[-1, 0]");
+            setText('eE2Q2-f-1-val', "f(-1)>0");
+            setText('eE2Q2-f0-val', "f(0)<0");
+            setText('eE2Q2-r1', "r_1 \\in ]-1, 0[");
+            setText('eE2Q2-f1-val', "f(1)=0");
+            setText('eE2Q2-r2', "r_2=1");
+            setText('eE2Q2-int2', "[2, 5]");
+            setText('eE2Q2-f2-val', "f(2)<0");
+            setText('eE2Q2-f5-val', "f(5)>0");
+            setText('eE2Q2-r3', "r_3 \\in ]2, 5[");
+            setText('eE2Q2-r1-val', "r_1");
+            setText('eE2Q2-r2-val', "r_2=1");
+            setText('eE2Q2-r3-val', "r_3");
+            setText('eE2Q2-r2-is-root', "x=1");
+            setText('eE2Q2-fx2', "f(x)");
+            setText('eE2Q2-factor', "(x-1)");
+            setText('eE2Q2-fx-fact', "f(x) = (x-1)(x^3-5x^2+2x+1)");
+            setText('eE2Q2-gx', "g(x) = x^3-5x^2+2x+1");
+            setText('eE2Q2-g', "g");
+            setText('eE2Q2-g0', "g(0) = 1 > 0");
+            setText('eE2Q2-g1', "g(1) = 1-5+2+1 = -1 < 0");
+            setText('eE2Q2-int3', "[0,1]");
+            setText('eE2Q2-g0-val', "g(0)>0");
+            setText('eE2Q2-g1-val', "g(1)<0");
+            setText('eE2Q2-r4', "r_4 \\in ]0, 1[");
+            setText('eE2Q2-r1-loc', "r_1 \\in ]-1, 0[");
+            setText('eE2Q2-r4-loc', "r_4 \\in ]0, 1[");
+            setText('eE2Q2-r2-loc', "r_2 = 1");
+            setText('eE2Q2-r3-loc', "r_3 \\in ]2, 5[");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 2: Examen (2018/2019) - Version Améliorée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 2</h1>
+            <p class="exam-subtitle">Examen (2018/2019)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>À l'aide des D.L., calculer les limites suivantes :</p>
+                        <p><span class="katex-display" data-id="ex1-q-lim1"></span></p>
+                        <p><span class="katex-display" data-id="ex1-q-lim2"></span></p>
+                        <p><span class="katex-display" data-id="ex1-q-lim3"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>Donner le DL au point <span class="katex-inline" data-id="ex2-q-x0"></span>, à l'ordre n indiqué :</p>
+                        <p>1. <span class="katex-inline" data-id="ex2-q1-f"></span>, <span class="katex-inline" data-id="ex2-q1-cond"></span></p>
+                        <p>2. <span class="katex-inline" data-id="ex2-q2-f"></span>, <span class="katex-inline" data-id="ex2-q2-cond"></span></p>
+                        <p>3. <span class="katex-inline" data-id="ex2-q3-f"></span>, <span class="katex-inline" data-id="ex2-q3-cond"></span></p>
+                        <p>4. <span class="katex-inline" data-id="ex2-q4-f"></span>, <span class="katex-inline" data-id="ex2-q4-cond"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>Pour la fonction <span class="katex-inline" data-id="ex3-q-f"></span>, déterminer les équations de la tangente en 0 et de l'asymptote en <span class="katex-inline" data-id="ex3-q-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 4</h3>
+                    <div class="exercise-content">
+                        <p>1. Calculer les primitives des fonctions ci-dessous :</p>
+                        <p><span class="katex-inline" data-id="ex4-q1-f1"></span></p>
+                        <p><span class="katex-inline" data-id="ex4-q1-f2"></span></p>
+                        <p>2. Prouver que : <span class="katex-inline" data-id="ex4-q2-lim"></span>.</p>
+                        <p>3. Vérifier l'inégalité triangulaire, pour l'intégrale de Riemann : <span class="katex-inline" data-id="ex4-q3-ineq"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>1. Pour <span class="katex-inline" data-id="sol1-p1-lim"></span> :</p>
+                        <p>DL du numérateur à l'ordre 2 : <span class="katex-inline" data-id="sol1-p1-num"></span>.</p>
+                        <p>DL du dénominateur à l'ordre 2 : <span class="katex-inline" data-id="sol1-p1-den"></span>.</p>
+                        <p>La limite est <span class="katex-inline" data-id="sol1-p1-res"></span>.</p>
+                        
+                        <p>2. Pour <span class="katex-inline" data-id="sol1-p2-lim"></span>, on pose <span class="katex-inline" data-id="sol1-p2-sub"></span>. La limite devient <span class="katex-inline" data-id="sol1-p2-lim-t"></span>. Avec le DL <span class="katex-inline" data-id="sol1-p2-dl"></span>, la limite est <span class="katex-inline" data-id="sol1-p2-res"></span>.</p>
+
+                        <p>3. Pour <span class="katex-inline" data-id="sol1-p3-lim"></span>, on utilise la forme exponentielle : <span class="katex-inline" data-id="sol1-p3-exp"></span>. L'exposant est <span class="katex-inline" data-id="sol1-p3-expo"></span>. En posant <span class="katex-inline" data-id="sol1-p3-u"></span>, la limite de l'exposant est -2. La limite finale est <span class="katex-inline" data-id="sol1-p3-res"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-inline" data-id="sol2-p1-f"></span> : <span class="katex-display" data-id="sol2-p1-dl"></span></p>
+                        <p>2. <span class="katex-inline" data-id="sol2-p2-f"></span> : On utilise la formule de Taylor-Young. <span class="katex-inline" data-id="sol2-p2-g"></span>, <span class="katex-inline" data-id="sol2-p2-gp"></span>, <span class="katex-inline" data-id="sol2-p2-gpp"></span>. <span class="katex-display" data-id="sol2-p2-dl"></span></p>
+                        <p>3. <span class="katex-inline" data-id="sol2-p3-f"></span> : On pose <span class="katex-inline" data-id="sol2-p3-sub"></span>. On développe <span class="katex-inline" data-id="sol2-p3-h"></span>. Le DL final est long et fastidieux.</p>
+                        <p>4. <span class="katex-inline" data-id="sol2-p4-f"></span> : On effectue la division suivant les puissances décroissantes ou on pose <span class="katex-inline" data-id="sol2-p4-sub"></span> et on fait une division suivant les puissances croissantes. <span class="katex-display" data-id="sol2-p4-dl"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p><strong>Tangente en 0 :</strong> On fait un DL à l'ordre 1 en 0 par division suivant les puissances croissantes. <span class="katex-inline" data-id="sol3-p1-div"></span>. L'équation de la tangente en 0 est <span class="katex-inline" data-id="sol3-p1-tan"></span>.</p>
+                        <p><strong>Asymptote en <span class="katex-inline" data-id="sol3-p2-inf"></span> :</strong> On fait un DL à l'ordre 1 en <span class="katex-inline" data-id="sol3-p2-inf2"></span> par division suivant les puissances décroissantes. <span class="katex-inline" data-id="sol3-p2-div"></span>. L'équation de l'asymptote en <span class="katex-inline" data-id="sol3-p2-inf3"></span> est <span class="katex-inline" data-id="sol3-p2-asy"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 4</h3>
+                    <div class="exercise-content">
+                        <p>1. <strong>Primitives :</strong></p>
+                        <ul>
+                            <li class="text-slate-300">Pour <span class="katex-inline" data-id="sol4-p1-f1"></span>, une primitive est de la forme <span class="katex-inline" data-id="sol4-p1-f1-form"></span>. En utilisant la formule d'intégration par parties généralisée, on trouve <span class="katex-inline" data-id="sol4-p1-f1-res"></span>.</li>
+                            <li class="text-slate-300">Pour <span class="katex-inline" data-id="sol4-p1-f2"></span>, par double intégration par parties, on trouve <span class="katex-inline" data-id="sol4-p1-f2-res"></span>.</li>
+                        </ul>
+                        <p>2. Il s'agit de la définition de l'intégrale de Riemann pour la fonction <span class="katex-inline" data-id="sol4-p2-f"></span> sur [0,1].</p>
+                        <p>3. L'inégalité triangulaire pour les intégrales de Riemann découle de l'inégalité triangulaire pour les sommes finies, en passant à la limite.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+            
+            <!-- Section: Applications in Computer Science -->
+            <section id="cs-applications">
+                <h2 class="section-title">Applications en Informatique</h2>
+                <div class="space-y-12">
+    
+                    <!-- CS Application 1: Limited Development -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Développements Limités : L'Approximation Efficace ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Beaucoup de fonctions mathématiques (sin, cos, exp, log...) sont coûteuses à calculer pour un ordinateur. Les développements limités (ou séries de Taylor) permettent d'obtenir une <strong>excellente approximation</strong> de ces fonctions en utilisant uniquement des polynômes (additions et multiplications), qui sont extrêmement rapides à calculer. En informatique, on n'a souvent pas besoin de la valeur exacte, mais d'une approximation suffisamment bonne. C'est le fondement de nombreuses bibliothèques scientifiques et de calcul.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Calcul de sin(x)</h4>
+                        <p class="mb-4 text-slate-400">Plutôt que d'utiliser une méthode complexe, une calculatrice ou un programme peut utiliser les premiers termes du développement limité de sin(x) autour de 0 pour obtenir un résultat très précis pour des petites valeurs de x. L'équation de la tangente est simplement le développement limité à l'ordre 1.</p>
+                         <pre class="language-pseudocode"><code>// DL de sin(x) = x - x^3/6 + x^5/120 - ...
+
+function fast_sin(x) {
+  // Pour x proche de 0, on peut se contenter des premiers termes
+  let x_squared = x * x;
+  let x_cubed = x_squared * x;
+  let x_quinte = x_cubed * x_squared;
+
+  // Approximation à l'ordre 5
+  return x - (x_cubed / 6.0) + (x_quinte / 120.0);
+}</code></pre>
+                    </div>
+
+                    <!-- CS Application 2: Primitives & Integration -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Primitives et Intégration : L'Accumulation de Données 📊</h3>
+                        <p class="text-lg mb-4 text-slate-300">En informatique, on manipule souvent des flux de données qui représentent des taux de variation (par exemple, la vitesse de téléchargement en Mo/s, le nombre de transactions par minute). Le calcul de primitives, ou intégration, permet de passer de ce taux de variation à une <strong>quantité totale accumulée</strong>. C'est essentiel pour la surveillance de systèmes, l'analyse de données financières, ou la simulation de processus physiques.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Calcul de la Donnée Totale Téléchargée</h4>
+                        <p class="mb-4 text-slate-400">Un gestionnaire de réseau surveille la vitesse de transfert (v(t)) sur une période de temps. Pour connaître la quantité totale de données transférées entre le temps t₁ et t₂, il doit calculer l'intégrale de la fonction de vitesse. Numériquement, cela se fait en additionnant les petites quantités de données transférées à chaque petit intervalle de temps (une somme de Riemann).</p>
+                         <pre class="language-pseudocode"><code>// v(t) est la fonction de vitesse de téléchargement en Mo/s
+function total_download(t_start, t_end) {
+  let total_data = 0;
+  let time = t_start;
+  let dt = 0.1; // petit intervalle de temps (0.1s)
+
+  while (time < t_end) {
+    // Quantité de données = vitesse * temps
+    // C'est un petit rectangle de la somme de Riemann
+    total_data += v(time) * dt; 
+    time += dt;
+  }
+  
+  return total_data; // L'intégrale approchée
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Pour la troisième limite, la forme <span class="katex-inline" data-id="h1-k1"></span> suggère de passer à la forme exponentielle <span class="katex-inline" data-id="h1-k2"></span> et d'étudier la limite de l'exposant.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Développements limités (DL) usuels à l'origine :</strong> <span class="katex-inline" data-id="k1-f1"></span>, <span class="katex-inline" data-id="k1-f2"></span>, <span class="katex-inline" data-id="k1-f3"></span>, <span class="katex-inline" data-id="k1-f4"></span>.</p><p><strong>Changement de variable pour les limites :</strong> Poser <span class="katex-inline" data-id="k1-f5"></span> pour une limite en 1, ou <span class="katex-inline" data-id="k1-f6"></span> pour une limite en <span class="katex-inline" data-id="k1-f7"></span>.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Première limite</h4><p>On développe le numérateur et le dénominateur à l'ordre 2. Numérateur : <span class="katex-inline" data-id="e1-p1-num"></span>. Dénominateur : <span class="katex-inline" data-id="e1-p1-den"></span>. Le rapport des termes de plus bas degré est <span class="katex-inline" data-id="e1-p1-ratio"></span>, ce qui donne une limite de -2.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Deuxième limite</h4><p>La limite est en 1, on pose donc <span class="katex-inline" data-id="e1-p2-sub"></span>. La limite devient <span class="katex-inline" data-id="e1-p2-lim-t"></span>. En utilisant les DL <span class="katex-inline" data-id="e1-p2-dl-ln"></span> et en ne gardant que les termes de plus bas degré, on obtient <span class="katex-inline" data-id="e1-p2-ratio"></span>, qui tend vers 1/2.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Troisième limite</h4><p>C'est une forme indéterminée <span class="katex-inline" data-id="e1-p3-ind"></span>. On passe à la forme exponentielle : <span class="katex-inline" data-id="e1-p3-exp"></span>. On étudie l'exposant : <span class="katex-inline" data-id="e1-p3-expo"></span>. On pose <span class="katex-inline" data-id="e1-p3-u"></span>. Quand <span class="katex-inline" data-id="e1-p3-x-inf"></span>, <span class="katex-inline" data-id="e1-p3-u-0"></span>. L'exposant devient <span class="katex-inline" data-id="e1-p3-expo-u"></span>. En utilisant le DL <span class="katex-inline" data-id="e1-p3-dl-ln"></span>, la limite de l'exposant est -2. La limite finale est donc <span class="katex-inline" data-id="e1-p3-res"></span>.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>Pour la question 2, la fonction n'est pas définie en <span class="katex-inline" data-id="h2-k1"></span>. Utilisez la formule de Taylor-Young qui nécessite de calculer les dérivées successives de la fonction au point <span class="katex-inline" data-id="h2-k2"></span>.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Opérations sur les DL :</strong> Produit, composition, quotient de DL.</p><p><strong>Formule de Taylor-Young :</strong> Pour un DL en un point <span class="katex-inline" data-id="k2-f1"></span>, <span class="katex-inline" data-id="k2-f2"></span>.</p><p><strong>DL en <span class="katex-inline" data-id="k2-f3"></span> :</strong> Se ramène à un DL en 0 en posant <span class="katex-inline" data-id="k2-f4"></span>.</p><p><strong>Division suivant les puissances croissantes/décroissantes</strong> pour les fractions rationnelles.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. DL de <span class="katex-inline" data-id="e2-p1-f"></span> en 0</h4><p>On multiplie les DL connus de <span class="katex-inline" data-id="e2-p1-ex"></span> et <span class="katex-inline" data-id="e2-p1-sin"></span> à l'ordre 3, en ne gardant que les termes de degré inférieur ou égal à 3.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. DL de <span class="katex-inline" data-id="e2-p2-f"></span> en <span class="katex-inline" data-id="e2-p2-pi3"></span></h4><p>On applique la formule de Taylor-Young. On calcule <span class="katex-inline" data-id="e2-p2-g"></span>, <span class="katex-inline" data-id="e2-p2-gp"></span>, et <span class="katex-inline" data-id="e2-p2-gpp"></span>. On évalue ces fonctions en <span class="katex-inline" data-id="e2-p2-pi3-2"></span> pour obtenir les coefficients du DL.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. DL de <span class="katex-inline" data-id="e2-p3-f"></span> en 2</h4><p>On effectue le changement de variable <span class="katex-inline" data-id="e2-p3-sub"></span> pour se ramener à un DL en 0. On développe ensuite le numérateur et le dénominateur en fonction de <span class="katex-inline" data-id="e2-p3-t"></span> et on effectue une division suivant les puissances croissantes.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. DL de <span class="katex-inline" data-id="e2-p4-f"></span> en <span class="katex-inline" data-id="e2-p4-inf"></span></h4><p>On pose <span class="katex-inline" data-id="e2-p4-sub"></span>. La fonction de <span class="katex-inline" data-id="e2-p4-t"></span> est <span class="katex-inline" data-id="e2-p4-kt"></span>. On effectue la division de <span class="katex-inline" data-id="e2-p4-num"></span> par <span class="katex-inline" data-id="e2-p4-den"></span> suivant les puissances croissantes de <span class="katex-inline" data-id="e2-p4-t2"></span>, puis on remplace <span class="katex-inline" data-id="e2-p4-t3"></span> par <span class="katex-inline" data-id="e2-p4-1x"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>Pour trouver la tangente et l'asymptote d'une fraction rationnelle, la méthode la plus directe est la division euclidienne des polynômes (suivant les puissances croissantes pour la tangente en 0, et décroissantes pour l'asymptote en l'infini).</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>DL d'une fraction rationnelle :</strong> Peut être obtenu par division euclidienne des polynômes.</p><p><strong>Tangente en 0 :</strong> L'équation <span class="katex-inline" data-id="k3-f1"></span> est donnée par le DL à l'ordre 1 de <span class="katex-inline" data-id="k3-f2"></span> en 0.</p><p><strong>Asymptote en <span class="katex-inline" data-id="k3-f3"></span> :</strong> Si <span class="katex-inline" data-id="k3-f4"></span>, alors <span class="katex-inline" data-id="k3-f5"></span> est l'équation de l'asymptote.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Tangente en 0</h4><p>On cherche le DL de <span class="katex-inline" data-id="e3-p1-f"></span> à l'ordre 1 en 0. On effectue la division du polynôme <span class="katex-inline" data-id="e3-p1-num"></span> par <span class="katex-inline" data-id="e3-p1-den"></span> suivant les puissances croissantes. Le résultat <span class="katex-inline" data-id="e3-p1-dl"></span> nous donne directement l'équation de la tangente <span class="katex-inline" data-id="e3-p1-tan"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Asymptote en <span class="katex-inline" data-id="e3-p2-inf"></span></h4><p>On effectue la division euclidienne du numérateur <span class="katex-inline" data-id="e3-p2-num"></span> par le dénominateur <span class="katex-inline" data-id="e3-p2-den"></span>. On obtient <span class="katex-inline" data-id="e3-p2-div"></span>. La partie entière de la division, <span class="katex-inline" data-id="e3-p2-quot"></span>, donne l'équation de l'asymptote oblique : <span class="katex-inline" data-id="e3-p2-asy"></span>, car le reste divisé par le dénominateur tend vers 0 à l'infini.</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>Pour la primitive de <span class="katex-inline" data-id="h4-k1"></span>, cherchez une primitive de la forme <span class="katex-inline" data-id="h4-k2"></span> où <span class="katex-inline" data-id="h4-k3"></span> est un polynôme. Pour la question 2, reconnaissez la forme d'une somme de Riemann.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Intégration par parties (IPP) :</strong> <span class="katex-inline" data-id="k4-f1"></span>. Une double IPP est nécessaire pour les primitives de la forme <span class="katex-inline" data-id="k4-f2"></span>.</p><p><strong>Primitives de <span class="katex-inline" data-id="k4-f3"></span> :</strong> Une méthode consiste à chercher une primitive de la forme <span class="katex-inline" data-id="k4-f4"></span>.</p><p><strong>Sommes de Riemann :</strong> La définition de l'intégrale comme limite d'une somme.</p><p><strong>Inégalité triangulaire :</strong> Pour les nombres, <span class="katex-inline" data-id="k4-f5"></span>, et pour les intégrales, <span class="katex-inline" data-id="k4-f6"></span>.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calcul de primitives</h4><p>Pour <span class="katex-inline" data-id="e4-p1-f1"></span>, on peut utiliser des intégrations par parties successives ou une formule directe pour les primitives de <span class="katex-inline" data-id="e4-p1-form1"></span>.</p><p>Pour <span class="katex-inline" data-id="e4-p1-f2"></span>, on applique deux fois l'intégration par parties. La première fois, on pose par exemple <span class="katex-inline" data-id="e4-p1-u1"></span> et <span class="katex-inline" data-id="e4-p1-dv1"></span>. Cela mène à une nouvelle intégrale avec <span class="katex-inline" data-id="e4-p1-cos"></span>. On applique une seconde IPP sur cette nouvelle intégrale, ce qui fera réapparaître l'intégrale de départ, permettant de la calculer algébriquement.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Preuve par Somme de Riemann</h4><p>L'expression <span class="katex-inline" data-id="e4-p2-expr"></span> peut être réécrite comme <span class="katex-inline" data-id="e4-p2-sum"></span>. Ceci est exactement la somme de Riemann pour la fonction <span class="katex-inline" data-id="e4-p2-f"></span> sur l'intervalle [0, 1], avec une subdivision en <span class="katex-inline" data-id="e4-p2-n"></span> intervalles. Par définition, la limite de cette somme quand <span class="katex-inline" data-id="e4-p2-n-inf"></span> est <span class="katex-inline" data-id="e4-p2-int"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Inégalité triangulaire</h4><p>La preuve part de la somme de Riemann : <span class="katex-inline" data-id="e4-p3-sum"></span>. En utilisant l'inégalité triangulaire pour les nombres complexes (ou réels), <span class="katex-inline" data-id="e4-p3-ineq-sum"></span>. Comme la fonction valeur absolue est continue, la limite de la somme de droite est l'intégrale de la valeur absolue de la fonction : <span class="katex-inline" data-id="e4-p3-lim"></span>. D'où le résultat.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                        el.textContent = `Erreur de rendu de la formule: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) { el.textContent = content; } 
+            }
+
+            // Questions
+            setText('ex1-q-lim1', "\\lim_{x \\to 0} \\frac{x+\\cos x - e^x}{x-\\log(1+\\sin x)}");
+            setText('ex1-q-lim2', "\\lim_{x \\to 1} \\frac{\\ln x}{x^2-1}");
+            setText('ex1-q-lim3', "\\lim_{x \\to +\\infty} (\\frac{3x-1}{3x+1})^{3x}");
+            setText('ex2-q-x0', "x_0");
+            setText('ex2-q1-f', "f(x) = e^x \\sin x");
+            setText('ex2-q1-cond', "(x_0=0, n=3)");
+            setText('ex2-q2-f', "g(x) = \\cos^2 x");
+            setText('ex2-q2-cond', "(x_0=\\pi/3, n=2)");
+            setText('ex2-q3-f', "h(x) = \\frac{\\ln(x+4)}{x+6}");
+            setText('ex2-q3-cond', "(x_0=2, n=3)");
+            setText('ex2-q4-f', "k(x) = \\frac{2-5x+4x^2}{3+x-2x^2}");
+            setText('ex2-q4-cond', "(x_0=+\\infty, n=3)");
+            setText('ex3-q-f', "f(x) = \\frac{2x^3-x^2+3x+4}{x^2+2x-2}");
+            setText('ex3-q-inf', "+\\infty");
+            setText('ex4-q1-f1', "f(x) = (2x^3-5x^2+4x-3)e^{3x}");
+            setText('ex4-q1-f2', "g(x) = e^{2x}\\sin(5x)");
+            setText('ex4-q2-lim', "\\lim_{n \\to \\infty} (\\frac{1^5+2^5+3^5+\\dots+n^5}{n^6}) = \\int_0^1 x^5 dx");
+            setText('ex4-q3-ineq', "|\\int_a^b f(x)dx| \\le \\int_a^b |f(x)|dx");
+
+            // Solutions
+            setText('sol1-p1-lim', "\\lim_{x \\to 0} \\frac{x+\\cos x - e^x}{x-\\log(1+\\sin x)}");
+            setText('sol1-p1-num', "x+(1-\\frac{x^2}{2})-(1+x+\\frac{x^2}{2}) = -x^2+o(x^2)");
+            setText('sol1-p1-den', "x-(x-\\frac{x^2}{2}) = \\frac{x^2}{2}+o(x^2)");
+            setText('sol1-p1-res', "\\lim_{x \\to 0} \\frac{-x^2}{x^2/2} = -2");
+            setText('sol1-p2-lim', "\\lim_{x \\to 1} \\frac{\\ln x}{x^2-1}");
+            setText('sol1-p2-sub', "t=x-1");
+            setText('sol1-p2-lim-t', "\\lim_{t \\to 0} \\frac{\\ln(1+t)}{(1+t)^2-1} = \\lim_{t \\to 0} \\frac{\\ln(1+t)}{2t+t^2}");
+            setText('sol1-p2-dl', "\\ln(1+t) = t+o(t)");
+            setText('sol1-p2-res', "\\lim_{t \\to 0} \\frac{t}{2t} = \\frac{1}{2}");
+            setText('sol1-p3-lim', "\\lim_{x \\to +\\infty} (\\frac{3x-1}{3x+1})^{3x}");
+            setText('sol1-p3-exp', "\\exp(3x \\ln(\\frac{3x-1}{3x+1}))");
+            setText('sol1-p3-expo', "3x \\ln(1-\\frac{2}{3x+1})");
+            setText('sol1-p3-u', "u = -\\frac{2}{3x+1}");
+            setText('sol1-p3-res', "e^{-2}");
+
+            setText('sol2-p1-f', "f(x)=e^x \\sin x");
+            setText('sol2-p1-dl', "f(x) = (1+x+\\frac{x^2}{2}+\\frac{x^3}{6})(x-\\frac{x^3}{6}) + o(x^3) = x+x^2+\\frac{x^3}{3}+o(x^3)");
+            setText('sol2-p2-f', "g(x)=\\cos^2 x");
+            setText('sol2-p2-g', "g(\\pi/3) = 1/4");
+            setText('sol2-p2-gp', "g'(\\pi/3) = -\\sin(2\\pi/3) = -\\sqrt{3}/2");
+            setText('sol2-p2-gpp', "g''(\\pi/3) = -2\\cos(2\\pi/3) = 1");
+            setText('sol2-p2-dl', "g(x) = \\frac{1}{4} - \\frac{\\sqrt{3}}{2}(x-\\frac{\\pi}{3}) + \\frac{1}{2}(x-\\frac{\\pi}{3})^2 + o((x-\\frac{\\pi}{3})^2)");
+            setText('sol2-p3-f', "h(x)=\\frac{\\ln(x+4)}{x+6}");
+            setText('sol2-p3-sub', "t=x-2");
+            setText('sol2-p3-h', "h(t+2) = \\frac{\\ln(t+6)}{t+8}");
+            setText('sol2-p4-f', "k(x)=\\frac{2-5x+4x^2}{3+x-2x^2}");
+            setText('sol2-p4-sub', "t=1/x");
+            setText('sol2-p4-dl', "k(x) = -2 + \\frac{3}{2x} - \\frac{13}{4x^2} + \\frac{5}{8x^3} + O(\\frac{1}{x^3})");
+
+            setText('sol3-p1-div', "\\frac{4+3x}{-2+2x} = -2 - \\frac{7}{2}x + o(x)");
+            setText('sol3-p1-tan', "y = -2 - \\frac{7}{2}x");
+            setText('sol3-p2-inf', "+\\infty");
+            setText('sol3-p2-inf2', "+\\infty");
+            setText('sol3-p2-div', "f(x) = 2x-5 + \\frac{17x-6}{x^2+2x-2} = 2x-5 + O(\\frac{1}{x})");
+            setText('sol3-p2-inf3', "+\\infty");
+            setText('sol3-p2-asy', "y=2x-5");
+
+            setText('sol4-p1-f1', "f(x)=(2x^3-5x^2+4x-3)e^{3x}");
+            setText('sol4-p1-f1-form', "F(x)=Q(x)e^{3x}");
+            setText('sol4-p1-f1-res', "F(x)=\\frac{e^{3x}}{3}(2x^3-7x^2+\\frac{22}{3}x-\\frac{115}{27})+C");
+            setText('sol4-p1-f2', "g(x)=e^{2x}\\sin(5x)");
+            setText('sol4-p1-f2-res', "G(x)=\\frac{e^{2x}}{29}(2\\sin(5x)-5\\cos(5x))+C");
+            setText('sol4-p2-f', "f(x)=x^5");
+
+            // Modals
+            setText('h1-k1', "1^\\infty");
+            setText('h1-k2', "e^{g(x)\\ln f(x)}");
+            setText('k1-f1', "e^x");
+            setText('k1-f2', "\\cos x");
+            setText('k1-f3', "\\sin x");
+            setText('k1-f4', "\\ln(1+x)");
+            setText('k1-f5', "t=x-1");
+            setText('k1-f6', "t=1/x");
+            setText('k1-f7', "\\infty");
+            setText('e1-p1-num', "x+(1-\\frac{x^2}{2})-(1+x+\\frac{x^2}{2}) = -x^2+o(x^2)");
+            setText('e1-p1-den', "x-(\\sin x - \\frac{\\sin^2 x}{2}) = x-(x-\\frac{x^2}{2}) = \\frac{x^2}{2}+o(x^2)");
+            setText('e1-p1-ratio', "\\frac{-x^2}{x^2/2}");
+            setText('e1-p2-sub', "t=x-1");
+            setText('e1-p2-lim-t', "\\lim_{t \\to 0} \\frac{\\ln(1+t)}{2t+t^2}");
+            setText('e1-p2-dl-ln', "\\ln(1+t) \\sim t");
+            setText('e1-p2-ratio', "\\frac{t}{2t}");
+            setText('e1-p3-ind', "1^\\infty");
+            setText('e1-p3-exp', "\\exp\\left(3x \\ln(\\frac{3x-1}{3x+1})\\right)");
+            setText('e1-p3-expo', "3x \\ln(1 - \\frac{2}{3x+1})");
+            setText('e1-p3-u', "u = -\\frac{2}{3x+1}");
+            setText('e1-p3-x-inf', "x \\to +\\infty");
+            setText('e1-p3-u-0', "u \\to 0");
+            setText('e1-p3-expo-u', "3x \\ln(1+u) \\sim 3x \\cdot u = 3x (-\\frac{2}{3x+1}) \\sim \\frac{-6x}{3x}");
+            setText('e1-p3-dl-ln', "\\ln(1+u) \\sim u");
+            setText('e1-p3-res', "e^{-2}");
+
+            setText('h2-k1', "\\pi/3");
+            setText('h2-k2', "\\pi/3");
+            setText('k2-f1', "x_0 \\ne 0");
+            setText('k2-f2', "g(x) = g(x_0) + g'(x_0)(x-x_0) + \\frac{g''(x_0)}{2!}(x-x_0)^2 + \\dots");
+            setText('k2-f3', "+\\infty");
+            setText('k2-f4', "t=1/x");
+            setText('e2-p1-f', "e^x \\sin x");
+            setText('e2-p1-ex', "e^x");
+            setText('e2-p1-sin', "\\sin x");
+            setText('e2-p2-f', "\\cos^2 x");
+            setText('e2-p2-pi3', "\\pi/3");
+            setText('e2-p2-g', "g(\\pi/3)");
+            setText('e2-p2-gp', "g'(\\pi/3)");
+            setText('e2-p2-gpp', "g''(\\pi/3)");
+            setText('e2-p2-pi3-2', "\\pi/3");
+            setText('e2-p3-f', "h(x)");
+            setText('e2-p3-sub', "t=x-2");
+            setText('e2-p3-t', "t");
+            setText('e2-p4-f', "k(x)");
+            setText('e2-p4-inf', "+\\infty");
+            setText('e2-p4-sub', "t=1/x");
+            setText('e2-p4-t', "t");
+            setText('e2-p4-kt', "k(1/t)");
+            setText('e2-p4-num', "4-5t+2t^2");
+            setText('e2-p4-den', "-2+t+3t^2");
+            setText('e2-p4-t2', "t");
+            setText('e2-p4-t3', "t");
+            setText('e2-p4-1x', "1/x");
+
+            setText('k3-f1', "y=f(0)+f'(0)x");
+            setText('k3-f2', "f(x)");
+            setText('k3-f3', "+\\infty");
+            setText('k3-f4', "f(x) = ax+b+o(1/x)");
+            setText('k3-f5', "y=ax+b");
+            setText('e3-p1-f', "f(x)");
+            setText('e3-p1-num', "4+3x-x^2");
+            setText('e3-p1-den', "-2+2x+x^2");
+            setText('e3-p1-dl', "-2 - \\frac{7}{2}x + o(x)");
+            setText('e3-p1-tan', "y = -2 - \\frac{7}{2}x");
+            setText('e3-p2-inf', "+\\infty");
+            setText('e3-p2-num', "2x^3-x^2+3x+4");
+            setText('e3-p2-den', "x^2+2x-2");
+            setText('e3-p2-div', "2x^3-x^2+3x+4 = (x^2+2x-2)(2x-5) + 17x-6");
+            setText('e3-p2-quot', "2x-5");
+            setText('e3-p2-asy', "y=2x-5");
+
+            setText('h4-k1', "f(x)");
+            setText('h4-k2', "Q(x)e^{3x}");
+            setText('h4-k3', "Q(x)");
+            setText('k4-f1', "\\int u dv = uv - \\int v du");
+            setText('k4-f2', "e^{\\alpha x} \\sin(\\beta x)");
+            setText('k4-f3', "P(x)e^{\\alpha x}");
+            setText('k4-f4', "Q(x)e^{\\alpha x}");
+            setText('k4-f5', "|a+b| \\le |a|+|b|");
+            setText('k4-f6', "|\\int f| \\le \\int |f|");
+            setText('e4-p1-f1', "f(x)");
+            setText('e4-p1-form1', "P(x)e^{\\alpha x}");
+            setText('e4-p1-f2', "g(x)");
+            setText('e4-p1-u1', "u=\\sin(5x)");
+            setText('e4-p1-dv1', "dv=e^{2x}dx");
+            setText('e4-p1-cos', "\\cos(5x)");
+            setText('e4-p2-expr', "\\frac{1^5+\\dots+n^5}{n^6}");
+            setText('e4-p2-sum', "\\frac{1}{n} \\sum_{k=1}^n (\\frac{k}{n})^5");
+            setText('e4-p2-f', "f(x)=x^5");
+            setText('e4-p2-n', "n");
+            setText('e4-p2-n-inf', "n \\to \\infty");
+            setText('e4-p2-int', "\\int_0^1 x^5 dx");
+            setText('e4-p3-sum', "\\frac{b-a}{n} \\sum f(x_k)");
+            setText('e4-p3-ineq-sum', "|\\sum f(x_k)| \\le \\sum |f(x_k)|");
+            setText('e4-p3-lim', "\\lim_{n \\to \\infty} \\frac{b-a}{n} \\sum |f(x_k)| = \\int_a^b |f(x)|dx");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

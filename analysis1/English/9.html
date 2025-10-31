@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus 1 - Final Exam (01/13/2016)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles from dark.html theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Calculus 1</h1>
+            <p class="exam-subtitle">Final Exam (01/13/2016)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exercise 1 (8 pts)</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.1</h3>
+                    <div class="exercise-content">
+                        <p>Show that the set <span class="katex-inline" data-id="ex1-q1-A"></span> is bounded below and determine <span class="katex-inline" data-id="ex1-q1-infmin"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.2</h3>
+                    <div class="exercise-content">
+                        <p>Show that the sequence <span class="katex-inline" data-id="ex1-q2-un"></span> defined by <span class="katex-inline" data-id="ex1-q2-def"></span>, <span class="katex-inline" data-id="ex1-q2-u0"></span> converges and calculate its limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.3</h3>
+                    <div class="exercise-content">
+                        <p>Show that the sequences <span class="katex-inline" data-id="ex1-q3-unvn"></span> defined by <span class="katex-inline" data-id="ex1-q3-un-def"></span>, <span class="katex-inline" data-id="ex1-q3-vn-def"></span>, <span class="katex-inline" data-id="ex1-q3-u0v0"></span> are adjacent and calculate their common limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.4</h3>
+                    <div class="exercise-content">
+                        <p>Show that the sequence <span class="katex-inline" data-id="ex1-q4-un"></span> defined by <span class="katex-inline" data-id="ex1-q4-def"></span>, <span class="katex-inline" data-id="ex1-q4-a"></span> is a Cauchy sequence and that it converges.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Exercise 2 (6 pts)</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.1</h3>
+                    <div class="exercise-content">
+                        <p>Show that <span class="katex-inline" data-id="ex2-q1-ineq"></span>, <span class="katex-inline" data-id="ex2-q1-domain"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.2</h3>
+                    <div class="exercise-content">
+                        <p>Deduce that <span class="katex-inline" data-id="ex2-q2-ineq"></span>, <span class="katex-inline" data-id="ex2-q2-domain"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.3</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex2-q3-a"></span> and <span class="katex-inline" data-id="ex2-q3-fmap"></span> be a function continuous on <span class="katex-inline" data-id="ex2-q3-fcont"></span>, differentiable on <span class="katex-inline" data-id="ex2-q3-fder"></span> such that <span class="katex-inline" data-id="ex2-q3-flim"></span>. Let <span class="katex-display" data-id="ex2-q3-gdef"></span> Show that <span class="katex-inline" data-id="ex2-q3-g"></span> satisfies Rolle's Theorem on <span class="katex-inline" data-id="ex2-q3-gint"></span>. Deduce that there exists <span class="katex-inline" data-id="ex2-q3-c"></span> such that <span class="katex-inline" data-id="ex2-q3-fc0"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-3')">Prerequisites</button>
+                    </div>
+                </div>
+                
+                <h2 class="section-title">Exercise 3 (6 pts)</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.1</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex3-q1-fmap"></span> be defined by <span class="katex-inline" data-id="ex3-q1-fdef1"></span> for <span class="katex-inline" data-id="ex3-q1-fdef2"></span> and <span class="katex-inline" data-id="ex3-q1-fdef3"></span>. For which values of <span class="katex-inline" data-id="ex3-q1-n"></span> is the function <span class="katex-inline" data-id="ex3-q1-f"></span> of class <span class="katex-inline" data-id="ex3-q1-c1"></span> at <span class="katex-inline" data-id="ex3-q1-x0"></span>?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.2</h3>
+                    <div class="exercise-content">
+                        <p>Using <span class="katex-inline" data-id="ex3-q2-tanform"></span> and by setting <span class="katex-inline" data-id="ex3-q2-theta"></span>, calculate <span class="katex-inline" data-id="ex3-q2-tan2"></span> then <span class="katex-inline" data-id="ex3-q2-tan4"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.3</h3>
+                    <div class="exercise-content">
+                        <p>Show that <span class="katex-inline" data-id="ex3-q3-ineq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.4</h3>
+                    <div class="exercise-content">
+                        <p>Deduce Machin's formula: <span class="katex-inline" data-id="ex3-q4-machin"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-4')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <h3 class="font-bold text-2xl mb-4 text-slate-100" style="font-family: 'Playfair Display', serif;">Exercise 1</h3>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.1</h3>
+                    <div class="exercise-content">
+                        <p>It is clear that <span class="katex-inline" data-id="sol1-1-A"></span> is bounded below by 0, so <span class="katex-inline" data-id="sol1-1-infge0"></span> exists. But <span class="katex-inline" data-id="sol1-1-ineq1"></span>. Thus <span class="katex-inline" data-id="sol1-1-minA"></span> because for <span class="katex-inline" data-id="sol1-1-x1"></span>, <span class="katex-inline" data-id="sol1-1-val2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.2</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="sol1-2-fdef"></span> for <span class="katex-inline" data-id="sol1-2-xint"></span>. <span class="katex-inline" data-id="sol1-2-f"></span> is continuous and increasing on <span class="katex-inline" data-id="sol1-2-int"></span>. <span class="katex-inline" data-id="sol1-2-fimg"></span>. Therefore, for any <span class="katex-inline" data-id="sol1-2-u0"></span>, <span class="katex-inline" data-id="sol1-2-un"></span> is monotone and bounded, thus convergent. Its limit <span class="katex-inline" data-id="sol1-2-l"></span> satisfies <span class="katex-inline" data-id="sol1-2-leq"></span> so <span class="katex-inline" data-id="sol1-2-lval"></span> (the other root is negative).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.3</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol1-3-vun1"></span>. This is a geometric sequence, so <span class="katex-inline" data-id="sol1-3-vun2"></span> and <span class="katex-inline" data-id="sol1-3-lim0"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol1-3-un-inc"></span>, so <span class="katex-inline" data-id="sol1-3-un"></span> is increasing.</p>
+                        <p><span class="katex-inline" data-id="sol1-3-vn-dec"></span>, so <span class="katex-inline" data-id="sol1-3-vn"></span> is decreasing. The sequences <span class="katex-inline" data-id="sol1-3-unvn"></span> are adjacent. They converge to the same limit <span class="katex-inline" data-id="sol1-3-l"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol1-3-uvn1"></span>. The sequence <span class="katex-inline" data-id="sol1-3-uvn"></span> is constant, so <span class="katex-inline" data-id="sol1-3-uvncst"></span>. Taking the limit, <span class="katex-inline" data-id="sol1-3-liml"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-3')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.4</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="sol1-4-np"></span>. <span class="katex-inline" data-id="sol1-4-unp"></span>. Since <span class="katex-inline" data-id="sol1-4-a2"></span>, we have <span class="katex-inline" data-id="sol1-4-kagek2"></span>, so <span class="katex-inline" data-id="sol1-4-ineq1"></span>. Then <span class="katex-inline" data-id="sol1-4-ineq2"></span>. Thus <span class="katex-inline" data-id="sol1-4-unpfinal"></span>. Since <span class="katex-inline" data-id="sol1-4-lim1n"></span>, the sequence is a Cauchy sequence and consequently, it converges.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-4')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <h3 class="font-bold text-2xl mb-4 mt-8 text-slate-100" style="font-family: 'Playfair Display', serif;">Exercise 2</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.1</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol2-1-forallx"></span>, the function <span class="katex-inline" data-id="sol2-1-tmap"></span> is continuous on <span class="katex-inline" data-id="sol2-1-int1"></span> and differentiable on <span class="katex-inline" data-id="sol2-1-int2"></span>. According to the M.V.T (Mean Value Theorem), there exists <span class="katex-inline" data-id="sol2-1-cexist"></span> such that <span class="katex-inline" data-id="sol2-1-taf"></span>. Since <span class="katex-inline" data-id="sol2-1-cineq"></span>, we have <span class="katex-inline" data-id="sol2-1-res"></span>. Hence the result.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.2</h3>
+                    <div class="exercise-content">
+                        <p>From 1), we have <span class="katex-inline" data-id="sol2-2-ineq1"></span>. Multiplying by <span class="katex-inline" data-id="sol2-2-xpos"></span>: <span class="katex-inline" data-id="sol2-2-ineq2"></span>. Multiplying by <span class="katex-inline" data-id="sol2-2-x1pos"></span>: <span class="katex-inline" data-id="sol2-2-ineq3"></span>. So <span class="katex-inline" data-id="sol2-2-ineq4"></span>, which can be written as <span class="katex-inline" data-id="sol2-2-lnineq"></span>. By applying the exponential function (which is increasing), we get <span class="katex-inline" data-id="sol2-2-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.3</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol2-3-g"></span> is continuous on <span class="katex-inline" data-id="sol2-3-gint"></span>. Indeed, for <span class="katex-inline" data-id="sol2-3-t0"></span>, <span class="katex-inline" data-id="sol2-3-xinf"></span>. <span class="katex-inline" data-id="sol2-3-limgt"></span>. <span class="katex-inline" data-id="sol2-3-g"></span> is differentiable on <span class="katex-inline" data-id="sol2-3-gderint"></span>. Furthermore, <span class="katex-inline" data-id="sol2-3-geq"></span>. According to Rolle's Theorem, there exists <span class="katex-inline" data-id="sol2-3-alpha"></span> such that <span class="katex-inline" data-id="sol2-3-gprimealpha0"></span>. We have <span class="katex-inline" data-id="sol2-3-gprimet"></span>, so <span class="katex-inline" data-id="sol2-3-gprimealphaeq"></span>. Since <span class="katex-inline" data-id="sol2-3-alphane0"></span>, we have <span class="katex-inline" data-id="sol2-3-fprimeln"></span>. Let <span class="katex-inline" data-id="sol2-3-cdef"></span>. As <span class="katex-inline" data-id="sol2-3-alphain"></span>, we have <span class="katex-inline" data-id="sol2-3-cin"></span>. So there exists <span class="katex-inline" data-id="sol2-3-cfinal"></span> such that <span class="katex-inline" data-id="sol2-3-fprimec0"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-2xl mb-4 mt-8 text-slate-100" style="font-family: 'Playfair Display', serif;">Exercise 3</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.1</h3>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol3-1-f0"></span>. <span class="katex-inline" data-id="sol3-1-limf"></span> if <span class="katex-inline" data-id="sol3-1-npos"></span>. So <span class="katex-inline" data-id="sol3-1-f"></span> is continuous for <span class="katex-inline" data-id="sol3-1-n1"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol3-1-fprime0def"></span> iff <span class="katex-inline" data-id="sol3-1-nm1pos"></span>, i.e., <span class="katex-inline" data-id="sol3-1-n2"></span>.</p>
+                        <p>For <span class="katex-inline" data-id="sol3-1-xne0"></span>, <span class="katex-inline" data-id="sol3-1-fprimex"></span>. For <span class="katex-inline" data-id="sol3-1-f"></span> to be <span class="katex-inline" data-id="sol3-1-c1"></span>, <span class="katex-inline" data-id="sol3-1-fprime"></span> must be continuous at 0: <span class="katex-inline" data-id="sol3-1-limfprime"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol3-1-lim1"></span> iff <span class="katex-inline" data-id="sol3-1-nm1pos2"></span>. <span class="katex-inline" data-id="sol3-1-lim2"></span>. This limit is 0 iff <span class="katex-inline" data-id="sol3-1-nm3pos"></span>. Thus, <span class="katex-inline" data-id="sol3-1-f"></span> is of class <span class="katex-inline" data-id="sol3-1-c1"></span> at <span class="katex-inline" data-id="sol3-1-x0"></span> for <span class="katex-inline" data-id="sol3-1-n4"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.2</h3>
+                    <div class="exercise-content">
+                        <p>If <span class="katex-inline" data-id="sol3-2-theta"></span>, then <span class="katex-inline" data-id="sol3-2-tantheta"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol3-2-tan2theta"></span>.</p>
+                        <p><span class="katex-inline" data-id="sol3-2-tan4theta"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.3</h3>
+                    <div class="exercise-content">
+                        <p>We have <span class="katex-inline" data-id="sol3-3-ineq1"></span>. As <span class="katex-inline" data-id="sol3-3-arctan"></span> is increasing, <span class="katex-inline" data-id="sol3-3-ineq2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.4</h3>
+                    <div class="exercise-content">
+                        <p>We calculate <span class="katex-inline" data-id="sol3-4-tan4theta"></span>. Since <span class="katex-inline" data-id="sol3-4-4thetaineq"></span>, <span class="katex-inline" data-id="sol3-4-4thetapi4"></span> is in <span class="katex-inline" a-id="sol3-4-int"></span>. Thus we can apply <span class="katex-inline" data-id="sol3-4-arctan"></span>: <span class="katex-inline" data-id="sol3-4-eq1"></span>. Hence <span class="katex-inline" data-id="sol3-4-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-4')">Detailed Explanation</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 1.1</h3><span class="close-btn" onclick="closeModal('hint1-1')">&times;</span></div><p>Think about using a notable identity. The square of a real number is always non-negative. Try expanding <span class="katex-inline" data-id="h1-1-sqrtx"></span>.</p></div></div>
+    <div id="knowledge1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 1.1</h3><span class="close-btn" onclick="closeModal('knowledge1-1')">&times;</span></div><p><strong>Set Bounded Below:</strong> A set is bounded below if there exists a real number that is less than or equal to all elements of the set.</p><p><strong>Infimum (Greatest Lower Bound):</strong> The largest of the lower bounds.</p><p><strong>Minimum:</strong> A lower bound that belongs to the set.</p><p><strong>Notable Identities:</strong> <span class="katex-inline" data-id="k1-1-idrem"></span>.</p></div></div>
+    <div id="explanation1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 1.1</h3><span class="close-btn" onclick="closeModal('explanation1-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Find inf A and min A for <span class="katex-inline" data-id="e1-1-A"></span></h4><p>1. <strong>Show A is bounded below:</strong> For any <span class="katex-inline" data-id="e1-1-xpos"></span>, we have <span class="katex-inline" data-id="e1-1-1xpos"></span>, so their sum <span class="katex-inline" data-id="e1-1-sumpos"></span>. The set is therefore bounded below by 0.</p><p>2. <strong>Find a better lower bound:</strong> We use the trick that a square is always non-negative. Consider <span class="katex-inline" data-id="e1-1-sqrge0"></span>.</p><p>3. <strong>Expand the inequality:</strong> Expanding, we get <span class="katex-inline" data-id="e1-1-dev"></span>. We can rearrange this to <span class="katex-inline" data-id="e1-1-rearr"></span>.</p><p>4. <strong>Division:</strong> Since <span class="katex-inline" data-id="e1-1-xpos2"></span>, we can divide the inequality by <span class="katex-inline" data-id="e1-1-x"></span> without changing its direction: <span class="katex-inline" data-id="e1-1-div"></span>, which gives <span class="katex-inline" data-id="e1-1-finalineq"></span>.</p><p>5. <strong>Conclusion on the infimum:</strong> We have shown that 2 is a lower bound for A. Therefore, <span class="katex-inline" data-id="e1-1-infge2"></span>.</p><p>6. <strong>Check for the minimum:</strong> To know if 2 is the minimum, we must check if there exists an <span class="katex-inline" data-id="e1-1-xpos3"></span> such that <span class="katex-inline" data-id="e1-1-eq2"></span>. This equality is achieved when the initial inequality is an equality, that is <span class="katex-inline" data-id="e1-1-sqreq0"></span>, which is true for <span class="katex-inline" data-id="e1-1-x1"></span>.</p><p>7. <strong>Final conclusion:</strong> For <span class="katex-inline" data-id="e1-1-x1-2"></span>, we have <span class="katex-inline" data-id="e1-1-1p1"></span>. Since 2 is a lower bound and <span class="katex-inline" data-id="e1-1-2inA"></span>, then 2 is the minimum of A. Consequently, <span class="katex-inline" data-id="e1-1-mininf"></span>.</p></div></div>
+
+    <div id="hint1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 1.2</h3><span class="close-btn" onclick="closeModal('hint1-2')">&times;</span></div><p>Consider the function <span class="katex-inline" data-id="h1-2-f"></span>. Show that the interval <span class="katex-inline" data-id="h1-2-int"></span> is stable under <span class="katex-inline" data-id="h1-2-f2"></span>, then prove that the sequence is monotone. A monotone and bounded sequence always converges.</p></div></div>
+    <div id="knowledge1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 1.2</h3><span class="close-btn" onclick="closeModal('knowledge1-2')">&times;</span></div><p><strong>Monotone Convergence Theorem:</strong> An increasing real sequence that is bounded above (or a decreasing one that is bounded below) is convergent.</p><p><strong>Stable Interval:</strong> An interval <span class="katex-inline" data-id="k1-2-I"></span> is stable under a function <span class="katex-inline" data-id="k1-2-f"></span> if <span class="katex-inline" data-id="k1-2-fI"></span>.</p><p><strong>Fixed Point:</strong> A point <span class="katex-inline" data-id="k1-2-l"></span> is a fixed point of <span class="katex-inline" data-id="k1-2-f2"></span> if <span class="katex-inline" data-id="k1-2-fl"></span>. If a recursive sequence <span class="katex-inline" data-id="k1-2-un"></span> converges to <span class="katex-inline" data-id="k1-2-l2"></span> and <span class="katex-inline" data-id="k1-2-f3"></span> is continuous, then <span class="katex-inline" data-id="k1-2-l3"></span> is a fixed point.</p></div></div>
+    <div id="explanation1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 1.2</h3><span class="close-btn" onclick="closeModal('explanation1-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Prove the convergence of <span class="katex-inline" data-id="e1-2-un"></span> and find its limit.</h4><p>1. <strong>Define the associated function:</strong> Let <span class="katex-inline" data-id="e1-2-fdef"></span>. The sequence is defined by <span class="katex-inline" data-id="e1-2-rec"></span>.</p><p>2. <strong>Interval Stability:</strong> The function <span class="katex-inline" data-id="e1-2-f"></span> is continuous and increasing on <span class="katex-inline" data-id="e1-2-int03"></span>. The image of this interval is <span class="katex-inline" data-id="e1-2-fimg"></span>. Since <span class="katex-inline" data-id="e1-2-subset"></span>, the interval is stable. If <span class="katex-inline" data-id="e1-2-u0"></span>, then all <span class="katex-inline" data-id="e1-2-un2"></span> will remain in this interval. The sequence is therefore <strong>bounded</strong>.</p><p>3. <strong>Monotonicity of the sequence:</strong> Let's study the sign of <span class="katex-inline" data-id="e1-2-diff"></span>. We note that <span class="katex-inline" data-id="e1-2-u1"></span>. Let's prove by induction that <span class="katex-inline" data-id="e1-2-un"></span> is increasing. The base case is true. Assume <span class="katex-inline" data-id="e1-2-hyp"></span>. Since <span class="katex-inline" data-id="e1-2-f2"></span> is increasing, we have <span class="katex-inline" data-id="e1-2-fapp"></span>, which means <span class="katex-inline" data-id="e1-2-res"></span>. The sequence is therefore <strong>monotone</strong> (increasing).</p><p>4. <strong>Convergence:</strong> The sequence <span class="katex-inline" data-id="e1-2-un3"></span> is increasing and bounded above (by 3), so according to the monotone convergence theorem, it <strong>converges</strong> to a limit <span class="katex-inline" data-id="e1-2-l"></span>.</p><p>5. <strong>Calculating the limit:</strong> The limit <span class="katex-inline" data-id="e1-2-l2"></span> must be a fixed point of the continuous function <span class="katex-inline" data-id="e1-2-f3"></span>. We therefore solve <span class="katex-inline" data-id="e1-2-leq"></span>. By squaring, <span class="katex-inline" data-id="e1-2-l2eq"></span>, which is <span class="katex-inline" data-id="e1-2-poly"></span>. The roots are <span class="katex-inline" data-id="e1-2-r1"></span> and <span class="katex-inline" data-id="e1-2-r2"></span>. As all terms of the sequence are positive, the limit must be positive. We therefore reject the negative root.</p><p><strong>Conclusion:</strong> The sequence converges to <span class="katex-inline" data-id="e1-2-lfinal"></span>.</p></div></div>
+
+    <div id="hint1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 1.3</h3><span class="close-btn" onclick="closeModal('hint1-3')">&times;</span></div><p>To show that the sequences are adjacent, study the sequence <span class="katex-inline" data-id="h1-3-wn"></span>. To find the limit, study the sequence <span class="katex-inline" data-id="h1-3-tn"></span>.</p></div></div>
+    <div id="knowledge1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 1.3</h3><span class="close-btn" onclick="closeModal('knowledge1-3')">&times;</span></div><p><strong>Adjacent Sequences:</strong> Two sequences <span class="katex-inline" data-id="k1-3-un"></span> and <span class="katex-inline" data-id="k1-3-vn"></span> are adjacent if:</p><ol><li>One is increasing, the other is decreasing.</li><li>The limit of their difference is zero: <span class="katex-inline" data-id="k1-3-lim"></span>.</li></ol><p><strong>Adjacent Sequences Theorem:</strong> If two sequences are adjacent, they converge to the same limit.</p><p><strong>Geometric Sequences:</strong> A sequence of the form <span class="katex-inline" data-id="k1-3-geom"></span>. It converges to 0 if <span class="katex-inline" data-id="k1-3-q"></span>.</p></div></div>
+    <div id="explanation1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 1.3</h3><span class="close-btn" onclick="closeModal('explanation1-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that <span class="katex-inline" data-id="e1-3-un"></span> and <span class="katex-inline" data-id="e1-3-vn"></span> are adjacent and find their limit.</h4><p>1. <strong>Study the difference <span class="katex-inline" data-id="e1-3-wn"></span>:</strong></p><p><span class="katex-display" data-id="e1-3-wn1"></span></p><p>The sequence <span class="katex-inline" data-id="e1-3-wn2"></span> is a geometric sequence with ratio <span class="katex-inline" data-id="e1-3-q"></span>. Since <span class="katex-inline" data-id="e1-3-qabs"></span>, the sequence <span class="katex-inline" data-id="e1-3-wn3"></span> converges to 0. This is the second condition for adjacent sequences.</p><p>2. <strong>Study the monotonicity:</strong></p><p>Let's calculate the sign of the difference <span class="katex-inline" data-id="e1-3-un1un"></span>: <span class="katex-display" data-id="e1-3-undiff"></span> The general term of the geometric sequence is <span class="katex-inline" data-id="e1-3-wngen"></span>. So <span class="katex-inline" data-id="e1-3-wnpos"></span>. Thus, <span class="katex-inline" data-id="e1-3-un1unpos"></span>, which shows that <span class="katex-inline" data-id="e1-3-uninc"></span> is increasing.</p><p>Let's calculate the sign of <span class="katex-inline" data-id="e1-3-vn1vn"></span>: <span class="katex-display" data-id="e1-3-vndiff"></span> Since <span class="katex-inline" data-id="e1-3-wnpos2"></span>, we have <span class="katex-inline" data-id="e1-3-vn1vnneg"></span>, which shows that <span class="katex-inline" data-id="e1-3-vndec"></span> is decreasing.</p><p>3. <strong>Conclusion on adjacency:</strong> <span class="katex-inline" data-id="e1-3-uninc2"></span> is increasing, <span class="katex-inline" data-id="e1-3-vndec2"></span> is decreasing, and <span class="katex-inline" data-id="e1-3-lim0"></span>. The sequences are therefore adjacent and converge to the same limit <span class="katex-inline" data-id="e1-3-l"></span>.</p><p>4. <strong>Find the limit:</strong> Consider the sequence <span class="katex-inline" data-id="e1-3-tn"></span>.</p><p><span class="katex-display" data-id="e1-3-tn1"></span></p><p>The sequence <span class="katex-inline" data-id="e1-3-tn2"></span> is constant. Therefore, for all <span class="katex-inline" data-id="e1-3-n"></span>, <span class="katex-inline" data-id="e1-3-tneq"></span>. Taking the limit, we have <span class="katex-inline" data-id="e1-3-liml"></span>. This gives <span class="katex-inline" data-id="e1-3-2l3"></span>, and thus <span class="katex-inline" data-id="e1-3-lfinal"></span>.</p></div></div>
+
+    <div id="hint1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 1.4</h3><span class="close-btn" onclick="closeModal('hint1-4')">&times;</span></div><p>To show the sequence is a Cauchy sequence, you must bound <span class="katex-inline" data-id="h1-4-unp"></span>. Use the fact that <span class="katex-inline" data-id="h1-4-a"></span> to bound each term <span class="katex-inline" data-id="h1-4-1ka"></span>. The trick <span class="katex-inline" data-id="h1-4-trick"></span> is very useful here.</p></div></div>
+    <div id="knowledge1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 1.4</h3><span class="close-btn" onclick="closeModal('knowledge1-4')">&times;</span></div><p><strong>Cauchy Sequence:</strong> A sequence <span class="katex-inline" data-id="k1-4-un"></span> is a Cauchy sequence if <span class="katex-inline" data-id="k1-4-def"></span>.</p><p><strong>Completeness of <span class="katex-inline" data-id="k1-4-R"></span>:</strong> In <span class="katex-inline" data-id="k1-4-R2"></span>, a sequence is convergent if and only if it is a Cauchy sequence.</p><p><strong>Telescoping Sums:</strong> A sum of the form <span class="katex-inline" data-id="k1-4-telescop"></span>.</p></div></div>
+    <div id="explanation1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 1.4</h3><span class="close-btn" onclick="closeModal('explanation1-4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that the sequence <span class="katex-inline" data-id="e1-4-un"></span> is a Cauchy sequence, and therefore converges.</h4><p>1. <strong>Apply the Cauchy definition:</strong> We want to show that <span class="katex-inline" data-id="e1-4-unpabs"></span> can be made arbitrarily small. Let <span class="katex-inline" data-id="e1-4-np"></span>.</p><p><span class="katex-display" data-id="e1-4-unpdef"></span></p><p>2. <strong>Bound the terms of the sum:</strong> We use the hypothesis <span class="katex-inline" data-id="e1-4-a2"></span>. For any integer <span class="katex-inline" data-id="e1-4-k"></span>, we have <span class="katex-inline" data-id="e1-4-kagek2"></span>, and therefore <span class="katex-inline" data-id="e1-4-1ka"></span>.</p><p>3. <strong>Use the telescoping trick:</strong> We use the upper bound <span class="katex-inline" data-id="e1-4-trick"></span>.</p><p>4. <strong>Bound the sum:</strong> By combining these inequalities, we have:</p><p><span class="katex-display" data-id="e1-4-sumineq"></span></p><p>5. <strong>Calculate the telescoping sum:</strong></p><p><span class="katex-display" data-id="e1-4-telescopcalc"></span></p><p>6. <strong>Conclude:</strong> We have thus shown that <span class="katex-inline" data-id="e1-4-unpfinal"></span>. Let <span class="katex-inline" data-id="e1-4-eps"></span>. We want <span class="katex-inline" data-id="e1-4-1neps"></span>, which is true if <span class="katex-inline" data-id="e1-4-neps"></span>. We can choose <span class="katex-inline" data-id="e1-4-N"></span>. Then for any <span class="katex-inline" data-id="e1-4-nN"></span>, we indeed have <span class="katex-inline" data-id="e1-4-unpeps"></span>. The sequence is therefore a Cauchy sequence.</p><p>Since <span class="katex-inline" data-id="e1-4-un2"></span> is a sequence of real numbers and it is a Cauchy sequence, it converges (because <span class="katex-inline" data-id="e1-4-R"></span> is complete).</p></div></div>
+
+    <div id="hint2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 2.1</h3><span class="close-btn" onclick="closeModal('hint2-1')">&times;</span></div><p>Apply the Mean Value Theorem (M.V.T.) to the function <span class="katex-inline" data-id="h2-1-f"></span> on the interval <span class="katex-inline" data-id="h2-1-int"></span>.</p></div></div>
+    <div id="knowledge2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 2.1</h3><span class="close-btn" onclick="closeModal('knowledge2-1')">&times;</span></div><p><strong>Mean Value Theorem (M.V.T.):</strong> If <span class="katex-inline" data-id="k2-1-f"></span> is a function that is continuous on <span class="katex-inline" data-id="k2-1-intc"></span> and differentiable on <span class="katex-inline" data-id="k2-1-into"></span>, then there exists a <span class="katex-inline" data-id="k2-1-c"></span> such that <span class="katex-inline" data-id="k2-1-taf"></span>.</p><p><strong>Derivative of the natural logarithm function:</strong> <span class="katex-inline" data-id="k2-1-lnderiv"></span>.</p></div></div>
+    <div id="explanation2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 2.1</h3><span class="close-btn" onclick="closeModal('explanation2-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Prove the inequality for <span class="katex-inline" data-id="e2-1-ln"></span>.</h4><p>1. <strong>Choose the right function and interval:</strong> Let's use the function <span class="katex-inline" data-id="e2-1-f"></span>. For a given <span class="katex-inline" data-id="e2-1-xpos"></span>, we consider the interval <span class="katex-inline" data-id="e2-1-int"></span>.</p><p>2. <strong>Verify the hypotheses of the M.V.T.:</strong></p><ul><li>The function <span class="katex-inline" data-id="e2-1-f2"></span> is continuous on <span class="katex-inline" data-id="e2-1-intc"></span> because <span class="katex-inline" data-id="e2-1-xpos2"></span>.</li><li>The function <span class="katex-inline" data-id="e2-1-f3"></span> is differentiable on <span class="katex-inline" data-id="e2-1-into"></span>. Its derivative is <span class="katex-inline" data-id="e2-1-fprime"></span>.</li></ul><p>3. <strong>Apply the M.V.T.:</strong> The theorem guarantees that there exists a <span class="katex-inline" data-id="e2-1-c"></span> such that:</p><p><span class="katex-display" data-id="e2-1-tafeq"></span></p><p>4. <strong>Bound <span class="katex-inline" data-id="e2-1-c2"></span> and deduce the final inequality:</strong> We know that <span class="katex-inline" data-id="e2-1-cineq"></span>. Since the reciprocal function is strictly decreasing for positive real numbers, we have:</p><p><span class="katex-display" data-id="e2-1-invineq"></span></p><p>By replacing <span class="katex-inline" data-id="e2-1-1c"></span> with the expression found in step 3, we obtain the desired result:</p><p><span class="katex-display" data-id="e2-1-final"></span></p></div></div>
+
+    <div id="hint2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 2.2</h3><span class="close-btn" onclick="closeModal('hint2-2')">&times;</span></div><p>Start from the inequality in the previous question. Rewrite <span class="katex-inline" data-id="h2-2-ln"></span>. Isolate the middle term, then multiply the inequality by <span class="katex-inline" data-id="h2-2-x"></span> and then by <span class="katex-inline" data-id="h2-2-x1"></span> to get two bounds for 1. Finally, use the properties of logarithms and exponentials.</p></div></div>
+    <div id="knowledge2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 2.2</h3><span class="close-btn" onclick="closeModal('knowledge2-2')">&times;</span></div><p><strong>Properties of Logarithms:</strong></p><ul><li><span class="katex-inline" data-id="k2-2-lnsub"></span></li><li><span class="katex-inline" data-id="k2-2-lnpow"></span></li></ul><p><strong>Monotonicity of the Exponential Function:</strong> The exponential function is strictly increasing. If <span class="katex-inline" data-id="k2-2-ab"></span>, then <span class="katex-inline" data-id="k2-2-expab"></span>.</p></div></div>
+    <div id="explanation2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 2.2</h3><span class="close-btn" onclick="closeModal('explanation2-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Demonstrate the inequality for <span class="katex-inline" data-id="e2-2-e"></span>.</h4><p>1. <strong>Start from the previous result:</strong> We know that <span class="katex-inline" data-id="e2-2-ineq1"></span>.</p><p>2. <strong>Rewrite the logarithm:</strong> We use the property <span class="katex-inline" data-id="e2-2-lnprop"></span> to write <span class="katex-inline" data-id="e2-2-lnrew"></span>.</p><p>The inequality becomes: <span class="katex-display" data-id="e2-2-ineq2"></span></p><p>3. <strong>Obtain two inequalities:</strong></p><ul><li><strong>Multiply by <span class="katex-inline" data-id="e2-2-x"></span> (<span class="katex-inline" data-id="e2-2-xpos"></span>):</strong> <span class="katex-display" data-id="e2-2-mulx"></span> This gives <span class="katex-inline" data-id="e2-2-res1"></span>.</li><li><strong>Multiply by <span class="katex-inline" data-id="e2-2-x1"></span> (<span class="katex-inline" data-id="e2-2-x1pos"></span>):</strong> <span class="katex-display" data-id="e2-2-mulx1"></span> This gives <span class="katex-inline" data-id="e2-2-res2"></span>.</li></ul><p>4. <strong>Combine the inequalities:</strong> By combining the two results, we have <span class="katex-inline" data-id="e2-2-combine"></span>.</p><p>5. <strong>Use the power property of logarithms:</strong> We use <span class="katex-inline" data-id="e2-2-lnpow"></span> to rewrite the inequality:</p><p><span class="katex-display" data-id="e2-2-lnfinal"></span></p><p>6. <strong>Apply the exponential function:</strong> The exponential function <span class="katex-inline" data-id="e2-2-exp"></span> is strictly increasing, so we can apply it to each member of the inequality without changing its direction:</p><p><span class="katex-display" data-id="e2-2-expfinal"></span></p><p>Since <span class="katex-inline" data-id="e2-2-exp1"></span>, we get the final result: <span class="katex-display" data-id="e2-2-final"></span></p></div></div>
+
+    <div id="hint2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 2.3</h3><span class="close-btn" onclick="closeModal('hint2-3')">&times;</span></div><p>To apply Rolle's Theorem to <span class="katex-inline" data-id="h2-3-g"></span> on <span class="katex-inline" data-id="h2-3-int"></span>, you must verify three points: continuity on the closed interval, differentiability on the open interval, and equality of the values at the endpoints. Continuity at 0 is the crucial point.</p></div></div>
+    <div id="knowledge2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 2.3</h3><span class="close-btn" onclick="closeModal('knowledge2-3')">&times;</span></div><p><strong>Rolle's Theorem:</strong> If a function <span class="katex-inline" data-id="k2-3-g"></span> is:</p><ol><li>Continuous on <span class="katex-inline" data-id="k2-3-intc"></span>,</li><li>Differentiable on <span class="katex-inline" data-id="k2-3-into"></span>,</li><li>And if <span class="katex-inline" data-id="k2-3-geq"></span>,</li></ol><p>then there exists <span class="katex-inline" data-id="k2-3-c"></span> such that <span class="katex-inline" data-id="k2-3-gprimec"></span>.</p><p><strong>Derivative of Composite Functions (Chain Rule):</strong> <span class="katex-inline" data-id="k2-3-chain"></span>.</p></div></div>
+    <div id="explanation2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 2.3</h3><span class="close-btn" onclick="closeModal('explanation2-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Apply Rolle's Theorem to <span class="katex-inline" data-id="e2-3-g"></span> and deduce the existence of <span class="katex-inline" data-id="e2-3-c"></span>.</h4><p>1. <strong>Verify the continuity of <span class="katex-inline" data-id="e2-3-g2"></span> on <span class="katex-inline" data-id="e2-3-intc"></span>:</strong></p><ul><li>On <span class="katex-inline" data-id="e2-3-into"></span>, <span class="katex-inline" data-id="e2-3-g3"></span> is continuous as a composition of continuous functions (<span class="katex-inline" data-id="e2-3-f"></span>, <span class="katex-inline" data-id="e2-3-ln"></span>, and negation).</li><li>At <span class="katex-inline" data-id="e2-3-t0"></span>, we must check that <span class="katex-inline" data-id="e2-3-lim"></span>. We perform the change of variable <span class="katex-inline" data-id="e2-3-chgvar"></span>. When <span class="katex-inline" data-id="e2-3-t0p"></span>, <span class="katex-inline" data-id="e2-3-xinf"></span>. The limit becomes <span class="katex-inline" data-id="e2-3-limx"></span>. By hypothesis, this limit is <span class="katex-inline" data-id="e2-3-fa"></span>, which is indeed <span class="katex-inline" data-id="e2-3-g0"></span>. So <span class="katex-inline" data-id="e2-3-g4"></span> is continuous on <span class="katex-inline" data-id="e2-3-intc2"></span>.</li></ul><p>2. <strong>Verify the differentiability of <span class="katex-inline" data-id="e2-3-g5"></span> on <span class="katex-inline" data-id="e2-3-into2"></span>:</strong> On this interval, <span class="katex-inline" data-id="e2-3-g6"></span> is differentiable as a composition of differentiable functions.</p><p>3. <strong>Check equality at the endpoints:</strong></p><ul><li><span class="katex-inline" data-id="e2-3-g02"></span>.</li><li><span class="katex-inline" data-id="e2-3-gea"></span>.</li></ul><p>Therefore <span class="katex-inline" data-id="e2-3-geq"></span>.</p><p>4. <strong>Apply Rolle's Theorem:</strong> Since all three conditions are met, there exists <span class="katex-inline" data-id="e2-3-alpha"></span> such that <span class="katex-inline" data-id="e2-3-gprimealpha"></span>.</p><p>5. <strong>Calculate <span class="katex-inline" data-id="e2-3-gprime"></span> and conclude:</strong> By the chain rule, <span class="katex-inline" data-id="e2-3-gprimet"></span>. The equation <span class="katex-inline" data-id="e2-3-gprimealpha2"></span> becomes <span class="katex-inline" data-id="e2-3-gprimeeq"></span>. Since <span class="katex-inline" data-id="e2-3-alphane0"></span>, this implies <span class="katex-inline" data-id="e2-3-fprimeln"></span>.</p><p>Let <span class="katex-inline" data-id="e2-3-cdef"></span>. As <span class="katex-inline" data-id="e2-3-alphain"></span>, we have <span class="katex-inline" data-id="e2-3-lnalpha"></span>, which implies <span class="katex-inline" data-id="e2-3-cin"></span>. We have therefore found a <span class="katex-inline" data-id="e2-3-cfinal"></span> such that <span class="katex-inline" data-id="e2-3-fprimec0"></span>.</p></div></div>
+    
+    <div id="hint3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 3.1</h3><span class="close-btn" onclick="closeModal('hint3-1')">&times;</span></div><p>A function is of class <span class="katex-inline" data-id="h3-1-c1"></span> if it is differentiable and its derivative is continuous. Calculate the derivative at 0 using the definition (limit of the difference quotient), then calculate the derivative for <span class="katex-inline" data-id="h3-1-xne0"></span> and study the limit of this derivative at 0.</p></div></div>
+    <div id="knowledge3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 3.1</h3><span class="close-btn" onclick="closeModal('knowledge3-1')">&times;</span></div><p><strong>Continuity:</strong> <span class="katex-inline" data-id="k3-1-f"></span> is continuous at <span class="katex-inline" data-id="k3-1-a"></span> if <span class="katex-inline" data-id="k3-1-limeq"></span>.</p><p><strong>Differentiability:</strong> The derivative at 0 is <span class="katex-inline" data-id="k3-1-fprime0"></span> if this limit exists.</p><p><strong>Function of class <span class="katex-inline" data-id="k3-1-c1"></span>:</strong> A function is of class <span class="katex-inline" data-id="k3-1-c1-2"></span> if it is differentiable and its derivative function <span class="katex-inline" data-id="k3-1-fprime"></span> is continuous.</p><p><strong>Squeeze Theorem:</strong> If <span class="katex-inline" data-id="k3-1-encadre"></span> and <span class="katex-inline" data-id="k3-1-limgl"></span>, then <span class="katex-inline" data-id="k3-1-limh"></span>.</p></div></div>
+    <div id="explanation3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 3.1</h3><span class="close-btn" onclick="closeModal('explanation3-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Find the values of <span class="katex-inline" data-id="e3-1-n"></span> for which the function <span class="katex-inline" data-id="e3-1-f"></span> is of class <span class="katex-inline" data-id="e3-1-c1"></span>.</h4><p><strong>Step 1: Continuity of <span class="katex-inline" data-id="e3-1-f2"></span> at 0</strong></p><p>For <span class="katex-inline" data-id="e3-1-f3"></span> to be continuous, we need <span class="katex-inline" data-id="e3-1-limf0"></span>. We have <span class="katex-inline" data-id="e3-1-absf"></span>. By the Squeeze Theorem, <span class="katex-inline" data-id="e3-1-limxn"></span>, so the limit is 0 if <span class="katex-inline" data-id="e3-1-npos"></span>. Since <span class="katex-inline" data-id="e3-1-n2"></span>, the condition is <span class="katex-inline" data-id="e3-1-n1"></span>.</p><p><strong>Step 2: Differentiability of <span class="katex-inline" data-id="e3-1-f4"></span> at 0</strong></p><p>We calculate the limit of the difference quotient: <span class="katex-inline" data-id="e3-1-taux"></span>. The limit of this expression is 0 (by the same argument as above) if and only if the exponent of <span class="katex-inline" data-id="e3-1-x"></span> is strictly positive: <span class="katex-inline" data-id="e3-1-nm1pos"></span>, i.e., <span class="katex-inline" data-id="e3-1-n2-2"></span>. For these values, <span class="katex-inline" data-id="e3-1-fprime0"></span>.</p><p><strong>Step 3: Continuity of the derivative <span class="katex-inline" data-id="e3-1-fprime"></span> at 0</strong></p><p>For <span class="katex-inline" data-id="e3-1-xne0"></span>, we calculate <span class="katex-inline" data-id="e3-1-fprimex"></span> using differentiation rules:</p><p><span class="katex-display" data-id="e3-1-fprimexcalc"></span></p><p>For <span class="katex-inline" data-id="e3-1-fprime2"></span> to be continuous at 0, we need <span class="katex-inline" data-id="e3-1-limfprime0"></span>. We study the limit of each term:</p><ul><li><span class="katex-inline" data-id="e3-1-lim1"></span>: This limit is 0 if <span class="katex-inline" data-id="e3-1-nm1pos2"></span>, i.e., <span class="katex-inline" data-id="e3-1-n2-3"></span>.</li><li><span class="katex-inline" data-id="e3-1-lim2"></span>: The term <span class="katex-inline" data-id="e3-1-cos"></span> oscillates. For the limit to be 0, the term <span class="katex-inline" data-id="e3-1-xnm3"></span> must tend to 0. This requires <span class="katex-inline" data-id="e3-1-nm3pos"></span>, i.e., <span class="katex-inline" data-id="e3-1-n4"></span>.</li></ul><p>For the limit of the sum to be 0, both conditions must be met. The strictest condition is <span class="katex-inline" data-id="e3-1-n4-2"></span>.</p><p><strong>Conclusion:</strong> <span class="katex-inline" data-id="e3-1-f5"></span> is of class <span class="katex-inline" data-id="e3-1-c1-2"></span> if and only if <span class="katex-inline" data-id="e3-1-nfinal"></span>.</p></div></div>
+
+    <div id="hint3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 3.2</h3><span class="close-btn" onclick="closeModal('hint3-2')">&times;</span></div><p>Apply the tangent double-angle formula <span class="katex-inline" data-id="h3-2-tan2"></span>. For <span class="katex-inline" data-id="h3-2-tan4"></span>, apply the same formula to <span class="katex-inline" data-id="h3-2-2theta"></span>.</p></div></div>
+    <div id="knowledge3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 3.2</h3><span class="close-btn" onclick="closeModal('knowledge3-2')">&times;</span></div><p><strong>Tangent Addition Formula:</strong> <span class="katex-inline" data-id="k3-2-tanab"></span>.</p><p><strong>Tangent Double-Angle Formula:</strong> By setting <span class="katex-inline" data-id="k3-2-ba"></span>, we get <span class="katex-inline" data-id="k3-2-tan2a"></span>.</p><p><strong>Arctan Function:</strong> If <span class="katex-inline" data-id="k3-2-theta"></span>, then <span class="katex-inline" data-id="k3-2-tanx"></span>.</p></div></div>
+    <div id="explanation3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 3.2</h3><span class="close-btn" onclick="closeModal('explanation3-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Calculate <span class="katex-inline" data-id="e3-2-tan2"></span> and <span class="katex-inline" data-id="e3-2-tan4"></span>.</h4><p>We are given <span class="katex-inline" data-id="e3-2-theta"></span>, which means <span class="katex-inline" data-id="e3-2-tantheta"></span>.</p><p><strong>1. Calculation of <span class="katex-inline" data-id="e3-2-tan2-2"></span>:</strong></p><p>We use the double-angle formula for tangent:</p><p><span class="katex-display" data-id="e3-2-tan2form"></span></p><p>We substitute the value of <span class="katex-inline" data-id="e3-2-tantheta2"></span>:</p><p><span class="katex-display" data-id="e3-2-tan2calc"></span></p><p><strong>2. Calculation of <span class="katex-inline" data-id="e3-2-tan4-2"></span>:</strong></p><p>We apply the same formula again, but this time to the angle <span class="katex-inline" data-id="e3-2-2theta"></span>. So we have <span class="katex-inline" data-id="e3-2-tan4eq"></span>.</p><p><span class="katex-display" data-id="e3-2-tan4form"></span></p><p>We substitute the value we just found for <span class="katex-inline" data-id="e3-2-tan2theta3"></span>:</p><p><span class="katex-display" data-id="e3-2-tan4calc"></span></p></div></div>
+
+    <div id="hint3-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 3.3</h3><span class="close-btn" onclick="closeModal('hint3-3')">&times;</span></div><p>Compare the value of <span class="katex-inline" data-id="h3-3-15"></span> with <span class="katex-inline" data-id="h3-3-tanpi6"></span>. Then use the increasing property of the <span class="katex-inline" data-id="h3-3-arctan"></span> function.</p></div></div>
+    <div id="knowledge3-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 3.3</h3><span class="close-btn" onclick="closeModal('knowledge3-3')">&times;</span></div><p><strong>Monotonicity of the Arctangent Function:</strong> The function <span class="katex-inline" data-id="k3-3-arctan"></span> is strictly increasing on <span class="katex-inline" data-id="k3-3-R"></span>. If <span class="katex-inline" data-id="k3-3-ab"></span>, then <span class="katex-inline" data-id="k3-3-arctanab"></span>.</p><p><strong>Notable Tangent Values:</strong> <span class="katex-inline" data-id="k3-3-tan0"></span> and <span class="katex-inline" data-id="k3-3-tanpi6"></span>.</p></div></div>
+    <div id="explanation3-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 3.3</h3><span class="close-btn" onclick="closeModal('explanation3-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that <span class="katex-inline" data-id="e3-3-ineq"></span>.</h4><p>1. <strong>Compare the arguments:</strong> We compare the values of the arguments to which we will apply the <span class="katex-inline" data-id="e3-3-arctan"></span> function. We know that <span class="katex-inline" data-id="e3-3-tan0"></span> and <span class="katex-inline" data-id="e3-3-tanpi6"></span>.</p><p>2. <strong>Establish an inequality:</strong> We have <span class="katex-inline" data-id="e3-3-5sqrt3"></span>, so <span class="katex-inline" data-id="e3-3-15sqrt3"></span>. This gives us the following inequality:</p><p><span class="katex-display" data-id="e3-3-argineq"></span></p><p>3. <strong>Apply the Arctangent function:</strong> The <span class="katex-inline" data-id="e3-3-arctan2"></span> function is strictly increasing. We can therefore apply it to each member of the inequality without changing its direction:</p><p><span class="katex-display" data-id="e3-3-arctanapp"></span></p><p>4. <strong>Simplify:</strong> Using the known values of <span class="katex-inline" data-id="e3-3-arctan0"></span> and <span class="katex-inline" data-id="e3-3-arctanval"></span>, we obtain the final result:</p><p><span class="katex-display" data-id="e3-3-final"></span></p></div></div>
+
+    <div id="hint3-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Question 3.4</h3><span class="close-btn" onclick="closeModal('hint3-4')">&times;</span></div><p>Use the tangent subtraction formula: <span class="katex-inline" data-id="h3-4-tanform"></span>. Apply it to the expression <span class="katex-inline" data-id="h3-4-tanexp"></span>.</p></div></div>
+    <div id="knowledge3-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Question 3.4</h3><span class="close-btn" onclick="closeModal('knowledge3-4')">&times;</span></div><p><strong>Tangent Subtraction Formula:</strong> <span class="katex-inline" data-id="k3-4-tanform"></span>.</p><p><strong>Injectivity of Tangent:</strong> The tangent function is injective (and thus "invertible" by arctan) on intervals like <span class="katex-inline" data-id="k3-4-int"></span>. It is important to verify that the angle lies in such an interval before applying <span class="katex-inline" data-id="k3-4-arctan"></span>.</p></div></div>
+    <div id="explanation3-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Question 3.4</h3><span class="close-btn" onclick="closeModal('explanation3-4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Prove Machin's formula.</h4><p>1. <strong>Calculate the tangent of the correct expression:</strong> The idea is to show that <span class="katex-inline" data-id="e3-4-eq"></span>. To do this, we calculate the tangent of the left-hand side expression, using the tangent subtraction formula.</p><p><span class="katex-display" data-id="e3-4-tanexp"></span></p><p>2. <strong>Substitute known values:</strong> We know that <span class="katex-inline" data-id="e3-4-tan4theta"></span> and <span class="katex-inline" data-id="e3-4-tanpi4"></span>. We substitute these values:</p><p><span class="katex-display" data-id="e3-4-tancalc"></span></p><p>3. <strong>Check the interval before applying Arctan:</strong> We have shown that <span class="katex-inline" data-id="e3-4-tanres"></span>. This implies that <span class="katex-inline" data-id="e3-4-angle"></span>, where <span class="katex-inline" data-id="e3-4-k"></span> is an integer. To conclude that <span class="katex-inline" data-id="e3-4-k0"></span>, we must ensure that our angle is in the interval <span class="katex-inline" data-id="e3-4-int"></span> where the arctan function is uniquely defined. According to question 3.3, <span class="katex-inline" data-id="e3-4-thetaineq"></span>. So <span class="katex-inline" data-id="e3-4-4thetaineq"></span>. The angle <span class="katex-inline" data-id="e3-4-angle2"></span> is therefore in the interval <span class="katex-inline" data-id="e3-4-finalint"></span>, which is well within <span class="katex-inline" data-id="e3-4-int2"></span>. We can thus apply <span class="katex-inline" data-id="e3-4-arctan"></span> without ambiguity.</p><p>4. <strong>Apply Arctan and conclude:</strong></p><p><span class="katex-display" data-id="e3-4-arctanapp"></span></p><p>By rearranging the terms, we get Machin's formula:</p><p><span class="katex-display" data-id="e3-4-final"></span></p></div></div>
+
+    <script>
+        function renderKatex() {
+            document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                const content = el.textContent;
+                const displayMode = el.classList.contains('katex-display');
+                try {
+                    katex.render(content, el, {
+                        throwOnError: false,
+                        displayMode: displayMode
+                    });
+                } catch (e) {
+                    console.error("KaTeX rendering error:", e, "on element:", el);
+                    el.textContent = `Error rendering formula: ${content}`;
+                }
+            });
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.error(`Element with data-id '${id}' not found.`);
+                }
+            }
+
+            // --- EXERCISE 1 ---
+            // Question 1.1
+            setText('ex1-q1-A', "A=\\{x+\\frac{1}{x},x>0\\}");
+            setText('ex1-q1-infmin', "\\inf A \\text{ and } \\min A");
+            // Solution 1.1
+            setText('sol1-1-A', "A");
+            setText('sol1-1-infge0', "\\inf A \\ge 0");
+            setText('sol1-1-ineq1', "0 \\le (x-1)^{2} = x^{2}+1-2x \\Rightarrow x^{2}+1 \\ge 2x \\Rightarrow x+\\frac{1}{x} \\ge 2, \\forall x>0");
+            setText('sol1-1-minA', "\\min A = \\inf A = 2");
+            setText('sol1-1-x1', "x=1");
+            setText('sol1-1-val2', "1+1/1=2 \\in A");
+            // Modals 1.1
+            setText('h1-1-sqrtx', "(\\sqrt{x} - \\frac{1}{\\sqrt{x}})^2");
+            setText('k1-1-idrem', "(a-b)^2 = a^2 - 2ab + b^2");
+            setText('e1-1-A', "A = \\{x + \\frac{1}{x}, x > 0\\}");
+            setText('e1-1-xpos', "x>0");
+            setText('e1-1-1xpos', "1/x > 0");
+            setText('e1-1-sumpos', "x + 1/x > 0");
+            setText('e1-1-sqrge0', "(x-1)^2 \\ge 0");
+            setText('e1-1-dev', "x^2 - 2x + 1 \\ge 0");
+            setText('e1-1-rearr', "x^2 + 1 \\ge 2x");
+            setText('e1-1-xpos2', "x>0");
+            setText('e1-1-x', "x");
+            setText('e1-1-div', "\\frac{x^2+1}{x} \\ge \\frac{2x}{x}");
+            setText('e1-1-finalineq', "x+\\frac{1}{x} \\ge 2");
+            setText('e1-1-infge2', "\\inf A \\ge 2");
+            setText('e1-1-xpos3', "x>0");
+            setText('e1-1-eq2', "x+\\frac{1}{x}=2");
+            setText('e1-1-sqreq0', "(x-1)^2=0");
+            setText('e1-1-x1', "x=1");
+            setText('e1-1-x1-2', "x=1");
+            setText('e1-1-1p1', "1 + 1/1 = 2");
+            setText('e1-1-2inA', "2 \\in A");
+            setText('e1-1-mininf', "\\min A = \\inf A = 2");
+
+            // Question 1.2
+            setText('ex1-q2-un', "(u_{n})");
+            setText('ex1-q2-def', "u_{n+1}=\\sqrt{1+u_{n}}");
+            setText('ex1-q2-u0', "u_{0}\\in[0,3]");
+            // Solution 1.2
+            setText('sol1-2-fdef', "f(x)=\\sqrt{1+x}");
+            setText('sol1-2-xint', "x \\in [0,3]");
+            setText('sol1-2-f', "f");
+            setText('sol1-2-int', "[0,3]");
+            setText('sol1-2-fimg', "f([0,3])=[f(0),f(3)]=[1,2] \\subset [0,3]");
+            setText('sol1-2-u0', "u_0 \\in [0,3]");
+            setText('sol1-2-un', "(u_n)");
+            setText('sol1-2-l', "l");
+            setText('sol1-2-leq', "l=f(l) \\Leftrightarrow l^{2}-l-1=0");
+            setText('sol1-2-lval', "l=(1+\\sqrt{5})/2");
+            // Modals 1.2
+            setText('h1-2-f', "f(x)=\\sqrt{1+x}");
+            setText('h1-2-int', "[0,3]");
+            setText('h1-2-f2', "f");
+            setText('k1-2-I', "I");
+            setText('k1-2-f', "f");
+            setText('k1-2-fI', "f(I) \\subset I");
+            setText('k1-2-l', "l");
+            setText('k1-2-f2', "f");
+            setText('k1-2-fl', "f(l)=l");
+            setText('k1-2-un', "u_{n+1}=f(u_n)");
+            setText('k1-2-l2', "l");
+            setText('k1-2-f3', "f");
+            setText('k1-2-l3', "l");
+            setText('e1-2-un', "(u_n)");
+            setText('e1-2-fdef', "f(x)=\\sqrt{1+x}");
+            setText('e1-2-rec', "u_{n+1}=f(u_n)");
+            setText('e1-2-f', "f");
+            setText('e1-2-int03', "[0,3]");
+            setText('e1-2-fimg', "f([0,3]) = [f(0), f(3)] = [\\sqrt{1}, \\sqrt{4}] = [1,2]");
+            setText('e1-2-subset', "[1,2] \\subset [0,3]");
+            setText('e1-2-u0', "u_0 \\in [0,3]");
+            setText('e1-2-un2', "u_n");
+            setText('e1-2-diff', "u_{n+1} - u_n");
+            setText('e1-2-u1', "u_1 = \\sqrt{1+u_0} \\ge \\sqrt{1+0}=1 \\ge u_0 \\text{ if } u_0 \\in [0,1]");
+            setText('e1-2-hyp', "u_n \\ge u_{n-1}");
+            setText('e1-2-f2', "f");
+            setText('e1-2-fapp', "f(u_n) \\ge f(u_{n-1})");
+            setText('e1-2-res', "u_{n+1} \\ge u_n");
+            setText('e1-2-un3', "(u_n)");
+            setText('e1-2-l', "l");
+            setText('e1-2-l2', "l");
+            setText('e1-2-f3', "f");
+            setText('e1-2-leq', "l = f(l) \\Leftrightarrow l = \\sqrt{1+l}");
+            setText('e1-2-l2eq', "l^2 = 1+l");
+            setText('e1-2-poly', "l^2 - l - 1 = 0");
+            setText('e1-2-r1', "l_1 = \\frac{1+\\sqrt{5}}{2}");
+            setText('e1-2-r2', "l_2 = \\frac{1-\\sqrt{5}}{2}");
+            setText('e1-2-lfinal', "l = \\frac{1+\\sqrt{5}}{2}");
+            
+            // Question 1.3
+            setText('ex1-q3-unvn', "(u_n) \\text{ and } (v_n)");
+            setText('ex1-q3-un-def', "u_{n+1}=\\frac{1}{4}(3u_{n}+v_{n})");
+            setText('ex1-q3-vn-def', "v_{n+1}=\\frac{1}{4}(u_{n}+3v_{n})");
+            setText('ex1-q3-u0v0', "u_{0}=1, v_{0}=2");
+            // Solution 1.3
+            setText('sol1-3-vun1', "v_{n+1}-u_{n+1} = \\frac{1}{4}(u_n+3v_n) - \\frac{1}{4}(3u_n+v_n) = \\frac{1}{2}(v_n-u_n)");
+            setText('sol1-3-vun2', "v_n - u_n = (\\frac{1}{2})^n(v_0 - u_0) = (\\frac{1}{2})^n > 0");
+            setText('sol1-3-lim0', "\\lim_{n \\to \\infty}(v_n-u_n)=0");
+            setText('sol1-3-un-inc', "u_{n+1}-u_n = \\frac{1}{4}(v_n-u_n) > 0");
+            setText('sol1-3-un', "(u_n)");
+            setText('sol1-3-vn-dec', "v_{n+1}-v_n = \\frac{1}{4}(u_n-v_n) < 0");
+            setText('sol1-3-vn', "(v_n)");
+            setText('sol1-3-unvn', "(u_n), (v_n)");
+            setText('sol1-3-l', "l");
+            setText('sol1-3-uvn1', "u_{n+1}+v_{n+1} = \\frac{1}{4}(3u_n+v_n) + \\frac{1}{4}(u_n+3v_n) = u_n+v_n");
+            setText('sol1-3-uvn', "(u_n+v_n)");
+            setText('sol1-3-uvncst', "u_n+v_n = u_0+v_0=3, \\forall n \\in \\mathbb{N}");
+            setText('sol1-3-liml', "l+l=3 \\Rightarrow 2l=3 \\Rightarrow l=3/2");
+            // Modals 1.3
+            setText('h1-3-wn', "w_n = v_n - u_n");
+            setText('h1-3-tn', "t_n = u_n + v_n");
+            setText('k1-3-un', "(u_n)");
+            setText('k1-3-vn', "(v_n)");
+            setText('k1-3-lim', "\\lim_{n \\to \\infty} (v_n - u_n) = 0");
+            setText('k1-3-geom', "u_{n+1} = q \\cdot u_n");
+            setText('k1-3-q', "|q|<1");
+            setText('e1-3-un', "(u_n)");
+            setText('e1-3-vn', "(v_n)");
+            setText('e1-3-wn', "w_n = v_n - u_n");
+            setText('e1-3-wn1', "w_{n+1} = v_{n+1} - u_{n+1} = \\frac{1}{4}(u_n+3v_n) - \\frac{1}{4}(3u_n+v_n) = \\frac{1}{4}(-2u_n+2v_n) = \\frac{1}{2}(v_n-u_n) = \\frac{1}{2}w_n");
+            setText('e1-3-wn2', "(w_n)");
+            setText('e1-3-q', "q=1/2");
+            setText('e1-3-qabs', "|q|<1");
+            setText('e1-3-wn3', "(w_n)");
+            setText('e1-3-un1un', "u_{n+1}-u_n");
+            setText('e1-3-undiff', "u_{n+1}-u_n = \\frac{1}{4}(3u_n+v_n) - u_n = \\frac{1}{4}(3u_n+v_n-4u_n) = \\frac{1}{4}(v_n-u_n) = \\frac{1}{4}w_n");
+            setText('e1-3-wngen', "w_n = w_0 (1/2)^n = (v_0-u_0)(1/2)^n = (2-1)(1/2)^n = (1/2)^n");
+            setText('e1-3-wnpos', "w_n > 0");
+            setText('e1-3-un1unpos', "u_{n+1}-u_n > 0");
+            setText('e1-3-uninc', "(u_n)");
+            setText('e1-3-vn1vn', "v_{n+1}-v_n");
+            setText('e1-3-vndiff', "v_{n+1}-v_n = \\frac{1}{4}(u_n+3v_n) - v_n = \\frac{1}{4}(u_n+3v_n-4v_n) = \\frac{1}{4}(u_n-v_n) = -\\frac{1}{4}w_n");
+            setText('e1-3-wnpos2', "w_n > 0");
+            setText('e1-3-vn1vnneg', "v_{n+1}-v_n < 0");
+            setText('e1-3-vndec', "(v_n)");
+            setText('e1-3-uninc2', "(u_n)");
+            setText('e1-3-vndec2', "(v_n)");
+            setText('e1-3-lim0', "\\lim (v_n - u_n) = 0");
+            setText('e1-3-l', "l");
+            setText('e1-3-tn', "t_n = u_n+v_n");
+            setText('e1-3-tn1', "t_{n+1} = u_{n+1}+v_{n+1} = \\frac{1}{4}(3u_n+v_n) + \\frac{1}{4}(u_n+3v_n) = \\frac{1}{4}(4u_n+4v_n) = u_n+v_n = t_n");
+            setText('e1-3-tn2', "(t_n)");
+            setText('e1-3-n', "n");
+            setText('e1-3-tneq', "u_n+v_n = u_0+v_0 = 1+2=3");
+            setText('e1-3-liml', "\\lim (u_n+v_n) = \\lim u_n + \\lim v_n = l+l = 2l = 3");
+            setText('e1-3-2l3', "2l=3");
+            setText('e1-3-lfinal', "l=3/2");
+            
+            // Question 1.4
+            setText('ex1-q4-un', "(u_n)");
+            setText('ex1-q4-def', "u_n = \\sum_{k=1}^{n} \\frac{1}{k^a}");
+            setText('ex1-q4-a', "a \\ge 2");
+            // Solution 1.4
+            setText('sol1-4-np', "n, p \\in \\mathbb{N}^*");
+            setText('sol1-4-unp', "|u_{n+p} - u_n| = |\\sum_{k=n+1}^{n+p} \\frac{1}{k^a}| = \\sum_{k=n+1}^{n+p} \\frac{1}{k^a}");
+            setText('sol1-4-a2', "a \\ge 2");
+            setText('sol1-4-kagek2', "k^a \\ge k^2");
+            setText('sol1-4-ineq1', "\\frac{1}{k^a} \\le \\frac{1}{k^2} < \\frac{1}{k(k-1)} = \\frac{1}{k-1} - \\frac{1}{k}");
+            setText('sol1-4-ineq2', "\\sum_{k=n+1}^{n+p} \\frac{1}{k^a} < \\sum_{k=n+1}^{n+p}(\\frac{1}{k-1}-\\frac{1}{k}) = (\\frac{1}{n}-\\frac{1}{n+1}) + \\dots + (\\frac{1}{n+p-1}-\\frac{1}{n+p}) = \\frac{1}{n}-\\frac{1}{n+p} < \\frac{1}{n}");
+            setText('sol1-4-unpfinal', "|u_{n+p} - u_n| < \\frac{1}{n}");
+            setText('sol1-4-lim1n', "\\lim_{n \\to \\infty} \\frac{1}{n} = 0");
+            // Modals 1.4
+            setText('h1-4-unp', "|u_{n+p} - u_n|");
+            setText('h1-4-a', "a \\ge 2");
+            setText('h1-4-1ka', "1/k^a");
+            setText('h1-4-trick', "\\frac{1}{k^2} < \\frac{1}{k(k-1)} = \\frac{1}{k-1} - \\frac{1}{k}");
+            setText('k1-4-un', "(u_n)");
+            setText('k1-4-def', "\\forall \\epsilon > 0, \\exists N \\in \\mathbb{N} \\text{ such that } \\forall n > N, \\forall p > 0, |u_{n+p} - u_n| < \\epsilon");
+            setText('k1-4-R', "\\mathbb{R}");
+            setText('k1-4-R2', "\\mathbb{R}");
+            setText('k1-4-telescop', "\\sum_{k=1}^{n} (a_k - a_{k+1}) = a_1 - a_{n+1}");
+            setText('e1-4-un', "(u_n)");
+            setText('e1-4-unpabs', "|u_{n+p} - u_n|");
+            setText('e1-4-np', "n, p \\in \\mathbb{N}^*");
+            setText('e1-4-unpdef', "|u_{n+p}-u_n| = |\\sum_{k=1}^{n+p} \\frac{1}{k^a} - \\sum_{k=1}^{n} \\frac{1}{k^a}| = |\\sum_{k=n+1}^{n+p} \\frac{1}{k^a}| = \\sum_{k=n+1}^{n+p} \\frac{1}{k^a}");
+            setText('e1-4-a2', "a \\ge 2");
+            setText('e1-4-k', "k \\ge 1");
+            setText('e1-4-kagek2', "k^a \\ge k^2");
+            setText('e1-4-1ka', "\\frac{1}{k^a} \\le \\frac{1}{k^2}");
+            setText('e1-4-trick', "\\frac{1}{k^2} < \\frac{1}{k(k-1)}");
+            setText('e1-4-sumineq', "\\sum_{k=n+1}^{n+p} \\frac{1}{k^a} \\le \\sum_{k=n+1}^{n+p} \\frac{1}{k^2} < \\sum_{k=n+1}^{n+p} \\frac{1}{k(k-1)} = \\sum_{k=n+1}^{n+p} (\\frac{1}{k-1} - \\frac{1}{k})");
+            setText('e1-4-telescopcalc', "\\sum_{k=n+1}^{n+p} (\\frac{1}{k-1} - \\frac{1}{k}) = (\\frac{1}{n}-\\frac{1}{n+1}) + (\\frac{1}{n+1}-\\frac{1}{n+2}) + \\dots + (\\frac{1}{n+p-1}-\\frac{1}{n+p}) = \\frac{1}{n} - \\frac{1}{n+p}");
+            setText('e1-4-unpfinal', "|u_{n+p}-u_n| < \\frac{1}{n} - \\frac{1}{n+p} < \\frac{1}{n}");
+            setText('e1-4-eps', "\\epsilon > 0");
+            setText('e1-4-1neps', "1/n < \\epsilon");
+            setText('e1-4-neps', "n > 1/\\epsilon");
+            setText('e1-4-N', "N = \\lfloor 1/\\epsilon \\rfloor + 1");
+            setText('e1-4-nN', "n>N");
+            setText('e1-4-unpeps', "|u_{n+p}-u_n| < 1/n < 1/N < \\epsilon");
+            setText('e1-4-un2', "(u_n)");
+            setText('e1-4-R', "\\mathbb{R}");
+
+            // --- EXERCISE 2 ---
+            // Question 2.1
+            setText('ex2-q1-ineq', "\\frac{1}{1+x} < \\ln(1+x) - \\ln x < \\frac{1}{x}");
+            setText('ex2-q1-domain', "\\forall x > 0");
+            // Solution 2.1
+            setText('sol2-1-forallx', "\\forall x > 0");
+            setText('sol2-1-tmap', "t \\mapsto \\ln t");
+            setText('sol2-1-int1', "[x, x+1]");
+            setText('sol2-1-int2', "]x, x+1[");
+            setText('sol2-1-cexist', "c \\in ]x, x+1[");
+            setText('sol2-1-taf', "\\ln(x+1) - \\ln x = \\frac{1}{c}");
+            setText('sol2-1-cineq', "x < c < x+1");
+            setText('sol2-1-res', "\\frac{1}{x+1} < \\frac{1}{c} < \\frac{1}{x}");
+            // Modals 2.1
+            setText('h2-1-f', "f(t) = \\ln t");
+            setText('h2-1-int', "[x, x+1]");
+            setText('k2-1-f', "f");
+            setText('k2-1-intc', "[a,b]");
+            setText('k2-1-into', "]a,b[");
+            setText('k2-1-c', "c \\in ]a,b[");
+            setText('k2-1-taf', "f'(c) = \\frac{f(b)-f(a)}{b-a}");
+            setText('k2-1-lnderiv', "(\\ln t)' = 1/t");
+            setText('e2-1-ln', "\\ln(1+x)-\\ln x");
+            setText('e2-1-f', "f(t)=\\ln t");
+            setText('e2-1-xpos', "x>0");
+            setText('e2-1-int', "[x, x+1]");
+            setText('e2-1-f2', "f(t)=\\ln t");
+            setText('e2-1-intc', "[x, x+1]");
+            setText('e2-1-xpos2', "x>0");
+            setText('e2-1-f3', "f(t)=\\ln t");
+            setText('e2-1-into', "]x, x+1[");
+            setText('e2-1-fprime', "f'(t)=1/t");
+            setText('e2-1-c', "c \\in ]x, x+1[");
+            setText('e2-1-tafeq', "f'(c) = \\frac{f(x+1)-f(x)}{(x+1)-x} \\Rightarrow \\frac{1}{c} = \\frac{\\ln(x+1)-\\ln(x)}{1}");
+            setText('e2-1-c2', "c");
+            setText('e2-1-cineq', "x < c < x+1");
+            setText('e2-1-invineq', "\\frac{1}{x+1} < \\frac{1}{c} < \\frac{1}{x}");
+            setText('e2-1-1c', "1/c");
+            setText('e2-1-final', "\\frac{1}{x+1} < \\ln(x+1)-\\ln x < \\frac{1}{x}");
+
+            // Question 2.2
+            setText('ex2-q2-ineq', "(1+\\frac{1}{x})^x < e < (1+\\frac{1}{x})^{x+1}");
+            setText('ex2-q2-domain', "\\forall x > 0");
+            // Solution 2.2
+            setText('sol2-2-ineq1', "\\frac{1}{1+x} < \\ln(\\frac{x+1}{x}) < \\frac{1}{x}");
+            setText('sol2-2-xpos', "x>0");
+            setText('sol2-2-ineq2', "\\frac{x}{1+x} < x \\ln(1+\\frac{1}{x}) < 1");
+            setText('sol2-2-x1pos', "x+1>0");
+            setText('sol2-2-ineq3', "1 < (x+1)\\ln(1+\\frac{1}{x}) < \\frac{x+1}{x}");
+            setText('sol2-2-ineq4', "x \\ln(1+\\frac{1}{x}) < 1 < (x+1)\\ln(1+\\frac{1}{x})");
+            setText('sol2-2-lnineq', "\\ln((1+\\frac{1}{x})^x) < 1 < \\ln((1+\\frac{1}{x})^{x+1})");
+            setText('sol2-2-final', "(1+\\frac{1}{x})^x < e < (1+\\frac{1}{x})^{x+1}");
+            // Modals 2.2
+            setText('h2-2-ln', "\\ln(1+x)-\\ln x = \\ln(\\frac{x+1}{x}) = \\ln(1+\\frac{1}{x})");
+            setText('h2-2-x', "x");
+            setText('h2-2-x1', "x+1");
+            setText('k2-2-lnsub', "\\ln a - \\ln b = \\ln(a/b)");
+            setText('k2-2-lnpow', "c \\ln a = \\ln(a^c)");
+            setText('k2-2-ab', "a<b");
+            setText('k2-2-expab', "e^a < e^b");
+            setText('e2-2-e', "e");
+            setText('e2-2-ineq1', "\\frac{1}{x+1} < \\ln(x+1)-\\ln x < \\frac{1}{x}");
+            setText('e2-2-lnprop', "\\ln a - \\ln b = \\ln(a/b)");
+            setText('e2-2-lnrew', "\\ln(x+1)-\\ln x = \\ln(\\frac{x+1}{x}) = \\ln(1+\\frac{1}{x})");
+            setText('e2-2-ineq2', "\\frac{1}{x+1} < \\ln(1+\\frac{1}{x}) < \\frac{1}{x}");
+            setText('e2-2-x', "x");
+            setText('e2-2-xpos', "x>0");
+            setText('e2-2-mulx', "\\frac{x}{x+1} < x \\ln(1+\\frac{1}{x}) < 1");
+            setText('e2-2-res1', "x \\ln(1+\\frac{1}{x}) < 1");
+            setText('e2-2-x1', "x+1");
+            setText('e2-2-x1pos', "x+1>0");
+            setText('e2-2-mulx1', "1 < (x+1) \\ln(1+\\frac{1}{x}) < \\frac{x+1}{x}");
+            setText('e2-2-res2', "1 < (x+1) \\ln(1+\\frac{1}{x})");
+            setText('e2-2-combine', "x \\ln(1+\\frac{1}{x}) < 1 < (x+1) \\ln(1+\\frac{1}{x})");
+            setText('e2-2-lnpow', "c \\ln a = \\ln(a^c)");
+            setText('e2-2-lnfinal', "\\ln((1+\\frac{1}{x})^x) < 1 < \\ln((1+\\frac{1}{x})^{x+1})");
+            setText('e2-2-exp', "y \\mapsto e^y");
+            setText('e2-2-expfinal', "e^{\\ln((1+\\frac{1}{x})^x)} < e^1 < e^{\\ln((1+\\frac{1}{x})^{x+1})}");
+            setText('e2-2-exp1', "e^1=e");
+            setText('e2-2-final', "(1+\\frac{1}{x})^x < e < (1+\\frac{1}{x})^{x+1}");
+            
+            // Question 2.3
+            setText('ex2-q3-a', "a \\in \\mathbb{R}");
+            setText('ex2-q3-fmap', "f : \\mathbb{R} \\to \\mathbb{R}");
+            setText('ex2-q3-fcont', "[a, +\\infty[");
+            setText('ex2-q3-fder', "]a, +\\infty[");
+            setText('ex2-q3-flim', "f(a) = \\lim_{x \\to +\\infty} f(x)");
+            setText('ex2-q3-gdef', "g(t) = \\begin{cases} f(-\\ln t) & , t \\in ]0, e^{-a}] \\\\ f(a) & , t=0 \\end{cases}");
+            setText('ex2-q3-g', "g");
+            setText('ex2-q3-gint', "[0, e^{-a}]");
+            setText('ex2-q3-c', "c \\in ]a, +\\infty[");
+            setText('ex2-q3-fc0', "f'(c)=0");
+            // Solution 2.3
+            setText('sol2-3-g', "g");
+            setText('sol2-3-gint', "[0, e^{-a}]");
+            setText('sol2-3-t0', "t \\to 0^+");
+            setText('sol2-3-xinf', "x = -\\ln t \\to +\\infty");
+            setText('sol2-3-limgt', "\\lim_{t \\to 0^+} g(t) = \\lim_{x \\to +\\infty} f(x) = f(a) = g(0)");
+            setText('sol2-3-gderint', "]0, e^{-a}[");
+            setText('sol2-3-geq', "g(e^{-a}) = f(-\\ln(e^{-a})) = f(a) = g(0)");
+            setText('sol2-3-alpha', "\\alpha \\in ]0, e^{-a}[");
+            setText('sol2-3-gprimealpha0', "g'(\\alpha)=0");
+            setText('sol2-3-gprimet', "g'(t) = -\\frac{1}{t}f'(-\\ln t)");
+            setText('sol2-3-gprimealphaeq', "g'(\\alpha) = -\\frac{1}{\\alpha} f'(-\\ln \\alpha) = 0");
+            setText('sol2-3-alphane0', "\\alpha \\ne 0");
+            setText('sol2-3-fprimeln', "f'(-\\ln \\alpha)=0");
+            setText('sol2-3-cdef', "c = -\\ln \\alpha");
+            setText('sol2-3-alphain', "\\alpha \\in ]0, e^{-a}[");
+            setText('sol2-3-cin', "-\\ln \\alpha \\in ]a, +\\infty[");
+            setText('sol2-3-cfinal', "c \\in ]a, +\\infty[");
+            setText('sol2-3-fprimec0', "f'(c)=0");
+            // Modals 2.3
+            setText('h2-3-g', "g");
+            setText('h2-3-int', "[0, e^{-a}]");
+            setText('k2-3-g', "g");
+            setText('k2-3-intc', "[a,b]");
+            setText('k2-3-into', "]a,b[");
+            setText('k2-3-geq', "g(a)=g(b)");
+            setText('k2-3-c', "c \\in ]a,b[");
+            setText('k2-3-gprimec', "g'(c)=0");
+            setText('k2-3-chain', "(f(u(x)))' = f'(u(x)) \\cdot u'(x)");
+            setText('e2-3-g', "g");
+            setText('e2-3-c', "c");
+            setText('e2-3-g2', "g");
+            setText('e2-3-intc', "[0, e^{-a}]");
+            setText('e2-3-into', "]0, e^{-a}]");
+            setText('e2-3-g3', "g(t)");
+            setText('e2-3-f', "f");
+            setText('e2-3-ln', "\\ln");
+            setText('e2-3-t0', "t=0");
+            setText('e2-3-lim', "\\lim_{t \\to 0^+} g(t) = g(0)");
+            setText('e2-3-chgvar', "x = -\\ln t");
+            setText('e2-3-t0p', "t \\to 0^+");
+            setText('e2-3-xinf', "x \\to +\\infty");
+            setText('e2-3-limx', "\\lim_{x \\to +\\infty} f(x)");
+            setText('e2-3-fa', "f(a)");
+            setText('e2-3-g0', "g(0)");
+            setText('e2-3-g4', "g");
+            setText('e2-3-intc2', "[0, e^{-a}]");
+            setText('e2-3-g5', "g");
+            setText('e2-3-into2', "]0, e^{-a}[");
+            setText('e2-3-g6', "g");
+            setText('e2-3-g02', "g(0) = f(a)");
+            setText('e2-3-gea', "g(e^{-a}) = f(-\\ln(e^{-a})) = f(-(-a)) = f(a)");
+            setText('e2-3-geq', "g(0)=g(e^{-a})");
+            setText('e2-3-alpha', "\\alpha \\in ]0, e^{-a}[");
+            setText('e2-3-gprimealpha', "g'(\\alpha)=0");
+            setText('e2-3-gprime', "g'(t)");
+            setText('e2-3-gprimet', "g'(t) = f'(-\\ln t) \\cdot (-\\ln t)' = f'(-\\ln t) \\cdot (-\\frac{1}{t}) = -\\frac{f'(-\\ln t)}{t}");
+            setText('e2-3-gprimealpha2', "g'(\\alpha)=0");
+            setText('e2-3-gprimeeq', "-\\frac{f'(-\\ln \\alpha)}{\\alpha} = 0");
+            setText('e2-3-alphane0', "\\alpha \\in ]0, e^{-a}[ \\Rightarrow \\alpha \\ne 0");
+            setText('e2-3-fprimeln', "f'(-\\ln \\alpha)=0");
+            setText('e2-3-cdef', "c = -\\ln \\alpha");
+            setText('e2-3-alphain', "\\alpha \\in ]0, e^{-a}[");
+            setText('e2-3-lnalpha', "\\ln \\alpha \\in ]-\\infty, -a[");
+            setText('e2-3-cin', "c = -\\ln \\alpha \\in ]a, +\\infty[");
+            setText('e2-3-cfinal', "c \\in ]a, +\\infty[");
+            setText('e2-3-fprimec0', "f'(c)=0");
+            
+            // --- EXERCISE 3 ---
+            // Question 3.1
+            setText('ex3-q1-fmap', "f: \\mathbb{R} \\to \\mathbb{R}");
+            setText('ex3-q1-fdef1', "f(x) = x^n \\sin(\\frac{1}{x^2})");
+            setText('ex3-q1-fdef2', "\\forall x \\ne 0");
+            setText('ex3-q1-fdef3', "f(0)=0");
+            setText('ex3-q1-n', "n \\in \\mathbb{N}");
+            setText('ex3-q1-f', "f");
+            setText('ex3-q1-c1', "C^1");
+            setText('ex3-q1-x0', "x_0 = 0");
+            // Solution 3.1
+            setText('sol3-1-f0', "f(0)=0");
+            setText('sol3-1-limf', "\\lim_{x \\to 0} f(x) = \\lim_{x \\to 0} x^n \\sin(\\frac{1}{x^2}) = 0");
+            setText('sol3-1-npos', "n>0");
+            setText('sol3-1-f', "f");
+            setText('sol3-1-n1', "n \\ge 1");
+            setText('sol3-1-fprime0def', "f'(0) = \\lim_{x \\to 0} \\frac{x^n \\sin(1/x^2)}{x} = \\lim_{x \\to 0} x^{n-1} \\sin(\\frac{1}{x^2}) = 0");
+            setText('sol3-1-nm1pos', "n-1>0");
+            setText('sol3-1-n2', "n \\ge 2");
+            setText('sol3-1-xne0', "x \\ne 0");
+            setText('sol3-1-fprimex', "f'(x) = nx^{n-1} \\sin(\\frac{1}{x^2}) - 2x^{n-3}\\cos(\\frac{1}{x^2})");
+            setText('sol3-1-c1', "C^1");
+            setText('sol3-1-fprime', "f'");
+            setText('sol3-1-limfprime', "\\lim_{x \\to 0} f'(x) = f'(0) = 0");
+            setText('sol3-1-lim1', "\\lim_{x \\to 0} nx^{n-1} \\sin(\\frac{1}{x^2}) = 0");
+            setText('sol3-1-nm1pos2', "n-1 > 0 \\Rightarrow n \\ge 2");
+            setText('sol3-1-lim2', "\\lim_{x \\to 0} -2x^{n-3} \\cos(\\frac{1}{x^2})");
+            setText('sol3-1-nm3pos', "n-3 > 0 \\Rightarrow n \\ge 4");
+            setText('sol3-1-x0', "x_0=0");
+            setText('sol3-1-n4', "n \\ge 4");
+            // Modals 3.1
+            setText('h3-1-c1', "C^1");
+            setText('h3-1-xne0', "x \\ne 0");
+            setText('k3-1-f', "f");
+            setText('k3-1-a', "a");
+            setText('k3-1-limeq', "\\lim_{x \\to a} f(x) = f(a)");
+            setText('k3-1-fprime0', "f'(0) = \\lim_{x \\to 0} \\frac{f(x)-f(0)}{x}");
+            setText('k3-1-c1-2', "C^1");
+            setText('k3-1-fprime', "f'");
+            setText('k3-1-encadre', "g(x) \\le h(x) \\le l(x)");
+            setText('k3-1-limgl', "\\lim g(x) = \\lim l(x) = L");
+            setText('k3-1-limh', "\\lim h(x) = L");
+            setText('e3-1-n', "n");
+            setText('e3-1-f', "f");
+            setText('e3-1-c1', "C^1");
+            setText('e3-1-f2', "f");
+            setText('e3-1-f3', "f");
+            setText('e3-1-limf0', "\\lim_{x \\to 0} f(x) = f(0)=0");
+            setText('e3-1-absf', "0 \\le |f(x)| = |x^n \\sin(\\frac{1}{x^2})| \\le |x^n|");
+            setText('e3-1-limxn', "\\lim_{x \\to 0} |x^n|=0");
+            setText('e3-1-npos', "n>0");
+            setText('e3-1-n2', "n \\in \\mathbb{N}");
+            setText('e3-1-n1', "n \\ge 1");
+            setText('e3-1-f4', "f");
+            setText('e3-1-taux', "\\lim_{x \\to 0} \\frac{f(x)-f(0)}{x-0} = \\lim_{x \\to 0} \\frac{x^n \\sin(1/x^2)}{x} = \\lim_{x \\to 0} x^{n-1} \\sin(1/x^2)");
+            setText('e3-1-x', "x");
+            setText('e3-1-nm1pos', "n-1>0");
+            setText('e3-1-n2-2', "n \\ge 2");
+            setText('e3-1-fprime0', "f'(0)=0");
+            setText('e3-1-fprime', "f'");
+            setText('e3-1-xne0', "x \\ne 0");
+            setText('e3-1-fprimex', "f'(x)");
+            setText('e3-1-fprimexcalc', "f'(x) = n x^{n-1} \\sin(\\frac{1}{x^2}) + x^n \\cos(\\frac{1}{x^2}) (-\\frac{2}{x^3}) = n x^{n-1} \\sin(\\frac{1}{x^2}) - 2 x^{n-3} \\cos(\\frac{1}{x^2})");
+            setText('e3-1-fprime2', "f'");
+            setText('e3-1-limfprime0', "\\lim_{x \\to 0} f'(x) = f'(0) = 0");
+            setText('e3-1-lim1', "\\lim_{x \\to 0} n x^{n-1} \\sin(\\frac{1}{x^2})");
+            setText('e3-1-nm1pos2', "n-1>0");
+            setText('e3-1-n2-3', "n \\ge 2");
+            setText('e3-1-lim2', "\\lim_{x \\to 0} -2 x^{n-3} \\cos(\\frac{1}{x^2})");
+            setText('e3-1-cos', "\\cos(1/x^2)");
+            setText('e3-1-xnm3', "x^{n-3}");
+            setText('e3-1-nm3pos', "n-3 > 0");
+            setText('e3-1-n4', "n \\ge 4");
+            setText('e3-1-n4-2', "n \\ge 4");
+            setText('e3-1-f5', "f");
+            setText('e3-1-c1-2', "C^1");
+            setText('e3-1-nfinal', "n \\ge 4");
+
+            // Question 3.2
+            setText('ex3-q2-tanform', "\\tan(a+b) = \\frac{\\tan a + \\tan b}{1 - \\tan a \\tan b}");
+            setText('ex3-q2-theta', "\\theta = \\arctan \\frac{1}{5}");
+            setText('ex3-q2-tan2', "\\tan(2\\theta)");
+            setText('ex3-q2-tan4', "\\tan(4\\theta)");
+            // Solution 3.2
+            setText('sol3-2-theta', "\\theta = \\arctan(1/5)");
+            setText('sol3-2-tantheta', "\\tan \\theta = 1/5");
+            setText('sol3-2-tan2theta', "\\tan(2\\theta) = \\frac{2(1/5)}{1-(1/5)^2} = \\frac{2/5}{24/25} = \\frac{5}{12}");
+            setText('sol3-2-tan4theta', "\\tan(4\\theta) = \\tan(2(2\\theta)) = \\frac{2(5/12)}{1-(5/12)^2} = \\frac{10/12}{1-25/144} = \\frac{10/12}{119/144} = \\frac{120}{119}");
+            // Modals 3.2
+            setText('h3-2-tan2', "\\tan(2a) = \\frac{2\\tan a}{1-\\tan^2 a}");
+            setText('h3-2-tan4', "\\tan(4\\theta)");
+            setText('h3-2-2theta', "2\\theta");
+            setText('k3-2-tanab', "\\tan(a+b) = \\frac{\\tan a + \\tan b}{1 - \\tan a \\tan b}");
+            setText('k3-2-ba', "b=a");
+            setText('k3-2-tan2a', "\\tan(2a) = \\frac{2\\tan a}{1 - \\tan^2 a}");
+            setText('k3-2-theta', "\\theta = \\arctan(x)");
+            setText('k3-2-tanx', "\\tan(\\theta) = x");
+            setText('e3-2-tan2', "\\tan(2\\theta)");
+            setText('e3-2-tan4', "\\tan(4\\theta)");
+            setText('e3-2-theta', "\\theta = \\arctan(1/5)");
+            setText('e3-2-tantheta', "\\tan \\theta = 1/5");
+            setText('e3-2-tan2-2', "\\tan(2\\theta)");
+            setText('e3-2-tan2form', "\\tan(2\\theta) = \\frac{2\\tan\\theta}{1-\\tan^2\\theta}");
+            setText('e3-2-tantheta2', "\\tan \\theta");
+            setText('e3-2-tan2calc', "\\tan(2\\theta) = \\frac{2(1/5)}{1-(1/5)^2} = \\frac{2/5}{1 - 1/25} = \\frac{2/5}{24/25} = \\frac{2}{5} \\cdot \\frac{25}{24} = \\frac{5}{12}");
+            setText('e3-2-tan4-2', "\\tan(4\\theta)");
+            setText('e3-2-2theta', "2\\theta");
+            setText('e3-2-tan4eq', "\\tan(4\\theta) = \\tan(2 \\cdot (2\\theta))");
+            setText('e3-2-tan4form', "\\tan(4\\theta) = \\frac{2\\tan(2\\theta)}{1-\\tan^2(2\\theta)}");
+            setText('e3-2-tan2theta3', "\\tan(2\\theta)");
+            setText('e3-2-tan4calc', "\\tan(4\\theta) = \\frac{2(5/12)}{1-(5/12)^2} = \\frac{10/12}{1 - 25/144} = \\frac{5/6}{119/144} = \\frac{5}{6} \\cdot \\frac{144}{119} = \\frac{120}{119}");
+
+            // Question 3.3
+            setText('ex3-q3-ineq', "0 \\le \\arctan \\frac{1}{5} \\le \\frac{\\pi}{6}");
+            // Solution 3.3
+            setText('sol3-3-ineq1', "0 < \\frac{1}{5} < \\frac{1}{\\sqrt{3}} = \\tan(\\frac{\\pi}{6})");
+            setText('sol3-3-arctan', "\\arctan");
+            setText('sol3-3-ineq2', "0 < \\arctan \\frac{1}{5} < \\frac{\\pi}{6}");
+            // Modals 3.3
+            setText('h3-3-15', "1/5");
+            setText('h3-3-tanpi6', "\\tan(\\pi/6)");
+            setText('h3-3-arctan', "\\arctan");
+            setText('k3-3-arctan', "\\arctan");
+            setText('k3-3-R', "\\mathbb{R}");
+            setText('k3-3-ab', "a<b");
+            setText('k3-3-arctanab', "\\arctan a < \\arctan b");
+            setText('k3-3-tan0', "\\tan(0)=0");
+            setText('k3-3-tanpi6', "\\tan(\\pi/6) = 1/\\sqrt{3}");
+            setText('e3-3-ineq', "0 \\le \\arctan(1/5) \\le \\pi/6");
+            setText('e3-3-arctan', "\\arctan");
+            setText('e3-3-tan0', "\\tan(0)=0");
+            setText('e3-3-tanpi6', "\\tan(\\pi/6) = 1/\\sqrt{3} \\approx 1/1.732 \\approx 0.577");
+            setText('e3-3-5sqrt3', "5 > \\sqrt{3}");
+            setText('e3-3-15sqrt3', "1/5 < 1/\\sqrt{3}");
+            setText('e3-3-argineq', "0 < \\frac{1}{5} < \\frac{1}{\\sqrt{3}}");
+            setText('e3-3-arctan2', "\\arctan");
+            setText('e3-3-arctanapp', "\\arctan(0) < \\arctan(\\frac{1}{5}) < \\arctan(\\frac{1}{\\sqrt{3}})");
+            setText('e3-3-arctan0', "\\arctan(0)=0");
+            setText('e3-3-arctanval', "\\arctan(1/\\sqrt{3}) = \\pi/6");
+            setText('e3-3-final', "0 < \\arctan(\\frac{1}{5}) < \\frac{\\pi}{6}");
+
+            // Question 3.4
+            setText('ex3-q4-machin', "\\frac{\\pi}{4} = 4 \\arctan \\frac{1}{5} - \\arctan \\frac{1}{239}");
+            // Solution 3.4
+            setText('sol3-4-tan4theta', "\\tan(4\\theta - \\frac{\\pi}{4}) = \\frac{\\tan(4\\theta) - \\tan(\\pi/4)}{1+\\tan(4\\theta)\\tan(\\pi/4)} = \\frac{120/119 - 1}{1+120/119} = \\frac{1/119}{239/119} = \\frac{1}{239}");
+            setText('sol3-4-4thetaineq', "0 < 4\\theta < 4 \\frac{\\pi}{6} = \\frac{2\\pi}{3}");
+            setText('sol3-4-4thetapi4', "4\\theta - \\pi/4");
+            setText('sol3-4-int', "]-\\frac{\\pi}{4}, \\frac{5\\pi}{12}[ \\subset ]-\\frac{\\pi}{2}, \\frac{\\pi}{2}[");
+            setText('sol3-4-arctan', "\\arctan");
+            setText('sol3-4-eq1', "4\\theta - \\frac{\\pi}{4} = \\arctan \\frac{1}{239}");
+            setText('sol3-4-final', "\\frac{\\pi}{4} = 4\\theta - \\arctan \\frac{1}{239} = 4 \\arctan \\frac{1}{5} - \\arctan \\frac{1}{239}");
+            // Modals 3.4
+            setText('h3-4-tanform', "\\tan(a-b) = \\frac{\\tan a - \\tan b}{1+\\tan a \\tan b}");
+            setText('h3-4-tanexp', "\\tan(4\\theta - \\pi/4)");
+            setText('k3-4-tanform', "\\tan(a-b) = \\frac{\\tan a - \\tan b}{1+\\tan a \\tan b}");
+            setText('k3-4-int', "]-\\pi/2, \\pi/2[");
+            setText('k3-4-arctan', "\\arctan");
+            setText('e3-4-eq', "4\\theta - \\arctan(1/239) = \\pi/4");
+            setText('e3-4-tanexp', "\\tan(4\\theta - \\frac{\\pi}{4})");
+            setText('e3-4-tan4theta', "\\tan(4\\theta) = 120/119");
+            setText('e3-4-tanpi4', "\\tan(\\pi/4) = 1");
+            setText('e3-4-tancalc', "\\tan(4\\theta - \\frac{\\pi}{4}) = \\frac{120/119 - 1}{1 + (120/119)(1)} = \\frac{(120-119)/119}{(119+120)/119} = \\frac{1/119}{239/119} = \\frac{1}{239}");
+            setText('e3-4-tanres', "\\tan(4\\theta - \\pi/4) = 1/239");
+            setText('e3-4-angle', "4\\theta - \\pi/4 = \\arctan(1/239) + k\\pi");
+            setText('e3-4-k', "k");
+            setText('e3-4-k0', "k=0");
+            setText('e3-4-int', "]-\\pi/2, \\pi/2[");
+            setText('e3-4-thetaineq', "0 < \\theta < \\pi/6");
+            setText('e3-4-4thetaineq', "0 < 4\\theta < 4\\pi/6 = 2\\pi/3");
+            setText('e3-4-angle2', "4\\theta - \\pi/4");
+            setText('e3-4-finalint', "]-\\pi/4, 2\\pi/3 - \\pi/4[ = ]-\\pi/4, 5\\pi/12[");
+            setText('e3-4-int2', "]-\\pi/2, \\pi/2[");
+            setText('e3-4-arctan', "\\arctan");
+            setText('e3-4-arctanapp', "4\\theta - \\frac{\\pi}{4} = \\arctan(\\frac{1}{239})");
+            setText('e3-4-final', "\\frac{\\pi}{4} = 4\\theta - \\arctan(\\frac{1}{239}) = 4\\arctan(\\frac{1}{5}) - \\arctan(\\frac{1}{239})");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

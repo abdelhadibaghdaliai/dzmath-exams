@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis II: Final Exam - Corrected Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: rgba(15, 23, 42, 0.7);
+            border: 1px solid #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis II Final Exam</h1>
+            <p class="exam-subtitle">Date: 05/27/2007</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1 (2 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-katex="\Gamma"></span> be the curve defined by the intersection of the sphere with equation <span class="katex-inline" data-katex="x^2 + y^2 + z^2 = a^2"></span> and the plane <span class="katex-inline" data-katex="z = a/2"></span>, where <span class="katex-inline" data-katex="a > 0"></span>. Represent <span class="katex-inline" data-katex="\Gamma"></span> and calculate the line integral <span class="katex-display" data-katex="J = \int_{\Gamma} (x^2y \, dx + dy + z \, dz)"></span> where <span class="katex-inline" data-katex="\Gamma"></span> is oriented by the vector <span class="katex-inline" data-katex="\vec{k} = (0,0,1)"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let the vector field be <span class="katex-inline" data-katex="\vec{V}(yz, -xz, x^2 - xy)"></span>.</p>
+                        <p>1. Verify that <span class="katex-inline" data-katex="\vec{V}"></span> is a curl field and find a vector potential of the form <span class="katex-inline" data-katex="\vec{W}(S(x,y,z), T(x,y,z), 0)"></span> satisfying <span class="katex-inline" data-katex="\text{curl} \, \vec{W} = \vec{V}"></span>.</p>
+                        <p>2. By applying the Stokes' and Ostrogradsky's (Divergence) theorems, calculate the flux of the vector field <span class="katex-inline" data-katex="\vec{V}"></span> through the semi-ellipsoid <span class="katex-inline" data-katex="\Sigma: \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1, z \ge 0"></span>, positive face (outward normal).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3 (5 pts)</h3>
+                    <div class="exercise-content">
+                        <p><b>I.</b> Let f be a holomorphic function in <span class="katex-inline" data-katex="|z| < R"></span> with <span class="katex-inline" data-katex="R > 1"></span>. By applying Cauchy's integral formula, calculate the following integrals where the circle <span class="katex-inline" data-katex="|z|=1"></span> is traversed in the positive direction:</p>
+                        <p><span class="katex-display" data-katex="\int_{|z|=1} \left(2 + \left(z + \frac{1}{z}\right)\right) \frac{f(z)}{z} dz \quad \text{and} \quad \int_{|z|=1} \left(2 - \left(z + \frac{1}{z}\right)\right) \frac{f(z)}{z} dz"></span></p>
+                        <p>Deduce that:</p>
+                        <p><span class="katex-display" data-katex="\frac{2}{\pi} \int_{0}^{2\pi} f(e^{i\theta}) \cos^2\frac{\theta}{2} d\theta = 2f(0) + f'(0)"></span></p>
+                        <p><span class="katex-display" data-katex="\frac{2}{\pi} \int_{0}^{2\pi} f(e^{i\theta}) \sin^2\frac{\theta}{2} d\theta = 2f(0) - f'(0)"></span></p>
+                        <p><b>II.</b> Let <span class="katex-inline" data-katex="C_R"></span> be the square with vertices <span class="katex-inline" data-katex="R(1+i), R(-1+i), R(-1-i), R(1-i)"></span>, traversed in the positive direction. Let <span class="katex-inline" data-katex="f(z) = \frac{1}{(z+1)^2(z-2)}"></span>. Determine the value of the integral <span class="katex-inline" data-katex="\int_{C_R} f(z) dz"></span> according to the value of <span class="katex-inline" data-katex="R \in \mathbb{R}^+ \setminus \{1, 2\}"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>The intersection of the sphere <span class="katex-inline" data-katex="x^2+y^2+z^2=a^2"></span> and the plane <span class="katex-inline" data-katex="z=a/2"></span> gives <span class="katex-inline" data-katex="x^2+y^2+(a/2)^2=a^2"></span>, which is <span class="katex-inline" data-katex="x^2+y^2 = \frac{3a^2}{4}"></span>. This is a circle with radius <span class="katex-inline" data-katex="R=\frac{\sqrt{3}}{2}a"></span>.</p>
+                        <p>A parameterization is: <span class="katex-display" data-katex="x(t) = \frac{\sqrt{3}}{2}a \cos t, \quad y(t) = \frac{\sqrt{3}}{2}a \sin t, \quad z(t) = \frac{a}{2}"></span> for <span class="katex-inline" data-katex="t \in [0, 2\pi]"></span>.</p>
+                        <p>We have <span class="katex-inline" data-katex="dx = -\frac{\sqrt{3}}{2}a \sin t \, dt"></span>, <span class="katex-inline" data-katex="dy = \frac{\sqrt{3}}{2}a \cos t \, dt"></span>, <span class="katex-inline" data-katex="dz=0"></span>.</p>
+                        <p>The integral becomes:</p>
+                        <div class="katex-display" data-katex="J = \int_{0}^{2\pi} \left( \left(\frac{3}{4}a^2\cos^2t\right)\left(\frac{\sqrt{3}}{2}a\sin t\right)\left(-\frac{\sqrt{3}}{2}a\sin t\right) + \left(\frac{\sqrt{3}}{2}a\cos t\right) \right) dt"></div>
+                        <p>The calculation leads to the final result <span class="katex-inline" data-katex="J = -\frac{9\pi a^4}{64}"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p><b>1. Divergence and Vector Potential:</b></p>
+                        <p><span class="katex-inline" data-katex="\text{div}(\vec{V}) = \frac{\partial}{\partial x}(yz) + \frac{\partial}{\partial y}(-xz) + \frac{\partial}{\partial z}(x^2-xy) = 0"></span>. The field is indeed a curl field.</p>
+                        <p>We are looking for <span class="katex-inline" data-katex="\vec{W}(S,T,0)"></span> such that <span class="katex-inline" data-katex="\text{curl} \, \vec{W} = \vec{V}"></span>. A possible vector potential is <span class="katex-inline" data-katex="\vec{W}(-\frac{1}{2}xz^2 - x^2y, -\frac{1}{2}yz^2 - \frac{1}{2}x^2y, 0)"></span>.</p>
+                        <p><b>2. Flux Calculation:</b></p>
+                        <p>By Stokes' theorem, <span class="katex-inline" data-katex="\Phi = \iint_{\Sigma} \vec{V} \cdot \vec{n} \, dS = \oint_{\partial\Sigma} \vec{W} \cdot d\vec{l}"></span>. The boundary <span class="katex-inline" data-katex="\partial\Sigma"></span> is the ellipse <span class="katex-inline" data-katex="\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1"></span> in the <span class="katex-inline" data-katex="z=0"></span> plane.</p>
+                         <p>On this boundary, <span class="katex-inline" data-katex="\vec{W} = (-x^2y, -x^2y/2, 0)"></span>. The parameterization of the ellipse is <span class="katex-inline" data-katex="x=a\cos t, y=b\sin t, z=0"></span>.</p>
+                        <p>The calculation of the line integral gives <span class="katex-inline" data-katex="\Phi = \frac{\pi a^3b}{4}"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p><b>I. Calculation of integrals and deduction</b></p>
+                        <p>Using Cauchy's integral formula for derivatives, the first integral evaluates to <span class="katex-inline" data-katex="2\pi i (2f(0)+f'(0))"></span> and the second to <span class="katex-inline" data-katex="2\pi i (2f(0)-f'(0))"></span>.</p>
+                        <p>By setting <span class="katex-inline" data-katex="z=e^{i\theta}"></span> and using trigonometric identities, we obtain the required deductions.</p>
+                        <p><b>II. Integral over the square <span class="katex-inline" data-katex="C_R"></span></b></p>
+                        <p>The residues are <span class="katex-inline" data-katex="\text{Res}(f, -1) = -1/9"></span> and <span class="katex-inline" data-katex="\text{Res}(f, 2) = 1/9"></span>.</p>
+                        <ul>
+                            <li>If <span class="katex-inline" data-katex="R < 1"></span>: No poles are enclosed. <span class="katex-inline" data-katex="\int_{C_R} f(z) dz = 0"></span>.</li>
+                            <li>If <span class="katex-inline" data-katex="1 < R < 2"></span>: The pole <span class="katex-inline" data-katex="z_1=-1"></span> is enclosed. <span class="katex-inline" data-katex="\int_{C_R} f(z) dz = 2\pi i \text{Res}(f, -1) = -2\pi i/9"></span>.</li>
+                            <li>If <span class="katex-inline" data-katex="R > 2"></span>: Both poles are enclosed. <span class="katex-inline" data-katex="\int_{C_R} f(z) dz = 2\pi i (\text{Res}(f, -1) + \text{Res}(f, 2)) = 0"></span>.</li>
+                        </ul>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Line Integrals: Physics Engines 🏎️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Calculating a line integral, as in Exercise 1, is the mathematical concept behind calculating the <strong>work</strong> done by a force. In computer science, this is essential for <strong>physics engines</strong> in video games, simulators, and animation. For an object to move realistically, the engine must constantly calculate the work done by forces (gravity, wind, explosions) along the object's trajectory.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Effect of wind on a projectile</h4>
+                        <p class="mb-4 text-slate-400">Imagine a game where you shoot an arrow. The wind is not uniform; it might be stronger at higher altitudes or swirl. The wind is a vector field of force. To calculate the exact trajectory of the arrow, the game engine must numerically integrate this force field along the curve followed by the arrow at each time step, which is an approximation of a line integral.</p>
+                        <pre class="language-pseudocode"><code>// Simulation at each frame
+    function updateArrowPosition(arrow, windField, deltaTime) {
+      // F = (Fx, Fy, Fz)
+      let force = windField.getForceAt(arrow.position);
+      
+      // Work done by the wind during this small displacement
+      // dW = F · dl ≈ F · (v * dt)
+      let work = dotProduct(force, arrow.velocity) * deltaTime;
+      
+      // The work changes the kinetic energy (and thus the velocity) of the arrow
+      arrow.kinetic_energy += work;
+      arrow.updateVelocityFromEnergy();
+      
+      // Update the position
+      arrow.position += arrow.velocity * deltaTime;
+    }</code></pre>
+                    </div>
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Stokes'/Divergence Theorems: Computational Fluid Dynamics 🌊</h3>
+                        <p class="text-lg mb-4 text-slate-300">Stokes' theorem and the Divergence theorem (Ostrogradsky's theorem) are the pillars of <strong>Computational Fluid Dynamics (CFD)</strong>. A vector field with zero divergence (<span class="katex-inline" data-katex="\text{div}(\vec{V})=0"></span>) represents an incompressible fluid, like water. These theorems allow the transformation of volume integrals into surface integrals (Divergence theorem) or surface integrals into line integrals (Stokes' theorem), which is often much simpler to compute numerically.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Smoke or Water Simulation</h4>
+                        <p class="mb-4 text-slate-400">To simulate smoke for a special effect, it is modeled as a fluid. The divergence theorem is used to ensure that the fluid does not "vanish" or get "created" from nowhere (conservation of mass). Stokes' theorem is used to calculate "vorticity" (the tendency of the fluid to swirl) on surfaces, which is crucial for creating realistic smoke vortices.</p>
+                         <pre class="language-pseudocode"><code>// Fluid simulation algorithm (finite volume method)
+    // The volume is divided into small cells
+    
+    for each cell in simulation_grid {
+      // Total flux out of the cell
+      let total_flux = 0;
+      
+      // Divergence theorem: ∫∫∫ div(V) dVol = ∫∫ V·n dS
+      // The total flux out of the cell is the sum of fluxes through each face
+      for each face in cell.faces {
+        total_flux += dotProduct(velocity_at_face, face.normal) * face.area;
+      }
+      
+      // For an incompressible fluid, the total flux must be zero.
+      // The algorithm adjusts pressures to force total_flux to be close to 0.
+      adjustPressureToEnforceIncompressibility(cell, total_flux);
+    }
+    </code></pre>
+                    </div>
+                    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">3. Complex Analysis: Control Theory and Signal Processing 📡</h3>
+                        <p class="text-lg mb-4 text-slate-300">Complex analysis, and particularly the <strong>residue theorem</strong>, is a fundamental tool in electrical engineering and control theory, fields very close to computer science. It is used to analyze the <strong>stability of systems</strong>. The "transfer function" of a system (like an audio filter, a circuit, or a drone's autopilot) is a complex function. The poles of this function (the points where it tends to infinity) determine the system's behavior.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Stability of an Autopilot</h4>
+                        <p class="mb-4 text-slate-400">The behavior of an autopilot is described by a transfer function <span class="katex-inline" data-katex="H(s)"></span> in the complex plane. For the system to be stable (i.e., it doesn't overreact to the point of becoming uncontrollable), all its poles must be in the left half-plane (<span class="katex-inline" data-katex="\text{Re}(s) < 0"></span>). The residue theorem allows for calculating the system's response to an input and verifying this stability condition by locating the poles, in the same way that Exercise 3 locates the poles inside the square <span class="katex-inline" data-katex="C_R"></span>.</p>
+                        <pre class="language-pseudocode"><code>// f(z) is the system's transfer function
+    // The poles are the roots of the denominator
+    
+    function isStable(transfer_function) {
+      let poles = findPoles(transfer_function.denominator);
+      
+      for each pole in poles {
+        // If the real part of a pole is positive or zero,
+        // the system's response can grow to infinity.
+        if (pole.real_part >= 0) {
+          return false; // Unstable!
+        }
+      }
+      
+      return true; // Stable
+    }
+    
+    // The residue theorem allows for calculating the exact
+    // time-domain response of the system by integrating over a contour in the complex plane.
+    </code></pre>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Start by finding the equation of the circle of intersection. Then, parameterize this circle using polar coordinates (cosine and sine). Don't forget to calculate the differentials dx, dy, and dz before substituting into the integral.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><b>Line Integrals:</b> An integral where the function to be integrated is evaluated along a curve. The general formula for a vector field <span class="katex-inline" data-katex="\vec{F} = (P, Q, R)"></span> along a curve <span class="katex-inline" data-katex="\Gamma"></span> parameterized by <span class="katex-inline" data-katex="\vec{r}(t)"></span> is <span class="katex-display" data-katex="\int_{\Gamma} P dx + Q dy + R dz = \int_a^b (P(\vec{r}(t))x'(t) + Q(\vec{r}(t))y'(t) + R(\vec{r}(t))z'(t)) dt"></span>.</p><p><b>Parameterization of a circle:</b> A circle of radius R centered at the origin in the xy-plane is parameterized by <span class="katex-inline" data-katex="x(t) = R\cos t, y(t) = R\sin t"></span>.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4>Step 1: Determine the curve <span class="katex-inline" data-katex="\Gamma"></span></h4><p>We substitute <span class="katex-inline" data-katex="z=a/2"></span> into the sphere's equation <span class="katex-inline" data-katex="x^2+y^2+z^2=a^2"></span>.</p><p><span class="katex-display" data-katex="x^2+y^2+(a/2)^2 = a^2 \implies x^2+y^2 = a^2 - a^2/4 = \frac{3a^2}{4}"></span></p><p>This is the equation of a circle in the plane <span class="katex-inline" data-katex="z=a/2"></span>, centered at <span class="katex-inline" data-katex="(0,0,a/2)"></span> with a radius <span class="katex-inline" data-katex="R = \sqrt{\frac{3a^2}{4}} = \frac{\sqrt{3}}{2}a"></span>.</p><h4>Step 2: Parameterize the curve <span class="katex-inline" data-katex="\Gamma"></span></h4><p>We use polar coordinates for the circle, with <span class="katex-inline" data-katex="t \in [0, 2\pi]"></span> for a complete traversal in the counter-clockwise direction.</p><p><span class="katex-inline" data-katex="x(t) = R \cos t = \frac{\sqrt{3}}{2}a \cos t"></span></p><p><span class="katex-inline" data-katex="y(t) = R \sin t = \frac{\sqrt{3}}{2}a \sin t"></span></p><p><span class="katex-inline" data-katex="z(t) = a/2"></span> (constant)</p><h4>Step 3: Calculate the differentials</h4><p><span class="katex-inline" data-katex="dx = x'(t) dt = -\frac{\sqrt{3}}{2}a \sin t \, dt"></span></p><p><span class="katex-inline" data-katex="dy = y'(t) dt = \frac{\sqrt{3}}{2}a \cos t \, dt"></span></p><p><span class="katex-inline" data-katex="dz = z'(t) dt = 0 \, dt = 0"></span></p><h4>Step 4: Substitute and calculate the integral</h4><p>We replace x, y, z, dx, dy, dz in the integral <span class="katex-inline" data-katex="J"></span>.</p><p><span class="katex-display" data-katex="J = \int_0^{2\pi} \left[ \left(\frac{\sqrt{3}}{2}a \cos t\right)^2 \left(\frac{\sqrt{3}}{2}a \sin t\right) \left(-\frac{\sqrt{3}}{2}a \sin t\right) + \left(\frac{\sqrt{3}}{2}a \cos t\right) + \left(\frac{a}{2}\right)(0) \right] dt"></span></p><p>Let's simplify the first term:</p><p><span class="katex-display" data-katex="\left(\frac{3a^2}{4}\cos^2t\right) \left(-\frac{3a^2}{4}\sin^2t\right) = -\frac{9a^4}{16}\cos^2t\sin^2t"></span></p><p>The integral becomes:</p><p><span class="katex-display" data-katex="J = \int_0^{2\pi} \left( -\frac{9a^4}{16}\cos^2t\sin^2t + \frac{\sqrt{3}}{2}a\cos t \right) dt"></span></p><p>We use the identity <span class="katex-inline" data-katex="\cos t \sin t = \frac{\sin(2t)}{2}"></span>, so <span class="katex-inline" data-katex="\cos^2t\sin^2t = \frac{\sin^2(2t)}{4}"></span>.</p><p><span class="katex-display" data-katex="\int_0^{2\pi} \cos t \, dt = [\sin t]_0^{2\pi} = 0"></span>.</p><p><span class="katex-display" data-katex="J = -\frac{9a^4}{16} \int_0^{2\pi} \frac{\sin^2(2t)}{4} dt = -\frac{9a^4}{64} \int_0^{2\pi} \frac{1-\cos(4t)}{2} dt"></span></p><p><span class="katex-display" data-katex="= -\frac{9a^4}{128} \left[ t - \frac{\sin(4t)}{4} \right]_0^{2\pi} = -\frac{9a^4}{128} ((2\pi - 0) - (0 - 0)) = -\frac{9\pi a^4}{64}"></span></p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>To verify that <span class="katex-inline" data-katex="\vec{V}"></span> is a curl field, calculate its divergence. If it is zero, then it is.</p><p>For the flux, Stokes' theorem is the most direct approach. It relates the flux of the curl to a line integral over the boundary of the surface. The boundary of the semi-ellipsoid is an ellipse in the z=0 plane.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><b>Divergence:</b> For <span class="katex-inline" data-katex="\vec{F}=(P,Q,R)"></span>, <span class="katex-inline" data-katex="\text{div}(\vec{F}) = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}"></span>. If <span class="katex-inline" data-katex="\text{div}(\vec{F})=0"></span>, the field is said to be divergence-free (or solenoidal) and can be expressed as the curl of another field (a vector potential).</p><p><b>Curl:</b> For <span class="katex-inline" data-katex="\vec{W}=(S,T,U)"></span>, <span class="katex-inline" data-katex="\text{curl}(\vec{W}) = (\frac{\partial U}{\partial y}-\frac{\partial T}{\partial z}, \frac{\partial S}{\partial z}-\frac{\partial U}{\partial x}, \frac{\partial T}{\partial x}-\frac{\partial S}{\partial y})"></span>.</p><p><b>Stokes' Theorem:</b> <span class="katex-display" data-katex="\iint_S \text{curl}(\vec{F}) \cdot \vec{n} \, dS = \oint_{\partial S} \vec{F} \cdot d\vec{l}"></span>. The flux of the curl of a vector field across a surface is equal to the circulation of the field along the boundary of that surface.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4>Part 1: Divergence and Vector Potential</h4><p><b>Calculating the divergence:</b></p><p><span class="katex-display" data-katex="\text{div}(\vec{V}) = \frac{\partial}{\partial x}(yz) + \frac{\partial}{\partial y}(-xz) + \frac{\partial}{\partial z}(x^2-xy) = 0 + 0 + 0 = 0"></span></p><p>Since the divergence is zero, <span class="katex-inline" data-katex="\vec{V}"></span> is a curl field. Therefore, a vector potential <span class="katex-inline" data-katex="\vec{W}"></span> exists such that <span class="katex-inline" data-katex="\text{curl}(\vec{W}) = \vec{V}"></span>.</p><p><b>Finding the vector potential <span class="katex-inline" data-katex="\vec{W}(S,T,0)"></span>:</b></p><p><span class="katex-inline" data-katex="\text{curl}(\vec{W}) = (-\frac{\partial T}{\partial z}, \frac{\partial S}{\partial z}, \frac{\partial T}{\partial x}-\frac{\partial S}{\partial y}) = (yz, -xz, x^2-xy)"></span>.</p><p>We identify the components:</p><p>1) <span class="katex-inline" data-katex="-\frac{\partial T}{\partial z} = yz \implies T = -\frac{1}{2}yz^2 + \varphi(x,y)"></span></p><p>2) <span class="katex-inline" data-katex="\frac{\partial S}{\partial z} = -xz \implies S = -\frac{1}{2}xz^2 + \psi(x,y)"></span></p><p>3) <span class="katex-inline" data-katex="\frac{\partial T}{\partial x}-\frac{\partial S}{\partial y} = \frac{\partial \varphi}{\partial x} - \frac{\partial \psi}{\partial y} = x^2-xy"></span></p><p>We can choose simple functions <span class="katex-inline" data-katex="\varphi"></span> and <span class="katex-inline" data-katex="\psi"></span> that satisfy this last equation. For example, let's choose <span class="katex-inline" data-katex="\frac{\partial \varphi}{\partial x} = -xy"></span> and <span class="katex-inline" data-katex="-\frac{\partial \psi}{\partial y} = x^2"></span>. This gives <span class="katex-inline" data-katex="\varphi(x,y) = -\frac{1}{2}x^2y"></span> and <span class="katex-inline" data-katex="\psi(x,y) = -x^2y"></span> (ignoring constants of integration which do not change the curl). A vector potential is therefore <span class="katex-inline" data-katex="\vec{W}(-\frac{1}{2}xz^2 - x^2y, -\frac{1}{2}yz^2 - \frac{1}{2}x^2y, 0)"></span>.</p><h4>Part 2: Calculating Flux using Stokes' Theorem</h4><p>The flux is <span class="katex-inline" data-katex="\Phi = \iint_{\Sigma} \vec{V} \cdot \vec{n} \, dS"></span>. Since <span class="katex-inline" data-katex="\vec{V} = \text{curl}(\vec{W})"></span>, we have <span class="katex-inline" data-katex="\Phi = \iint_{\Sigma} \text{curl}(\vec{W}) \cdot \vec{n} \, dS"></span>.</p><p>Stokes' theorem tells us that <span class="katex-inline" data-katex="\Phi = \oint_{\partial\Sigma} \vec{W} \cdot d\vec{l}"></span>.</p><p>The boundary <span class="katex-inline" data-katex="\partial\Sigma"></span> is the ellipse <span class="katex-inline" data-katex="\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1"></span> in the <span class="katex-inline" data-katex="z=0"></span> plane.</p><p>On this boundary, <span class="katex-inline" data-katex="z=0"></span>, so the vector potential simplifies to: <span class="katex-inline" data-katex="\vec{W} = (-x^2y, -x^2y/2, 0)"></span>.</p><p>Let's parameterize the ellipse: <span class="katex-inline" data-katex="x=a\cos t, y=b\sin t, z=0"></span>, for <span class="katex-inline" data-katex="t \in [0, 2\pi]"></span>. Then <span class="katex-inline" data-katex="d\vec{l} = (-a\sin t, b\cos t, 0)dt"></span>.</p><p><span class="katex-display" data-katex="\vec{W} \cdot d\vec{l} = (-a^2\cos^2t \cdot b\sin t)(-a\sin t) + (-\frac{1}{2}a^2\cos^2t \cdot b\sin t)(b\cos t) dt"></span></p><p><span class="katex-display" data-katex="= (a^3b\cos^2t\sin^2t - \frac{1}{2}a^2b^2\cos^3t\sin t) dt"></span></p><p>The integral is <span class="katex-inline" data-katex="\Phi = \int_0^{2\pi} (a^3b\cos^2t\sin^2t - \frac{1}{2}a^2b^2\cos^3t\sin t) dt"></span>. The integral of <span class="katex-inline" data-katex="\cos^3t\sin t"></span> over <span class="katex-inline" data-katex="[0, 2\pi]"></span> is zero. We are left with:</p><p><span class="katex-display" data-katex="\Phi = a^3b \int_0^{2\pi} \cos^2t\sin^2t dt = a^3b \int_0^{2\pi} \frac{\sin^2(2t)}{4} dt = \frac{a^3b}{4} \int_0^{2\pi} \frac{1-\cos(4t)}{2} dt"></span></p><p><span class="katex-display" data-katex="= \frac{a^3b}{8} [t - \frac{\sin(4t)}{4}]_0^{2\pi} = \frac{a^3b}{8}(2\pi) = \frac{\pi a^3b}{4}"></span></p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p><b>Part I:</b> Rewrite the terms <span class="katex-inline" data-katex="2 \pm (z+1/z)"></span> to make squares appear. Then apply Cauchy's integral formula for the derivative: <span class="katex-inline" data-katex="\int_\gamma \frac{h(z)}{(z-z_0)^{n+1}} dz = \frac{2\pi i}{n!} h^{(n)}(z_0)"></span>.</p><p><b>Part II:</b> Use the residue theorem. Identify the poles of the function and determine which ones are inside the square <span class="katex-inline" data-katex="C_R"></span> based on the value of R. The distance from the origin to the vertices is <span class="katex-inline" data-katex="\sqrt{R^2+R^2} = R\sqrt{2}"></span>.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><b>Holomorphic Function:</b> A complex-valued function that is complex differentiable at every point of an open subset of the complex plane.</p><p><b>Cauchy's Integral Formula (for derivatives):</b> If f is holomorphic inside and on a simple closed contour <span class="katex-inline" data-katex="\gamma"></span>, then for any <span class="katex-inline" data-katex="z_0"></span> inside <span class="katex-inline" data-katex="\gamma"></span>, <span class="katex-display" data-katex="f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_\gamma \frac{f(z)}{(z-z_0)^{n+1}} dz"></span>.</p><p><b>Residue Theorem:</b> <span class="katex-display" data-katex="\int_\gamma f(z) dz = 2\pi i \sum_k \text{Res}(f, z_k)"></span>, where the sum is over all poles <span class="katex-inline" data-katex="z_k"></span> of f inside the contour <span class="katex-inline" data-katex="\gamma"></span>.</p><p><b>Calculating Residues:</b> For a simple pole <span class="katex-inline" data-katex="z_0"></span>, <span class="katex-inline" data-katex="\text{Res}(f, z_0) = \lim_{z\to z_0} (z-z_0)f(z)"></span>. For a pole of order m, <span class="katex-inline" data-katex="\text{Res}(f, z_0) = \frac{1}{(m-1)!} \lim_{z\to z_0} \frac{d^{m-1}}{dz^{m-1}}((z-z_0)^m f(z))"></span>.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4>Part I: Cauchy's Formula</h4><p><b>First integral:</b></p><p>The integrand is <span class="katex-inline" data-katex="(2+z+1/z)\frac{f(z)}{z} = \frac{(z^2+2z+1)f(z)}{z^2} = \frac{(z+1)^2 f(z)}{z^2}"></span>. We set <span class="katex-inline" data-katex="h_1(z) = (z+1)^2 f(z)"></span>. <span class="katex-inline" data-katex="h_1(z)"></span> is holomorphic because f is. The integral is <span class="katex-inline" data-katex="\int_{|z|=1} \frac{h_1(z)}{z^2} dz"></span>. This is Cauchy's formula for the first derivative (n=1) at <span class="katex-inline" data-katex="z_0=0"></span>.</p><p><span class="katex-display" data-katex="\int_{|z|=1} \frac{h_1(z)}{z^2} dz = \frac{2\pi i}{1!} h_1'(0)"></span></p><p><span class="katex-inline" data-katex="h_1'(z) = 2(z+1)f(z) + (z+1)^2 f'(z)"></span>, so <span class="katex-inline" data-katex="h_1'(0) = 2(1)f(0) + (1)^2 f'(0) = 2f(0)+f'(0)"></span>. The integral evaluates to <span class="katex-inline" data-katex="2\pi i (2f(0)+f'(0))"></span>.</p><p><b>Second integral:</b></p><p>The integrand is <span class="katex-inline" data-katex="(2-z-1/z)\frac{f(z)}{z} = \frac{-(z^2-2z+1)f(z)}{z^2} = -\frac{(z-1)^2 f(z)}{z^2}"></span>. We set <span class="katex-inline" data-katex="h_2(z) = -(z-1)^2 f(z)"></span>. Similarly, the integral is <span class="katex-inline" data-katex="2\pi i h_2'(0)"></span>.</p><p><span class="katex-inline" data-katex="h_2'(z) = -[2(z-1)f(z) + (z-1)^2 f'(z)]"></span>, so <span class="katex-inline" data-katex="h_2'(0) = -[-2f(0)+f'(0)] = 2f(0)-f'(0)"></span>. The integral evaluates to <span class="katex-inline" data-katex="2\pi i (2f(0)-f'(0))"></span>.</p><p><b>Deduction:</b></p><p>We use <span class="katex-inline" data-katex="z=e^{i\theta}"></span>, <span class="katex-inline" data-katex="dz=ie^{i\theta}d\theta \implies dz/z = i d\theta"></span>, <span class="katex-inline" data-katex="z+1/z = 2\cos\theta"></span>. The first equality becomes:</p><p><span class="katex-display" data-katex="\int_0^{2\pi} (2+2\cos\theta) f(e^{i\theta}) i d\theta = 2\pi i (2f(0)+f'(0))"></span></p><p><span class="katex-display" data-katex="\int_0^{2\pi} 4\cos^2(\theta/2) f(e^{i\theta}) d\theta = 2\pi (2f(0)+f'(0)) \implies \frac{2}{\pi}\int_0^{2\pi} \cos^2(\theta/2) f(e^{i\theta}) d\theta = 2f(0)+f'(0)"></span>. The second is deduced similarly.</p><h4>Part II: Residue Theorem</h4><p>The poles of <span class="katex-inline" data-katex="f(z) = \frac{1}{(z+1)^2(z-2)}"></span> are <span class="katex-inline" data-katex="z_1=-1"></span> (double) and <span class="katex-inline" data-katex="z_2=2"></span> (simple).</p><p><span class="katex-display" data-katex="\text{Res}(f, 2) = \lim_{z\to 2} (z-2)f(z) = \lim_{z\to 2} \frac{1}{(z+1)^2} = \frac{1}{3^2} = \frac{1}{9}"></span></p><p><span class="katex-display" data-katex="\text{Res}(f, -1) = \frac{1}{(2-1)!} \lim_{z\to -1} \frac{d}{dz}((z+1)^2 f(z)) = \lim_{z\to -1} \frac{d}{dz}(\frac{1}{z-2}) = \lim_{z\to -1} \frac{-1}{(z-2)^2} = \frac{-1}{(-3)^2} = -\frac{1}{9}"></span></p><p>The square <span class="katex-inline" data-katex="C_R"></span> is centered at the origin. The distance from the origin to the vertices is <span class="katex-inline" data-katex="R\sqrt{2}"></span>. The sides are at a distance <span class="katex-inline" data-katex="R"></span> from the axes.</p><ul><li>The pole <span class="katex-inline" data-katex="z_1=-1"></span> is enclosed if the distance from -1 to the origin (which is 1) is less than R, i.e., <span class="katex-inline" data-katex="R>1"></span>.</li><li>The pole <span class="katex-inline" data-katex="z_2=2"></span> is enclosed if the distance from 2 to the origin (which is 2) is less than R, i.e., <span class="katex-inline" data-katex="R>2"></span>.</li></ul><p>Based on these conditions, we analyze the cases:</p><ul><li>If <span class="katex-inline" data-katex="R < 1"></span>: No poles are enclosed. <span class="katex-inline" data-katex="\int = 0"></span>.</li><li>If <span class="katex-inline" data-katex="1 < R < 2"></span>: Only <span class="katex-inline" data-katex="z_1=-1"></span> is enclosed. <span class="katex-inline" data-katex="\int = 2\pi i(-\frac{1}{9}) = -\frac{2\pi i}{9}"></span>.</li><li>If <span class="katex-inline" data-katex="R > 2"></span>: Both poles are enclosed. <span class="katex-inline" data-katex="\int = 2\pi i(-\frac{1}{9} + \frac{1}{9}) = 0"></span>.</li></ul></div></div>
+
+    <script>
+        // This function will be called once the DOM is loaded and the KaTeX script is ready.
+        function renderKatexWhenReady() {
+            if (window.katex) {
+                document.querySelectorAll('[data-katex]').forEach(el => {
+                    const content = el.getAttribute('data-katex');
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX rendering error:", e, "on element:", el);
+                        el.textContent = `Error rendering formula: ${content}`;
+                    }
+                });
+            } else {
+                // Retry if KaTeX is not loaded yet
+                setTimeout(renderKatexWhenReady, 100);
+            }
+        }
+        
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        // The 'defer' attribute on the script tag ensures this runs after the document is parsed.
+        // We will also listen for the DOMContentLoaded event for maximum reliability.
+        document.addEventListener("DOMContentLoaded", renderKatexWhenReady);
+    </script>
+</body>
+</html>

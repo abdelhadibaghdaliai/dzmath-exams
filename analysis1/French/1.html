@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 1 - Épreuve Finale (13/01/2024)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles from dark.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1em 0;
+            text-align: center;
+        }
+        
+        /* Specific styles for Part I/II headers */
+        main > h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #a5b4fc; /* A lighter, violet-tinged blue */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #475569;
+        }
+        h4 {
+            font-size: 1.25rem;
+            color: #93c5fd;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 1</h1>
+            <p class="exam-subtitle">Épreuve Finale (13/01/2024)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <h3>Partie I (10 pts) Questions indépendantes</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice I.1 (1 pt)</h3>
+                    <div class="exercise-content">
+                        <p>1. Montrer que <span class="katex-inline" data-id="exI1-q1-eq"></span> où <span class="katex-inline" data-id="exI1-q1-E"></span> désigne la partie entière de <span class="katex-inline" data-id="exI1-q1-x"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintI1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeI1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice I.2 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>2. Montrer que l'ensemble <span class="katex-inline" data-id="exI2-q2-A"></span> est bornée et déterminer ses bornes puis en déduire que l'ensemble <span class="katex-inline" data-id="exI2-q2-E"></span> est bornée ainsi que ses bornes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintI2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeI2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice I.3 (3 pts)</h3>
+                    <div class="exercise-content">
+                        <p>3. Montrer que la suite <span class="katex-inline" data-id="exI3-q3-un"></span> définie par <span class="katex-inline" data-id="exI3-q3-sum"></span> tend vers <span class="katex-inline" data-id="exI3-q3-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintI3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeI3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice I.4 (2 pts)</h3>
+                    <div class="exercise-content">
+                        <p>4. Montrer par l'absurde que la suite <span class="katex-inline" data-id="exI4-q4-wn"></span> définie par <span class="katex-inline" data-id="exI4-q4-w0"></span> et <span class="katex-inline" data-id="exI4-q4-rec"></span> n'a pas de limite dans <span class="katex-inline" data-id="exI4-q4-R"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintI4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeI4')">Prérequis</button>
+                    </div>
+                </div>
+
+                <h3>Partie II (10 pts)</h3>
+                <p class="mb-4 text-slate-300">On considère la fonction <span class="katex-inline" data-id="exII-func-def1"></span> de <span class="katex-inline" data-id="exII-func-def2"></span> dans <span class="katex-inline" data-id="exII-func-def3"></span>, définie par: <span class="katex-display" data-id="exII-func-def4"></span></p>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.1 (2 pts)</h3>
+                    <div class="exercise-content">
+                        <p>1. Montrer que <span class="katex-inline" data-id="exII1-q1"></span> est continue dans <span class="katex-inline" data-id="exII1-q1-R"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.2 (2.5 pts)</h3>
+                    <div class="exercise-content">
+                        <p>2. Montrer que <span class="katex-inline" data-id="exII2-q2-f"></span> est dérivable dans <span class="katex-inline" data-id="exII2-q2-R"></span> et déterminer sa dérivée <span class="katex-inline" data-id="exII2-q2-fp"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.3 (1 pt)</h3>
+                    <div class="exercise-content">
+                        <p>3. <span class="katex-inline" data-id="exII3-q3-fp"></span> est-elle continue en zéro?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.4 (3 pts)</h3>
+                    <div class="exercise-content">
+                        <p>4. Résoudre dans <span class="katex-inline" data-id="exII4-q4-R"></span> l'équation <span class="katex-inline" data-id="exII4-q4-f0"></span> puis en déduire en utilisant le théorème de Rolle que l'équation <span class="katex-inline" data-id="exII4-q4-fp0"></span> admet une infinité de solutions dans <span class="katex-inline" data-id="exII4-q4-R2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII4')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.5 (1 pt)</h3>
+                    <div class="exercise-content">
+                        <p>5. Justifier que <span class="katex-inline" data-id="exII5-q5-interval"></span> est un intervalle de <span class="katex-inline" data-id="exII5-q5-R"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII5')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII5')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.6 (0.5 pt)</h3>
+                    <div class="exercise-content">
+                        <p>6. Considérons la fonction <span class="katex-inline" data-id="exII6-q6-g-map"></span> définie par <span class="katex-inline" data-id="exII6-q6-gx"></span> pour tout <span class="katex-inline" data-id="exII6-q6-x-in"></span>. Justifier que <span class="katex-inline" data-id="exII6-q6-g"></span> possède une fonction réciproque <span class="katex-inline" data-id="exII6-q6-ginv"></span> définie dans l'intervalle <span class="katex-inline" data-id="exII6-q6-f-interval"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII6')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII6')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice II.7 (0.5 pt)</h3>
+                    <div class="exercise-content">
+                        <p>7. La fonction <span class="katex-inline" data-id="exII7-q7-ginv"></span> est-elle dérivable dans l'intervalle <span class="katex-inline" data-id="exII7-q7-f-interval"></span>?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintII7')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeII7')">Prérequis</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <h3>Partie I</h3>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice I.1</h3>
+                    <div class="exercise-content">
+                        <p>1. Soit <span class="katex-inline" data-id="solI1-p1-n"></span>, <span class="katex-inline" data-id="solI1-p1-Esqrtx"></span> <span class="katex-inline" data-id="solI1-p1-Esqrtx-eq-n"></span> <span class="katex-inline" data-id="solI1-p1-ineq1"></span> <span class="katex-inline" data-id="solI1-p1-ineq2"></span> <span class="katex-inline" data-id="solI1-p1-ineq3"></span> <span class="katex-inline" data-id="solI1-p1-ineq4"></span> <span class="katex-inline" data-id="solI1-p1-EsqrtEx"></span> D'où l'égalité <span class="katex-inline" data-id="solI1-p1-final-eq"></span>, <span class="katex-inline" data-id="solI1-p1-domain"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationI1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice I.2</h3>
+                    <div class="exercise-content">
+                        <p>2. L'ensemble <span class="katex-inline" data-id="solI2-p2-A"></span>. <span class="katex-inline" data-id="solI2-p2-1inA"></span> et <span class="katex-inline" data-id="solI2-p2-ineq-A"></span>. <span class="katex-inline" data-id="solI2-p2-A-non-vide"></span> est non vide et <span class="katex-inline" data-id="solI2-p2-A-borne"></span> est borné. <span class="katex-inline" data-id="solI2-p2-A"></span> admet une borne supérieure et une borne inférieure. <span class="katex-inline" data-id="solI2-p2-A"></span> est majoré par 1 et <span class="katex-inline" data-id="solI2-p2-1inA2"></span> alors <span class="katex-inline" data-id="solI2-p2-supA"></span>. <span class="katex-inline" data-id="solI2-p2-A"></span> est minoré par 0; <span class="katex-inline" data-id="solI2-p2-infA-def"></span>. On prend <span class="katex-inline" data-id="solI2-p2-n-choice"></span>. Alors <span class="katex-inline" data-id="solI2-p2-infA"></span>.</p>
+                        <p>On peut écrire <span class="katex-inline" data-id="solI2-p2-E-sum"></span>. Alors <span class="katex-inline" data-id="solI2-p2-E-non-vide-borne"></span> est non vide, borné et l'on a: <span class="katex-inline" data-id="solI2-p2-supE"></span>. <span class="katex-inline" data-id="solI2-p2-infE"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationI2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice I.3</h3>
+                    <div class="exercise-content">
+                        <p>3. On a <span class="katex-inline" data-id="solI3-p3-ineq1"></span> D'où <span class="katex-inline" data-id="solI3-p3-un-ineq"></span> <span class="katex-inline" data-id="solI3-p3-sum-eval"></span> <span class="katex-inline" data-id="solI3-p3-lim-sqrt"></span> alors par comparaison, <span class="katex-inline" data-id="solI3-p3-lim-un"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationI3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice I.4</h3>
+                    <div class="exercise-content">
+                        <p>4. Supposons par l'absurde que <span class="katex-inline" data-id="solI4-p4-wn"></span> admette une limite dans <span class="katex-inline" data-id="solI4-p4-R"></span> qu'on note <span class="katex-inline" data-id="solI4-p4-l"></span>. Alors <span class="katex-inline" data-id="solI4-p4-l"></span> satisfait <span class="katex-inline" data-id="solI4-p4-eq-l"></span>, ce qui donne <span class="katex-inline" data-id="solI4-p4-quadratic"></span>. C'est absurde car <span class="katex-inline" data-id="solI4-p4-delta"></span>, donc l'équation n'a pas de solutions dans <span class="katex-inline" data-id="solI4-p4-R2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationI4')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3>Partie II</h3>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.1</h3>
+                    <div class="exercise-content">
+                        <p>1. Pour <span class="katex-inline" data-id="solII1-p1-x-neq-0"></span>, <span class="katex-inline" data-id="solII1-p1-fx-expr"></span> est continue comme produit et composée de fonctions continues. Pour <span class="katex-inline" data-id="solII1-p1-x-eq-0"></span>: <span class="katex-inline" data-id="solII1-p1-limfx"></span>.</p>
+                        <p>On a <span class="katex-inline" data-id="solII1-p1-ineq-cos"></span> <span class="katex-inline" data-id="solII1-p1-ineq-x2cos"></span>. Par le théorème des gendarmes, <span class="katex-inline" data-id="solII1-p1-lim-squeeze"></span>. Alors <span class="katex-inline" data-id="solII1-p1-f-cont-0"></span> est continue en 0. Donc <span class="katex-inline" data-id="solII1-p1-f-cont-R"></span> est continue sur <span class="katex-inline" data-id="solII1-p1-R"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.2</h3>
+                    <div class="exercise-content">
+                        <p>2. Pour <span class="katex-inline" data-id="solII2-p2-x-neq-0"></span>, <span class="katex-inline" data-id="solII2-p2-f"></span> est dérivable et <span class="katex-display" data-id="solII2-p2-fprime-calc"></span></p>
+                        <p>Pour <span class="katex-inline" data-id="solII2-p2-x-eq-0"></span>: <span class="katex-inline" data-id="solII2-p2-lim-def"></span> <span class="katex-inline" data-id="solII2-p2-lim-eval"></span>. Donc <span class="katex-inline" data-id="solII2-p2-f-der-0"></span> est dérivable en 0 et <span class="katex-inline" data-id="solII2-p2-fprime-0"></span>.</p>
+                        <p><span class="katex-inline" data-id="solII2-p2-fprime-final"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.3</h3>
+                    <div class="exercise-content">
+                        <p>3. On étudie la limite de <span class="katex-inline" data-id="solII3-p3-fprime"></span> quand <span class="katex-inline" data-id="solII3-p3-x-to-0"></span>. <span class="katex-inline" data-id="solII3-p3-lim-fprime"></span></p>
+                        <p><span class="katex-inline" data-id="solII3-p3-lim-term1"></span> Mais <span class="katex-inline" data-id="solII3-p3-lim-sin"></span> n'existe pas. Donc <span class="katex-inline" data-id="solII3-p3-lim-fprime-total"></span> n'existe pas. Par conséquent, <span class="katex-inline" data-id="solII3-p3-fprime-not-cont"></span> n'est pas continue en 0.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.4</h3>
+                    <div class="exercise-content">
+                        <p>4. <span class="katex-inline" data-id="solII4-p4-fx-eq-0"></span> ou <span class="katex-inline" data-id="solII4-p4-x2cos2-eq-0"></span>. Pour <span class="katex-inline" data-id="solII4-p4-x-neq-0"></span> <span class="katex-inline" data-id="solII4-p4-cosx-eq-0"></span> <span class="katex-inline" data-id="solII4-p4-1overx"></span> <span class="katex-inline" data-id="solII4-p4-k-in-Z"></span> <span class="katex-inline" data-id="solII4-p4-x-sol"></span> Soit <span class="katex-inline" data-id="solII4-p4-S"></span>.</p>
+                        <p>Pour tout <span class="katex-inline" data-id="solII4-p4-k-in-Z2"></span> posons <span class="katex-inline" data-id="solII4-p4-xk"></span> et <span class="katex-inline" data-id="solII4-p4-xk1"></span></p>
+                        <p>On a <span class="katex-inline" data-id="solII4-p4-f-xk-xk1"></span>. La fonction <span class="katex-inline" data-id="solII4-p4-f"></span> est continue sur <span class="katex-inline" data-id="solII4-p4-interval-cont"></span> et dérivable sur <span class="katex-inline" data-id="solII4-p4-interval-deriv"></span>. D'après le théorème de Rolle, il existe <span class="katex-inline" data-id="solII4-p4-ck-in"></span> tel que <span class="katex-inline" data-id="solII4-p4-fprime-ck"></span>. Comme il y a une infinité de tels intervalles (pour chaque <span class="katex-inline" data-id="solII4-p4-k-in-Z3"></span>), il y a une infinité de solutions à <span class="katex-inline" data-id="solII4-p4-fprime-x"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII4')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.5</h3>
+                    <div class="exercise-content">
+                        <p>5. L'image d'un intervalle par une fonction continue est un intervalle. Comme <span class="katex-inline" data-id="solII5-p5-f-cont-R"></span> est continue sur <span class="katex-inline" data-id="solII5-p5-R"></span>. <span class="katex-inline" data-id="solII5-p5-f-interval"></span> est un intervalle de <span class="katex-inline" data-id="solII5-p5-R2"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII5')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.6</h3>
+                    <div class="exercise-content">
+                        <p>6. La fonction <span class="katex-inline" data-id="solII6-p6-g"></span> est continue sur <span class="katex-inline" data-id="solII6-p6-domain"></span> car <span class="katex-inline" data-id="solII6-p6-f"></span> l'est. Pour montrer qu'elle admet une fonction réciproque, il faut montrer qu'elle est strictement monotone. <span class="katex-inline" data-id="solII6-p6-gprime"></span>. Sur <span class="katex-inline" data-id="solII6-p6-x-range"></span>, <span class="katex-inline" data-id="solII6-p6-1overx-range"></span>. Dans cet intervalle <span class="katex-inline" data-id="solII6-p6-sin2overx-positive"></span>. Aussi <span class="katex-inline" data-id="solII6-p6-2xcos2-positive"></span>. Donc <span class="katex-inline" data-id="solII6-p6-gprime-positive"></span> sur l'intervalle. <span class="katex-inline" data-id="solII6-p6-g-cont-mono"></span> est continue et strictement monotone, donc elle admet une fonction réciproque.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII6')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice II.7</h3>
+                    <div class="exercise-content">
+                        <p>7. <span class="katex-inline" data-id="solII7-p7-g-der"></span> est dérivable sur <span class="katex-inline" data-id="solII7-p7-domain"></span> et sa dérivée est non nulle, donc sa fonction réciproque <span class="katex-inline" data-id="solII7-p7-ginv"></span> est dérivable sur l'intervalle image <span class="katex-inline" data-id="solII7-p7-image-interval"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationII7')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hintI1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice I.1</h3><span class="close-btn" onclick="closeModal('hintI1')">&times;</span></div>
+            <p>Utilisez la définition de la partie entière: <span class="katex-inline" data-id="hI1-def-E"></span> si et seulement si <span class="katex-inline" data-id="hI1-ineq-n"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeI1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice I.1</h3><span class="close-btn" onclick="closeModal('knowledgeI1')">&times;</span></div>
+            <p><strong>Partie Entière (Fonction Plancher):</strong> Pour tout nombre réel <span class="katex-inline" data-id="kI1-x"></span>, la partie entière de <span class="katex-inline" data-id="kI1-x2"></span>, notée <span class="katex-inline" data-id="kI1-Ex"></span>, est le plus grand entier inférieur ou égal à <span class="katex-inline" data-id="kI1-x3"></span>. Elle satisfait la propriété <span class="katex-inline" data-id="kI1-Ex-ineq"></span>.</p>
+            <p><strong>Propriétés des inégalités:</strong> Élever une inégalité au carré conserve l'ordre si les termes sont positifs.</p>
+        </div>
+    </div>
+    <div id="explanationI1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice I.1</h3><span class="close-btn" onclick="closeModal('explanationI1')">&times;</span></div>
+            <h4>Objectif: Prouver <span class="katex-inline" data-id="eI1-obj"></span></h4>
+            <p>Soit <span class="katex-inline" data-id="eI1-n"></span> un entier naturel.</p>
+            <p>La **première partie** de l'équivalence est de dire que <span class="katex-inline" data-id="eI1-Esqrtx-n"></span>. Par la définition de la partie entière, cela signifie que <span class="katex-inline" data-id="eI1-n-le-sqrtx-lt-n1"></span>.</p>
+            <p>Puisque <span class="katex-inline" data-id="eI1-x-ge-0"></span>, toutes les quantités sont positives, nous pouvons élever au carré les termes de l'inégalité sans en changer le sens:</p>
+            <div class="katex-display" data-id="eI1-n2-le-x-lt-n12"></div>
+            <p>Ensuite, appliquons la fonction partie entière <span class="katex-inline" data-id="eI1-E"></span> à tous les termes. La fonction partie entière est croissante:</p>
+            <div class="katex-display" data-id="eI1-E-n2-le-E-x-lt-E-n12"></div>
+            <p>Puisque <span class="katex-inline" data-id="eI1-n2"></span> et <span class="katex-inline" data-id="eI1-n12"></span> sont des entiers, leur partie entière est eux-mêmes:</p>
+            <div class="katex-display" data-id="eI1-n2-le-Ex-lt-n12-simplified"></div>
+            <p>Maintenant, nous voulons relier cela à <span class="katex-inline" data-id="eI1-sqrtEx"></span>. Prenons la racine carrée de l'inégalité. Comme tous les termes sont positifs, l'ordre est conservé:</p>
+            <div class="katex-display" data-id="eI1-n-le-sqrtEx-lt-n1"></div>
+            <p>Enfin, par la définition de la partie entière, l'inégalité <span class="katex-inline" data-id="eI1-n-le-sqrtEx-lt-n1-final"></span> est équivalente à <span class="katex-inline" data-id="eI1-EsqrtEx-n"></span>.</p>
+            <p>Nous avons donc montré la chaîne d'équivalences: <span class="katex-inline" data-id="eI1-chain"></span></p>
+            <p>D'où, l'égalité <span class="katex-inline" data-id="eI1-final-result"></span> est prouvée pour tout <span class="katex-inline" data-id="eI1-x-domain"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintI2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice I.2</h3><span class="close-btn" onclick="closeModal('hintI2')">&times;</span></div>
+            <p>Pour l'ensemble <span class="katex-inline" data-id="hI2-E"></span>, réécrivez son élément général <span class="katex-inline" data-id="hI2-pq"></span> sous la forme <span class="katex-inline" data-id="hI2-sum-frac"></span>, puis utilisez les propriétés des bornes de l'ensemble <span class="katex-inline" data-id="hI2-A"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeI2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice I.2</h3><span class="close-btn" onclick="closeModal('knowledgeI2')">&times;</span></div>
+            <p><strong>Ensemble borné:</strong> Un ensemble <span class="katex-inline" data-id="kI2-S"></span> est borné s'il est à la fois majoré et minoré. C'est-à-dire, il existe <span class="katex-inline" data-id="kI2-M"></span> (majorant) et <span class="katex-inline" data-id="kI2-m"></span> (minorant) tels que pour tout <span class="katex-inline" data-id="kI2-s"></span> dans <span class="katex-inline" data-id="kI2-S2"></span>, <span class="katex-inline" data-id="kI2-ineq-mMs"></span>.</p>
+            <p><strong>Borne supérieure (supremum):</strong> Le plus petit des majorants.</p>
+            <p><strong>Borne inférieure (infimum):</strong> Le plus grand des minorants.</p>
+            <p><strong>Propriété des sommes d'ensembles:</strong> Si <span class="katex-inline" data-id="kI2-A-plus-B"></span> est défini comme <span class="katex-inline" data-id="kI2-def-AplusB"></span>, alors <span class="katex-inline" data-id="kI2-sup-AplusB"></span> et <span class="katex-inline" data-id="kI2-inf-AplusB"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationI2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice I.2</h3><span class="close-btn" onclick="closeModal('explanationI2')">&times;</span></div>
+            <h4>Partie 1: Étude de l'ensemble <span class="katex-inline" data-id="eI2-A-title"></span></h4>
+            <p>L'ensemble <span class="katex-inline" data-id="eI2-A-def"></span>.
+            </p><ul>
+                <li><strong>Non vide:</strong> Pour <span class="katex-inline" data-id="eI2-n-eq-1"></span>, <span class="katex-inline" data-id="eI2-1-in-A"></span>, donc <span class="katex-inline" data-id="eI2-A-not-empty"></span> n'est pas vide.</li>
+                <li><strong>Borné:</strong> Pour tout <span class="katex-inline" data-id="eI2-n-star"></span>, on a <span class="katex-inline" data-id="eI2-0-lt-1overn-le-1"></span>.
+                    <ul>
+                        <li><span class="katex-inline" data-id="eI2-A-majore"></span> est majoré par 1. Puisque <span class="katex-inline" data-id="eI2-1-in-A-sup"></span>, 1 est le plus petit des majorants. Donc, <span class="katex-inline" data-id="eI2-supA-1"></span>.</li>
+                        <li><span class="katex-inline" data-id="eI2-A-minore"></span> est minoré par 0. Pour montrer que 0 est l'infimum, il faut montrer que pour tout <span class="katex-inline" data-id="eI2-epsilon"></span>, il existe un <span class="katex-inline" data-id="eI2-1overn-lt-epsilon"></span>. Par la propriété d'Archimède, on peut choisir un entier <span class="katex-inline" data-id="eI2-n-archimede"></span> (par exemple, <span class="katex-inline" data-id="eI2-n-choice-inf"></span>). Alors <span class="katex-inline" data-id="eI2-infA-0"></span>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Partie 2: Étude de l'ensemble <span class="katex-inline" data-id="eI2-E-title"></span></h4>
+            <p>L'ensemble <span class="katex-inline" data-id="eI2-E-def"></span>. On peut réécrire l'élément général comme <span class="katex-inline" data-id="eI2-rewritten-element"></span>.</p>
+            <p>Ainsi, <span class="katex-inline" data-id="eI2-E-as-sum"></span> est la somme de l'ensemble <span class="katex-inline" data-id="eI2-A-as-sum"></span> avec lui-même.</p>
+            <p>Puisque <span class="katex-inline" data-id="eI2-A-is-bounded"></span> est borné, <span class="katex-inline" data-id="eI2-E-is-bounded"></span> est aussi borné.</p>
+            <p>En utilisant les propriétés des bornes des sommes d'ensembles:</p>
+            <ul>
+                <li><span class="katex-inline" data-id="eI2-supE-calc"></span></li>
+                <li><span class="katex-inline" data-id="eI2-infE-calc"></span></li>
+            </ul>
+            <p>Donc, l'ensemble <span class="katex-inline" data-id="eI2-E-final"></span> est borné, avec <span class="katex-inline" data-id="eI2-supE-final"></span> et <span class="katex-inline" data-id="eI2-infE-final"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintI3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice I.3</h3><span class="close-btn" onclick="closeModal('hintI3')">&times;</span></div>
+            <p>Trouvez une inégalité pour chaque terme de la somme <span class="katex-inline" data-id="hI3-sum-term"></span> en fonction de <span class="katex-inline" data-id="hI3-n"></span>. Pour <span class="katex-inline" data-id="hI3-k"></span> variant de <span class="katex-inline" data-id="hI3-0-to-n"></span>, quelle est la plus petite valeur de <span class="katex-inline" data-id="hI3-sqrt-k1"></span>?</p>
+        </div>
+    </div>
+    <div id="knowledgeI3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice I.3</h3><span class="close-btn" onclick="closeModal('knowledgeI3')">&times;</span></div>
+            <p><strong>Critère de comparaison pour les suites:</strong> Si <span class="katex-inline" data-id="kI3-an-le-bn"></span> pour tout <span class="katex-inline" data-id="kI3-n"></span> suffisamment grand, et si <span class="katex-inline" data-id="kI3-lim-an"></span>, alors <span class="katex-inline" data-id="kI3-lim-bn"></span>.</p>
+            <p><strong>Limite de fonctions usuelles:</strong> La limite de <span class="katex-inline" data-id="kI3-sqrtx"></span> quand <span class="katex-inline" data-id="kI3-x-to-inf"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationI3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice I.3</h3><span class="close-btn" onclick="closeModal('explanationI3')">&times;</span></div>
+            <h4>Objectif: Montrer que <span class="katex-inline" data-id="eI3-un-to-inf"></span></h4>
+            <p>La suite <span class="katex-inline" data-id="eI3-un-def"></span> est définie par la somme <span class="katex-inline" data-id="eI3-un-sum"></span>.</p>
+            <p>Pour chaque terme de la somme, nous cherchons un minorant.
+            Pour <span class="katex-inline" data-id="eI3-k-range"></span>, nous avons:</p>
+            <div class="katex-display" data-id="eI3-k-le-n"></div>
+            <p>Ajoutons 1 à chaque partie de l'inégalité:</p>
+            <div class="katex-display" data-id="eI3-k1-le-n1"></div>
+            <p>Prenons la racine carrée (la fonction racine carrée est croissante):</p>
+            <div class="katex-display" data-id="eI3-sqrtk1-le-sqrtn1"></div>
+            <p>Maintenant, prenons l'inverse de chaque terme (ce qui inverse le sens de l'inégalité, car les termes sont positifs):</p>
+            <div class="katex-display" data-id="eI3-1oversqrtk1-ge-1oversqrtn1"></div>
+            <p>Chaque terme de la somme <span class="katex-inline" data-id="eI3-un-sum-term"></span> est donc supérieur ou égal à <span class="katex-inline" data-id="eI3-1oversqrtn1-term"></span>.
+            </p><p>Maintenant, sommons cette inégalité sur les <span class="katex-inline" data-id="eI3-n1-terms"></span> termes (de <span class="katex-inline" data-id="eI3-k0-to-n"></span>):</p>
+            <div class="katex-display" data-id="eI3-un-ineq-sum"></div>
+            <p>La somme du membre de droite est la somme de <span class="katex-inline" data-id="eI3-n1-times"></span> fois la même constante <span class="katex-inline" data-id="eI3-constant-term"></span>:</p>
+            <div class="katex-display" data-id="eI3-un-ge-n1-oversqrtn1"></div>
+            <p>Ce qui se simplifie en:</p>
+            <div class="katex-display" data-id="eI3-un-ge-sqrtn1"></div>
+            <p>Nous savons que <span class="katex-inline" data-id="eI3-lim-sqrtn1"></span> lorsque <span class="katex-inline" data-id="eI3-n-to-inf"></span>.</p>
+            <p>Par le **critère de comparaison**, puisque <span class="katex-inline" data-id="eI3-un-ge-sqrtn1-final"></span> et que le minorant tend vers <span class="katex-inline" data-id="eI3-inf-final"></span>, alors <span class="katex-inline" data-id="eI3-lim-un-inf"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintI4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice I.4</h3><span class="close-btn" onclick="closeModal('hintI4')">&times;</span></div>
+            <p>Si une suite <span class="katex-inline" data-id="hI4-wn"></span> converge vers une limite <span class="katex-inline" data-id="hI4-L"></span>, alors <span class="katex-inline" data-id="hI4-lim-wn1"></span> et <span class="katex-inline" data-id="hI4-lim-wn"></span> sont égales à <span class="katex-inline" data-id="hI4-L2"></span>. Substituez cela dans l'équation de récurrence.</p>
+        </div>
+    </div>
+    <div id="knowledgeI4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice I.4</h3><span class="close-btn" onclick="closeModal('knowledgeI4')">&times;</span></div>
+            <p><strong>Preuve par l'absurde:</strong> Pour prouver une proposition P, on suppose que P est fausse (c'est-à-dire non P est vraie) et on montre que cette supposition mène à une contradiction.</p>
+            <p><strong>Propriétés des limites de suites:</strong> Si une suite récurrente <span class="katex-inline" data-id="kI4-un1"></span> converge vers <span class="katex-inline" data-id="kI4-L"></span>, alors <span class="katex-inline" data-id="kI4-L"></span> doit satisfaire l'équation obtenue en remplaçant <span class="katex-inline" data-id="kI4-un1-un"></span> par <span class="katex-inline" data-id="kI4-L2"></span>.</p>
+            <p><strong>Discriminant d'une équation quadratique:</strong> Pour une équation quadratique <span class="katex-inline" data-id="kI4-ax2bxc"></span>, le discriminant est <span class="katex-inline" data-id="kI4-delta"></span>. Si <span class="katex-inline" data-id="kI4-delta-lt-0"></span>, l'équation n'a pas de solutions réelles.</p>
+        </div>
+    </div>
+    <div id="explanationI4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice I.4</h3><span class="close-btn" onclick="closeModal('explanationI4')">&times;</span></div>
+            <h4>Objectif: Montrer que <span class="katex-inline" data-id="eI4-wn-no-limit"></span></h4>
+            <p>Nous allons utiliser une preuve par l'absurde.
+            </p><p><strong>Étape 1: Supposer le contraire.</strong>
+            Supposons que la suite <span class="katex-inline" data-id="eI4-wn-def"></span> admette une limite finie <span class="katex-inline" data-id="eI4-L"></span> dans <span class="katex-inline" data-id="eI4-R"></span>.
+            </p><p><strong>Étape 2: Utiliser la propriété de la limite.</strong>
+            Si <span class="katex-inline" data-id="eI4-wn"></span> converge vers <span class="katex-inline" data-id="eI4-L2"></span>, alors <span class="katex-inline" data-id="eI4-lim-wn"></span> et <span class="katex-inline" data-id="eI4-lim-wn1"></span> sont toutes deux égales à <span class="katex-inline" data-id="eI4-L3"></span>.
+            En remplaçant <span class="katex-inline" data-id="eI4-wn1"></span> et <span class="katex-inline" data-id="eI4-wn"></span> par <span class="katex-inline" data-id="eI4-L4"></span> dans l'équation de récurrence <span class="katex-inline" data-id="eI4-rec-eq"></span>, on obtient l'équation que <span class="katex-inline" data-id="eI4-L5"></span> doit satisfaire:</p>
+            <div class="katex-display" data-id="eI4-L-eq-L2-1"></div>
+            <p><strong>Étape 3: Résoudre l'équation pour <span class="katex-inline" data-id="eI4-L6"></span>.</strong>
+            Réarrangeons cette équation pour en faire une équation quadratique standard:</p>
+            <div class="katex-display" data-id="eI4-L2-L1-eq-0"></div>
+            <p>Pour trouver les solutions de cette équation, nous calculons le discriminant <span class="katex-inline" data-id="eI4-Delta"></span>:</p>
+            <div class="katex-display" data-id="eI4-Delta-calc"></div>
+            <p><strong>Étape 4: Conclure.</strong>
+            Le discriminant est <span class="katex-inline" data-id="eI4-Delta-val"></span>, qui est **négatif** (<span class="katex-inline" data-id="eI4-Delta-lt-0"></span>).
+            Une équation quadratique avec un discriminant strictement négatif n'a **pas de solutions réelles**. Cela signifie qu'il n'existe aucune valeur réelle de <span class="katex-inline" data-id="eI4-L7"></span> qui puisse satisfaire l'équation <span class="katex-inline" data-id="eI4-L2-L1-eq-0-final"></span>.</p>
+            <p>Ceci contredit notre supposition initiale que la suite <span class="katex-inline" data-id="eI4-wn-final"></span> admet une limite dans <span class="katex-inline" data-id="eI4-R2"></span>. Par conséquent, la supposition est fausse, et la suite <span class="katex-inline" data-id="eI4-wn-no-limit-final"></span> n'a pas de limite dans <span class="katex-inline" data-id="eI4-R3"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.1</h3><span class="close-btn" onclick="closeModal('hintII1')">&times;</span></div>
+            <p>La fonction est clairement continue pour <span class="katex-inline" data-id="hII1-x-neq-0"></span>. Le seul point à vérifier est <span class="katex-inline" data-id="hII1-x-eq-0"></span>. Utilisez le théorème des gendarmes pour évaluer <span class="katex-inline" data-id="hII1-lim-f0"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeII1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.1</h3><span class="close-btn" onclick="closeModal('knowledgeII1')">&times;</span></div>
+            <p><strong>Définition de la continuité:</strong> Une fonction <span class="katex-inline" data-id="kII1-f"></span> est continue en un point <span class="katex-inline" data-id="kII1-a"></span> si <span class="katex-inline" data-id="kII1-lim-fa"></span>.</p>
+            <p><strong>Théorème des gendarmes (théorème de l'encadrement):</strong> Si <span class="katex-inline" data-id="kII1-gx-le-fx-le-hx"></span> pour tout <span class="katex-inline" data-id="kII1-x"></span> dans un intervalle contenant <span class="katex-inline" data-id="kII1-L"></span> (sauf peut-être en <span class="katex-inline" data-id="kII1-L2"></span>), et si <span class="katex-inline" data-id="kII1-lim-gh"></span>, alors <span class="katex-inline" data-id="kII1-lim-f"></span>.</p>
+            <p><strong>Continuité des fonctions élémentaires:</strong> Les fonctions polynomiales, trigonométriques (<span class="katex-inline" data-id="kII1-cos"></span>, <span class="katex-inline" data-id="kII1-sin"></span>), etc., sont continues sur leur domaine de définition. Les produits et compositions de fonctions continues sont continues.</p>
+        </div>
+    </div>
+    <div id="explanationII1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.1</h3><span class="close-btn" onclick="closeModal('explanationII1')">&times;</span></div>
+            <h4>Objectif: Montrer que <span class="katex-inline" data-id="eII1-f-cont-R"></span> est continue sur <span class="katex-inline" data-id="eII1-R"></span>.</h4>
+            <p>La fonction <span class="katex-inline" data-id="eII1-fx-def"></span> est définie par morceaux:</p>
+            <div class="katex-display" data-id="eII1-fx-piecewise"></div>
+            <h4>Partie 1: Continuité pour <span class="katex-inline" data-id="eII1-x-neq-0"></span></h4>
+            <p>Pour <span class="katex-inline" data-id="eII1-x-neq-0-cond"></span>, la fonction <span class="katex-inline" data-id="eII1-fx-form"></span> est un produit et une composition de fonctions continues:</p>
+            <ul>
+                <li><span class="katex-inline" data-id="eII1-x2"></span> est une fonction polynomiale, donc continue sur <span class="katex-inline" data-id="eII1-R2"></span>.</li>
+                <li><span class="katex-inline" data-id="eII1-1overx"></span> est continue sur <span class="katex-inline" data-id="eII1-R-star"></span>.</li>
+                <li><span class="katex-inline" data-id="eII1-cosy"></span> est continue sur <span class="katex-inline" data-id="eII1-R3"></span>.</li>
+                <li>La composition <span class="katex-inline" data-id="eII1-cos1overx"></span> est continue sur <span class="katex-inline" data-id="eII1-R-star2"></span>.</li>
+                <li>Le produit <span class="katex-inline" data-id="eII1-x2cos21overx"></span> est donc continu sur <span class="katex-inline" data-id="eII1-R-star3"></span>.</li>
+            </ul>
+            <p>Donc, <span class="katex-inline" data-id="eII1-f-cont-xneq0"></span> est continue pour tout <span class="katex-inline" data-id="eII1-x-neq-0-final"></span>.</p>
+            <h4>Partie 2: Continuité en <span class="katex-inline" data-id="eII1-x-eq-0-point"></span></h4>
+            <p>Pour que <span class="katex-inline" data-id="eII1-f-cont-0-point"></span> soit continue en 0, nous devons vérifier que <span class="katex-inline" data-id="eII1-lim-x0-fx-f0"></span>.</p>
+            <p>Nous savons que <span class="katex-inline" data-id="eII1-f0"></span>.</p>
+            <p>Calculons la limite: <span class="katex-inline" data-id="eII1-lim-fx-x0"></span>.</p>
+            <p>Nous utilisons le fait que pour tout réel <span class="katex-inline" data-id="eII1-y"></span>, <span class="katex-inline" data-id="eII1-cos2y-ineq"></span>.</p>
+            <p>Appliquons cela à <span class="katex-inline" data-id="eII1-y-1overx"></span>:</p>
+            <div class="katex-display" data-id="eII1-0-le-cos21overx-le-1"></div>
+            <p>Multiplions par <span class="katex-inline" data-id="eII1-x2"></span> (qui est positif):</p>
+            <div class="katex-display" data-id="eII1-0-le-x2cos21overx-le-x2"></div>
+            <p>Maintenant, évaluons les limites des fonctions d'encadrement lorsque <span class="katex-inline" data-id="eII1-x-to-0"></span>:</p>
+            <ul>
+                <li><span class="katex-inline" data-id="eII1-lim-0"></span></li>
+                <li><span class="katex-inline" data-id="eII1-lim-x2"></span></li>
+            </ul>
+            <p>Puisque les deux fonctions qui encadrent <span class="katex-inline" data-id="eII1-x2cos21overx-final"></span> tendent vers 0 lorsque <span class="katex-inline" data-id="eII1-x-to-0-final"></span>, par le **théorème des gendarmes**:</p>
+            <div class="katex-display" data-id="eII1-lim-x0-x2cos21overx-0"></div>
+            <p>Comme <span class="katex-inline" data-id="eII1-lim-x0-fx-0"></span> et <span class="katex-inline" data-id="eII1-f0-is-0"></span>, nous avons <span class="katex-inline" data-id="eII1-lim-fx-f0-final"></span>.</p>
+            <p>Par conséquent, <span class="katex-inline" data-id="eII1-f-cont-0-final"></span> est continue en 0.</p>
+            <h4>Conclusion:</h4>
+            <p>Puisque <span class="katex-inline" data-id="eII1-f-cont-xneq0-conclusion"></span> est continue pour <span class="katex-inline" data-id="eII1-x-neq-0-conclusion"></span> et continue en <span class="katex-inline" data-id="eII1-x-eq-0-conclusion"></span>, elle est continue sur tout <span class="katex-inline" data-id="eII1-R-conclusion"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.2</h3><span class="close-btn" onclick="closeModal('hintII2')">&times;</span></div>
+            <p>Pour <span class="katex-inline" data-id="hII2-x-neq-0"></span>, utilisez les règles de dérivation standard (règle du produit, règle de la chaîne). Pour <span class="katex-inline" data-id="hII2-x-eq-0"></span>, utilisez la définition de la dérivée: <span class="katex-inline" data-id="hII2-fprime0-def"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeII2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.2</h3><span class="close-btn" onclick="closeModal('knowledgeII2')">&times;</span></div>
+            <p><strong>Définition de la dérivabilité:</strong> Une fonction <span class="katex-inline" data-id="kII2-f"></span> est dérivable en <span class="katex-inline" data-id="kII2-a"></span> si la limite <span class="katex-inline" data-id="kII2-lim-def"></span> existe et est finie. Cette limite est la dérivée <span class="katex-inline" data-id="kII2-fprimea"></span>.</p>
+            <p><strong>Règles de dérivation:</strong></p>
+            <ul>
+                <li>Règle du produit: <span class="katex-inline" data-id="kII2-prod-rule"></span></li>
+                <li>Règle de la chaîne: <span class="katex-inline" data-id="kII2-chain-rule"></span></li>
+                <li>Dérivées des fonctions trigonométriques: <span class="katex-inline" data-id="kII2-cos-deriv"></span>, <span class="katex-inline" data-id="kII2-sin-deriv"></span>.</li>
+                <li>Identité trigonométrique: <span class="katex-inline" data-id="kII2-sin2x"></span>.</li>
+            </ul>
+        </div>
+    </div>
+    <div id="explanationII2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.2</h3><span class="close-btn" onclick="closeModal('explanationII2')">&times;</span></div>
+            <h4>Objectif: Montrer que <span class="katex-inline" data-id="eII2-f-der-R"></span> est dérivable sur <span class="katex-inline" data-id="eII2-R"></span> et déterminer <span class="katex-inline" data-id="eII2-fprime"></span>.</h4>
+            <p>La fonction <span class="katex-inline" data-id="eII2-fx-def"></span> est:</p>
+            <div class="katex-display" data-id="eII2-fx-piecewise"></div>
+            <h4>Partie 1: Dérivabilité pour <span class="katex-inline" data-id="eII2-x-neq-0"></span></h4>
+            <p>Pour <span class="katex-inline" data-id="eII2-x-neq-0-cond"></span>, <span class="katex-inline" data-id="eII2-fx-form"></span> est un produit de fonctions dérivables. Utilisons la règle du produit <span class="katex-inline" data-id="eII2-prod-rule"></span>, où <span class="katex-inline" data-id="eII2-u"></span> et <span class="katex-inline" data-id="eII2-v"></span>.</p>
+            <ul>
+                <li>Posons <span class="katex-inline" data-id="eII2-u-x2"></span>, donc <span class="katex-inline" data-id="eII2-uprime"></span>.</li>
+                <li>Posons <span class="katex-inline" data-id="eII2-v-cos2"></span>. Pour dériver <span class="katex-inline" data-id="eII2-v"></span>, nous utilisons la règle de la chaîne: <span class="katex-inline" data-id="eII2-chain-rule-func"></span>.
+                    <ul>
+                        <li>Dérivée de <span class="katex-inline" data-id="eII2-cos2y"></span> est <span class="katex-inline" data-id="eII2-2cosy-siny"></span>.</li>
+                        <li>Dérivée de <span class="katex-inline" data-id="eII2-1overx"></span> est <span class="katex-inline" data-id="eII2-minus1overx2"></span>.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Donc, <span class="katex-inline" data-id="eII2-vprime"></span>.</p>
+            <p>Appliquons la règle du produit:</p>
+            <div class="katex-display" data-id="eII2-fprime-calc-step1"></div>
+            <p>En utilisant l'identité trigonométrique <span class="katex-inline" data-id="eII2-sin2a"></span>:</p>
+            <div class="katex-display" data-id="eII2-fprime-calc-step2"></div>
+            <h4>Partie 2: Dérivabilité en <span class="katex-inline" data-id="eII2-x-eq-0-point"></span></h4>
+            <p>Nous utilisons la définition de la dérivée en un point:</p>
+            <div class="katex-display" data-id="eII2-fprime0-def"></div>
+            <p>Substituons <span class="katex-inline" data-id="eII2-f0"></span> et <span class="katex-inline" data-id="eII2-fx-form-xneq0"></span>:</p>
+            <div class="katex-display" data-id="eII2-lim-x0-fx-f0-over-x"></div>
+            <p>Nous utilisons l'encadrement <span class="katex-inline" data-id="eII2-0-le-cos2-le-1"></span>. Multiplions par <span class="katex-inline" data-id="eII2-x"></span> (attention au signe de <span class="katex-inline" data-id="eII2-x-term"></span>):
+            </p><p>Si <span class="katex-inline" data-id="eII2-x-gt-0"></span>: <span class="katex-inline" data-id="eII2-0-le-xcos2-le-x"></span>.
+            </p><p>Si <span class="katex-inline" data-id="eII2-x-lt-0"></span>: <span class="katex-inline" data-id="eII2-x-le-xcos2-le-0"></span>.
+            </p><p>Dans les deux cas, par le théorème des gendarmes, <span class="katex-inline" data-id="eII2-lim-x0-xcos2-0"></span>.</p>
+            <p>Donc, <span class="katex-inline" data-id="eII2-fprime0-0"></span>.</p>
+            <h4>Conclusion:</h4>
+            <p>La fonction dérivée <span class="katex-inline" data-id="eII2-fprime-final-form"></span> est:</p>
+            <div class="katex-display" data-id="eII2-fprime-piecewise"></div>
+            <p>Puisque <span class="katex-inline" data-id="eII2-fprime-exists-all-R"></span> existe pour tout <span class="katex-inline" data-id="eII2-x-in-R"></span>, la fonction <span class="katex-inline" data-id="eII2-f-der-R-final"></span> est dérivable sur <span class="katex-inline" data-id="eII2-R-final"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.3</h3><span class="close-btn" onclick="closeModal('hintII3')">&times;</span></div>
+            <p>Pour vérifier la continuité de <span class="katex-inline" data-id="hII3-fprime"></span> en 0, vous devez vérifier si <span class="katex-inline" data-id="hII3-lim-fprime0"></span>. Le comportement de <span class="katex-inline" data-id="hII3-sin1overx"></span> ou <span class="katex-inline" data-id="hII3-sin2overx"></span> quand <span class="katex-inline" data-id="hII3-x-to-0"></span> est crucial.</p>
+        </div>
+    </div>
+    <div id="knowledgeII3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.3</h3><span class="close-btn" onclick="closeModal('knowledgeII3')">&times;</span></div>
+            <p><strong>Définition de la continuité d'une fonction en un point:</strong> Une fonction <span class="katex-inline" data-id="kII3-h"></span> est continue en <span class="katex-inline" data-id="kII3-a"></span> si <span class="katex-inline" data-id="kII3-lim-ha"></span>.</p>
+            <p><strong>Limites de fonctions trigonométriques oscillantes:</strong> La limite de <span class="katex-inline" data-id="kII3-sin1overx"></span> (ou <span class="katex-inline" data-id="kII3-cos1overx"></span>) quand <span class="katex-inline" data-id="kII3-x-to-0"></span> n'existe pas, car la fonction oscille infiniment entre -1 et 1.</p>
+        </div>
+    </div>
+    <div id="explanationII3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.3</h3><span class="close-btn" onclick="closeModal('explanationII3')">&times;</span></div>
+            <h4>Objectif: Déterminer si <span class="katex-inline" data-id="eII3-fprime-cont-0"></span> est continue en zéro.</h4>
+            <p>Pour qu'une fonction soit continue en un point, il faut que la limite de la fonction en ce point soit égale à la valeur de la fonction en ce point. Ici, nous devons vérifier si <span class="katex-inline" data-id="eII3-lim-fprime-0-eq-fprime0"></span>.</p>
+            <p>D'après l'exercice précédent (II.2), nous avons la forme de <span class="katex-inline" data-id="eII3-fprime-def"></span>:</p>
+            <div class="katex-display" data-id="eII3-fprime-piecewise"></div>
+            <p>Et nous avons trouvé que <span class="katex-inline" data-id="eII3-fprime0-val"></span>.</p>
+            <p>Maintenant, calculons la limite de <span class="katex-inline" data-id="eII3-fprime-x-lim"></span> quand <span class="katex-inline" data-id="eII3-x-to-0"></span>:</p>
+            <div class="katex-display" data-id="eII3-lim-fprime-x-calc"></div>
+            <p>Nous analysons les deux termes de cette somme séparément:</p>
+            <p><strong>Terme 1:</strong> <span class="katex-inline" data-id="eII3-lim-2xcos2"></span></p>
+            <p>Nous savons que <span class="katex-inline" data-id="eII3-0-le-cos2-le-1"></span>.
+            </p><p>Multiplions par <span class="katex-inline" data-id="eII3-2x"></span>.
+            </p><p>Si <span class="katex-inline" data-id="eII3-x-gt-0"></span>, alors <span class="katex-inline" data-id="eII3-0-le-2xcos2-le-2x"></span>.
+            </p><p>Si <span class="katex-inline" data-id="eII3-x-lt-0"></span>, alors <span class="katex-inline" data-id="eII3-2x-le-2xcos2-le-0"></span>.
+            </p><p>Dans les deux cas, par le **théorème des gendarmes**, puisque <span class="katex-inline" data-id="eII3-lim-2x-0"></span>:</p>
+            <div class="katex-display" data-id="eII3-lim-2xcos2-0-final"></div>
+            <p><strong>Terme 2:</strong> <span class="katex-inline" data-id="eII3-lim-sin2overx"></span></p>
+            <p>Cette limite **n'existe pas**. La fonction <span class="katex-inline" data-id="eII3-sinz"></span> est périodique, et lorsque <span class="katex-inline" data-id="eII3-x-to-0"></span>, l'argument <span class="katex-inline" data-id="eII3-2overx"></span> tend vers <span class="katex-inline" data-id="eII3-inf"></span> (ou <span class="katex-inline" data-id="eII3-neg-inf"></span>), ce qui fait osciller la valeur de <span class="katex-inline" data-id="eII3-sin2overx-osc"></span> indéfiniment entre -1 et 1 sans converger vers une valeur unique.</p>
+            <p>Puisque <span class="katex-inline" data-id="eII3-lim-term1-val"></span> est 0 mais <span class="katex-inline" data-id="eII3-lim-term2-val"></span> n'existe pas, la somme des deux termes, <span class="katex-inline" data-id="eII3-lim-fprime-sum-val"></span>, **n'existe pas**.</p>
+            <p>Comme <span class="katex-inline" data-id="eII3-lim-fprime-x-not-exist"></span> n'existe pas, elle ne peut pas être égale à <span class="katex-inline" data-id="eII3-fprime0-val2"></span>.</p>
+            <h4>Conclusion:</h4>
+            <p>Par conséquent, <span class="katex-inline" data-id="eII3-fprime-not-cont-0-final"></span> n'est pas continue en 0.</p>
+        </div>
+    </div>
+
+    <div id="hintII4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.4</h3><span class="close-btn" onclick="closeModal('hintII4')">&times;</span></div>
+            <p>Pour <span class="katex-inline" data-id="hII4-fx-0"></span>, considérez les deux cas de la définition de <span class="katex-inline" data-id="hII4-f"></span>. Pour Rolle's Theorem, identifiez des intervalles <span class="katex-inline" data-id="hII4-ab"></span> tels que <span class="katex-inline" data-id="hII4-f-cont-der"></span> sur <span class="katex-inline" data-id="hII4-ab-closed"></span> et <span class="katex-inline" data-id="hII4-ab-open"></span> respectivement, et <span class="katex-inline" data-id="hII4-fa-fb"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeII4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.4</h3><span class="close-btn" onclick="closeModal('knowledgeII4')">&times;</span></div>
+            <p><strong>Théorème de Rolle:</strong> Soit <span class="katex-inline" data-id="kII4-f"></span> une fonction:</p>
+            <ol>
+                <li>Continue sur l'intervalle fermé <span class="katex-inline" data-id="kII4-ab-closed"></span>.</li>
+                <li>Dérivable sur l'intervalle ouvert <span class="katex-inline" data-id="kII4-ab-open"></span>.</li>
+                <li>Telle que <span class="katex-inline" data-id="kII4-fa-fb"></span>.</li>
+            </ol>
+            <p>Alors il existe au moins un <span class="katex-inline" data-id="kII4-c-in-ab"></span> tel que <span class="katex-inline" data-id="kII4-fprimec"></span>.</p>
+            <p><strong>Résolution d'équations trigonométriques:</strong> <span class="katex-inline" data-id="kII4-cosx-0"></span> si et seulement si <span class="katex-inline" data-id="kII4-x-pi2kpi"></span> pour <span class="katex-inline" data-id="kII4-k-in-Z"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationII4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.4</h3><span class="close-btn" onclick="closeModal('explanationII4')">&times;</span></div>
+            <h4>Partie 1: Résoudre <span class="katex-inline" data-id="eII4-fx-eq-0"></span></h4>
+            <p>La fonction <span class="katex-inline" data-id="eII4-fx-def"></span> est définie par:</p>
+            <div class="katex-display" data-id="eII4-fx-piecewise"></div>
+            <p>Pour résoudre <span class="katex-inline" data-id="eII4-fx-eq-0-res"></span>, nous considérons les deux cas:</p>
+            <ul>
+                <li><strong>Cas 1: <span class="katex-inline" data-id="eII4-x-eq-0-case"></span></strong>
+                    <p>Si <span class="katex-inline" data-id="eII4-x-eq-0-val"></span>, alors <span class="katex-inline" data-id="eII4-f0-val"></span>. Donc <span class="katex-inline" data-id="eII4-x-eq-0-is-sol"></span> est une solution.</p>
+                </li>
+                <li><strong>Cas 2: <span class="katex-inline" data-id="eII4-x-neq-0-case"></span></strong>
+                    <p>Dans ce cas, <span class="katex-inline" data-id="eII4-fx-form"></span>. Pour que <span class="katex-inline" data-id="eII4-fx-form-eq-0"></span>, nous devons avoir <span class="katex-inline" data-id="eII4-x2cos2-eq-0"></span>. Puisque <span class="katex-inline" data-id="eII4-x-neq-0-case2"></span>, cela implique <span class="katex-inline" data-id="eII4-cos2-eq-0"></span>, ce qui est équivalent à <span class="katex-inline" data-id="eII4-cosx-eq-0"></span>.
+                    </p><p>L'équation <span class="katex-inline" data-id="eII4-cosx-eq-0-sol"></span> est vraie quand l'argument est un multiple impair de <span class="katex-inline" data-id="eII4-pi2"></span>:</p>
+                    <div class="katex-display" data-id="eII4-1overx-eq-2k1pi2"></div>
+                    <p>En inversant, nous trouvons les solutions pour <span class="katex-inline" data-id="eII4-x"></span>:</p>
+                    <div class="katex-display" data-id="eII4-x-eq-2over2k1pi"></div>
+                </li>
+            </ul>
+            <p>L'ensemble des solutions de <span class="katex-inline" data-id="eII4-fx-eq-0-final"></span> est donc <span class="katex-inline" data-id="eII4-S-final"></span>.</p>
+            <h4>Partie 2: Utiliser le théorème de Rolle pour <span class="katex-inline" data-id="eII4-fprime-eq-0"></span></h4>
+            <p>Pour appliquer le **théorème de Rolle**, nous avons besoin d'intervalles où la fonction est continue sur le fermé, dérivable sur l'ouvert, et a la même valeur aux bornes.</p>
+            <p>Nous savons que <span class="katex-inline" data-id="eII4-f"></span> est continue sur <span class="katex-inline" data-id="eII4-R"></span> (d'après Ex. II.1) et dérivable sur <span class="katex-inline" data-id="eII4-R"></span> (d'après Ex. II.2).</p>
+            <p>Considérons les solutions de <span class="katex-inline" data-id="eII4-fx-eq-0-rolle"></span> que nous venons de trouver: <span class="katex-inline" data-id="eII4-xk-def"></span>.
+            </p><p>Ces points sont des zéros de la fonction <span class="katex-inline" data-id="eII4-f-func"></span>. Il y en a une infinité.</p>
+            <p>Pour deux entiers consécutifs <span class="katex-inline" data-id="eII4-k-val"></span> et <span class="katex-inline" data-id="eII4-k1-val"></span>, définissons:</p>
+            <p><span class="katex-inline" data-id="eII4-xk-def2"></span> et <span class="katex-inline" data-id="eII4-xk1-def2"></span></p>
+            <p>Nous avons <span class="katex-inline" data-id="eII4-f-xk-0"></span> et <span class="katex-inline" data-id="eII4-f-xk1-0"></span>. Donc <span class="katex-inline" data-id="eII4-f-xk-eq-f-xk1"></span>.</p>
+            <p>La fonction <span class="katex-inline" data-id="eII4-f-func2"></span> est continue sur l'intervalle fermé <span class="katex-inline" data-id="eII4-interval-closed"></span> et dérivable sur l'intervalle ouvert <span class="katex-inline" data-id="eII4-interval-open"></span>.</p>
+            <p>D'après le **théorème de Rolle**, pour chaque tel intervalle <span class="katex-inline" data-id="eII4-interval-rolle"></span>, il existe un <span class="katex-inline" data-id="eII4-ck-in-interval"></span> tel que <span class="katex-inline" data-id="eII4-fprime-ck-0"></span>.</p>
+            <p>Puisqu'il y a une infinité de valeurs entières pour <span class="katex-inline" data-id="eII4-k-in-Z-final"></span>, il y a une infinité de tels points <span class="katex-inline" data-id="eII4-ck"></span>.</p>
+            <h4>Conclusion:</h4>
+            <p>Par conséquent, l'équation <span class="katex-inline" data-id="eII4-fprime-x-eq-0-final"></span> admet une infinité de solutions dans <span class="katex-inline" data-id="eII4-R-final"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.5</h3><span class="close-btn" onclick="closeModal('hintII5')">&times;</span></div>
+            <p>Rappelez-vous un théorème fondamental de l'analyse qui décrit l'image d'un intervalle par une fonction continue.</p>
+        </div>
+    </div>
+    <div id="knowledgeII5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.5</h3><span class="close-btn" onclick="closeModal('knowledgeII5')">&times;</span></div>
+            <p><strong>Théorème des Valeurs Intermédiaires (TVI) / Propriété des fonctions continues sur un intervalle:</strong> Si une fonction <span class="katex-inline" data-id="kII5-f"></span> est continue sur un intervalle <span class="katex-inline" data-id="kII5-I"></span>, alors son image <span class="katex-inline" data-id="kII5-fI"></span> est aussi un intervalle.</p>
+        </div>
+    </div>
+    <div id="explanationII5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.5</h3><span class="close-btn" onclick="closeModal('explanationII5')">&times;</span></div>
+            <h4>Objectif: Justifier que <span class="katex-inline" data-id="eII5-f-interval-is-interval"></span> est un intervalle de <span class="katex-inline" data-id="eII5-R"></span>.</h4>
+            <p>Ceci est une application directe d'un théorème fondamental en analyse.</p>
+            <p>Le théorème stipule que:
+            </p><ul>
+                <li>Si une fonction <span class="katex-inline" data-id="eII5-f-func"></span> est **continue** sur un intervalle <span class="katex-inline" data-id="eII5-I"></span>, alors son **image** <span class="katex-inline" data-id="eII5-fI-image"></span> est aussi un intervalle.</li>
+            </ul>
+            <p>Dans cet exercice:</p>
+            <ul>
+                <li>La fonction <span class="katex-inline" data-id="eII5-f-func2"></span> est donnée.</li>
+                <li>L'intervalle considéré est <span class="katex-inline" data-id="eII5-interval-given"></span>.</li>
+                <li>D'après l'Exercice II.1, nous avons démontré que la fonction <span class="katex-inline" data-id="eII5-f-func3"></span> est **continue sur tout <span class="katex-inline" data-id="eII5-R2"></span>**.</li>
+            </ul>
+            <h4>Conclusion:</h4>
+            <p>Puisque <span class="katex-inline" data-id="eII5-f-cont-on-interval"></span> est continue sur l'intervalle <span class="katex-inline" data-id="eII5-interval-given-final"></span>, son image <span class="katex-inline" data-id="eII5-f-interval-final"></span> est nécessairement un intervalle de <span class="katex-inline" data-id="eII5-R3"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.6</h3><span class="close-btn" onclick="closeModal('hintII6')">&times;</span></div>
+            <p>Une fonction continue sur un intervalle possède une fonction réciproque si et seulement si elle est **strictement monotone** sur cet intervalle. Étudiez le signe de <span class="katex-inline" data-id="hII6-gprime"></span> sur l'intervalle donné.</p>
+        </div>
+    </div>
+    <div id="knowledgeII6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.6</h3><span class="close-btn" onclick="closeModal('knowledgeII6')">&times;</span></div>
+            <p><strong>Existence d'une fonction réciproque:</strong> Une fonction <span class="katex-inline" data-id="kII6-f"></span> continue sur un intervalle <span class="katex-inline" data-id="kII6-I"></span> admet une fonction réciproque <span class="katex-inline" data-id="kII6-finv"></span> si et seulement si <span class="katex-inline" data-id="kII6-f"></span> est strictement monotone sur <span class="katex-inline" data-id="kII6-I2"></span>.</p>
+            <p><strong>Relation entre le signe de la dérivée et la monotonie:</strong> Si <span class="katex-inline" data-id="kII6-fprime-gt0"></span> sur un intervalle, alors <span class="katex-inline" data-id="kII6-f"></span> est strictement croissante sur cet intervalle.</p>
+        </div>
+    </div>
+    <div id="explanationII6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.6</h3><span class="close-btn" onclick="closeModal('explanationII6')">&times;</span></div>
+            <h4>Objectif: Justifier que <span class="katex-inline" data-id="eII6-g"></span> possède une fonction réciproque <span class="katex-inline" data-id="eII6-ginv"></span>.</h4>
+            <p>La fonction <span class="katex-inline" data-id="eII6-g-def"></span> est une restriction de <span class="katex-inline" data-id="eII6-f"></span> à l'intervalle <span class="katex-inline" data-id="eII6-interval"></span>.</p>
+            <p>Pour qu'une fonction continue sur un intervalle admette une fonction réciproque, elle doit être **strictement monotone**.</p>
+            <p>D'après l'Exercice II.2, pour <span class="katex-inline" data-id="eII6-x-neq-0"></span>, la dérivée est <span class="katex-inline" data-id="eII6-fprime-expr"></span>.</p>
+            <p>Nous devons évaluer le signe de <span class="katex-inline" data-id="eII6-gprime-expr"></span> sur l'intervalle <span class="katex-inline" data-id="eII6-interval3"></span>.</p>
+            <p>Si <span class="katex-inline" data-id="eII6-x-in-approx-interval"></span>:</p>
+            <ul>
+                <li><span class="katex-inline" data-id="eII6-1overx-range"></span>. Dans cet intervalle, <span class="katex-inline" data-id="eII6-cos21overx-gt0"></span>.</li>
+                <li><span class="katex-inline" data-id="eII6-2overx-range"></span>. Dans cet intervalle, <span class="katex-inline" data-id="eII6-sin2overx-gt0"></span>.</li>
+            </ul>
+            <p>Maintenant, regardons les termes de <span class="katex-inline" data-id="eII6-gprime-expr2"></span>:</p>
+            <ul>
+                <li><span class="katex-inline" data-id="eII6-2xcos2-term"></span>: Puisque <span class="katex-inline" data-id="eII6-x-in-interval-positive"></span> et <span class="katex-inline" data-id="eII6-cos2-positive"></span>, ce terme est <span class="katex-inline" data-id="eII6-positive-term1"></span>.</li>
+                <li><span class="katex-inline" data-id="eII6-sin2overx-term"></span>: Comme établi, ce terme est <span class="katex-inline" data-id="eII6-positive-term2"></span> sur l'intervalle.</li>
+            </ul>
+            <p>Donc, <span class="katex-inline" data-id="eII6-gprime-gt0-final"></span> sur l'intervalle <span class="katex-inline" data-id="eII6-interval-final"></span>.</p>
+            <h4>Conclusion:</h4>
+            <p>Comme <span class="katex-inline" data-id="eII6-g-func6"></span> est continue et strictement monotone sur <span class="katex-inline" data-id="eII6-interval-conclusion"></span>, elle admet une fonction réciproque <span class="katex-inline" data-id="eII6-ginv-final"></span>.</p>
+        </div>
+    </div>
+
+    <div id="hintII7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice II.7</h3><span class="close-btn" onclick="closeModal('hintII7')">&times;</span></div>
+            <p>Le théorème de dérivation de la fonction réciproque stipule que si <span class="katex-inline" data-id="hII7-f"></span> est dérivable et que sa dérivée est non nulle en un point, alors sa réciproque est dérivable en l'image de ce point.</p>
+        </div>
+    </div>
+    <div id="knowledgeII7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice II.7</h3><span class="close-btn" onclick="closeModal('knowledgeII7')">&times;</span></div>
+            <p><strong>Théorème de dérivation de la fonction réciproque:</strong> Soit <span class="katex-inline" data-id="kII7-f-ab-cd"></span> une fonction continue et strictement monotone. Si <span class="katex-inline" data-id="kII7-f"></span> est dérivable en <span class="katex-inline" data-id="kII7-x0"></span> et que <span class="katex-inline" data-id="kII7-fprimex0-neq0"></span>, alors sa fonction réciproque <span class="katex-inline" data-id="kII7-finv"></span> est dérivable en <span class="katex-inline" data-id="kII7-y0-fx0"></span> et sa dérivée est donnée par <span class="katex-inline" data-id="kII7-finvprime-y0"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationII7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice II.7</h3><span class="close-btn" onclick="closeModal('explanationII7')">&times;</span></div>
+            <h4>Objectif: Déterminer si <span class="katex-inline" data-id="eII7-ginv"></span> est dérivable.</h4>
+            <p>Nous utilisons le **théorème de dérivation de la fonction réciproque**.</p>
+            <p>Nous devons vérifier deux conditions pour <span class="katex-inline" data-id="eII7-g"></span> sur son domaine <span class="katex-inline" data-id="eII7-domain"></span>:</p>
+            <ol>
+                <li><span class="katex-inline" data-id="eII7-g"></span> doit être **dérivable**.</li>
+                <li>La dérivée <span class="katex-inline" data-id="eII7-gprime"></span> doit être **non nulle**.</li>
+            </ol>
+            <h4>Vérification des conditions:</h4>
+            <ul>
+                <li><strong>Dérivabilité de <span class="katex-inline" data-id="eII7-g"></span>:</strong>
+                    <p>D'après l'Exercice II.2, <span class="katex-inline" data-id="eII7-f"></span> est dérivable sur tout <span class="katex-inline" data-id="eII7-R"></span>. Par conséquent, sa restriction <span class="katex-inline" data-id="eII7-g"></span> est dérivable sur <span class="katex-inline" data-id="eII7-domain3"></span>.</p>
+                </li>
+                <li><strong>Dérivée non nulle:</strong>
+                    <p>D'après l'Exercice II.6, nous avons montré que <span class="katex-inline" data-id="eII7-gprime-gt0"></span> sur l'intervalle <span class="katex-inline" data-id="eII7-domain4"></span>. Puisque la dérivée est strictement positive, elle est non nulle.</p>
+                </li>
+            </ul>
+            <h4>Conclusion:</h4>
+            <p>Étant donné que <span class="katex-inline" data-id="eII7-g"></span> est dérivable sur <span class="katex-inline" data-id="eII7-domain-final"></span> et que sa dérivée <span class="katex-inline" data-id="eII7-gprime-final"></span> est non nulle, le théorème garantit que sa réciproque <span class="katex-inline" data-id="eII7-ginv-final"></span> est dérivable sur l'intervalle image.</p>
+        </div>
+    </div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                        el.textContent = `Erreur de rendu de la formule: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.error(`Élément avec data-id '${id}' non trouvé.`);
+                }
+            }
+
+            // Exam Questions - Part I
+            setText('exI1-q1-eq', "\\forall x\\in[0,+\\infty), E(\\sqrt{x})=E(\\sqrt{E(x)})");
+            setText('exI1-q1-E', "E(x)");
+            setText('exI1-q1-x', "x");
+
+            setText('exI2-q2-A', "A=\\{\\frac{1}{n};n\\in\\mathbb{N}^{*}\\}" );
+            setText('exI2-q2-E', "E=\\{\\frac{p+q}{pq};p,q\\in\\mathbb{N}^{\\bullet}\\}" );
+            
+            setText('exI3-q3-un', "(u_{n})");
+            setText('exI3-q3-sum', "u_{n}=\\sum_{k=0}^{k=n}\\frac{1}{\\sqrt{k+1}}");
+            setText('exI3-q3-inf', "+\\infty");
+
+            setText('exI4-q4-wn', "(w_{n})");
+            setText('exI4-q4-w0', "w_{0}\\in\\mathbb{R}");
+            setText('exI4-q4-rec', "w_{n+1}=w_{n}^{2}+1");
+            setText('exI4-q4-R', "\\mathbb{R}");
+
+            // Exam Questions - Part II Intro
+            setText('exII-func-def1', "f");
+            setText('exII-func-def2', "R");
+            setText('exII-func-def3', "R");
+            setText('exII-func-def4', "f(x)=\\begin{cases}x^{2}cos^{2}(\\frac{1}{x})&si~x\\ne0\\\\ 0&si~x=0\\end{cases}");
+
+            // Exam Questions - Part II
+            setText('exII1-q1', "f");
+            setText('exII1-q1-R', "R");
+
+            setText('exII2-q2-f', "f");
+            setText('exII2-q2-R', "R");
+            setText('exII2-q2-fp', "f'");
+
+            setText('exII3-q3-fp', "f'");
+
+            setText('exII4-q4-R', "R");
+            setText('exII4-q4-f0', "f(x)=0");
+            setText('exII4-q4-fp0', "f^{\\prime}(x)=0");
+            setText('exII4-q4-R2', "R");
+
+            setText('exII5-q5-interval', "f([\\frac{3}{\\pi},\\frac{4}{\\pi}])");
+            setText('exII5-q5-R', "R");
+
+            setText('exII6-q6-g-map', "g : ]\\frac{3}{\\pi},\\frac{4}{\\pi}[\\rightarrow f(]\\frac{3}{\\pi},\\frac{4}{\\pi}[)");
+            setText('exII6-q6-gx', "g(x)=f(x)");
+            setText('exII6-q6-x-in', "x\\in]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('exII6-q6-g', "g");
+            setText('exII6-q6-ginv', "g^{-1}");
+            setText('exII6-q6-f-interval', "f(]\\frac{3}{\\pi},\\frac{4}{\\pi}[)");
+
+            setText('exII7-q7-ginv', "g^{-1}");
+            setText('exII7-q7-f-interval', "f(]\\frac{3}{\\pi},\\frac{4}{\\pi}[)");
+
+
+            // Exam Solutions - Part I
+            setText('solI1-p1-n', "n \\in\\mathbb{N}");
+            setText('solI1-p1-Esqrtx', "E(\\sqrt{x})=n");
+            setText('solI1-p1-Esqrtx-eq-n', "\\Leftrightarrow n\\le\\sqrt{x}<n+1");
+            setText('solI1-p1-ineq1', "\\Leftrightarrow n^{2}\\le x<(n+1)^{2}");
+            setText('solI1-p1-ineq2', "\\Leftrightarrow n^{2}\\le E(x)<(n+1)^{2}");
+            setText('solI1-p1-ineq3', "\\Leftrightarrow n\\le\\sqrt{E(x)}<n+1");
+            setText('solI1-p1-ineq4', "\\Leftrightarrow E(\\sqrt{E(x)})=n");
+            setText('solI1-p1-EsqrtEx', "E(\\sqrt{E(x)})=n");
+            setText('solI1-p1-final-eq', "E(\\sqrt{x})=E(\\sqrt{E(x)})");
+            setText('solI1-p1-domain', "\\forall x\\in[0,+\\infty[");
+
+            setText('solI2-p2-A', "A=\\{\\frac{1}{n};n\\in\\mathbb{N}^{*}\\}" );
+            setText('solI2-p2-1inA', "1\\in A");
+            setText('solI2-p2-ineq-A', "\\forall n\\in\\mathbb{N}^{*}, 0<\\frac{1}{n}\\le1");
+            setText('solI2-p2-A-non-vide', "A");
+            setText('solI2-p2-A-borne', "A");
+            setText('solI2-p2-A', "A");
+            setText('solI2-p2-1inA2', "1\\in A");
+            setText('solI2-p2-supA', "\\text{sup }A=1");
+            setText('solI2-p2-A', "A");
+            setText('solI2-p2-infA-def', "\\text{inf }A=0\\Leftrightarrow\\forall\\epsilon>0,\\exists n\\in\\mathbb{N}^{*}/\\frac{1}{n}<\\epsilon.");
+            setText('solI2-p2-n-choice', "n=[\\frac{1}{\\epsilon}]+1.");
+            setText('solI2-p2-infA', "\\text{inf }A=0");
+            setText('solI2-p2-E-sum', "E=\\{\\frac{1}{p}+\\frac{1}{q};p,q\\in\\mathbb{N}^{\\bullet}\\}=A+A");
+            setText('solI2-p2-E-non-vide-borne', "E");
+            setText('solI2-p2-supE', "\\text{sup }E=\\text{sup }A+\\text{sup }A=1+1=2.");
+            setText('solI2-p2-infE', "\\text{inf }E=\\text{inf }A+\\text{inf }A=0+0=0");
+
+            setText('solI3-p3-ineq1', "\\forall n\\in\\mathbb{N} \\forall k\\in\\{0,1,...,n\\}, \\frac{1}{\\sqrt{k+1}}\\ge\\frac{1}{\\sqrt{n+1}}");
+            setText('solI3-p3-un-ineq', "\\forall n\\in\\mathbb{N}, u_{n}=\\sum_{k=0}^{n}\\frac{1}{\\sqrt{k+1}}\\ge\\sum_{k=0}^{n}\\frac{1}{\\sqrt{n+1}}");
+            setText('solI3-p3-sum-eval', "=(n+1)\\frac{1}{\\sqrt{n+1}}=\\sqrt{n+1}");
+            setText('solI3-p3-lim-sqrt', "\\lim_{n\\rightarrow+\\infty}\\sqrt{n+1}=+\\infty");
+            setText('solI3-p3-lim-un', "\\lim_{n\\rightarrow+\\infty}u_{n}=+\\infty");
+
+            setText('solI4-p4-wn', "(w_{n})");
+            setText('solI4-p4-R', "R");
+            setText('solI4-p4-l', "l");
+            setText('solI4-p4-eq-l', "l=l^{2}+1");
+            setText('solI4-p4-quadratic', "l^{2}-l+1=0");
+            setText('solI4-p4-delta', "\\Delta=(-1)^{2}-4(1)(1)=-3<0");
+            setText('solI4-p4-R2', "R");
+
+
+            // Exam Solutions - Part II
+            setText('solII1-p1-x-neq-0', "x\\ne0");
+            setText('solII1-p1-fx-expr', "f(x)=x^{2}cos^{2}(\\frac{1}{x})");
+            setText('solII1-p1-x-eq-0', "x=0");
+            setText('solII1-p1-limfx', "\\lim_{x\\rightarrow0}f(x)=\\lim_{x\\rightarrow0}x^{2}cos^{2}(\\frac{1}{x})");
+            setText('solII1-p1-ineq-cos', "0\\le cos^{2}(\\frac{1}{x})\\le1");
+            setText('solII1-p1-ineq-x2cos', "\\Rightarrow0\\le x^{2}cos^{2}(\\frac{1}{x})\\le x^{2}");
+            setText('solII1-p1-lim-squeeze', "\\lim_{x\\rightarrow0}x^{2}cos^{2}(\\frac{1}{x})=0=f(0).");
+            setText('solII1-p1-f-cont-0', "f");
+            setText('solII1-p1-f-cont-R', "f");
+            setText('solII1-p1-R', "R");
+
+            setText('solII2-p2-x-neq-0', "x\\ne0");
+            setText('solII2-p2-f', "f");
+            setText('solII2-p2-fprime-calc', "f^{\\prime}(x)=2x~cos^{2}(\\frac{1}{x})+x^{2}\\cdot2~cos(\\frac{1}{x})(-sin(\\frac{1}{x}))(-\\frac{1}{x^{2}})=2x~cos^{2}(\\frac{1}{x})+2~cos(\\frac{1}{x})sin(\\frac{1}{x})=2x~cos^{2}(\\frac{1}{x})+sin(\\frac{2}{x}).");
+            setText('solII2-p2-x-eq-0', "x=0");
+            setText('solII2-p2-lim-def', "\\lim_{x\\rightarrow0}\\frac{f(x)-f(0)}{x-0}=\\lim_{x\\rightarrow0}\\frac{x^{2}cos^{2}(\\frac{1}{x})}{x}");
+            setText('solII2-p2-lim-eval', "=\\lim_{x\\rightarrow0}x~cos^{2}(\\frac{1}{x})=0,");
+            setText('solII2-p2-f-der-0', "f");
+            setText('solII2-p2-fprime-0', "f^{\\prime}(0)=0");
+            setText('solII2-p2-fprime-final', ".f^{\\prime}(x)=\\begin{cases}2x~cos^{2}(\\frac{1}{x})+sin(\\frac{2}{x})&\\text{si }x\\ne0\\\\ 0&\\text{si }x=0\\end{cases}");
+            
+            setText('solII3-p3-fprime', "f^{\\prime}(x)");
+            setText('solII3-p3-x-to-0', "x\\rightarrow0");
+            setText('solII3-p3-lim-fprime', "\\lim_{x\\rightarrow0}f^{\\prime}(x)=\\lim_{x\\rightarrow0}(2x~cos^{2}(\\frac{1}{x})+sin(\\frac{2}{x}))");
+            setText('solII3-p3-lim-term1', "\\lim_{x\\rightarrow0}2x~cos^{2}(\\frac{1}{x})=0");
+            setText('solII3-p3-lim-sin', "\\lim_{x\\rightarrow0}sin(\\frac{2}{x})");
+            setText('solII3-p3-lim-fprime-total', "\\lim_{x\\rightarrow0}f^{\\prime}(x)");
+            setText('solII3-p3-fprime-not-cont', "f'");
+
+            setText('solII4-p4-fx-eq-0', "f(x)=0\\Leftrightarrow x=0");
+            setText('solII4-p4-x2cos2-eq-0', "x^{2}cos^{2}(\\frac{1}{x})=0");
+            setText('solII4-p4-x-neq-0', "x\\ne0");
+            setText('solII4-p4-cosx-eq-0', "cos(\\frac{1}{x})=0");
+            setText('solII4-p4-1overx', "\\Leftrightarrow \\frac{1}{x}=(2k+1)\\frac{\\pi}{2}");
+            setText('solII4-p4-k-in-Z', "k\\in\\mathbb{Z}");
+            setText('solII4-p4-x-sol', "x=\\frac{2}{(2k+1)\\pi}");
+            setText('solII4-p4-S', "S=\\{0\\}\\cup\\{\\frac{2}{(2k+1)\\pi},k\\in\\mathbb{Z}\\}");
+            setText('solII4-p4-k-in-Z2', "k\\in\\mathbb{Z}");
+            setText('solII4-p4-xk', "x_{k}=\\frac{2}{(2k+1)\\pi}");
+            setText('solII4-p4-xk1', "x_{k+1}=\\frac{2}{(2(k+1)+1)\\pi}=\\frac{2}{(2k+3)\\pi}");
+            setText('solII4-p4-f-xk-xk1', "f(x_{k})=f(x_{k+1})=0");
+            setText('solII4-p4-f', "f");
+            setText('solII4-p4-interval-cont', "[x_{k+1},x_{k}]");
+            setText('solII4-p4-interval-deriv', "]x_{k+1},x_{k}[");
+            setText('solII4-p4-ck-in', "c_{k}\\in ]x_{k+1},x_{k}[");
+            setText('solII4-p4-fprime-ck', "f^{\\prime}(c_{k})=0");
+            setText('solII4-p4-k-in-Z3', "k\\in\\mathbb{Z}");
+            setText('solII4-p4-fprime-x', "f^{\\prime}(x)=0");
+            
+            setText('solII5-p5-f-cont-R', "f");
+            setText('solII5-p5-R', "R");
+            setText('solII5-p5-f-interval', "f([\\frac{3}{\\pi},\\frac{4}{\\pi}])");
+            setText('solII5-p5-R2', "R");
+
+            setText('solII6-p6-g', "g");
+            setText('solII6-p6-domain', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('solII6-p6-f', "f");
+            setText('solII6-p6-gprime', "g^{\\prime}(x)=f^{\\prime}(x)=2x~cos^{2}(\\frac{1}{x})+sin(\\frac{2}{x})");
+            setText('solII6-p6-x-range', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('solII6-p6-1overx-range', "\\frac{1}{x}\\in]\\frac{\\pi}{4},\\frac{\\pi}{3}[\\text{ and }\\frac{2}{x}\\in]\\frac{\\pi}{2},\\frac{2\\pi}{3}[");
+            setText('solII6-p6-sin2overx-positive', "sin(\\frac{2}{x})>0");
+            setText('solII6-p6-2xcos2-positive', "2x~cos^{2}(\\frac{1}{x})>0");
+            setText('solII6-p6-gprime-positive', "g^{\\prime}(x)>0");
+            setText('solII6-p6-g-cont-mono', "g");
+
+            setText('solII7-p7-g-der', "g");
+            setText('solII7-p7-domain', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('solII7-p7-ginv', "g^{-1}");
+            setText('solII7-p7-image-interval', "f(]\\frac{3}{\\pi},\\frac{4}{\\pi}[)");
+
+            // Modals - Hints
+            setText('hI1-def-E', "E(y)=n");
+            setText('hI1-ineq-n', "n \\le y < n+1");
+            setText('hI2-E', "E");
+            setText('hI2-pq', "\\frac{p+q}{pq}");
+            setText('hI2-sum-frac', "\\frac{1}{p} + \\frac{1}{q}");
+            setText('hI2-A', "A");
+            setText('hI3-sum-term', "\\frac{1}{\\sqrt{k+1}}");
+            setText('hI3-n', "n");
+            setText('hI3-0-to-n', "0 \\le k \\le n");
+            setText('hI3-sqrt-k1', "\\sqrt{k+1}");
+            setText('hI4-wn', "(w_n)");
+            setText('hI4-L', "L");
+            setText('hI4-lim-wn1', "\\lim_{n\\to\\infty} w_{n+1}");
+            setText('hI4-lim-wn', "\\lim_{n\\to\\infty} w_n");
+            setText('hI4-L2', "L");
+
+            setText('hII1-x-neq-0', "x \\ne 0");
+            setText('hII1-x-eq-0', "x=0");
+            setText('hII1-lim-f0', "\\lim_{x\\to 0} f(x) = f(0)");
+            setText('hII2-x-neq-0', "x \\ne 0");
+            setText('hII2-x-eq-0', "x=0");
+            setText('hII2-fprime0-def', "f'(0) = \\lim_{x\\to 0} \\frac{f(x)-f(0)}{x-0}");
+            setText('hII3-fprime', "f'");
+            setText('hII3-lim-fprime0', "\\lim_{x \\to 0} f'(x) = f'(0)");
+            setText('hII3-sin1overx', "\\sin(1/x)");
+            setText('hII3-sin2overx', "\\sin(2/x)");
+            setText('hII3-x-to-0', "x \\to 0");
+            setText('hII4-fx-0', "f(x)=0");
+            setText('hII4-f', "f");
+            setText('hII4-ab', "[a,b]");
+            setText('hII4-f-cont-der', "f");
+            setText('hII4-ab-closed', "[a,b]");
+            setText('hII4-ab-open', "(a,b)");
+            setText('hII4-fa-fb', "f(a)=f(b)");
+            setText('hII5-f-cont', "f");
+            setText('hII6-gprime', "g'(x)");
+            setText('hII7-f', "f");
+
+
+            // Modals - Prerequisites
+            setText('kI1-x', "x");
+            setText('kI1-x2', "x");
+            setText('kI1-Ex', "E(x)");
+            setText('kI1-x3', "x");
+            setText('kI1-Ex-ineq', "E(x) \\le x < E(x)+1");
+            setText('kI2-S', "S");
+            setText('kI2-M', "M");
+            setText('kI2-m', "m");
+            setText('kI2-S2', "S");
+            setText('kI2-ineq-mMs', "m \\le s \\le M");
+            setText('kI2-A-plus-B', "A+B");
+            setText('kI2-def-AplusB', "\\{a+b \\mid a \\in A, b \\in B\\}");
+            setText('kI2-sup-AplusB', "\\text{sup}(A+B) = \\text{sup}(A) + \\text{sup}(B)");
+            setText('kI2-inf-AplusB', "\\text{inf}(A+B) = \\text{inf}(A) + \\text{inf}(B)");
+            setText('kI3-an-le-bn', "a_n \\le b_n");
+            setText('kI3-n', "n");
+            setText('kI3-lim-an', "\\lim_{n \\to \\infty} a_n = +\\infty");
+            setText('kI3-lim-bn', "\\lim_{n \\to \\infty} b_n = +\\infty");
+            setText('kI3-sqrtx', "\\sqrt{x}");
+            setText('kI3-x-to-inf', "x \\to +\\infty");
+            setText('kI4-un1', "(u_{n+1})");
+            setText('kI4-L', "L");
+            setText('kI4-L2', "L");
+            setText('kI4-un1-un', "u_{n+1} \\text{ et } u_n");
+            setText('kI4-ax2bxc', "ax^2+bx+c=0");
+            setText('kI4-delta', "\\Delta = b^2-4ac");
+            setText('kI4-delta-lt-0', "\\Delta < 0");
+
+            setText('kII1-f', "f");
+            setText('kII1-a', "a");
+            setText('kII1-lim-fa', "\\lim_{x\\to a} f(x) = f(a)");
+            setText('kII1-gx-le-fx-le-hx', "g(x) \\le f(x) \\le h(x)");
+            setText('kII1-x', "x");
+            setText('kII1-L', "L");
+            setText('kII1-L2', "L");
+            setText('kII1-lim-gh', "\\lim_{x\\to L} g(x) = \\lim_{x\\to L} h(x) = M");
+            setText('kII1-lim-f', "\\lim_{x\\to L} f(x) = M");
+            setText('kII1-cos', "\\cos");
+            setText('kII1-sin', "\\sin");
+            setText('kII2-f', "f");
+            setText('kII2-a', "a");
+            setText('kII2-lim-def', "\\lim_{h\\to 0} \\frac{f(a+h)-f(a)}{h}");
+            setText('kII2-fprimea', "f'(a)");
+            setText('kII2-prod-rule', "(uv)' = u'v + uv'");
+            setText('kII2-chain-rule', "(f(g(x)))' = f'(g(x))g'(x)");
+            setText('kII2-cos-deriv', "(\\cos x)' = -\\sin x");
+            setText('kII2-sin-deriv', "(\\sin x)' = \\cos x");
+            setText('kII2-sin2x', "\\sin(2x) = 2\\sin x \\cos x");
+            setText('kII3-h', "h");
+            setText('kII3-a', "a");
+            setText('kII3-lim-ha', "\\lim_{x\\to a} h(x) = h(a)");
+            setText('kII3-sin1overx', "\\sin(1/x)");
+            setText('kII3-cos1overx', "\\cos(1/x)");
+            setText('kII3-x-to-0', "x \\to 0");
+            setText('kII4-f', "f");
+            setText('kII4-ab-closed', "[a,b]");
+            setText('kII4-ab-open', "(a,b)");
+            setText('kII4-fa-fb', "f(a)=f(b)");
+            setText('kII4-c-in-ab', "c \\in (a,b)");
+            setText('kII4-fprimec', "f'(c)=0");
+            setText('kII4-cosx-0', "\\cos y = 0");
+            setText('kII4-x-pi2kpi', "y = \\frac{\\pi}{2} + k\\pi");
+            setText('kII4-k-in-Z', "k \\in \\mathbb{Z}");
+            setText('kII5-f', "f");
+            setText('kII5-I', "I");
+            setText('kII5-fI', "f(I)");
+            setText('kII6-f', "f");
+            setText('kII6-I', "I");
+            setText('kII6-finv', "f^{-1}");
+            setText('kII6-I2', "I");
+            setText('kII6-fprime-gt0', "f'(x)>0");
+            setText('kII6-f', "f");
+            setText('kII6-fprime-lt0', "f'(x)<0");
+            setText('kII7-f-ab-cd', "f: [a,b] \\to [c,d]");
+            setText('kII7-f', "f");
+            setText('kII7-x0', "x_0");
+            setText('kII7-fprimex0-neq0', "f'(x_0) \\ne 0");
+            setText('kII7-finv', "f^{-1}");
+            setText('kII7-y0-fx0', "y_0 = f(x_0)");
+            setText('kII7-finvprime-y0', "(f^{-1})'(y_0) = \\frac{1}{f'(x_0)}");
+
+            // Modals - Detailed Explanations
+            setText('eI1-obj', "E(\\sqrt{x})=E(\\sqrt{E(x)})");
+            setText('eI1-n', "n");
+            setText('eI1-Esqrtx-n', "E(\\sqrt{x})=n");
+            setText('eI1-n-le-sqrtx-lt-n1', "n \\le \\sqrt{x} < n+1");
+            setText('eI1-x-ge-0', "x \\ge 0");
+            setText('eI1-n2-le-x-lt-n12', "n^2 \\le x < (n+1)^2");
+            setText('eI1-E', "E");
+            setText('eI1-E-n2-le-E-x-lt-E-n12', "E(n^2) \\le E(x) < E((n+1)^2)");
+            setText('eI1-n2', "n^2");
+            setText('eI1-n12', "(n+1)^2");
+            setText('eI1-n2-le-Ex-lt-n12-simplified', "n^2 \\le E(x) < (n+1)^2");
+            setText('eI1-sqrtEx', "\\sqrt{E(x)}");
+            setText('eI1-n-le-sqrtEx-lt-n1', "n \\le \\sqrt{E(x)} < n+1");
+            setText('eI1-n-le-sqrtEx-lt-n1-final', "n \\le \\sqrt{E(x)} < n+1");
+            setText('eI1-EsqrtEx-n', "E(\\sqrt{E(x)})=n");
+            setText('eI1-chain', "E(\\sqrt{x})=n \\Leftrightarrow E(\\sqrt{E(x)})=n");
+            setText('eI1-final-result', "E(\\sqrt{x})=E(\\sqrt{E(x)})");
+            setText('eI1-x-domain', "x\\in[0,+\\infty[");
+
+            setText('eI2-A-title', "A=\\{\\frac{1}{n};n\\in\\mathbb{N}^{*}\\}" );
+            setText('eI2-A-def', "A=\\{\\frac{1}{n};n\\in\\mathbb{N}^{*}\\}" );
+            setText('eI2-n-eq-1', "n=1");
+            setText('eI2-1-in-A', "1\\in A");
+            setText('eI2-A-not-empty', "A");
+            setText('eI2-n-star', "n\\in\\mathbb{N}^{*}");
+            setText('eI2-0-lt-1overn-le-1', "0<\\frac{1}{n}\\le1");
+            setText('eI2-A-majore', "A");
+            setText('eI2-1-in-A-sup', "1\\in A");
+            setText('eI2-supA-1', "\\text{sup }A=1");
+            setText('eI2-A-minore', "A");
+            setText('eI2-epsilon', "\\epsilon>0");
+            setText('eI2-1overn-lt-epsilon', "\\frac{1}{n}<\\epsilon");
+            setText('eI2-n-archimede', "n");
+            setText('eI2-n-choice-inf', "n=\\left[\\frac{1}{\\epsilon}\\right]+1");
+            setText('eI2-infA-0', "\\text{inf }A=0");
+            setText('eI2-E-title', "E=\\{\\frac{p+q}{pq};p,q\\in\\mathbb{N}^{\\bullet}\\}" );
+            setText('eI2-E-def', "E=\\{\\frac{p+q}{pq};p,q\\in\\mathbb{N}^{\\bullet}\\}" );
+            setText('eI2-rewritten-element', "\\frac{p+q}{pq} = \\frac{p}{pq} + \\frac{q}{pq} = \\frac{1}{q} + \\frac{1}{p}");
+            setText('eI2-E-as-sum', "E = A+A");
+            setText('eI2-A-as-sum', "A");
+            setText('eI2-A-is-bounded', "A");
+            setText('eI2-E-is-bounded', "E");
+            setText('eI2-supE-calc', "\\text{sup }E = \\text{sup }A + \\text{sup }A = 1+1=2.");
+            setText('eI2-infE-calc', "\\text{inf }E = \\text{inf }A + \\text{inf }A = 0+0=0.");
+            setText('eI2-E-final', "E");
+            setText('eI2-supE-final', "\\text{sup }E = 2");
+            setText('eI2-infE-final', "\\text{inf }E = 0");
+
+            setText('eI3-un-to-inf', "(u_n) \\text{ tend vers } +\\infty");
+            setText('eI3-un-def', "(u_n)");
+            setText('eI3-un-sum', "u_n = \\sum_{k=0}^{n}\\frac{1}{\\sqrt{k+1}}");
+            setText('eI3-k-range', "k \\in \\{0,1,...,n\\}");
+            setText('eI3-k-le-n', "0 \\le k \\le n");
+            setText('eI3-k1-le-n1', "1 \\le k+1 \\le n+1");
+            setText('eI3-sqrtk1-le-sqrtn1', "1 \\le \\sqrt{k+1} \\le \\sqrt{n+1}");
+            setText('eI3-1oversqrtk1-ge-1oversqrtn1', "\\frac{1}{\\sqrt{k+1}} \\ge \\frac{1}{\\sqrt{n+1}}");
+            setText('eI3-un-sum-term', "\\frac{1}{\\sqrt{k+1}}");
+            setText('eI3-1oversqrtn1-term', "\\frac{1}{\\sqrt{n+1}}");
+            setText('eI3-n1-terms', "(n+1)");
+            setText('eI3-k0-to-n', "k=0 \\text{ to } n");
+            setText('eI3-n1-times', "(n+1)");
+            setText('eI3-constant-term', "\\frac{1}{\\sqrt{n+1}}");
+            setText('eI3-un-ineq-sum', "u_n = \\sum_{k=0}^{n}\\frac{1}{\\sqrt{k+1}} \\ge \\sum_{k=0}^{n}\\frac{1}{\\sqrt{n+1}}");
+            setText('eI3-un-ge-n1-oversqrtn1', "u_n \\ge (n+1) \\frac{1}{\\sqrt{n+1}}");
+            setText('eI3-un-ge-sqrtn1', "u_n \\ge \\sqrt{n+1}");
+            setText('eI3-lim-sqrtn1', "\\lim_{n\\to\\infty} \\sqrt{n+1} = +\\infty");
+            setText('eI3-n-to-inf', "n \\to \\infty");
+            setText('eI3-un-ge-sqrtn1-final', "u_n \\ge \\sqrt{n+1}");
+            setText('eI3-inf-final', "+\\infty");
+            setText('eI3-lim-un-inf', "\\lim_{n\\to\\infty} u_n = +\\infty");
+
+            setText('eI4-wn-no-limit', "(w_n) \\text{ n'a pas de limite dans } \\mathbb{R}");
+            setText('eI4-wn-def', "(w_n)");
+            setText('eI4-L', "l");
+            setText('eI4-R', "\\mathbb{R}");
+            setText('eI4-wn', "w_n");
+            setText('eI4-L2', "l");
+            setText('eI4-lim-wn', "\\lim_{n\\to\\infty} w_n");
+            setText('eI4-lim-wn1', "\\lim_{n\\to\\infty} w_{n+1}");
+            setText('eI4-L3', "l");
+            setText('eI4-wn1', "w_{n+1}");
+            setText('eI4-wn', "w_n");
+            setText('eI4-L4', "l");
+            setText('eI4-rec-eq', "w_{n+1}=w_n^2+1");
+            setText('eI4-L5', "l");
+            setText('eI4-L-eq-L2-1', "l = l^2+1");
+            setText('eI4-L6', "l");
+            setText('eI4-L2-L1-eq-0', "l^2-l+1=0");
+            setText('eI4-Delta', "\\Delta");
+            setText('eI4-Delta-calc', "\\Delta = (-1)^2 - 4(1)(1) = 1-4 = -3");
+            setText('eI4-Delta-val', "-3");
+            setText('eI4-Delta-lt-0', "\\Delta < 0");
+            setText('eI4-L7', "l");
+            setText('eI4-L2-L1-eq-0-final', "l^2-l+1=0");
+            setText('eI4-wn-final', "(w_n)");
+            setText('eI4-R2', "\\mathbb{R}");
+            setText('eI4-wn-no-limit-final', "(w_n)");
+            setText('eI4-R3', "\\mathbb{R}");
+
+            setText('eII1-f-cont-R', "f");
+            setText('eII1-R', "R");
+            setText('eII1-fx-def', "f(x)");
+            setText('eII1-fx-piecewise', "f(x)=\\begin{cases}x^{2}cos^{2}(\\frac{1}{x})&si~x\\ne0\\\\ 0&si~x=0\\end{cases}");
+            setText('eII1-x-neq-0-cond', "x\\ne0");
+            setText('eII1-fx-form', "f(x)=x^{2}cos^{2}(\\frac{1}{x})");
+            setText('eII1-x2', "x^2");
+            setText('eII1-R2', "R");
+            setText('eII1-1overx', "1/x");
+            setText('eII1-R-star', "R^*");
+            setText('eII1-cosy', "\\cos(y)");
+            setText('eII1-R3', "R");
+            setText('eII1-cos1overx', "\\cos(1/x)");
+            setText('eII1-R-star2', "R^*");
+            setText('eII1-x2cos21overx', "x^{2}cos^{2}(1/x)");
+            setText('eII1-R-star3', "R^*");
+            setText('eII1-f-cont-xneq0', "f");
+            setText('eII1-x-neq-0-final', "x \\ne 0");
+            setText('eII1-x-eq-0-point', "x=0");
+            setText('eII1-lim-x0-fx-f0', "\\lim_{x\\to 0} f(x) = f(0)");
+            setText('eII1-f0', "f(0)=0");
+            setText('eII1-lim-fx-x0', "\\lim_{x\\to 0} f(x) = \\lim_{x\\to 0} x^2 \\cos^2(1/x)");
+            setText('eII1-y', "y");
+            setText('eII1-cos2y-ineq', "0 \\le \\cos^2(y) \\le 1");
+            setText('eII1-y-1overx', "y = 1/x");
+            setText('eII1-0-le-cos21overx-le-1', "0 \\le \\cos^2(\\frac{1}{x}) \\le 1");
+            setText('eII1-x2', "x^2");
+            setText('eII1-0-le-x2cos21overx-le-x2', "0 \\le x^2 \\cos^2(\\frac{1}{x}) \\le x^2");
+            setText('eII1-lim-0', "\\lim_{x\\to 0} 0 = 0");
+            setText('eII1-lim-x2', "\\lim_{x\\to 0} x^2 = 0");
+            setText('eII1-x2cos21overx-final', "x^2 \\cos^2(\\frac{1}{x})");
+            setText('eII1-x-to-0-final', "x \\to 0");
+            setText('eII1-lim-x0-x2cos21overx-0', "\\lim_{x\\to 0} x^2 \\cos^2(\\frac{1}{x}) = 0");
+            setText('eII1-lim-x0-fx-0', "\\lim_{x\\to 0} f(x) = 0");
+            setText('eII1-f0-is-0', "f(0)=0");
+            setText('eII1-lim-fx-f0-final', "\\lim_{x\\to 0} f(x) = f(0)");
+            setText('eII1-f-cont-0-final', "f");
+            setText('eII1-f-cont-xneq0-conclusion', "f");
+            setText('eII1-x-neq-0-conclusion', "x \\ne 0");
+            setText('eII1-x-eq-0-conclusion', "x=0");
+            setText('eII1-R-conclusion', "R");
+
+            setText('eII2-f-der-R', "f");
+            setText('eII2-R', "R");
+            setText('eII2-fprime', "f'");
+            setText('eII2-fx-def', "f(x)");
+            setText('eII2-fx-piecewise', "f(x)=\\begin{cases}x^{2}cos^{2}(\\frac{1}{x})&si~x\\ne0\\\\ 0&si~x=0\\end{cases}");
+            setText('eII2-x-neq-0-cond', "x\\ne0");
+            setText('eII2-fx-form', "f(x)=x^{2}cos^{2}(\\frac{1}{x})");
+            setText('eII2-prod-rule', "(uv)' = u'v + uv'");
+            setText('eII2-u', "u(x) = x^2");
+            setText('eII2-v', "v(x) = \\cos^2(1/x)");
+            setText('eII2-u-x2', "u(x)=x^2");
+            setText('eII2-uprime', "u'(x)=2x");
+            setText('eII2-v-cos2', "v(x)=\\cos^2(1/x)");
+            setText('eII2-chain-rule-func', "(h(g(x)))' = h'(g(x))g'(x)");
+            setText('eII2-cos2y', "\\cos^2(y)");
+            setText('eII2-2cosy-siny', "2\\cos(y)(-\\sin(y)) = -2\\sin(y)\\cos(y)");
+            setText('eII2-1overx', "1/x");
+            setText('eII2-minus1overx2', "-1/x^2");
+            setText('eII2-vprime', "v'(x) = -2\\sin(1/x)\\cos(1/x) \\cdot (-1/x^2) = \\frac{2}{x^2}\\sin(1/x)\\cos(1/x)");
+            setText('eII2-fprime-calc-step1', "f'(x) = (2x)(\\cos^2(\\frac{1}{x})) + (x^2)(\\frac{2}{x^2}\\sin(\\frac{1}{x})\\cos(\\frac{1}{x})) = 2x\\cos^2(\\frac{1}{x}) + 2\\sin(\\frac{1}{x})\\cos(\\frac{1}{x})");
+            setText('eII2-sin2a', "\\sin(2a) = 2\\sin(a)\\cos(a)");
+            setText('eII2-fprime-calc-step2', "f'(x) = 2x\\cos^2(\\frac{1}{x}) + \\sin(\\frac{2}{x})");
+            setText('eII2-x-eq-0-point', "x=0");
+            setText('eII2-fprime0-def', "f'(0) = \\lim_{x\\to 0} \\frac{f(x)-f(0)}{x-0}");
+            setText('eII2-f0', "f(0)=0");
+            setText('eII2-fx-form-xneq0', "f(x)=x^{2}cos^{2}(\\frac{1}{x})");
+            setText('eII2-lim-x0-fx-f0-over-x', "\\lim_{x\\to 0} \\frac{x^{2}cos^{2}(\\frac{1}{x})-0}{x-0} = \\lim_{x\\to 0} x\\cos^{2}(\\frac{1}{x})");
+            setText('eII2-0-le-cos2-le-1', "0 \\le \\cos^2(1/x) \\le 1");
+            setText('eII2-x-term', "x");
+            setText('eII2-x-gt-0', "x>0");
+            setText('eII2-0-le-xcos2-le-x', "0 \\le x\\cos^2(\\frac{1}{x}) \\le x");
+            setText('eII2-x-lt-0', "x<0");
+            setText('eII2-x-le-xcos2-le-0', "x \\le x\\cos^2(\\frac{1}{x}) \\le 0");
+            setText('eII2-lim-x0-xcos2-0', "\\lim_{x\\to 0} x\\cos^2(\\frac{1}{x}) = 0");
+            setText('eII2-fprime0-0', "f'(0)=0");
+            setText('eII2-fprime-final-form', "f'");
+            setText('eII2-fprime-piecewise', "f'(x)=\\begin{cases}2x\\cos^2(\\frac{1}{x}) + \\sin(\\frac{2}{x})&\\text{si }x\\ne0\\\\ 0&\\text{si }x=0\\end{cases}");
+            setText('eII2-fprime-exists-all-R', "f'(x)");
+            setText('eII2-x-in-R', "x\\in\\mathbb{R}");
+            setText('eII2-f-der-R-final', "f");
+            setText('eII2-R-final', "\\mathbb{R}");
+
+            setText('eII3-fprime-cont-0', "f'");
+            setText('eII3-lim-fprime-0-eq-fprime0', "\\lim_{x\\to 0} f'(x) = f'(0)");
+            setText('eII3-fprime-def', "f'");
+            setText('eII3-fprime-piecewise', "f'(x)=\\begin{cases}2x\\cos^2(\\frac{1}{x}) + \\sin(\\frac{2}{x})&\\text{si }x\\ne0\\\\ 0&\\text{si }x=0\\end{cases}");
+            setText('eII3-fprime0-val', "f'(0)=0");
+            setText('eII3-fprime-x-lim', "\\lim_{x\\to 0} f'(x)");
+            setText('eII3-x-to-0', "x \\to 0");
+            setText('eII3-lim-fprime-x-calc', "\\lim_{x\\to 0} (2x\\cos^2(\\frac{1}{x}) + \\sin(\\frac{2}{x}))");
+            setText('eII3-lim-2xcos2', "\\lim_{x\\to 0} 2x\\cos^2(\\frac{1}{x})");
+            setText('eII3-0-le-cos2-le-1', "0 \\le \\cos^2(1/x) \\le 1");
+            setText('eII3-2x', "2x");
+            setText('eII3-x-gt-0', "x>0");
+            setText('eII3-0-le-2xcos2-le-2x', "0 \\le 2x\\cos^2(\\frac{1}{x}) \\le 2x");
+            setText('eII3-x-lt-0', "x<0");
+            setText('eII3-2x-le-2xcos2-le-0', "2x \\le 2x\\cos^2(\\frac{1}{x}) \\le 0");
+            setText('eII3-lim-2x-0', "\\lim_{x\\to 0} 2x = 0");
+            setText('eII3-lim-2xcos2-0-final', "\\lim_{x\\to 0} 2x\\cos^2(\\frac{1}{x}) = 0");
+            setText('eII3-lim-sin2overx', "\\lim_{x\\to 0} \\sin(\\frac{2}{x})");
+            setText('eII3-inf', "\\infty");
+            setText('eII3-neg-inf', "-\\infty");
+            setText('eII3-sin2overx-osc', "\\sin(\\frac{2}{x})");
+            setText('eII3-lim-term1-val', "\\lim_{x\\to 0} 2x\\cos^2(\\frac{1}{x})");
+            setText('eII3-lim-term2-val', "\\lim_{x\\to 0} \\sin(\\frac{2}{x})");
+            setText('eII3-lim-fprime-sum-val', "\\lim_{x\\to 0} f'(x)");
+            setText('eII3-lim-fprime-x-not-exist', "\\lim_{x\\to 0} f'(x)");
+            setText('eII3-fprime0-val2', "f'(0)");
+            setText('eII3-fprime-not-cont-0-final', "f'");
+
+            setText('eII4-fx-eq-0', "f(x)=0");
+            setText('eII4-fx-def', "f(x)");
+            setText('eII4-fx-piecewise', "f(x)=\\begin{cases}x^{2}cos^{2}(\\frac{1}{x})&si~x\\ne0\\\\ 0&si~x=0\\end{cases}");
+            setText('eII4-fx-eq-0-res', "f(x)=0");
+            setText('eII4-x-eq-0-case', "x=0");
+            setText('eII4-x-eq-0-val', "x=0");
+            setText('eII4-f0-val', "f(0)=0");
+            setText('eII4-x-eq-0-is-sol', "x=0");
+            setText('eII4-x-neq-0-case', "x\\ne0");
+            setText('eII4-fx-form', "f(x)=x^{2}cos^{2}(\\frac{1}{x})");
+            setText('eII4-fx-form-eq-0', "f(x)=0");
+            setText('eII4-x2cos2-eq-0', "x^{2}cos^{2}(\\frac{1}{x})=0");
+            setText('eII4-x-neq-0-case2', "x\\ne0");
+            setText('eII4-cos2-eq-0', "\\cos^{2}(\\frac{1}{x})=0");
+            setText('eII4-cosx-eq-0', "\\cos(\\frac{1}{x})=0");
+            setText('eII4-cosx-eq-0-sol', "\\cos(y)=0");
+            setText('eII4-pi2', "\\pi/2");
+            setText('eII4-1overx-eq-2k1pi2', "\\frac{1}{x} = (2k+1)\\frac{\\pi}{2}");
+            setText('eII4-k-in-Z', "k\\in\\mathbb{Z}");
+            setText('eII4-x', "x");
+            setText('eII4-x-eq-2over2k1pi', "x = \\frac{2}{(2k+1)\\pi}");
+            setText('eII4-k-in-Z2', "k\\in\\mathbb{Z}");
+            setText('eII4-fx-eq-0-final', "f(x)=0");
+            setText('eII4-S-final', "S=\\{0\\}\\cup\\{\\frac{2}{(2k+1)\\pi},k\\in\\mathbb{Z}\\}");
+            setText('eII4-fprime-eq-0', "f'(x)=0");
+            setText('eII4-f', "f");
+            setText('eII4-R', "R");
+            setText('eII4-fx-eq-0-rolle', "f(x)=0");
+            setText('eII4-xk-def', "x_k = \\frac{2}{(2k+1)\\pi}");
+            setText('eII4-f-func', "f");
+            setText('eII4-k-val', "k");
+            setText('eII4-k1-val', "k+1");
+            setText('eII4-xk-def2', "x_k = \\frac{2}{(2k+1)\\pi}");
+            setText('eII4-xk1-def2', "x_{k+1} = \\frac{2}{(2(k+1)+1)\\pi} = \\frac{2}{(2k+3)\\pi}");
+            setText('eII4-f-xk-0', "f(x_k)=0");
+            setText('eII4-f-xk1-0', "f(x_{k+1})=0");
+            setText('eII4-f-xk-eq-f-xk1', "f(x_k)=f(x_{k+1})=0");
+            setText('eII4-f-func2', "f");
+            setText('eII4-interval-closed', "[x_{k+1},x_k]");
+            setText('eII4-interval-open', "(x_{k+1},x_k)");
+            setText('eII4-interval-rolle', "[x_{k+1},x_k]");
+            setText('eII4-ck-in-interval', "c_k \\in (x_{k+1},x_k)");
+            setText('eII4-fprime-ck-0', "f'(c_k)=0");
+            setText('eII4-k-in-Z-final', "k \\in \\mathbb{Z}");
+            setText('eII4-ck', "c_k");
+            setText('eII4-fprime-x-eq-0-final', "f'(x)=0");
+            setText('eII4-R-final', "\\mathbb{R}");
+
+            setText('eII5-f-interval-is-interval', "f([\\frac{3}{\\pi},\\frac{4}{\\pi}])");
+            setText('eII5-R', "R");
+            setText('eII5-f-func', "f");
+            setText('eII5-I', "I");
+            setText('eII5-fI-image', "f(I)");
+            setText('eII5-f-func2', "f");
+            setText('eII5-interval-given', "[\\frac{3}{\\pi},\\frac{4}{\\pi}]");
+            setText('eII5-f-func3', "f");
+            setText('eII5-R2', "R");
+            setText('eII5-f-func4', "f");
+            setText('eII5-interval-given-cont', "[\\frac{3}{\\pi},\\frac{4}{\\pi}]");
+            setText('eII5-f-cont-on-interval', "f");
+            setText('eII5-interval-given-final', "[\\frac{3}{\\pi},\\frac{4}{\\pi}]");
+            setText('eII5-f-interval-final', "f([\\frac{3}{\\pi},\\frac{4}{\\pi}])");
+            setText('eII5-R3', "R");
+
+            setText('eII6-g', "g");
+            setText('eII6-ginv', "g^{-1}");
+            setText('eII6-g-def', "g");
+            setText('eII6-f', "f");
+            setText('eII6-interval', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII6-f-func', "f");
+            setText('eII6-R', "R");
+            setText('eII6-g-func2', "g");
+            setText('eII6-interval2', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII6-g-func4', "g");
+            setText('eII6-gx-eq-fx', "g(x)=f(x)");
+            setText('eII6-gprime-eq-fprime', "g'(x)=f'(x)");
+            setText('eII6-fprime-expr', "2x\\cos^2(\\frac{1}{x}) + \\sin(\\frac{2}{x})");
+            setText('eII6-gprime-expr', "g'(x)");
+            setText('eII6-interval3', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII6-x-in-approx-interval', "x \\in (\\frac{3}{\\pi}, \\frac{4}{\\pi})");
+            setText('eII6-1overx-range', "\\frac{1}{x} \\in (\\frac{\\pi}{4}, \\frac{\\pi}{3})");
+            setText('eII6-cos21overx-gt0', "\\cos^2(\\frac{1}{x}) > 0");
+            setText('eII6-2overx-range', "\\frac{2}{x} \\in (\\frac{\\pi}{2}, \\frac{2\\pi}{3})");
+            setText('eII6-sin2overx-gt0', "\\sin(\\frac{2}{x}) > 0");
+            setText('eII6-gprime-expr2', "g'(x)");
+            setText('eII6-2xcos2-term', "2x\\cos^2(\\frac{1}{x})");
+            setText('eII6-x-in-interval-positive', "x");
+            setText('eII6-cos2-positive', "\\cos^2(\\frac{1}{x})");
+            setText('eII6-positive-term1', "strictement positif");
+            setText('eII6-sin2overx-term', "\\sin(\\frac{2}{x})");
+            setText('eII6-positive-term2', "strictement positif");
+            setText('eII6-gprime-gt0-final', "g'(x) > 0");
+            setText('eII6-interval-final', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII6-g-func6', "g");
+            setText('eII6-interval-conclusion', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII6-ginv-final', "g^{-1}");
+
+            setText('eII7-ginv', "g^{-1}");
+            setText('eII7-g', "g");
+            setText('eII7-domain', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII7-gprime', "g'");
+            setText('eII7-f', "f");
+            setText('eII7-R', "R");
+            setText('eII7-domain3', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII7-gprime-gt0', "g'(x)>0");
+            setText('eII7-domain4', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII7-domain-final', "]\\frac{3}{\\pi},\\frac{4}{\\pi}[");
+            setText('eII7-gprime-final', "g'(x)");
+            setText('eII7-ginv-final', "g^{-1}");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

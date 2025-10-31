@@ -1,0 +1,449 @@
+/* General Setup and Variables */
+:root {
+    --primary-color: #2563eb; /* A strong, academic blue */
+    --background-color: #0f172a; /* A very dark navy, almost black */
+    --card-color: #1e293b; /* A slightly lighter navy for cards */
+    --text-color: #e2e8f0; /* A soft, off-white */
+    --heading-color: #ffffff; /* Pure white for headings */
+    --subtle-text-color: #94a3b8; /* A muted grey for sub-text */
+    --accent-color: #38bdf8; /* A bright sky blue for accents */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.main-header {
+    padding: 1rem 5%;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    /* Added to align button */
+    align-items: center;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--heading-color);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--heading-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Menu (Mobile) */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Adjust as needed based on header height */
+        left: 0;
+        background-color: var(--card-color);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    .navbar-links.is-active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    /* Changed to center the single content block */
+    justify-content: center; 
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    /* Added to center text */
+    text-align: center; 
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #1d4ed8; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+/* Hero image style removed */
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Hero image media query removed */
+}
+
+/* How It Works Section */
+.how-it-works, .featured-subjects {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.how-it-works h2, .featured-subjects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+
+/* Featured Subjects Section */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.subject-card {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.subject-card h3 {
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.subject-card p {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+
+.new-subject {
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--card-color),
+        var(--card-color) 10px,
+        #27364d 10px,
+        #27364d 20px
+    );
+    opacity: 0.7;
+}
+
+/* Footer */
+.main-footer-bottom {
+    text-align: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--card-color);
+    color: var(--subtle-text-color);
+}
+
+.social-media a {
+    color: var(--subtle-text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--heading-color);
+}
+
+/*
+=================================
+Scroll Animation Styles
+=================================
+*/
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: var(--delay, 0ms); /* Use CSS variable for delay */
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*
+=================================
+ADDED: Language Button Styles
+=================================
+*/
+
+.lang-button {
+    background-color: transparent;
+    color: var(--heading-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 1rem; 
+}
+
+.lang-button:hover {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+}
+
+/* Responsive adjustment for button inside hamburger menu */
+@media (max-width: 768px) {
+    .lang-button {
+        margin-left: 0; /* Remove left margin in mobile view */
+        margin-top: 0.5rem; 
+        /* Make width consistent with nav links padding */
+        width: 100%; 
+        max-width: 200px; /* Set a max-width */
+        text-align: center;
+    }
+}
+
+/*
+=================================
+ADDED: Utility Class
+=================================
+*/
+/* This will be used by the script.js on the Analysis pages */
+.hidden {
+    display: none;
+}
+
+/*
+=================================
+ADDED: Exam Page Styles
+=================================
+*/
+.exam-page-main {
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* Ensure footer stays at bottom if content is short */
+    flex-grow: 1; 
+}
+
+.exam-page-main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+}
+
+.exam-page-main h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--subtle-text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.exam-grid {
+    display: grid;
+    /* Create 4 columns, shrinking to a min of 200px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.exam-card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    text-decoration: none;
+    color: var(--heading-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* This is needed to make the sticky footer work 
+on the new exam pages, which might be short.
+*/
+body {
+    /* Make body a flex column */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    /* Make main content grow to fill space */
+    flex-grow: 1;
+}

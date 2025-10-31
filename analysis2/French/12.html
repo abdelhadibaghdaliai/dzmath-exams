@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 2: Épreuve Finale (09 Juin 2010) - Version Améliorée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p, .exercise-content li {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse II</h1>
+            <p class="exam-subtitle">Épreuve Finale (09 Juin 2010)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1 (3 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Calculer les sommes suivantes :</p>
+                        <ol class="list-decimal list-inside ml-4">
+                            <li><span class="katex-display" data-katex="\lim_{n\rightarrow+\infty}\sum_{k=1}^{n}\frac{n^{2}}{(n+2k)^{3}}"></span></li>
+                            <li><span class="katex-display" data-katex="\int_{0}^{3}|x^{2}+x-2|dx"></span></li>
+                        </ol>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2 (7 pts)</h3>
+                    <div class="exercise-content">
+                         <ol class="list-decimal list-inside ml-4">
+                            <li>Calculer l'intégrale : <span class="katex-display" data-katex="\int\frac{t}{(1-t^{2})(t^{2}+t+1)}dt"></span></li>
+                            <li>En utilisant le changement de variable <span class="katex-inline" data-katex="t=tanh(\frac{x}{2})"></span>, calculer <span class="katex-display" data-katex="\int\frac{sinh~x}{sinh~x+2~cosh~x}dx"></span></li>
+                             <li>Calculer l'intégrale : <span class="katex-display" data-katex="\int\frac{x+x^{2/3}-1}{(\sqrt[3]{x}+1)(1-x)}dx"></span></li>
+                        </ol>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Soit f une fonction continue sur <span class="katex-inline" data-katex="]-1, 1["></span>. On désigne par F une primitive de f et on pose <span class="katex-inline" data-katex="g(x)=\int_{sin~x}^{cos~x}f(t)dt"></span>, pour <span class="katex-inline" data-katex="x \in \mathbb{R}"></span>.</p>
+                        <ol class="list-decimal list-inside ml-4">
+                            <li>Exprimer g à l'aide de F.</li>
+                            <li>Exprimer g' à l'aide de f.</li>
+                            <li>Application: On considère <span class="katex-inline" data-katex="f(t)=\frac{1}{\sqrt{1-t^{2}}}"></span>.
+                                <ol class="list-alpha list-inside ml-6">
+                                    <li>Calculer <span class="katex-inline" data-katex="g(x)"></span> pour tout <span class="katex-inline" data-katex="x \in \mathbb{R}"></span>.</li>
+                                    <li>En déduire <span class="katex-inline" data-katex="g(\pi)"></span> et <span class="katex-inline" data-katex="g(\pi/2)"></span>.</li>
+                                    <li>Calculer <span class="katex-inline" data-katex="g'(x)"></span> pour <span class="katex-inline" data-katex="x \ne k\pi, x \ne (2k+1)\frac{\pi}{2}"></span>.</li>
+                                    <li>En déduire une expression simple de <span class="katex-inline" data-katex="g(x)"></span> pour <span class="katex-inline" data-katex="x \in [\frac{\pi}{2}, \pi]"></span>.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+
+                 <!-- Exercise 4 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 4 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Résoudre les équations différentielles suivantes :</p>
+                        <ol class="list-decimal list-inside ml-4">
+                            <li><span class="katex-display" data-katex="xy' - y = x^2 \log x"></span></li>
+                            <li><span class="katex-display" data-katex="y'' + 3y' + 2y = xe^x"></span></li>
+                        </ol>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <!-- Solution 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <h4>1. Calcul de la limite</h4>
+                        <p>On reconnaît une somme de Riemann. On transforme l'expression :</p>
+                        <div class="katex-display" data-katex="\sum_{k=1}^{n}\frac{n^{2}}{(n+2k)^{3}} = \frac{1}{n}\sum_{k=1}^{n}\frac{1}{(1+2\frac{k}{n})^{3}}"></div>
+                        <p>Ceci est la somme de Riemann pour la fonction <span class="katex-inline" data-katex="f(x) = \frac{1}{(1+2x)^3}"></span> sur l'intervalle [0, 1]. La limite est donc l'intégrale :</p>
+                        <div class="katex-display" data-katex="\int_{0}^{1}\frac{dx}{(1+2x)^{3}} = [-\frac{1}{4(1+2x)^2}]_0^1 = -\frac{1}{36} + \frac{1}{4} = \frac{2}{9}"></div>
+                        <h4>2. Calcul de l'intégrale avec valeur absolue</h4>
+                        <p>Le polynôme <span class="katex-inline" data-katex="P(x) = x^2+x-2 = (x+2)(x-1)"></span> s'annule en <span class="katex-inline" data-katex="x=1 \text{ et } x=-2"></span>. Sur l'intervalle [0, 3], on a :</p>
+                        <ul>
+                            <li>Si <span class="katex-inline" data-katex="x \in [0,1]"></span>, <span class="katex-inline" data-katex="P(x) \le 0"></span>.</li>
+                            <li>Si <span class="katex-inline" data-katex="x \in [1,3]"></span>, <span class="katex-inline" data-katex="P(x) \ge 0"></span>.</li>
+                        </ul>
+                        <p>On sépare donc l'intégrale en deux :</p>
+                        <div class="katex-display" data-katex="\int_{0}^{3}|x^{2}+x-2|dx = \int_{0}^{1}(-x^2-x+2)dx + \int_{1}^{3}(x^2+x-2)dx"></div>
+                        <div class="katex-display" data-katex="[-\frac{x^3}{3}-\frac{x^2}{2}+2x]_0^1 + [\frac{x^3}{3}+\frac{x^2}{2}-2x]_1^3 = (\frac{7}{6}) + (\frac{26}{3}) = \frac{59}{6}"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <h4>1. Intégrale par décomposition</h4>
+                        <p>On décompose la fraction en éléments simples :</p>
+                        <div class="katex-display" data-katex="\frac{t}{(1-t)(1+t)(t^2+t+1)} = \frac{a}{1-t} + \frac{b}{1+t} + \frac{ct+d}{t^2+t+1}"></div>
+                        <p>On trouve <span class="katex-inline" data-katex="a=1/6, b=-1/2, c=1/3, d=1/3"></span>. L'intégrale devient :</p>
+                        <div class="katex-display" data-katex="-\frac{1}{6}ln|1-t|-\frac{1}{2}ln|1+t|+\frac{1}{6}ln(t^2+t+1)+\frac{1}{3\sqrt{3}}arctan(\frac{2t+1}{\sqrt{3}})+C"></div>
+                        <h4>2. Intégrale avec fonctions hyperboliques</h4>
+                        <p>Avec <span class="katex-inline" data-katex="t=tanh(x/2)"></span>, on a <span class="katex-inline" data-katex="sinh~x=\frac{2t}{1-t^2}, cosh~x=\frac{1+t^2}{1-t^2}, dx=\frac{2dt}{1-t^2}"></span>. L'intégrale devient :</p>
+                        <div class="katex-display" data-katex="\int\frac{sinh~x}{sinh~x+2~cosh~x}dx = \int\frac{2t}{(t^2+t+1)(1-t^2)}dt"></div>
+                        <p>C'est deux fois l'intégrale de la question précédente.</p>
+                        <h4>3. Intégrale avec racines</h4>
+                        <p>On pose <span class="katex-inline" data-katex="t=\sqrt[3]{x}"></span>, donc <span class="katex-inline" data-katex="x=t^3, dx=3t^2dt"></span>. L'intégrale devient :</p>
+                        <div class="katex-display" data-katex="\int\frac{t^3+t^2-1}{(t+1)(1-t^3)}3t^2dt"></div>
+                        <p>Après calculs et simplification, le résultat est :</p>
+                        <div class="katex-display" data-katex="-\frac{3}{2}x^{2/3}-\frac{1}{2}ln|1-\sqrt[3]{x}|-\frac{3}{2}ln|1+\sqrt[3]{x}|+ln(x^{2/3}+\sqrt[3]{x}+1)+C"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>1. En notant F une primitive de f, on a <span class="katex-inline" data-katex="g(x) = F(cos~x) - F(sin~x)"></span>.</p>
+                        <p>2. En utilisant le théorème fondamental de l'analyse et la règle de dérivation en chaîne, on obtient : <span class="katex-inline" data-katex="g'(x) = -sin(x)f(cos~x) - cos(x)f(sin~x)"></span>.</p>
+                        <p>3. Application avec <span class="katex-inline" data-katex="f(t) = \frac{1}{\sqrt{1-t^2}}"></span> :</p>
+                        <ol class="list-alpha list-inside ml-6">
+                            <li>Une primitive est <span class="katex-inline" data-katex="F(t) = arcsin(t)"></span>. Donc <span class="katex-inline" data-katex="g(x) = arcsin(cos~x) - arcsin(sin~x)"></span>.</li>
+                            <li><span class="katex-inline" data-katex="g(\pi) = -\pi/2"></span> et <span class="katex-inline" data-katex="g(\pi/2) = -\pi/2"></span>.</li>
+                            <li><span class="katex-inline" data-katex="g'(x) = -\frac{sin~x}{|sin~x|} - \frac{cos~x}{|cos~x|}"></span>.</li>
+                            <li>Pour <span class="katex-inline" data-katex="x \in [\frac{\pi}{2}, \pi]"></span>, <span class="katex-inline" data-katex="sin~x \ge 0, cos~x \le 0"></span>, donc <span class="katex-inline" data-katex="g'(x) = -1 - (-1) = 0"></span>. g est constante sur cet intervalle. Comme <span class="katex-inline" data-katex="g(\pi/2) = -\pi/2"></span>, la constante est <span class="katex-inline" data-katex="-\pi/2"></span>. Donc <span class="katex-inline" data-katex="g(x) = -\pi/2"></span> pour <span class="katex-inline" data-katex="x \in [\frac{\pi}{2}, \pi]"></span>.</li>
+                        </ol>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 4</h3>
+                    <div class="exercise-content">
+                        <h4>1. Équation du premier ordre</h4>
+                        <p>En multipliant par x, on a <span class="katex-inline" data-katex="(xy)'=-\frac{1}{x(x+1)}+\frac{1}{x\sqrt{1-x^{2}}}"></span>. En intégrant, on obtient <span class="katex-inline" data-katex="xy = \ln(x+1)-\ln(1+\sqrt{1-x^2})+C"></span>. La solution est <span class="katex-inline" data-katex="y = \frac{1}{x}(\ln(x+1)-\ln(1+\sqrt{1-x^2})+C)"></span>.</p>
+                        <h4>2. Équation du second ordre</h4>
+                        <p>Équation caractéristique <span class="katex-inline" data-katex="r^2+3r+2=0"></span> a pour racines <span class="katex-inline" data-katex="r_1=-1, r_2=-2"></span>. La solution homogène est <span class="katex-inline" data-katex="y_h(x) = c_1e^{-x} + c_2e^{-2x}"></span>. On cherche une solution particulière de la forme <span class="katex-inline" data-katex="y_p = (ax+b)e^x"></span>. Après dérivation et substitution, on trouve <span class="katex-inline" data-katex="a=1/6, b=-5/36"></span>. La solution particulière est <span class="katex-inline" data-katex="y_p(x) = (\frac{1}{6}x - \frac{5}{36})e^x"></span>. La solution générale est :</p>
+                        <div class="katex-display" data-katex="y(x) = c_1e^{-x} + c_2e^{-2x} + (\frac{1}{6}x - \frac{5}{36})e^x"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Explication Détaillée</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p><strong>Question 1 :</strong> Essayez de factoriser par <span class="katex-inline" data-katex="n^3"></span> au dénominateur pour faire apparaître une expression de la forme <span class="katex-inline" data-katex="\frac{1}{n} f(\frac{k}{n})"></span>. Cela vous mettra sur la voie des sommes de Riemann.</p><p><strong>Question 2 :</strong> La valeur absolue vous oblige à étudier le signe du polynôme <span class="katex-inline" data-katex="x^2+x-2"></span> à l'intérieur de l'intégrale. Trouvez ses racines et déterminez où il est positif ou négatif sur l'intervalle d'intégration [0, 3].</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Sommes de Riemann :</strong> L'intégrale définie d'une fonction continue <span class="katex-inline" data-katex="f"></span> sur <span class="katex-inline" data-katex="[a,b]"></span> est la limite des sommes de Riemann : <span class="katex-display" data-katex="\int_{a}^{b} f(x) dx = \lim_{n \to \infty} \frac{b-a}{n} \sum_{k=1}^{n} f(a+k\frac{b-a}{n})"></span>.</p><p><strong>Intégration et valeur absolue :</strong> Pour calculer <span class="katex-inline" data-katex="\int |g(x)|dx"></span>, on doit découper l'intervalle d'intégration en sous-intervalles où <span class="katex-inline" data-katex="g(x)"></span> garde un signe constant. On utilise la relation de Chasles.</p><p><strong>Primitives usuelles :</strong> Connaître la primitive de <span class="katex-inline" data-katex="x^n"></span> et des polynômes.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 1 : Limite de la somme</h4><p><strong>Étape 1 : Transformation de la somme.</strong> L'objectif est de la ramener à la forme <span class="katex-inline" data-katex="\frac{1}{n}\sum f(\frac{k}{n})"></span>. On factorise <span class="katex-inline" data-katex="n^3"></span> au dénominateur du terme général :</p><p><span class="katex-display" data-katex="\frac{n^2}{(n+2k)^3} = \frac{n^2}{n^3(1+\frac{2k}{n})^3} = \frac{1}{n} \frac{1}{(1+2\frac{k}{n})^3}"></span></p><p>La somme devient donc : <span class="katex-display" data-katex="\sum_{k=1}^{n} \frac{1}{n} \frac{1}{(1+2\frac{k}{n})^3}"></span></p><p><strong>Étape 2 : Identification de la fonction.</strong> On reconnaît la somme de Riemann de la fonction <span class="katex-inline" data-katex="f(x) = \frac{1}{(1+2x)^3}"></span> sur l'intervalle [0, 1].</p><p><strong>Étape 3 : Calcul de l'intégrale.</strong> La fonction <span class="katex-inline" data-katex="f(x)"></span> étant continue sur [0, 1], la limite est l'intégrale :</p><p><span class="katex-display" data-katex="\lim_{n\to\infty} \sum... = \int_0^1 \frac{dx}{(1+2x)^3} = [\frac{(1+2x)^{-2}}{-2 \cdot 2}]_0^1 = [-\frac{1}{4(1+2x)^2}]_0^1 = (-\frac{1}{36}) - (-\frac{1}{4}) = \frac{8}{36} = \frac{2}{9}"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 2 : Intégrale de la valeur absolue</h4><p><strong>Étape 1 : Étude du signe du polynôme.</strong> Le polynôme <span class="katex-inline" data-katex="P(x) = x^2+x-2"></span> a pour racines <span class="katex-inline" data-katex="x=1, x=-2"></span>. Il est négatif entre ses racines et positif à l'extérieur. Sur l'intervalle d'intégration [0, 3] :</p><ul><li>Sur [0, 1], <span class="katex-inline" data-katex="P(x) \le 0"></span>, donc <span class="katex-inline" data-katex="|P(x)| = -(x^2+x-2)"></span>.</li><li>Sur [1, 3], <span class="katex-inline" data-katex="P(x) \ge 0"></span>, donc <span class="katex-inline" data-katex="|P(x)| = x^2+x-2"></span>.</li></ul><p><strong>Étape 2 : Séparation de l'intégrale.</strong> On utilise la relation de Chasles au point <span class="katex-inline" data-katex="x=1"></span> :</p><p><span class="katex-display" data-katex="\int_0^1(-x^2-x+2)dx + \int_1^3(x^2+x-2)dx"></span></p><p><strong>Étape 3 : Calcul des intégrales.</strong></p><p><span class="katex-display" data-katex="[-\frac{x^3}{3}-\frac{x^2}{2}+2x]_0^1 + [\frac{x^3}{3}+\frac{x^2}{2}-2x]_1^3 = (-\frac{1}{3}-\frac{1}{2}+2) + (9+\frac{9}{2}-6) - (\frac{1}{3}+\frac{1}{2}-2) = \frac{7}{6} + \frac{15}{2} + \frac{7}{6} = \frac{14}{6} + \frac{15}{2} = \frac{59}{6}"></span></p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p><strong>Question 1 :</strong> Le dénominateur contient <span class="katex-inline" data-katex="1-t^2"></span> et <span class="katex-inline" data-katex="t^2+t+1"></span>. C'est un cas classique de décomposition en éléments simples.</p><p><strong>Question 2 :</strong> Appliquez directement les formules de transformation pour <span class="katex-inline" data-katex="\sinh x"></span>, <span class="katex-inline" data-katex="\cosh x"></span> et <span class="katex-inline" data-katex="dx"></span> en fonction de <span class="katex-inline" data-katex="t"></span>. Après simplification, vous devriez reconnaître une intégrale familière.</p><p><strong>Question 3 :</strong> La présence de puissances fractionnaires comme <span class="katex-inline" data-katex="x^{2/3}"></span> suggère un changement de variable qui éliminera les racines. Essayez <span class="katex-inline" data-katex="x=t^3"></span>.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Décomposition en éléments simples :</strong> Savoir décomposer une fraction rationnelle en une somme de fractions plus simples (éléments de type I et II).</p><p><strong>Intégration des fonctions rationnelles :</strong> Connaître les primitives de <span class="katex-inline" data-katex="\frac{1}{x-a}"></span> (donnant un <span class="katex-inline" data-katex="\ln"></span>) et de <span class="katex-inline" data-katex="\frac{1}{x^2+a^2}"></span> (donnant un <span class="katex-inline" data-katex="\arctan"></span>).</p><p><strong>Règles de Bioche et changements de variable :</strong> Pour les intégrales de fonctions trigonométriques ou hyperboliques, connaître les changements de variable classiques (<span class="katex-inline" data-katex="t = \tan(x/2)"></span>, <span class="katex-inline" data-katex="t = e^x"></span>, etc.). Pour les fonctions hyperboliques, on utilise souvent <span class="katex-inline" data-katex="t = \tanh(x/2)"></span>.</p><p><strong>Formules des fonctions hyperboliques :</strong> <span class="katex-display" data-katex="\sinh x=\frac{e^x-e^{-x}}{2}, \cosh x=\frac{e^x+e^{-x}}{2}"></span></p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 1 : Intégrale par décomposition</h4><p><strong>Étape 1 : Décomposition.</strong> On pose <span class="katex-display" data-katex="\frac{t}{(1-t)(1+t)(t^2+t+1)} = \frac{a}{1-t} + \frac{b}{1+t} + \frac{ct+d}{t^2+t+1}"></span>. Après avoir mis au même dénominateur et identifié les coefficients, on obtient <span class="katex-inline" data-katex="a=1/6, b=-1/2, c=1/3, d=1/3"></span>.</p><p><strong>Étape 2 : Intégration.</strong> On intègre chaque terme : <span class="katex-display" data-katex="\int(\frac{1/6}{1-t}-\frac{1/2}{1+t}+\frac{1/3t+1/3}{t^2+t+1})dt"></span>. Pour la dernière intégrale, on la sépare en deux : une partie avec la dérivée du dénominateur (<span class="katex-inline" data-katex="\frac{2t+1}{t^2+t+1}"></span>) et une autre qui donnera un <span class="katex-inline" data-katex="\arctan"></span> après mise sous forme canonique.</p><p>Le résultat final est <span class="katex-display" data-katex="-\frac{1}{6}ln|1-t|-\frac{1}{2}ln|1+t|+\frac{1}{6}ln(t^2+t+1)+\frac{1}{3\sqrt{3}}arctan(\frac{2t+1}{\sqrt{3}})+C"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 2 : Intégrale hyperbolique</h4><p><strong>Étape 1 : Substitution.</strong> On utilise <span class="katex-inline" data-katex="t=\tanh(x/2)"></span>, ce qui donne <span class="katex-display" data-katex="\sinh x=\frac{2t}{1-t^2}, \cosh x=\frac{1+t^2}{1-t^2}, dx=\frac{2dt}{1-t^2}"></span>. On remplace dans l'intégrale :</p><p><span class="katex-display" data-katex="\int\frac{\frac{2t}{1-t^2}}{\frac{2t}{1-t^2}+2\frac{1+t^2}{1-t^2}}\frac{2dt}{1-t^2}"></span></p><p><strong>Étape 2 : Simplification.</strong> Après simplification du dénominateur et de la fraction, on obtient : <span class="katex-display" data-katex="\int\frac{2t}{2t+2(1+t^2)}\frac{2dt}{1-t^2} = 2\int\frac{t}{(1-t^2)(t^2+t+1)}dt"></span>. On reconnaît que c'est exactement le double de l'intégrale de la première question.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 3 : Intégrale avec racines</h4><p><strong>Étape 1 : Changement de variable.</strong> Le plus petit commun multiple des dénominateurs des exposants (1 et 2/3) est 3. On pose donc <span class="katex-inline" data-katex="x=t^3"></span>, ce qui implique <span class="katex-inline" data-katex="dx=3t^2 dt"></span>.</p><p><strong>Étape 2 : Substitution et simplification.</strong> L'intégrale devient une intégrale de fraction rationnelle en t : <span class="katex-display" data-katex="\int\frac{t^3+t^2-1}{(t+1)(1-t^3)}3t^2dt"></span>. On peut simplifier cette fraction avant de la décomposer et de l'intégrer pour obtenir le résultat final.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p><strong>Questions 1 et 2 :</strong> C'est une application directe du Théorème Fondamental de l'Analyse. Pensez à la fonction <span class="katex-inline" data-katex="g(x)"></span> comme <span class="katex-inline" data-katex="F(v(x)) - F(u(x))"></span>. Pour dériver, n'oubliez pas la règle de la chaîne !</p><p><strong>Question 3 :</strong> Pour la partie (c), le calcul de <span class="katex-inline" data-katex="g'(x)"></span> va faire apparaître des valeurs absolues. Pour la partie (d), étudiez le signe de <span class="katex-inline" data-katex="\sin(x)"></span> et <span class="katex-inline" data-katex="\cos(x)"></span> sur l'intervalle donné pour vous débarrasser des valeurs absolues.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Théorème fondamental de l'analyse :</strong> Si <span class="katex-inline" data-katex="f"></span> est continue et <span class="katex-inline" data-katex="F'(x)=f(x)"></span>, alors <span class="katex-inline" data-katex="\int_a^b f(t)dt = F(b)-F(a)"></span>.</p><p><strong>Dérivation d'une intégrale à bornes variables :</strong> Si <span class="katex-inline" data-katex="H(x) = \int_{u(x)}^{v(x)} f(t)dt"></span>, alors <span class="katex-display" data-katex="H'(x) = f(v(x))v'(x) - f(u(x))u'(x)"></span>. C'est une conséquence du théorème fondamental et de la règle de dérivation en chaîne.</p><p><strong>Primitives des fonctions trigonométriques inverses :</strong> Savoir que la primitive de <span class="katex-inline" data-katex="\frac{1}{\sqrt{1-t^2}}"></span> est <span class="katex-inline" data-katex="\arcsin(t)"></span>.</p><p><strong>Propriétés des fonctions trigonométriques :</strong> Connaître les valeurs de sinus et cosinus aux points remarquables (<span class="katex-inline" data-katex="\pi, \pi/2"></span>) et leur signe sur les différents quadrants du cercle trigonométrique.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 1 : Expression de g(x) avec F</h4><p>Par définition d'une primitive, <span class="katex-inline" data-katex="\int_a^b f(t)dt = F(b)-F(a)"></span>. En appliquant cela à la définition de g(x), on obtient directement : <span class="katex-display" data-katex="g(x) = F(\cos x) - F(\sin x)"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 2 : Expression de g'(x) avec f</h4><p>On dérive l'expression de g(x) trouvée précédemment en utilisant la règle de la chaîne : <span class="katex-display" data-katex="g'(x) = F'(\cos x) \cdot (\cos x)' - F'(\sin x) \cdot (\sin x)'"></span>. Comme <span class="katex-inline" data-katex="F'=f"></span>, on remplace et on obtient : <span class="katex-display" data-katex="g'(x) = f(\cos x)(-\sin x) - f(\sin x)(\cos x)"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 3 : Application</h4><p><strong>(a) Calcul de g(x) :</strong> La fonction est <span class="katex-inline" data-katex="f(t) = \frac{1}{\sqrt{1-t^2}}"></span>. Une primitive bien connue est <span class="katex-inline" data-katex="F(t) = \arcsin(t)"></span>. Donc, <span class="katex-display" data-katex="g(x) = \arcsin(\cos x) - \arcsin(\sin x)"></span>.</p><p><strong>(b) Calcul de valeurs :</strong> On remplace x par les valeurs données : <br><span class="katex-inline" data-katex="g(\pi) = \arcsin(\cos \pi) - \arcsin(\sin \pi) = \arcsin(-1) - \arcsin(0) = -\frac{\pi}{2} - 0 = -\frac{\pi}{2}"></span>.<br><span class="katex-inline" data-katex="g(\frac{\pi}{2}) = \arcsin(\cos \frac{\pi}{2}) - \arcsin(\sin \frac{\pi}{2}) = \arcsin(0) - \arcsin(1) = 0 - \frac{\pi}{2} = -\frac{\pi}{2}"></span>.</p><p><strong>(c) Calcul de g'(x) :</strong> On utilise la formule de la partie 2 : <span class="katex-display" data-katex="g'(x) = -\sin(x)\frac{1}{\sqrt{1-\cos^2x}} - \cos(x)\frac{1}{\sqrt{1-\sin^2x}}"></span>. En simplifiant avec <span class="katex-inline" data-katex="\sqrt{1-\cos^2x}=|\sin x|"></span>, on a : <span class="katex-display" data-katex="g'(x) = -\frac{\sin x}{|\sin x|} - \frac{\cos x}{|\cos x|}"></span>.</p><p><strong>(d) Simplification de g(x) :</strong> Sur l'intervalle <span class="katex-inline" data-katex="x \in [\frac{\pi}{2}, \pi]"></span>, on a <span class="katex-inline" data-katex="\sin x \ge 0"></span> et <span class="katex-inline" data-katex="\cos x \le 0"></span>. Les valeurs absolues deviennent <span class="katex-inline" data-katex="|\sin x| = \sin x"></span> et <span class="katex-inline" data-katex="|\cos x| = -\cos x"></span>. La dérivée devient : <span class="katex-display" data-katex="g'(x) = -\frac{\sin x}{\sin x} - \frac{\cos x}{-\cos x} = -1 - (-1) = 0"></span>. Puisque la dérivée est nulle, la fonction g(x) est constante sur cet intervalle. On connaît la valeur en un point de l'intervalle, <span class="katex-inline" data-katex="g(\pi/2) = -\pi/2"></span>. Donc, pour tout <span class="katex-inline" data-katex="x \in [\frac{\pi}{2}, \pi]"></span>, <span class="katex-inline" data-katex="g(x) = -\pi/2"></span>.</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p><strong>Question 1 :</strong> C'est une équation différentielle linéaire du premier ordre. La méthode standard est de résoudre l'équation homogène associée, puis d'utiliser la variation de la constante pour trouver une solution particulière.</p><p><strong>Question 2 :</strong> C'est une équation différentielle linéaire du second ordre à coefficients constants.<br>1. Résolvez l'équation caractéristique pour trouver la solution de l'équation homogène.<br>2. Le second membre est de la forme <span class="katex-inline" data-katex="P(x)e^{\alpha x}"></span>. Cherchez une solution particulière de la même forme, <span class="katex-inline" data-katex="Q(x)e^{\alpha x}"></span>.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Équations différentielles linéaires du 1er ordre :</strong> Savoir résoudre <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>. La solution est la somme de la solution de l'équation homogène (<span class="katex-inline" data-katex="y' + a(x)y = 0"></span>) et d'une solution particulière. Maîtriser la méthode de la variation de la constante.</p><p><strong>Équations différentielles linéaires du 2nd ordre à coefficients constants :</strong> Savoir résoudre <span class="katex-inline" data-katex="ay''+by'+cy=f(x)"></span>.<br>- Former l'équation caractéristique <span class="katex-inline" data-katex="ar^2+br+c=0"></span>.<br>- Déterminer la forme de la solution homogène selon le signe du discriminant <span class="katex-inline" data-katex="\Delta"></span>.<br>- Maîtriser la méthode des coefficients indéterminés pour trouver une solution particulière lorsque le second membre est un polynôme, une exponentielle, un sinus/cosinus ou un produit de ceux-ci.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 1 : Équation du premier ordre</h4><p><strong>Étape 1 : Solution homogène.</strong> L'équation homogène est <span class="katex-inline" data-katex="xy'-y=0"></span>. C'est une équation à variables séparables : <span class="katex-inline" data-katex="\frac{dy}{y} = \frac{dx}{x}"></span>, qui s'intègre en <span class="katex-inline" data-katex="\ln|y|=\ln|x|+C_1"></span>. La solution homogène est <span class="katex-inline" data-katex="y_h(x) = Cx"></span>.</p><p><strong>Étape 2 : Variation de la constante.</strong> On cherche une solution particulière de la forme <span class="katex-inline" data-katex="y_p(x) = C(x)x"></span>. On dérive : <span class="katex-inline" data-katex="y'_p = C'(x)x + C(x)"></span>. On remplace dans l'équation complète : <span class="katex-display" data-katex="x(C'(x)x+C(x)) - C(x)x = x^2 \log x \Rightarrow C'(x)x^2 = x^2 \log x"></span>. On trouve <span class="katex-inline" data-katex="C'(x) = \log x"></span>. On intègre pour trouver <span class="katex-inline" data-katex="C(x) = x \log x - x"></span> (par parties).</p><p><strong>Étape 3 : Solution générale.</strong> <span class="katex-inline" data-katex="y(x) = y_h(x) + y_p(x) = Kx + (x \log x - x)x"></span>. Donc, <span class="katex-display" data-katex="y(x) = x^2 \log x - x^2 + Kx"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 2 : Équation du second ordre</h4><p><strong>Étape 1 : Solution homogène.</strong> L'équation caractéristique est <span class="katex-inline" data-katex="r^2+3r+2=0"></span>, qui se factorise en <span class="katex-inline" data-katex="(r+1)(r+2)=0"></span>. Les racines sont <span class="katex-inline" data-katex="r_1=-1, r_2=-2"></span>. La solution homogène est donc <span class="katex-inline" data-katex="y_h(x) = c_1e^{-x} + c_2e^{-2x}"></span>.</p><p><strong>Étape 2 : Solution particulière.</strong> Le second membre est <span class="katex-inline" data-katex="xe^x"></span>. Comme <span class="katex-inline" data-katex="\alpha=1"></span> n'est pas racine de l'équation caractéristique, on cherche une solution particulière de la forme <span class="katex-inline" data-katex="y_p(x) = (ax+b)e^x"></span>. On calcule ses dérivées : <span class="katex-inline" data-katex="y'_p = (ax+a+b)e^x"></span> et <span class="katex-inline" data-katex="y''_p = (ax+2a+b)e^x"></span>. On remplace dans l'équation complète et on identifie les coefficients des termes en <span class="katex-inline" data-katex="xe^x"></span> et <span class="katex-inline" data-katex="e^x"></span>. On obtient le système : <span class="katex-inline" data-katex="\begin{cases} 6a = 1 \\ 5a+6b=0 \end{cases}"></span>, ce qui donne <span class="katex-inline" data-katex="a=1/6, b=-5/36"></span>. La solution particulière est <span class="katex-inline" data-katex="y_p(x) = (\frac{1}{6}x-\frac{5}{36})e^x"></span>.</p><p><strong>Étape 3 : Solution générale.</strong> On additionne la solution homogène et la solution particulière : <span class="katex-display" data-katex="y(x) = c_1e^{-x} + c_2e^{-2x} + (\frac{1}{6}x - \frac{5}{36})e^x"></span>.</p></div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.getAttribute('data-katex');
+                    // Ensure content is not empty to avoid KaTeX errors
+                    if (content) {
+                        const displayMode = el.classList.contains('katex-display');
+                        try {
+                            katex.render(content, el, {
+                                throwOnError: false, // Don't throw errors, log to console instead
+                                displayMode: displayMode
+                            });
+                        } catch (e) {
+                            console.error("KaTeX rendering error for content:", content, e);
+                            el.innerHTML = `<span style='color: red;'>Erreur LaTeX: ${content}</span>`;
+                        }
+                    }
+                });
+            }, 100);
+        });
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

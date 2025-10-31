@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 1 - Final Exam (2013-2014) - Dark Theme</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles from dark.html theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #a855f7; /* Purple for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 1</h1>
+            <p class="exam-subtitle">Final Exam (2013-2014)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <h3 class="font-bold text-xl mb-4 text-slate-300">Exercise 1 (5 points)</h3>
+                <p class="mb-4 text-slate-300">Let <span class="katex-inline" data-id="e1-un-def1"></span> be the real sequence defined by: <span class="katex-inline" data-id="e1-un-def2"></span> and <span class="katex-inline" data-id="e1-un-def3"></span>.</p>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.1</h3>
+                    <div class="exercise-content">
+                        <p>Show that <span class="katex-inline" data-id="e1q1-show"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.2</h3>
+                    <div class="exercise-content">
+                        <p>Show that <span class="katex-inline" data-id="e1q2-un-mono"></span> is monotonic. Deduce that it converges and then calculate its limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 1.3</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="e1q3-A-def"></span>. Determine sup A, inf A, max A, and min A.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE1Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE1Q3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-xl mb-4 mt-8 text-slate-300">Exercise 2 (5 points)</h3>
+                <p class="mb-4 text-slate-300">Let f be the function defined by: <span class="katex-display" data-id="e2-f-def"></span></p>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.1</h3>
+                    <div class="exercise-content">
+                        <p>Study the continuity of f on its domain of definition.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.2</h3>
+                    <div class="exercise-content">
+                        <p>Show that f can be extended by continuity at 0. Let g be its extension.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.3</h3>
+                    <div class="exercise-content">
+                        <p>Calculate <span class="katex-inline" data-id="e2q3-g-prime"></span> for <span class="katex-inline" data-id="e2q3-x-neq-0"></span> as well as <span class="katex-inline" data-id="e2q3-g-prime-0"></span>. Is the derivative g' continuous at point 0?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 2.4</h3>
+                    <div class="exercise-content">
+                        <p>Can Rolle's theorem be applied to g on the interval [-1,1]? (Given that <span class="katex-inline" data-id="e2q4-arctan-1"></span>).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE2Q4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE2Q4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-xl mb-4 mt-8 text-slate-300">Exercise 3 (10 points)</h3>
+                <p class="mb-4 text-slate-300">Let f and h be the real functions of a real variable defined by <span class="katex-inline" data-id="e3-f-def"></span> and <span class="katex-inline" data-id="e3-h-def"></span>. Consider the numerical sequence defined by <span class="katex-inline" data-id="e3-U-def"></span>.</p>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.1</h3>
+                    <div class="exercise-content">
+                        <p>State the Maclaurin-Lagrange formula to order n and then show that <span class="katex-display" data-id="e3q1-ineq"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.2</h3>
+                    <div class="exercise-content">
+                        <p>Study the variations of h on <span class="katex-inline" data-id="e3q2-Rplus"></span>. (Draw a variation table.)</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.3</h3>
+                    <div class="exercise-content">
+                        <p>Deduce that the equation <span class="katex-inline" data-id="e3q3-fx-eq-x"></span> has no solution on <span class="katex-inline" data-id="e3q3-Rplus"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.4</h3>
+                    <div class="exercise-content">
+                        <p>What can be deduced about the nature of the sequence <span class="katex-inline" data-id="e3q4-Un"></span>? Justify the answer.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.5</h3>
+                    <div class="exercise-content">
+                        <p>Show that the sequence <span class="katex-inline" data-id="e3q5-Un"></span> is increasing.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q5')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q5')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.6</h3>
+                    <div class="exercise-content">
+                        <p>Show that <span class="katex-inline" data-id="e3q6-Un-ge-n"></span> <span class="katex-inline" data-id="e3q6-forall-n"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q6')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q6')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.7</h3>
+                    <div class="exercise-content">
+                        <p>What can be said about inf <span class="katex-inline" data-id="e3q7-Un1"></span>, min <span class="katex-inline" data-id="e3q7-Un2"></span>, sup <span class="katex-inline" data-id="e3q7-Un3"></span> and max <span class="katex-inline" data-id="e3q7-Un4"></span>?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q7')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q7')">Prerequisites</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.8</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="e3q8-Wn-def"></span>. What can be said about inf <span class="katex-inline" data-id="e3q8-Wn1"></span>, min <span class="katex-inline" data-id="e3q8-Wn2"></span>, sup <span class="katex-inline" data-id="e3q8-Wn3"></span> and max <span class="katex-inline" data-id="e3q8-Wn4"></span>?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q8')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q8')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Question 3.9</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="e3q9-g-def"></span> and consider the numerical sequence defined by <span class="katex-inline" data-id="e3q9-Vn-def"></span>. Show that <span class="katex-inline" data-id="e3q9-lim-Vn"></span>. (Hint: You can show that <span class="katex-inline" data-id="e3q9-g-ge-f"></span> on <span class="katex-inline" data-id="e3q9-Rplus"></span> and that <span class="katex-inline" data-id="e3q9-Vn-ge-Un"></span>).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintE3Q9')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeE3Q9')">Prerequisites</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <h3 class="font-bold text-xl mb-4 text-slate-300">Exercise 1</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.1</h3>
+                    <div class="exercise-content">
+                        <p>We proceed by induction. Let the function be <span class="katex-inline" data-id="s1q1-f-def"></span>. Its derivative is <span class="katex-inline" data-id="s1q1-f-prime"></span>, so f is strictly increasing.
+                        </p><p><b>Initialization:</b> For n=0, <span class="katex-inline" data-id="s1q1-u0"></span>, so <span class="katex-inline" data-id="s1q1-u0-in-interval"></span>. The property is true.
+                        </p><p><b>Heredity:</b> Assume <span class="katex-inline" data-id="s1q1-hyp"></span>. Since f is increasing, we have <span class="katex-inline" data-id="s1q1-f-ineq"></span>, which gives <span class="katex-inline" data-id="s1q1-un1-ineq"></span>.
+                        </p><p><b>Conclusion:</b> <span class="katex-inline" data-id="s1q1-conclusion"></span> for all <span class="katex-inline" data-id="s1q1-forall-n"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.2</h3>
+                    <div class="exercise-content">
+                        <p>Since <span class="katex-inline" data-id="s1q2-u-rec"></span> and f is increasing, the sequence <span class="katex-inline" data-id="s1q2-un"></span> is monotonic.
+                        </p><p>We calculate <span class="katex-inline" data-id="s1q2-u1"></span>. As <span class="katex-inline" data-id="s1q2-u1-lt-u0"></span>, the sequence is decreasing.
+                        </p><p>The sequence <span class="katex-inline" data-id="s1q2-un2"></span> is decreasing and bounded below by 0, so it is convergent. Let <span class="katex-inline" data-id="s1q2-l"></span> be its limit. <span class="katex-inline" data-id="s1q2-l2"></span> must satisfy the fixed-point equation <span class="katex-inline" data-id="s1q2-l-eq-fl"></span>.
+                        </p><p><span class="katex-inline" data-id="s1q2-l-eq"></span>, which gives the quadratic equation <span class="katex-inline" data-id="s1q2-l-quad"></span>. The roots are <span class="katex-inline" data-id="s1q2-l-roots"></span>.
+                        </p><p>Since <span class="katex-inline" data-id="s1q2-un-pos"></span>, the limit must be positive or zero. Therefore, <span class="katex-inline" data-id="s1q2-lim-un"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 1.3</h3>
+                    <div class="exercise-content">
+                        <p>The sequence <span class="katex-inline" data-id="s1q3-un"></span> is decreasing, so its first term is the largest.
+                        </p><p>We therefore have <span class="katex-inline" data-id="s1q3-sup-max"></span>.
+                        </p><p>The infimum is the limit of the sequence. So, <span class="katex-inline" data-id="s1q3-inf"></span>.
+                        </p><p>The minimum does not exist because the sequence is strictly decreasing and never reaches its limit.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE1Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-xl mb-4 mt-8 text-slate-300">Exercise 2</h3>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.1</h3>
+                    <div class="exercise-content">
+                        <p>The domain of definition of f is <span class="katex-inline" data-id="s2q1-Df"></span>.
+                        </p><p>On <span class="katex-inline" data-id="s2q1-Rstar"></span>, the function f is continuous because it is the product and composition of continuous functions on this domain (rational functions, arctangent).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.2</h3>
+                    <div class="exercise-content">
+                        <p>We calculate the limit of f(x) at 0:
+                        </p><p><span class="katex-inline" data-id="s2q2-lim-frac"></span> and <span class="katex-inline" data-id="s2q2-lim-arctan"></span>.
+                        </p><p>So <span class="katex-inline" data-id="s2q2-lim-f"></span>. The limit is finite, so f can be extended by continuity at 0.
+                        </p><p>The extension g is defined by: <span class="katex-display" data-id="s2q2-g-def"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.3</h3>
+                    <div class="exercise-content">
+                        <p>For <span class="katex-inline" data-id="s2q3-x-neq-0"></span>, we calculate <span class="katex-inline" data-id="s2q3-g-prime"></span>: <span class="katex-display" data-id="s2q3-g-prime-calc"></span>
+                        </p><p>For <span class="katex-inline" data-id="s2q3-x-eq-0"></span>, we use the definition of the derivative: <span class="katex-inline" data-id="s2q3-g-prime-0-def"></span>.
+                        </p><p>We study the limit of <span class="katex-inline" data-id="s2q3-g-prime-x-lim"></span> at 0: <span class="katex-inline" data-id="s2q3-lim-g-prime"></span>.
+                        </p><p>Since <span class="katex-inline" data-id="s2q3-lim-g-prime-eq-g-prime-0"></span>, the derivative g' is continuous at 0.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 2.4</h3>
+                    <div class="exercise-content">
+                        <p>1. g is continuous on [-1,1] (according to questions 2.1 and 2.2).
+                        </p><p>2. g is differentiable on ]-1,1[ (according to question 2.3).
+                        </p><p>3. We calculate g(1) and g(-1):
+                        </p><p><span class="katex-inline" data-id="s2q4-g1"></span>.
+                        </p><p><span class="katex-inline" data-id="s2q4-g-1"></span>.
+                        </p><p>As <span class="katex-inline" data-id="s2q4-g1-eq-g-1"></span>, the three conditions of Rolle's theorem are satisfied. We can therefore apply Rolle's theorem to g on [-1,1].</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE2Q4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                 <h3 class="font-bold text-xl mb-4 mt-8 text-slate-300">Exercise 3</h3>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.1</h3>
+                    <div class="exercise-content">
+                        <p><b>Maclaurin-Lagrange formula to order n:</b> If f is of class <span class="katex-inline" data-id="s3q1-Cn"></span> on [0,x] and if <span class="katex-inline" data-id="s3q1-f-np1"></span> exists on ]0,x[, then there exists <span class="katex-inline" data-id="s3q1-c-in-0x"></span> such that <span class="katex-inline" data-id="s3q1-maclaurin"></span>.
+                        </p><p>We apply the formula to <span class="katex-inline" data-id="s3q1-f-def"></span> to order 2. We have <span class="katex-inline" data-id="s3q1-f-derivs"></span>.
+                        </p><p>We find <span class="katex-inline" data-id="s3q1-f-vals"></span>.
+                        </p><p>The formula gives <span class="katex-inline" data-id="s3q1-f-expanded"></span> for <span class="katex-inline" data-id="s3q1-c-in-0x2"></span>.
+                        </p><p>For <span class="katex-inline" data-id="s3q1-x-in-Rplus"></span>, <span class="katex-inline" data-id="s3q1-0-lt-c-lt-x"></span> implies <span class="katex-inline" data-id="s3q1-1-lt-ec-lt-ex"></span>.
+                        </p><p>From this we deduce the bounds: <span class="katex-inline" data-id="s3q1-final-ineq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.2</h3>
+                    <div class="exercise-content">
+                        <p>We have <span class="katex-inline" data-id="s3q2-h-def"></span>.
+                        </p><p>First derivative: <span class="katex-inline" data-id="s3q2-h-prime"></span>.
+                        </p><p>Second derivative: <span class="katex-inline" data-id="s3q2-h-second"></span>.
+                        </p><p>For <span class="katex-inline" data-id="s3q2-x-gt-0"></span>, <span class="katex-inline" data-id="s3q2-h-second-pos"></span>, so <span class="katex-inline" data-id="s3q2-h-prime-croiss"></span> is increasing.
+                        </p><p>Since <span class="katex-inline" data-id="s3q2-h-prime-0"></span>, we deduce that <span class="katex-inline" data-id="s3q2-h-prime-pos"></span> for <span class="katex-inline" data-id="s3q2-x-gt-0-2"></span>.
+                        </p><p>Thus, h is increasing on <span class="katex-inline" data-id="s3q2-Rplus"></span>. We have <span class="katex-inline" data-id="s3q2-h0"></span> and <span class="katex-inline" data-id="s3q2-lim-h"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.3</h3>
+                    <div class="exercise-content">
+                        <p>Solving <span class="katex-inline" data-id="s3q3-fx-eq-x"></span> is equivalent to solving <span class="katex-inline" data-id="s3q3-h-eq-0"></span>.
+                        </p><p>From the study of variations of h in the previous question, we know that for <span class="katex-inline" data-id="s3q3-x-ge-0"></span>, <span class="katex-inline" data-id="s3q3-h-ge-h0"></span>.
+                        </p><p>So, <span class="katex-inline" data-id="s3q3-h-ge-1"></span>. The equation <span class="katex-inline" data-id="s3q3-h-eq-0-2"></span> has no solution on <span class="katex-inline" data-id="s3q3-Rplus"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.4</h3>
+                    <div class="exercise-content">
+                        <p>The sequence <span class="katex-inline" data-id="s3q4-Un"></span> is defined by <span class="katex-inline" data-id="s3q4-Un-rec"></span>.
+                        </p><p>If it converged in <span class="katex-inline" data-id="s3q4-Rplus"></span>, its limit <span class="katex-inline" data-id="s3q4-l"></span> would satisfy <span class="katex-inline" data-id="s3q4-l-eq-fl"></span>.
+                        </p><p>However, according to question 3.3, this equation has no solution in <span class="katex-inline" data-id="s3q4-Rplus2"></span>.
+                        </p><p>Therefore, the sequence does not converge in <span class="katex-inline" data-id="s3q4-Rplus3"></span>. As it is increasing and has positive terms (see subsequent questions), it diverges to <span class="katex-inline" data-id="s3q4-p-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q4')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.5</h3>
+                    <div class="exercise-content">
+                        <p>We study the monotonicity of f on <span class="katex-inline" data-id="s3q5-Rplus"></span>. <span class="katex-inline" data-id="s3q5-f-prime"></span>. <span class="katex-inline" data-id="s3q5-f-second"></span> on <span class="katex-inline" data-id="s3q5-Rplus2"></span>.
+                        </p><p>So <span class="katex-inline" data-id="s3q5-f-prime-croiss"></span> is increasing. Since <span class="katex-inline" data-id="s3q5-f-prime-0"></span>, we have <span class="katex-inline" data-id="s3q5-f-prime-ge-1"></span>, so f is increasing on <span class="katex-inline" data-id="s3q5-Rplus3"></span>.
+                        </p><p>We calculate <span class="katex-inline" data-id="s3q5-U1"></span> and <span class="katex-inline" data-id="s3q5-U0"></span>. <span class="katex-inline" data-id="s3q5-U1-val"></span>. Since <span class="katex-inline" data-id="s3q5-U1-gt-U0"></span> and f is increasing, the sequence <span class="katex-inline" data-id="s3q5-Un"></span> is increasing.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q5')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.6</h3>
+                    <div class="exercise-content">
+                        <p>We proceed by induction.
+                        </p><p><b>Initialization:</b> For n=0, <span class="katex-inline" data-id="s3q6-U0-ge-0"></span>. True.
+                        </p><p><b>Heredity:</b> Assume <span class="katex-inline" data-id="s3q6-Un-ge-n"></span>. We want to show <span class="katex-inline" data-id="s3q6-Un1-ge-n1"></span>.
+                        </p><p>We have <span class="katex-inline" data-id="s3q6-Un1-def"></span>. From question 3.1 (simplified), we know that <span class="katex-inline" data-id="s3q6-fx-ge-1px"></span>.
+                        </p><p>So, <span class="katex-inline" data-id="s3q6-Un1-fUn"></span>. Using the induction hypothesis, <span class="katex-inline" data-id="s3q6-Un1-ge-1pUn"></span>.
+                        </p><p>The property is therefore true for all n.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q6')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.7</h3>
+                    <div class="exercise-content">
+                        <p>The sequence <span class="katex-inline" data-id="s3q7-Un"></span> is increasing (Q 3.5), so its infimum is its first term, which is also its minimum.
+                        </p><p><span class="katex-inline" data-id="s3q7-inf-min"></span>.
+                        </p><p>According to question 3.6, <span class="katex-inline" data-id="s3q7-Un-ge-n"></span>, so <span class="katex-inline" data-id="s3q7-lim-Un"></span> by comparison.
+                        </p><p>The sequence is not bounded above. Therefore, <span class="katex-inline" data-id="s3q7-sup"></span> and max <span class="katex-inline" data-id="s3q7-Un2"></span> does not exist.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q7')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.8</h3>
+                    <div class="exercise-content">
+                        <p>We have <span class="katex-inline" data-id="s3q8-Wn-def"></span>.
+                        </p><p>For the even terms: <span class="katex-inline" data-id="s3q8-W2k"></span>, which tends to <span class="katex-inline" data-id="s3q8-p-inf"></span>.
+                        </p><p>For the odd terms: <span class="katex-inline" data-id="s3q8-W2k1"></span>, which tends to <span class="katex-inline" data-id="s3q8-m-inf"></span>.
+                        </p><p>The sequence is neither bounded above nor below. So <span class="katex-inline" data-id="s3q8-sup"></span>, <span class="katex-inline" data-id="s3q8-inf"></span>, and min and max do not exist.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q8')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Question 3.9</h3>
+                    <div class="exercise-content">
+                        <p>On <span class="katex-inline" data-id="s3q9-Rplus"></span>, we have <span class="katex-inline" data-id="s3q9-ex-ge-1"></span>, so <span class="katex-inline" data-id="s3q9-x3ex-ge-x3d6"></span>. We deduce that <span class="katex-inline" data-id="s3q9-g-ge-f"></span>.
+                        </p><p>We show <span class="katex-inline" data-id="s3q9-Vn-ge-Un"></span> by induction.
+                        </p><p><b>Initialization:</b> <span class="katex-inline" data-id="s3q9-V0-U0"></span>. True.
+                        </p><p><b>Heredity:</b> Assume <span class="katex-inline" data-id="s3q9-Vn-ge-Un2"></span>. We have <span class="katex-inline" data-id="s3q9-Vn1-def"></span>. Since g is increasing and <span class="katex-inline" data-id="s3q9-g-ge-f2"></span>, <span class="katex-inline" data-id="s3q9-Vn1-ge-fVn"></span>. As f is increasing, <span class="katex-inline" data-id="s3q9-fVn-ge-fUn"></span>. Finally, <span class="katex-inline" data-id="s3q9-Vn1-ge-Un1"></span>.
+                        </p><p>Since <span class="katex-inline" data-id="s3q9-Vn-ge-Un3"></span> and <span class="katex-inline" data-id="s3q9-lim-Un"></span>, by the comparison theorem, <span class="katex-inline" data-id="s3q9-lim-Vn"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationE3Q9')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hintE1Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 1.1</h3><span class="close-btn" onclick="closeModal('hintE1Q1')">&times;</span></div><p>Use a proof by induction. For the heredity step, first study the variations of the function <span class="katex-inline" data-id="m-hE1Q1-f"></span>.</p></div>
+    </div>
+    <div id="knowledgeE1Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 1.1</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q1')">&times;</span></div><p><b>Proof by Induction:</b> Know how to apply the three steps (initialization, heredity, conclusion).</p><p><b>Function Study:</b> Calculate the derivative of a rational function to determine its direction of variation.</p><p><b>Image of an Interval:</b> Understand how an increasing function transforms an inequality.</p></div>
+    </div>
+    <div id="explanationE1Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 1.1</h3><span class="close-btn" onclick="closeModal('explanationE1Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that <span class="katex-inline" data-id="m-eE1Q1-obj"></span>.</h4><p>We use a proof by induction. Let <span class="katex-inline" data-id="m-eE1Q1-Pn"></span> be the property.</p><p><b>1. Initialization (n=0):</b><br>We have <span class="katex-inline" data-id="m-eE1Q1-u0"></span>. We check if <span class="katex-inline" data-id="m-eE1Q1-u0-check"></span>. This is true. So <span class="katex-inline" data-id="m-eE1Q1-P0"></span> is true.</p><p><b>2. Heredity:</b><br>Assume that <span class="katex-inline" data-id="m-eE1Q1-Pk"></span> is true for some <span class="katex-inline" data-id="m-eE1Q1-k"></span>, i.e., <span class="katex-inline" data-id="m-eE1Q1-hyp"></span>. Let's show that <span class="katex-inline" data-id="m-eE1Q1-Pk1"></span> is true, i.e., <span class="katex-inline" data-id="m-eE1Q1-goal"></span>.</p><p>Let <span class="katex-inline" data-id="m-eE1Q1-f"></span>. The derivative is <span class="katex-inline" data-id="m-eE1Q1-fprime"></span>. Since the derivative is always positive, the function <span class="katex-inline" data-id="m-eE1Q1-f-croiss"></span> is strictly increasing.</p><p>We apply the function <span class="katex-inline" data-id="m-eE1Q1-f-apply"></span> to the inequality of the induction hypothesis <span class="katex-inline" data-id="m-eE1Q1-hyp2"></span>. As <span class="katex-inline" data-id="m-eE1Q1-f-croiss2"></span> is increasing, the direction of the inequality is preserved:<br><span class="katex-display" data-id="m-eE1Q1-ineq-f"></span><br>We replace <span class="katex-inline" data-id="m-eE1Q1-fuk"></span> with <span class="katex-inline" data-id="m-eE1Q1-uk1"></span> and calculate the values at the bounds:<br><span class="katex-display" data-id="m-eE1Q1-ineq-vals"></span><br>So we have <span class="katex-inline" data-id="m-eE1Q1-final-ineq"></span>, which indeed implies <span class="katex-inline" data-id="m-eE1Q1-final-goal"></span>. The heredity is proven.</p><p><b>3. Conclusion:</b><br>By the principle of induction, the property is true for all <span class="katex-inline" data-id="m-eE1Q1-n-N"></span>.</p></div>
+    </div>
+    <div id="hintE1Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 1.2</h3><span class="close-btn" onclick="closeModal('hintE1Q2')">&times;</span></div><p>For monotonicity, compare <span class="katex-inline" data-id="m-hE1Q2-u1"></span> and <span class="katex-inline" data-id="m-hE1Q2-u0"></span>. Use the fact that the function <span class="katex-inline" data-id="m-hE1Q2-f"></span> is increasing. For the limit, solve the fixed-point equation <span class="katex-inline" data-id="m-hE1Q2-l-eq-fl"></span>.</p></div>
+    </div>
+    <div id="knowledgeE1Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 1.2</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q2')">&times;</span></div><p><b>Recurrent sequences:</b> For a sequence <span class="katex-inline" data-id="m-kE1Q2-un1"></span> with an increasing <span class="katex-inline" data-id="m-kE1Q2-f"></span>, the direction of variation is given by the sign of <span class="katex-inline" data-id="m-kE1Q2-u1-u0"></span>.</p><p><b>Monotone convergence theorem:</b> Every real sequence that is increasing and bounded above (or decreasing and bounded below) is convergent.</p><p><b>Fixed point:</b> If a sequence <span class="katex-inline" data-id="m-kE1Q2-un1-2"></span> converges to <span class="katex-inline" data-id="m-kE1Q2-l"></span> and <span class="katex-inline" data-id="m-kE1Q2-f-cont"></span> is continuous, then <span class="katex-inline" data-id="m-kE1Q2-l-eq-fl"></span>.</p></div>
+    </div>
+    <div id="explanationE1Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 1.2</h3><span class="close-btn" onclick="closeModal('explanationE1Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Monotonicity</h4><p>The sequence is of the form <span class="katex-inline" data-id="m-eE1Q2-un1"></span>. We have seen that the function <span class="katex-inline" data-id="m-eE1Q2-f"></span> is increasing. For this type of sequence, it is sufficient to compare the first two terms to determine the monotonicity.</p><p><span class="katex-inline" data-id="m-eE1Q2-u0"></span><br><span class="katex-inline" data-id="m-eE1Q2-u1"></span></p><p>Since <span class="katex-inline" data-id="m-eE1Q2-u1-lt-u0"></span> and <span class="katex-inline" data-id="m-eE1Q2-f-croiss"></span> is increasing, the sequence <span class="katex-inline" data-id="m-eE1Q2-un"></span> is decreasing.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Convergence</h4><p>According to question 1.1, the sequence is bounded below by 0. From the above, it is decreasing.<br>The <b>monotone convergence theorem</b> therefore assures us that the sequence <span class="katex-inline" data-id="m-eE1Q2-un-conv"></span> is convergent. Let's call its limit <span class="katex-inline" data-id="m-eE1Q2-l"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Calculation of the limit</h4><p>The limit <span class="katex-inline" data-id="m-eE1Q2-l2"></span> must be a fixed point of the function <span class="katex-inline" data-id="m-eE1Q2-f-cont"></span> (which is continuous). We therefore solve the equation <span class="katex-inline" data-id="m-eE1Q2-l-eq-fl"></span>:<br><span class="katex-display" data-id="m-eE1Q2-eq1"></span><span class="katex-display" data-id="m-eE1Q2-eq2"></span><span class="katex-display" data-id="m-eE1Q2-eq3"></span></p><p>We calculate the discriminant <span class="katex-inline" data-id="m-eE1Q2-delta"></span>. The solutions are:<br><span class="katex-display" data-id="m-eE1Q2-roots"></span></p><p>According to question 1.1, all terms of the sequence are positive (<span class="katex-inline" data-id="m-eE1Q2-un-pos"></span>). The limit must therefore be positive or zero (<span class="katex-inline" data-id="m-eE1Q2-l-pos"></span>). We reject the negative solution <span class="katex-inline" data-id="m-eE1Q2-l-neg"></span>.<br>The limit is therefore <span class="katex-inline" data-id="m-eE1Q2-l-final"></span>.</p></div>
+    </div>
+    <div id="hintE1Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 1.3</h3><span class="close-btn" onclick="closeModal('hintE1Q3')">&times;</span></div><p>Use the monotonicity of the sequence. For a decreasing sequence, which term is the largest? What is the infimum?</p></div>
+    </div>
+    <div id="knowledgeE1Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 1.3</h3><span class="close-btn" onclick="closeModal('knowledgeE1Q3')">&times;</span></div><p><b>Supremum (sup):</b> The least upper bound.</p><p><b>Infimum (inf):</b> The greatest lower bound.</p><p><b>Maximum (max):</b> The largest element in the set (must belong to the set).</p><p><b>Minimum (min):</b> The smallest element in the set (must belong to the set).</p><p><b>Properties of monotonic sequences:</b> For a decreasing sequence, the sup is the first term. The inf is the limit.</p></div>
+    </div>
+    <div id="explanationE1Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 1.3</h3><span class="close-btn" onclick="closeModal('explanationE1Q3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Analysis of the bounds of A</h4><p>The set is <span class="katex-inline" data-id="m-eE1Q3-A"></span>. We have shown that the sequence <span class="katex-inline" data-id="m-eE1Q3-un"></span> is decreasing. This means that:<br><span class="katex-display" data-id="m-eE1Q3-ineq"></span></p><p><b>Supremum and Maximum:</b><br>The largest term of the sequence is its first term, <span class="katex-inline" data-id="m-eE1Q3-u0"></span>. Since <span class="katex-inline" data-id="m-eE1Q3-u0-in-A"></span> belongs to the set A, it is both the supremum and the maximum.<br><span class="katex-inline" data-id="m-eE1Q3-sup-max"></span></p><p><b>Infimum and Minimum:</b><br>For a decreasing and convergent sequence, the infimum (the greatest lower bound) is equal to its limit.<br><span class="katex-inline" data-id="m-eE1Q3-inf"></span><br>The question is whether this value is reached. A strictly decreasing sequence never reaches its limit (unless it is constant, which is not the case here). So, <span class="katex-inline" data-id="m-eE1Q3-limit-not-in-A"></span> does not belong to A. Therefore, there is no minimum.<br><b>min A does not exist.</b></p></div>
+    </div>
+    
+    <div id="hintE2Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 2.1</h3><span class="close-btn" onclick="closeModal('hintE2Q1')">&times;</span></div><p>First, identify the domain of definition. Then, use the general theorems on the continuity of functions (product, composition) on this domain.</p></div>
+    </div>
+    <div id="knowledgeE2Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 2.1</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q1')">&times;</span></div><p><b>Domain of definition:</b> Identify the values for which the function is well-defined (non-zero denominator, defined arctangent argument).</p><p><b>Continuity of standard functions:</b> Rational functions and the arctangent function are continuous on their domains of definition.</p><p><b>Operations on continuous functions:</b> The product and composition of continuous functions are continuous functions.</p></div>
+    </div>
+    <div id="explanationE2Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 2.1</h3><span class="close-btn" onclick="closeModal('explanationE2Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Domain of definition</h4><p>The function is <span class="katex-inline" data-id="m-eE2Q1-f"></span>. It is defined if:<br>1. The denominator <span class="katex-inline" data-id="m-eE2Q1-den1"></span> is non-zero, which is always true.<br>2. The argument of the arctangent, <span class="katex-inline" data-id="m-eE2Q1-arg"></span>, is defined. This requires <span class="katex-inline" data-id="m-eE2Q1-x-neq-0"></span>.<br>The domain of definition is therefore <span class="katex-inline" data-id="m-eE2Q1-Df"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Continuity</h4><p>On the domain <span class="katex-inline" data-id="m-eE2Q1-Rstar"></span>, the function <span class="katex-inline" data-id="m-eE2Q1-f-is"></span> is constructed from continuous functions:<br>- <span class="katex-inline" data-id="m-eE2Q1-g"></span> is a rational function, continuous on <span class="katex-inline" data-id="m-eE2Q1-Rstar2"></span>.<br>- <span class="katex-inline" data-id="m-eE2Q1-h"></span> is the composition of the reciprocal function (continuous on <span class="katex-inline" data-id="m-eE2Q1-Rstar3"></span>) and the arctangent function (continuous on <span class="katex-inline" data-id="m-eE2Q1-R"></span>). It is therefore continuous on <span class="katex-inline" data-id="m-eE2Q1-Rstar4"></span>.</p><p>The function <span class="katex-inline" data-id="m-eE2Q1-f-is2"></span> is the product of two continuous functions on <span class="katex-inline" data-id="m-eE2Q1-Rstar5"></span>, so it is continuous on its domain of definition <span class="katex-inline" data-id="m-eE2Q1-Rstar6"></span>.</p></div>
+    </div>
+    <div id="hintE2Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 2.2</h3><span class="close-btn" onclick="closeModal('hintE2Q2')">&times;</span></div><p>To show that a function can be extended by continuity at a point, you must prove that the limit at that point exists and is finite. Calculate <span class="katex-inline" data-id="m-hE2Q2-lim"></span>.</p></div>
+    </div>
+    <div id="knowledgeE2Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 2.2</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q2')">&times;</span></div><p><b>Extension by continuity:</b> A function <span class="katex-inline" data-id="m-kE2Q2-f"></span> can be extended by continuity at <span class="katex-inline" data-id="m-kE2Q2-a"></span> if <span class="katex-inline" data-id="m-kE2Q2-lim"></span> exists and is finite. The extension <span class="katex-inline" data-id="m-kE2Q2-g"></span> is then defined by <span class="katex-inline" data-id="m-kE2Q2-ga"></span>.</p><p><b>Standard limits:</b> Know the limits of <span class="katex-inline" data-id="m-kE2Q2-frac"></span> at 0 and <span class="katex-inline" data-id="m-kE2Q2-arctan"></span> at <span class="katex-inline" data-id="m-kE2Q2-p-inf"></span>.</p></div>
+    </div>
+    <div id="explanationE2Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 2.2</h3><span class="close-btn" onclick="closeModal('explanationE2Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show that <span class="katex-inline" data-id="m-eE2Q2-lim"></span> exists and is finite.</h4><p>We study the limit of each factor of <span class="katex-inline" data-id="m-eE2Q2-f"></span> as <span class="katex-inline" data-id="m-eE2Q2-x-to-0"></span>.<br><b>First factor:</b><br><span class="katex-display" data-id="m-eE2Q2-lim1"></span><br><b>Second factor:</b><br>As <span class="katex-inline" data-id="m-eE2Q2-x-to-0-2"></span>, <span class="katex-inline" data-id="m-eE2Q2-1-over-x2"></span>. We thus have:<br><span class="katex-display" data-id="m-eE2Q2-lim2"></span></p><p>The limit of the product is the product of the limits:<br><span class="katex-display" data-id="m-eE2Q2-lim-f"></span></p><p>Since the limit at 0 exists and is finite (it is 0), the function <span class="katex-inline" data-id="m-eE2Q2-f-prol"></span> can be extended by continuity at 0. Its extension, denoted <span class="katex-inline" data-id="m-eE2Q2-g"></span>, is defined by:<br><span class="katex-display" data-id="m-eE2Q2-g-def"></span></p></div>
+    </div>
+    <div id="hintE2Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 2.3</h3><span class="close-btn" onclick="closeModal('hintE2Q3')">&times;</span></div><p>For <span class="katex-inline" data-id="m-hE2Q3-x-neq-0"></span>, use the product rule for differentiation. For <span class="katex-inline" data-id="m-hE2Q3-g-prime-0"></span>, go back to the definition of the derivative with the limit of the rate of change. For the continuity of <span class="katex-inline" data-id="m-hE2Q3-g-prime"></span>, compare <span class="katex-inline" data-id="m-hE2Q3-lim-g-prime"></span> and <span class="katex-inline" data-id="m-hE2Q3-g-prime-0-2"></span>.</p></div>
+    </div>
+    <div id="knowledgeE2Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 2.3</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q3')">&times;</span></div><p><b>Differentiation rules:</b> Derivative of a product <span class="katex-inline" data-id="m-kE2Q3-prod"></span>, a quotient <span class="katex-inline" data-id="m-kE2Q3-quot"></span>, and a composite function <span class="katex-inline" data-id="m-kE2Q3-comp"></span>.</p><p><b>Derivative of the arctangent:</b> <span class="katex-inline" data-id="m-kE2Q3-arctan-deriv"></span>.</p><p><b>Definition of the derivative at a point:</b> <span class="katex-inline" data-id="m-kE2Q3-deriv-def"></span>.</p><p><b>Continuity of a function:</b> <span class="katex-inline" data-id="m-kE2Q3-h-cont"></span> is continuous at <span class="katex-inline" data-id="m-kE2Q3-a"></span> if <span class="katex-inline" data-id="m-kE2Q3-lim-h"></span>.</p></div>
+    </div>
+    <div id="explanationE2Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 2.3</h3><span class="close-btn" onclick="closeModal('explanationE2Q3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calculation of <span class="katex-inline" data-id="m-eE2Q3-gprime-x"></span> for <span class="katex-inline" data-id="m-eE2Q3-x-neq-0"></span></h4><p>We differentiate <span class="katex-inline" data-id="m-eE2Q3-g"></span> as a product <span class="katex-inline" data-id="m-eE2Q3-uv"></span>. After calculation, we get:<br><span class="katex-display" data-id="m-eE2Q3-gprime-calc"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Calculation of <span class="katex-inline" data-id="m-eE2Q3-gprime-0"></span></h4><p>We use the definition with the limit of the rate of change:<br><span class="katex-display" data-id="m-eE2Q3-gprime-0-def"></span><br>We simplify the expression:<br><span class="katex-display" data-id="m-eE2Q3-gprime-0-lim"></span><br>Using the limits from question 2.2, we find:<br><span class="katex-display" data-id="m-eE2Q3-gprime-0-val"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Continuity of g' at 0</h4><p>We need to check if <span class="katex-inline" data-id="m-eE2Q3-lim-gprime-eq-gprime0"></span>.<br>We calculate the limit of the expression for <span class="katex-inline" data-id="m-eE2Q3-gprime-x-lim"></span> as <span class="katex-inline" data-id="m-eE2Q3-x-to-0"></span>.<br><b>Limit of the first term:</b><br><span class="katex-display" data-id="m-eE2Q3-lim-term1"></span><br><b>Limit of the second term:</b><br><span class="katex-display" data-id="m-eE2Q3-lim-term2"></span><br>The total limit is therefore <span class="katex-inline" data-id="m-eE2Q3-0m0"></span>.<br>Since <span class="katex-inline" data-id="m-eE2Q3-lim-gprime-0-final"></span>, the function <span class="katex-inline" data-id="m-eE2Q3-gprime-cont"></span> is continuous at 0.</p></div>
+    </div>
+    <div id="hintE2Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 2.4</h3><span class="close-btn" onclick="closeModal('hintE2Q4')">&times;</span></div><p>Check the three conditions for applying Rolle's theorem: continuity on the closed interval, differentiability on the open interval, and equality of the function's values at the endpoints of the interval.</p></div>
+    </div>
+    <div id="knowledgeE2Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 2.4</h3><span class="close-btn" onclick="closeModal('knowledgeE2Q4')">&times;</span></div><p><b>Rolle's Theorem:</b> Let <span class="katex-inline" data-id="m-kE2Q4-g"></span> be a function. If:<br>1. <span class="katex-inline" data-id="m-kE2Q4-g-cont"></span> is continuous on <span class="katex-inline" data-id="m-kE2Q4-ab-closed"></span>,<br>2. <span class="katex-inline" data-id="m-kE2Q4-g-deriv"></span> is differentiable on <span class="katex-inline" data-id="m-kE2Q4-ab-open"></span>,<br>3. <span class="katex-inline" data-id="m-kE2Q4-ga-eq-gb"></span>,<br>then there exists at least one <span class="katex-inline" data-id="m-kE2Q4-c"></span> such that <span class="katex-inline" data-id="m-kE2Q4-gprime-c-0"></span>.</p></div>
+    </div>
+    <div id="explanationE2Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 2.4</h3><span class="close-btn" onclick="closeModal('explanationE2Q4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Verification of the Conditions of Rolle's Theorem on [-1, 1]</h4><p><b>1. Continuity on [-1, 1]:</b><br>In Q2.1, we saw that <span class="katex-inline" data-id="m-eE2Q4-f"></span> is continuous on <span class="katex-inline" data-id="m-eE2Q4-Rstar"></span>. In Q2.2, we showed that its extension <span class="katex-inline" data-id="m-eE2Q4-g"></span> is continuous at 0. Therefore, <span class="katex-inline" data-id="m-eE2Q4-g-cont-R"></span> is continuous on <span class="katex-inline" data-id="m-eE2Q4-R"></span>, and in particular on [-1, 1]. This condition is met.</p><p><b>2. Differentiability on ]-1, 1[:</b><br>In Q2.3, we calculated the derivative <span class="katex-inline" data-id="m-eE2Q4-gprime-x"></span> for <span class="katex-inline" data-id="m-eE2Q4-x-neq-0"></span> and showed that <span class="katex-inline" data-id="m-eE2Q4-gprime-0"></span> exists. Therefore, <span class="katex-inline" data-id="m-eE2Q4-g-deriv-R"></span> is differentiable on <span class="katex-inline" data-id="m-eE2Q4-R2"></span>, and in particular on ]-1, 1[. This condition is met.</p><p><b>3. Equality at the endpoints:</b><br>We calculate <span class="katex-inline" data-id="m-eE2Q4-g-1"></span> and <span class="katex-inline" data-id="m-eE2Q4-g1"></span>.<br><span class="katex-display" data-id="m-eE2Q4-g-1-calc"></span><br><span class="katex-display" data-id="m-eE2Q4-g1-calc"></span><br>We do have <span class="katex-inline" data-id="m-eE2Q4-g-1-eq-g1"></span>. This condition is met.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Conclusion</h4><p>As the three conditions of Rolle's theorem are satisfied, we can apply it to the function <span class="katex-inline" data-id="m-eE2Q4-g-final"></span> on the interval [-1, 1].</p></div>
+    </div>
+    
+    <div id="hintE3Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.1</h3><span class="close-btn" onclick="closeModal('hintE3Q1')">&times;</span></div><p>Apply the Maclaurin formula to the function <span class="katex-inline" data-id="m-hE3Q1-f"></span> to order 2. Then, bound the remainder term <span class="katex-inline" data-id="m-hE3Q1-rest"></span> using the fact that <span class="katex-inline" data-id="m-hE3Q1-c-in-0x"></span>.</p></div>
+    </div>
+    <div id="knowledgeE3Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.1</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q1')">&times;</span></div><p><b>Taylor's formula with Lagrange remainder:</b> Know the general formula, and in particular the Maclaurin case (expansion around 0).</p><p><b>Successive derivatives:</b> Know how to calculate derivatives of order 1, 2, 3 of a function.</p><p><b>Properties of the exponential function:</b> Know that <span class="katex-inline" data-id="m-kE3Q1-ex"></span> is increasing.</p></div>
+    </div>
+    <div id="explanationE3Q1" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.1</h3><span class="close-btn" onclick="closeModal('explanationE3Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Application of the Maclaurin-Lagrange Formula</h4><p>We apply the formula to <span class="katex-inline" data-id="m-eE3Q1-f"></span> to order n=2. We calculate the successive derivatives and their values at 0:<br>- <span class="katex-inline" data-id="m-eE3Q1-f0"></span><br>- <span class="katex-inline" data-id="m-eE3Q1-fprime"></span>, so <span class="katex-inline" data-id="m-eE3Q1-fprime0"></span><br>- <span class="katex-inline" data-id="m-eE3Q1-fsecond"></span>, so <span class="katex-inline" data-id="m-eE3Q1-fsecond0"></span><br>- <span class="katex-inline" data-id="m-eE3Q1-fthird"></span></p><p>The formula to order 2 is written as:<br><span class="katex-display" data-id="m-eE3Q1-formula"></span><br>Substituting the calculated values:<br><span class="katex-display" data-id="m-eE3Q1-expanded"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Bounding the Remainder</h4><p>The formula is valid for some <span class="katex-inline" data-id="m-eE3Q1-c-in-0x"></span>. For <span class="katex-inline" data-id="m-eE3Q1-x-pos"></span>, we have <span class="katex-inline" data-id="m-eE3Q1-0-lt-c-lt-x"></span>.<br>As the exponential function is increasing, we have <span class="katex-inline" data-id="m-eE3Q1-exp-ineq"></span>.<br>We multiply this inequality by the positive term <span class="katex-inline" data-id="m-eE3Q1-x3d6"></span>:<br><span class="katex-display" data-id="m-eE3Q1-rest-ineq"></span></p><p>By adding <span class="katex-inline" data-id="m-eE3Q1-1px"></span> to each member, we obtain the desired bounds:<br><span class="katex-display" data-id="m-eE3Q1-final-ineq"></span></p></div>
+    </div>
+    <div id="hintE3Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.2</h3><span class="close-btn" onclick="closeModal('hintE3Q2')">&times;</span></div><p>To study the variations of h, study the sign of its derivative h'. To find the sign of h', study the variations of h' by calculating its own derivative, h''.</p></div>
+    </div>
+    <div id="knowledgeE3Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.2</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q2')">&times;</span></div><p><b>Link between derivative and variations:</b> If <span class="katex-inline" data-id="m-kE3Q2-fprime-pos"></span> on an interval, <span class="katex-inline" data-id="m-kE3Q2-f-croiss"></span> is increasing. If <span class="katex-inline" data-id="m-kE3Q2-fprime-neg"></span>, <span class="katex-inline" data-id="m-kE3Q2-f-decroiss"></span> is decreasing.</p><p><b>Variation table:</b> Know how to synthesize the study of a function's variations in a table.</p></div>
+    </div>
+    <div id="explanationE3Q2" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.2</h3><span class="close-btn" onclick="closeModal('explanationE3Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Study of the variations of h</h4><p>The function is <span class="katex-inline" data-id="m-eE3Q2-h"></span>.</p><p><b>1. Calculation of h'':</b><br>We calculate the second derivative to study the variations of the first derivative.<br><span class="katex-inline" data-id="m-eE3Q2-hprime"></span><br><span class="katex-inline" data-id="m-eE3Q2-hsecond"></span></p><p><b>2. Sign of h'' and variations of h':</b><br>On <span class="katex-inline" data-id="m-eE3Q2-Rplus"></span>, we have <span class="katex-inline" data-id="m-eE3Q2-x-ge-0"></span>, so <span class="katex-inline" data-id="m-eE3Q2-ex-ge-1"></span>, and <span class="katex-inline" data-id="m-eE3Q2-hsecond-pos"></span>. <br>Therefore, the function <span class="katex-inline" data-id="m-eE3Q2-hprime-croiss"></span> is increasing on <span class="katex-inline" data-id="m-eE3Q2-Rplus2"></span>.</p><p><b>3. Sign of h' and variations of h:</b><br>Since <span class="katex-inline" data-id="m-eE3Q2-hprime-croiss2"></span> is increasing on <span class="katex-inline" data-id="m-eE3Q2-Rplus3"></span>, its minimum is reached at <span class="katex-inline" data-id="m-eE3Q2-x-eq-0"></span>. The value of this minimum is <span class="katex-inline" data-id="m-eE3Q2-hprime0"></span>.<br>We therefore have <span class="katex-inline" data-id="m-eE3Q2-hprime-ge-0"></span> for all <span class="katex-inline" data-id="m-eE3Q2-x-in-Rplus"></span>. <br>Consequently, the function <span class="katex-inline" data-id="m-eE3Q2-h-croiss"></span> is increasing on <span class="katex-inline" data-id="m-eE3Q2-Rplus4"></span>.</p><p><b>4. Variation table:</b><br>We can draw the variation table for h, including the values at the endpoints: <span class="katex-inline" data-id="m-eE3Q2-h0"></span> and <span class="katex-inline" data-id="m-eE3Q2-lim-h"></span>.</p></div>
+    </div>
+    <div id="hintE3Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.3</h3><span class="close-btn" onclick="closeModal('hintE3Q3')">&times;</span></div><p>Show that the equation <span class="katex-inline" data-id="m-hE3Q3-fx-eq-x"></span> is equivalent to <span class="katex-inline" data-id="m-hE3Q3-hx-eq-0"></span>. Then use the variation table of h to conclude.</p></div>
+    </div>
+    <div id="knowledgeE3Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.3</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q3')">&times;</span></div><p><b>Equation solving:</b> Know how to manipulate an equation to show its equivalence with another.</p><p><b>Reading a variation table:</b> Use information about the minimum of a function to determine if it can be zero.</p></div>
+    </div>
+    <div id="explanationE3Q3" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.3</h3><span class="close-btn" onclick="closeModal('explanationE3Q3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Equivalence of the equations</h4><p>We start from the equation <span class="katex-inline" data-id="m-eE3Q3-fx-eq-x"></span> and transform it.<br><span class="katex-display" data-id="m-eE3Q3-eq1"></span><span class="katex-display" data-id="m-eE3Q3-eq2"></span><span class="katex-display" data-id="m-eE3Q3-eq3"></span><br>The two equations are indeed equivalent.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Using the variations of h</h4><p>According to question 3.2, the function h is increasing on <span class="katex-inline" data-id="m-eE3Q3-Rplus"></span>. Its minimum on this interval is therefore reached at <span class="katex-inline" data-id="m-eE3Q3-x-eq-0"></span>.<br>The value of this minimum is <span class="katex-inline" data-id="m-eE3Q3-h0"></span>.<br>This means that for all <span class="katex-inline" data-id="m-eE3Q3-x-in-Rplus"></span>, we have <span class="katex-inline" data-id="m-eE3Q3-hx-ge-1"></span>.<br>Since <span class="katex-inline" data-id="m-eE3Q3-hx"></span> is always greater than or equal to 1, the function can never be zero. The equation <span class="katex-inline" data-id="m-eE3Q3-hx-eq-0"></span> therefore has no solution on <span class="katex-inline" data-id="m-eE3Q3-Rplus2"></span>.</p></div>
+    </div>
+    <div id="hintE3Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.4</h3><span class="close-btn" onclick="closeModal('hintE3Q4')">&times;</span></div><p>Reason by contradiction. If the sequence converged to a limit <span class="katex-inline" data-id="m-hE3Q4-l"></span>, what should this limit satisfy? Compare this with the result of the previous question.</p></div>
+    </div>
+    <div id="knowledgeE3Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.4</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q4')">&times;</span></div><p><b>Convergence of a recurrent sequence:</b> If a sequence <span class="katex-inline" data-id="m-kE3Q4-Un1"></span> converges to a finite limit <span class="katex-inline" data-id="m-kE3Q4-l"></span> and the function <span class="katex-inline" data-id="m-kE3Q4-f"></span> is continuous, then <span class="katex-inline" data-id="m-kE3Q4-l-eq-fl"></span>.</p><p><b>Proof by contradiction:</b> Assume the opposite of what you want to prove and arrive at a contradiction.</p></div>
+    </div>
+    <div id="explanationE3Q4" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.4</h3><span class="close-btn" onclick="closeModal('explanationE3Q4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Nature of the sequence <span class="katex-inline" data-id="m-eE3Q4-Un"></span></h4><p>We reason by contradiction. Assume that the sequence <span class="katex-inline" data-id="m-eE3Q4-Un2"></span> converges to a finite limit <span class="katex-inline" data-id="m-eE3Q4-l"></span>. <br>Since <span class="katex-inline" data-id="m-eE3Q4-U0"></span> and the sequence has positive terms (because <span class="katex-inline" data-id="m-eE3Q4-fx-pos"></span> for <span class="katex-inline" data-id="m-eE3Q4-x-pos"></span>), the limit <span class="katex-inline" data-id="m-eE3Q4-l2"></span> would belong to <span class="katex-inline" data-id="m-eE3Q4-Rplus"></span>.</p><p>The function <span class="katex-inline" data-id="m-eE3Q4-f"></span> is continuous. If the sequence converged to <span class="katex-inline" data-id="m-eE3Q4-l3"></span>, this limit would have to satisfy the fixed-point equation:<br><span class="katex-display" data-id="m-eE3Q4-l-eq-fl"></span></p><p>However, in question 3.3, we proved that this equation has <b>no solution</b> on <span class="katex-inline" data-id="m-eE3Q4-Rplus2"></span>.</p><p>We have a contradiction. The initial assumption ("the sequence converges") is false. Therefore, the sequence <span class="katex-inline" data-id="m-eE3Q4-Un3"></span> diverges. Since it is increasing and bounded below, it diverges to <span class="katex-inline" data-id="m-eE3Q4-p-inf"></span>.</p></div>
+    </div>
+    <div id="hintE3Q5" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.5</h3><span class="close-btn" onclick="closeModal('hintE3Q5')">&times;</span></div><p>For a recurrent sequence <span class="katex-inline" data-id="m-hE3Q5-Un1"></span>, if f is increasing, it is sufficient to compare the first two terms <span class="katex-inline" data-id="m-hE3Q5-U0"></span> and <span class="katex-inline" data-id="m-hE3Q5-U1"></span> to determine the monotonicity.</p></div>
+    </div>
+    <div id="knowledgeE3Q5" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.5</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q5')">&times;</span></div><p><b>Monotonicity of a recurrent sequence:</b> If the sequence is defined by <span class="katex-inline" data-id="m-kE3Q5-Un1"></span> and <span class="katex-inline" data-id="m-kE3Q5-f"></span> is increasing, then the sequence is monotonic. Its direction of variation is the same as that given by the sign of <span class="katex-inline" data-id="m-kE3Q5-U1-U0"></span>.</p><p><b>Study of function variations:</b> Use the derivative to prove that a function is increasing.</p></div>
+    </div>
+    <div id="explanationE3Q5" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.5</h3><span class="close-btn" onclick="closeModal('explanationE3Q5')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Monotonicity of the function f</h4><p>We study the sign of the derivative of f, <span class="katex-inline" data-id="m-eE3Q5-fprime"></span>, on <span class="katex-inline" data-id="m-eE3Q5-Rplus"></span>.<br>Consider the second derivative: <span class="katex-inline" data-id="m-eE3Q5-fsecond"></span>.<br>For <span class="katex-inline" data-id="m-eE3Q5-x-ge-0"></span>, <span class="katex-inline" data-id="m-eE3Q5-ex-ge-1"></span>, so <span class="katex-inline" data-id="m-eE3Q5-fsecond-pos"></span>. This means that <span class="katex-inline" data-id="m-eE3Q5-fprime-croiss"></span> is increasing on <span class="katex-inline" data-id="m-eE3Q5-Rplus2"></span>.<br>The minimum of <span class="katex-inline" data-id="m-eE3Q5-fprime-croiss2"></span> is therefore <span class="katex-inline" data-id="m-eE3Q5-fprime0"></span>. We thus have <span class="katex-inline" data-id="m-eE3Q5-fprime-ge-1"></span> for all <span class="katex-inline" data-id="m-eE3Q5-x-in-Rplus"></span>.<br>Since the derivative is positive, the function <span class="katex-inline" data-id="m-eE3Q5-f"></span> is increasing on <span class="katex-inline" data-id="m-eE3Q5-Rplus3"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Monotonicity of the sequence (Un)</h4><p>The sequence is defined by <span class="katex-inline" data-id="m-eE3Q5-Un1"></span> where <span class="katex-inline" data-id="m-eE3Q5-f-croiss"></span> is increasing. It is sufficient to compare the first terms.<br><span class="katex-inline" data-id="m-eE3Q5-U0"></span><br><span class="katex-inline" data-id="m-eE3Q5-U1"></span><br>Since <span class="katex-inline" data-id="m-eE3Q5-U1-gt-U0"></span>, the sequence <span class="katex-inline" data-id="m-eE3Q5-Un"></span> is increasing.</p></div>
+    </div>
+    <div id="hintE3Q6" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.6</h3><span class="close-btn" onclick="closeModal('hintE3Q6')">&times;</span></div><p>Use a proof by induction. In the heredity step, use the inequality <span class="katex-inline" data-id="m-hE3Q6-fx-ge-1px"></span> (from question 3.1) and the induction hypothesis.</p></div>
+    </div>
+    <div id="knowledgeE3Q6" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.6</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q6')">&times;</span></div><p><b>Proof by induction:</b> Master the steps of initialization and heredity.</p><p><b>Manipulation of inequalities:</b> Know how to combine inequalities to reach the desired result.</p></div>
+    </div>
+    <div id="explanationE3Q6" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.6</h3><span class="close-btn" onclick="closeModal('explanationE3Q6')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objective: Show by induction that <span class="katex-inline" data-id="m-eE3Q6-Pn"></span>.</h4><p><b>1. Initialization (n=0):</b><br>We must check if <span class="katex-inline" data-id="m-eE3Q6-U0-ge-0"></span>. We have <span class="katex-inline" data-id="m-eE3Q6-U0-eq-0"></span>, so the inequality is true. <span class="katex-inline" data-id="m-eE3Q6-P0"></span> is true.</p><p><b>2. Heredity:</b><br>Assume that <span class="katex-inline" data-id="m-eE3Q6-Pk"></span> is true for some <span class="katex-inline" data-id="m-eE3Q6-k"></span>, i.e., <span class="katex-inline" data-id="m-eE3Q6-hyp"></span>.<br>Let's show that <span class="katex-inline" data-id="m-eE3Q6-Pk1"></span> is true, i.e., <span class="katex-inline" data-id="m-eE3Q6-goal"></span>.</p><p>By definition, <span class="katex-inline" data-id="m-eE3Q6-Uk1-def"></span>.<br>From question 3.1, we have the lower bound <span class="katex-inline" data-id="m-eE3Q6-fx-ge-1px"></span>.<br>Applying it with <span class="katex-inline" data-id="m-eE3Q6-x-eq-Uk"></span>, we get:<br><span class="katex-display" data-id="m-eE3Q6-ineq1"></span><br>Now, we use the induction hypothesis (<span class="katex-inline" data-id="m-eE3Q6-Uk-ge-k"></span>):<br><span class="katex-display" data-id="m-eE3Q6-ineq2"></span><br>Combining the two, we have <span class="katex-inline" data-id="m-eE3Q6-final-ineq"></span>. The heredity is proven.</p><p><b>3. Conclusion:</b><br>By the principle of induction, <span class="katex-inline" data-id="m-eE3Q6-Un-ge-n-final"></span> is true for all <span class="katex-inline" data-id="m-eE3Q6-n-in-N"></span>.</p></div>
+    </div>
+    <div id="hintE3Q7" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.7</h3><span class="close-btn" onclick="closeModal('hintE3Q7')">&times;</span></div><p>Use the previous results: the sequence is increasing (Q 3.5) and it diverges to infinity (Q 3.4 and 3.6). How does this affect the infimum, minimum, supremum, and maximum?</p></div>
+    </div>
+    <div id="knowledgeE3Q7" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.7</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q7')">&times;</span></div><p><b>Definitions of sup, inf, max, min.</b></p><p><b>Properties of increasing sequences:</b> The infimum is the first term and it is also the minimum.</p><p><b>Properties of divergent sequences:</b> If a sequence tends to <span class="katex-inline" data-id="m-kE3Q7-p-inf"></span>, it is not bounded above.</p></div>
+    </div>
+    <div id="explanationE3Q7" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.7</h3><span class="close-btn" onclick="closeModal('explanationE3Q7')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Determination of the bounds of the set <span class="katex-inline" data-id="m-eE3Q7-Un-set"></span></h4><p><b>1. Infimum and Minimum:</b><br>In question 3.5, we showed that the sequence <span class="katex-inline" data-id="m-eE3Q7-Un"></span> is increasing. Its smallest element is therefore the first term, <span class="katex-inline" data-id="m-eE3Q7-U0"></span>. As this element belongs to the set, it is both the infimum and the minimum.<br><span class="katex-inline" data-id="m-eE3Q7-inf-min"></span></p><p><b>2. Supremum and Maximum:</b><br>In question 3.6, we showed that <span class="katex-inline" data-id="m-eE3Q7-Un-ge-n"></span>. Since <span class="katex-inline" data-id="m-eE3Q7-lim-n"></span>, by the comparison theorem, <span class="katex-inline" data-id="m-eE3Q7-lim-Un"></span>. <br>The sequence diverges to <span class="katex-inline" data-id="m-eE3Q7-p-inf"></span>, which means it is not bounded above. Therefore, its supremum is <span class="katex-inline" data-id="m-eE3Q7-p-inf2"></span> and it does not have a maximum.<br><span class="katex-inline" data-id="m-eE3Q7-sup-max"></span></p></div>
+    </div>
+    <div id="hintE3Q8" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.8</h3><span class="close-btn" onclick="closeModal('hintE3Q8')">&times;</span></div><p>Study the behavior of the subsequences of terms with even rank (<span class="katex-inline" data-id="m-hE3Q8-W2k"></span>) and terms with odd rank (<span class="katex-inline" data-id="m-hE3Q8-W2k1"></span>). What can you say about their limits?</p></div>
+    </div>
+    <div id="knowledgeE3Q8" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.8</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q8')">&times;</span></div><p><b>Subsequence:</b> Understand how to analyze the behavior of a sequence by looking at its even- and odd-ranked terms.</p><p><b>Unbounded set:</b> A set that is neither bounded above nor below. Its supremum is <span class="katex-inline" data-id="m-kE3Q8-p-inf"></span> and its infimum is <span class="katex-inline" data-id="m-kE3Q8-m-inf"></span>.</p></div>
+    </div>
+    <div id="explanationE3Q8" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.8</h3><span class="close-btn" onclick="closeModal('explanationE3Q8')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Analysis of the sequence <span class="katex-inline" data-id="m-eE3Q8-Wn"></span></h4><p>The sequence is defined by <span class="katex-inline" data-id="m-eE3Q8-Wn-def"></span>.</p><p><b>1. Subsequence of even terms (n=2k):</b><br><span class="katex-inline" data-id="m-eE3Q8-W2k"></span>. <br>Since <span class="katex-inline" data-id="m-eE3Q8-lim-U2k"></span>, we have <span class="katex-inline" data-id="m-eE3Q8-lim-W2k"></span>. This subsequence tends to <span class="katex-inline" data-id="m-eE3Q8-p-inf"></span>, so the sequence <span class="katex-inline" data-id="m-eE3Q8-Wn2"></span> is not bounded above.</p><p><b>2. Subsequence of odd terms (n=2k+1):</b><br><span class="katex-inline" data-id="m-eE3Q8-W2k1"></span>.<br>Since <span class="katex-inline" data-id="m-eE3Q8-lim-U2k1"></span>, we have <span class="katex-inline" data-id="m-eE3Q8-lim-W2k1"></span>. This subsequence tends to <span class="katex-inline" data-id="m-eE3Q8-m-inf"></span>, so the sequence <span class="katex-inline" data-id="m-eE3Q8-Wn3"></span> is not bounded below.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Conclusion on the bounds</h4><p>Since the sequence <span class="katex-inline" data-id="m-eE3Q8-Wn4"></span> is neither bounded above nor below:<br>- <b>sup <span class="katex-inline" data-id="m-eE3Q8-Wn-sup"></span></b><br>- <b>inf <span class="katex-inline" data-id="m-eE3Q8-Wn-inf"></span></b><br>- <b>max <span class="katex-inline" data-id="m-eE3Q8-Wn-max"></span> does not exist</b><br>- <b>min <span class="katex-inline" data-id="m-eE3Q8-Wn-min"></span> does not exist</b></p></div>
+    </div>
+    <div id="hintE3Q9" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint Q 3.9</h3><span class="close-btn" onclick="closeModal('hintE3Q9')">&times;</span></div><p>Follow the hint provided. First, compare <span class="katex-inline" data-id="m-hE3Q9-g"></span> and <span class="katex-inline" data-id="m-hE3Q9-f"></span> using the fact that <span class="katex-inline" data-id="m-hE3Q9-ex-ge-1"></span>. Then, prove by induction that <span class="katex-inline" data-id="m-hE3Q9-Vn-ge-Un"></span>. Conclude with the comparison theorem.</p></div>
+    </div>
+    <div id="knowledgeE3Q9" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites Q 3.9</h3><span class="close-btn" onclick="closeModal('knowledgeE3Q9')">&times;</span></div><p><b>Proof by induction.</b></p><p><b>Comparison Theorem (or "Squeeze Theorem"):</b> If <span class="katex-inline" data-id="m-kE3Q9-Vn-ge-Un"></span> for all n and <span class="katex-inline" data-id="m-kE3Q9-lim-Un"></span>, then <span class="katex-inline" data-id="m-kE3Q9-lim-Vn"></span>.</p><p><b>Properties of increasing functions:</b> If <span class="katex-inline" data-id="m-kE3Q9-f"></span> is increasing, then <span class="katex-inline" data-id="m-kE3Q9-a-le-b"></span> implies <span class="katex-inline" data-id="m-kE3Q9-fa-le-fb"></span>.</p></div>
+    </div>
+    <div id="explanationE3Q9" class="modal">
+        <div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation Q 3.9</h3><span class="close-btn" onclick="closeModal('explanationE3Q9')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Comparison of g(x) and f(x)</h4><p>We have <span class="katex-inline" data-id="m-eE3Q9-g"></span> and <span class="katex-inline" data-id="m-eE3Q9-f"></span>.<br>On <span class="katex-inline" data-id="m-eE3Q9-Rplus"></span>, we have <span class="katex-inline" data-id="m-eE3Q9-x-ge-0"></span> and therefore <span class="katex-inline" data-id="m-eE3Q9-ex-ge-1"></span>.<br>Multiplying by <span class="katex-inline" data-id="m-eE3Q9-x3-ge-0"></span>, we get <span class="katex-inline" data-id="m-eE3Q9-x3ex-ge-x3"></span>. Moreover, <span class="katex-inline" data-id="m-eE3Q9-x3-ge-x3d6"></span> because <span class="katex-inline" data-id="m-eE3Q9-1-ge-1d6"></span>.<br>So <span class="katex-inline" data-id="m-eE3Q9-x3ex-ge-x3d6-final"></span>.<br>By adding <span class="katex-inline" data-id="m-eE3Q9-1px"></span> to each side, we indeed find <span class="katex-inline" data-id="m-eE3Q9-g-ge-f"></span> on <span class="katex-inline" data-id="m-eE3Q9-Rplus2"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Proof by induction that <span class="katex-inline" data-id="m-eE3Q9-Vn-ge-Un"></span></h4><p><b>Initialization (n=0):</b> <span class="katex-inline" data-id="m-eE3Q9-V0"></span> and <span class="katex-inline" data-id="m-eE3Q9-U0"></span>. We indeed have <span class="katex-inline" data-id="m-eE3Q9-V0-ge-U0"></span>.<br><b>Heredity:</b> Assume <span class="katex-inline" data-id="m-eE3Q9-Vn-ge-Un-hyp"></span>. We have:<br><span class="katex-display" data-id="m-eE3Q9-rec-chain"></span><br>The first inequality comes from <span class="katex-inline" data-id="m-eE3Q9-g-ge-f-rec"></span>. The second comes from the fact that f is increasing and from the induction hypothesis.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Conclusion on the limit</h4><p>We have shown that <span class="katex-inline" data-id="m-eE3Q9-Vn-ge-Un-final"></span>. We know that <span class="katex-inline" data-id="m-eE3Q9-lim-Un"></span>.<br>By the <b>comparison theorem</b>, we conclude that <span class="katex-inline" data-id="m-eE3Q9-lim-Vn"></span>.</p></div>
+    </div>
+    
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX rendering error:", e, "on element:", el);
+                        el.textContent = `Formula rendering error: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    // It's okay if some modal formulas are not found, as they are not all visible at once.
+                    // console.error(`Element with data-id '${id}' not found.`);
+                }
+            }
+
+            // Questions
+            // Ex 1
+            setText('e1-un-def1', "(u_{n})_{n}");
+            setText('e1-un-def2', "u_{0}=1");
+            setText('e1-un-def3', "\\forall n\\in\\mathbb{N}, u_{n+1}=\\frac{u_{n}+1}{u_{n}+3}");
+            setText('e1q1-show', "\\forall n\\in\\mathbb{N}, 0<u_{n}\\le1");
+            setText('e1q2-un-mono', "(u_{n})");
+            setText('e1q3-A-def', "A=\\{u_{n},n\\in\\mathbb{N}\\}");
+            // Ex 2
+            setText('e2-f-def', "f(x)=\\frac{x^{2}}{x^{2}+1}arctan(\\frac{1}{x^{2}})");
+            setText('e2q3-g-prime', "g'(x)");
+            setText('e2q3-x-neq-0', "x \\ne 0");
+            setText('e2q3-g-prime-0', "g'(0)");
+            setText('e2q4-arctan-1', "arctan(1)=\\frac{\\pi}{4}");
+            // Ex 3
+            setText('e3-f-def', "f(x)=e^{x}-\\frac{x^{2}}{2}");
+            setText('e3-h-def', "h(x)=e^{x}-x-\\frac{x^{2}}{2}");
+            setText('e3-U-def', "U_{0}=0, U_{n+1}=f(U_{n})");
+            setText('e3q1-ineq', "1+x+\\frac{x^{3}}{3!}\\le f(x)\\le1+x+\\frac{x^{3}}{3!}e^{x}, \\forall x\\in\\mathbb{R}^{+}.");
+            setText('e3q2-Rplus', "\\mathbb{R}^{+}");
+            setText('e3q3-fx-eq-x', "f(x)=x");
+            setText('e3q3-Rplus', "\\mathbb{R}^{+}");
+            setText('e3q4-Un', "(U_{n})");
+            setText('e3q5-Un', "(U_{n})");
+            setText('e3q6-Un-ge-n', "U_{n}\\ge n");
+            setText('e3q6-forall-n', "\\forall n\\in\\mathbb{N}");
+            setText('e3q7-Un1', "U_{n}");
+            setText('e3q7-Un2', "U_{n}");
+            setText('e3q7-Un3', "U_{n}");
+            setText('e3q7-Un4', "U_{n}");
+            setText('e3q8-Wn-def', "W_{n}=(-1)^{n}U_{n}, \\forall n\\in\\mathbb{N}.");
+            setText('e3q8-Wn1', "W_{n}");
+            setText('e3q8-Wn2', "W_{n}");
+            setText('e3q8-Wn3', "W_{n}");
+            setText('e3q8-Wn4', "W_{n}");
+            setText('e3q9-g-def', "g(x)=1+x+x^{3}e^{x}");
+            setText('e3q9-Vn-def', "V_{0}=0, V_{n+1}=g(V_{n})");
+            setText('e3q9-lim-Vn', "\\lim_{n\\rightarrow+\\infty}V_{n}=+\\infty");
+            setText('e3q9-g-ge-f', "g(x)\\ge f(x)");
+            setText('e3q9-Rplus', "\\mathbb{R}^{+}");
+            setText('e3q9-Vn-ge-Un', "V_{n}\\ge U_{n}, \\forall n\\in\\mathbb{N}");
+            
+            // Solutions
+            // S Ex 1
+            setText('s1q1-f-def', "f(x)=\\frac{x+1}{x+3}");
+            setText('s1q1-f-prime', "f'(x)=\\frac{2}{(x+3)^{2}}>0");
+            setText('s1q1-u0', "u_{0}=1");
+            setText('s1q1-u0-in-interval', "0 < u_0 \\le 1");
+            setText('s1q1-hyp', "0 < u_n \\le 1");
+            setText('s1q1-f-ineq', "f(0) < f(u_n) \\le f(1)");
+            setText('s1q1-un1-ineq', "1/3 < u_{n+1} \\le 1/2");
+            setText('s1q1-conclusion', "0 < u_{n+1} \\le 1");
+            setText('s1q1-forall-n', "n \\in \\mathbb{N}");
+            setText('s1q2-u-rec', "u_{n+1}=f(u_n)");
+            setText('s1q2-un', "(u_n)");
+            setText('s1q2-u1', "u_1 = \\frac{1+1}{1+3}=\\frac{1}{2}");
+            setText('s1q2-u1-lt-u0', "u_1 < u_0");
+            setText('s1q2-un2', "(u_n)");
+            setText('s1q2-l', "l");
+            setText('s1q2-l2', "l");
+            setText('s1q2-l-eq-fl', "l=f(l)");
+            setText('s1q2-l-eq', "l=\\frac{l+1}{l+3} \\Rightarrow l(l+3)=l+1");
+            setText('s1q2-l-quad', "l^{2}+2l-1=0");
+            setText('s1q2-l-roots', "l = -1 \\pm \\sqrt{2}");
+            setText('s1q2-un-pos', "u_n > 0");
+            setText('s1q2-lim-un', "\\lim u_n = \\sqrt{2}-1");
+            setText('s1q3-un', "(u_n)");
+            setText('s1q3-sup-max', "\\text{sup } A = \\text{max } A = u_0 = 1");
+            setText('s1q3-inf', "\\text{inf } A = \\lim u_n = \\sqrt{2}-1");
+            // S Ex 2
+            setText('s2q1-Df', "D_f = \\mathbb{R}^{*}");
+            setText('s2q1-Rstar', "\\mathbb{R}^{*}");
+            setText('s2q2-lim-frac', "\\lim_{x\\rightarrow0}\\frac{x^{2}}{x^{2}+1}=0");
+            setText('s2q2-lim-arctan', "\\lim_{u\\rightarrow+\\infty} \\arctan(u) = \\frac{\\pi}{2}");
+            setText('s2q2-lim-f', "\\lim_{x\\rightarrow0}f(x)=0 \\cdot \\frac{\\pi}{2}=0");
+            setText('s2q2-g-def', "g(x)=\\begin{cases}f(x)&\\text{if }x\\ne0\\\\ 0&\\text{if }x=0\\end{cases}");
+            setText('s2q3-x-neq-0', "x \\ne 0");
+            setText('s2q3-g-prime', "g'(x)");
+            setText('s2q3-g-prime-calc', "g'(x)=\\frac{2x}{(x^{2}+1)^{2}}\\arctan(\\frac{1}{x^{2}})-\\frac{2x}{x^{4}+1}");
+            setText('s2q3-x-eq-0', "x=0");
+            setText('s2q3-g-prime-0-def', "g'(0)=\\lim_{x\\rightarrow0}\\frac{g(x)-g(0)}{x-0}=\\lim_{x\\rightarrow0}\\frac{x}{x^{2}+1}\\arctan(\\frac{1}{x^{2}})=0\\cdot\\frac{\\pi}{2}=0");
+            setText('s2q3-g-prime-x-lim', "g'(x)");
+            setText('s2q3-lim-g-prime', "\\lim_{x\\rightarrow0}g'(x) = 0 \\cdot \\frac{\\pi}{2} - 0 = 0");
+            setText('s2q3-lim-g-prime-eq-g-prime-0', "\\lim_{x\\rightarrow0}g'(x)=g'(0)");
+            setText('s2q4-g1', "g(1)=\\frac{1}{2}\\arctan(1)=\\frac{\\pi}{8}");
+            setText('s2q4-g-1', "g(-1)=\\frac{1}{2}\\arctan(1)=\\frac{\\pi}{8}");
+            setText('s2q4-g1-eq-g-1', "g(1)=g(-1)");
+            // S Ex 3
+            setText('s3q1-Cn', "C^n");
+            setText('s3q1-f-np1', "f^{(n+1)}");
+            setText('s3q1-c-in-0x', "c \\in ]0,x[");
+            setText('s3q1-maclaurin', "f(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(0)}{k!}x^{k}+\\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}");
+            setText('s3q1-f-def', "f(x)=e^{x}-x^{2}/2");
+            setText('s3q1-f-derivs', "f'(x)=e^{x}-x, f''(x)=e^{x}-1, f'''(x)=e^{x}");
+            setText('s3q1-f-vals', "f(0)=1, f'(0)=1, f''(0)=0");
+            setText('s3q1-f-expanded', "f(x)=1+x+\\frac{e^{c}}{6}x^{3}");
+            setText('s3q1-c-in-0x2', "c \\in ]0,x[");
+            setText('s3q1-x-in-Rplus', "x \\in \\mathbb{R}^{+}");
+            setText('s3q1-0-lt-c-lt-x', "0<c<x");
+            setText('s3q1-1-lt-ec-lt-ex', "1<e^{c}<e^{x}");
+            setText('s3q1-final-ineq', "1+x+\\frac{x^{3}}{6}\\le f(x)\\le1+x+\\frac{e^{x}x^{3}}{6}");
+            setText('s3q2-h-def', "h(x)=e^{x}-x-x^{2}/2");
+            setText('s3q2-h-prime', "h'(x)=e^{x}-1-x");
+            setText('s3q2-h-second', "h''(x)=e^{x}-1");
+            setText('s3q2-x-gt-0', "x>0");
+            setText('s3q2-h-second-pos', "h''(x)>0");
+            setText('s3q2-h-prime-croiss', "h'(x)");
+            setText('s3q2-h-prime-0', "h'(0)=0");
+            setText('s3q2-h-prime-pos', "h'(x)>0");
+            setText('s3q2-x-gt-0-2', "x>0");
+            setText('s3q2-Rplus', "\\mathbb{R}^{+}");
+            setText('s3q2-h0', "h(0)=1");
+            setText('s3q2-lim-h', "\\lim_{x\\rightarrow+\\infty}h(x)=+\\infty");
+            setText('s3q3-fx-eq-x', "f(x)=x");
+            setText('s3q3-h-eq-0', "h(x)=0");
+            setText('s3q3-x-ge-0', "x \\ge 0");
+            setText('s3q3-h-ge-h0', "h(x) \\ge h(0)");
+            setText('s3q3-h-ge-1', "h(x) \\ge 1");
+            setText('s3q3-h-eq-0-2', "h(x)=0");
+            setText('s3q3-Rplus', "\\mathbb{R}^{+}");
+            setText('s3q4-Un', "(U_n)");
+            setText('s3q4-Un-rec', "U_{n+1}=f(U_n)");
+            setText('s3q4-Rplus', "\\mathbb{R}^{+}");
+            setText('s3q4-l', "l");
+            setText('s3q4-l-eq-fl', "l=f(l)");
+            setText('s3q4-Rplus2', "\\mathbb{R}^{+}");
+            setText('s3q4-Rplus3', "\\mathbb{R}^{+}");
+            setText('s3q4-p-inf', "+\\infty");
+            setText('s3q5-Rplus', "\\mathbb{R}^{+}");
+            setText('s3q5-f-prime', "f'(x)=e^x-x");
+            setText('s3q5-f-second', "f''(x)=e^x-1>0");
+            setText('s3q5-Rplus2', "\\mathbb{R}^{+*}");
+            setText('s3q5-f-prime-croiss', "f'(x)");
+            setText('s3q5-f-prime-0', "f'(0)=1");
+            setText('s3q5-f-prime-ge-1', "f'(x)\\ge1");
+            setText('s3q5-Rplus3', "\\mathbb{R}^{+}");
+            setText('s3q5-U1', "U_1");
+            setText('s3q5-U0', "U_0");
+            setText('s3q5-U1-val', "U_1=f(0)=1 > U_0=0");
+            setText('s3q5-U1-gt-U0', "U_1>U_0");
+            setText('s3q5-Un', "(U_n)");
+            setText('s3q6-U0-ge-0', "U_0 = 0 \\ge 0");
+            setText('s3q6-Un-ge-n', "U_n \\ge n");
+            setText('s3q6-Un1-ge-n1', "U_{n+1} \\ge n+1");
+            setText('s3q6-Un1-def', "U_{n+1}=f(U_n)");
+            setText('s3q6-fx-ge-1px', "f(x)\\ge1+x");
+            setText('s3q6-Un1-fUn', "U_{n+1}=f(U_n) \\ge 1+U_n");
+            setText('s3q6-Un1-ge-1pUn', "U_{n+1} \\ge 1+n");
+            setText('s3q7-Un', "(U_n)");
+            setText('s3q7-inf-min', "\\text{inf }U_n = \\text{min }U_n = U_0 = 0");
+            setText('s3q7-Un-ge-n', "U_n \\ge n");
+            setText('s3q7-lim-Un', "\\lim U_n = +\\infty");
+            setText('s3q7-sup', "\\text{sup }U_n = +\\infty");
+            setText('s3q7-Un2', "U_n");
+            setText('s3q8-Wn-def', "W_n=(-1)^n U_n");
+            setText('s3q8-W2k', "W_{2k}=U_{2k} \\ge 2k");
+            setText('s3q8-p-inf', "+\\infty");
+            setText('s3q8-W2k1', "W_{2k+1}=-U_{2k+1} \\le -(2k+1)");
+            setText('s3q8-m-inf', "-\\infty");
+            setText('s3q8-sup', "\\text{sup } W_n = +\\infty");
+            setText('s3q8-inf', "\\text{inf } W_n = -\\infty");
+            setText('s3q9-Rplus', "\\mathbb{R}^{+}");
+            setText('s3q9-ex-ge-1', "e^x \\ge 1");
+            setText('s3q9-x3ex-ge-x3d6', "x^3 e^x \\ge x^3 \\ge x^3/6");
+            setText('s3q9-g-ge-f', "g(x) \\ge f(x)");
+            setText('s3q9-Vn-ge-Un', "V_n \\ge U_n");
+            setText('s3q9-V0-U0', "V_0 = U_0 = 0");
+            setText('s3q9-Vn-ge-Un2', "V_n \\ge U_n");
+            setText('s3q9-Vn1-def', "V_{n+1}=g(V_n)");
+            setText('s3q9-g-ge-f2', "g \\ge f");
+            setText('s3q9-Vn1-ge-fVn', "V_{n+1} \\ge f(V_n)");
+            setText('s3q9-fVn-ge-fUn', "f(V_n) \\ge f(U_n)");
+            setText('s3q9-Vn1-ge-Un1', "V_{n+1} \\ge U_{n+1}");
+            setText('s3q9-Vn-ge-Un3', "V_n \\ge U_n");
+            setText('s3q9-lim-Un', "\\lim U_n = +\\infty");
+            setText('s3q9-lim-Vn', "\\lim V_n = +\\infty");
+
+            // Modal formulas
+            // M E1Q1
+            setText('m-hE1Q1-f', "f(x) = \\frac{x+1}{x+3}");
+            setText('m-eE1Q1-obj', "\\forall n \\in \\mathbb{N}, 0 < u_n \\le 1");
+            setText('m-eE1Q1-Pn', "P(n): 0 < u_n \\le 1");
+            setText('m-eE1Q1-u0', "u_0=1");
+            setText('m-eE1Q1-u0-check', "0 < 1 \\le 1");
+            setText('m-eE1Q1-P0', "P(0)");
+            setText('m-eE1Q1-Pk', "P(k)");
+            setText('m-eE1Q1-k', "k \\in \\mathbb{N}");
+            setText('m-eE1Q1-hyp', "0 < u_k \\le 1");
+            setText('m-eE1Q1-Pk1', "P(k+1)");
+            setText('m-eE1Q1-goal', "0 < u_{k+1} \\le 1");
+            setText('m-eE1Q1-f', "f(x) = \\frac{x+1}{x+3}");
+            setText('m-eE1Q1-fprime', "f'(x) = \\frac{2}{(x+3)^2} > 0");
+            setText('m-eE1Q1-f-croiss', "f");
+            setText('m-eE1Q1-f-apply', "f");
+            setText('m-eE1Q1-hyp2', "0 < u_k \\le 1");
+            setText('m-eE1Q1-f-croiss2', "f");
+            setText('m-eE1Q1-ineq-f', "f(0) < f(u_k) \\le f(1)");
+            setText('m-eE1Q1-fuk', "f(u_k)");
+            setText('m-eE1Q1-uk1', "u_{k+1}");
+            setText('m-eE1Q1-ineq-vals', "\\frac{1}{3} < u_{k+1} \\le \\frac{2}{4}");
+            setText('m-eE1Q1-final-ineq', "\\frac{1}{3} < u_{k+1} \\le \\frac{1}{2}");
+            setText('m-eE1Q1-final-goal', "0 < u_{k+1} \\le 1");
+            setText('m-eE1Q1-n-N', "n \\in \\mathbb{N}");
+            // M E1Q2
+            setText('m-hE1Q2-u1', "u_1");
+            setText('m-hE1Q2-u0', "u_0");
+            setText('m-hE1Q2-f', "f");
+            setText('m-hE1Q2-l-eq-fl', "l=f(l)");
+            setText('m-kE1Q2-un1', "u_{n+1}=f(u_n)");
+            setText('m-kE1Q2-f', "f");
+            setText('m-kE1Q2-u1-u0', "u_1-u_0");
+            setText('m-kE1Q2-un1-2', "(u_n)");
+            setText('m-kE1Q2-l', "l");
+            setText('m-kE1Q2-f-cont', "f");
+            setText('m-kE1Q2-l-eq-fl', "l=f(l)");
+            setText('m-eE1Q2-un1', "u_{n+1}=f(u_n)");
+            setText('m-eE1Q2-f', "f");
+            setText('m-eE1Q2-u0', "u_0=1");
+            setText('m-eE1Q2-u1', "u_1 = f(u_0) = f(1) = \\frac{1+1}{1+3} = \\frac{1}{2}");
+            setText('m-eE1Q2-u1-lt-u0', "u_1 < u_0");
+            setText('m-eE1Q2-f-croiss', "f");
+            setText('m-eE1Q2-un', "(u_n)");
+            setText('m-eE1Q2-un-conv', "(u_n)");
+            setText('m-eE1Q2-l', "l");
+            setText('m-eE1Q2-l2', "l");
+            setText('m-eE1Q2-f-cont', "f");
+            setText('m-eE1Q2-l-eq-fl', "l=f(l)");
+            setText('m-eE1Q2-eq1', "l = \\frac{l+1}{l+3}");
+            setText('m-eE1Q2-eq2', "l(l+3) = l+1");
+            setText('m-eE1Q2-eq3', "l^2 + 2l - 1 = 0");
+            setText('m-eE1Q2-delta', "\\Delta = 2^2 - 4(1)(-1) = 8");
+            setText('m-eE1Q2-roots', "l = \\frac{-2 \\pm \\sqrt{8}}{2} = -1 \\pm \\sqrt{2}");
+            setText('m-eE1Q2-un-pos', "u_n > 0");
+            setText('m-eE1Q2-l-pos', "l \\ge 0");
+            setText('m-eE1Q2-l-neg', "-1-\\sqrt{2}");
+            setText('m-eE1Q2-l-final', "\\sqrt{2}-1");
+            // M E1Q3
+            setText('m-eE1Q3-A', "A = \\{ u_n, n \\in \\mathbb{N} \\}");
+            setText('m-eE1Q3-un', "(u_n)");
+            setText('m-eE1Q3-ineq', "u_0 > u_1 > u_2 > \\dots");
+            setText('m-eE1Q3-u0', "u_0=1");
+            setText('m-eE1Q3-u0-in-A', "u_0");
+            setText('m-eE1Q3-sup-max', "\\text{sup } A = \\text{max } A = 1");
+            setText('m-eE1Q3-inf', "\\text{inf } A = \\lim_{n\\to\\infty} u_n = \\sqrt{2}-1");
+            setText('m-eE1Q3-limit-not-in-A', "\\sqrt{2}-1");
+            // M E2Q1
+            setText('m-eE2Q1-f', "f(x)=\\frac{x^{2}}{x^{2}+1}\\arctan(\\frac{1}{x^{2}})");
+            setText('m-eE2Q1-den1', "x^2+1");
+            setText('m-eE2Q1-arg', "\\frac{1}{x^2}");
+            setText('m-eE2Q1-x-neq-0', "x \\ne 0");
+            setText('m-eE2Q1-Df', "D_f = \\mathbb{R}^* = ]-\\infty, 0[ \\cup ]0, +\\infty[");
+            setText('m-eE2Q1-Rstar', "\\mathbb{R}^*");
+            setText('m-eE2Q1-f-is', "f");
+            setText('m-eE2Q1-g', "x \\mapsto \\frac{x^2}{x^2+1}");
+            setText('m-eE2Q1-Rstar2', "\\mathbb{R}^*");
+            setText('m-eE2Q1-h', "x \\mapsto \\arctan(\\frac{1}{x^2})");
+            setText('m-eE2Q1-Rstar3', "\\mathbb{R}^*");
+            setText('m-eE2Q1-R', "\\mathbb{R}");
+            setText('m-eE2Q1-Rstar4', "\\mathbb{R}^*");
+            setText('m-eE2Q1-f-is2', "f");
+            setText('m-eE2Q1-Rstar5', "\\mathbb{R}^*");
+            setText('m-eE2Q1-Rstar6', "\\mathbb{R}^*");
+            // M E2Q2
+            setText('m-hE2Q2-lim', "\\lim_{x\\to 0} f(x)");
+            setText('m-kE2Q2-f', "f");
+            setText('m-kE2Q2-a', "a");
+            setText('m-kE2Q2-lim', "\\lim_{x\\to a} f(x) = L");
+            setText('m-kE2Q2-g', "g");
+            setText('m-kE2Q2-ga', "g(a)=L");
+            setText('m-kE2Q2-frac', "\\frac{x^2}{x^2+1}");
+            setText('m-kE2Q2-arctan', "\\arctan(u)");
+            setText('m-kE2Q2-p-inf', "+\\infty");
+            setText('m-eE2Q2-lim', "\\lim_{x\\to 0} f(x)");
+            setText('m-eE2Q2-f', "f(x)");
+            setText('m-eE2Q2-x-to-0', "x \\to 0");
+            setText('m-eE2Q2-lim1', "\\lim_{x\\to 0} \\frac{x^2}{x^2+1} = \\frac{0}{1} = 0");
+            setText('m-eE2Q2-x-to-0-2', "x \\to 0");
+            setText('m-eE2Q2-1-over-x2', "\\frac{1}{x^2} \\to +\\infty");
+            setText('m-eE2Q2-lim2', "\\lim_{x\\to 0} \\arctan(\\frac{1}{x^2}) = \\lim_{u\\to +\\infty} \\arctan(u) = \\frac{\\pi}{2}");
+            setText('m-eE2Q2-lim-f', "\\lim_{x\\to 0} f(x) = 0 \\times \\frac{\\pi}{2} = 0");
+            setText('m-eE2Q2-f-prol', "f");
+            setText('m-eE2Q2-g', "g");
+            setText('m-eE2Q2-g-def', "g(x)=\\begin{cases} \\frac{x^{2}}{x^{2}+1}\\arctan(\\frac{1}{x^{2}}) & \\text{if } x \\ne 0 \\\\ 0 & \\text{if } x = 0 \\end{cases}");
+            // M E2Q3
+            setText('m-hE2Q3-x-neq-0', "x \\ne 0");
+            setText('m-hE2Q3-g-prime-0', "g'(0)");
+            setText('m-hE2Q3-g-prime', "g'");
+            setText('m-hE2Q3-lim-g-prime', "\\lim_{x\\to 0} g'(x)");
+            setText('m-hE2Q3-g-prime-0-2', "g'(0)");
+            setText('m-kE2Q3-prod', "(uv)'=u'v+uv'");
+            setText('m-kE2Q3-quot', "(\\frac{u}{v})'=\\frac{u'v-uv'}{v^2}");
+            setText('m-kE2Q3-comp', "(f(u))' = u' \\times f'(u)");
+            setText('m-kE2Q3-arctan-deriv', "(\\arctan(u))' = \\frac{u'}{1+u^2}");
+            setText('m-kE2Q3-deriv-def', "f'(a) = \\lim_{x\\to a} \\frac{f(x)-f(a)}{x-a}");
+            setText('m-kE2Q3-h-cont', "h");
+            setText('m-kE2Q3-a', "a");
+            setText('m-kE2Q3-lim-h', "\\lim_{x\\to a} h(x) = h(a)");
+            setText('m-eE2Q3-gprime-x', "g'(x)");
+            setText('m-eE2Q3-x-neq-0', "x \\ne 0");
+            setText('m-eE2Q3-g', "g(x)");
+            setText('m-eE2Q3-uv', "u(x)v(x)");
+            setText('m-eE2Q3-gprime-calc', "g'(x) = \\frac{2x}{(x^2+1)^2}\\arctan(\\frac{1}{x^2}) - \\frac{2x}{x^4+1}");
+            setText('m-eE2Q3-gprime-0', "g'(0)");
+            setText('m-eE2Q3-gprime-0-def', "g'(0) = \\lim_{x\\to 0} \\frac{g(x)-g(0)}{x-0}");
+            setText('m-eE2Q3-gprime-0-lim', "\\lim_{x\\to 0} \\frac{1}{x} \\left( \\frac{x^2}{x^2+1}\\arctan(\\frac{1}{x^2}) \\right) = \\lim_{x\\to 0} \\frac{x}{x^2+1}\\arctan(\\frac{1}{x^2})");
+            setText('m-eE2Q3-gprime-0-val', "g'(0) = 0 \\times \\frac{\\pi}{2} = 0");
+            setText('m-eE2Q3-lim-gprime-eq-gprime0', "\\lim_{x\\to 0} g'(x) = g'(0)");
+            setText('m-eE2Q3-gprime-x-lim', "g'(x)");
+            setText('m-eE2Q3-x-to-0', "x \\to 0");
+            setText('m-eE2Q3-lim-term1', "\\lim_{x\\to 0} \\frac{2x}{(x^2+1)^2}\\arctan(\\frac{1}{x^2}) = \\frac{0}{1} \\times \\frac{\\pi}{2} = 0");
+            setText('m-eE2Q3-lim-term2', "\\lim_{x\\to 0} \\frac{2x}{x^4+1} = \\frac{0}{1} = 0");
+            setText('m-eE2Q3-0m0', "0 - 0 = 0");
+            setText('m-eE2Q3-lim-gprime-0-final', "\\lim_{x\\to 0} g'(x) = 0 = g'(0)");
+            setText('m-eE2Q3-gprime-cont', "g'");
+            // M E2Q4
+            setText('m-kE2Q4-g', "g");
+            setText('m-kE2Q4-g-cont', "g");
+            setText('m-kE2Q4-ab-closed', "[a,b]");
+            setText('m-kE2Q4-g-deriv', "g");
+            setText('m-kE2Q4-ab-open', "]a,b[");
+            setText('m-kE2Q4-ga-eq-gb', "g(a)=g(b)");
+            setText('m-kE2Q4-c', "c \\in ]a,b[");
+            setText('m-kE2Q4-gprime-c-0', "g'(c)=0");
+            setText('m-eE2Q4-f', "f");
+            setText('m-eE2Q4-Rstar', "\\mathbb{R}^*");
+            setText('m-eE2Q4-g', "g");
+            setText('m-eE2Q4-g-cont-R', "g");
+            setText('m-eE2Q4-R', "\\mathbb{R}");
+            setText('m-eE2Q4-gprime-x', "g'(x)");
+            setText('m-eE2Q4-x-neq-0', "x \\ne 0");
+            setText('m-eE2Q4-gprime-0', "g'(0)");
+            setText('m-eE2Q4-g-deriv-R', "g");
+            setText('m-eE2Q4-R2', "\\mathbb{R}");
+            setText('m-eE2Q4-g-1', "g(-1)");
+            setText('m-eE2Q4-g1', "g(1)");
+            setText('m-eE2Q4-g-1-calc', "g(-1) = \\frac{(-1)^2}{(-1)^2+1}\\arctan(\\frac{1}{(-1)^2}) = \\frac{1}{2}\\arctan(1) = \\frac{\\pi}{8}");
+            setText('m-eE2Q4-g1-calc', "g(1) = \\frac{1^2}{1^2+1}\\arctan(\\frac{1}{1^2}) = \\frac{1}{2}\\arctan(1) = \\frac{\\pi}{8}");
+            setText('m-eE2Q4-g-1-eq-g1', "g(-1)=g(1)");
+            setText('m-eE2Q4-g-final', "g");
+            // M E3Q1
+            setText('m-hE3Q1-f', "f(x)");
+            setText('m-hE3Q1-rest', "R_2(x)");
+            setText('m-hE3Q1-c-in-0x', "c \\in ]0,x[");
+            setText('m-kE3Q1-ex', "e^x");
+            setText('m-eE3Q1-f', "f(x)");
+            setText('m-eE3Q1-f0', "f(0) = e^0 - 0 = 1");
+            setText('m-eE3Q1-fprime', "f'(x) = e^x - x");
+            setText('m-eE3Q1-fprime0', "f'(0) = 1 - 0 = 1");
+            setText('m-eE3Q1-fsecond', "f''(x) = e^x - 1");
+            setText('m-eE3Q1-fsecond0', "f''(0) = 1 - 1 = 0");
+            setText('m-eE3Q1-fthird', "f'''(x) = e^x");
+            setText('m-eE3Q1-formula', "f(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(c)}{3!}x^3");
+            setText('m-eE3Q1-expanded', "f(x) = 1 + x + 0 + \\frac{e^c}{6}x^3 = 1 + x + \\frac{e^c}{6}x^3");
+            setText('m-eE3Q1-c-in-0x', "c \\in ]0,x[");
+            setText('m-eE3Q1-x-pos', "x > 0");
+            setText('m-eE3Q1-0-lt-c-lt-x', "0 < c < x");
+            setText('m-eE3Q1-exp-ineq', "e^0 < e^c < e^x \\implies 1 < e^c < e^x");
+            setText('m-eE3Q1-x3d6', "\\frac{x^3}{6}");
+            setText('m-eE3Q1-rest-ineq', "\\frac{x^3}{6} < \\frac{e^c x^3}{6} < \\frac{e^x x^3}{6}");
+            setText('m-eE3Q1-1px', "1+x");
+            setText('m-eE3Q1-final-ineq', "1+x+\\frac{x^3}{6} \\le f(x) \\le 1+x+\\frac{e^x x^3}{6}");
+            // M E3Q2
+            setText('m-kE3Q2-fprime-pos', "f'(x) > 0");
+            setText('m-kE3Q2-f-croiss', "f");
+            setText('m-kE3Q2-fprime-neg', "f'(x) < 0");
+            setText('m-kE3Q2-f-decroiss', "f");
+            setText('m-eE3Q2-h', "h(x)=e^{x}-x-\\frac{x^{2}}{2}");
+            setText('m-eE3Q2-hprime', "h'(x) = e^x - 1 - x");
+            setText('m-eE3Q2-hsecond', "h''(x) = e^x - 1");
+            setText('m-eE3Q2-Rplus', "\\mathbb{R}^+");
+            setText('m-eE3Q2-x-ge-0', "x \\ge 0");
+            setText('m-eE3Q2-ex-ge-1', "e^x \\ge 1");
+            setText('m-eE3Q2-hsecond-pos', "h''(x) \\ge 0");
+            setText('m-eE3Q2-hprime-croiss', "h'");
+            setText('m-eE3Q2-Rplus2', "\\mathbb{R}^+");
+            setText('m-eE3Q2-hprime-croiss2', "h'");
+            setText('m-eE3Q2-Rplus3', "\\mathbb{R}^+");
+            setText('m-eE3Q2-x-eq-0', "x=0");
+            setText('m-eE3Q2-hprime0', "h'(0) = e^0 - 1 - 0 = 0");
+            setText('m-eE3Q2-hprime-ge-0', "h'(x) \\ge h'(0) = 0");
+            setText('m-eE3Q2-x-in-Rplus', "x \\in \\mathbb{R}^+");
+            setText('m-eE3Q2-h-croiss', "h");
+            setText('m-eE3Q2-Rplus4', "\\mathbb{R}^+");
+            setText('m-eE3Q2-h0', "h(0)=e^0 - 0 - 0 = 1");
+            setText('m-eE3Q2-lim-h', "\\lim_{x\\to+\\infty} h(x) = +\\infty");
+            // M E3Q3
+            setText('m-hE3Q3-fx-eq-x', "f(x)=x");
+            setText('m-hE3Q3-hx-eq-0', "h(x)=0");
+            setText('m-eE3Q3-fx-eq-x', "f(x)=x");
+            setText('m-eE3Q3-eq1', "e^x - \\frac{x^2}{2} = x");
+            setText('m-eE3Q3-eq2', "e^x - x - \\frac{x^2}{2} = 0");
+            setText('m-eE3Q3-eq3', "h(x) = 0");
+            setText('m-eE3Q3-Rplus', "\\mathbb{R}^+");
+            setText('m-eE3Q3-x-eq-0', "x=0");
+            setText('m-eE3Q3-h0', "h(0)=1");
+            setText('m-eE3Q3-x-in-Rplus', "x \\in \\mathbb{R}^+");
+            setText('m-eE3Q3-hx-ge-1', "h(x) \\ge 1");
+            setText('m-eE3Q3-hx', "h(x)");
+            setText('m-eE3Q3-hx-eq-0', "h(x)=0");
+            setText('m-eE3Q3-Rplus2', "\\mathbb{R}^+");
+            // M E3Q4
+            setText('m-hE3Q4-l', "l");
+            setText('m-kE3Q4-Un1', "(U_n)");
+            setText('m-kE3Q4-l', "l");
+            setText('m-kE3Q4-f', "f");
+            setText('m-kE3Q4-l-eq-fl', "l=f(l)");
+            setText('m-eE3Q4-Un', "(U_n)");
+            setText('m-eE3Q4-Un2', "(U_n)");
+            setText('m-eE3Q4-l', "l");
+            setText('m-eE3Q4-U0', "U_0=0");
+            setText('m-eE3Q4-fx-pos', "f(x)>0");
+            setText('m-eE3Q4-x-pos', "x>0");
+            setText('m-eE3Q4-l2', "l");
+            setText('m-eE3Q4-Rplus', "\\mathbb{R}^+");
+            setText('m-eE3Q4-f', "f");
+            setText('m-eE3Q4-l3', "l");
+            setText('m-eE3Q4-l-eq-fl', "l=f(l)");
+            setText('m-eE3Q4-Rplus2', "\\mathbb{R}^+");
+            setText('m-eE3Q4-Un3', "(U_n)");
+            setText('m-eE3Q4-p-inf', "+\\infty");
+            // M E3Q5
+            setText('m-hE3Q5-Un1', "U_{n+1}=f(U_n)");
+            setText('m-hE3Q5-U0', "U_0");
+            setText('m-hE3Q5-U1', "U_1");
+            setText('m-kE3Q5-Un1', "U_{n+1}=f(U_n)");
+            setText('m-kE3Q5-f', "f");
+            setText('m-kE3Q5-U1-U0', "U_1-U_0");
+            setText('m-eE3Q5-fprime', "f'(x)");
+            setText('m-eE3Q5-Rplus', "\\mathbb{R}^+");
+            setText('m-eE3Q5-fsecond', "f''(x) = e^x - 1");
+            setText('m-eE3Q5-x-ge-0', "x \\ge 0");
+            setText('m-eE3Q5-ex-ge-1', "e^x \\ge 1");
+            setText('m-eE3Q5-fsecond-pos', "f''(x) \\ge 0");
+            setText('m-eE3Q5-fprime-croiss', "f'");
+            setText('m-eE3Q5-Rplus2', "\\mathbb{R}^+");
+            setText('m-eE3Q5-fprime-croiss2', "f'");
+            setText('m-eE3Q5-fprime0', "f'(0) = e^0 - 0 = 1");
+            setText('m-eE3Q5-fprime-ge-1', "f'(x) \\ge 1");
+            setText('m-eE3Q5-x-in-Rplus', "x \\in \\mathbb{R}^+");
+            setText('m-eE3Q5-f', "f");
+            setText('m-eE3Q5-Rplus3', "\\mathbb{R}^+");
+            setText('m-eE3Q5-Un1', "U_{n+1}=f(U_n)");
+            setText('m-eE3Q5-f-croiss', "f");
+            setText('m-eE3Q5-U0', "U_0 = 0");
+            setText('m-eE3Q5-U1', "U_1 = f(U_0) = f(0) = 1");
+            setText('m-eE3Q5-U1-gt-U0', "U_1 > U_0");
+            setText('m-eE3Q5-Un', "(U_n)");
+            // M E3Q6
+            setText('m-hE3Q6-fx-ge-1px', "f(x) \\ge 1+x");
+            setText('m-eE3Q6-Pn', "P(n) : U_n \\ge n");
+            setText('m-eE3Q6-U0-ge-0', "U_0 \\ge 0");
+            setText('m-eE3Q6-U0-eq-0', "U_0=0");
+            setText('m-eE3Q6-P0', "P(0)");
+            setText('m-eE3Q6-Pk', "P(k)");
+            setText('m-eE3Q6-k', "k \\in \\mathbb{N}");
+            setText('m-eE3Q6-hyp', "U_k \\ge k");
+            setText('m-eE3Q6-Pk1', "P(k+1)");
+            setText('m-eE3Q6-goal', "U_{k+1} \\ge k+1");
+            setText('m-eE3Q6-Uk1-def', "U_{k+1}=f(U_k)");
+            setText('m-eE3Q6-fx-ge-1px', "f(x) \\ge 1+x");
+            setText('m-eE3Q6-x-eq-Uk', "x=U_k");
+            setText('m-eE3Q6-ineq1', "f(U_k) \\ge 1+U_k");
+            setText('m-eE3Q6-Uk-ge-k', "U_k \\ge k");
+            setText('m-eE3Q6-ineq2', "1+U_k \\ge 1+k");
+            setText('m-eE3Q6-final-ineq', "U_{k+1} \\ge 1+k");
+            setText('m-eE3Q6-Un-ge-n-final', "U_n \\ge n");
+            setText('m-eE3Q6-n-in-N', "n \\in \\mathbb{N}");
+            // M E3Q7
+            setText('m-kE3Q7-p-inf', "+\\infty");
+            setText('m-eE3Q7-Un-set', "\\{U_n, n \\in \\mathbb{N}\\}");
+            setText('m-eE3Q7-Un', "(U_n)");
+            setText('m-eE3Q7-U0', "U_0 = 0");
+            setText('m-eE3Q7-inf-min', "\\text{inf } U_n = \\text{min } U_n = 0");
+            setText('m-eE3Q7-Un-ge-n', "U_n \\ge n");
+            setText('m-eE3Q7-lim-n', "\\lim_{n\\to\\infty} n = +\\infty");
+            setText('m-eE3Q7-lim-Un', "\\lim_{n\\to\\infty} U_n = +\\infty");
+            setText('m-eE3Q7-p-inf', "+\\infty");
+            setText('m-eE3Q7-p-inf2', "+\\infty");
+            setText('m-eE3Q7-sup-max', "\\text{sup } U_n = +\\infty \\text{ and max } U_n \\text{ does not exist}");
+            // M E3Q8
+            setText('m-hE3Q8-W2k', "(W_{2k})");
+            setText('m-hE3Q8-W2k1', "(W_{2k+1})");
+            setText('m-kE3Q8-p-inf', "+\\infty");
+            setText('m-kE3Q8-m-inf', "-\\infty");
+            setText('m-eE3Q8-Wn', "(W_n)");
+            setText('m-eE3Q8-Wn-def', "W_n = (-1)^n U_n");
+            setText('m-eE3Q8-W2k', "W_{2k} = (-1)^{2k} U_{2k} = U_{2k}");
+            setText('m-eE3Q8-lim-U2k', "\\lim_{k\\to\\infty} U_{2k} = +\\infty");
+            setText('m-eE3Q8-lim-W2k', "\\lim_{k\\to\\infty} W_{2k} = +\\infty");
+            setText('m-eE3Q8-p-inf', "+\\infty");
+            setText('m-eE3Q8-Wn2', "(W_n)");
+            setText('m-eE3Q8-W2k1', "W_{2k+1} = (-1)^{2k+1} U_{2k+1} = -U_{2k+1}");
+            setText('m-eE3Q8-lim-U2k1', "\\lim_{k\\to\\infty} U_{2k+1} = +\\infty");
+            setText('m-eE3Q8-lim-W2k1', "\\lim_{k\\to\\infty} W_{2k+1} = -\\infty");
+            setText('m-eE3Q8-m-inf', "-\\infty");
+            setText('m-eE3Q8-Wn3', "(W_n)");
+            setText('m-eE3Q8-Wn4', "(W_n)");
+            setText('m-eE3Q8-Wn-sup', "W_n = +\\infty");
+            setText('m-eE3Q8-Wn-inf', "W_n = -\\infty");
+            setText('m-eE3Q8-Wn-max', "W_n");
+            setText('m-eE3Q8-Wn-min', "W_n");
+            // M E3Q9
+            setText('m-hE3Q9-g', "g(x)");
+            setText('m-hE3Q9-f', "f(x)");
+            setText('m-hE3Q9-ex-ge-1', "e^x \\ge 1");
+            setText('m-hE3Q9-Vn-ge-Un', "V_n \\ge U_n");
+            setText('m-kE3Q9-Vn-ge-Un', "V_n \\ge U_n");
+            setText('m-kE3Q9-lim-Un', "\\lim U_n = +\\infty");
+            setText('m-kE3Q9-lim-Vn', "\\lim V_n = +\\infty");
+            setText('m-kE3Q9-f', "f");
+            setText('m-kE3Q9-a-le-b', "a \\le b");
+            setText('m-kE3Q9-fa-le-fb', "f(a) \\le f(b)");
+            setText('m-eE3Q9-g', "g(x)=1+x+x^3 e^x");
+            setText('m-eE3Q9-f', "f(x)=1+x+\\frac{x^3}{6}");
+            setText('m-eE3Q9-Rplus', "\\mathbb{R}^+");
+            setText('m-eE3Q9-x-ge-0', "x \\ge 0");
+            setText('m-eE3Q9-ex-ge-1', "e^x \\ge 1");
+            setText('m-eE3Q9-x3-ge-0', "x^3 \\ge 0");
+            setText('m-eE3Q9-x3ex-ge-x3', "x^3 e^x \\ge x^3");
+            setText('m-eE3Q9-x3-ge-x3d6', "x^3 \\ge x^3/6");
+            setText('m-eE3Q9-1-ge-1d6', "1 \\ge 1/6");
+            setText('m-eE3Q9-x3ex-ge-x3d6-final', "x^3 e^x \\ge x^3/6");
+            setText('m-eE3Q9-1px', "1+x");
+            setText('m-eE3Q9-g-ge-f', "g(x) \\ge f(x)");
+            setText('m-eE3Q9-Rplus2', "\\mathbb{R}^+");
+            setText('m-eE3Q9-Vn-ge-Un', "V_n \\ge U_n");
+            setText('m-eE3Q9-V0', "V_0=0");
+            setText('m-eE3Q9-U0', "U_0=0");
+            setText('m-eE3Q9-V0-ge-U0', "V_0 \\ge U_0");
+            setText('m-eE3Q9-Vn-ge-Un-hyp', "V_n \\ge U_n");
+            setText('m-eE3Q9-rec-chain', "V_{n+1} = g(V_n) \\ge f(V_n) \\ge f(U_n) = U_{n+1}");
+            setText('m-eE3Q9-g-ge-f-rec', "g \\ge f");
+            setText('m-eE3Q9-Vn-ge-Un-final', "\\forall n, V_n \\ge U_n");
+            setText('m-eE3Q9-lim-Un', "\\lim U_n = +\\infty");
+            setText('m-eE3Q9-lim-Vn', "\\lim V_n = +\\infty");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

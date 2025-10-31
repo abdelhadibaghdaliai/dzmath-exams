@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 2: Épreuve Finale - Version Corrigée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: rgba(15, 23, 42, 0.7);
+            border: 1px solid #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 2</h1>
+            <p class="exam-subtitle">Épreuve finale (Lundi 26 mai 2008)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1 (5 points)</h3>
+                    <div class="exercise-content">
+                        <p>Calculer :</p>
+                        <p>1. <span class="katex-inline" data-id="ex1-q1"></span></p>
+                        <p>2. <span class="katex-inline" data-id="ex1-q2"></span></p>
+                        <p>3. <span class="katex-inline" data-id="ex1-q3"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2 (5 points)</h3>
+                    <div class="exercise-content">
+                        <p>Soit <span class="katex-inline" data-id="ex2-I"></span> et <span class="katex-inline" data-id="ex2-J"></span>.</p>
+                        <p>1. Comparer les intégrales I et J. (Indication: poser <span class="katex-inline" data-id="ex2-q1-sub"></span>).</p>
+                        <p>2. Calculer la somme <span class="katex-inline" data-id="ex2-q2-sum"></span>.</p>
+                        <p>3. En déduire la valeur de I et J.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3 (10 points)</h3>
+                    <div class="exercise-content">
+                         <p>1. Soit la fonction définie sur <span class="katex-inline" data-id="ex3-q1-dom"></span> par <span class="katex-inline" data-id="ex3-q1-f"></span>.</p>
+                        <p>(a) Calculer la dérivée <span class="katex-inline" data-id="ex3-q1a-deriv"></span> de <span class="katex-inline" data-id="ex3-q1a-f"></span> pour tout <span class="katex-inline" data-id="ex3-q1a-x"></span>.</p>
+                        <p>(b) Donner le développement limité d'ordre 1 de <span class="katex-inline" data-id="ex3-q1b-deriv"></span> au voisinage de <span class="katex-inline" data-id="ex3-q1b-x0"></span>.</p>
+                        <p>(c) En déduire le développement limité d'ordre 2 de <span class="katex-inline" data-id="ex3-q1c-f"></span> au voisinage de <span class="katex-inline" data-id="ex3-q1c-x0"></span>.</p>
+                        <p>2. Soit g la fonction définie sur <span class="katex-inline" data-id="ex3-q2-dom"></span> par <span class="katex-inline" data-id="ex3-q2-g"></span>.</p>
+                        <p>(a) En utilisant le résultat de 1)(c), donner le développement limité d'ordre 2 de g au voisinage de <span class="katex-inline" data-id="ex3-q2a-x0"></span>.</p>
+                        <p>(b) En déduire l'équation de la tangente à la courbe <span class="katex-inline" data-id="ex3-q2b-cg"></span> de g au point <span class="katex-inline" data-id="ex3-q2b-x0"></span>.</p>
+                        <p>(c) Préciser la position de cette tangente par rapport à la courbe <span class="katex-inline" data-id="ex3-q2c-cg"></span> au voisinage du point <span class="katex-inline" data-id="ex3-q2c-x0"></span>.</p>
+                        <p>3. Soit F la fonction de <span class="katex-inline" data-id="ex3-q3-R"></span> dans <span class="katex-inline" data-id="ex3-q3-R2"></span> définie par <span class="katex-inline" data-id="ex3-q3-F"></span>.</p>
+                        <p>(a) Montrer que pour <span class="katex-inline" data-id="ex3-q3a-x"></span>, <span class="katex-inline" data-id="ex3-q3a-F0"></span>.</p>
+                        <p>(b) Donner le développement limité d'ordre 3 au voisinage de <span class="katex-inline" data-id="ex3-q3b-inf"></span> de la fonction <span class="katex-inline" data-id="ex3-q3b-phi"></span>.</p>
+                        <p>(c) En déduire l'équation de l'asymptote oblique au voisinage de <span class="katex-inline" data-id="ex3-q3c-inf"></span> à la courbe <span class="katex-inline" data-id="ex3-q3c-cpsi"></span> de la fonction <span class="katex-inline" data-id="ex3-q3c-psi"></span>.</p>
+                        <p>(d) Déterminer la position de cette asymptote par rapport à <span class="katex-inline" data-id="ex3-q3d-cpsi"></span> au voisinage de <span class="katex-inline" data-id="ex3-q3d-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <!-- Solution 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>1. Pour <span class="katex-inline" data-id="sol1-p1-int"></span>, on utilise le changement de variable <span class="katex-inline" data-id="sol1-p1-sub"></span>. On a <span class="katex-inline" data-id="sol1-p1-dx"></span>. L'intégrale devient <span class="katex-inline" data-id="sol1-p1-new-int"></span>. On décompose en éléments simples : <span class="katex-inline" data-id="sol1-p1-decomp"></span>. On trouve <span class="katex-inline" data-id="sol1-p1-consts"></span>. L'intégration donne :</p>
+                        <div class="katex-display" data-id="sol1-p1-res"></div>
+                        <p>2. Pour <span class="katex-inline" data-id="sol1-p2-int"></span>, on pose <span class="katex-inline" data-id="sol1-p2-sub"></span>, d'où <span class="katex-inline" data-id="sol1-p2-rel"></span> et <span class="katex-inline" data-id="sol1-p2-du"></span>. Les bornes deviennent 0 et 1. L'intégrale devient :</p>
+                        <div class="katex-display" data-id="sol1-p2-new-int"></div>
+                        <p>3. Pour <span class="katex-inline" data-id="sol1-p3-int"></span>, on intègre par parties avec <span class="katex-inline" data-id="sol1-p3-u"></span> et <span class="katex-inline" data-id="sol1-p3-dv"></span>. On obtient :</p>
+                        <div class="katex-display" data-id="sol1-p3-ipp"></div>
+                        <p>L'intégrale restante se calcule par division euclidienne et décomposition en éléments simples, menant au résultat final :</p>
+                        <div class="katex-display" data-id="sol1-p3-final"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>1. Avec le changement <span class="katex-inline" data-id="sol2-p1-sub"></span>, on a <span class="katex-inline" data-id="sol2-p1-dt"></span>. En substituant dans I :</p>
+                        <div class="katex-display" data-id="sol2-p1-eval"></div>
+                        <p>On utilise <span class="katex-inline" data-id="sol2-p1-sin"></span> et <span class="katex-inline" data-id="sol2-p1-cos"></span>. L'intégrale devient <span class="katex-inline" data-id="sol2-p1-J"></span>. Donc <span class="katex-inline" data-id="sol2-p1-eq"></span>.</p>
+                        <p>2. On calcule la somme <span class="katex-inline" data-id="sol2-p2-sum"></span> :</p>
+                        <div class="katex-display" data-id="sol2-p2-sum-int"></div>
+                        <p>Le dénominateur est <span class="katex-inline" data-id="sol2-p2-denom"></span>, qui est positif sur <span class="katex-inline" data-id="sol2-p2-interval"></span>. Donc :</p>
+                        <div class="katex-display" data-id="sol2-p2-res"></div>
+                        <p>3. Comme <span class="katex-inline" data-id="sol2-p3-eq"></span> et <span class="katex-inline" data-id="sol2-p3-sum"></span>, on en déduit que <span class="katex-inline" data-id="sol2-p3-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>1. (a) La dérivée de <span class="katex-inline" data-id="sol3-p1a-f"></span> est <span class="katex-display" data-id="sol3-p1a-deriv"></span></p>
+                        <p>(b) Le DL d'ordre 1 de <span class="katex-inline" data-id="sol3-p1b-deriv"></span> en 0 est <span class="katex-display" data-id="sol3-p1b-dl"></span></p>
+                        <p>(c) Par intégration du DL de la dérivée, le DL d'ordre 2 de <span class="katex-inline" data-id="sol3-p1c-f"></span> en 0 est <span class="katex-display" data-id="sol3-p1c-dl"></span></p>
+                        <p>2. (a) Pour <span class="katex-inline" data-id="sol3-p2a-g"></span>, on pose <span class="katex-inline" data-id="sol3-p2a-u"></span>. Le DL en 2 est <span class="katex-display" data-id="sol3-p2a-dl"></span></p>
+                        <p>(b) L'équation de la tangente en <span class="katex-inline" data-id="sol3-p2b-x0"></span> est <span class="katex-display" data-id="sol3-p2b-tan"></span></p>
+                        <p>(c) La position est donnée par <span class="katex-inline" data-id="sol3-p2c-pos"></span>. La courbe est en dessous de la tangente.</p>
+                        <p>3. (a) Pour <span class="katex-inline" data-id="sol3-p3a-x"></span>, on montre que <span class="katex-inline" data-id="sol3-p3a-deriv"></span>. Comme <span class="katex-inline" data-id="sol3-p3a-Fsqrt2"></span>, on a <span class="katex-inline" data-id="sol3-p3a-F0"></span>.</p>
+                        <p>(b) Le DL de <span class="katex-inline" data-id="sol3-p3b-arccos"></span> en <span class="katex-inline" data-id="sol3-p3b-inf"></span> est <span class="katex-display" data-id="sol3-p3b-dl"></span></p>
+                        <p>(c) On a <span class="katex-inline" data-id="sol3-p3c-psi-eq"></span>. Le développement asymptotique est <span class="katex-display" data-id="sol3-p3c-asymp"></span> L'asymptote est <span class="katex-inline" data-id="sol3-p3c-asymp-eq"></span>.</p>
+                        <p>(d) La différence <span class="katex-inline" data-id="sol3-p3d-diff"></span> est négative, la courbe est en dessous de l'asymptote.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Applications in Computer Science -->
+            <section id="cs-applications">
+                <h2 class="section-title">Applications en Informatique</h2>
+                <div class="space-y-12">
+    
+                    <!-- CS Application 1: Integration Techniques -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Techniques d'Intégration : Les Moteurs de Calcul Symbolique 💻</h3>
+                        <p class="text-lg mb-4 text-slate-300">Les diverses techniques de calcul d'intégrales (changement de variable, intégration par parties, décomposition en éléments simples) sont au cœur des <strong>systèmes de calcul formel</strong> comme WolframAlpha ou Maple. Ces logiciels ne se contentent pas de calculer numériquement ; ils tentent de trouver une primitive exacte en appliquant un arbre de décision de stratégies, tout comme un étudiant le ferait.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : L'Algorithme de Risch</h4>
+                        <p class="mb-4 text-slate-400">L'algorithme de Risch est une procédure complexe qui peut déterminer si une fonction élémentaire admet une primitive élémentaire, et si oui, la trouver. Il classifie l'intégrande et applique des règles spécifiques. Par exemple, pour une fraction rationnelle, il appliquera systématiquement la décomposition en éléments simples. Pour un produit de fonctions, il tentera une intégration par parties. C'est l'automatisation des méthodes vues dans l'exercice 1.</p>
+                        <pre class="language-pseudocode"><code>function symbolicIntegrate(expression) {
+    if (isRationalFunction(expression)) {
+        // Appliquer la décomposition en éléments simples
+        let parts = partialFractionDecomposition(expression);
+        return sum(integrate(p) for p in parts);
+    } 
+    else if (isProduct(expression, "log", f(x))) {
+        // Tenter une intégration par parties
+        return integrationByParts(expression, u="log", dv=f(x));
+    }
+    else if (canApplySubstitution(expression, sub="tan(x)")) {
+        // Appliquer le changement de variable
+        return applyChangeOfVariable(expression, sub="tan(x)");
+    }
+    // ... et des dizaines d'autres règles
+    else {
+        return "No elementary primitive found.";
+    }
+}</code></pre>
+                    </div>
+    
+                    <!-- CS Application 2: Symmetry in Integrals -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Symétrie des Intégrales : Traitement du Signal et Graphisme 🎶</h3>
+                        <p class="text-lg mb-4 text-slate-300">L'astuce de l'exercice 2, où l'on montre que <span class="katex-inline" data-id="cs2-IeqJ"></span> en utilisant une symétrie de l'intervalle, est une idée très puissante en informatique. Elle est fondamentale en <strong>traitement du signal</strong> avec les séries de Fourier, qui décomposent un signal en une somme de sinus et de cosinus. L'orthogonalité de ces fonctions (le fait que leurs produits s'intègrent à zéro sur un intervalle) repose sur des arguments de symétrie similaires.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Compression d'Image JPEG</h4>
+                        <p class="mb-4 text-slate-400">La compression JPEG utilise une variante de la transformée de Fourier, la <strong>Transformée en Cosinus Discrète (DCT)</strong>. Elle transforme des blocs de pixels de l'image en une somme de "fréquences" (des motifs de cosinus). Comme la plupart de l'énergie visuelle est dans les basses fréquences, on peut ignorer (mettre à zéro) les hautes fréquences sans grande perte de qualité, ce qui compresse les données. Le calcul efficace de la DCT et de son inverse repose sur des propriétés de symétrie des fonctions cosinus.</p>
+                         <pre class="language-pseudocode"><code>// L'idée de base de la transformée de Fourier
+    // Un signal f(t) peut être représenté par ses coefficients a_n et b_n
+    
+    // a_n = ∫ f(t) * cos(n*t) dt  // Projection sur les cosinus
+    // b_n = ∫ f(t) * sin(n*t) dt  // Projection sur les sinus
+    
+    // Le fait que ∫ sin(n*t)*cos(m*t) dt = 0 (pour n≠m) est dû à la symétrie.
+    // Cela permet de récupérer les coefficients de manière unique.
+    
+    function getFourierCoefficients(signal) {
+      let a = [];
+      let b = [];
+      for (let n = 0; n < MAX_FREQUENCIES; n++) {
+        a[n] = integrate(t => signal(t) * cos(n*t));
+        b[n] = integrate(t => signal(t) * sin(n*t));
+      }
+      return { a, b };
+    }
+    </code></pre>
+                    </div>
+                    
+                    <!-- CS Application 3: Taylor Series -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">3. Développements Limités : L'Approximation en Informatique ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Les développements limités (ou séries de Taylor) sont l'un des outils les plus importants de l'informatique appliquée. Les ordinateurs ne peuvent pas stocker des fonctions comme <span class="katex-inline" data-id="cs3-sin"></span> ou <span class="katex-inline" data-id="cs3-exp"></span>. À la place, ils utilisent des <strong>approximations polynomiales</strong>, qui sont simplement des développements limités tronqués. L'exercice 3, qui consiste à trouver des DL, des tangentes (DL d'ordre 1) et des asymptotes, est exactement ce que fait un ordinateur pour manipuler des fonctions complexes.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : La fonction `sin(x)` dans une calculatrice</h4>
+                        <p class="mb-4 text-slate-400">Quand vous tapez `sin(0.1)` sur une calculatrice, elle ne consulte pas une table infinie. Elle calcule les premiers termes du développement limité de sinus : <span class="katex-inline" data-id="cs3-sin-dl"></span>. Pour de petites valeurs de x, quelques termes suffisent pour une précision extrême. La position de la courbe par rapport à la tangente (donnée par le signe du terme suivant) indique si l'approximation sera par excès ou par défaut.</p>
+                        <pre class="language-pseudocode"><code>// Calcul de sin(x) avec son DL en 0
+    function fast_sin(x) {
+      // Pour une meilleure précision, on ramène x dans [-π, π]
+      x = reduce_angle(x);
+      
+      let x_squared = x * x;
+      
+      // DL d'ordre 5: x - x^3/6 + x^5/120
+      let term1 = x;
+      let term2 = -(x_squared * x) / 6.0;         // 3! = 6
+      let term3 = (x_squared * x_squared * x) / 120.0; // 5! = 120
+      
+      return term1 + term2 + term3;
+    }
+    
+    // Le DL nous donne aussi la tangente en 0 (y=x)
+    // et la position (sin(x) < x pour x>0), car le terme en x^3 est négatif.
+    </code></pre>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>1. Pour la première intégrale, essayez de diviser le numérateur et le dénominateur par <span class="katex-inline" data-id="h1-k1"></span> pour faire apparaître une tangente, puis effectuez un changement de variable.</p><p>2. Pour la deuxième, un changement de variable simple impliquant la racine carrée simplifiera grandement l'expression.</p><p>3. La troisième intégrale nécessite une intégration par parties. Choisissez judicieusement la fonction à dériver et celle à intégrer.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Changement de variable :</strong> Technique fondamentale pour simplifier les intégrales. Si <span class="katex-inline" data-id="k1-f1"></span>, alors <span class="katex-inline" data-id="k1-f2"></span>.</p><p><strong>Intégration par parties :</strong> Formule <span class="katex-inline" data-id="k1-f3"></span>. Utile quand l'intégrande est un produit de fonctions.</p><p><strong>Décomposition en éléments simples :</strong> Méthode pour intégrer des fractions rationnelles en les séparant en fractions plus simples.</p><p><strong>Division Euclidienne de polynômes :</strong> Utilisée pour simplifier une fraction rationnelle lorsque le degré du numérateur est supérieur ou égal à celui du dénominateur.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calcul de <span class="katex-inline" data-id="e1-p1-int"></span></h4><p>On divise numérateur et dénominateur par <span class="katex-inline" data-id="e1-p1-cos"></span> pour obtenir <span class="katex-inline" data-id="e1-p1-tan-form"></span>. On pose <span class="katex-inline" data-id="e1-p1-sub"></span>, ce qui donne <span class="katex-inline" data-id="e1-p1-dx"></span>. L'intégrale se transforme en <span class="katex-inline" data-id="e1-p1-t-int"></span>.</p><p>On décompose la fraction rationnelle <span class="katex-inline" data-id="e1-p1-frac"></span> en éléments simples: <span class="katex-inline" data-id="e1-p1-decomp"></span>. En identifiant les coefficients, on trouve <span class="katex-inline" data-id="e1-p1-coeffs"></span>.</p><p>L'intégrale devient <span class="katex-inline" data-id="e1-p1-int-decomp"></span>. En intégrant chaque terme, on obtient <span class="katex-inline" data-id="e1-p1-res-t"></span>. En revenant à la variable x, on a le résultat final.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Calcul de <span class="katex-inline" data-id="e1-p2-int"></span></h4><p>On effectue le changement de variable <span class="katex-inline" data-id="e1-p2-sub"></span>. Cela implique <span class="katex-inline" data-id="e1-p2-u2"></span> et donc <span class="katex-inline" data-id="e1-p2-du"></span>. Il faut aussi changer les bornes : si <span class="katex-inline" data-id="e1-p2-x0"></span>, <span class="katex-inline" data-id="e1-p2-u0"></span>; si <span class="katex-inline" data-id="e1-p2-xlog2"></span>, <span class="katex-inline" data-id="e1-p2-u1"></span>.</p><p>L'intégrale se réécrit <span class="katex-inline" data-id="e1-p2-new-int"></span>. C'est une intégrale simple : <span class="katex-inline" data-id="e1-p2-calc"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Calcul de <span class="katex-inline" data-id="e1-p3-int"></span></h4><p>On utilise l'intégration par parties (IPP) : <span class="katex-inline" data-id="e1-p3-ipp-formula"></span>. On pose <span class="katex-inline" data-id="e1-p3-u"></span> et <span class="katex-inline" data-id="e1-p3-dv"></span>. On calcule <span class="katex-inline" data-id="e1-p3-du"></span> et <span class="katex-inline" data-id="e1-p3-v"></span>.</p><p>L'IPP donne <span class="katex-inline" data-id="e1-p3-ipp-res"></span>. L'intégrale restante est <span class="katex-inline" data-id="e1-p3-rem-int"></span>. Le degré du numérateur est supérieur à celui du dénominateur, on fait donc une division euclidienne de <span class="katex-inline" data-id="e1-p3-num"></span> par <span class="katex-inline" data-id="e1-p3-den"></span>. On trouve un quotient et un reste, ce qui permet de réécrire la fraction. On termine par une décomposition en éléments simples du reste de la fraction pour finaliser le calcul.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>1. Appliquez le changement de variable <span class="katex-inline" data-id="h2-k1"></span> à l'intégrale I. N'oubliez pas de changer les bornes et le différentiel <span class="katex-inline" data-id="h2-k2"></span>. Utilisez les formules pour <span class="katex-inline" data-id="h2-k3"></span> et <span class="katex-inline" data-id="h2-k4"></span>.</p><p>2. Pour la somme <span class="katex-inline" data-id="h2-k5"></span>, remarquez que le dénominateur est le même. L'addition des numérateurs donne une expression qui peut être reliée à une identité remarquable.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Formules de trigonométrie :</strong> Connaissance de <span class="katex-inline" data-id="k2-f1"></span> et <span class="katex-inline" data-id="k2-f2"></span>.</p><p><strong>Identité remarquable :</strong> <span class="katex-inline" data-id="k2-f3"></span>.</p><p><strong>Propriétés de l'intégrale :</strong> Linéarité (<span class="katex-inline" data-id="k2-f4"></span>) et gestion des bornes lors d'un changement de variable.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Comparaison de I et J</h4><p>On part de <span class="katex-inline" data-id="e2-p1-I"></span>. On applique le changement de variable <span class="katex-inline" data-id="e2-p1-sub"></span>, ce qui implique <span class="katex-inline" data-id="e2-p1-x"></span> et <span class="katex-inline" data-id="e2-p1-dt"></span>.</p><p>Les bornes changent : si <span class="katex-inline" data-id="e2-p1-x0"></span>, <span class="katex-inline" data-id="e2-p1-tpi2"></span>. Si <span class="katex-inline" data-id="e2-p1-xpi2"></span>, <span class="katex-inline" data-id="e2-p1-t0"></span>.</p><p>L'intégrale I devient : <span class="katex-display" data-id="e2-p1-int-sub"></span></p><p>On utilise les formules <span class="katex-inline" data-id="e2-p1-sin"></span> et <span class="katex-inline" data-id="e2-p1-cos"></span>. L'intégrale se transforme en : <span class="katex-display" data-id="e2-p1-int-trans"></span></p><p>Ceci est exactement la définition de J. Donc, <span class="katex-inline" data-id="e2-p1-eq"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Calcul de I + J</h4><p>On additionne les deux intégrales : <span class="katex-display" data-id="e2-p2-sum-int"></span></p><p>On reconnaît au dénominateur l'expression <span class="katex-inline" data-id="e2-p2-denom-id"></span>. Donc, <span class="katex-inline" data-id="e2-p2-sqrt"></span>.</p><p>Sur l'intervalle <span class="katex-inline" data-id="e2-p2-interval"></span>, <span class="katex-inline" data-id="e2-p2-pos"></span>, donc la valeur absolue est superflue.</p><p>L'intégrale se simplifie énormément : <span class="katex-display" data-id="e2-p2-simp-int"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Déduction de I et J</h4><p>On a un système de deux équations à deux inconnues :</p><p>1) <span class="katex-inline" data-id="e2-p3-eq1"></span></p><p>2) <span class="katex-inline" data-id="e2-p3-eq2"></span></p><p>En substituant (1) dans (2), on obtient <span class="katex-inline" data-id="e2-p3-subst"></span>, ce qui donne <span class="katex-inline" data-id="e2-p3-I"></span>. Puisque <span class="katex-inline" data-id="e2-p3-IeqJ"></span>, on a aussi <span class="katex-inline" data-id="e2-p3-J"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>1. Pour les développements limités (DL), utilisez les DL usuels de <span class="katex-inline" data-id="h3-k1"></span> et <span class="katex-inline" data-id="h3-k2"></span>. Rappelez-vous que le DL d'une fonction peut être obtenu en intégrant le DL de sa dérivée.</p><p>2. Pour trouver l'équation de la tangente, utilisez la formule <span class="katex-inline" data-id="h3-k3"></span>. La position relative est donnée par le signe du terme suivant dans le DL.</p><p>3. Pour montrer que <span class="katex-inline" data-id="h3-k4"></span>, montrez que sa dérivée est nulle et calculez sa valeur en un point simple (comme <span class="katex-inline" data-id="h3-k5"></span>). Pour l'asymptote, utilisez le DL de <span class="katex-inline" data-id="h3-k6"></span> en <span class="katex-inline" data-id="h3-k7"></span>.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Dérivées des fonctions usuelles :</strong> <span class="katex-inline" data-id="k3-f1"></span>, <span class="katex-inline" data-id="k3-f2"></span>.</p><p><strong>Développements limités (DL) :</strong> Connaissance des DL usuels en 0, notamment <span class="katex-inline" data-id="k3-f3"></span>, <span class="katex-inline" data-id="k3-f4"></span>, et <span class="katex-inline" data-id="k3-f5"></span>.</p><p><strong>Formule de Taylor-Young :</strong> <span class="katex-inline" data-id="k3-f6"></span>.</p><p><strong>Tangente et position relative :</strong> L'équation de la tangente est <span class="katex-inline" data-id="k3-f7"></span>. Le signe de <span class="katex-inline" data-id="k3-f8"></span> donne la position.</p><p><strong>Asymptote oblique :</strong> Si <span class="katex-inline" data-id="k3-f9"></span>, alors <span class="katex-inline" data-id="k3-f10"></span> est une asymptote oblique.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Étude de <span class="katex-inline" data-id="e3-p1-f"></span></h4><p><strong>(a) Dérivée :</strong> On utilise la dérivée d'une fonction composée. <span class="katex-inline" data-id="e3-p1a-deriv-chain"></span>.</p><p><strong>(b) DL de f'(x) :</strong> On part de <span class="katex-inline" data-id="e3-p1b-deriv"></span>. On écrit les DL en 0 de <span class="katex-inline" data-id="e3-p1b-term1"></span> et <span class="katex-inline" data-id="e3-p1b-term2"></span>, puis on fait le produit : <span class="katex-inline" data-id="e3-p1b-dl-prod"></span>.</p><p><strong>(c) DL de f(x) :</strong> On intègre le DL de <span class="katex-inline" data-id="e3-p1c-deriv"></span> et on ajoute la constante <span class="katex-inline" data-id="e3-p1c-f0"></span>. <span class="katex-inline" data-id="e3-p1c-dl-int"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Étude de <span class="katex-inline" data-id="e3-p2-g"></span></h4><p><strong>(a) DL de g(x) en 2 :</strong> On pose <span class="katex-inline" data-id="e3-p2a-u"></span>. Quand <span class="katex-inline" data-id="e3-p2a-x2"></span>, <span class="katex-inline" data-id="e3-p2a-u0"></span>. On a <span class="katex-inline" data-id="e3-p2a-g-f"></span>. On peut donc directement utiliser le DL de f en 0 trouvé précédemment, en remplaçant x par u : <span class="katex-inline" data-id="e3-p2a-dl-f"></span>. On substitue <span class="katex-inline" data-id="e3-p2a-u-sub"></span> pour avoir le DL en 2.</p><p><strong>(b) Tangente :</strong> La partie du DL d'ordre 1 donne l'équation de la tangente : <span class="katex-inline" data-id="e3-p2b-tan"></span>.</p><p><strong>(c) Position :</strong> On regarde le terme suivant du DL : <span class="katex-inline" data-id="e3-p2c-pos-term"></span>. Comme <span class="katex-inline" data-id="e3-p2c-term-sign"></span> est négatif au voisinage de 2, la courbe est en dessous de la tangente.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Étude de F et <span class="katex-inline" data-id="e3-p3-psi"></span></h4><p><strong>(a) Montrer F(x)=0 :</strong> On dérive F(x) pour <span class="katex-inline" data-id="e3-p3a-x1"></span>. On trouve <span class="katex-inline" data-id="e3-p3a-deriv0"></span>. Cela signifie que F(x) est constante. On calcule sa valeur en un point, par exemple <span class="katex-inline" data-id="e3-p3a-sqrt2"></span> : <span class="katex-inline" data-id="e3-p3a-Fsqrt2-0"></span>. Donc F(x) est nulle pour tout <span class="katex-inline" data-id="e3-p3a-x-ge-1"></span>.</p><p><strong>(b) DL de arccos(1/x) :</strong> On pose <span class="katex-inline" data-id="e3-p3b-u"></span>. Quand <span class="katex-inline" data-id="e3-p3b-x-inf"></span>, <span class="katex-inline" data-id="e3-p3b-u0"></span>. On utilise le DL usuel de arccos(u) en 0 : <span class="katex-inline" data-id="e3-p3b-arccos-dl"></span>. On remplace u par 1/x.</p><p><strong>(c) Asymptote :</strong> D'après 3a), on a <span class="katex-inline" data-id="e3-p3c-relation"></span>. Donc <span class="katex-inline" data-id="e3-p3c-psi-arccos"></span>. On utilise le DL de la question 3b) : <span class="katex-inline" data-id="e3-p3c-psi-dl"></span>. L'asymptote oblique est donnée par les termes en x et la constante : <span class="katex-inline" data-id="e3-p3c-asymp-eq"></span>.</p><p><strong>(d) Position :</strong> On regarde le premier terme restant dans le développement : <span class="katex-inline" data-id="e3-p3d-pos-term"></span>. Il est négatif quand x tend vers <span class="katex-inline" data-id="e3-p3d-inf"></span>, donc la courbe est en dessous de l'asymptote.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.dataset.latex || el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                        el.textContent = `Erreur de rendu de la formule: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            const formulas = {
+                // Exam Questions from 16.html
+                'ex1-q1': "\\int \\frac{\\cos x}{\\sin x - 2\\cos x} dx",
+                'ex1-q2': "\\int_{0}^{\\log 2} e^x \\sqrt{e^x - 1} dx",
+                'ex1-q3': "\\int x \\log(3x^2 + 2x - 1) dx",
+                'ex2-I': "I = \\int_{0}^{\\frac{\\pi}{2}} \\frac{\\sin x}{\\sqrt{1+2\\sin x \\cos x}} dx",
+                'ex2-J': "J = \\int_{0}^{\\frac{\\pi}{2}} \\frac{\\cos x}{\\sqrt{1+2\\sin x \\cos x}} dx",
+                'ex2-q1-sub': "t = \\frac{\\pi}{2} - x",
+                'ex2-q2-sum': "I + J",
+                'ex3-q1-dom': "]-1, +\\infty[",
+                'ex3-q1-f': "f(x) = \\operatorname{Arctg}(\\sqrt{x+1})",
+                'ex3-q1a-deriv': "f'(x)",
+                'ex3-q1a-f': "f(x)",
+                'ex3-q1a-x': "x \\in ]-1, +\\infty[",
+                'ex3-q1b-deriv': "f'(x)",
+                'ex3-q1b-x0': "x_0 = 0",
+                'ex3-q1c-f': "f(x)",
+                'ex3-q1c-x0': "x_0 = 0",
+                'ex3-q2-dom': "[1, +\\infty[",
+                'ex3-q2-g': "g(x) = \\operatorname{Arctg}(\\sqrt{x-1})",
+                'ex3-q2a-x0': "x_0 = 2",
+                'ex3-q2b-cg': "(C_g)",
+                'ex3-q2b-x0': "x_0 = 2",
+                'ex3-q2c-cg': "(C_g)",
+                'ex3-q2c-x0': "x_0 = 2",
+                'ex3-q3-R': "\\mathbb{R}",
+                'ex3-q3-R2': "\\mathbb{R}",
+                'ex3-q3-F': "F(x) = \\operatorname{Arctg}(\\sqrt{x^2-1}) - \\operatorname{Arccos}(\\frac{1}{x})",
+                'ex3-q3a-x': "x > 1",
+                'ex3-q3a-F0': "F(x) = 0",
+                'ex3-q3b-inf': "+\\infty",
+                'ex3-q3b-phi': "\\varphi(x) = \\operatorname{Arccos}(\\frac{1}{x})",
+                'ex3-q3c-inf': "+\\infty",
+                'ex3-q3c-cpsi': "(C_\\psi)",
+                'ex3-q3c-psi': "\\psi(x) = x \\operatorname{Arctg}(\\sqrt{x^2-1})",
+                'ex3-q3d-cpsi': "(C_\\psi)",
+                'ex3-q3d-inf': "+\\infty",
+
+                // Solutions from 16.html
+                'sol1-p1-int': "\\int \\frac{\\cos x}{\\sin x - 2\\cos x} dx",
+                'sol1-p1-sub': "t = \\tan x",
+                'sol1-p1-dx': "dx = \\frac{dt}{1+t^2}",
+                'sol1-p1-new-int': "\\int \\frac{1}{t-2} \\frac{dt}{1+t^2}",
+                'sol1-p1-decomp': "\\frac{1}{(t-2)(t^2+1)} = \\frac{A}{t-2} + \\frac{Bt+C}{t^2+1}",
+                'sol1-p1-consts': "A=1/5, B=-1/5, C=-2/5",
+                'sol1-p1-res': "\\frac{1}{5}\\ln|\\tan x - 2| + \\frac{1}{5}\\ln|\\cos x| - \\frac{2}{5}x + C_0",
+                'sol1-p2-int': "\\int_{0}^{\\log 2} e^x \\sqrt{e^x - 1} dx",
+                'sol1-p2-sub': "u = \\sqrt{e^x - 1}",
+                'sol1-p2-rel': "u^2 = e^x - 1",
+                'sol1-p2-du': "2u du = e^x dx",
+                'sol1-p2-new-int': "\\int_{0}^{1} 2u^2 du = [\\frac{2u^3}{3}]_{0}^{1} = \\frac{2}{3}",
+                'sol1-p3-int': "\\int x \\log(3x^2 + 2x - 1) dx",
+                'sol1-p3-u': "u = \\log(3x^2+2x-1)",
+                'sol1-p3-dv': "dv = x dx",
+                'sol1-p3-ipp': "I = \\frac{x^2}{2}\\log(3x^2+2x-1) - \\int \\frac{3x^3+x^2}{3x^2+2x-1} dx",
+                'sol1-p3-final': "I = \\frac{x^2-1}{2}\\log(3x^2+2x-1) - \\frac{x^2}{2} + \\frac{x}{3} - \\frac{1}{2}\\ln|x+1| - \\frac{1}{18}\\ln|3x-1| + C'",
+                
+                'sol2-p1-sub': "t = \\frac{\\pi}{2} - x",
+                'sol2-p1-dt': "dt = -dx",
+                'sol2-p1-eval': "I = \\int_{\\pi/2}^{0} \\frac{\\sin(\\pi/2-t)}{\\sqrt{1+2\\sin(\\pi/2-t)\\cos(\\pi/2-t)}} (-dt)",
+                'sol2-p1-sin': "\\sin(\\pi/2-t) = \\cos t",
+                'sol2-p1-cos': "\\cos(\\pi/2-t) = \\sin t",
+                'sol2-p1-J': "\\int_{0}^{\\pi/2} \\frac{\\cos t}{\\sqrt{1+2\\cos t \\sin t}} dt = J",
+                'sol2-p1-eq': "I = J",
+                'sol2-p2-sum': "I+J",
+                'sol2-p2-sum-int': "I+J = \\int_{0}^{\\pi/2} \\frac{\\sin x + \\cos x}{\\sqrt{1+2\\sin x \\cos x}} dx",
+                'sol2-p2-denom': "\\sqrt{(\\sin x + \\cos x)^2} = |\\sin x + \\cos x|",
+                'sol2-p2-interval': "[0, \\pi/2]",
+                'sol2-p2-res': "I+J = \\int_{0}^{\\pi/2} 1 dx = \\frac{\\pi}{2}",
+                'sol2-p3-eq': "I=J",
+                'sol2-p3-sum': "I+J=\\pi/2",
+                'sol2-p3-final': "I = J = \\frac{\\pi}{4}",
+
+                'sol3-p1a-f': "f(x) = \\operatorname{Arctg}(\\sqrt{x+1})",
+                'sol3-p1a-deriv': "f'(x) = \\frac{1}{2(x+2)\\sqrt{x+1}}",
+                'sol3-p1b-deriv': "f'(x)",
+                'sol3-p1b-dl': "f'(x) = \\frac{1}{4} - \\frac{x}{4} + o(x)",
+                'sol3-p1c-f': "f(x)",
+                'sol3-p1c-dl': "f(x) = \\frac{\\pi}{4} + \\frac{x}{4} - \\frac{x^2}{8} + o(x^2)",
+                'sol3-p2a-g': "g(x) = \\operatorname{Arctg}(\\sqrt{x-1})",
+                'sol3-p2a-u': "u = x-2",
+                'sol3-p2a-dl': "g(x) = \\frac{\\pi}{4} + \\frac{x-2}{4} - \\frac{(x-2)^2}{8} + o((x-2)^2)",
+                'sol3-p2b-x0': "x_0=2",
+                'sol3-p2b-tan': "y = g(2) + g'(2)(x-2) = \\frac{\\pi}{4} + \\frac{1}{4}(x-2)",
+                'sol3-p2c-pos': "g(x) - y = -\\frac{(x-2)^2}{8} + o((x-2)^2)",
+                'sol3-p3a-x': "x>1",
+                'sol3-p3a-deriv': "F'(x) = 0",
+                'sol3-p3a-Fsqrt2': "F(\\sqrt{2})=0",
+                'sol3-p3a-F0': "F(x)=0",
+                'sol3-p3b-arccos': "\\operatorname{Arccos}(1/x)",
+                'sol3-p3b-inf': "+\\infty",
+                'sol3-p3b-dl': "\\varphi(x) = \\frac{\\pi}{2} - \\frac{1}{x} - \\frac{1}{6x^3} + o(\\frac{1}{x^3})",
+                'sol3-p3c-psi-eq': "\\psi(x) = x \\operatorname{Arccos}(1/x)",
+                'sol3-p3c-asymp': "\\psi(x) = \\frac{\\pi}{2}x - 1 - \\frac{1}{6x^2} + o(\\frac{1}{x^2})",
+                'sol3-p3c-asymp-eq': "y = \\frac{\\pi}{2}x - 1",
+                'sol3-p3d-diff': "\\psi(x) - y = -\\frac{1}{6x^2} + o(\\frac{1}{x^2})",
+
+                // Modal Formulas
+                'h1-k1': "\\cos x",
+                'k1-f1': "x = \\phi(t)",
+                'k1-f2': "\\int f(x)dx = \\int f(\\phi(t)) \\phi'(t) dt",
+                'k1-f3': "\\int u dv = uv - \\int v du",
+                'e1-p1-int': "\\int \\frac{\\cos x}{\\sin x - 2\\cos x} dx",
+                'e1-p1-cos': "\\cos x",
+                'e1-p1-tan-form': "\\int \\frac{1}{\\tan x - 2} dx",
+                'e1-p1-sub': "t = \\tan x",
+                'e1-p1-dx': "dx = \\frac{dt}{1+t^2}",
+                'e1-p1-t-int': "\\int \\frac{1}{(t-2)(1+t^2)} dt",
+                'e1-p1-frac': "\\frac{1}{(t-2)(1+t^2)}",
+                'e1-p1-decomp': "\\frac{A}{t-2} + \\frac{Bt+C}{t^2+1}",
+                'e1-p1-coeffs': "A=1/5, B=-1/5, C=-2/5",
+                'e1-p1-int-decomp': "\\frac{1}{5} \\int (\\frac{1}{t-2} - \\frac{t+2}{t^2+1}) dt",
+                'e1-p1-res-t': "\\frac{1}{5}\\ln|t-2| - \\frac{1}{10}\\ln(t^2+1) - \\frac{2}{5}\\arctan(t) + C",
+                'e1-p2-int': "\\int_{0}^{\\log 2} e^x \\sqrt{e^x - 1} dx",
+                'e1-p2-sub': "u = \\sqrt{e^x - 1}",
+                'e1-p2-u2': "u^2 = e^x - 1",
+                'e1-p2-du': "2u du = e^x dx",
+                'e1-p2-x0': "x=0",
+                'e1-p2-u0': "u=0",
+                'e1-p2-xlog2': "x=\\log 2",
+                'e1-p2-u1': "u=1",
+                'e1-p2-new-int': "\\int_0^1 u \\cdot (2u du) = \\int_0^1 2u^2 du",
+                'e1-p2-calc': "[\\frac{2u^3}{3}]_0^1 = \\frac{2}{3}",
+                'e1-p3-int': "\\int x \\log(3x^2 + 2x - 1) dx",
+                'e1-p3-ipp-formula': "\\int u dv = uv - \\int v du",
+                'e1-p3-u': "u = \\log(3x^2+2x-1)",
+                'e1-p3-dv': "dv = xdx",
+                'e1-p3-du': "du = \\frac{6x+2}{3x^2+2x-1} dx",
+                'e1-p3-v': "v = x^2/2",
+                'e1-p3-ipp-res': "\\frac{x^2}{2}\\log(3x^2+2x-1) - \\int \\frac{x^2}{2} \\frac{6x+2}{3x^2+2x-1} dx",
+                'e1-p3-rem-int': "\\int \\frac{3x^3+x^2}{3x^2+2x-1} dx",
+                'e1-p3-num': "3x^3+x^2",
+                'e1-p3-den': "3x^2+2x-1",
+                
+                'h2-k1': "t = \\pi/2 - x",
+                'h2-k2': "dx",
+                'h2-k3': "\\sin(\\pi/2 - t)",
+                'h2-k4': "\\cos(\\pi/2 - t)",
+                'h2-k5': "I+J",
+                'k2-f1': "\\sin(\\pi/2 - x) = \\cos x",
+                'k2-f2': "\\cos(\\pi/2 - x) = \\sin x",
+                'k2-f3': "(\\sin x + \\cos x)^2 = \\sin^2 x + \\cos^2 x + 2\\sin x \\cos x = 1 + 2\\sin x \\cos x",
+                'k2-f4': "\\int (f+g) = \\int f + \\int g",
+                'e2-p1-I': "I = \\int_{0}^{\\pi/2} \\frac{\\sin x}{\\sqrt{1+2\\sin x \\cos x}} dx",
+                'e2-p1-sub': "t = \\pi/2 - x",
+                'e2-p1-x': "x = \\pi/2 - t",
+                'e2-p1-dt': "dx = -dt",
+                'e2-p1-x0': "x=0",
+                'e2-p1-tpi2': "t=\\pi/2",
+                'e2-p1-xpi2': "x=\\pi/2",
+                'e2-p1-t0': "t=0",
+                'e2-p1-int-sub': "I = \\int_{\\pi/2}^0 \\frac{\\sin(\\pi/2-t)}{\\sqrt{1+2\\sin(\\pi/2-t)\\cos(\\pi/2-t)}} (-dt)",
+                'e2-p1-sin': "\\sin(\\pi/2-t) = \\cos t",
+                'e2-p1-cos': "\\cos(\\pi/2-t) = \\sin t",
+                'e2-p1-int-trans': "\\int_0^{\\pi/2} \\frac{\\cos t}{\\sqrt{1+2\\cos t \\sin t}} dt",
+                'e2-p1-eq': "I=J",
+                'e2-p2-sum-int': "I+J = \\int_0^{\\pi/2} \\frac{\\sin x + \\cos x}{\\sqrt{1+2\\sin x \\cos x}} dx",
+                'e2-p2-denom-id': "1+2\\sin x \\cos x = (\\sin x + \\cos x)^2",
+                'e2-p2-sqrt': "\\sqrt{(\\sin x + \\cos x)^2} = |\\sin x + \\cos x|",
+                'e2-p2-interval': "[0, \\pi/2]",
+                'e2-p2-pos': "\\sin x + \\cos x \\ge 0",
+                'e2-p2-simp-int': "I+J = \\int_0^{\\pi/2} \\frac{\\sin x + \\cos x}{\\sin x + \\cos x} dx = \\int_0^{\\pi/2} 1 dx = \\frac{\\pi}{2}",
+                'e2-p3-eq1': "I=J",
+                'e2-p3-eq2': "I+J = \\pi/2",
+                'e2-p3-subst': "2I = \\pi/2",
+                'e2-p3-I': "I = \\pi/4",
+                'e2-p3-IeqJ': "I=J",
+                'e2-p3-J': "J = \\pi/4",
+                
+                'h3-k1': "(1+u)^a",
+                'h3-k2': "\\operatorname{Arccos} u",
+                'h3-k3': "y = f(a) + f'(a)(x-a)",
+                'h3-k4': "F(x)=0",
+                'h3-k5': "x=\\sqrt{2}",
+                'h3-k6': "\\operatorname{Arccos}(1/x)",
+                'h3-k7': "+\\infty",
+                'k3-f1': "(\\operatorname{Arctg} u)' = \\frac{1}{1+u^2}",
+                'k3-f2': "(\\operatorname{Arccos} u)' = -\\frac{1}{\\sqrt{1-u^2}}",
+                'k3-f3': "(1+u)^\\alpha = 1 + \\alpha u + \\frac{\\alpha(\\alpha-1)}{2!}u^2 + o(u^2)",
+                'k3-f4': "\\frac{1}{1+u} = 1 - u + u^2 + o(u^2)",
+                'k3-f5': "\\operatorname{Arccos} u = \\frac{\\pi}{2} - u - \\frac{u^3}{6} + o(u^3)",
+                'k3-f6': "f(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + o(x^2)",
+                'k3-f7': "y = f(x_0) + f'(x_0)(x-x_0)",
+                'k3-f8': "f(x) - y",
+                'k3-f9': "\\lim_{x\\to\\infty} [f(x) - (ax+b)] = 0",
+                'k3-f10': "y=ax+b",
+                'e3-p1-f': "f(x) = \\operatorname{Arctg}(\\sqrt{x+1})",
+                'e3-p1a-deriv-chain': "f'(x) = \\frac{1}{1+(\\sqrt{x+1})^2} \\cdot \\frac{1}{2\\sqrt{x+1}} = \\frac{1}{2(x+2)\\sqrt{x+1}}",
+                'e3-p1b-deriv': "f'(x) = \\frac{1}{2(2+x)\\sqrt{1+x}}",
+                'e3-p1b-term1': "\\frac{1}{1+x/2} = 1 - x/2 + o(x)",
+                'e3-p1b-term2': "(1+x)^{-1/2} = 1 - x/2 + o(x)",
+                'e3-p1b-dl-prod': "f'(x) = \\frac{1}{4}(1-x/2+o(x))(1-x/2+o(x)) = \\frac{1}{4}(1-x+o(x))",
+                'e3-p1c-deriv': "f'(t)",
+                'e3-p1c-f0': "f(0) = \\operatorname{Arctg}(1) = \\pi/4",
+                'e3-p1c-dl-int': "f(x) = f(0) + \\int_0^x (\\frac{1}{4} - \\frac{t}{4} + o(t)) dt = \\frac{\\pi}{4} + \\frac{x}{4} - \\frac{x^2}{8} + o(x^2)",
+                'e3-p2-g': "g(x) = \\operatorname{Arctg}(\\sqrt{x-1})",
+                'e3-p2a-u': "u=x-2",
+                'e3-p2a-x2': "x \\to 2",
+                'e3-p2a-u0': "u \\to 0",
+                'e3-p2a-g-f': "g(x) = \\operatorname{Arctg}(\\sqrt{1+u}) = f(u)",
+                'e3-p2a-dl-f': "f(u) = \\frac{\\pi}{4} + \\frac{u}{4} - \\frac{u^2}{8} + o(u^2)",
+                'e3-p2a-u-sub': "u=x-2",
+                'e3-p2b-tan': "y = \\frac{\\pi}{4} + \\frac{1}{4}(x-2)",
+                'e3-p2c-pos-term': "g(x) - y = -\\frac{(x-2)^2}{8} + o((x-2)^2)",
+                'e3-p2c-term-sign': "-\\frac{(x-2)^2}{8}",
+                'e3-p3-psi': "\\psi(x)",
+                'e3-p3a-x1': "x>1",
+                'e3-p3a-deriv0': "F'(x) = 0",
+                'e3-p3a-sqrt2': "x=\\sqrt{2}",
+                'e3-p3a-Fsqrt2-0': "F(\\sqrt{2}) = \\operatorname{Arctg}(1) - \\operatorname{Arccos}(1/\\sqrt{2}) = \\pi/4 - \\pi/4 = 0",
+                'e3-p3a-x-ge-1': "x \\ge 1",
+                'e3-p3b-u': "u=1/x",
+                'e3-p3b-x-inf': "x \\to +\\infty",
+                'e3-p3b-u0': "u \\to 0",
+                'e3-p3b-arccos-dl': "\\operatorname{Arccos} u = \\pi/2 - u - u^3/6 + o(u^3)",
+                'e3-p3c-relation': "\\operatorname{Arctg}(\\sqrt{x^2-1}) = \\operatorname{Arccos}(1/x)",
+                'e3-p3c-psi-arccos': "\\psi(x) = x \\operatorname{Arccos}(1/x)",
+                'e3-p3c-psi-dl': "\\psi(x) = x(\\frac{\\pi}{2} - \\frac{1}{x} - \\frac{1}{6x^3} + o(\\frac{1}{x^3})) = \\frac{\\pi}{2}x - 1 - \\frac{1}{6x^2} + o(\\frac{1}{x^2})",
+                'e3-p3c-asymp-eq': "y = \\frac{\\pi}{2}x - 1",
+                'e3-p3d-pos-term': "\\psi(x) - y = -\\frac{1}{6x^2} + o(\\frac{1}{x^2})",
+                'e3-p3d-inf': "+\\infty",
+
+                // CS Section formulas
+                'cs2-IeqJ': "I = J",
+                'cs3-sin': "\\sin(x)",
+                'cs3-exp': "\\exp(x)",
+                'cs3-sin-dl': "x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\dots"
+            };
+
+            for (const [id, latex] of Object.entries(formulas)) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.dataset.latex = latex;
+                    el.textContent = latex; // Fallback text
+                } else {
+                    // It's okay if CS formulas are not found in the initial HTML, they are added dynamically.
+                    if (!id.startsWith('cs')) {
+                         console.error(`Élément avec data-id '${id}' non trouvé.`);
+                    }
+                }
+            }
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 2: Final Exam (2014/2015) - Enhanced Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 2</h1>
+            <p class="exam-subtitle">Final Exam (2014/2015)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1 (5pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex1-q-f"></span> and <span class="katex-inline" data-id="ex1-q-g"></span></p>
+                        <p>i) Calculate the Taylor expansion of order 6 for the function f at <span class="katex-inline" data-id="ex1-q1-x0"></span>.</p>
+                        <p>ii) Deduce the values of <span class="katex-inline" data-id="ex1-q2-deriv"></span> for <span class="katex-inline" data-id="ex1-q2-i"></span>.</p>
+                        <p>iii) Calculate the Taylor expansion of order 4 for the function g at <span class="katex-inline" data-id="ex1-q3-x0"></span>.</p>
+                        <p>iv) Hence, calculate the value of the limit <span class="katex-display" data-id="ex1-q4-lim"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2 (5pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex2-q-f"></span></p>
+                        <p>1) Give the partial fraction decomposition of the fraction <span class="katex-inline" data-id="ex2-q1-f"></span>.</p>
+                        <p>2) Calculate <span class="katex-inline" data-id="ex2-q2-int"></span>.</p>
+                        <p>3) Deduce, using a change of variables, the integral <span class="katex-inline" data-id="ex2-q3-int"></span>.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3 (4pts)</h3>
+                    <div class="exercise-content">
+                        <p>Calculate the integral <span class="katex-inline" data-id="ex3-q-int"></span>.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 4 (6pts)</h3>
+                    <div class="exercise-content">
+                        <p>Solve the following differential equations:</p>
+                        <p>a) <span class="katex-inline" data-id="ex4-qa-eq"></span></p>
+                        <p>b) <span class="katex-inline" data-id="ex4-qb-eq"></span></p>
+                        <p>c) <span class="katex-inline" data-id="ex4-qc-eq"></span></p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>i) <strong>Taylor Expansion of f(x)</strong>: We sum the expansions of <span class="katex-inline" data-id="sol1-p1-cos"></span> and <span class="katex-inline" data-id="sol1-p1-xsin"></span>. We get <span class="katex-inline" data-id="sol1-p1-res"></span>.</p>
+                        <p>ii) <strong>Derivatives at 0</strong>: By identification with the Taylor-Young formula, <span class="katex-inline" data-id="sol1-p2-deriv-odd"></span>. <span class="katex-inline" data-id="sol1-p2-deriv2"></span>, <span class="katex-inline" data-id="sol1-p2-deriv4"></span>, <span class="katex-inline" data-id="sol1-p2-deriv6"></span>.</p>
+                        <p>iii) <strong>Taylor Expansion of g(x)</strong>: Let <span class="katex-inline" data-id="sol1-p3-u"></span>. We use the expansion of <span class="katex-inline" data-id="sol1-p3-eu"></span> and compose the expansions. We obtain <span class="katex-inline" data-id="sol1-p3-res"></span>.</p>
+                        <p>iv) <strong>Limit</strong>: Numerator: <span class="katex-inline" data-id="sol1-p4-num"></span>. Denominator: <span class="katex-inline" data-id="sol1-p4-den"></span>. The limit is <span class="katex-inline" data-id="sol1-p4-res"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>1) <strong>Decomposition of F(x)</strong>: <span class="katex-inline" data-id="sol2-p1-decomp"></span>. We find <span class="katex-inline" data-id="sol2-p1-const"></span>. <span class="katex-inline" data-id="sol2-p1-res"></span>.</p>
+                        <p>2) <strong>Antiderivative</strong>: <span class="katex-inline" data-id="sol2-p2-int"></span>.</p>
+                        <p>3) <strong>Deduced Integral</strong>: Let <span class="katex-inline" data-id="sol2-p3-sub"></span>. The integral becomes <span class="katex-inline" data-id="sol2-p3-int"></span>, whose antiderivative is <span class="katex-inline" data-id="sol2-p3-res"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>The partial fraction decomposition gives: <span class="katex-inline" data-id="sol3-p1-decomp"></span>. We integrate term by term to obtain: <span class="katex-display" data-id="sol3-p1-res"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution for Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>a) Separable equation. The solution is <span class="katex-inline" data-id="sol4-pa-sol"></span>.</p>
+                        <p>b) Homogeneous equation. Let <span class="katex-inline" data-id="sol4-pb-sub"></span>. The solution is <span class="katex-inline" data-id="sol4-pb-sol"></span>.</p>
+                        <p>c) Linear equation. Homogeneous solution <span class="katex-inline" data-id="sol4-pc-solh"></span>. Variation of parameters gives <span class="katex-inline" data-id="sol4-pc-u"></span>. The general solution is <span class="katex-inline" data-id="sol4-pc-solg"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Taylor Expansions: Video Game Physics 🕹️</h3>
+                        <p class="text-lg mb-4 text-slate-300">In game physics engines, calculations must be performed millions of times per second. Trigonometric functions like <span class="katex-inline">\cos(x)</span> and <span class="katex-inline">\sin(x)</span>, which describe rotations and oscillations, are too slow to compute directly. Developers use <strong>polynomial approximations</strong> derived from Taylor expansions. For small rotation angles (common between two frames), a 2nd or 4th order expansion provides visually indistinguishable precision while being much faster to execute.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Object Rotation</h4>
+                        <p class="mb-4 text-slate-400">To rotate a point <span class="katex-inline">(x, y)</span> by a small angle <span class="katex-inline">\theta</span>, the exact formula is <span class="katex-inline">x' = x\cos\theta - y\sin\theta</span>. Using the Taylor expansions <span class="katex-inline">\cos\theta \approx 1 - \theta^2/2</span> and <span class="katex-inline">\sin\theta \approx \theta</span>, the formula becomes <span class="katex-inline">x' \approx x(1-\theta^2/2) - y\theta</span>, which only involves multiplications and additions.</p>
+                         <pre class="language-pseudocode"><code>// Exact rotation (slow)
+function rotate_exact(point, angle) {
+  point.x = point.x * Math.cos(angle) - point.y * Math.sin(angle);
+  // ...
+}
+
+// Approximated rotation with Taylor expansion (fast)
+function rotate_fast(point, angle) {
+  let angle_sq = angle * angle;
+  point.x = point.x * (1 - angle_sq / 2.0) - point.y * angle;
+  // ...
+}</code></pre>
+                    </div>
+
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Integration and Antiderivatives: Signal Processing 🎶</h3>
+                        <p class="text-lg mb-4 text-slate-300">Audio and image signal processing relies on the <strong>Fourier transform</strong>, which decomposes a signal into its constituent frequencies. The calculation of this transform's coefficients is done through integrals. For example, to isolate low frequencies in a piece of music (for a "bass boost"), a low-pass filter is applied. Designing this filter and calculating its output involves integrating the input signal. Partial fraction decomposition is a key technique for analyzing and calculating the response of complex filters.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Digital Filter</h4>
+                        <p class="mb-4 text-slate-400">A simple digital filter, like a moving average, is a discrete form of integration. It smooths a signal by replacing each point with the average of its neighbors. More complex filters, described by rational fractions (as in the exercise), are analyzed using partial fraction decomposition to understand how they react to different frequencies.</p>
+                         <pre class="language-pseudocode"><code>// A signal is a list of numbers
+signal = [10, 12, 11, 25, 27, 26, 8, 9, 10]
+
+// Apply a moving average filter (discrete integration)
+function smooth_signal(signal) {
+  let smoothed = [];
+  for (i = 1; i < signal.length - 1; i++) {
+    // The new value is the local integral (average)
+    let average = (signal[i-1] + signal[i] + signal[i+1]) / 3.0;
+    smoothed.push(average);
+  }
+  return smoothed;
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>For question (ii), remember that the coefficient of <span class="katex-inline" data-id="h1-k1"></span> in the Taylor expansion of f at 0 is <span class="katex-inline" data-id="h1-k2"></span>. For question (iii), you need to compose the Taylor expansions of <span class="katex-inline" data-id="h1-k3"></span> and <span class="katex-inline" data-id="h1-k4"></span>.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Taylor Expansions:</strong> Common expansions of <span class="katex-inline" data-id="k1-f1"></span>, <span class="katex-inline" data-id="k1-f2"></span>, <span class="katex-inline" data-id="k1-f3"></span>, <span class="katex-inline" data-id="k1-f4"></span>. Operations on expansions (sum, product, composition).</p><p><strong>Taylor-Young Formula:</strong> The link between the coefficients of a Taylor expansion and the successive derivatives at a point.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">i) Taylor Expansion of f(x)</h4><p>We use the known Taylor expansions of <span class="katex-inline" data-id="e1-p1-cos"></span> and <span class="katex-inline" data-id="e1-p1-sin"></span> to order 6 and 5, respectively. We calculate the expansion of <span class="katex-inline" data-id="e1-p1-xsin"></span> by multiplying that of <span class="katex-inline" data-id="e1-p1-sin2"></span> by x. We then add the two resulting expansions term by term for the corresponding powers of x.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">ii) Derivatives at 0</h4><p>The Taylor-Young formula tells us that <span class="katex-inline" data-id="e1-p2-taylor"></span>. By identifying the coefficients of the Taylor expansion of f(x) found in (i) with this formula, we can extract the value of <span class="katex-inline" data-id="e1-p2-deriv"></span>. For example, for <span class="katex-inline" data-id="e1-p2-x4"></span>, the coefficient is <span class="katex-inline" data-id="e1-p2-coeff4"></span>, so <span class="katex-inline" data-id="e1-p2-f4"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">iii) Taylor Expansion of g(x)</h4><p>We want the Taylor expansion of <span class="katex-inline" data-id="e1-p3-g"></span>. Let <span class="katex-inline" data-id="e1-p3-u"></span>. First, we calculate the expansion of u at 0: <span class="katex-inline" data-id="e1-p3-u-dl"></span>. Then, we use the expansion of <span class="katex-inline" data-id="e1-p3-eu"></span> and substitute u with its expansion, keeping only terms of degree less than or equal to 4.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">iv) Limit</h4><p>We calculate the Taylor expansion of the numerator and the denominator to order 4. The first non-zero term in both expansions will be in <span class="katex-inline" data-id="e1-p4-x4"></span>. The limit will be the ratio of the coefficients of these terms.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>For question 3, the change of variables <span class="katex-inline" data-id="h2-k1"></span> transforms the trigonometric integral into an integral of a rational fraction, which you know how to solve from questions 1 and 2.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Partial Fraction Decomposition:</strong> Factor the denominator <span class="katex-inline" data-id="k2-f1"></span> and find the coefficients.</p><p><strong>Common Antiderivatives:</strong> Antiderivatives of <span class="katex-inline" data-id="k2-f2"></span>, <span class="katex-inline" data-id="k2-f3"></span>, and <span class="katex-inline" data-id="k2-f4"></span>.</p><p><strong>Change of Variables:</strong> Knowing how to transform the integrand and the bounds during a change of variables.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Decomposition of F(x)</h4><p>The denominator factors into <span class="katex-inline" data-id="e2-p1-den"></span>. The decomposition has the form <span class="katex-inline" data-id="e2-p1-decomp"></span>. The coefficients can be found using various techniques (for example, multiplying by <span class="katex-inline" data-id="e2-p1-x1"></span> and evaluating at <span class="katex-inline" data-id="e2-p1-1"></span> to find A).</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Antiderivative</h4><p>We integrate the sum of simple elements obtained in question 1. Each term corresponds to a known antiderivative (logarithms for the terms in <span class="katex-inline" data-id="e2-p2-x1"></span> and <span class="katex-inline" data-id="e2-p2-x-1"></span>, and a logarithm for the term <span class="katex-inline" data-id="e2-p2-x21"></span> because the numerator is the derivative of the denominator up to a constant factor).</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Deduced Integral</h4><p>The change of variables <span class="katex-inline" data-id="e2-p3-sub"></span> implies <span class="katex-inline" data-id="e2-p3-dy"></span>. The integral <span class="katex-inline" data-id="e2-p3-int"></span> transforms into <span class="katex-inline" data-id="e2-p3-int-y"></span>. This is exactly the integral of F(y), for which we have already calculated the antiderivative in question 2. We just need to replace x with y, and then y with <span class="katex-inline" data-id="e2-p3-sin"></span> in the result.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>The partial fraction decomposition of the fraction is the hardest part. There is a quadruple pole at <span class="katex-inline" data-id="h3-k1"></span> and two simple complex poles. Determining the coefficients for the multiple pole can be tedious.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Partial Fraction Decomposition:</strong> Mastery of decomposition for multiple poles and complex poles.</p><p><strong>Integration of Simple Elements:</strong> Knowing how to integrate all types of terms resulting from a decomposition.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><p>The decomposition of the fraction <span class="katex-inline" data-id="e3-p1-frac"></span> has the form <span class="katex-inline" data-id="e3-p1-decomp"></span>. After finding the coefficients (A, B, C, D, E, F), we integrate each term separately. The terms in <span class="katex-inline" data-id="e3-p1-x-1-n"></span> give powers of <span class="katex-inline" data-id="e3-p1-x-1"></span> and a logarithm. The term <span class="katex-inline" data-id="e3-p1-quad"></span> is split into a part that gives a logarithm (<span class="katex-inline" data-id="e3-p1-ln"></span>) and a part that gives an arctangent (<span class="katex-inline" data-id="e3-p1-atan"></span>).</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>(a) is separable. (b) is a homogeneous equation, let <span class="katex-inline" data-id="h4-k1"></span>. (c) is a first-order linear equation, solve the homogeneous equation then use the method of variation of parameters.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Classification of first-order ODEs:</strong> Knowing how to recognize and solve separable equations, homogeneous equations, and linear equations.</p><p><strong>Method of Variation of Parameters:</strong> A technique to find a particular solution of a non-homogeneous linear equation once the homogeneous solution is known.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">a) <span class="katex-inline" data-id="e4-pa-eq"></span></h4><p>We separate the variables: <span class="katex-inline" data-id="e4-pa-sep"></span>. We integrate both sides to find y.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">b) <span class="katex-inline" data-id="e4-pb-eq"></span></h4><p>We rewrite it as <span class="katex-inline" data-id="e4-pb-rewrite"></span>. This is a homogeneous equation. Let <span class="katex-inline" data-id="e4-pb-sub"></span>, so <span class="katex-inline" data-id="e4-pb-yp"></span>. The equation becomes a separable equation in z and x, which we then solve.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">c) <span class="katex-inline" data-id="e4-pc-eq"></span></h4><p>This is a linear equation. First, we solve the homogeneous equation <span class="katex-inline" data-id="e4-pc-homo"></span>, which is separable and gives <span class="katex-inline" data-id="e4-pc-solh"></span>. Then, we look for a particular solution of the form <span class="katex-inline" data-id="e4-pc-solp-form"></span> (variation of parameters). We differentiate, substitute into the full equation, and solve for <span class="katex-inline" data-id="e4-pc-up"></span>, then integrate to find U(x). The general solution is <span class="katex-inline" data-id="e4-pc-solg"></span>.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX rendering error:", e, "on element:", el);
+                        el.textContent = `Formula rendering error: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) { el.textContent = content; } 
+            }
+
+            // Questions
+            setText('ex1-q-f', "f(x)=\\cos(x)+x\\sin(x)");
+            setText('ex1-q-g', "g(x)=\\exp(1-\\cos(x))");
+            setText('ex1-q1-x0', "x_0=0");
+            setText('ex1-q2-deriv', "f^{(i)}(0)");
+            setText('ex1-q2-i', "i=1,...,6");
+            setText('ex1-q3-x0', "x_0=0");
+            setText('ex1-q4-lim', "\\lim_{x \\to 0} \\frac{f(x)-\\cosh(x)}{g(x)-\\cosh(x)}");
+            setText('ex2-q-f', "F(x)=\\frac{2x}{x^4-1}");
+            setText('ex2-q1-f', "F(x)");
+            setText('ex2-q2-int', "\\int F(x)dx");
+            setText('ex2-q3-int', "\\int \\frac{2\\sin(x)\\cos(x)}{\\sin^4(x)-1}dx");
+            setText('ex3-q-int', "\\int \\frac{x+1}{(x-1)^4(x^2+1)}dx");
+            setText('ex4-qa-eq', "(x^2+1)y' + 2xy^2 = 0");
+            setText('ex4-qb-eq', "x^2y' - 2y^2 - x^2 = 0");
+            setText('ex4-qc-eq', "xy' - y = 2x^3 \\exp(x^2)");
+
+            // Solutions
+            setText('sol1-p1-cos', "\\cos(x) = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} - \\frac{x^6}{720} + o(x^6)");
+            setText('sol1-p1-xsin', "x\\sin(x) = x^2 - \\frac{x^4}{6} + \\frac{x^6}{120} + o(x^6)");
+            setText('sol1-p1-res', "f(x) = 1 + \\frac{x^2}{2} - \\frac{x^4}{8} + \\frac{x^6}{144} + o(x^6)");
+            setText('sol1-p2-deriv-odd', "f'(0)=f^{(3)}(0)=f^{(5)}(0)=0");
+            setText('sol1-p2-deriv2', "f''(0)=1");
+            setText('sol1-p2-deriv4', "f^{(4)}(0)=-3");
+            setText('sol1-p2-deriv6', "f^{(6)}(0)=5");
+            setText('sol1-p3-u', "u = 1-\\cos x = \\frac{x^2}{2} - \\frac{x^4}{24} + o(x^5)");
+            setText('sol1-p3-eu', "e^u = 1+u+\\frac{u^2}{2}+o(u^2)");
+            setText('sol1-p3-res', "g(x) = 1 + \\frac{x^2}{2} + \\frac{x^4}{12} + o(x^4)");
+            setText('sol1-p4-num', "f(x)-\\cosh(x) = -\\frac{x^4}{6} + o(x^4)");
+            setText('sol1-p4-den', "g(x)-\\cosh(x) = \\frac{x^4}{24} + o(x^4)");
+            setText('sol1-p4-res', "\\frac{-1/6}{1/24} = -4");
+
+            setText('sol2-p1-decomp', "F(x) = \\frac{2x}{(x-1)(x+1)(x^2+1)} = \\frac{A}{x-1} + \\frac{B}{x+1} + \\frac{Cx+D}{x^2+1}");
+            setText('sol2-p1-const', "A=1/2, B=1/2, C=-1, D=0");
+            setText('sol2-p1-res', "F(x) = \\frac{1}{2(x-1)} + \\frac{1}{2(x+1)} - \\frac{x}{x^2+1}");
+            setText('sol2-p2-int', "\\int F(x)dx = \\frac{1}{2}\\ln|x^2-1| - \\frac{1}{2}\\ln(x^2+1) + c = \\frac{1}{2}\\ln|\\frac{x^2-1}{x^2+1}|+c");
+            setText('sol2-p3-sub', "y=\\sin x, dy=\\cos x dx");
+            setText('sol2-p3-int', "\\int \\frac{2y}{y^4-1}dy");
+            setText('sol2-p3-res', "\\frac{1}{2}\\ln|\\frac{\\sin^2 x - 1}{\\sin^2 x + 1}|+c = \\frac{1}{2}\\ln(\\frac{\\cos^2 x}{\\sin^2 x + 1})+c");
+
+            setText('sol3-p1-decomp', "\\frac{1}{(x-1)^4} - \\frac{1}{2(x-1)^3} + \\frac{1}{4(x-1)} - \\frac{1}{4}\\frac{x+1}{x^2+1}");
+            setText('sol3-p1-res', "-\\frac{1}{3(x-1)^3} + \\frac{1}{4(x-1)^2} + \\frac{1}{4}\\ln|x-1| - \\frac{1}{8}\\ln(x^2+1) - \\frac{1}{4}\\arctan x + c");
+
+            setText('sol4-pa-sol', "y = \\frac{1}{\\ln(x^2+1)+c}");
+            setText('sol4-pb-sub', "z=y/x");
+            setText('sol4-pb-sol', "y = xz = \\frac{\\sqrt{7}}{4}x \\tan(\\sqrt{7}\\ln|x|+c) + \\frac{x}{4}");
+            setText('sol4-pc-solh', "y_h = cx");
+            setText('sol4-pc-u', "U(x) = \\exp(x^2)+c");
+            setText('sol4-pc-solg', "y = x(\\exp(x^2)+c)");
+
+            // Modals
+            setText('h1-k1', "x^k");
+            setText('h1-k2', "f^{(k)}(0)/k!");
+            setText('h1-k3', "e^u");
+            setText('h1-k4', "1-\\cos x");
+            setText('k1-f1', "\\cos x");
+            setText('k1-f2', "\\sin x");
+            setText('k1-f3', "e^x");
+            setText('k1-f4', "\\cosh x");
+            setText('e1-p1-cos', "\\cos x");
+            setText('e1-p1-sin', "\\sin x");
+            setText('e1-p1-xsin', "x\\sin x");
+            setText('e1-p1-sin2', "\\sin x");
+            setText('e1-p2-taylor', "f(x) = \\sum_{k=0}^n \\frac{f^{(k)}(0)}{k!}x^k + o(x^n)");
+            setText('e1-p2-deriv', "f^{(k)}(0)");
+            setText('e1-p2-x4', "x^4");
+            setText('e1-p2-coeff4', "-1/8");
+            setText('e1-p2-f4', "\\frac{f^{(4)}(0)}{4!} = -\\frac{1}{8} \\Rightarrow f^{(4)}(0) = -3");
+            setText('e1-p3-g', "g(x)=e^{1-\\cos x}");
+            setText('e1-p3-u', "u=1-\\cos x");
+            setText('e1-p3-u-dl', "u = x^2/2 - x^4/24 + o(x^5)");
+            setText('e1-p3-eu', "e^u");
+            setText('e1-p4-x4', "x^4");
+
+            setText('h2-k1', "y=\\sin x");
+            setText('k2-f1', "x^4-1=(x-1)(x+1)(x^2+1)");
+            setText('k2-f2', "1/(x-a)");
+            setText('k2-f3', "u'/u");
+            setText('k2-f4', "1/(x^2+1)");
+            setText('e2-p1-den', "(x-1)(x+1)(x^2+1)");
+            setText('e2-p1-decomp', "\\frac{A}{x-1} + \\frac{B}{x+1} + \\frac{Cx+D}{x^2+1}");
+            setText('e2-p1-x1', "x-1");
+            setText('e2-p1-1', "x=1");
+            setText('e2-p2-x1', "x-1");
+            setText('e2-p2-x-1', "x+1");
+            setText('e2-p2-x21', "x/(x^2+1)");
+            setText('e2-p3-sub', "y=\\sin x");
+            setText('e2-p3-dy', "dy=\\cos x dx");
+            setText('e2-p3-int', "\\int \\frac{2\\sin x \\cos x}{\\sin^4 x - 1} dx");
+            setText('e2-p3-int-y', "\\int \\frac{2y}{y^4-1} dy");
+            setText('e2-p3-sin', "\\sin x");
+
+            setText('h3-k1', "x=1");
+            setText('e3-p1-frac', "\\frac{x+1}{(x-1)^4(x^2+1)}");
+            setText('e3-p1-decomp', "\\frac{A}{(x-1)^4} + \\frac{B}{(x-1)^3} + \\frac{C}{(x-1)^2} + \\frac{D}{x-1} + \\frac{Ex+F}{x^2+1}");
+            setText('e3-p1-x-1-n', "(x-1)^{-n}");
+            setText('e3-p1-x-1', "x-1");
+            setText('e3-p1-quad', "(Ex+F)/(x^2+1)");
+            setText('e3-p1-ln', "\\ln(x^2+1)");
+            setText('e3-p1-atan', "\\arctan x");
+
+            setText('h4-k1', "z=y/x");
+            setText('e4-pa-eq', "(x^2+1)y'+2xy^2=0");
+            setText('e4-pa-sep', "-\\frac{dy}{y^2} = \\frac{2x}{x^2+1}dx");
+            setText('e4-pb-eq', "x^2y'-2y^2-x^2=0");
+            setText('e4-pb-rewrite', "y' = 2(y/x)^2+1");
+            setText('e4-pb-sub', "z=y/x");
+            setText('e4-pb-yp', "y'=z+xz'");
+            setText('e4-pc-eq', "xy'-y=2x^3e^{x^2}");
+            setText('e4-pc-homo', "xy'-y=0");
+            setText('e4-pc-solh', "y_h=cx");
+            setText('e4-pc-solp-form', "y_p=U(x)x");
+            setText('e4-pc-up', "U'(x)");
+            setText('e4-pc-solg', "y_g = y_h + y_p");
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

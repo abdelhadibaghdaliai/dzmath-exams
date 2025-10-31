@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Rattrapage d’Analyse II (2010-2011)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f7f2;
+            color: #3a3a3a;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+        h4 {
+            font-size: 1.25rem;
+            color: #34495e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .katex-display {
+            display: block;
+            margin: 1em 0;
+            text-align: center;
+        }
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e0e0;
+        }
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #d3c0a3;
+            padding-bottom: 1.5rem;
+        }
+        .exam-title {
+            font-size: 2.75rem;
+            color: #2c3e50;
+        }
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #7f8c8d;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            background-color: #fdfdfd;
+            border: 1px solid #f0f0f0;
+            transition: box-shadow 0.3s ease;
+        }
+        .exercise:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+        .exercise-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .btn-container {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Lato', sans-serif;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+        }
+        .btn-tertiary {
+            background-color: #1abc9c;
+            color: white;
+        }
+        .btn-tertiary:hover {
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: fadeIn 0.5s;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .modal-title {
+            font-size: 1.75rem;
+            color: #2c3e50;
+        }
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95);}
+            to {opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Examen de Rattrapage d’Analyse II</h1>
+            <p class="exam-subtitle">Année Universitaire 2010-2011</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1 (9 points)</h3>
+                    <div class="exercise-content">
+                        <p>Calculer les intégrales suivantes :</p>
+                        <p>1. <span class="katex-inline" data-katex="\int\frac{x^{2}}{\sqrt{x^{6}+1}}dx"></span> (1 pt)</p>
+                        <p>2. <span class="katex-inline" data-katex="\int\frac{e^{x}}{\sqrt{e^{x}+1}}dx"></span> (1 pt)</p>
+                        <p>3. <span class="katex-inline" data-katex="\int x^{2}e^{x}dx"></span> (1 pt)</p>
+                        <p>4. <span class="katex-inline" data-katex='\int\frac{\cos x+\sin x}{\sin x-\cos x}\frac{dx}{\cos^{2}x}'></span> (3 pts)</p>
+                        <p>5. <span class="katex-inline" data-katex='\int\frac{x^{4}+2x^{3}+2x^{2}+2x+1}{(x-1)^{2}(x^{2}+1)^{2}}dx'></span> (3 pts)</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2 (5 points)</h3>
+                    <div class="exercise-content">
+                        <p>1. Calculer le DL à l'ordre 5 au voisinage de 0 de la fonction <span class="katex-inline" data-katex="f(x)=\frac{\ln(1+x)}{1+x}"></span>.</p>
+                        <p>2. Déterminer l'équation de la tangente au point (0, f(0)) au graphe de f ainsi que sa position par rapport à celui-ci.</p>
+                        <p>3. En déduire les valeurs de <span class="katex-inline" data-katex="f(0), f'(0), f''(0), f^{(3)}(0), f^{(4)}(0)"></span> et <span class="katex-inline" data-katex="f^{(5)}(0)"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3 (6 points)</h3>
+                    <div class="exercise-content">
+                        <p>Résoudre les équations différentielles suivantes :</p>
+                        <p>1. <span class="katex-inline" data-katex="y'+2xy=e^{-2x^{2}}"></span> (2 pts)</p>
+                        <p>2. <span class="katex-inline" data-katex="y''-2y'+y=e^{x}+x^{2}"></span> (4 pts)</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <!-- Solution 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-display" data-katex="\int\frac{x^{2}}{\sqrt{x^{6}+1}}dx = \frac{1}{3}\text{arsinh}(x^{3})+C"></span></p>
+                        <p>2. <span class="katex-display" data-katex="\int\frac{e^{x}}{\sqrt{e^{x}+1}}dx = 2\sqrt{e^{x}+1}+C"></span></p>
+                        <p>3. <span class="katex-display" data-katex="\int x^{2}e^{x}dx = (x^{2}-2x+2)e^{x}+C"></span></p>
+                        <p>4. <span class="katex-display" data-katex="\int\frac{\cos x+\sin x}{\sin x-\cos x}\frac{dx}{\cos^{2}x} = \tan x+2\ln|\tan x-1|+C"></span></p>
+                        <p>5. <span class="katex-display" data-katex="\int\frac{x^{4}+2x^{3}+2x^{2}+2x+1}{(x-1)^{2}(x^{2}+1)^{2}}dx = -\frac{1}{x-1}+2\ln|x-1|+\arctan x+\frac{1}{x^{2}+1}+C"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>1. Le développement limité de f(x) à l'ordre 5 est : <br> <span class="katex-display" data-katex="f(x) = x - \frac{3}{2}x^2 + \frac{11}{6}x^3 - \frac{25}{12}x^4 + \frac{137}{60}x^5 + o(x^5)"></span></p>
+                        <p>2. L'équation de la tangente est <span class="katex-inline" data-katex="y=x"></span>. La courbe est en dessous de sa tangente au voisinage de 0.</p>
+                        <p>3. Les valeurs des dérivées en 0 sont : <br>
+                        <span class="katex-inline" data-katex="f(0)=0"></span>, <span class="katex-inline" data-katex="f'(0)=1"></span>, <span class="katex-inline" data-katex="f''(0)=-3"></span>, <span class="katex-inline" data-katex="f^{(3)}(0)=11"></span>, <span class="katex-inline" data-katex="f^{(4)}(0)=-50"></span>, <span class="katex-inline" data-katex="f^{(5)}(0)=274"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>1. La solution générale est <span class="katex-display" data-katex="y(x)=e^{-x^{2}}\left(\int e^{-x^{2}}dx+K\right)"></span>. (Note: l'intégrale n'est pas exprimable avec des fonctions élémentaires).</p>
+                        <p>2. La solution générale est <span class="katex-display" data-katex="y(x)=(c_{1}+c_{2}x+\frac{1}{2}x^{2})e^{x}+x^{2}+4x+6"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indices pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div>
+            <p>1. Pensez à un changement de variable <span class="katex-inline" data-katex="u=x^3"></span>.</p>
+            <p>2. Un changement de variable simple impliquant l'exponentielle devrait fonctionner.</p>
+            <p>3. Utilisez l'intégration par parties à deux reprises.</p>
+            <p>4. Le changement de variable <span class="katex-inline" data-katex="t = \tan x"></span> semble prometteur.</p>
+            <p>5. Il faut décomposer la fraction rationnelle en éléments simples. Remarquez que le numérateur est <span class="katex-inline" data-katex="(x^2+x+1)^2"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledge1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div>
+            <p><strong>Intégration par changement de variable :</strong> Si <span class="katex-inline" data-katex="x = g(t)"></span>, alors <span class="katex-inline" data-katex="\int f(x)dx = \int f(g(t))g'(t)dt"></span>.</p>
+            <p><strong>Intégration par parties :</strong> <span class="katex-inline" data-katex="\int u(x)v'(x)dx = u(x)v(x) - \int u'(x)v(x)dx"></span>.</p>
+            <p><strong>Décomposition en éléments simples :</strong> Technique pour intégrer des fractions rationnelles.</p>
+            <p><strong>Primitives usuelles :</strong> Connaissance des primitives des fonctions de base (polynômes, exponentielles, fonctions trigonométriques et hyperboliques inverses).</p>
+        </div>
+    </div>
+    <div id="explanation1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div>
+            <h4>1. Calcul de <span class="katex-inline" data-katex="\int\frac{x^{2}}{\sqrt{x^{6}+1}}dx"></span></h4>
+            <p>On pose <span class="katex-inline" data-katex="u=x^3"></span>, ce qui donne <span class="katex-inline" data-katex="du=3x^2 dx"></span>, donc <span class="katex-inline" data-katex="x^2 dx = \frac{1}{3}du"></span>. L'intégrale devient : <span class="katex-display" data-katex="\frac{1}{3}\int\frac{du}{\sqrt{u^2+1}}"></span> C'est une primitive usuelle : <span class="katex-inline" data-katex="\frac{1}{3}\text{arsinh}(u)+C"></span>. En revenant à la variable x, on obtient <span class="katex-inline" data-katex="\frac{1}{3}\text{arsinh}(x^3)+C"></span>.</p>
+            
+            <h4>2. Calcul de <span class="katex-inline" data-katex="\int\frac{e^{x}}{\sqrt{e^{x}+1}}dx"></span></h4>
+            <p>On pose <span class="katex-inline" data-katex="u=e^x+1"></span>, donc <span class="katex-inline" data-katex="du=e^x dx"></span>. L'intégrale se transforme en : <span class="katex-display" data-katex="\int\frac{du}{\sqrt{u}} = \int u^{-1/2}du = 2u^{1/2}+C"></span> En substituant u, on trouve <span class="katex-inline" data-katex="2\sqrt{e^x+1}+C"></span>.</p>
+
+            <h4>3. Calcul de <span class="katex-inline" data-katex="\int x^{2}e^{x}dx"></span></h4>
+            <p>On utilise l'intégration par parties (<span class="katex-inline" data-katex="\int u dv = uv - \int v du"></span>).<br>
+            Première IPP : Posons <span class="katex-inline" data-katex="u=x^2"></span> et <span class="katex-inline" data-katex="dv=e^x dx"></span>. Alors <span class="katex-inline" data-katex="du=2x dx"></span> et <span class="katex-inline" data-katex="v=e^x"></span>.<br>
+            <span class="katex-inline" data-katex="\int x^2e^x dx = x^2e^x - \int 2xe^x dx"></span>.<br>
+            Deuxième IPP pour <span class="katex-inline" data-katex="\int 2xe^x dx"></span> : Posons <span class="katex-inline" data-katex="u=2x"></span> et <span class="katex-inline" data-katex="dv=e^x dx"></span>. Alors <span class="katex-inline" data-katex="du=2 dx"></span> et <span class="katex-inline" data-katex="v=e^x"></span>.<br>
+            <span class="katex-inline" data-katex="\int 2xe^x dx = 2xe^x - \int 2e^x dx = 2xe^x - 2e^x"></span>.<br>
+            En combinant les résultats : <span class="katex-inline" data-katex="x^2e^x - (2xe^x - 2e^x) + C = (x^2-2x+2)e^x+C"></span>.</p>
+
+            <h4>4. Calcul de <span class="katex-inline" data-katex="\int\frac{\cos x+\sin x}{\sin x-\cos x}\frac{dx}{\cos^{2}x}"></span></h4>
+            <p>On pose <span class="katex-inline" data-katex="t=\tan x"></span>, donc <span class="katex-inline" data-katex="dt = \frac{dx}{\cos^2 x}"></span>. On exprime l'intégrande en fonction de t : <br>
+            <span class="katex-display" data-katex="\frac{\cos x+\sin x}{\sin x-\cos x} = \frac{1+\frac{\sin x}{\cos x}}{\frac{\sin x}{\cos x}-1} = \frac{1+\tan x}{\tan x - 1} = \frac{1+t}{t-1}"></span>
+            L'intégrale devient <span class="katex-inline" data-katex="\int\frac{1+t}{t-1}dt"></span>. On réécrit la fraction : <span class="katex-inline" data-katex="\frac{t-1+2}{t-1} = 1 + \frac{2}{t-1}"></span>.<br>
+            L'intégrale est <span class="katex-inline" data-katex="\int(1+\frac{2}{t-1})dt = t+2\ln|t-1|+C"></span>. En revenant à x : <span class="katex-inline" data-katex="\tan x+2\ln|\tan x-1|+C"></span>.</p>
+
+            <h4>5. Calcul de <span class="katex-inline" data-katex="\int\frac{x^{4}+2x^{3}+2x^{2}+2x+1}{(x-1)^{2}(x^{2}+1)^{2}}dx"></span></h4>
+            <p>La décomposition en éléments simples de la fraction est : <span class="katex-display" data-katex="\frac{1}{(x-1)^{2}}+\frac{2}{x-1}+\frac{1}{x^{2}+1}-\frac{2x}{(x^{2}+1)^{2}}"></span>
+            On intègre terme à terme :<br>
+            <span class="katex-inline" data-katex="\int\frac{1}{(x-1)^2}dx = -\frac{1}{x-1}"></span><br>
+            <span class="katex-inline" data-katex="\int\frac{2}{x-1}dx = 2\ln|x-1|"></span><br>
+            <span class="katex-inline" data-katex="\int\frac{1}{x^2+1}dx = \arctan x"></span><br>
+            <span class="katex-inline" data-katex="\int-\frac{2x}{(x^2+1)^2}dx = \frac{1}{x^2+1}"></span> (avec le changement <span class="katex-inline" data-katex="u=x^2+1"></span>).<br>
+            La solution finale est la somme de ces termes plus une constante C.</p>
+        </div>
+    </div>
+
+    <div id="hint2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indices pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div>
+            <p>1. Rappelez-vous les développements limités usuels de <span class="katex-inline" data-katex="\ln(1+x)"></span> et <span class="katex-inline" data-katex="\frac{1}{1+x}"></span>. Multipliez-les ensuite.</p>
+            <p>2. L'équation de la tangente est donnée par le DL à l'ordre 1. Le signe du terme suivant dans le DL donne la position de la courbe par rapport à la tangente.</p>
+            <p>3. Utilisez la formule de Taylor-Young : <span class="katex-inline" data-katex="f(x) = \sum_{k=0}^n \frac{f^{(k)}(0)}{k!}x^k + o(x^n)"></span> et identifiez les coefficients avec le DL trouvé.</p>
+        </div>
+    </div>
+    <div id="knowledge2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div>
+            <p><strong>Développements limités (DL) :</strong> Connaissance des DL usuels au voisinage de 0, notamment :<br>
+            <span class="katex-display" data-katex="\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \dots + (-1)^{n-1}\frac{x^n}{n} + o(x^n)"></span>
+            <span class="katex-display" data-katex="\frac{1}{1+x} = 1 - x + x^2 - \dots + (-1)^n x^n + o(x^n)"></span></p>
+            <p><strong>Opérations sur les DL :</strong> Savoir multiplier des développements limités.</p>
+            <p><strong>Formule de Taylor-Young :</strong> Lien entre les coefficients d'un DL et les dérivées successives de la fonction en un point.</p>
+            <p><strong>Interprétation géométrique :</strong> Le DL à l'ordre 1 donne l'équation de la tangente. Le premier terme non nul suivant donne la position relative de la courbe.</p>
+        </div>
+    </div>
+     <div id="explanation2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div>
+            <h4>1. Calcul du DL à l'ordre 5</h4>
+            <p>On part des DL connus à l'ordre 5 :<br>
+            <span class="katex-inline" data-katex="\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} + o(x^5)"></span><br>
+            <span class="katex-inline" data-katex="\frac{1}{1+x} = 1 - x + x^2 - x^3 + x^4 - x^5 + o(x^5)"></span><br>
+            On multiplie ces deux polynômes, en ne gardant que les termes de degré inférieur ou égal à 5 :<br>
+            <span class="katex-inline" data-katex="f(x) = (x - \frac{x^2}{2} + \dots)(1 - x + \dots)"></span><br>
+            - Terme en <span class="katex-inline" data-katex="x^1"></span>: <span class="katex-inline" data-katex="x \cdot 1 = x"></span><br>
+            - Terme en <span class="katex-inline" data-katex="x^2"></span>: <span class="katex-inline" data-katex="x \cdot (-x) + (-\frac{x^2}{2}) \cdot 1 = -x^2 - \frac{1}{2}x^2 = -\frac{3}{2}x^2"></span><br>
+            - Terme en <span class="katex-inline" data-katex="x^3"></span>: <span class="katex-inline" data-katex="x \cdot x^2 + (-\frac{x^2}{2}) \cdot (-x) + (\frac{x^3}{3}) \cdot 1 = x^3 + \frac{1}{2}x^3 + \frac{1}{3}x^3 = \frac{11}{6}x^3"></span><br>
+            Et ainsi de suite pour les autres termes. Le résultat final est : <br>
+            <span class="katex-display" data-katex="f(x) = x - \frac{3}{2}x^2 + \frac{11}{6}x^3 - \frac{25}{12}x^4 + \frac{137}{60}x^5 + o(x^5)"></span></p>
+            
+            <h4>2. Tangente et Position</h4>
+            <p>Le DL à l'ordre 1 de f(x) est <span class="katex-inline" data-katex="f(x) = x + o(x)"></span>. L'équation de la tangente à la courbe au point <span class="katex-inline" data-katex="(0, f(0))"></span> est donc <span class="katex-inline" data-katex="y = f(0) + f'(0)x = 0 + 1 \cdot x = x"></span>.<br>
+            Pour étudier la position de la courbe par rapport à la tangente, on étudie le signe de <span class="katex-inline" data-katex="f(x) - y"></span> au voisinage de 0. <br>
+            <span class="katex-inline" data-katex="f(x) - y = (x - \frac{3}{2}x^2 + o(x^2)) - x = -\frac{3}{2}x^2 + o(x^2)"></span>. <br>
+            Au voisinage de 0, ce terme est du signe de <span class="katex-inline" data-katex="-\frac{3}{2}x^2"></span>, qui est toujours négatif (pour <span class="katex-inline" data-katex="x \neq 0"></span>). Donc, la courbe est en dessous de sa tangente.</p>
+
+            <h4>3. Valeurs des dérivées</h4>
+            <p>On identifie les coefficients du DL trouvé avec la formule de Taylor-Young : <span class="katex-inline" data-katex="f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \dots"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f(0)}{0!} = 0 \Rightarrow f(0)=0"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f'(0)}{1!} = 1 \Rightarrow f'(0)=1"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f''(0)}{2!} = -\frac{3}{2} \Rightarrow f''(0) = -3"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f^{(3)}(0)}{3!} = \frac{11}{6} \Rightarrow f^{(3)}(0) = 11"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f^{(4)}(0)}{4!} = -\frac{25}{12} \Rightarrow f^{(4)}(0) = -50"></span><br>
+            - <span class="katex-inline" data-katex="\frac{f^{(5)}(0)}{5!} = \frac{137}{60} \Rightarrow f^{(5)}(0) = 274"></span></p>
+        </div>
+    </div>
+
+    <div id="hint3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Indices pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div>
+            <p>1. C'est une équation linéaire du premier ordre. Résolvez d'abord l'équation homogène <span class="katex-inline" data-katex="y'+2xy=0"></span>, puis utilisez la méthode de la variation de la constante.</p>
+            <p>2. C'est une équation linéaire du second ordre à coefficients constants. Résolvez l'équation caractéristique pour la solution homogène. Pour la solution particulière, utilisez le principe de superposition : cherchez une solution pour <span class="katex-inline" data-katex="e^x"></span> et une autre pour <span class="katex-inline" data-katex="x^2"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledge3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div>
+            <p><strong>Équations différentielles linéaires du 1er ordre :</strong> <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>. La solution est la somme de la solution de l'équation homogène et d'une solution particulière. Méthode de la variation de la constante.</p>
+            <p><strong>Équations différentielles linéaires du 2nd ordre à coefficients constants :</strong> <span class="katex-inline" data-katex="ay''+by'+cy=f(x)"></span>.
+            <br>1. Résoudre l'équation caractéristique <span class="katex-inline" data-katex="ar^2+br+c=0"></span> pour trouver la solution homogène <span class="katex-inline" data-katex="y_h"></span>.
+            <br>2. Trouver une solution particulière <span class="katex-inline" data-katex="y_p"></span> (la forme dépend de f(x)).
+            <br>3. La solution générale est <span class="katex-inline" data-katex="y = y_h + y_p"></span>.</p>
+            <p><strong>Principe de superposition :</strong> Si <span class="katex-inline" data-katex="f(x) = f_1(x) + f_2(x)"></span>, on peut chercher des solutions particulières pour <span class="katex-inline" data-katex="f_1"></span> et <span class="katex-inline" data-katex="f_2"></span> séparément et les additionner.</p>
+        </div>
+    </div>
+     <div id="explanation3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div>
+            <h4>1. Résolution de <span class="katex-inline" data-katex="y'+2xy=e^{-2x^{2}}"></span></h4>
+            <p><strong>Étape 1 : Équation homogène.</strong> <br>
+            <span class="katex-inline" data-katex="y'+2xy=0 \Rightarrow \frac{dy}{y} = -2x dx"></span>. En intégrant, <span class="katex-inline" data-katex="\ln|y| = -x^2 + K_1"></span>, donc la solution homogène est <span class="katex-inline" data-katex="y_h(x) = K e^{-x^2}"></span>.<br>
+            <strong>Étape 2 : Variation de la constante.</strong> <br>
+            On cherche une solution de la forme <span class="katex-inline" data-katex="y(x) = K(x)e^{-x^2}"></span>. On dérive : <span class="katex-inline" data-katex="y' = K'(x)e^{-x^2} - 2xK(x)e^{-x^2}"></span>.
+            On remplace dans l'équation de départ : <br>
+            <span class="katex-inline" data-katex="(K'(x)e^{-x^2} - 2xK(x)e^{-x^2}) + 2x(K(x)e^{-x^2}) = e^{-2x^2}"></span>.<br>
+            Cela se simplifie en <span class="katex-inline" data-katex="K'(x)e^{-x^2} = e^{-2x^2} \Rightarrow K'(x) = e^{-x^2}"></span>.<br>
+            Donc <span class="katex-inline" data-katex="K(x) = \int e^{-x^2}dx + C"></span>. Cette intégrale (fonction d'erreur) ne peut pas être exprimée avec des fonctions usuelles.<br>
+            <strong>Étape 3 : Solution générale.</strong> <br>
+            <span class="katex-display" data-katex="y(x) = \left(\int e^{-x^2}dx + C\right)e^{-x^2}"></span>.</p>
+
+            <h4>2. Résolution de <span class="katex-inline" data-katex="y''-2y'+y=e^{x}+x^{2}"></span></h4>
+            <p><strong>Étape 1 : Solution homogène.</strong> <br>
+            L'équation caractéristique est <span class="katex-inline" data-katex="r^2-2r+1=0"></span>, soit <span class="katex-inline" data-katex="(r-1)^2=0"></span>. On a une racine double <span class="katex-inline" data-katex="r=1"></span>.
+            La solution homogène est donc <span class="katex-inline" data-katex="y_h(x) = (c_1 + c_2 x)e^x"></span>.<br>
+            <strong>Étape 2 : Solution particulière (Superposition).</strong> <br>
+            - Pour le terme <span class="katex-inline" data-katex="e^x"></span> : Comme 1 est une racine double, on cherche <span class="katex-inline" data-katex="y_{p1} = Ax^2 e^x"></span>. En dérivant deux fois et en remplaçant dans <span class="katex-inline" data-katex="y''-2y'+y=e^x"></span>, on trouve <span class="katex-inline" data-katex="2Ae^x = e^x"></span>, donc <span class="katex-inline" data-katex="A=1/2"></span>. <span class="katex-inline" data-katex="y_{p1} = \frac{1}{2}x^2 e^x"></span>.<br>
+            - Pour le terme <span class="katex-inline" data-katex="x^2"></span> : On cherche <span class="katex-inline" data-katex="y_{p2} = ax^2+bx+c"></span>. En dérivant et remplaçant, on obtient <span class="katex-inline" data-katex="(2a) - 2(2ax+b) + (ax^2+bx+c) = x^2"></span>. Par identification des coefficients : <span class="katex-inline" data-katex="a=1"></span>, <span class="katex-inline" data-katex="b=4"></span>, <span class="katex-inline" data-katex="c=6"></span>. Donc <span class="katex-inline" data-katex="y_{p2} = x^2+4x+6"></span>.<br>
+            La solution particulière est <span class="katex-inline" data-katex="y_p = y_{p1} + y_{p2}"></span>.<br>
+            <strong>Étape 3 : Solution générale.</strong> <br>
+            <span class="katex-display" data-katex="y(x) = y_h + y_p = (c_1+c_2x+\frac{1}{2}x^2)e^x+x^2+4x+6"></span>.</p>
+        </div>
+    </div>
+
+    <script>
+        function renderKatex() {
+            document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                const content = el.getAttribute('data-katex');
+                const displayMode = el.classList.contains('katex-display');
+                try {
+                    katex.render(content, el, {
+                        throwOnError: false,
+                        displayMode: displayMode
+                    });
+                } catch (e) {
+                    console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                    el.textContent = `Erreur de rendu de la formule: ${content}`;
+                }
+            });
+        }
+        
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

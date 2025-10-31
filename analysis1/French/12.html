@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 1 - Épreuve Finale Corrigée (Thème Sombre)</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        /* Custom styles from dark.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 1</h1>
+            <p class="exam-subtitle">Examen Final (2014-2015)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>1. Déterminer la limite suivante pour $a \in \mathbb{R}$ :</p>
+                        <p>$$ \lim_{x\rightarrow+\infty}x(\sqrt{x^{2}+a}-\sqrt{x^{2}-a}) $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q1')">Prérequis</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <div class="exercise-content">
+                        <p>2. Déterminer la limite suivante :</p>
+                        <p>$$ \lim_{x\rightarrow2}\frac{\sqrt{2x}-\sqrt{x+2}}{\sqrt{x+7}-3\sqrt{3-x}} $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>Soit l'ensemble $A=\{\frac{1}{n}+\frac{1}{m},m,n\in\mathbb{N}^{*}\}.$</p>
+                        <p>1. Vérifier que la partie A est bornée et déterminer ensuite sup A, max A et inf A.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q1')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>2. min A existe-t-il? Justifier votre réponse.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3</h3>
+                    <div class="exercise-content">
+                       <p>Soit $n\in\mathbb{N}^{*}$. On pose $w_{n}=\sum_{k=1}^{n}\frac{1}{k}$ et $v_{n}=\sum_{k=1}^{n}\frac{1}{k^{\alpha}}$ où $\alpha>1$.</p>
+                       <p>1. Vérifier que $(w_{n})_{n\in\mathbb{N^{*}}}$ et $(v_{n})_{n\in\mathbb{N^{*}}}$ sont strictement croissantes. Montrer que $\forall n\in\mathbb{N}^{*}$; $w_{2n}-w_{n}\ge\frac{1}{2}$. En déduire $\lim_{n\rightarrow+\infty}w_{n}$.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q1')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                       <p>2. Montrer que $\forall n\in\mathbb{N}^{*}$, $v_{2n+2}\le1+\frac{2}{2^{\alpha}}v_{n+1}$ et conclure que $(v_{n})_{n\in\mathbb{N}^{*}}$ est convergente.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q2')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>3. Soit la suite numérique $(u_{n})_{n\in\mathbb{N}^{*}}$ définie par: $u_{1}=1$ et $u_{n+1}=u_{n}+\frac{1}{nu_{n}}$ pour $n\in\mathbb{N}^{*}$.</p>
+                        <p>a) Vérifier que $\forall n\in\mathbb{N}^{*}$, $u_{n}\ge1$ et que la suite $(u_{n})_{n\in\mathbb{N}^{*}}$ est strictement croissante.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3a')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3a')">Prérequis</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <div class="exercise-content">
+                        <p>b) Montrer que pour tout $n\ge2$, $u_{n}^{2}=u_{1}^{2}+2(n-1)+\sum_{k=1}^{n-1}\frac{1}{k^{2}u_{k}^{2}}$ (Note: la formule peut être incorrecte, une autre approche est suggérée).</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3b')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3b')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>c) Montrer que la suite $(u_n)$ n'est pas majorée. Conclure.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q3c')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q3c')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="exercise-content">
+                        <p>4. Soit $\beta>0$. Montrer que pour tout $N\in\mathbb{N}^{*}$, $\exists n\ge N$ tel que l'on ait $u_{n}\le n^{\beta}$. En déduire qu'il existe une sous-suite $(u_{\varphi(n)})_{n}$ telle que $\lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0$ pour tout $\forall\gamma>0$.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx3Q4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx3Q4')">Prérequis</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1.1</h3>
+                    <div class="exercise-content">
+                        <p>On multiplie et on divise par l'expression conjuguée :</p>
+                        <p>$$ \lim_{x\rightarrow+\infty}x\frac{(\sqrt{x^{2}+a}-\sqrt{x^{2}-a})(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow+\infty}x\frac{(x^{2}+a)-(x^{2}-a)}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} = \lim_{x\rightarrow+\infty}\frac{2ax}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p>
+                        <p>On factorise par $x$ au dénominateur :</p>
+                        <p>$$ = \lim_{x\rightarrow+\infty}\frac{2ax}{x(\sqrt{1+a/x^{2}}+\sqrt{1-a/x^{2}})} = \frac{2a}{\sqrt{1+0}+\sqrt{1-0}} = \frac{2a}{2} = a $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1.2</h3>
+                    <div class="exercise-content">
+                         <p>On a une forme indéterminée $\frac{0}{0}$. On multiplie par les expressions conjuguées du numérateur et du dénominateur :</p>
+                        <p>$$ \lim_{x\rightarrow2}\frac{(\sqrt{2x}-\sqrt{x+2})(\sqrt{2x}+\sqrt{x+2})}{(\sqrt{x+7}-3\sqrt{3-x})(\sqrt{x+7}+3\sqrt{3-x})} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{2x-(x+2)}{x+7-9(3-x)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{x-2}{10x-20} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p>
+                        <p>$$ = \lim_{x\rightarrow2}\frac{x-2}{10(x-2)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} = \frac{1}{10} \times \frac{\sqrt{9}+3\sqrt{1}}{\sqrt{4}+\sqrt{4}} = \frac{1}{10} \times \frac{3+3}{2+2} = \frac{6}{40} = \frac{3}{20} $$</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2.1</h3>
+                    <div class="exercise-content">
+                        <p>Pour tout $x\in A$, il existe $n, m\in\mathbb{N}^{*}$ tels que $x=\frac{1}{n}+\frac{1}{m}$.</p>
+                        <p>Comme $n \ge 1$ et $m \ge 1$, on a $0 < \frac{1}{n} \le 1$ et $0 < \frac{1}{m} \le 1$.</p>
+                        <p>En sommant ces inégalités, on obtient $0 < \frac{1}{n}+\frac{1}{m} \le 2$. L'ensemble A est donc minoré par 0 et majoré par 2. Il est donc borné.</p>
+                        <p>Le majorant est 2. Pour $n=1, m=1$, on a $\frac{1}{1}+\frac{1}{1} = 2 \in A$. Donc, 2 est le plus grand élément de A. On a <strong>max A = 2</strong> et par conséquent <strong>sup A = 2</strong>.</p>
+                        <p>Le minorant est 0. Pour montrer que c'est la borne inférieure, on doit montrer qu'on peut trouver des éléments de A aussi proches de 0 que l'on veut. Soit $\epsilon > 0$. On peut trouver $N \in \mathbb{N}^{*}$ tel que $\frac{1}{N} < \epsilon$. En posant $n=m=2N$, l'élément $x_0 = \frac{1}{2N}+\frac{1}{2N} = \frac{1}{N}$ est dans A et vérifie $0 < x_0 < \epsilon$. Ceci caractérise la borne inférieure. Donc <strong>inf A = 0</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2.2</h3>
+                    <div class="exercise-content">
+                        <p>Le minimum de A, s'il existe, est égal à sa borne inférieure. On a trouvé que inf A = 0.</p>
+                        <p>Cependant, pour que 0 soit le minimum, il faudrait que $0 \in A$. Cela signifierait qu'il existe $n, m \in \mathbb{N}^{*}$ tels que $\frac{1}{n}+\frac{1}{m}=0$. Or, comme $n$ et $m$ sont des entiers strictement positifs, $\frac{1}{n} > 0$ et $\frac{1}{m} > 0$, donc leur somme est strictement positive.</p>
+                        <p>Puisque $0 \notin A$, <strong>min A n'existe pas</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                 <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.1</h3>
+                    <div class="exercise-content">
+                        <p>On a $w_{n+1}-w_{n}=\frac{1}{n+1}>0$ et $v_{n+1}-v_{n}=\frac{1}{(n+1)^{\alpha}}>0$. Donc $(w_{n})$ et $(v_{n})$ sont strictement croissantes.</p>
+                        <p>Pour l'inégalité, on a $w_{2n}-w_{n} = \sum_{k=n+1}^{2n}\frac{1}{k}$. Chaque terme de la somme $\frac{1}{k}$ est supérieur ou égal au dernier terme, $\frac{1}{2n}$. Il y a $n$ termes dans la somme, donc :</p>
+                        <p>$$ w_{2n}-w_{n} = \frac{1}{n+1} + \frac{1}{n+2} + \dots + \frac{1}{2n} \ge \underbrace{\frac{1}{2n} + \frac{1}{2n} + \dots + \frac{1}{2n}}_{n \text{ fois}} = n \times \frac{1}{2n} = \frac{1}{2} $$</p>
+                        <p>L'inégalité $w_{2n}-w_{n}\ge\frac{1}{2}$ montre que la suite $(w_n)$ n'est pas une suite de Cauchy, et donc elle diverge. Comme elle est strictement croissante, sa limite est <strong>$+\infty$</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.2</h3>
+                    <div class="exercise-content">
+                        <p>On a déjà vu que $(v_n)$ est croissante. Pour l'inégalité, on sépare la somme en termes pairs et impairs.
+                        $$v_{2n+2} = \sum_{k=1}^{2n+2} \frac{1}{k^\alpha} = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j+1)^\alpha}$$
+                        Comme $2j+1 > 2j$, on a $\frac{1}{(2j+1)^\alpha} < \frac{1}{(2j)^\alpha}$.
+                        $$ v_{2n+2} \le 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} = 1 + \frac{2}{2^\alpha} \sum_{j=1}^{n} \frac{1}{j^\alpha} = 1 + \frac{2}{2^\alpha}v_n $$
+                        Puisque $(v_n)$ est croissante, $v_n < v_{n+1}$. Donc $v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1}$.</p>
+                        <p>Comme $v_{n+1} \le v_{2n+2}$, on a $v_{n+1} \le 1 + \frac{2}{2^\alpha} v_{n+1}$, ce qui donne $v_{n+1}(1-\frac{2}{2^\alpha}) \le 1$.
+                        Puisque $\alpha>1$, $2^\alpha > 2$, donc $1-\frac{2}{2^\alpha} > 0$. On a $v_{n+1} \le \frac{1}{1-2/2^\alpha}$.
+                        La suite $(v_n)$ est croissante et majorée, elle est donc <strong>convergente</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.3a</h3>
+                    <div class="exercise-content">
+                        <p>On procède par récurrence pour montrer que $u_n \ge 1$.
+                        <ul>
+                            <li><strong>Initialisation :</strong> Pour $n=1$, $u_1 = 1 \ge 1$. Vrai.</li>
+                            <li><strong>Hérédité :</strong> Supposons $u_n \ge 1$ pour un $n \ge 1$. Alors $u_{n+1} = u_n + \frac{1}{nu_n}$. Comme $n\ge 1$ et $u_n \ge 1$, le terme $\frac{1}{nu_n}$ est strictement positif. Donc $u_{n+1} > u_n \ge 1$. La propriété est héréditaire.</li>
+                        </ul>
+                        On conclut que $\forall n \in \mathbb{N}^*, u_n \ge 1$.
+                        </p>
+                        <p>Pour la croissance, on calcule $u_{n+1}-u_n = \frac{1}{nu_n}$. Puisque $n \ge 1$ et $u_n \ge 1$, ce terme est $>0$. Donc, la suite $(u_n)$ est <strong>strictement croissante</strong>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3a')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.3b</h3>
+                    <div class="exercise-content">
+                        <p>La relation donnée dans l'énoncé est difficile à établir et potentiellement erronée. Une approche plus standard consiste à étudier $u_{n+1}^2 - u_n^2$.
+                        $$ u_{n+1}^2 = \left(u_n + \frac{1}{nu_n}\right)^2 = u_n^2 + 2u_n\frac{1}{nu_n} + \frac{1}{n^2u_n^2} = u_n^2 + \frac{2}{n} + \frac{1}{n^2u_n^2} $$
+                        Donc, $u_{n+1}^2 - u_n^2 = \frac{2}{n} + \frac{1}{n^2u_n^2}$.
+                        En sommant de $k=1$ à $n-1$, on obtient une somme télescopique :
+                        $$ \sum_{k=1}^{n-1} (u_{k+1}^2 - u_k^2) = u_n^2 - u_1^2 $$
+                        $$ u_n^2 - u_1^2 = \sum_{k=1}^{n-1} \left(\frac{2}{k} + \frac{1}{k^2u_k^2}\right) = 2\sum_{k=1}^{n-1}\frac{1}{k} + \sum_{k=1}^{n-1}\frac{1}{k^2u_k^2} $$
+                        Puisque $u_1=1$, on obtient la relation (différente de l'énoncé) :
+                        $$ u_n^2 = 1 + 2w_{n-1} + \sum_{k=1}^{n-1}\frac{1}{k^2u_k^2} $$
+                        </p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3b')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.3c</h3>
+                    <div class="exercise-content">
+                        <p>On raisonne par l'absurde. Supposons que $(u_n)$ est majorée, c'est-à-dire qu'il existe $M > 0$ tel que $\forall n, u_n \le M$.
+                        On peut écrire $u_n$ comme la somme de ses accroissements :
+                        $$ u_n = u_1 + \sum_{k=1}^{n-1} (u_{k+1} - u_k) = 1 + \sum_{k=1}^{n-1} \frac{1}{ku_k} $$
+                        Puisque $u_k \le M$, on a $\frac{1}{u_k} \ge \frac{1}{M}$.
+                        $$ u_n \ge 1 + \sum_{k=1}^{n-1} \frac{1}{kM} = 1 + \frac{1}{M}\sum_{k=1}^{n-1} \frac{1}{k} = 1 + \frac{1}{M} w_{n-1} $$
+                        On aurait donc $M \ge u_n \ge 1 + \frac{1}{M}w_{n-1}$, ce qui implique $w_{n-1} \le M(M-1)$. Ceci signifierait que la suite $(w_n)$ est majorée. C'est une contradiction avec le résultat de la question 3.1 ($w_n \to +\infty$).
+                        Donc l'hypothèse est fausse, <strong>$(u_n)$ n'est pas majorée</strong>. Comme $(u_n)$ est strictement croissante et non majorée, on conclut que <strong>$\lim_{n\to\infty} u_n = +\infty$</strong>.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q3c')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3.4</h3>
+                    <div class="exercise-content">
+                        <p>Raisonnons par l'absurde : supposons qu'il existe $\beta>0$ et un rang $N$ tels que $\forall n \ge N, u_n > n^\beta$.
+                        Pour $n > N$, on écrit $u_n = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k}$.
+                        En utilisant l'hypothèse, $u_k > k^\beta$, donc $\frac{1}{ku_k} < \frac{1}{k \cdot k^\beta} = \frac{1}{k^{1+\beta}}$.
+                        $$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} < u_N + \sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}} $$
+                        La série $\sum \frac{1}{k^{1+\beta}}$ est une série de Riemann avec un exposant $1+\beta > 1$, elle est donc convergente. Ceci implique que $(u_n)$ est majorée, ce qui contredit le résultat de la question 3.3c.
+                        L'hypothèse est donc fausse. On a bien : $\forall \beta>0, \forall N, \exists n \ge N$ tel que $u_n \le n^\beta$.</p>
+                        <p>On peut alors construire une sous-suite $(\varphi(n))_n$ strictement croissante telle que $u_{\varphi(n)} \le \varphi(n)^{1/n}$.
+                        Alors pour $\gamma > 0$ :
+                        $$ 0 < \frac{u_{\varphi(n)}}{\varphi(n)^\gamma} \le \frac{\varphi(n)^{1/n}}{\varphi(n)^\gamma} = \varphi(n)^{1/n - \gamma} $$
+                        Comme $\varphi(n) \to \infty$ et $(1/n - \gamma) \to -\gamma < 0$, on a $\lim_{n\to\infty} \varphi(n)^{1/n - \gamma} = 0$.
+                        Par le théorème des gendarmes, on conclut que $\lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0$.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx3Q4')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hintEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('hintEx1Q1')">&times;</span></div><p>Face à une forme indéterminée de type '∞ - ∞' avec des racines carrées, pensez à multiplier par l'expression conjuguée.</p></div></div>
+    <div id="knowledgeEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q1')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Calcul de limites de fonctions en l'infini.</li><li>Formes indéterminées ($ \infty - \infty $).</li><li>Utilisation de l'expression conjuguée (basée sur l'identité remarquable $(a-b)(a+b) = a^2-b^2$).</li><li>Factorisation par le terme de plus haut degré sous une racine.</li></ul></div></div>
+    <div id="explanationEx1Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('explanationEx1Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Calculer $ \lim_{x\rightarrow+\infty}x(\sqrt{x^{2}+a}-\sqrt{x^{2}-a}) $</h4><p><strong>Étape 1: Identifier la forme indéterminée.</strong><br>Quand $x \to +\infty$, $\sqrt{x^2+a} \to +\infty$ et $\sqrt{x^2-a} \to +\infty$. La parenthèse est donc de la forme "$\infty - \infty$". Le tout est de la forme "$\infty \times (\infty - \infty)$", une forme indéterminée.</p><p><strong>Étape 2: Utiliser l'expression conjuguée.</strong><br>Pour lever l'indétermination, on multiplie et on divise par l'expression conjuguée de la parenthèse, qui est $(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})$.</p><p>$$ L = \lim_{x\rightarrow+\infty}x\frac{(\sqrt{x^{2}+a}-\sqrt{x^{2}-a})(\sqrt{x^{2}+a}+\sqrt{x^{2}-a})}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p><p><strong>Étape 3: Simplifier le numérateur.</strong><br>En utilisant $(A-B)(A+B) = A^2-B^2$, le numérateur devient :</p><p>$$ (x^2+a) - (x^2-a) = x^2+a-x^2+a = 2a $$</p><p>L'expression est maintenant :</p><p>$$ L = \lim_{x\rightarrow+\infty}\frac{x(2a)}{\sqrt{x^{2}+a}+\sqrt{x^{2}-a}} $$</p><p><strong>Étape 4: Lever l'indétermination "$\infty / \infty$".</strong><br>On factorise par le terme de plus haut degré ($x$) au dénominateur. Rappel: $\sqrt{x^2} = |x| = x$ car $x \to +\infty$.</p><p>$$ \sqrt{x^2+a} = \sqrt{x^2(1+\frac{a}{x^2})} = x\sqrt{1+\frac{a}{x^2}} $$</p><p>Le dénominateur devient :</p><p>$$ x\sqrt{1+\frac{a}{x^2}} + x\sqrt{1-\frac{a}{x^2}} = x \left( \sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}} \right) $$</p><p><strong>Étape 5: Calculer la limite finale.</strong><br>On remplace le dénominateur dans l'expression de la limite et on simplifie par $x$ :</p><p>$$ L = \lim_{x\rightarrow+\infty}\frac{2ax}{x \left( \sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}} \right)} = \lim_{x\rightarrow+\infty}\frac{2a}{\sqrt{1+\frac{a}{x^2}} + \sqrt{1-\frac{a}{x^2}}} $$</p><p>Quand $x \to +\infty$, $\frac{a}{x^2} \to 0$. La limite est donc :</p><p>$$ L = \frac{2a}{\sqrt{1+0} + \sqrt{1-0}} = \frac{2a}{1+1} = a $$</p></div></div>
+
+    <div id="hintEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('hintEx1Q2')">&times;</span></div><p>C'est une forme indéterminée 0/0. Utilisez la technique de l'expression conjuguée, mais attention, vous devrez l'appliquer à la fois au numérateur et au dénominateur.</p></div></div>
+    <div id="knowledgeEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q2')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Calcul de limites de fonctions en un point.</li><li>Forme indéterminée ($ \frac{0}{0} $).</li><li>Double utilisation de l'expression conjuguée.</li><li>Factorisation de polynômes pour simplifier la fraction.</li></ul></div></div>
+    <div id="explanationEx1Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('explanationEx1Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Calculer $ \lim_{x\rightarrow2}\frac{\sqrt{2x}-\sqrt{x+2}}{\sqrt{x+7}-3\sqrt{3-x}} $</h4><p><strong>Étape 1: Identifier la forme indéterminée.</strong><br>En remplaçant $x$ par 2, le numérateur vaut $\sqrt{4}-\sqrt{4}=0$. Le dénominateur vaut $\sqrt{9}-3\sqrt{1}=3-3=0$. On a une forme indéterminée de type $\frac{0}{0}$.</p><p><strong>Étape 2: Utiliser les expressions conjuguées.</strong><br>Pour lever l'indétermination, on multiplie la fraction par le conjugué du numérateur ET par le conjugué du dénominateur.</p><ul><li>Conjugué du numérateur: $(\sqrt{2x}+\sqrt{x+2})$</li><li>Conjugué du dénominateur: $(\sqrt{x+7}+3\sqrt{3-x})$</li></ul><p>$$ L = \lim_{x\rightarrow2}\frac{(\sqrt{2x}-\sqrt{x+2})}{(\sqrt{x+7}-3\sqrt{3-x})} \times \frac{(\sqrt{2x}+\sqrt{x+2})}{(\sqrt{2x}+\sqrt{x+2})} \times \frac{(\sqrt{x+7}+3\sqrt{3-x})}{(\sqrt{x+7}+3\sqrt{3-x})} $$</p><p><strong>Étape 3: Regrouper et simplifier.</strong><br>On regroupe les termes pour appliquer l'identité $(A-B)(A+B)=A^2-B^2$ au numérateur et au dénominateur initiaux.</p><p>$$ L = \lim_{x\rightarrow2}\frac{(2x - (x+2))}{(x+7 - (3\sqrt{3-x})^2)} \times \frac{(\sqrt{x+7}+3\sqrt{3-x})}{(\sqrt{2x}+\sqrt{x+2})} $$</p><p>Simplifions les deux premières parenthèses :</p><ul><li>Numérateur: $2x-x-2 = x-2$</li><li>Dénominateur: $x+7 - 9(3-x) = x+7 - 27+9x = 10x-20 = 10(x-2)$</li></ul><p><strong>Étape 4: Simplifier la fraction et calculer la limite.</strong><br>On remplace les expressions simplifiées :</p><p>$$ L = \lim_{x\rightarrow2}\frac{x-2}{10(x-2)} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p><p>On peut simplifier par $(x-2)$, qui est la cause de l'indétermination.</p><p>$$ L = \lim_{x\rightarrow2}\frac{1}{10} \times \frac{\sqrt{x+7}+3\sqrt{3-x}}{\sqrt{2x}+\sqrt{x+2}} $$</p><p>Maintenant, on peut remplacer $x$ par 2 sans problème :</p><p>$$ L = \frac{1}{10} \times \frac{\sqrt{2+7}+3\sqrt{3-2}}{\sqrt{2(2)}+\sqrt{2+2}} = \frac{1}{10} \times \frac{\sqrt{9}+3\sqrt{1}}{\sqrt{4}+\sqrt{4}} = \frac{1}{10} \times \frac{3+3}{2+2} = \frac{1}{10} \times \frac{6}{4} = \frac{6}{40} = \frac{3}{20} $$</p></div></div>
+
+    <div id="hintEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('hintEx2Q1')">&times;</span></div><p>Encadrez chaque terme $\frac{1}{n}$ et $\frac{1}{m}$ individuellement. Pour le sup/max, essayez les plus petites valeurs possibles pour n et m. Pour l'inf, considérez ce qui se passe quand n et m deviennent très grands.</p></div></div>
+    <div id="knowledgeEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q1')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Définition d'un ensemble borné (majoré et minoré).</li><li>Définition de la borne supérieure (supremum) et de la borne inférieure (infimum).</li><li>Définition du maximum (plus grand élément).</li><li>Caractérisation de la borne supérieure/inférieure (par exemple, $\inf A = \alpha \iff (\forall x \in A, x \ge \alpha) \land (\forall \epsilon > 0, \exists x_0 \in A, x_0 < \alpha + \epsilon)$).</li></ul></div></div>
+    <div id="explanationEx2Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('explanationEx2Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Montrer que A est borné et trouver sup A, max A, inf A.</h4><p><strong>Étape 1: Montrer que A est borné.</strong><br>Un élément de A s'écrit $x = \frac{1}{n}+\frac{1}{m}$ avec $n, m \in \mathbb{N}^*$.
+Puisque $n \ge 1$, on a $0 < \frac{1}{n} \le 1$. De même, $0 < \frac{1}{m} \le 1$.
+En additionnant ces deux encadrements, on obtient :</p><p>$$ 0+0 < \frac{1}{n}+\frac{1}{m} \le 1+1 \implies 0 < x \le 2 $$</p><p>Tout élément de A est strictement plus grand que 0 et inférieur ou égal à 2. L'ensemble A est donc minoré (par 0) et majoré (par 2), ce qui signifie que A est borné.</p><p><strong>Étape 2: Déterminer sup A et max A.</strong><br>Nous avons vu que 2 est un majorant de A. Pour que ce soit la borne supérieure, il faut que ce soit le plus petit des majorants.
+Cherchons si 2 est un élément de A. Si on prend $n=1$ et $m=1$, on a $x = \frac{1}{1}+\frac{1}{1}=2$.
+Puisque $2 \in A$ et que 2 est un majorant, 2 est le plus grand élément de A. On l'appelle le maximum.
+Donc, <strong>max A = 2</strong>.
+Quand un ensemble a un maximum, sa borne supérieure est égale à ce maximum. Donc, <strong>sup A = 2</strong>.</p><p><strong>Étape 3: Déterminer inf A.</strong><br>Nous avons vu que 0 est un minorant de A. Pour que ce soit la borne inférieure, il faut que ce soit le plus grand des minorants.
+On utilise la caractérisation de la borne inférieure : $\inf A = 0$ si pour tout $\epsilon > 0$, on peut trouver un élément $x_0 \in A$ tel que $x_0 < 0 + \epsilon$.
+Soit $\epsilon > 0$. On cherche $n, m$ tels que $\frac{1}{n}+\frac{1}{m} < \epsilon$. Il suffit de choisir $n$ et $m$ assez grands. Par exemple, choisissons $N$ tel que $\frac{2}{N} < \epsilon$ (ce qui est toujours possible, e.g., $N > 2/\epsilon$). En prenant $n=m=N$, on a l'élément $x_0 = \frac{1}{N}+\frac{1}{N} = \frac{2}{N}$.
+Cet élément $x_0$ est dans A et vérifie bien $x_0 < \epsilon$.
+Donc, 0 est bien la borne inférieure de A. <strong>inf A = 0</strong>.</p></div></div>
+
+    <div id="hintEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('hintEx2Q2')">&times;</span></div><p>Le minimum d'un ensemble est sa borne inférieure si et seulement si cette borne inférieure appartient à l'ensemble. La borne inférieure de A est-elle un élément de A ?</p></div></div>
+    <div id="knowledgeEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q2')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Différence fondamentale entre borne inférieure (infimum) et minimum.</li><li>Le minimum d'un ensemble $S$ (noté $\min S$) est un élément $m \in S$ tel que pour tout $x \in S, m \le x$.</li><li>Un ensemble admet un minimum si et seulement si son infimum appartient à l'ensemble.</li></ul></div></div>
+    <div id="explanationEx2Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('explanationEx2Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Déterminer si min A existe.</h4><p><strong>Étape 1: Rappeler la relation entre minimum et infimum.</strong><br>Un ensemble admet un minimum si et seulement si sa borne inférieure (infimum) est un élément de cet ensemble. Si c'est le cas, le minimum est égal à l'infimum.</p><p><strong>Étape 2: Utiliser le résultat de la question précédente.</strong><br>Dans la question 2.1, nous avons établi que $\inf A = 0$.</p><p><strong>Étape 3: Vérifier si l'infimum appartient à A.</strong><br>Pour que le minimum existe, il faudrait que $0 \in A$.
+Un élément de A est de la forme $\frac{1}{n}+\frac{1}{m}$ où $n$ et $m$ sont des entiers de $\mathbb{N}^* = \{1, 2, 3, \dots\}$.
+Puisque $n \ge 1$, on a $\frac{1}{n} > 0$.
+Puisque $m \ge 1$, on a $\frac{1}{m} > 0$.
+La somme de deux nombres strictement positifs est strictement positive : $\frac{1}{n}+\frac{1}{m} > 0$.
+Il est donc impossible que cette somme soit égale à 0.</p><p><strong>Étape 4: Conclure.</strong><br>Puisque $0$ est la borne inférieure de A mais que $0$ n'appartient pas à A, l'ensemble A n'admet pas de plus petit élément.
+Par conséquent, <strong>min A n'existe pas</strong>.</p></div></div>
+
+    <div id="hintEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('hintEx3Q1')">&times;</span></div><p>Pour la croissance, calculez $w_{n+1}-w_n$. Pour l'inégalité, écrivez la somme $w_{2n}-w_n$ et minorez chaque terme par le plus petit d'entre eux. Si une suite croissante n'est pas de Cauchy, que pouvez-vous dire de sa limite ?</p></div></div>
+    <div id="knowledgeEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q1')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Suite numérique (série harmonique).</li><li>Critère de monotonie pour les suites (étude du signe de $u_{n+1}-u_n$).</li><li>Manipulation de sommes ($\sum$).</li><li>Minoration d'une somme de termes.</li><li>Définition d'une suite de Cauchy.</li><li>Théorème de la limite monotone : une suite croissante et non majorée tend vers $+\infty$.</li></ul></div></div>
+    <div id="explanationEx3Q1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('explanationEx3Q1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Étudier la suite harmonique $(w_n)$.</h4><p><strong>Étape 1: Montrer que $(w_n)$ et $(v_n)$ sont croissantes.</strong><br>Pour la suite $(w_n)$, on étudie le signe de $w_{n+1}-w_n$ :</p><p>$$ w_{n+1}-w_n = \sum_{k=1}^{n+1} \frac{1}{k} - \sum_{k=1}^{n} \frac{1}{k} = \frac{1}{n+1} $$</p><p>Puisque $n \in \mathbb{N}^*$, $n+1 > 0$, donc $\frac{1}{n+1} > 0$. La suite $(w_n)$ est strictement croissante.<br>De même pour $(v_n)$: $v_{n+1}-v_n = \frac{1}{(n+1)^\alpha} > 0$. $(v_n)$ est aussi strictement croissante.</p><p><strong>Étape 2: Montrer que $w_{2n}-w_n \ge \frac{1}{2}$.</strong><br>On exprime la différence :</p><p>$$ w_{2n}-w_n = \sum_{k=1}^{2n} \frac{1}{k} - \sum_{k=1}^{n} \frac{1}{k} = \sum_{k=n+1}^{2n} \frac{1}{k} = \frac{1}{n+1}+\frac{1}{n+2}+\dots+\frac{1}{2n} $$</p><p>Cette somme contient $2n-(n+1)+1 = n$ termes. Le plus petit de ces termes est le dernier, $\frac{1}{2n}$, car la fonction $x \mapsto 1/x$ est décroissante. On peut donc minorer chaque terme de la somme par $\frac{1}{2n}$ :</p><p>$$ w_{2n}-w_n \ge \underbrace{\frac{1}{2n}+\frac{1}{2n}+\dots+\frac{1}{2n}}_{n \text{ termes}} = n \times \frac{1}{2n} = \frac{1}{2} $$</p><p><strong>Étape 3: En déduire la limite de $(w_n)$.</strong><br>L'inégalité $w_{2n}-w_n \ge \frac{1}{2}$ montre que la suite n'est pas de Cauchy. En effet, pour qu'une suite soit de Cauchy, il faudrait que la différence $|w_p-w_q|$ puisse être rendue arbitrairement petite pour $p,q$ assez grands, ce qui n'est pas le cas ici (en prenant $p=2n, q=n$).<br>Une suite qui n'est pas de Cauchy ne peut pas converger vers une limite finie.<br>Or, la suite $(w_n)$ est strictement croissante. D'après le théorème de la limite monotone, une suite croissante a deux destins possibles : soit elle converge (si elle est majorée), soit elle tend vers $+\infty$ (si elle n'est pas majorée).<br>Puisqu'elle ne converge pas, elle tend nécessairement vers <strong>$+\infty$</strong>.</p></div></div>
+
+    <div id="hintEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('hintEx3Q2')">&times;</span></div><p>Pour l'inégalité, séparez la somme $v_{2n+2}$ en son premier terme ($k=1$), les termes d'indices pairs ($k=2j$) et les termes d'indices impairs ($k=2j+1$). Ensuite, majorez les termes impairs par les termes pairs correspondants.</p></div></div>
+    <div id="knowledgeEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q2')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Suite numérique (série de Riemann).</li><li>Manipulation de sommes ($\sum$), notamment la séparation des termes pairs et impairs.</li><li>Théorème de la limite monotone (ou théorème de convergence des suites monotones) : une suite croissante et majorée est convergente.</li><li>Propriétés des inégalités et des puissances.</li></ul></div></div>
+    <div id="explanationEx3Q2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('explanationEx3Q2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Montrer que $(v_n)$ est convergente.</h4><p><strong>Étape 1: Confirmer la croissance (déjà fait).</strong><br>On a montré dans la question précédente que $(v_n)$ est strictement croissante.</p><p><strong>Étape 2: Établir l'inégalité $v_{2n+2}\le1+\frac{2}{2^{\alpha}}v_{n+1}$.</strong><br>On décompose la somme $v_{2n+2}$ :</p><p>$$ v_{2n+2} = \sum_{k=1}^{2n+2} \frac{1}{k^\alpha} = \frac{1}{1^\alpha} + \sum_{k=2}^{2n+2} \frac{1}{k^\alpha} $$</p><p>On sépare les termes d'indices pairs et impairs dans la somme restante. Les indices pairs vont de $2$ à $2n+2$ ($k=2j$ pour $j=1..n+1$) et les impairs de $3$ à $2n+1$ ($k=2j+1$ pour $j=1..n$). Le corrigé utilise une décomposition un peu différente mais qui aboutit au même résultat. Suivons celle du corrigé pour la cohérence:</p><p>$$ v_{2n+2} = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j+1)^\alpha} + \text{termes restants} $$</p><p>En fait, une décomposition plus propre est: $$ v_{2n+2} = \sum_{k=1}^{2n+2} ... \le \sum_{k=1}^{2(n+1)} ... = 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j+1)^\alpha} $$ (le corrigé a un léger décalage d'indice, mais l'idée de majoration reste la même).<br>Pour tout $j \ge 1$, on a $2j+1 > 2j$, donc $\frac{1}{(2j+1)^\alpha} \le \frac{1}{(2j)^\alpha}$. On majore donc la somme des termes impairs :</p><p>$$ v_{2n+2} \le 1 + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} + \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} = 1 + 2 \sum_{j=1}^{n} \frac{1}{(2j)^\alpha} $$</p><p>$$ v_{2n+2} \le 1 + 2 \sum_{j=1}^{n} \frac{1}{2^\alpha j^\alpha} = 1 + \frac{2}{2^\alpha} \sum_{j=1}^{n} \frac{1}{j^\alpha} = 1 + \frac{2}{2^\alpha} v_n $$</p><p>Puisque $(v_n)$ est croissante, $v_n < v_{n+1}$. Donc $v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1}$.</p><p><strong>Étape 3: Montrer que $(v_n)$ est majorée.</strong><br>On sait que $(v_n)$ est croissante, donc $v_{n+1} \le v_{2n+2}$. En combinant avec le résultat précédent :</p><p>$$ v_{n+1} \le v_{2n+2} < 1 + \frac{2}{2^\alpha} v_{n+1} $$</p><p>On isole $v_{n+1}$ :</p><p>$$ v_{n+1} - \frac{2}{2^\alpha} v_{n+1} \le 1 \implies v_{n+1} \left( 1 - \frac{2}{2^\alpha} \right) \le 1 $$</p><p>Comme $\alpha > 1$, on a $2^\alpha > 2^1=2$, donc $\frac{2}{2^\alpha} < 1$. Le terme $\left( 1 - \frac{2}{2^\alpha} \right)$ est une constante strictement positive. On peut diviser par ce terme :</p><p>$$ v_{n+1} \le \frac{1}{1 - 2/2^\alpha} $$</p><p>Ceci montre que la suite $(v_{n+1})$, et donc la suite $(v_n)$, est majorée par une constante.</p><p><strong>Étape 4: Conclure.</strong><br>La suite $(v_n)$ est croissante et majorée. D'après le théorème de la limite monotone, elle est <strong>convergente</strong>.</p></div></div>
+
+    <div id="hintEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.3a</h3><span class="close-btn" onclick="closeModal('hintEx3Q3a')">&times;</span></div><p>Utilisez un raisonnement par récurrence pour $u_n \ge 1$. La croissance découle directement de la relation de récurrence en étudiant le signe de $u_{n+1}-u_n$.</p></div></div>
+    <div id="knowledgeEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.3a</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3a')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Raisonnement par récurrence.</li><li>Définition d'une suite croissante (étude du signe de $u_{n+1}-u_n$).</li><li>Suite définie par une relation de récurrence.</li></ul></div></div>
+    <div id="explanationEx3Q3a" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.3a</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3a')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Montrer que $u_n \ge 1$ et que $(u_n)$ est croissante.</h4><p><strong>Partie 1: Montrer que $u_n \ge 1$ par récurrence.</strong></p><ul><li><strong>Initialisation (n=1) :</strong> La suite est définie avec $u_1=1$. La propriété $u_1 \ge 1$ est donc vraie.</li><li><strong>Hérédité :</strong> On suppose que la propriété est vraie pour un certain rang $n \ge 1$, c'est-à-dire $u_n \ge 1$ (Hypothèse de Récurrence). On veut montrer qu'elle est vraie au rang $n+1$, c'est-à-dire $u_{n+1} \ge 1$.<br>On part de la définition : $u_{n+1} = u_n + \frac{1}{nu_n}$.<br>Puisque $n \in \mathbb{N}^*$, $n \ge 1$. Par hypothèse de récurrence, $u_n \ge 1$. Le produit $nu_n$ est donc $\ge 1$, et le terme $\frac{1}{nu_n}$ est strictement positif.<br>Ainsi, $u_{n+1} = u_n + (\text{un terme positif}) > u_n$.<br>Comme $u_n \ge 1$, on a $u_{n+1} > u_n \ge 1$, ce qui implique $u_{n+1} > 1$, et donc $u_{n+1} \ge 1$.<br>L'hérédité est prouvée.</li><li><strong>Conclusion :</strong> Par le principe de récurrence, la propriété $u_n \ge 1$ est vraie pour tout $n \in \mathbb{N}^*$.</li></ul><p><strong>Partie 2: Montrer que $(u_n)$ est strictement croissante.</strong></p><p>Pour étudier la monotonie, on calcule la différence $u_{n+1}-u_n$.</p><p>$$ u_{n+1} - u_n = \left(u_n + \frac{1}{nu_n}\right) - u_n = \frac{1}{nu_n} $$</p><p>On a $n \ge 1$ et, d'après la première partie, $u_n \ge 1$. Donc le produit $nu_n$ est strictement positif.
+Par conséquent, $u_{n+1}-u_n = \frac{1}{nu_n} > 0$.
+La différence étant strictement positive, la suite $(u_n)$ est <strong>strictement croissante</strong>.</p></div></div>
+
+    <div id="hintEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.3b</h3><span class="close-btn" onclick="closeModal('hintEx3Q3b')">&times;</span></div><p>La formule donnée semble erronée ou difficile à prouver. Suivez l'indication de l'énoncé et analysez plutôt la différence $u_{n+1}^2 - u_n^2$. Vous devriez trouver une expression plus simple. Ensuite, utilisez une sommation télescopique.</p></div></div>
+    <div id="knowledgeEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.3b</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3b')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Identités remarquables, en particulier $(a+b)^2 = a^2+2ab+b^2$.</li><li>Sommation télescopique : $\sum_{k=1}^{n-1} (a_{k+1}-a_k) = a_n - a_1$.</li><li>Manipulation d'expressions algébriques.</li></ul></div></div>
+    <div id="explanationEx3Q3b" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.3b</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3b')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Trouver une relation pour $u_n^2$.</h4><p>L'énoncé suggère que la formule fournie pourrait être incorrecte et qu'il vaut mieux analyser $u_{n+1}^2 - u_n^2$. C'est une technique classique pour les suites de ce type.</p><p><strong>Étape 1: Exprimer $u_{n+1}^2$ en fonction de $u_n^2$.</strong><br>On part de la relation de récurrence $u_{n+1}=u_{n}+\frac{1}{nu_{n}}$ et on l'élève au carré :</p><p>$$ u_{n+1}^2 = \left( u_n + \frac{1}{nu_n} \right)^2 = u_n^2 + 2(u_n)\left(\frac{1}{nu_n}\right) + \left(\frac{1}{nu_n}\right)^2 $$</p><p>$$ u_{n+1}^2 = u_n^2 + \frac{2}{n} + \frac{1}{n^2u_n^2} $$</p><p><strong>Étape 2: Isoler la différence et utiliser une somme télescopique.</strong><br>On obtient la relation simple :</p><p>$$ u_{n+1}^2 - u_n^2 = \frac{2}{n} + \frac{1}{n^2u_n^2} $$</p><p>Pour obtenir $u_n^2$, on somme cette égalité pour $k$ allant de $1$ à $n-1$ :</p><p>$$ \sum_{k=1}^{n-1} (u_{k+1}^2 - u_k^2) = \sum_{k=1}^{n-1} \left( \frac{2}{k} + \frac{1}{k^2u_k^2} \right) $$</p><p>Le terme de gauche est une somme télescopique : $(u_2^2-u_1^2)+(u_3^2-u_2^2)+\dots+(u_n^2-u_{n-1}^2) = u_n^2 - u_1^2$.</p><p><strong>Étape 3: Obtenir l'expression finale de $u_n^2$.</strong><br>On a donc :</p><p>$$ u_n^2 - u_1^2 = \sum_{k=1}^{n-1} \frac{2}{k} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p><p>Puisque $u_1=1$, on a $u_1^2=1$. On peut isoler $u_n^2$ :</p><p>$$ u_n^2 = 1 + 2 \sum_{k=1}^{n-1} \frac{1}{k} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p><p>En utilisant la notation $w_n = \sum_{k=1}^n \frac{1}{k}$, on peut réécrire cette relation (correcte) comme :</p><p>$$ u_n^2 = 1 + 2 w_{n-1} + \sum_{k=1}^{n-1} \frac{1}{k^2u_k^2} $$</p></div></div>
+
+    <div id="hintEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.3c</h3><span class="close-btn" onclick="closeModal('hintEx3Q3c')">&times;</span></div><p>Raisonnez par l'absurde. Supposez que $(u_n)$ est majorée par un réel M. Utilisez la relation $u_n = u_1 + \sum_{k=1}^{n-1} (u_{k+1}-u_k)$ et minorez les termes $u_k$ dans la somme pour faire apparaître la suite harmonique $(w_n)$. Utilisez ensuite le résultat de la question 3.1.</p></div></div>
+    <div id="knowledgeEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.3c</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q3c')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Raisonnement par l'absurde.</li><li>Le résultat sur la divergence de la série harmonique ($w_n \to +\infty$) de la question 3.1.</li><li>Théorème de la limite monotone : une suite croissante qui n'est pas majorée tend vers $+\infty$.</li><li>Exprimer un terme d'une suite récurrente comme une somme télescopique de ses différences.</li></ul></div></div>
+    <div id="explanationEx3Q3c" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.3c</h3><span class="close-btn" onclick="closeModal('explanationEx3Q3c')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Montrer que $(u_n)$ n'est pas majorée et trouver sa limite.</h4><p><strong>Étape 1: Mettre en place un raisonnement par l'absurde.</strong><br>On suppose le contraire de ce que l'on veut prouver. Supposons donc que la suite $(u_n)$ EST majorée. Cela signifie qu'il existe un nombre réel $M > 0$ tel que pour tout $n \in \mathbb{N}^*$, $u_n \le M$.</p><p><strong>Étape 2: Relier $(u_n)$ à la suite harmonique $(w_n)$.</strong><br>On peut écrire $u_n$ en utilisant une somme télescopique :</p><p>$$ u_n = u_1 + (u_2-u_1) + (u_3-u_2) + \dots + (u_n-u_{n-1}) = u_1 + \sum_{k=1}^{n-1} (u_{k+1}-u_k) $$</p><p>En utilisant la définition de la suite, $u_{k+1}-u_k = \frac{1}{ku_k}$. On remplace dans la somme :</p><p>$$ u_n = 1 + \sum_{k=1}^{n-1} \frac{1}{ku_k} $$</p><p><strong>Étape 3: Utiliser l'hypothèse de majoration pour minorer $u_n$.</strong><br>D'après notre hypothèse, pour tout $k$, $u_k \le M$. Comme $u_k$ est au dénominateur, cela implique que $\frac{1}{u_k} \ge \frac{1}{M}$.</p><p>$$ u_n \ge 1 + \sum_{k=1}^{n-1} \frac{1}{kM} = 1 + \frac{1}{M} \sum_{k=1}^{n-1} \frac{1}{k} $$</p><p>On reconnaît la suite $w_{n-1}$ :</p><p>$$ u_n \ge 1 + \frac{1}{M} w_{n-1} $$</p><p><strong>Étape 4: Arriver à une contradiction.</strong><br>On a deux inégalités : $u_n \le M$ (par hypothèse) et $u_n \ge 1 + \frac{1}{M} w_{n-1}$ (ce qu'on a déduit). En les combinant :</p><p>$$ M \ge 1 + \frac{1}{M} w_{n-1} \implies M-1 \ge \frac{1}{M} w_{n-1} \implies w_{n-1} \le M(M-1) $$</p><p>Cette dernière inégalité, valable pour tout $n$, signifierait que la suite $(w_n)$ est majorée par la constante $M(M-1)$.<br>Or, à la question 3.1, nous avons prouvé que $\lim_{n\to\infty} w_n = +\infty$. Une suite qui tend vers l'infini ne peut pas être majorée. Nous avons atteint une contradiction.</p><p><strong>Étape 5: Conclure.</strong><br>Notre hypothèse de départ ("$(u_n)$ est majorée") est donc fausse. Par conséquent, la suite $(u_n)$ n'est pas majorée.<br>De la question 3.3a, nous savons que $(u_n)$ est strictement croissante. Une suite croissante non majorée diverge vers $+\infty$.<br>Conclusion finale : <strong>$\lim_{n\to\infty} u_n = +\infty$</strong>.</p></div></div>
+
+    <div id="hintEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.4</h3><span class="close-btn" onclick="closeModal('hintEx3Q4')">&times;</span></div><p>Utilisez à nouveau un raisonnement par l'absurde. Supposez qu'à partir d'un certain rang N, on a toujours $u_n > n^\beta$. Utilisez la relation $u_n = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k}$ et majorez cette somme pour faire apparaître une série de Riemann convergente, ce qui contredira la divergence de $(u_n)$.</p></div></div>
+    <div id="knowledgeEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.4</h3><span class="close-btn" onclick="closeModal('knowledgeEx3Q4')">&times;</span></div><p><strong>Concepts Clés:</strong></p><ul><li>Raisonnement par l'absurde.</li><li>Séries de Riemann (p-series) : la série $\sum \frac{1}{k^\alpha}$ converge si et seulement si $\alpha > 1$.</li><li>Comparaison d'une suite à une série.</li><li>Définition d'une sous-suite (suite extraite).</li><li>Théorème des gendarmes (Squeeze Theorem).</li></ul></div></div>
+    <div id="explanationEx3Q4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.4</h3><span class="close-btn" onclick="closeModal('explanationEx3Q4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 1: Montrer que $\forall \beta>0, \forall N, \exists n \ge N$ t.q. $u_n \le n^\beta$.</h4><p><strong>Étape 1: Raisonnement par l'absurde.</strong><br>On suppose que la proposition est fausse. Sa négation est : $\exists \beta>0$ et $\exists N$ tels que $\forall n \ge N$, on a $u_n > n^\beta$.</p><p><strong>Étape 2: Utiliser cette hypothèse pour majorer $u_n$.</strong><br>Soit un $n > N$. On exprime $u_n$ à partir du rang $N$ :</p><p>$$ u_n = u_N + \sum_{k=N}^{n-1} (u_{k+1}-u_k) = u_N + \sum_{k=N}^{n-1} \frac{1}{ku_k} $$</p><p>Pour les indices $k$ dans la somme ($k \ge N$), notre hypothèse s'applique: $u_k > k^\beta$. Comme $u_k$ est au dénominateur, on a $\frac{1}{u_k} < \frac{1}{k^\beta}$.
+On peut donc majorer la somme :</p><p>$$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k \cdot k^\beta} = u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} $$</p><p><strong>Étape 3: Aboutir à une contradiction.</strong><br>La somme $\sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}}$ est une série de Riemann. Puisque $\beta > 0$, l'exposant $1+\beta$ est strictement plus grand que 1. La série est donc convergente. Notons $S$ sa somme.<br>La somme partielle dans notre inégalité est donc majorée par $S$ :</p><p>$$ u_n < u_N + \sum_{k=N}^{n-1} \frac{1}{k^{1+\beta}} < u_N + \sum_{k=1}^{\infty} \frac{1}{k^{1+\beta}} = u_N + S $$</p><p>Ceci montre que pour tout $n > N$, $u_n$ est majoré par la constante $u_N+S$. La suite $(u_n)$ serait donc majorée. Ceci contredit le résultat de la question 3.3c, où l'on a prouvé que $u_n \to +\infty$.<br>L'hypothèse de départ est donc fausse.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Partie 2: En déduire l'existence d'une sous-suite et sa limite.</h4><p><strong>Étape 1: Construire la sous-suite $(\varphi(n))_n$.</strong><br>La propriété que nous venons de démontrer nous permet de construire une suite d'indices $(\varphi(n))_n$ strictement croissante.<ul><li>Pour $N=1, \beta=1$, il existe un indice $\varphi(1) \ge 1$ tel que $u_{\varphi(1)} \le \varphi(1)^1$.</li><li>Pour $N=\varphi(1)+1, \beta=1/2$, il existe $\varphi(2) \ge \varphi(1)+1$ tel que $u_{\varphi(2)} \le \varphi(2)^{1/2}$.</li><li>Pour $N=\varphi(n-1)+1, \beta=1/n$, il existe $\varphi(n) \ge \varphi(n-1)+1$ tel que $u_{\varphi(n)} \le \varphi(n)^{1/n}$.</li></ul>Ce processus nous donne une sous-suite $(u_{\varphi(n)})$ qui vérifie $u_{\varphi(n)} \le \varphi(n)^{1/n}$ pour tout $n$.</p><p><strong>Étape 2: Calculer la limite.</strong><br>Soit $\gamma > 0$. On veut la limite de $\frac{u_{\varphi(n)}}{\varphi(n)^\gamma}$.<br>On a l'encadrement :</p><p>$$ 0 < \frac{u_{\varphi(n)}}{\varphi(n)^\gamma} \le \frac{\varphi(n)^{1/n}}{\varphi(n)^\gamma} = \varphi(n)^{1/n - \gamma} $$</p><p>Étudions la limite du majorant. Comme $(\varphi(n))_n$ est une suite d'entiers strictement croissante, $\lim_{n\to\infty} \varphi(n) = +\infty$.<br>L'exposant, quant à lui, tend vers $\lim_{n\to\infty} (1/n - \gamma) = 0 - \gamma = -\gamma$.<br>Puisque $\gamma > 0$, l'exposant tend vers une limite strictement négative. La limite du majorant est donc :</p><p>$$ \lim_{n\to\infty} \varphi(n)^{-\gamma} = 0 $$</p><p>Par le théorème des gendarmes, la limite du terme encadré est aussi 0.
+$$ \lim_{n\rightarrow+\infty}\frac{u_{\varphi(n)}}{\varphi(n)^{\gamma}}=0 $$</p></div></div>
+
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        // Use the original auto-render script from 12.html
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

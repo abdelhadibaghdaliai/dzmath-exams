@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse: Épreuve de Moyenne Durée - Version Corrigée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles from 1.html for a polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: rgba(15, 23, 42, 0.7);
+            border: 1px solid #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse</h1>
+            <p class="exam-subtitle">Troisième Épreuve de Moyenne Durée (27 Mai 2008)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Soit l'intégrale <span class="katex-inline" data-id="ex1-int"></span>.</p>
+                        <p>a) Déterminer les points singuliers de l'intégrale I.</p>
+                        <p>b) Calculer la dérivée de la fonction <span class="katex-inline" data-id="ex1-func"></span> pour <span class="katex-inline" data-id="ex1-domain"></span>.</p>
+                        <p>c) Montrer que l'intégrale I est convergente.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2 (8 pts)</h3>
+                    <div class="exercise-content">
+                        <p>a) Calculer l'intégrale <span class="katex-inline" data-id="ex2-q1-int"></span>.</p>
+                        <p>b) Pour <span class="katex-inline" data-id="ex2-q2-domain"></span>, résoudre l'équation différentielle suivante: <span class="katex-display" data-id="ex2-q2-eq"></span></p>
+                        <p>c) En effectuant le changement <span class="katex-inline" data-id="ex2-q3-sub"></span>, résoudre l'équation différentielle: <span class="katex-display" data-id="ex2-q3-eq"></span></p>
+                        <p>d) Déterminer la solution <span class="katex-inline" data-id="ex2-q4-sol"></span> de l'équation différentielle (de la question c) satisfaisant aux conditions initiales <span class="katex-inline" data-id="ex2-q4-cond"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3 (5 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Soit <span class="katex-inline" data-id="ex3-func-map"></span> la fonction définie par <span class="katex-display" data-id="ex3-func-def"></span></p>
+                        <p>a) Étudier la continuité de f sur <span class="katex-inline" data-id="ex3-r2"></span>.</p>
+                        <p>b) Calculer <span class="katex-inline" data-id="ex3-dfdx"></span> et <span class="katex-inline" data-id="ex3-dfdy"></span> sur leurs domaines d'existence.</p>
+                        <p>c) Étudier la différentiabilité de f sur <span class="katex-inline" data-id="ex3-r2-0"></span>.</p>
+                        <p>d) f est-elle différentiable en (0,0)? Justifier.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <!-- Solution 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>a) Les points singuliers de l'intégrale sont les bornes de l'intervalle, <span class="katex-inline" data-id="sol1-sing1"></span> (à cause de <span class="katex-inline" data-id="sol1-lnx"></span> et <span class="katex-inline" data-id="sol1-sqrtx"></span>) et <span class="katex-inline" data-id="sol1-sing2"></span> (à cause de <span class="katex-inline" data-id="sol1-denom"></span> au dénominateur).</p>
+                        <p>b) Soit <span class="katex-inline" data-id="sol1-f"></span>. Sa dérivée est : <span class="katex-display" data-id="sol1-deriv"></span></p>
+                        <p>c) Pour montrer que l'intégrale I est convergente, on étudie le comportement de l'intégrande aux voisinages des points singuliers.</p>
+                        <p>• Au voisinage de <span class="katex-inline" data-id="sol1-vois0"></span>: <span class="katex-inline" data-id="sol1-equiv0"></span>. L'intégrale <span class="katex-inline" data-id="sol1-int-bert"></span> est une intégrale de Bertrand qui converge car l'exposant de x est <span class="katex-inline" data-id="sol1-exp0"></span>.</p>
+                        <p>• Au voisinage de <span class="katex-inline" data-id="sol1-vois1"></span>, on pose <span class="katex-inline" data-id="sol1-subst"></span>. Alors <span class="katex-inline" data-id="sol1-equiv1"></span>. L'intégrale <span class="katex-inline" data-id="sol1-int-riem"></span> est une intégrale de Riemann qui converge car l'exposant de t est <span class="katex-inline" data-id="sol1-exp1"></span>.</p>
+                        <p>Comme l'intégrale converge aux deux bornes, l'intégrale I est convergente.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>a) On pose <span class="katex-inline" data-id="sol2-p1-sub"></span>, donc <span class="katex-inline" data-id="sol2-p1-du"></span>. L'intégrale devient <span class="katex-display" data-id="sol2-p1-res"></span></p>
+                        <p>b) On résout <span class="katex-inline" data-id="sol2-p2-eq"></span>. L'équation homogène <span class="katex-inline" data-id="sol2-p2-homo"></span> a pour solution <span class="katex-inline" data-id="sol2-p2-homo-sol"></span>. Par la méthode de la variation de la constante, on pose <span class="katex-inline" data-id="sol2-p2-var-const"></span>. On obtient <span class="katex-inline" data-id="sol2-p2-c-prime"></span>, donc <span class="katex-inline" data-id="sol2-p2-c"></span>. La solution générale est <span class="katex-inline" data-id="sol2-p2-gen-sol"></span>.</p>
+                        <p>c) On pose <span class="katex-inline" data-id="sol2-p3-sub"></span>. L'équation devient <span class="katex-inline" data-id="sol2-p3-new-eq"></span>, qui est l'équation de la partie (b). Donc <span class="katex-inline" data-id="sol2-p3-y-prime"></span>. On intègre pour trouver y: <span class="katex-display" data-id="sol2-p3-y"></span></p>
+                        <p>d) On détermine la solution <span class="katex-inline" data-id="sol2-p4-sol"></span> telle que <span class="katex-inline" data-id="sol2-p4-cond"></span>. <span class="katex-inline" data-id="sol2-p4-c2"></span>. <span class="katex-inline" data-id="sol2-p4-c1"></span>. La solution est <span class="katex-inline" data-id="sol2-p4-final-sol"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>a) <strong>Continuité:</strong> Pour <span class="katex-inline" data-id="sol3-p1-neq0"></span>, f est continue comme composée de fonctions continues. En (0,0), on passe en coordonnées polaires <span class="katex-inline" data-id="sol3-p1-polar"></span>. <span class="katex-display" data-id="sol3-p1-lim"></span>. Donc <span class="katex-inline" data-id="sol3-p1-lim-f"></span>. f est continue sur <span class="katex-inline" data-id="sol3-r2"></span>.</p>
+                        <p>b) <strong>Dérivées partielles pour <span class="katex-inline" data-id="sol3-p2-neq0"></span>:</strong> <span class="katex-display" data-id="sol3-p2-dfdx"></span> <span class="katex-display" data-id="sol3-p2-dfdy"></span></p>
+                        <p>c) Sur <span class="katex-inline" data-id="sol3-p3-r2-0"></span>, les dérivées partielles sont continues, donc f est de classe <span class="katex-inline" data-id="sol3-p3-c1"></span> et est différentiable.</p>
+                        <p>d) <strong>Différentiabilité en (0,0):</strong> On calcule les dérivées partielles en (0,0). <span class="katex-display" data-id="sol3-p4-dfdx00"></span> Comme <span class="katex-inline" data-id="sol3-p4-hln"></span>, on a <span class="katex-inline" data-id="sol3-p4-equiv"></span>. La limite est <span class="katex-inline" data-id="sol3-p4-lim-res"></span>. La dérivée partielle <span class="katex-inline" data-id="sol3-p4-dfdx-ne"></span> n'existe pas en (0,0), donc f n'est pas différentiable en (0,0).</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Applications in Computer Science -->
+            <section id="cs-applications">
+                <h2 class="section-title">Applications en Informatique</h2>
+                <div class="space-y-12">
+    
+                    <!-- CS Application 1: Improper Integrals -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Intégrales Impropres : L'Analyse d'Algorithmes Probabilistes 🎲</h3>
+                        <p class="text-lg mb-4 text-slate-300">L'étude de la <strong>convergence d'intégrales impropres</strong> est analogue à l'analyse du <strong>coût attendu</strong> d'algorithmes qui ont une chance de prendre beaucoup de temps. Certains algorithmes, notamment ceux qui reposent sur le hasard, n'ont pas de pire cas bien défini (ils pourraient théoriquement tourner à l'infini), mais leur performance moyenne est excellente.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Le Temps d'attente d'un Paquet Réseau</h4>
+                        <p class="mb-4 text-slate-400">Imaginez un protocole réseau qui réessaie d'envoyer un paquet après un échec. Si la probabilité d'échec à chaque tentative est <span class="katex-inline" data-id="cs1-p"></span>, le temps d'attente total attendu peut être modélisé par une somme infinie (ou une intégrale si le temps est continu). Savoir si cette intégrale converge nous dit si le temps d'attente moyen est fini. L'analyse aux "points singuliers" (ici, un nombre de tentatives tendant vers l'infini) est cruciale pour garantir la stabilité du système.</p>
+                        <pre class="language-pseudocode"><code>// Le coût attendu E[T] est la somme des (coût * probabilité)
+    // E[T] = Σ (temps_i * P(l'événement i se produit))
+    // E[T] = ∫ t * p(t) dt
+    
+    function expectedWaitTime(failure_prob) {
+      let expected_time = 0;
+      let prob_of_reaching_step_i = 1.0;
+      
+      // Théoriquement, i peut aller à l'infini
+      for (let i = 1; i < MAX_RETRIES; i++) {
+        // Probabilité que la transmission réussisse à cette étape
+        let success_prob_now = (1 - failure_prob);
+        
+        // On ajoute le temps pondéré par la probabilité
+        expected_time += i * prob_of_reaching_step_i * success_prob_now;
+        
+        // Mise à jour de la proba d'atteindre la prochaine étape
+        prob_of_reaching_step_i *= failure_prob;
+      }
+      
+      // L'intégrale converge si failure_prob < 1
+      return expected_time;
+    }</code></pre>
+                    </div>
+    
+                    <!-- CS Application 2: Differential Equations -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Équations Différentielles : Les Réseaux de Neurones Modernes 🧠</h3>
+                        <p class="text-lg mb-4 text-slate-300">Les équations différentielles décrivent l'évolution continue des systèmes. En <strong>apprentissage automatique (Machine Learning)</strong>, cette idée a été exploitée pour créer une nouvelle classe de modèles : les <strong>Réseaux de Neurones à Équations Différentielles Ordinaires (Neural ODEs)</strong>. Au lieu de définir un nombre fixe de couches discrètes, un Neural ODE définit la dynamique continue de l'évolution des caractéristiques à travers le réseau.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Classification d'Images</h4>
+                        <p class="mb-4 text-slate-400">Dans un réseau de neurones classique, l'information passe d'une couche <span class="katex-inline" data-id="cs2-h_t"></span> à la suivante <span class="katex-inline" data-id="cs2-h_t+1"></span> par une transformation discrète. Dans un Neural ODE, on considère que l'état du réseau <span class="katex-inline" data-id="cs2-h_t_cont"></span> évolue continûment dans le "temps" (la profondeur du réseau). On apprend une fonction qui définit cette dynamique, <span class="katex-inline" data-id="cs2-ode-eq"></span>. Pour obtenir la sortie, on résout cette équation différentielle numériquement.</p>
+                         <pre class="language-pseudocode"><code>// Réseau de neurones classique (ResNet)
+    // h_t+1 = h_t + f(h_t, θ_t)  // Transformation discrète
+    
+    // Neural ODE
+    // dh(t)/dt = f(h(t), t, θ)  // Dynamique continue
+    
+    class NeuralODE {
+      constructor(dynamics_function) {
+        this.f = dynamics_function; // Un petit réseau de neurones qui apprend la dynamique
+      }
+    
+      forward(h_initial, t_final) {
+        // Pour obtenir la sortie, on intègre numériquement la dynamique
+        // de t=0 à t=t_final en partant de l'état initial h_initial.
+        // On utilise un solveur d'EDO (comme Runge-Kutta).
+        let h_final = ODESolve(this.f, h_initial, 0, t_final);
+        return h_final;
+      }
+    }
+    </code></pre>
+                    </div>
+                    
+                    <!-- CS Application 3: Differentiability -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">3. Différentiabilité : L'Optimisation par Descente de Gradient 📉</h3>
+                        <p class="text-lg mb-4 text-slate-300">L'analyse de la différentiabilité d'une fonction à plusieurs variables est le fondement de l'optimisation en informatique, en particulier pour l'entraînement des modèles d'apprentissage automatique. La <strong>descente de gradient</strong>, l'algorithme le plus utilisé pour entraîner les réseaux de neurones, repose entièrement sur le calcul des <strong>dérivées partielles</strong> (le gradient) de la fonction de coût.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Entraînement d'un Réseau de Neurones</h4>
+                        <p class="mb-4 text-slate-400">La fonction de coût <span class="katex-inline" data-id="cs3-L"></span> mesure à quel point les prédictions du réseau sont mauvaises. C'est une fonction des millions de poids du réseau <span class="katex-inline" data-id="cs3-W"></span>. Le gradient <span class="katex-inline" data-id="cs3-nablaL"></span> indique la direction de la plus forte pente. Pour minimiser le coût, on met à jour les poids en se déplaçant dans la direction opposée au gradient. Les points où la fonction n'est pas différentiable (comme dans l'exercice 3) posent un défi, courant avec des fonctions d'activation comme <strong>ReLU</strong>, et nécessitent des techniques d'optimisation plus avancées (comme les sous-gradients).</p>
+                        <pre class="language-pseudocode"><code>// L: Fonction de coût
+    // W: Poids du réseau de neurones
+    // learning_rate: Taille du pas
+    
+    function train(data, labels) {
+      for (let i = 0; i < num_epochs; i++) {
+        // 1. Calculer les prédictions du réseau
+        let predictions = model.forward(data, W);
+        
+        // 2. Calculer le coût (l'erreur)
+        let loss = L(predictions, labels);
+        
+        // 3. Calculer les dérivées partielles du coût par rapport à chaque poids
+        // C'est le cœur de la "backpropagation"
+        let gradient = compute_gradient(L, W);
+        
+        // 4. Mettre à jour les poids en descendant la pente
+        // W_new = W_old - learning_rate * ∇L(W_old)
+        W = W - learning_rate * gradient;
+      }
+      return W; // Poids optimisés
+    }</code></pre>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Pour la convergence, analysez le comportement de la fonction près des points singuliers. Utilisez des équivalents simples pour déterminer la nature des intégrales (Riemann, Bertrand).</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Intégrales impropres :</strong> Une intégrale est impropre si l'intervalle d'intégration est infini ou si la fonction a une discontinuité infinie à un point de l'intervalle.</p><p><strong>Critères de convergence :</strong></p><p>• <strong>Intégrale de Riemann :</strong> <span class="katex-inline" data-id="k1-riemann"></span> converge si <span class="katex-inline" data-id="k1-alpha1"></span>.</p><p>• <strong>Intégrale de Bertrand :</strong> <span class="katex-inline" data-id="k1-bertrand"></span> converge si <span class="katex-inline" data-id="k1-alpha2"></span> ou (<span class="katex-inline" data-id="k1-alpha-beta"></span>).</p><p><strong>Calcul de dérivées :</strong> Maîtrise des règles de dérivation, notamment pour les fonctions composées et les quotients.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">a) Points Singuliers</h4><p>Les points singuliers sont les points où l'intégrande n'est pas défini. Ici, le dénominateur <span class="katex-inline" data-id="e1-denom"></span> s'annule en <span class="katex-inline" data-id="e1-x0"></span> et <span class="katex-inline" data-id="e1-x1"></span>. De plus, <span class="katex-inline" data-id="e1-lnx"></span> n'est pas défini en <span class="katex-inline" data-id="e1-x0-2"></span>. Les singularités sont donc aux bornes <span class="katex-inline" data-id="e1-x0-3"></span> et <span class="katex-inline" data-id="e1-x1-2"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">b) Calcul de la Dérivée</h4><p>On utilise la règle de dérivation d'une fonction composée <span class="katex-inline" data-id="e1-deriv-rule"></span>. Pour <span class="katex-inline" data-id="e1-f"></span>, on a <span class="katex-inline" data-id="e1-g"></span>. La dérivée de g(x) est <span class="katex-inline" data-id="e1-g-prime"></span>. En appliquant la formule, on obtient le résultat attendu.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">c) Étude de la Convergence</h4><p><strong>Voisinage de 0 :</strong> On cherche un équivalent de l'intégrande quand <span class="katex-inline" data-id="e1-x-tend-0"></span>. On a <span class="katex-inline" data-id="e1-1mx-approx"></span>. Donc, <span class="katex-inline" data-id="e1-integrand-approx0"></span>. C'est une intégrale de Bertrand <span class="katex-inline" data-id="e1-bertrand"></span> avec <span class="katex-inline" data-id="e1-alpha-val"></span> et <span class="katex-inline" data-id="e1-beta-val"></span>. Comme <span class="katex-inline" data-id="e1-alpha-cond"></span>, l'intégrale converge en 0.</p><p><strong>Voisinage de 1 :</strong> On pose <span class="katex-inline" data-id="e1-t-subst"></span>, donc <span class="katex-inline" data-id="e1-x-subst"></span>. Quand <span class="katex-inline" data-id="e1-x-tend-1"></span>, <span class="katex-inline" data-id="e1-t-tend-0"></span>. On a <span class="katex-inline" data-id="e1-ln-approx"></span> et <span class="katex-inline" data-id="e1-x-approx1"></span>. L'intégrande devient <span class="katex-inline" data-id="e1-integrand-approx1"></span>. C'est une intégrale de Riemann <span class="katex-inline" data-id="e1-riemann"></span> avec <span class="katex-inline" data-id="e1-alpha-val-2"></span>. Comme <span class="katex-inline" data-id="e1-alpha-cond-2"></span>, l'intégrale converge en 1.</p><p>Puisque l'intégrale converge aux deux points singuliers, elle est convergente.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>Pour l'équation différentielle (b), c'est une équation linéaire du premier ordre. Résolvez d'abord l'équation homogène, puis utilisez la méthode de la variation de la constante.</p><p>Pour la question (c), le changement de variable <span class="katex-inline" data-id="h2-subst"></span> la ramène directement à la question (b).</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Intégration par substitution :</strong> Reconnaître une forme <span class="katex-inline" data-id="k2-f1"></span> pour simplifier l'intégrale.</p><p><strong>Équations différentielles linéaires du premier ordre :</strong> Une équation de la forme <span class="katex-inline" data-id="k2-f2"></span>. La solution est <span class="katex-inline" data-id="k2-f3"></span>.</p><p><strong>Méthode de la variation de la constante :</strong> Pour trouver une solution particulière à l'équation non homogène, on remplace la constante C de la solution homogène par une fonction C(x).</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">a) Calcul d'intégrale</h4><p>On veut calculer <span class="katex-inline" data-id="e2-p1-int"></span>. On reconnaît une forme <span class="katex-inline" data-id="e2-p1-form"></span> avec <span class="katex-inline" data-id="e2-p1-u"></span> et <span class="katex-inline" data-id="e2-p1-uprime"></span>. L'intégrale est donc directe : <span class="katex-inline" data-id="e2-p1-res-exp"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">b) Résolution de l'équation différentielle (u)</h4><p><strong>Étape 1: Équation homogène.</strong> On résout <span class="katex-inline" data-id="e2-p2-homo"></span>. C'est <span class="katex-inline" data-id="e2-p2-sep"></span>. En intégrant, <span class="katex-inline" data-id="e2-p2-int-homo"></span>. Donc, <span class="katex-inline" data-id="e2-p2-sol-homo"></span>.</p><p><strong>Étape 2: Variation de la constante.</strong> On pose <span class="katex-inline" data-id="e2-p2-var-const"></span>. On dérive et on substitue dans l'équation complète pour trouver <span class="katex-inline" data-id="e2-p2-c-prime"></span>. En intégrant, <span class="katex-inline" data-id="e2-p2-c-int"></span>. La solution générale est la somme des solutions.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">c) Résolution de l'équation différentielle (y)</h4><p>Avec <span class="katex-inline" data-id="e2-p3-sub"></span>, l'équation <span class="katex-inline" data-id="e2-p3-eq"></span> devient <span class="katex-inline" data-id="e2-p3-new-eq"></span>, qui est l'équation de la partie (b). Donc, on a <span class="katex-inline" data-id="e2-p3-y-prime"></span>. Pour trouver y, il suffit d'intégrer cette expression. Le premier terme <span class="katex-inline" data-id="e2-p3-int1"></span> a été calculé en (a). Le second terme <span class="katex-inline" data-id="e2-p3-int2"></span> donne <span class="katex-inline" data-id="e2-p3-int2-res"></span>. On combine les résultats et on ajoute la constante d'intégration <span class="katex-inline" data-id="e2-p3-c2"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">d) Solution avec conditions initiales</h4><p>On utilise <span class="katex-inline" data-id="e2-p4-cond"></span>. <span class="katex-inline" data-id="e2-p4-f0"></span> nous donne <span class="katex-inline" data-id="e2-p4-c2-val"></span>. <span class="katex-inline" data-id="e2-p4-fp0"></span> nous donne <span class="katex-inline" data-id="e2-p4-c1-val"></span>. En remplaçant ces valeurs, on obtient la solution unique.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>Pour la continuité et la différentiabilité en (0,0), le passage en coordonnées polaires est souvent la clé.</p><p>Pour la différentiabilité en (0,0), il ne suffit pas que les dérivées partielles existent. Il faut vérifier la définition de la différentiabilité ou utiliser le théorème qui lie différentiabilité et continuité des dérivées partielles.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Continuité des fonctions de plusieurs variables :</strong> Une fonction f est continue en un point <span class="katex-inline" data-id="k3-p0"></span> si <span class="katex-inline" data-id="k3-lim-cont"></span>.</p><p><strong>Coordonnées polaires :</strong> <span class="katex-inline" data-id="k3-polar"></span>. Utile pour calculer des limites en (0,0).</p><p><strong>Dérivées partielles :</strong> Calcul de la dérivée par rapport à une variable en considérant les autres comme des constantes.</p><p><strong>Différentiabilité :</strong> Une fonction f est différentiable en <span class="katex-inline" data-id="k3-p0-2"></span> s'il existe une application linéaire <span class="katex-inline" data-id="k3-L"></span> telle que <span class="katex-inline" data-id="k3-diff-def"></span>. Un théorème suffisant : si les dérivées partielles de f existent et sont continues dans un voisinage de <span class="katex-inline" data-id="k3-p0-3"></span>, alors f est différentiable en <span class="katex-inline" data-id="k3-p0-4"></span>.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">a) Continuité</h4><p>Hors de (0,0), la fonction est une composition de fonctions continues (<span class="katex-inline" data-id="e3-p1-exp"></span>, <span class="katex-inline" data-id="e3-p1-ln"></span>, polynômes), donc elle est continue.</p><p>En (0,0), on passe en polaires. L'exposant devient <span class="katex-inline" data-id="e3-p1-expo-polar"></span>. On utilise la croissance comparée <span class="katex-inline" data-id="e3-p1-lim-croiss"></span>. Ainsi, l'exposant tend vers 0. La limite de f(x,y) est <span class="katex-inline" data-id="e3-p1-e0"></span>, ce qui est égal à <span class="katex-inline" data-id="e3-p1-f00"></span>. La fonction est donc continue en (0,0).</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">b) Dérivées Partielles</h4><p>On applique la règle de dérivation de <span class="katex-inline" data-id="e3-p2-exp-u"></span> qui est <span class="katex-inline" data-id="e3-p2-exp-u-prime"></span>. Ici, <span class="katex-inline" data-id="e3-p2-u"></span>. On calcule <span class="katex-inline" data-id="e3-p2-dudx"></span> et <span class="katex-inline" data-id="e3-p2-dudy"></span> en utilisant la dérivation d'un produit et on obtient les expressions données.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">c) Différentiabilité hors de (0,0)</h4><p>Les expressions des dérivées partielles calculées en (b) sont des compositions de fonctions continues sur <span class="katex-inline" data-id="e3-p3-r2-0"></span>. Les dérivées partielles sont donc continues sur ce domaine. Un théorème du cours affirme que si les dérivées partielles sont continues sur un ouvert, alors la fonction y est différentiable (et même de classe C¹).</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">d) Différentiabilité en (0,0)</h4><p>On doit revenir à la définition de la dérivée partielle en (0,0) avec le taux d'accroissement. Pour <span class="katex-inline" data-id="e3-p4-dfdx00"></span>, on calcule <span class="katex-inline" data-id="e3-p4-lim-def"></span>. L'expression se simplifie en <span class="katex-inline" data-id="e3-p4-lim-h"></span>. On a une forme équivalente à <span class="katex-inline" data-id="e3-p4-lim-h-equiv"></span> qui tend vers <span class="katex-inline" data-id="e3-p4-neg-inf"></span>. Comme la limite n'est pas finie, la dérivée partielle par rapport à x n'existe pas en (0,0). Une condition nécessaire à la différentiabilité est l'existence de toutes les dérivées partielles. Comme ce n'est pas le cas, f n'est pas différentiable en (0,0).</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.dataset.latex || el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                        el.textContent = `Erreur de rendu de la formule: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            const formulas = {
+                // Exam Questions from 15.html
+                'ex1-int': "I=\\int_{0}^{1}\\frac{\\ln(x)}{\\sqrt{x(1-x)^{3}}}dx",
+                'ex1-func': "f(x)=\\sqrt{\\frac{x}{1-x}}",
+                'ex1-domain': "x \\in ]0,1[",
+                'ex2-q1-int': "I=\\int\\frac{\\arcsin(x)}{\\sqrt{1-x^{2}}}dx",
+                'ex2-q2-domain': "|x|<1",
+                'ex2-q2-eq': "u'-\\frac{x}{1-x^{2}}u=\\frac{2}{1-x^{2}}",
+                'ex2-q3-sub': "y'=u",
+                'ex2-q3-eq': "y''-\\frac{x}{1-x^{2}}y'=\\frac{2}{1-x^{2}}",
+                'ex2-q4-sol': "y=f(x)",
+                'ex2-q4-cond': "f(0)=f'(0)=0",
+                'ex3-func-map': "f:\\mathbb{R}^{2}\\rightarrow\\mathbb{R}",
+                'ex3-func-def': "f(x,y)=\\begin{cases}e^{x \\ln(x^{2}+y^{2})},&\\text{si }(x,y)\\ne(0,0)\\\\ 1,&\\text{si }(x,y)=(0,0)\\end{cases}",
+                'ex3-r2': "\\mathbb{R}^2",
+                'ex3-dfdx': "\\frac{\\partial f}{\\partial x}",
+                'ex3-dfdy': "\\frac{\\partial f}{\\partial y}",
+                'ex3-r2-0': "\\mathbb{R}^{2}\\setminus\\{(0,0)\\}",
+
+                // Solutions from 15.html
+                'sol1-sing1': "x=0",
+                'sol1-lnx': "\\ln(x)",
+                'sol1-sqrtx': "\\sqrt{x}",
+                'sol1-sing2': "x=1",
+                'sol1-denom': "(1-x)^3",
+                'sol1-f': "f(x)=\\sqrt{\\frac{x}{1-x}}",
+                'sol1-deriv': "f'(x)=\\frac{1}{2\\sqrt{\\frac{x}{1-x}}}\\cdot\\frac{1(1-x)-x(-1)}{(1-x)^{2}}=\\frac{\\sqrt{1-x}}{2\\sqrt{x}}\\frac{1}{(1-x)^{2}}=\\frac{1}{2\\sqrt{x(1-x)^{3}}}",
+                'sol1-vois0': "x=0^+",
+                'sol1-equiv0': "\\frac{\\ln(x)}{\\sqrt{x(1-x)^{3}}}\\sim\\frac{\\ln(x)}{\\sqrt{x}}",
+                'sol1-int-bert': "\\int_{0} \\frac{\\ln(x)}{x^{1/2}}dx",
+                'sol1-exp0': "1/2 < 1",
+                'sol1-vois1': "x=1^-",
+                'sol1-subst': "t=1-x \\Rightarrow x=1-t",
+                'sol1-equiv1': "\\frac{\\ln(x)}{\\sqrt{x(1-x)^{3}}}=\\frac{\\ln(1-t)}{\\sqrt{(1-t)t^{3}}}\\sim\\frac{-t}{\\sqrt{t^{3}}}=-\\frac{1}{\\sqrt{t}}",
+                'sol1-int-riem': "\\int_{0}\\frac{-1}{\\sqrt{t}}dt",
+                'sol1-exp1': "1/2 < 1",
+                'sol2-p1-sub': "u=\\arcsin(x)",
+                'sol2-p1-du': "du=\\frac{dx}{\\sqrt{1-x^{2}}}",
+                'sol2-p1-res': "\\int u\\,du=\\frac{u^{2}}{2}+C=\\frac{(\\arcsin x)^{2}}{2}+C",
+                'sol2-p2-eq': "u'-\\frac{x}{1-x^{2}}u=\\frac{2}{1-x^{2}}",
+                'sol2-p2-homo': "u'-\\frac{x}{1-x^{2}}u=0",
+                'sol2-p2-homo-sol': "u_h = C \\exp(\\int\\frac{x}{1-x^{2}}dx)=C \\exp(-\\frac{1}{2}\\ln(1-x^{2}))=\\frac{C}{\\sqrt{1-x^{2}}}",
+                'sol2-p2-var-const': "u=\\frac{C(x)}{\\sqrt{1-x^{2}}}",
+                'sol2-p2-c-prime': "\\frac{C'(x)}{\\sqrt{1-x^{2}}}=\\frac{2}{1-x^{2}} \\Rightarrow C'(x)=\\frac{2}{\\sqrt{1-x^{2}}}",
+                'sol2-p2-c': "C(x)=2\\arcsin x+K",
+                'sol2-p2-gen-sol': "u(x)=\\frac{2\\arcsin x+K}{\\sqrt{1-x^{2}}}",
+                'sol2-p3-sub': "u=y'",
+                'sol2-p3-new-eq': "u'-\\frac{x}{1-x^{2}}u=\\frac{2}{1-x^{2}}",
+                'sol2-p3-y-prime': "y'(x)=u(x)=\\frac{2\\arcsin x+C_{1}}{\\sqrt{1-x^{2}}}",
+                'sol2-p3-y': "y(x)=\\int (\\frac{2\\arcsin x}{\\sqrt{1-x^2}} + \\frac{C_1}{\\sqrt{1-x^2}})dx = (\\arcsin x)^{2}+C_{1}\\arcsin x+C_{2}",
+                'sol2-p4-sol': "y=f(x)",
+                'sol2-p4-cond': "f(0)=f'(0)=0",
+                'sol2-p4-c2': "f(0)=0 \\Rightarrow (\\arcsin 0)^2 + C_1 \\arcsin 0 + C_2 = 0 \\Rightarrow C_2=0",
+                'sol2-p4-c1': "f'(0)=0 \\Rightarrow \\frac{2\\arcsin 0+C_1}{\\sqrt{1-0^2}}=0 \\Rightarrow C_1=0",
+                'sol2-p4-final-sol': "y(x)=(\\arcsin x)^2",
+                'sol3-p1-neq0': "(x,y) \\ne (0,0)",
+                'sol3-p1-polar': "x=r\\cos\\theta, y=r\\sin\\theta",
+                'sol3-p1-lim': "\\lim_{(x,y)\\to(0,0)} x \\ln(x^2+y^2) = \\lim_{r\\to 0} r\\cos\\theta \\ln(r^2) = \\lim_{r\\to 0} 2r\\cos\\theta\\ln(r) = 0",
+                'sol3-p1-lim-f': "\\lim_{(x,y)\\to(0,0)} f(x,y) = e^0 = 1 = f(0,0)",
+                'sol3-r2': "\\mathbb{R}^2",
+                'sol3-p2-neq0': "(x,y) \\ne (0,0)",
+                'sol3-p2-dfdx': "\\frac{\\partial f}{\\partial x}=e^{x\\ln(x^2+y^2)}( \\ln(x^2+y^2) + \\frac{2x^2}{x^2+y^2} )",
+                'sol3-p2-dfdy': "\\frac{\\partial f}{\\partial y}=e^{x\\ln(x^2+y^2)}( \\frac{2xy}{x^2+y^2} )",
+                'sol3-p3-r2-0': "\\mathbb{R}^{2}\\setminus\\{(0,0)\\}",
+                'sol3-p3-c1': "C^1",
+                'sol3-p4-dfdx00': "\\frac{\\partial f}{\\partial x}(0,0)=\\lim_{h\\to 0}\\frac{f(h,0)-f(0,0)}{h} = \\lim_{h\\to 0}\\frac{e^{h\\ln(h^2)}-1}{h}=\\lim_{h\\to 0}\\frac{e^{2h\\ln|h|}-1}{h}",
+                'sol3-p4-hln': "2h\\ln|h| \\to 0",
+                'sol3-p4-equiv': "e^{2h\\ln|h|}\\sim 1+2h\\ln|h|",
+                'sol3-p4-lim-res': "\\lim_{h\\to 0}\\frac{1+2h\\ln|h|-1}{h}=\\lim_{h\\to 0}2\\ln|h|=-\\infty",
+                'sol3-p4-dfdx-ne': "\\frac{\\partial f}{\\partial x}",
+
+                // Modal Formulas
+                'k1-riemann': "\\int_0^a \\frac{dx}{x^\\alpha}",
+                'k1-alpha1': "\\alpha < 1",
+                'k1-bertrand': "\\int_0^a \\frac{dx}{x^\\alpha |\\ln x|^\\beta}",
+                'k1-alpha2': "\\alpha < 1",
+                'k1-alpha-beta': "\\alpha = 1 \\text{ et } \\beta > 1",
+                'e1-denom': "\\sqrt{x(1-x)^3}",
+                'e1-x0': "x=0",
+                'e1-x1': "x=1",
+                'e1-lnx': "\\ln(x)",
+                'e1-x0-2': "x=0",
+                'e1-x0-3': "x=0",
+                'e1-x1-2': "x=1",
+                'e1-deriv-rule': "(\\sqrt{u})' = \\frac{u'}{2\\sqrt{u}}",
+                'e1-f': "f(x)=\\sqrt{\\frac{x}{1-x}}",
+                'e1-g': "g(x) = \\frac{x}{1-x}",
+                'e1-g-prime': "g'(x) = \\frac{1}{(1-x)^2}",
+                'e1-x-tend-0': "x \\to 0^+",
+                'e1-1mx-approx': "1-x \\approx 1",
+                'e1-integrand-approx0': "\\frac{\\ln(x)}{\\sqrt{x(1-x)^3}} \\sim \\frac{\\ln(x)}{\\sqrt{x}}",
+                'e1-bertrand': "\\int_0 \\frac{dx}{x^\\alpha (\\ln(1/x))^\\beta}",
+                'e1-alpha-val': "\\alpha = 1/2",
+                'e1-beta-val': "\\beta = -1",
+                'e1-alpha-cond': "\\alpha < 1",
+                'e1-t-subst': "t = 1-x",
+                'e1-x-subst': "x = 1-t",
+                'e1-x-tend-1': "x \\to 1^-",
+                'e1-t-tend-0': "t \\to 0^+",
+                'e1-ln-approx': "\\ln(1-t) \\sim -t",
+                'e1-x-approx1': "x \\approx 1",
+                'e1-integrand-approx1': "\\frac{\\ln(1-t)}{\\sqrt{(1-t)t^3}} \\sim \\frac{-t}{\\sqrt{t^3}} = -\\frac{1}{t^{1/2}}",
+                'e1-riemann': "\\int_0 \\frac{dt}{t^\\alpha}",
+                'e1-alpha-val-2': "\\alpha = 1/2",
+                'e1-alpha-cond-2': "\\alpha < 1",
+                'h2-subst': "y'=u",
+                'k2-f1': "\\int u'(x) f(u(x)) dx",
+                'k2-f2': "y' + a(x)y = b(x)",
+                'k2-f3': "y(x) = e^{-\\int a(x)dx} (\\int b(x) e^{\\int a(x)dx} dx + C)",
+                'e2-p1-int': "\\int\\frac{\\arcsin(x)}{\\sqrt{1-x^{2}}}dx",
+                'e2-p1-form': "\\int u' u^n dx",
+                'e2-p1-u': "u = \\arcsin(x)",
+                'e2-p1-uprime': "u' = \\frac{1}{\\sqrt{1-x^2}}",
+                'e2-p1-res-exp': "\\frac{(\\arcsin x)^2}{2} + C",
+                'e2-p2-homo': "u' - \\frac{x}{1-x^2}u = 0",
+                'e2-p2-sep': "\\frac{u'}{u} = \\frac{x}{1-x^2}",
+                'e2-p2-int-homo': "\\ln|u| = -\\frac{1}{2}\\ln(1-x^2) + K = \\ln(\\frac{1}{\\sqrt{1-x^2}}) + K",
+                'e2-p2-sol-homo': "u_h(x) = \\frac{C}{\\sqrt{1-x^2}}",
+                'e2-p2-var-const': "u(x) = \\frac{C(x)}{\\sqrt{1-x^2}}",
+                'e2-p2-c-prime': "C'(x) = \\frac{2}{\\sqrt{1-x^2}}",
+                'e2-p2-c-int': "C(x) = 2\\arcsin x + K",
+                'e2-p3-sub': "y'=u",
+                'e2-p3-eq': "y'' - \\frac{x}{1-x^2}y' = \\frac{2}{1-x^2}",
+                'e2-p3-new-eq': "u' - \\frac{x}{1-x^2}u = \\frac{2}{1-x^2}",
+                'e2-p3-y-prime': "y'(x) = \\frac{2\\arcsin x + C_1}{\\sqrt{1-x^2}}",
+                'e2-p3-int1': "\\int \\frac{2\\arcsin x}{\\sqrt{1-x^2}} dx",
+                'e2-p3-int2': "\\int \\frac{C_1}{\\sqrt{1-x^2}} dx",
+                'e2-p3-int2-res': "C_1 \\arcsin x",
+                'e2-p3-c2': "C_2",
+                'e2-p4-cond': "y(0)=0 \\text{ et } y'(0)=0",
+                'e2-p4-f0': "y(0)=0",
+                'e2-p4-c2-val': "C_2 = 0",
+                'e2-p4-fp0': "y'(0)=0",
+                'e2-p4-c1-val': "C_1 = 0",
+                'k3-p0': "p_0",
+                'k3-lim-cont': "\\lim_{p \\to p_0} f(p) = f(p_0)",
+                'k3-polar': "x=r\\cos\\theta, y=r\\sin\\theta",
+                'k3-p0-2': "p_0",
+                'k3-L': "L",
+                'k3-diff-def': "f(p_0+h) = f(p_0) + L(h) + o(\\|h\\|)",
+                'k3-p0-3': "p_0",
+                'k3-p0-4': "p_0",
+                'e3-p1-exp': "\\exp",
+                'e3-p1-ln': "\\ln",
+                'e3-p1-expo-polar': "r\\cos\\theta \\ln(r^2) = 2r\\cos\\theta\\ln(r)",
+                'e3-p1-lim-croiss': "\\lim_{r \\to 0} r\\ln r = 0",
+                'e3-p1-e0': "e^0 = 1",
+                'e3-p1-f00': "f(0,0)",
+                'e3-p2-exp-u': "e^u",
+                'e3-p2-exp-u-prime': "u'e^u",
+                'e3-p2-u': "u = x\\ln(x^2+y^2)",
+                'e3-p2-dudx': "\\frac{\\partial u}{\\partial x}",
+                'e3-p2-dudy': "\\frac{\\partial u}{\\partial y}",
+                'e3-p3-r2-0': "\\mathbb{R}^2 \\setminus \\{(0,0)\\}",
+                'e3-p4-dfdx00': "\\frac{\\partial f}{\\partial x}(0,0)",
+                'e3-p4-lim-def': "\\lim_{h \\to 0} \\frac{f(h,0) - f(0,0)}{h}",
+                'e3-p4-lim-h': "\\lim_{h \\to 0} \\frac{e^{h\\ln(h^2)} - 1}{h}",
+                'e3-p4-lim-h-equiv': "\\frac{2h\\ln|h|}{h} = 2\\ln|h|",
+                'e3-p4-neg-inf': "-\\infty",
+
+                // CS Section formulas
+                'cs1-p': "p < 1",
+                'cs2-h_t': "h_t",
+                'cs2-h_t+1': "h_{t+1}",
+                'cs2-h_t_cont': "h(t)",
+                'cs2-ode-eq': "\\frac{dh(t)}{dt} = f(h(t), t, \\theta)",
+                'cs3-L': "L(W)",
+                'cs3-W': "W",
+                'cs3-nablaL': "\\nabla L(W)",
+            };
+
+            for (const [id, latex] of Object.entries(formulas)) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.dataset.latex = latex;
+                    el.textContent = latex; // Fallback text
+                } else {
+                    // It's okay if CS formulas are not found in the initial HTML, they are added dynamically.
+                    if (!id.startsWith('cs')) {
+                         console.error(`Élément avec data-id '${id}' non trouvé.`);
+                    }
+                }
+            }
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

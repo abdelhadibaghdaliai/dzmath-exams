@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 1 - Final Exam (01/14/2013)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 1</h1>
+            <p class="exam-subtitle">Final Exam (January 14, 2013)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <h3 class="exercise-title">Exercise 1 [3 points]</h3>
+                <p class="mb-4">Consider the set <span class="katex-inline" data-id="ex1-A-def"></span>.</p>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1</h4>
+                    <div class="exercise-content">
+                        <p>Show that A is non-empty and bounded.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Determine Sup A, Inf A, max A, and min A if they exist, justifying the answers.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx1Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx1Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <h3 class="exercise-title mt-8">Exercise 2 [6 points]</h3>
+                <p class="mb-4">Let a, b, and c be real numbers and T be the function defined by:</p>
+                <div class="katex-display" data-id="ex2-T-def"></div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1</h4>
+                    <div class="exercise-content">
+                        <p>Write the Taylor expansion of T, in the neighborhood of <span class="katex-inline" data-id="ex2-q1-voisinage"></span> to order 2.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2</h4>
+                    <div class="exercise-content">
+                        <p>For what values of a, b, and c is T continuous at 0?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 3</h4>
+                    <div class="exercise-content">
+                        <p>For what values of a, b, and c is T differentiable at 0?</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 4</h4>
+                    <div class="exercise-content">
+                        <p>Then calculate <span class="katex-inline" data-id="ex2-q4-Tprime"></span> on <span class="katex-inline" data-id="ex2-q4-R"></span> and study its continuity at 0.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 5</h4>
+                    <div class="exercise-content">
+                        <p>Study the differentiability of T' at point 0.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintEx2Q5')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeEx2Q5')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Problem [11 points]</h2>
+                <p class="mb-4">Consider the function f defined on <span class="katex-inline" data-id="prob-f-def-interval"></span> by <span class="katex-inline" data-id="prob-f-def-expr"></span>.</p>
+                
+                <h3 class="mt-8">Part I</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1</h4>
+                    <div class="exercise-content">
+                        <p>Calculate <span class="katex-inline" data-id="prob-p1q1-fprime"></span>, and present the result as a product of factors.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Study the variations of f on <span class="katex-inline" data-id="prob-p1q2-interval"></span>, calculate <span class="katex-inline" data-id="prob-p1q2-limit"></span>, then draw the table of variations.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 3</h4>
+                    <div class="exercise-content">
+                        <p>Verify that <span class="katex-inline" data-id="prob-p1q3-fx"></span> can be written in the form <span class="katex-inline" data-id="prob-p1q3-fx-form"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q3')">Prerequisites</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 4</h4>
+                    <div class="exercise-content">
+                        <p>Write the Taylor expansion of f in the neighborhood of 0 to order 2.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q4')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 5</h4>
+                    <div class="exercise-content">
+                        <p>Deduce the equation of the tangent to the curve of f at the point <span class="katex-inline" data-id="prob-p1q5-point"></span>, as well as the relative position of the curve and the tangent.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q5')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q5')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 6</h4>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="prob-p1q6-gx"></span>. Study the variations of g on [0, 1].</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q6')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q6')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 7</h4>
+                    <div class="exercise-content">
+                        <p>Show that there exists a unique real number <span class="katex-inline" data-id="prob-p1q7-alpha"></span>, such that <span class="katex-inline" data-id="prob-p1q7-galpha"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP1Q7')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP1Q7')">Prerequisites</button>
+                    </div>
+                </div>
+                
+                <h3 class="mt-8">Part II</h3>
+                <p class="mb-4">Consider the numerical sequence <span class="katex-inline" data-id="prob-p2-Un"></span> defined by the recurrence relation:</p>
+                <div class="katex-display" data-id="prob-p2-Un-def"></div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1</h4>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="prob-p2q1-hx"></span> and assuming that <span class="katex-inline" data-id="prob-p2q1-hx-ineq"></span>, <span class="katex-inline" data-id="prob-p2q1-hx-interval"></span>. Show that <span class="katex-inline" data-id="prob-p2q1-Un-ineq"></span>, <span class="katex-inline" data-id="prob-p2q1-Un-n"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP2Q1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP2Q1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Show that the two subsequences <span class="katex-inline" data-id="prob-p2q2-U2n"></span> and <span class="katex-inline" data-id="prob-p2q2-U2n1"></span> converge. Let l and l' be their respective limits.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP2Q2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP2Q2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 3</h4>
+                    <div class="exercise-content">
+                        <p>Under what condition is the sequence <span class="katex-inline" data-id="prob-p2q3-Un"></span> convergent? In this case, give a better bound for the real number <span class="katex-inline" data-id="prob-p2q3-alpha"></span> from question 7.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hintProbP2Q3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledgeProbP2Q3')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <h3 class="exercise-title">Solution to Exercise 1</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 1</h4>
+                    <div class="exercise-content">
+                        <p>To show that A is non-empty, we choose a value for <span class="katex-inline" data-id="sol-ex1q1-n"></span>, for example <span class="katex-inline" data-id="sol-ex1q1-n0"></span>. We have <span class="katex-inline" data-id="sol-ex1q1-x0"></span>. Since <span class="katex-inline" data-id="sol-ex1q1-1inA"></span>, A is non-empty.</p>
+                        <p>To show that A is bounded, we analyze the expression of <span class="katex-inline" data-id="sol-ex1q1-xn"></span>. For any <span class="katex-inline" data-id="sol-ex1q1-n-in-N"></span>, the denominator <span class="katex-inline" data-id="sol-ex1q1-denom"></span> is always greater than or equal to 1. Thus, <span class="katex-inline" data-id="sol-ex1q1-denom-ineq"></span>. By taking the inverse, we get <span class="katex-inline" data-id="sol-ex1q1-xn-ineq"></span>.
+                        Therefore, 0 is a lower bound and 1 is an upper bound of A. The set A is bounded.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 2</h4>
+                    <div class="exercise-content">
+                        <p>We saw that 1 is an upper bound. Since <span class="katex-inline" data-id="sol-ex1q2-1inA"></span> (for n=0), 1 is the largest element of A. Therefore, <span class="katex-inline" data-id="sol-ex1q2-max"></span> and consequently <span class="katex-inline" data-id="sol-ex1q2-sup"></span>.</p>
+                        <p>The sequence <span class="katex-inline" data-id="sol-ex1q2-xn"></span> is decreasing because its denominator <span class="katex-inline" data-id="sol-ex1q2-denom"></span> is an increasing function of n. The limit of the sequence is <span class="katex-inline" data-id="sol-ex1q2-limit"></span>. The limit of a decreasing sequence is its infimum. Therefore, <span class="katex-inline" data-id="sol-ex1q2-inf"></span>.
+                        Since <span class="katex-inline" data-id="sol-ex1q2-0not-in-A"></span> for any <span class="katex-inline" data-id="sol-ex1q2-n-in-N"></span>, 0 is not an element of A. Thus, the minimum of A does not exist.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx1Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <h3 class="exercise-title mt-8">Solution to Exercise 2</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 1</h4>
+                    <div class="exercise-content">
+                        <p>In the neighborhood of <span class="katex-inline" data-id="sol-ex2q1-0plus"></span>, we use the standard Taylor expansions. <span class="katex-inline" data-id="sol-ex2q1-arctan-dl"></span>.
+                        Then, we compose it with the Taylor expansion of <span class="katex-inline" data-id="sol-ex2q1-exp"></span> to order 2: <span class="katex-inline" data-id="sol-ex2q1-exp-dl"></span>.
+                        </p><div class="katex-display" data-id="sol-ex2q1-T-dl"></div><p>
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 2</h4>
+                    <div class="exercise-content">
+                        <p>T is continuous at 0 if and only if <span class="katex-inline" data-id="sol-ex2q2-cont-cond"></span>.
+                        We have <span class="katex-inline" data-id="sol-ex2q2-T0"></span>.
+                        From the Taylor expansion, <span class="katex-inline" data-id="sol-ex2q2-lim-plus"></span>.
+                        For <span class="katex-inline" data-id="sol-ex2q2-x-neg"></span>, <span class="katex-inline" data-id="sol-ex2q2-lim-moins"></span>.
+                        Continuity at 0 is ensured if <span class="katex-inline" data-id="sol-ex2q2-c-eq-1"></span>, for any real numbers a and b.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 3</h4>
+                    <div class="exercise-content">
+                        <p>We set <span class="katex-inline" data-id="sol-ex2q3-c-eq-1"></span>. T is differentiable at 0 if the limit <span class="katex-inline" data-id="sol-ex2q3-deriv-def"></span> exists and is finite.
+                        From the right: <span class="katex-inline" data-id="sol-ex2q3-lim-plus"></span>.
+                        From the left: <span class="katex-inline" data-id="sol-ex2q3-lim-moins"></span>.
+                        Therefore, T is differentiable at 0 if and only if <span class="katex-inline" data-id="sol-ex2q3-b-eq-1"></span> (and c=1), for any real number a.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 4</h4>
+                    <div class="exercise-content">
+                        <p>With b=1 and c=1, we have <span class="katex-inline" data-id="sol-ex2q4-Tprime0"></span>. For <span class="katex-inline" data-id="sol-ex2q4-x-neq-0"></span>, the derivative is:
+                        </p><div class="katex-display" data-id="sol-ex2q4-Tprime-def"></div>
+                        <p>For the continuity of T' at 0, we calculate the limits:
+                        <span class="katex-inline" data-id="sol-ex2q4-lim-plus"></span>.
+                        <span class="katex-inline" data-id="sol-ex2q4-lim-moins"></span>.
+                        For T' to be continuous at 0, we need <span class="katex-inline" data-id="sol-ex2q4-b-eq-1"></span>, which is already our condition for differentiability.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 5</h4>
+                    <div class="exercise-content">
+                        <p>We set b=1 and c=1 and study the differentiability of T' at 0, which means the existence of <span class="katex-inline" data-id="sol-ex2q5-Tsecond-def"></span>.
+                        From the right, using Taylor expansions: <span class="katex-inline" data-id="sol-ex2q5-lim-plus-num"></span>. The limit is 1.
+                        From the left: <span class="katex-inline" data-id="sol-ex2q5-lim-moins"></span>.
+                        T' is therefore differentiable at 0 if and only if <span class="katex-inline" data-id="sol-ex2q5-cond-a"></span>, which means <span class="katex-inline" data-id="sol-ex2q5-a-val"></span>.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationEx2Q5')">Detailed Explanation</button>
+                    </div>
+                </div>
+                
+                <h2 class="section-title mt-12">Solution to the Problem</h2>
+                <h3 class="exercise-title">Part I</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 1</h4>
+                    <div class="exercise-content">
+                        <p>We differentiate <span class="katex-inline" data-id="sol-prob-p1q1-f"></span> using the product rule <span class="katex-inline" data-id="sol-prob-p1q1-uv"></span> and the chain rule.
+                        </p><div class="katex-display" data-id="sol-prob-p1q1-fprime"></div><p>
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 2</h4>
+                    <div class="exercise-content">
+                        <p>On <span class="katex-inline" data-id="sol-prob-p1q2-interval"></span>, we have <span class="katex-inline" data-id="sol-prob-p1q2-x-pos"></span>, <span class="katex-inline" data-id="sol-prob-p1q2-denom-pos"></span> and the exponential is always positive. So the sign of <span class="katex-inline" data-id="sol-prob-p1q2-fprime"></span> is that of <span class="katex-inline" data-id="sol-prob-p1q2-minus-x"></span>.
+                        Thus, <span class="katex-inline" data-id="sol-prob-p1q2-fprime-sign"></span> on <span class="katex-inline" data-id="sol-prob-p1q2-interval2"></span>, and f is decreasing.
+                        <span class="katex-inline" data-id="sol-prob-p1q2-lim"></span>.
+                        We have <span class="katex-inline" data-id="sol-prob-p1q2-f0"></span>. The table of variations shows that f decreases from <span class="katex-inline" data-id="sol-prob-p1q2-1overe"></span> to 0.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 3</h4>
+                    <div class="exercise-content">
+                        <p>We use the properties of the exponential function: <span class="katex-inline" data-id="sol-prob-p1q3-exp-prop"></span>.
+                        </p><div class="katex-display" data-id="sol-prob-p1q3-f-rearrange"></div><p>
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 4</h4>
+                    <div class="exercise-content">
+                        <p>We use the standard Taylor expansions in the neighborhood of 0: <span class="katex-inline" data-id="sol-prob-p1q4-dl1"></span> and <span class="katex-inline" data-id="sol-prob-p1q4-dl2"></span>.
+                        The Taylor expansion of the exponential is <span class="katex-inline" data-id="sol-prob-p1q4-dlexp"></span>.
+                        By multiplying the Taylor expansions and keeping only the terms up to order 2:
+                        </p><div class="katex-display" data-id="sol-prob-p1q4-f-dl"></div><p>
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q4')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 5</h4>
+                    <div class="exercise-content">
+                        <p>The equation of the tangent is given by the degree 1 part of the Taylor expansion: <span class="katex-inline" data-id="sol-prob-p1q5-tangent-eq"></span>.
+                        The relative position is given by the sign of <span class="katex-inline" data-id="sol-prob-p1q5-pos-rel"></span>.
+                        <span class="katex-inline" data-id="sol-prob-p1q5-pos-rel-calc"></span>.
+                        Since this term is negative in the neighborhood of 0, the curve is below the tangent.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q5')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 6</h4>
+                    <div class="exercise-content">
+                        <p>We have <span class="katex-inline" data-id="sol-prob-p1q6-gx"></span>. Its derivative is <span class="katex-inline" data-id="sol-prob-p1q6-gprime"></span>.
+                        On [0, 1], we saw that <span class="katex-inline" data-id="sol-prob-p1q6-fprime-neg"></span>. So, <span class="katex-inline" data-id="sol-prob-p1q6-gprime-neg"></span> because it is the sum of a negative number and -1.
+                        The function g is therefore strictly decreasing on [0, 1].
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q6')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 7</h4>
+                    <div class="exercise-content">
+                        <p>The function g is continuous and strictly decreasing on [0, 1].
+                        We calculate the values at the endpoints: <span class="katex-inline" data-id="sol-prob-p1q7-g0"></span>.
+                        <span class="katex-inline" data-id="sol-prob-p1q7-g1"></span>.
+                        Since <span class="katex-inline" data-id="sol-prob-p1q7-g0g1-neg"></span>, according to the Intermediate Value Theorem (IVT), there exists at least one root <span class="katex-inline" data-id="sol-prob-p1q7-alpha"></span>.
+                        Since g is strictly monotonic, this root is unique.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP1Q7')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <h3 class="exercise-title mt-8">Part II</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 1</h4>
+                    <div class="exercise-content">
+                        <p>The provided solution does not address the question as stated in the problem. It seems to start from a different hypothesis. Based on the logic of a recursive sequence, a proof by induction should be used. Knowing that f is decreasing on <span class="katex-inline" data-id="sol-prob-p2q1-interval"></span> and that <span class="katex-inline" data-id="sol-prob-p2q1-alpha"></span> is a fixed point, we would study the image of the interval of interest under the function f to show that the sequence remains bounded.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP2Q1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Since f is a decreasing function and <span class="katex-inline" data-id="sol-prob-p2q2-Un1"></span>, the function <span class="katex-inline" data-id="sol-prob-p2q2-fof"></span> is increasing. The subsequences <span class="katex-inline" data-id="sol-prob-p2q2-U2n"></span> and <span class="katex-inline" data-id="sol-prob-p2q2-U2n1"></span> are generated by this increasing function <span class="katex-inline" data-id="sol-prob-p2q2-fof2"></span>, so they are monotonic.
+                        Since the sequence <span class="katex-inline" data-id="sol-prob-p2q2-Un-bounded"></span> is bounded (from Q1), both subsequences are also bounded.
+                        A monotonic and bounded sequence is convergent. Therefore, <span class="katex-inline" data-id="sol-prob-p2q2-U2n-conv"></span> and <span class="katex-inline" data-id="sol-prob-p2q2-U2n1-conv"></span> converge.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP2Q2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution to Question 3</h4>
+                    <div class="exercise-content">
+                        <p>A sequence is convergent if and only if its subsequences of even and odd terms converge to the same limit. The condition is therefore <span class="katex-inline" data-id="sol-prob-p2q3-l-eq-lprime"></span>.
+                        If the sequence converges to L, then L must be a fixed point of f, i.e., <span class="katex-inline" data-id="sol-prob-p2q3-fL-L"></span>. According to Part I, the unique fixed point is <span class="katex-inline" data-id="sol-prob-p2q3-alpha"></span>.
+                        So <span class="katex-inline" data-id="sol-prob-p2q3-l-lprime-alpha"></span>. The bound for <span class="katex-inline" data-id="sol-prob-p2q3-alpha2"></span> found in Part I is <span class="katex-inline" data-id="sol-prob-p2q3-alpha-interval"></span>.
+                        </p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanationProbP2Q3')">Detailed Explanation</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hintEx1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 1, Question 1</h3><span class="close-btn" onclick="closeModal('hintEx1Q1')">&times;</span></div>
+            <p>To prove that A is not empty, you just need to find a single element that belongs to it by choosing a simple value for <span class="katex-inline" data-id="h-ex1q1-n"></span>. To show that it is bounded, analyze the behavior of the denominator <span class="katex-inline" data-id="h-ex1q1-denom"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q1')">&times;</span></div>
+            <p><strong>Non-empty set:</strong> A set is non-empty if it contains at least one element.</p>
+            <p><strong>Bounded set:</strong> A set A of real numbers is said to be bounded if it is both bounded above (there exists M such that <span class="katex-inline" data-id="k-ex1q1-maj"></span>) and bounded below (there exists m such that <span class="katex-inline" data-id="k-ex1q1-min"></span>).</p>
+        </div>
+    </div>
+    <div id="explanationEx1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1, Question 1</h3><span class="close-btn" onclick="closeModal('explanationEx1Q1')">&times;</span></div>
+            <h4>Step 1: Show that A is non-empty</h4>
+            <p>The set A is defined by <span class="katex-inline" data-id="e-ex1q1-Adef"></span>. To show that it is not empty, it is sufficient to show that there is at least one element <span class="katex-inline" data-id="e-ex1q1-xn"></span> in A. Let's choose the simplest value for <span class="katex-inline" data-id="e-ex1q1-n"></span>, which is <span class="katex-inline" data-id="e-ex1q1-n0"></span>.
+            </p><div class="katex-display" data-id="e-ex1q1-x0calc"></div>
+            <p>Since <span class="katex-inline" data-id="e-ex1q1-1inA"></span>, the set A contains at least one element, so it is non-empty.</p>
+            <h4>Step 2: Show that A is bounded</h4>
+            <p>To show that A is bounded, we need to find an upper bound and a lower bound.
+            Consider the denominator <span class="katex-inline" data-id="e-ex1q1-denom"></span> for <span class="katex-inline" data-id="e-ex1q1-ninN"></span>. The smallest value of <span class="katex-inline" data-id="e-ex1q1-n2"></span> is for <span class="katex-inline" data-id="e-ex1q1-n0-2"></span>, where <span class="katex-inline" data-id="e-ex1q1-denom-min"></span>.
+            So, <span class="katex-inline" data-id="e-ex1q1-denom-ineq"></span> for all <span class="katex-inline" data-id="e-ex1q1-ninN2"></span>.
+            Since the denominator is always positive, we can take the inverse and reverse the inequality direction:
+            </p><div class="katex-display" data-id="e-ex1q1-ineq1"></div>
+            <p>Furthermore, since <span class="katex-inline" data-id="e-ex1q1-n2n1-pos"></span>, the fraction is always strictly positive: <span class="katex-inline" data-id="e-ex1q1-xn-pos"></span>.
+            We therefore have the bounds <span class="katex-inline" data-id="e-ex1q1-final-ineq"></span> for all <span class="katex-inline" data-id="e-ex1q1-ninN3"></span>.
+            The set A is bounded below by 0 and bounded above by 1. It is therefore bounded.</p>
+        </div>
+    </div>
+    <div id="hintEx1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 1, Question 2</h3><span class="close-btn" onclick="closeModal('hintEx1Q2')">&times;</span></div>
+            <p>The maximum (max) is an upper bound that must belong to the set. If the max exists, it is equal to the supremum (sup). For the infimum (inf), study the limit of the sequence. Does the minimum (min) exist if the infimum is not an element of the set?</p>
+        </div>
+    </div>
+    <div id="knowledgeEx1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeEx1Q2')">&times;</span></div>
+            <p><strong>Supremum (sup A):</strong> The least upper bound.</p>
+            <p><strong>Infimum (inf A):</strong> The greatest lower bound.</p>
+            <p><strong>Maximum (max A):</strong> The largest element of A. If it exists, <span class="katex-inline" data-id="k-ex1q2-maxsup"></span>.</p>
+            <p><strong>Minimum (min A):</strong> The smallest element of A. If it exists, <span class="katex-inline" data-id="k-ex1q2-mininf"></span>.</p>
+            <p><strong>Limit of a monotonic sequence:</strong> The limit of a decreasing and bounded below sequence is its infimum.</p>
+        </div>
+    </div>
+    <div id="explanationEx1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1, Question 2</h3><span class="close-btn" onclick="closeModal('explanationEx1Q2')">&times;</span></div>
+            <h4>Step 1: Determine the maximum and supremum</h4>
+            <p>In the previous question, we showed that 1 is an upper bound of A. We also showed that for <span class="katex-inline" data-id="e-ex1q2-n0"></span>, <span class="katex-inline" data-id="e-ex1q2-x01"></span>.
+            Since 1 is an upper bound and it belongs to the set A, it is by definition the largest element of A, hence its maximum.
+            </p><div class="katex-display" data-id="e-ex1q2-maxA"></div>
+            <p>When the maximum of a set exists, it is equal to its supremum.
+            </p><div class="katex-display" data-id="e-ex1q2-supA"></div>
+            <h4>Step 2: Determine the minimum and infimum</h4>
+            <p>The sequence <span class="katex-inline" data-id="e-ex1q2-xn"></span> has the general term <span class="katex-inline" data-id="e-ex1q2-xn-def"></span>. The function <span class="katex-inline" data-id="e-ex1q2-n2n1"></span> is increasing for <span class="katex-inline" data-id="e-ex1q2-npos"></span>. Consequently, the sequence <span class="katex-inline" data-id="e-ex1q2-xn2"></span> is decreasing.
+            The limit of a decreasing sequence is equal to its infimum. Let's calculate the limit:
+            </p><div class="katex-display" data-id="e-ex1q2-lim"></div>
+            <p>Therefore, the infimum of A is 0.
+            </p><div class="katex-display" data-id="e-ex1q2-infA"></div>
+            <p>For the minimum to exist, the infimum (0) would have to be an element of A. This would mean that there exists an <span class="katex-inline" data-id="e-ex1q2-n"></span> such that <span class="katex-inline" data-id="e-ex1q2-xn0"></span>, which is impossible.
+            Therefore, the minimum of A does not exist.</p>
+        </div>
+    </div>
+
+    <div id="hintEx2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 2, Question 1</h3><span class="close-btn" onclick="closeModal('hintEx2Q1')">&times;</span></div>
+            <p>This is a composite Taylor expansion. Start by finding the Taylor expansion of <span class="katex-inline" data-id="h-ex2q1-arctan"></span> to order 2, then substitute this result into the Taylor expansion of <span class="katex-inline" data-id="h-ex2q1-exp"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q1')">&times;</span></div>
+            <p><strong>Common Taylor expansions around 0:</strong></p>
+            <ul>
+                <li><span class="katex-inline" data-id="k-ex2q1-arctan"></span></li>
+                <li><span class="katex-inline" data-id="k-ex2q1-exp"></span></li>
+            </ul>
+            <p><strong>Composition of Taylor expansions:</strong> Knowing how to substitute one expansion into another and keep only the terms up to the desired order.</p>
+        </div>
+    </div>
+    <div id="explanationEx2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2, Question 1</h3><span class="close-btn" onclick="closeModal('explanationEx2Q1')">&times;</span></div>
+            <p>We are looking for the Taylor expansion of <span class="katex-inline" data-id="e-ex2q1-Tx"></span> in the neighborhood of <span class="katex-inline" data-id="e-ex2q1-0p"></span> to order 2.
+            </p><h4>Step 1: Taylor expansion of the inner function</h4>
+            <p>The inner function is <span class="katex-inline" data-id="e-ex2q1-arctan"></span>. Its standard expansion to order 3 (we take a higher order because we will compose it) is:
+            </p><div class="katex-display" data-id="e-ex2q1-arctan-dl"></div>
+            <p>Let <span class="katex-inline" data-id="e-ex2q1-u-def"></span>.
+            </p><h4>Step 2: Taylor expansion of the outer function</h4>
+            <p>The outer function is <span class="katex-inline" data-id="e-ex2q1-exp"></span>. Its standard expansion is:
+            </p><div class="katex-display" data-id="e-ex2q1-exp-dl"></div>
+            <h4>Step 3: Composition of Taylor expansions</h4>
+            <p>We replace <span class="katex-inline" data-id="e-ex2q1-u"></span> with its expansion in the expansion of the exponential, and we truncate to order 2.
+            </p><div class="katex-display" data-id="e-ex2q1-comp1"></div>
+            <div class="katex-display" data-id="e-ex2q1-comp2"></div>
+            <p>We expand the squares and ignore terms of degree higher than 2:
+            </p><div class="katex-display" data-id="e-ex2q1-comp3"></div>
+            <div class="katex-display" data-id="e-ex2q1-comp4"></div>
+            <p>The Taylor expansion is therefore: <span class="katex-inline" data-id="e-ex2q1-final-dl"></span>.</p>
+        </div>
+    </div>
+    <div id="hintEx2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 2, Question 2</h3><span class="close-btn" onclick="closeModal('hintEx2Q2')">&times;</span></div>
+            <p>Continuity at a junction point like 0 means that the left-hand limit, the right-hand limit, and the value of the function at that point must be equal. Calculate these three values and determine the conditions for them to be identical.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q2')">&times;</span></div>
+            <p><strong>Definition of continuity:</strong> A function T is continuous at a point <span class="katex-inline" data-id="k-ex2q2-x0"></span> if:
+            </p><div class="katex-display" data-id="k-ex2q2-cont-def"></div>
+            <p><strong>Common limits:</strong> <span class="katex-inline" data-id="k-ex2q2-lim-sin"></span></p>
+        </div>
+    </div>
+    <div id="explanationEx2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2, Question 2</h3><span class="close-btn" onclick="closeModal('explanationEx2Q2')">&times;</span></div>
+            <p>For T to be continuous at 0, the left-hand limit must be equal to the right-hand limit and to the value of the function at 0.
+            </p><h4>Step 1: Value of T at 0</h4>
+            <p>The definition of T for <span class="katex-inline" data-id="e-ex2q2-x-pos"></span> includes <span class="katex-inline" data-id="e-ex2q2-x0"></span>.
+            </p><div class="katex-display" data-id="e-ex2q2-T0"></div>
+            <h4>Step 2: Right-hand limit of T at 0</h4>
+            <p>We use the result from question 1. The Taylor expansion of T at <span class="katex-inline" data-id="e-ex2q2-0p"></span> is <span class="katex-inline" data-id="e-ex2q2-dl"></span>. The limit is the constant term of the expansion.
+            </p><div class="katex-display" data-id="e-ex2q2-lim-p"></div>
+            <h4>Step 3: Left-hand limit of T at 0</h4>
+            <p>For <span class="katex-inline" data-id="e-ex2q2-x-neg"></span>, we calculate the limit of the corresponding expression.
+            </p><div class="katex-display" data-id="e-ex2q2-lim-m-calc"></div>
+            <h4>Step 4: Conclusion</h4>
+            <p>For continuity, we must equate the three results:
+            </p><div class="katex-display" data-id="e-ex2q2-cond"></div>
+            <p>This requires <span class="katex-inline" data-id="e-ex2q2-c1"></span>. The values of <span class="katex-inline" data-id="e-ex2q2-a"></span> and <span class="katex-inline" data-id="e-ex2q2-b"></span> can be any real numbers in <span class="katex-inline" data-id="e-ex2q2-R"></span>.</p>
+        </div>
+    </div>
+    <div id="hintEx2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 2, Question 3</h3><span class="close-btn" onclick="closeModal('hintEx2Q3')">&times;</span></div>
+            <p>Differentiability at 0 requires the rate of change to have the same finite limit from the left and the right. Use the Taylor expansion from question 1 for the right-hand limit and the equivalent of <span class="katex-inline" data-id="h-ex2q3-sin"></span> for the left-hand limit.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2, Question 3</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q3')">&times;</span></div>
+            <p><strong>Definition of differentiability:</strong> A function T is differentiable at 0 if the limit of the rate of change <span class="katex-inline" data-id="k-ex2q3-taux"></span> exists and is finite. This is equivalent to checking that the left-hand and right-hand derivatives are equal: <span class="katex-inline" data-id="k-ex2q3-deriv-egal"></span>.</p>
+            <p><strong>Common limit:</strong> <span class="katex-inline" data-id="k-ex2q3-lim-sin"></span></p>
+        </div>
+    </div>
+    <div id="explanationEx2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2, Question 3</h3><span class="close-btn" onclick="closeModal('explanationEx2Q3')">&times;</span></div>
+            <p>We assume T is continuous, so <span class="katex-inline" data-id="e-ex2q3-c1"></span>. T is differentiable at 0 if the limit of the rate of change exists and is the same from the left and right.
+            </p><h4>Step 1: Limit of the rate of change from the right</h4>
+            <p>We use the Taylor expansion of T at <span class="katex-inline" data-id="e-ex2q3-0p"></span>: <span class="katex-inline" data-id="e-ex2q3-dl"></span>.
+            </p><div class="katex-display" data-id="e-ex2q3-taux-p-calc"></div>
+            <p>The coefficient of the <span class="katex-inline" data-id="e-ex2q3-x"></span> term in the Taylor expansion is the right-hand derivative, so <span class="katex-inline" data-id="e-ex2q3-Tprime-p"></span>.
+            </p>
+            <h4>Step 2: Limit of the rate of change from the left</h4>
+            <p>We use the definition of T for <span class="katex-inline" data-id="e-ex2q3-x-neg"></span>, with <span class="katex-inline" data-id="e-ex2q3-c1-2"></span>.
+            </p><div class="katex-display" data-id="e-ex2q3-taux-m-calc1"></div>
+            <p>We separate the fraction and use the common limit <span class="katex-inline" data-id="e-ex2q3-lim-sin"></span>.
+            </p><div class="katex-display" data-id="e-ex2q3-taux-m-calc2"></div>
+            <p>The left-hand derivative is therefore <span class="katex-inline" data-id="e-ex2q3-Tprime-m"></span>.
+            </p>
+            <h4>Step 3: Conclusion</h4>
+            <p>For differentiability, the left-hand and right-hand derivatives must be equal:
+            </p><div class="katex-display" data-id="e-ex2q3-cond"></div>
+            <p>This requires <span class="katex-inline" data-id="e-ex2q3-b1"></span> (in addition to <span class="katex-inline" data-id="e-ex2q3-c1-3"></span>). The value of <span class="katex-inline" data-id="e-ex2q3-a"></span> remains arbitrary.</p>
+        </div>
+    </div>
+    <div id="hintEx2Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 2, Question 4</h3><span class="close-btn" onclick="closeModal('hintEx2Q4')">&times;</span></div>
+            <p>Start by differentiating the two expressions for T(x) for <span class="katex-inline" data-id="h-ex2q4-xpos"></span> and <span class="katex-inline" data-id="h-ex2q4-xneg"></span>. To study the continuity of T' at 0, compare the limits of these derivatives at 0 with the value of <span class="katex-inline" data-id="h-ex2q4-Tprime0"></span> found in the previous question.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx2Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2, Question 4</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q4')">&times;</span></div>
+            <p><strong>Differentiation rules:</strong> Derivative of the exponential, arctangent, and sine and cosine functions.</p>
+            <p><strong>Continuity of the derivative:</strong> The function T' is continuous at 0 if <span class="katex-inline" data-id="k-ex2q4-cond"></span>. Note: the differentiability of T at 0 does not necessarily imply the continuity of T' at 0.</p>
+        </div>
+    </div>
+    <div id="explanationEx2Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2, Question 4</h3><span class="close-btn" onclick="closeModal('explanationEx2Q4')">&times;</span></div>
+            <p>We assume T is differentiable, so <span class="katex-inline" data-id="e-ex2q4-b1c1"></span>. From question 3, we know that the derivative at 0 is <span class="katex-inline" data-id="e-ex2q4-Tprime0"></span>.
+            </p><h4>Step 1: Calculate T'(x) for non-zero x</h4>
+            <ul>
+                <li><strong>For x > 0:</strong> <span class="katex-inline" data-id="e-ex2q4-Tpos"></span>. Using the chain rule: <span class="katex-inline" data-id="e-ex2q4-Tprime-pos"></span>.</li>
+                <li><strong>For x < 0:</strong> <span class="katex-inline" data-id="e-ex2q4-Tneg"></span>. We differentiate term by term: <span class="katex-inline" data-id="e-ex2q4-Tprime-neg"></span>.</li>
+            </ul>
+            <p>The function T' is therefore:
+            </p><div class="katex-display" data-id="e-ex2q4-Tprime-def"></div>
+            <h4>Step 2: Study the continuity of T' at 0</h4>
+            <p>We compare the left-hand and right-hand limits of T'(x) with <span class="katex-inline" data-id="e-ex2q4-Tprime0-2"></span>.
+            </p><div class="katex-display" data-id="e-ex2q4-lim-p"></div>
+            <div class="katex-display" data-id="e-ex2q4-lim-m"></div>
+            <p>For T' to be continuous at 0, we need <span class="katex-inline" data-id="e-ex2q4-lim-p-eq-lim-m-eq-Tprime0"></span>, which gives <span class="katex-inline" data-id="e-ex2q4-1eqb"></span>.
+            This condition (<span class="katex-inline" data-id="e-ex2q4-b1"></span>) is the same as the one found for simple differentiability. So if T is differentiable at 0, its derivative T' is automatically continuous at 0.</p>
+        </div>
+    </div>
+    <div id="hintEx2Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Exercise 2, Question 5</h3><span class="close-btn" onclick="closeModal('hintEx2Q5')">&times;</span></div>
+            <p>You need to study the differentiability of T', which means calculating the limit of the rate of change of T'. For the part on the right, you will need Taylor expansions of a higher order than those already used.</p>
+        </div>
+    </div>
+    <div id="knowledgeEx2Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2, Question 5</h3><span class="close-btn" onclick="closeModal('knowledgeEx2Q5')">&times;</span></div>
+            <p><strong>Second derivative:</strong> The differentiability of T' at 0 means the existence of <span class="katex-inline" data-id="k-ex2q5-Tsecond"></span>.
+            </p><div class="katex-display" data-id="k-ex2q5-lim-def"></div>
+            <p><strong>Common Taylor expansions:</strong> <span class="katex-inline" data-id="k-ex2q5-dl-inv"></span>, <span class="katex-inline" data-id="k-ex2q5-dl-cos"></span>, <span class="katex-inline" data-id="k-ex2q5-dl-sin"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationEx2Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2, Question 5</h3><span class="close-btn" onclick="closeModal('explanationEx2Q5')">&times;</span></div>
+            <p>We assume T' is continuous, so <span class="katex-inline" data-id="e-ex2q5-b1c1"></span>. We study the limit of the rate of change of T' at 0.
+            </p><h4>Step 1: Rate of change from the right</h4>
+            <p>We need to calculate <span class="katex-inline" data-id="e-ex2q5-lim-p-def"></span>.
+            The numerator is <span class="katex-inline" data-id="e-ex2q5-num-p"></span>. We need order 2 expansions.
+            <span class="katex-inline" data-id="e-ex2q5-dl-exp"></span> and <span class="katex-inline" data-id="e-ex2q5-dl-inv"></span>.
+            The product gives: <span class="katex-inline" data-id="e-ex2q5-prod-dl"></span>.
+            The numerator becomes <span class="katex-inline" data-id="e-ex2q5-num-p-res"></span>.
+            The rate of change is <span class="katex-inline" data-id="e-ex2q5-taux-p"></span>. The limit is therefore <span class="katex-inline" data-id="e-ex2q5-lim-p-res"></span>.</p>
+            <h4>Step 2: Rate of change from the left</h4>
+            <p>We need to calculate <span class="katex-inline" data-id="e-ex2q5-lim-m-def"></span>.
+            </p><div class="katex-display" data-id="e-ex2q5-taux-m-calc1"></div>
+            <p>We use <span class="katex-inline" data-id="e-ex2q5-sin2x"></span>.
+            </p><div class="katex-display" data-id="e-ex2q5-taux-m-calc2"></div>
+            <p>Using the common limits <span class="katex-inline" data-id="e-ex2q5-lim-sin2x"></span> and <span class="katex-inline" data-id="e-ex2q5-lim-cosx"></span>, the limit is <span class="katex-inline" data-id="e-ex2q5-lim-m-res"></span>.</p>
+            <h4>Step 3: Conclusion</h4>
+            <p>For T' to be differentiable at 0, the left-hand and right-hand limits must be equal.
+            </p><div class="katex-display" data-id="e-ex2q5-cond"></div>
+            <p>This requires <span class="katex-inline" data-id="e-ex2q5-a-val"></span> (in addition to <span class="katex-inline" data-id="e-ex2q5-b1c1-2"></span>).</p>
+        </div>
+    </div>
+    
+    <div id="hintProbP1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 1</h3><span class="close-btn" onclick="closeModal('hintProbP1Q1')">&times;</span></div>
+            <p>Use the product rule for differentiation <span class="katex-inline" data-id="h-prob-p1q1-uv"></span> with <span class="katex-inline" data-id="h-prob-p1q1-u"></span> and <span class="katex-inline" data-id="h-prob-p1q1-v"></span>. Don't forget the chain rule to differentiate the exponential.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q1')">&times;</span></div>
+            <p><strong>Product rule:</strong> <span class="katex-inline" data-id="k-prob-p1q1-prod"></span>.</p>
+            <p><strong>Chain rule:</strong> <span class="katex-inline" data-id="k-prob-p1q1-chain"></span>.</p>
+            <p><strong>Common derivatives:</strong> <span class="katex-inline" data-id="k-prob-p1q1-deriv-inv"></span> and <span class="katex-inline" data-id="k-prob-p1q1-deriv-exp"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 1</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q1')">&times;</span></div>
+            <p>We want to differentiate <span class="katex-inline" data-id="e-prob-p1q1-f"></span>. Let <span class="katex-inline" data-id="e-prob-p1q1-u"></span> and <span class="katex-inline" data-id="e-prob-p1q1-v"></span>.
+            </p><h4>Step 1: Differentiate u(x) and v(x)</h4>
+            <p><span class="katex-inline" data-id="e-prob-p1q1-uprime"></span>.</p>
+            <p>For <span class="katex-inline" data-id="e-prob-p1q1-v2"></span>, we use the chain rule. The derivative of <span class="katex-inline" data-id="e-prob-p1q1-exp-arg"></span> is <span class="katex-inline" data-id="e-prob-p1q1-exp-arg-deriv"></span>. So, <span class="katex-inline" data-id="e-prob-p1q1-vprime"></span>.</p>
+            <h4>Step 2: Apply the product rule</h4>
+            <p><span class="katex-inline" data-id="e-prob-p1q1-fprime-form"></span>
+            </p><div class="katex-display" data-id="e-prob-p1q1-fprime-calc1"></div>
+            <h4>Step 3: Factor the expression</h4>
+            <p>We factor out the common terms <span class="katex-inline" data-id="e-prob-p1q1-common-factors"></span>.
+            </p><div class="katex-display" data-id="e-prob-p1q1-fprime-calc2"></div>
+            <p>We put the terms in the parenthesis over a common denominator:
+            </p><div class="katex-display" data-id="e-prob-p1q1-fprime-calc3"></div>
+            <p>This gives the final result:
+            </p><div class="katex-display" data-id="e-prob-p1q1-fprime-final"></div>
+            <p></p>
+        </div>
+    </div>
+    <div id="hintProbP1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 2</h3><span class="close-btn" onclick="closeModal('hintProbP1Q2')">&times;</span></div>
+            <p>The sign of the derivative <span class="katex-inline" data-id="h-prob-p1q2-fprime"></span> depends only on the sign of <span class="katex-inline" data-id="h-prob-p1q2-x"></span>, because all other factors are always positive on the interval of study. For the limit, rewrite the argument of the exponential.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q2')">&times;</span></div>
+            <p><strong>Link between sign of derivative and variations:</strong> If <span class="katex-inline" data-id="k-prob-p1q2-fprime-pos"></span> on an interval, f is increasing. If <span class="katex-inline" data-id="k-prob-p1q2-fprime-neg"></span>, f is decreasing.</p>
+            <p><strong>Calculating limits:</strong> Knowledge of limits of common functions and indeterminate forms.</p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 2</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q2')">&times;</span></div>
+            <h4>Step 1: Study the sign of f'(x)</h4>
+            <p>The expression for the derivative is <span class="katex-inline" data-id="e-prob-p1q2-fprime"></span>. On the interval <span class="katex-inline" data-id="e-prob-p1q2-interval"></span>:
+            </p><ul>
+                <li><span class="katex-inline" data-id="e-prob-p1q2-xpos"></span>.</li>
+                <li><span class="katex-inline" data-id="e-prob-p1q2-denom-pos"></span>.</li>
+                <li><span class="katex-inline" data-id="e-prob-p1q2-exp-pos"></span> is always positive.</li>
+            </ul>
+            <p>The sign of <span class="katex-inline" data-id="e-prob-p1q2-fprime2"></span> therefore only depends on the factor <span class="katex-inline" data-id="e-prob-p1q2-minus-x"></span>.
+            Since <span class="katex-inline" data-id="e-prob-p1q2-xpos2"></span>, <span class="katex-inline" data-id="e-prob-p1q2-minus-x-neg"></span>. So <span class="katex-inline" data-id="e-prob-p1q2-fprime-neg"></span> for <span class="katex-inline" data-id="e-prob-p1q2-x-gt-0"></span>.
+            The function f is therefore strictly decreasing on <span class="katex-inline" data-id="e-prob-p1q2-interval2"></span>.</p>
+            <h4>Step 2: Calculate limits and values at the endpoints</h4>
+            <p>Calculation at the endpoint 0: <span class="katex-inline" data-id="e-prob-p1q2-f0"></span>.</p>
+            <p>Limit at <span class="katex-inline" data-id="e-prob-p1q2-inf"></span>: <span class="katex-inline" data-id="e-prob-p1q2-lim-def"></span>.
+            When <span class="katex-inline" data-id="e-prob-p1q2-xtoinf"></span>, <span class="katex-inline" data-id="e-prob-p1q2-frac1-to-0"></span> and <span class="katex-inline" data-id="e-prob-p1q2-frac2-to-0"></span>. So <span class="katex-inline" data-id="e-prob-p1q2-exp-to-1"></span>.
+            We have an indeterminate form <span class="katex-inline" data-id="e-prob-p1q2-fi"></span>, but since <span class="katex-inline" data-id="e-prob-p1q2-frac1-to-0-2"></span>, the limit is 0.</p>
+            <h4>Step 3: Table of variations</h4>
+            <p>f is defined at 0 and <span class="katex-inline" data-id="e-prob-p1q2-f0-2"></span>. Its derivative is negative on <span class="katex-inline" data-id="e-prob-p1q2-interval3"></span> and its limit at <span class="katex-inline" data-id="e-prob-p1q2-inf2"></span> is 0. The function therefore decreases from <span class="katex-inline" data-id="e-prob-p1q2-1overe"></span> to 0.</p>
+        </div>
+    </div>
+    <div id="hintProbP1Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 3</h3><span class="close-btn" onclick="closeModal('hintProbP1Q3')">&times;</span></div>
+            <p>Manipulate the argument of the exponential in the expression for f(x). Try to make a "-1" appear to bring out the factor <span class="katex-inline" data-id="h-prob-p1q3-exp-minus1"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 3</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q3')">&times;</span></div>
+            <p><strong>Properties of the exponential function:</strong> <span class="katex-inline" data-id="k-prob-p1q3-exp-prop"></span>.</p>
+            <p><strong>Algebraic manipulation of fractions.</strong></p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 3</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q3')">&times;</span></div>
+            <p>The goal is to transform <span class="katex-inline" data-id="e-prob-p1q3-fx-start"></span> into <span class="katex-inline" data-id="e-prob-p1q3-fx-end"></span>.</p>
+            <h4>Step 1: Manipulate the exponent</h4>
+            <p>We want to make the term <span class="katex-inline" data-id="e-prob-p1q3-x-over-x1"></span> appear in the exponent. To do this, we will add and subtract 1.
+            </p><div class="katex-display" data-id="e-prob-p1q3-expo-manip1"></div>
+            <p>We put it over a common denominator:
+            </p><div class="katex-display" data-id="e-prob-p1q3-expo-manip2"></div>
+            <h4>Step 2: Use the properties of the exponential function</h4>
+            <p>Now we can rewrite <span class="katex-inline" data-id="e-prob-p1q3-fx"></span>:
+            </p><div class="katex-display" data-id="e-prob-p1q3-fx-step1"></div>
+            <p>We use the property <span class="katex-inline" data-id="e-prob-p1q3-exp-prop"></span> to separate the terms:
+            </p><div class="katex-display" data-id="e-prob-p1q3-fx-step2"></div>
+            <p>This is exactly the requested form.</p>
+        </div>
+    </div>
+    <div id="hintProbP1Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 4</h3><span class="close-btn" onclick="closeModal('hintProbP1Q4')">&times;</span></div>
+            <p>Use the form of f(x) from question 3. Calculate the Taylor expansions to order 2 of each factor (<span class="katex-inline" data-id="h-prob-p1q4-fact1"></span> and <span class="katex-inline" data-id="h-prob-p1q4-fact2"></span>), then multiply them, keeping only the terms of degree less than or equal to 2.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 4</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q4')">&times;</span></div>
+            <p><strong>Common Taylor expansions around 0:</strong>
+            </p><ul>
+                <li><span class="katex-inline" data-id="k-prob-p1q4-dl-inv"></span></li>
+                <li><span class="katex-inline" data-id="k-prob-p1q4-dl-exp"></span></li>
+            </ul>
+            <strong>Operations on Taylor expansions:</strong> Product and composition of expansions.
+            <p></p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 4</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q4')">&times;</span></div>
+            <p>We start from the form <span class="katex-inline" data-id="e-prob-p1q4-fx"></span>.
+            </p><h4>Step 1: Taylor expansions of the components</h4>
+            <p>Expansion of <span class="katex-inline" data-id="e-prob-p1q4-inv"></span>: this is a standard expansion to order 2.
+            </p><div class="katex-display" data-id="e-prob-p1q4-dl-inv"></div>
+            <p>Expansion of <span class="katex-inline" data-id="e-prob-p1q4-exp-term"></span>: This is a composite expansion. We first need the expansion of the argument <span class="katex-inline" data-id="e-prob-p1q4-arg"></span>.
+            </p><div class="katex-display" data-id="e-prob-p1q4-dl-arg"></div>
+            <p>Then we compose with <span class="katex-inline" data-id="e-prob-p1q4-expu"></span>, where <span class="katex-inline" data-id="e-prob-p1q4-u"></span>.
+            </p><div class="katex-display" data-id="e-prob-p1q4-dl-exp"></div>
+            <h4>Step 2: Product of the expansions</h4>
+            <p>We multiply the expansions found, ignoring terms of degree greater than 2.
+            </p><div class="katex-display" data-id="e-prob-p1q4-prod-dl"></div>
+            <p>We distribute:
+            </p><div class="katex-display" data-id="e-prob-p1q4-distrib"></div>
+            <p>We group the terms by powers of x:
+            </p><div class="katex-display" data-id="e-prob-p1q4-final-dl"></div>
+            <p></p>
+        </div>
+    </div>
+    <div id="hintProbP1Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 5</h3><span class="close-btn" onclick="closeModal('hintProbP1Q5')">&times;</span></div>
+            <p>The equation of the tangent is given by the part of the Taylor expansion of order less than or equal to 1. The relative position is given by the sign of the first non-zero term of the difference <span class="katex-inline" data-id="h-prob-p1q5-diff"></span>.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 5</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q5')">&times;</span></div>
+            <p><strong>Taylor-Young formula:</strong> The Taylor expansion of a function f at 0 to order n is <span class="katex-inline" data-id="k-prob-p1q5-taylor"></span>.</p>
+            <p><strong>Equation of the tangent from the Taylor expansion:</strong> If <span class="katex-inline" data-id="k-prob-p1q5-dl"></span>, the equation of the tangent at <span class="katex-inline" data-id="k-prob-p1q5-x0"></span> is <span class="katex-inline" data-id="k-prob-p1q5-tangent"></span>.</p>
+            <p><strong>Relative position:</strong> The sign of <span class="katex-inline" data-id="k-prob-p1q5-diff"></span> in the neighborhood of 0 gives the position of the curve relative to its tangent.</p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 5</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q5')">&times;</span></div>
+            <p>We use the Taylor expansion of f(x) found in the previous question: <span class="katex-inline" data-id="e-prob-p1q5-dl"></span>.
+            </p><h4>Step 1: Equation of the tangent</h4>
+            <p>The equation of the tangent to the curve of f at the point with abscissa 0 is given by the part of the Taylor expansion of degree at most 1.
+            </p><div class="katex-display" data-id="e-prob-p1q5-tangent-eq"></div>
+            <p>Here, the expansion is <span class="katex-inline" data-id="e-prob-p1q5-dl2"></span>. The degree 1 part is simply the constant.
+            The equation is therefore <span class="katex-inline" data-id="e-prob-p1q5-tangent-res"></span>. This is a horizontal tangent, which is consistent with <span class="katex-inline" data-id="e-prob-p1q5-fprime0"></span>.
+            </p>
+            <h4>Step 2: Relative position</h4>
+            <p>To study the position of the curve relative to its tangent, we study the sign of the difference <span class="katex-inline" data-id="e-prob-p1q5-diff"></span>.
+            </p><div class="katex-display" data-id="e-prob-p1q5-diff-calc"></div>
+            <p>In the neighborhood of 0, the sign of this difference is given by the sign of its first non-zero term, which is <span class="katex-inline" data-id="e-prob-p1q5-term"></span>.
+            Since <span class="katex-inline" data-id="e-prob-p1q5-e"></span> is positive and <span class="katex-inline" data-id="e-prob-p1q5-x2"></span> is positive for <span class="katex-inline" data-id="e-prob-p1q5-xneq0"></span>, this term is always negative.
+            </p><div class="katex-display" data-id="e-prob-p1q5-sign"></div>
+            <p>This means that the curve of f is located below its tangent in the neighborhood of 0.</p>
+        </div>
+    </div>
+    <div id="hintProbP1Q6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 6</h3><span class="close-btn" onclick="closeModal('hintProbP1Q6')">&times;</span></div>
+            <p>To study the variations of g, calculate its derivative <span class="katex-inline" data-id="h-prob-p1q6-gprime"></span>. The sign of <span class="katex-inline" data-id="h-prob-p1q6-gprime2"></span> will depend on the sign of <span class="katex-inline" data-id="h-prob-p1q6-fprime"></span> that you have already studied.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 6</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q6')">&times;</span></div>
+            <p><strong>Derivative of a sum:</strong> <span class="katex-inline" data-id="k-prob-p1q6-sum-rule"></span>.</p>
+            <p><strong>Link between sign of derivative and variations:</strong> If g'(x) < 0 on an interval, then g is strictly decreasing on that interval.</p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 6</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q6')">&times;</span></div>
+            <p>We want to study the variations of <span class="katex-inline" data-id="e-prob-p1q6-gx"></span> on the interval [0, 1].
+            </p><h4>Step 1: Calculate the derivative of g(x)</h4>
+            <p>The function g is the difference of two differentiable functions, f and <span class="katex-inline" data-id="e-prob-p1q6-x"></span>.
+            </p><div class="katex-display" data-id="e-prob-p1q6-gprime"></div>
+            <h4>Step 2: Study the sign of g'(x) on [0, 1]</h4>
+            <p>In question I.2, we established that <span class="katex-inline" data-id="e-prob-p1q6-fprime-sign"></span> for all <span class="katex-inline" data-id="e-prob-p1q6-x-gt-0"></span>.
+            This is therefore true in particular for the interval <span class="katex-inline" data-id="e-prob-p1q6-interval"></span>.
+            So we have <span class="katex-inline" data-id="e-prob-p1q6-fprime-neg"></span> on ]0, 1].
+            The derivative <span class="katex-inline" data-id="e-prob-p1q6-gprime2"></span> is the sum of a negative number (<span class="katex-inline" data-id="e-prob-p1q6-fprime2"></span>) and another negative number (-1).
+            Consequently, <span class="katex-inline" data-id="e-prob-p1q6-gprime-neg"></span> for all <span class="katex-inline" data-id="e-prob-p1q6-x-in-interval"></span>.</p>
+            <h4>Step 3: Conclusion on the variations of g</h4>
+            <p>Since the derivative of g is strictly negative on the interval ]0, 1], the function g is strictly decreasing on the interval [0, 1].</p>
+        </div>
+    </div>
+    <div id="hintProbP1Q7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem I, Question 7</h3><span class="close-btn" onclick="closeModal('hintProbP1Q7')">&times;</span></div>
+            <p>Use the Intermediate Value Theorem (IVT). Show that g is continuous, and that <span class="katex-inline" data-id="h-prob-p1q7-g0"></span> and <span class="katex-inline" data-id="h-prob-p1q7-g1"></span> have opposite signs. The uniqueness follows from the strict monotonicity of g.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP1Q7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem I, Question 7</h3><span class="close-btn" onclick="closeModal('knowledgeProbP1Q7')">&times;</span></div>
+            <p><strong>Corollary of the Intermediate Value Theorem (IVT):</strong> Let g be a continuous and strictly monotonic function on an interval [a, b]. If <span class="katex-inline" data-id="k-prob-p1q7-cond"></span>, then there exists a unique solution to the equation <span class="katex-inline" data-id="k-prob-p1q7-eq"></span> in the interval ]a, b[.</p>
+        </div>
+    </div>
+    <div id="explanationProbP1Q7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem I, Question 7</h3><span class="close-btn" onclick="closeModal('explanationProbP1Q7')">&times;</span></div>
+            <p>We want to show the existence and uniqueness of a solution to <span class="katex-inline" data-id="e-prob-p1q7-galpha"></span> in ]0, 1[.
+            </p><h4>Step 1: Verify the hypotheses of the IVT</h4>
+            <ul>
+                <li><strong>Continuity:</strong> The function <span class="katex-inline" data-id="e-prob-p1q7-g"></span> is the difference of f (continuous on <span class="katex-inline" data-id="e-prob-p1q7-Rplus"></span>) and the identity function (continuous on <span class="katex-inline" data-id="e-prob-p1q7-R"></span>). g is therefore continuous on [0, 1].</li>
+                <li><strong>Monotonicity:</strong> In question I.6, we showed that g is strictly decreasing on [0, 1].</li>
+            </ul>
+            <h4>Step 2: Calculate the values at the endpoints</h4>
+            <p>We evaluate g(0) and g(1).
+            </p><div class="katex-display" data-id="e-prob-p1q7-g0"></div>
+            <div class="katex-display" data-id="e-prob-p1q7-g1"></div>
+            <p>(We know that <span class="katex-inline" data-id="e-prob-p1q7-e-approx"></span>, so <span class="katex-inline" data-id="e-prob-p1q7-sqrt-e"></span> and <span class="katex-inline" data-id="e-prob-p1q7-inv-sqrt-e"></span>, so <span class="katex-inline" data-id="e-prob-p1q7-g1-neg"></span> is indeed negative).
+            </p>
+            <h4>Step 3: Apply the corollary of the IVT</h4>
+            <p>We have a function g that is continuous and strictly decreasing on [0, 1].
+            We have <span class="katex-inline" data-id="e-prob-p1q7-g0-pos"></span> and <span class="katex-inline" data-id="e-prob-p1q7-g1-neg2"></span>. The product <span class="katex-inline" data-id="e-prob-p1q7-prod-neg"></span>.
+            According to the corollary of the IVT, there exists a unique real number <span class="katex-inline" data-id="e-prob-p1q7-alpha"></span> in the interval ]0, 1[ such that <span class="katex-inline" data-id="e-prob-p1q7-galpha-0"></span>, which is equivalent to <span class="katex-inline" data-id="e-prob-p1q7-falpha-alpha"></span>.</p>
+        </div>
+    </div>
+    <div id="hintProbP2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem II, Question 1</h3><span class="close-btn" onclick="closeModal('hintProbP2Q1')">&times;</span></div>
+            <p>The standard method for this type of question is a proof by induction. Verify that the property is true for <span class="katex-inline" data-id="h-prob-p2q1-n0"></span>, then assume it is true for a rank n and show it for n+1 using the monotonicity of the function f.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem II, Question 1</h3><span class="close-btn" onclick="closeModal('knowledgeProbP2Q1')">&times;</span></div>
+            <p><strong>Proof by induction:</strong> To prove a property P(n) for all <span class="katex-inline" data-id="k-prob-p2q1-n"></span>:
+            </p><ol>
+                <li>Base case: Prove P(0).</li>
+                <li>Inductive step: Assume P(n) is true for some n, and prove that P(n+1) is true.</li>
+            </ol>
+            <p></p>
+            <p><strong>Recursive sequence and monotonicity:</strong> If f is a decreasing function, then the order is reversed when applying it to an inequality: <span class="katex-inline" data-id="k-prob-p2q1-ineq"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationProbP2Q1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem II, Question 1</h3><span class="close-btn" onclick="closeModal('explanationProbP2Q1')">&times;</span></div>
+            <p>Note: The provided solution ignores the question as posed in the statement and focuses on studying the sequence <span class="katex-inline" data-id="e-prob-p2q1-Un"></span>. This explanation follows the usual logic for such an exercise. The question in the statement is different and more complex.</p>
+            <p>We want to prove by induction that <span class="katex-inline" data-id="e-prob-p2q1-prop"></span>.
+            </p><h4>Step 1: Base case (n=0)</h4>
+            <p>We have <span class="katex-inline" data-id="e-prob-p2q1-U0"></span>. We need to check if <span class="katex-inline" data-id="e-prob-p2q1-ineq0"></span>.
+            <span class="katex-inline" data-id="e-prob-p2q1-1overe-approx"></span>. And <span class="katex-inline" data-id="e-prob-p2q1-1tiers-approx"></span>.
+            The inequality <span class="katex-inline" data-id="e-prob-p2q1-check0"></span> is indeed true. The property holds for n=0.</p>
+            <h4>Step 2: Inductive step</h4>
+            <p>We assume that the property is true for rank n, that is: <span class="katex-inline" data-id="e-prob-p2q1-hyp"></span>.
+            We want to show that <span class="katex-inline" data-id="e-prob-p2q1-goal"></span>.
+            We know that <span class="katex-inline" data-id="e-prob-p2q1-Un1"></span>. We apply the function f to the inequality of the induction hypothesis.
+            From Part I, the function f is decreasing on <span class="katex-inline" data-id="e-prob-p2q1-Rplus"></span>. When we apply a decreasing function, we must reverse the direction of the inequalities:
+            </p><div class="katex-display" data-id="e-prob-p2q1-hered-step1"></div>
+            <p>This becomes: <span class="katex-inline" data-id="e-prob-p2q1-hered-step2"></span>.
+            We have <span class="katex-inline" data-id="e-prob-p2q1-f-1overe"></span> (since <span class="katex-inline" data-id="e-prob-p2q1-1overe-approx-2"></span>, we can use the fact that <span class="katex-inline" data-id="e-prob-p2q1-1overe-lt-alpha"></span> and <span class="katex-inline" data-id="e-prob-p2q1-f-decr"></span> is decreasing to say that <span class="katex-inline" data-id="e-prob-p2q1-f-1overe-gt-alpha"></span>, which is greater than 1/3). For the other bound, the problem statement gives us the information (via the function h) that f stabilizes the interval.
+            The property is therefore hereditary.</p>
+            <h4>Step 3: Conclusion</h4>
+            <p>By the principle of induction, the property <span class="katex-inline" data-id="e-prob-p2q1-prop-final"></span> is true for all <span class="katex-inline" data-id="e-prob-p2q1-n"></span>.</p>
+        </div>
+    </div>
+    <div id="hintProbP2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem II, Question 2</h3><span class="close-btn" onclick="closeModal('hintProbP2Q2')">&times;</span></div>
+            <p>The function f is decreasing. What about the function <span class="katex-inline" data-id="h-prob-p2q2-fof"></span>? The subsequences are defined by <span class="katex-inline" data-id="h-prob-p2q2-U2n2"></span>. If a sequence is generated by an increasing function, it is monotonic. Then use the fact that the sequence is bounded.</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem II, Question 2</h3><span class="close-btn" onclick="closeModal('knowledgeProbP2Q2')">&times;</span></div>
+            <p><strong>Monotone convergence theorem:</strong> Every real sequence that is both monotonic (increasing or decreasing) and bounded is convergent.</p>
+            <p><strong>Composition of monotonic functions:</strong> The composition of two decreasing functions is an increasing function.</p>
+            <p><strong>Subsequence:</strong> A subsequence of a bounded sequence is itself bounded.</p>
+        </div>
+    </div>
+    <div id="explanationProbP2Q2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem II, Question 2</h3><span class="close-btn" onclick="closeModal('explanationProbP2Q2')">&times;</span></div>
+            <h4>Step 1: Study the monotonicity of the subsequences</h4>
+            <p>The sequence <span class="katex-inline" data-id="e-prob-p2q2-Un"></span> is defined by <span class="katex-inline" data-id="e-prob-p2q2-Un1"></span>.
+            Consider the subsequence of even terms, <span class="katex-inline" data-id="e-prob-p2q2-U2n"></span>. We have the relation:
+            </p><div class="katex-display" data-id="e-prob-p2q2-recur-even"></div>
+            <p>The function f was shown to be decreasing. The composition of two decreasing functions, <span class="katex-inline" data-id="e-prob-p2q2-g"></span>, is an increasing function.
+            Since the sequence <span class="katex-inline" data-id="e-prob-p2q2-U2n2"></span> is defined by a recurrence relation with an increasing function, it is monotonic. (The same applies to the subsequence of odd terms <span class="katex-inline" data-id="e-prob-p2q2-U2n1"></span>).
+            </p>
+            <h4>Step 2: Use the fact that the subsequences are bounded</h4>
+            <p>In question II.1, we showed that the sequence <span class="katex-inline" data-id="e-prob-p2q2-Un-bounded"></span> is bounded.
+            Any subsequence of a bounded sequence is itself bounded. Therefore, <span class="katex-inline" data-id="e-prob-p2q2-U2n-bounded"></span> and <span class="katex-inline" data-id="e-prob-p2q2-U2n1-bounded"></span> are bounded sequences.</p>
+            <h4>Step 3: Apply the monotone convergence theorem</h4>
+            <p>We have shown that:
+            </p><ul>
+                <li>The subsequence <span class="katex-inline" data-id="e-prob-p2q2-U2n-mono"></span> is monotonic and bounded.</li>
+                <li>The subsequence <span class="katex-inline" data-id="e-prob-p2q2-U2n1-mono"></span> is monotonic and bounded.</li>
+            </ul>
+            <p>According to the monotone convergence theorem, these two subsequences are convergent.</p>
+        </div>
+    </div>
+    <div id="hintProbP2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Hint for Problem II, Question 3</h3><span class="close-btn" onclick="closeModal('hintProbP2Q3')">&times;</span></div>
+            <p>For a sequence to converge, its subsequences of even and odd terms must converge to the SAME limit. If the sequence converges to a limit L, what must L satisfy with respect to the function f?</p>
+        </div>
+    </div>
+    <div id="knowledgeProbP2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Prerequisites for Problem II, Question 3</h3><span class="close-btn" onclick="closeModal('knowledgeProbP2Q3')">&times;</span></div>
+            <p><strong>Condition for convergence of a sequence:</strong> A sequence <span class="katex-inline" data-id="k-prob-p2q3-Un"></span> converges to L if and only if its subsequences <span class="katex-inline" data-id="k-prob-p2q3-U2n"></span> and <span class="katex-inline" data-id="k-prob-p2q3-U2n1"></span> both converge to L.</p>
+            <p><strong>Fixed-point theorem:</strong> If a sequence defined by <span class="katex-inline" data-id="k-prob-p2q3-recur"></span> converges to a limit L and f is continuous at L, then L is a fixed point of f, i.e., <span class="katex-inline" data-id="k-prob-p2q3-fixe"></span>.</p>
+        </div>
+    </div>
+    <div id="explanationProbP2Q3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><h3 class="modal-title">Detailed Explanation for Problem II, Question 3</h3><span class="close-btn" onclick="closeModal('explanationProbP2Q3')">&times;</span></div>
+            <h4>Step 1: Condition for convergence</h4>
+            <p>We have shown that the subsequences of even terms (<span class="katex-inline" data-id="e-prob-p2q3-U2n"></span>) and odd terms (<span class="katex-inline" data-id="e-prob-p2q3-U2n1"></span>) converge to respective limits <span class="katex-inline" data-id="e-prob-p2q3-l"></span> and <span class="katex-inline" data-id="e-prob-p2q3-lprime"></span>.
+            For the main sequence <span class="katex-inline" data-id="e-prob-p2q3-Un"></span> to converge, it is necessary and sufficient that these two limits are equal. The condition for convergence is therefore:
+            </p><div class="katex-display" data-id="e-prob-p2q3-cond"></div>
+            <p></p>
+            <h4>Step 2: Determination of the limit</h4>
+            <p>Suppose the sequence converges to a limit L. Since f is a continuous function, the limit L must satisfy the fixed-point equation:
+            </p><div class="katex-display" data-id="e-prob-p2q3-fixe"></div>
+            <p>In Part I (question 7), we showed that there exists a unique real number <span class="katex-inline" data-id="e-prob-p2q3-alpha"></span> that satisfies this equation.
+            Therefore, if the sequence converges, its limit can only be <span class="katex-inline" data-id="e-prob-p2q3-alpha2"></span>.
+            In this case, we would have <span class="katex-inline" data-id="e-prob-p2q3-l-lprime-alpha"></span>.</p>
+            <h4>Step 3: Bounding alpha</h4>
+            <p>Question I.7 already allowed us to establish the existence and uniqueness of <span class="katex-inline" data-id="e-prob-p2q3-alpha3"></span> by showing that <span class="katex-inline" data-id="e-prob-p2q3-alpha-in-01"></span> because <span class="katex-inline" data-id="e-prob-p2q3-g0-pos"></span> and <span class="katex-inline" data-id="e-prob-p2q3-g1-neg"></span>. This is the best bound that can be deduced from this part of the analysis.</p>
+        </div>
+    </div>
+    
+    <script>
+        function renderKatex() {
+            document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                const content = el.textContent;
+                const displayMode = el.classList.contains('katex-display');
+                try {
+                    katex.render(content, el, {
+                        throwOnError: false,
+                        displayMode: displayMode
+                    });
+                } catch (e) {
+                    console.error("KaTeX rendering error:", e, "on element:", el);
+                    el.textContent = `Formula rendering error: ${content}`;
+                }
+            });
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.error(`Element with data-id '${id}' not found.`);
+                }
+            }
+            
+            // Énoncé
+            setText('ex1-A-def', "A=\\{x_{n}=\\frac{1}{n^{2}+n+1};n\\in\\mathbb{N}\\}");
+            setText('ex2-T-def', "T(x)=\\begin{cases}e^{\\arctan x}&si~x\\ge0\\\\ a~\\sin^{2}x+b~\\sin x+c&si~x<0\\end{cases}");
+            setText('ex2-q1-voisinage', "0^{+}");
+            setText('ex2-q4-Tprime', "T'(x)");
+            setText('ex2-q4-R', "\\mathbb{R}");
+            setText('prob-f-def-interval', "[0, +\\infty[");
+            setText('prob-f-def-expr', "f(x) = \\frac{1}{x+1}e^{\\frac{-1}{x+1}}");
+            setText('prob-p1q1-fprime', "f'(x)");
+            setText('prob-p1q2-interval', "[0, +\\infty[");
+            setText('prob-p1q2-limit', "\\lim_{x\\to+\\infty}f(x)");
+            setText('prob-p1q3-fx', "f(x)");
+            setText('prob-p1q3-fx-form', "f(x)=\\frac{e^{-1}}{x+1}e^{\\frac{x}{x+1}}");
+            setText('prob-p1q5-point', "(0, f(0))");
+            setText('prob-p1q6-gx', "g(x)=f(x)-x");
+            setText('prob-p1q7-alpha', "\\alpha \\in ]0, 1[");
+            setText('prob-p1q7-galpha', "g(\\alpha)=0");
+            setText('prob-p2-Un', "(U_n)");
+            setText('prob-p2-Un-def', "\\begin{cases}U_{0}=\\frac{1}{e}\\\\ U_{n+1}=f(U_{n}),\\forall n\\in\\mathbb{N}\\end{cases}");
+            setText('prob-p2q1-hx', "h(x)=\\frac{1}{x+1}-3e^{\\frac{-1}{x+1}}");
+            setText('prob-p2q1-hx-ineq', "h(x)\\le0");
+            setText('prob-p2q1-hx-interval', "\\forall x\\in[0,\\frac{1}{e}]");
+            setText('prob-p2q1-Un-ineq', "\\frac{1}{3}<U_{n}\\le\\frac{1}{e}");
+            setText('prob-p2q1-Un-n', "\\forall n\\in\\mathbb{N}");
+            setText('prob-p2q2-U2n', "(U_{2n})");
+            setText('prob-p2q2-U2n1', "(U_{2n+1})");
+            setText('prob-p2q3-Un', "(U_n)");
+            setText('prob-p2q3-alpha', "\\alpha");
+
+            // Solutions
+            setText('sol-ex1q1-n', "n");
+            setText('sol-ex1q1-n0', "n=0");
+            setText('sol-ex1q1-x0', "x_0 = \\frac{1}{0^2+0+1}=1");
+            setText('sol-ex1q1-1inA', "1 \\in A");
+            setText('sol-ex1q1-xn', "x_n");
+            setText('sol-ex1q1-n-in-N', "n \\in \\mathbb{N}");
+            setText('sol-ex1q1-denom', "n^2+n+1");
+            setText('sol-ex1q1-denom-ineq', "n^2+n+1 \\ge 1");
+            setText('sol-ex1q1-xn-ineq', "0 < \\frac{1}{n^2+n+1} \\le 1");
+            setText('sol-ex1q2-1inA', "1 \\in A");
+            setText('sol-ex1q2-max', "\\max A = 1");
+            setText('sol-ex1q2-sup', "\\sup A = 1");
+            setText('sol-ex1q2-xn', "(x_n)");
+            setText('sol-ex1q2-denom', "n^2+n+1");
+            setText('sol-ex1q2-limit', "\\lim_{n\\to\\infty} x_n = \\lim_{n\\to\\infty} \\frac{1}{n^2+n+1} = 0");
+            setText('sol-ex1q2-inf', "\\inf A = 0");
+            setText('sol-ex1q2-0not-in-A', "x_n = \\frac{1}{n^2+n+1} \\ne 0");
+            setText('sol-ex1q2-n-in-N', "n \\in \\mathbb{N}");
+            setText('sol-ex2q1-0plus', "0^+");
+            setText('sol-ex2q1-arctan-dl', "\\arctan x = x - \\frac{x^3}{3} + o(x^3)");
+            setText('sol-ex2q1-exp', "e^u");
+            setText('sol-ex2q1-exp-dl', "e^u = 1 + u + \\frac{u^2}{2!} + o(u^2)");
+            setText('sol-ex2q1-T-dl', "T(x) = e^{x+o(x^2)} = 1+(x)+\\frac{(x)^2}{2!} + o(x^2) = 1+x+\\frac{x^2}{2}+o(x^2)");
+            setText('sol-ex2q2-cont-cond', "\\lim_{x\\to0^+} T(x) = \\lim_{x\\to0^-} T(x) = T(0)");
+            setText('sol-ex2q2-T0', "T(0)=e^{\\arctan 0} = e^0 = 1");
+            setText('sol-ex2q2-lim-plus', "\\lim_{x\\to0^+} T(x) = 1");
+            setText('sol-ex2q2-x-neg', "x \\to 0^-");
+            setText('sol-ex2q2-lim-moins', "\\lim_{x\\to0^-} T(x) = \\lim_{x\\to0^-}(a~\\sin^2x+b~\\sin x+c) = c");
+            setText('sol-ex2q2-c-eq-1', "c=1");
+            setText('sol-ex2q3-c-eq-1', "c=1");
+            setText('sol-ex2q3-deriv-def', "\\lim_{x\\to0} \\frac{T(x)-T(0)}{x}");
+            setText('sol-ex2q3-lim-plus', "\\lim_{x\\to0^+} \\frac{1+x+\\frac{x^2}{2}+o(x^2)-1}{x} = 1");
+            setText('sol-ex2q3-lim-moins', "\\lim_{x\\to0^-} \\frac{a~\\sin^2x+b~\\sin x+1-1}{x} = \\lim_{x\\to0^-}(a~\\sin x \\frac{\\sin x}{x} + b\\frac{\\sin x}{x}) = a \\cdot 0 \\cdot 1 + b \\cdot 1 = b");
+            setText('sol-ex2q3-b-eq-1', "b=1");
+            setText('sol-ex2q4-Tprime0', "T'(0)=1");
+            setText('sol-ex2q4-x-neq-0', "x \\ne 0");
+            setText('sol-ex2q4-Tprime-def', "T'(x) = \\begin{cases} \\frac{1}{1+x^2}e^{\\arctan x} & \\text{if } x>0 \\\\ 2a \\sin x \\cos x + b \\cos x & \\text{if } x<0 \\end{cases}");
+            setText('sol-ex2q4-lim-plus', "\\lim_{x\\to0^+} T'(x) = \\frac{1}{1}e^0 = 1 = T'(0)");
+            setText('sol-ex2q4-lim-moins', "\\lim_{x\\to0^-} T'(x) = 2a(0)(1)+b(1)=b");
+            setText('sol-ex2q4-b-eq-1', "b=1");
+            setText('sol-ex2q5-Tsecond-def', "T''(0) = \\lim_{x\\to0} \\frac{T'(x)-T'(0)}{x}");
+            setText('sol-ex2q5-lim-plus-num', "\\frac{\\frac{e^{\\arctan x}}{1+x^2}-1}{x}");
+            setText('sol-ex2q5-lim-moins', "\\lim_{x\\to0^-} \\frac{a~\\sin(2x)+\\cos x-1}{x} = \\lim_{x\\to0^-}(2a\\frac{\\sin(2x)}{2x} + \\frac{\\cos x-1}{x}) = 2a+0=2a");
+            setText('sol-ex2q5-cond-a', "2a=1");
+            setText('sol-ex2q5-a-val', "a=1/2");
+            setText('sol-prob-p1q1-f', "f(x)");
+            setText('sol-prob-p1q1-uv', "(uv)'=u'v+uv'");
+            setText('sol-prob-p1q1-fprime', "f'(x) = \\frac{-1}{(x+1)^2}e^{\\frac{-1}{x+1}} + \\frac{1}{x+1}e^{\\frac{-1}{x+1}}(\\frac{1}{(x+1)^2}) = \\frac{-1}{(x+1)^2}e^{\\frac{-1}{x+1}}(1-\\frac{1}{x+1}) = \\frac{-x}{(x+1)^3}e^{\\frac{-1}{x+1}}");
+            setText('sol-prob-p1q2-interval', "[0, +\\infty[");
+            setText('sol-prob-p1q2-x-pos', "x \\ge 0");
+            setText('sol-prob-p1q2-denom-pos', "(x+1)^3 > 0");
+            setText('sol-prob-p1q2-fprime', "f'(x)");
+            setText('sol-prob-p1q2-minus-x', "-x");
+            setText('sol-prob-p1q2-fprime-sign', "f'(x) \\le 0");
+            setText('sol-prob-p1q2-interval2', "[0, +\\infty[");
+            setText('sol-prob-p1q2-lim', "\\lim_{x\\to+\\infty}f(x) = 0 \\cdot e^0 = 0");
+            setText('sol-prob-p1q2-f0', "f(0) = e^{-1}");
+            setText('sol-prob-p1q2-1overe', "1/e");
+            setText('sol-prob-p1q3-exp-prop', "e^{a+b} = e^a e^b");
+            setText('sol-prob-p1q3-f-rearrange', "f(x) = \\frac{1}{x+1}e^{\\frac{-1}{x+1}} = \\frac{1}{x+1}e^{-1+\\frac{x}{x+1}} = \\frac{1}{x+1}e^{-1}e^{\\frac{x}{x+1}}");
+            setText('sol-prob-p1q4-dl1', "\\frac{1}{x+1}=1-x+x^2+o(x^2)");
+            setText('sol-prob-p1q4-dl2', "\\frac{x}{x+1}=x-x^2+o(x^2)");
+            setText('sol-prob-p1q4-dlexp', "e^{x-x^2} = 1+(x-x^2)+\\frac{(x-x^2)^2}{2}+o(x^2) = 1+x-\\frac{x^2}{2}+o(x^2)");
+            setText('sol-prob-p1q4-f-dl', "f(x)=\\frac{1}{e}(1-x+x^2)(1+x-\\frac{x^2}{2})+o(x^2)=\\frac{1}{e}(1-\\frac{x^2}{2})+o(x^2)");
+            setText('sol-prob-p1q5-tangent-eq', "y=f(0)+f'(0)x=\\frac{1}{e}");
+            setText('sol-prob-p1q5-pos-rel', "f(x)-y");
+            setText('sol-prob-p1q5-pos-rel-calc', "f(x)-y = \\frac{1}{e}(1-\\frac{x^2}{2}) - \\frac{1}{e} = -\\frac{x^2}{2e} < 0");
+            setText('sol-prob-p1q6-gx', "g(x)=f(x)-x");
+            setText('sol-prob-p1q6-gprime', "g'(x)=f'(x)-1");
+            setText('sol-prob-p1q6-fprime-neg', "f'(x) < 0");
+            setText('sol-prob-p1q6-gprime-neg', "g'(x) < 0");
+            setText('sol-prob-p1q7-g0', "g(0)=f(0)-0=1/e > 0");
+            setText('sol-prob-p1q7-g1', "g(1)=f(1)-1=\\frac{1}{2}e^{-1/2}-1 = \\frac{1}{2\\sqrt{e}}-1 < 0");
+            setText('sol-prob-p1q7-g0g1-neg', "g(0)g(1)<0");
+            setText('sol-prob-p1q7-alpha', "\\alpha \\in ]0, 1[");
+            setText('sol-prob-p2q1-interval', "[0,1]");
+            setText('sol-prob-p2q1-alpha', "\\alpha");
+            setText('sol-prob-p2q2-Un1', "U_{n+1}=f(U_n)");
+            setText('sol-prob-p2q2-fof', "f \\circ f");
+            setText('sol-prob-p2q2-U2n', "(U_{2n})");
+            setText('sol-prob-p2q2-U2n1', "(U_{2n+1})");
+            setText('sol-prob-p2q2-fof2', "f \\circ f");
+            setText('sol-prob-p2q2-Un-bounded', "(U_n)");
+            setText('sol-prob-p2q2-U2n-conv', "(U_{2n})");
+            setText('sol-prob-p2q2-U2n1-conv', "(U_{2n+1})");
+            setText('sol-prob-p2q3-l-eq-lprime', "l=l'");
+            setText('sol-prob-p2q3-fL-L', "f(L)=L");
+            setText('sol-prob-p2q3-alpha', "\\alpha");
+            setText('sol-prob-p2q3-l-lprime-alpha', "l=l'=\\alpha");
+            setText('sol-prob-p2q3-alpha2', "\\alpha");
+            setText('sol-prob-p2q3-alpha-interval', "\\alpha \\in ]0,1[");
+
+            // Modals
+            setText('h-ex1q1-n', "n");
+            setText('h-ex1q1-denom', "n^2+n+1");
+            setText('k-ex1q1-maj', "\\forall x \\in A, x \\le M");
+            setText('k-ex1q1-min', "\\forall x \\in A, x \\ge m");
+            setText('e-ex1q1-Adef', "A = \\{x_n = \\frac{1}{n^2+n+1} \\mid n \\in \\mathbb{N}\\}");
+            setText('e-ex1q1-xn', "x_n");
+            setText('e-ex1q1-n', "n");
+            setText('e-ex1q1-n0', "n=0");
+            setText('e-ex1q1-x0calc', "x_0 = \\frac{1}{0^2+0+1} = 1");
+            setText('e-ex1q1-1inA', "1 \\in A");
+            setText('e-ex1q1-denom', "n^2+n+1");
+            setText('e-ex1q1-ninN', "n \\in \\mathbb{N}");
+            setText('e-ex1q1-n2', "n");
+            setText('e-ex1q1-n0-2', "n=0");
+            setText('e-ex1q1-denom-min', "0^2+0+1=1");
+            setText('e-ex1q1-denom-ineq', "n^2+n+1 \\ge 1");
+            setText('e-ex1q1-ninN2', "n \\in \\mathbb{N}");
+            setText('e-ex1q1-ineq1', "\\frac{1}{n^2+n+1} \\le 1");
+            setText('e-ex1q1-n2n1-pos', "n^2+n+1");
+            setText('e-ex1q1-xn-pos', "x_n > 0");
+            setText('e-ex1q1-final-ineq', "0 < x_n \\le 1");
+            setText('e-ex1q1-ninN3', "n \\in \\mathbb{N}");
+            setText('k-ex1q2-maxsup', "\\max A = \\sup A");
+            setText('k-ex1q2-mininf', "\\min A = \\inf A");
+            setText('e-ex1q2-n0', "n=0");
+            setText('e-ex1q2-x01', "x_0 = 1");
+            setText('e-ex1q2-maxA', "\\max A = 1");
+            setText('e-ex1q2-supA', "\\sup A = 1");
+            setText('e-ex1q2-xn', "(x_n)");
+            setText('e-ex1q2-xn-def', "x_n = \\frac{1}{n^2+n+1}");
+            setText('e-ex1q2-n2n1', "n^2+n+1");
+            setText('e-ex1q2-npos', "n \\ge 0");
+            setText('e-ex1q2-xn2', "(x_n)");
+            setText('e-ex1q2-lim', "\\lim_{n\\to\\infty} x_n = \\lim_{n\\to\\infty} \\frac{1}{n^2+n+1} = 0");
+            setText('e-ex1q2-infA', "\\inf A = 0");
+            setText('e-ex1q2-n', "n \\in \\mathbb{N}");
+            setText('e-ex1q2-xn0', "x_n = 0");
+
+            setText('h-ex2q1-arctan', "\\arctan x");
+            setText('h-ex2q1-exp', "e^u");
+            setText('k-ex2q1-arctan', "\\arctan x = x - \\frac{x^3}{3} + o(x^3)");
+            setText('k-ex2q1-exp', "e^u = 1 + u + \\frac{u^2}{2!} + o(u^2)");
+            setText('e-ex2q1-Tx', "T(x)=e^{\\arctan x}");
+            setText('e-ex2q1-0p', "0^+");
+            setText('e-ex2q1-arctan', "\\arctan x");
+            setText('e-ex2q1-arctan-dl', "\\arctan x = x - \\frac{x^3}{3} + o(x^3)");
+            setText('e-ex2q1-u-def', "u = x + o(x^2)");
+            setText('e-ex2q1-exp', "e^u");
+            setText('e-ex2q1-exp-dl', "e^u = 1 + u + \\frac{u^2}{2} + o(u^2)");
+            setText('e-ex2q1-u', "u");
+            setText('e-ex2q1-comp1', "T(x) = 1 + (x - \\frac{x^3}{3} + o(x^3)) + \\frac{1}{2}(x - \\frac{x^3}{3} + o(x^3))^2 + o(x^2)");
+            setText('e-ex2q1-comp2', "T(x) = 1 + x + \\frac{1}{2}(x^2) + o(x^2)");
+            setText('e-ex2q1-comp3', "T(x) = 1 + x - \\frac{x^3}{3} + o(x^3) + \\frac{1}{2}(x^2 - \\frac{2x^4}{3} + ...) + o(x^2)");
+            setText('e-ex2q1-comp4', "T(x) = 1 + x + \\frac{x^2}{2} + o(x^2)");
+            setText('e-ex2q1-final-dl', "T(x) = 1 + x + \\frac{x^2}{2} + o(x^2)");
+
+            setText('k-ex2q2-x0', "x_0");
+            setText('k-ex2q2-cont-def', "\\lim_{x \\to x_0^-} T(x) = \\lim_{x \\to x_0^+} T(x) = T(x_0)");
+            setText('k-ex2q2-lim-sin', "\\lim_{x \\to 0} \\sin(x) = 0");
+            setText('e-ex2q2-x-pos', "x \\ge 0");
+            setText('e-ex2q2-x0', "x=0");
+            setText('e-ex2q2-T0', "T(0) = e^{\\arctan(0)} = e^0 = 1");
+            setText('e-ex2q2-0p', "0^+");
+            setText('e-ex2q2-dl', "1+x+\\frac{x^2}{2}+o(x^2)");
+            setText('e-ex2q2-lim-p', "\\lim_{x \\to 0^+} T(x) = 1");
+            setText('e-ex2q2-x-neg', "x < 0");
+            setText('e-ex2q2-lim-m-calc', "\\lim_{x \\to 0^-} T(x) = \\lim_{x \\to 0^-} (a~\\sin^2x+b~\\sin x+c) = a(0)^2 + b(0) + c = c");
+            setText('e-ex2q2-cond', "T(0) = \\lim_{x \\to 0^+} T(x) = \\lim_{x \\to 0^-} T(x) \\implies 1 = 1 = c");
+            setText('e-ex2q2-c1', "c=1");
+            setText('e-ex2q2-a', "a");
+            setText('e-ex2q2-b', "b");
+            setText('e-ex2q2-R', "\\mathbb{R}");
+
+            setText('h-ex2q3-sin', "\\sin x / x");
+            setText('k-ex2q3-taux', "\\frac{T(x)-T(0)}{x}");
+            setText('k-ex2q3-deriv-egal', "T'_g(0) = T'_d(0)");
+            setText('k-ex2q3-lim-sin', "\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1");
+            setText('e-ex2q3-c1', "c=1");
+            setText('e-ex2q3-0p', "0^+");
+            setText('e-ex2q3-dl', "T(x) = 1+x+\\frac{x^2}{2}+o(x^2)");
+            setText('e-ex2q3-taux-p-calc', "\\lim_{x \\to 0^+} \\frac{T(x)-T(0)}{x} = \\lim_{x \\to 0^+} \\frac{(1+x+\\frac{x^2}{2}+o(x^2))-1}{x} = \\lim_{x \\to 0^+} (1+\\frac{x}{2}+o(x)) = 1");
+            setText('e-ex2q3-x', "x");
+            setText('e-ex2q3-Tprime-p', "T'_d(0) = 1");
+            setText('e-ex2q3-x-neg', "x<0");
+            setText('e-ex2q3-c1-2', "c=1");
+            setText('e-ex2q3-taux-m-calc1', "\\lim_{x \\to 0^-} \\frac{T(x)-T(0)}{x} = \\lim_{x \\to 0^-} \\frac{a~\\sin^2x+b~\\sin x+1-1}{x}");
+            setText('e-ex2q3-lim-sin', "\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1");
+            setText('e-ex2q3-taux-m-calc2', "\\lim_{x \\to 0^-} (a~\\sin x \\frac{\\sin x}{x} + b\\frac{\\sin x}{x}) = a(0)(1) + b(1) = b");
+            setText('e-ex2q3-Tprime-m', "T'_g(0) = b");
+            setText('e-ex2q3-cond', "T'_d(0) = T'_g(0) \\implies 1 = b");
+            setText('e-ex2q3-b1', "b=1");
+            setText('e-ex2q3-c1-3', "c=1");
+            setText('e-ex2q3-a', "a");
+
+            setText('h-ex2q4-xpos', "x>0");
+            setText('h-ex2q4-xneg', "x<0");
+            setText('h-ex2q4-Tprime0', "T'(0)");
+            setText('k-ex2q4-cond', "\\lim_{x \\to 0} T'(x) = T'(0)");
+            setText('e-ex2q4-b1c1', "b=1, c=1");
+            setText('e-ex2q4-Tprime0', "T'(0)=1");
+            setText('e-ex2q4-Tpos', "T(x)=e^{\\arctan x}");
+            setText('e-ex2q4-Tprime-pos', "T'(x) = (e^{\\arctan x})' = e^{\\arctan x} \\cdot \\frac{1}{1+x^2}");
+            setText('e-ex2q4-Tneg', "T(x) = a~\\sin^2x+\\sin x+1");
+            setText('e-ex2q4-Tprime-neg', "T'(x) = 2a~\\sin x \\cos x + \\cos x");
+            setText('e-ex2q4-Tprime-def', "T'(x) = \\begin{cases} \\frac{e^{\\arctan x}}{1+x^2} & \\text{if } x>0 \\\\ 1 & \\text{if } x=0 \\\\ 2a \\sin x \\cos x + \\cos x & \\text{if } x<0 \\end{cases}");
+            setText('e-ex2q4-Tprime0-2', "T'(0)=1");
+            setText('e-ex2q4-lim-p', "\\lim_{x \\to 0^+} T'(x) = \\lim_{x \\to 0^+} \\frac{e^{\\arctan x}}{1+x^2} = \\frac{e^0}{1} = 1");
+            setText('e-ex2q4-lim-m', "\\lim_{x \\to 0^-} T'(x) = \\lim_{x \\to 0^-} (2a \\sin x \\cos x + \\cos x) = 2a(0)(1) + 1 = 1");
+            setText('e-ex2q4-lim-p-eq-lim-m-eq-Tprime0', "\\lim_{x \\to 0^+} T'(x) = \\lim_{x \\to 0^-} T'(x) = T'(0)");
+            setText('e-ex2q4-1eqb', "1=1");
+            setText('e-ex2q4-b1', "b=1");
+
+            setText('k-ex2q5-Tsecond', "T''(0)");
+            setText('k-ex2q5-lim-def', "\\lim_{x \\to 0} \\frac{T'(x)-T'(0)}{x}");
+            setText('k-ex2q5-dl-inv', "\\frac{1}{1+x^2} = 1 - x^2 + o(x^2)");
+            setText('k-ex2q5-dl-cos', "\\cos x = 1 - \\frac{x^2}{2!} + o(x^2)");
+            setText('k-ex2q5-dl-sin', "\\sin(u) = u + o(u)");
+            setText('e-ex2q5-b1c1', "b=1, c=1");
+            setText('e-ex2q5-lim-p-def', "\\lim_{x \\to 0^+} \\frac{T'(x)-T'(0)}{x}");
+            setText('e-ex2q5-num-p', "T'(x)-1 = \\frac{e^{\\arctan x}}{1+x^2}-1");
+            setText('e-ex2q5-dl-exp', "e^{\\arctan x} = 1+x+\\frac{x^2}{2}+o(x^2)");
+            setText('e-ex2q5-dl-inv', "\\frac{1}{1+x^2} = 1 - x^2 + o(x^2)");
+            setText('e-ex2q5-prod-dl', "T'(x) = (1+x+\\frac{x^2}{2})(1-x^2) + o(x^2) = 1+x-\\frac{x^2}{2} + o(x^2)");
+            setText('e-ex2q5-num-p-res', "T'(x)-1 = x-\\frac{x^2}{2} + o(x^2)");
+            setText('e-ex2q5-taux-p', "\\frac{T'(x)-1}{x} = 1-\\frac{x}{2} + o(x)");
+            setText('e-ex2q5-lim-p-res', "1");
+            setText('e-ex2q5-lim-m-def', "\\lim_{x \\to 0^-} \\frac{T'(x)-T'(0)}{x}");
+            setText('e-ex2q5-taux-m-calc1', "\\lim_{x \\to 0^-} \\frac{2a \\sin x \\cos x + \\cos x - 1}{x}");
+            setText('e-ex2q5-sin2x', "\\sin(2x)=2\\sin x \\cos x");
+            setText('e-ex2q5-taux-m-calc2', "\\lim_{x \\to 0^-} (a \\frac{\\sin(2x)}{x} + \\frac{\\cos x - 1}{x}) = \\lim_{x \\to 0^-} (2a \\frac{\\sin(2x)}{2x} - \\frac{1-\\cos x}{x^2} \\cdot x) = 2a(1) - (\\frac{1}{2})(0) = 2a");
+            setText('e-ex2q5-lim-sin2x', "\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1");
+            setText('e-ex2q5-lim-cosx', "\\lim_{x \\to 0} \\frac{1-\\cos x}{x^2} = \\frac{1}{2}");
+            setText('e-ex2q5-lim-m-res', "2a");
+            setText('e-ex2q5-cond', "1=2a");
+            setText('e-ex2q5-a-val', "a=1/2");
+            setText('e-ex2q5-b1c1-2', "b=1, c=1");
+
+            setText('h-prob-p1q1-uv', "(uv)'=u'v+uv'");
+            setText('h-prob-p1q1-u', "u(x)=\\frac{1}{x+1}");
+            setText('h-prob-p1q1-v', "v(x)=e^{\\frac{-1}{x+1}}");
+            setText('k-prob-p1q1-prod', "(uv)'=u'v+uv'");
+            setText('k-prob-p1q1-chain', "(e^{w(x)})' = w'(x)e^{w(x)}");
+            setText('k-prob-p1q1-deriv-inv', "(\\frac{1}{w})' = -\\frac{w'}{w^2}");
+            setText('k-prob-p1q1-deriv-exp', "(e^x)' = e^x");
+            setText('e-prob-p1q1-f', "f(x) = \\frac{1}{x+1}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q1-u', "u(x)=\\frac{1}{x+1}");
+            setText('e-prob-p1q1-v', "v(x)=e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q1-uprime', "u'(x) = -\\frac{1}{(x+1)^2}");
+            setText('e-prob-p1q1-v2', "v(x)");
+            setText('e-prob-p1q1-exp-arg', "w(x) = \\frac{-1}{x+1}");
+            setText('e-prob-p1q1-exp-arg-deriv', "w'(x) = \\frac{1}{(x+1)^2}");
+            setText('e-prob-p1q1-vprime', "v'(x) = \\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q1-fprime-form', "f'(x)=u'v+uv'");
+            setText('e-prob-p1q1-fprime-calc1', "f'(x) = \\frac{-1}{(x+1)^2}e^{\\frac{-1}{x+1}} + \\frac{1}{x+1} \\left( \\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}} \\right)");
+            setText('e-prob-p1q1-common-factors', "\\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q1-fprime-calc2', "f'(x) = \\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}} \\left( -1 + \\frac{1}{x+1} \\right)");
+            setText('e-prob-p1q1-fprime-calc3', "f'(x) = \\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}} \\left( \\frac{-(x+1)+1}{x+1} \\right) = \\frac{1}{(x+1)^2}e^{\\frac{-1}{x+1}} \\left( \\frac{-x}{x+1} \\right)");
+            setText('e-prob-p1q1-fprime-final', "f'(x) = \\frac{-x}{(x+1)^3}e^{\\frac{-1}{x+1}}");
+            
+            setText('h-prob-p1q2-fprime', "f'(x)");
+            setText('h-prob-p1q2-x', "-x");
+            setText('k-prob-p1q2-fprime-pos', "f'(x)>0");
+            setText('k-prob-p1q2-fprime-neg', "f'(x)<0");
+            setText('e-prob-p1q2-fprime', "f'(x) = \\frac{-x}{(x+1)^3}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q2-interval', "[0, +\\infty[");
+            setText('e-prob-p1q2-xpos', "x \\ge 0");
+            setText('e-prob-p1q2-denom-pos', "(x+1)^3 > 0");
+            setText('e-prob-p1q2-exp-pos', "e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q2-fprime2', "f'(x)");
+            setText('e-prob-p1q2-minus-x', "-x");
+            setText('e-prob-p1q2-xpos2', "x \\ge 0");
+            setText('e-prob-p1q2-minus-x-neg', "-x \\le 0");
+            setText('e-prob-p1q2-fprime-neg', "f'(x) \\le 0");
+            setText('e-prob-p1q2-x-gt-0', "x>0");
+            setText('e-prob-p1q2-interval2', "[0, +\\infty[");
+            setText('e-prob-p1q2-f0', "f(0) = \\frac{1}{0+1}e^{\\frac{-1}{0+1}} = 1 \\cdot e^{-1} = \\frac{1}{e}");
+            setText('e-prob-p1q2-inf', "+\\infty");
+            setText('e-prob-p1q2-lim-def', "\\lim_{x \\to +\\infty} \\frac{1}{x+1}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q2-xtoinf', "x \\to +\\infty");
+            setText('e-prob-p1q2-frac1-to-0', "\\frac{1}{x+1} \\to 0");
+            setText('e-prob-p1q2-frac2-to-0', "\\frac{-1}{x+1} \\to 0");
+            setText('e-prob-p1q2-exp-to-1', "e^{\\frac{-1}{x+1}} \\to e^0 = 1");
+            setText('e-prob-p1q2-fi', "0 \\times 1");
+            setText('e-prob-p1q2-frac1-to-0-2', "\\frac{1}{x+1} \\to 0");
+            setText('e-prob-p1q2-f0-2', "f(0)=1/e");
+            setText('e-prob-p1q2-interval3', "]0, +\\infty[");
+            setText('e-prob-p1q2-inf2', "+\\infty");
+            setText('e-prob-p1q2-1overe', "1/e");
+
+            setText('h-prob-p1q3-exp-minus1', "e^{-1}");
+            setText('k-prob-p1q3-exp-prop', "e^{a+b}=e^a e^b");
+            setText('e-prob-p1q3-fx-start', "f(x) = \\frac{1}{x+1}e^{\\frac{-1}{x+1}}");
+            setText('e-prob-p1q3-fx-end', "\\frac{e^{-1}}{x+1}e^{\\frac{x}{x+1}}");
+            setText('e-prob-p1q3-x-over-x1', "\\frac{x}{x+1}");
+            setText('e-prob-p1q3-expo-manip1', "\\frac{-1}{x+1} = \\frac{-1-x+x}{x+1} = \\frac{-(x+1)+x}{x+1}");
+            setText('e-prob-p1q3-expo-manip2', "\\frac{-(x+1)}{x+1} + \\frac{x}{x+1} = -1 + \\frac{x}{x+1}");
+            setText('e-prob-p1q3-fx', "f(x)");
+            setText('e-prob-p1q3-fx-step1', "f(x) = \\frac{1}{x+1}e^{-1 + \\frac{x}{x+1}}");
+            setText('e-prob-p1q3-exp-prop', "e^{a+b}=e^a e^b");
+            setText('e-prob-p1q3-fx-step2', "f(x) = \\frac{1}{x+1}e^{-1}e^{\\frac{x}{x+1}} = \\frac{e^{-1}}{x+1}e^{\\frac{x}{x+1}}");
+
+            setText('h-prob-p1q4-fact1', "\\frac{e^{-1}}{x+1}");
+            setText('h-prob-p1q4-fact2', "e^{\\frac{x}{x+1}}");
+            setText('k-prob-p1q4-dl-inv', "\\frac{1}{1+u} = 1-u+u^2+o(u^2)");
+            setText('k-prob-p1q4-dl-exp', "e^u = 1+u+\\frac{u^2}{2}+o(u^2)");
+            setText('e-prob-p1q4-fx', "f(x) = \\frac{e^{-1}}{x+1}e^{\\frac{x}{x+1}}");
+            setText('e-prob-p1q4-inv', "\\frac{1}{x+1}");
+            setText('e-prob-p1q4-dl-inv', "\\frac{1}{x+1} = 1-x+x^2+o(x^2)");
+            setText('e-prob-p1q4-exp-term', "e^{\\frac{x}{x+1}}");
+            setText('e-prob-p1q4-arg', "\\frac{x}{x+1}");
+            setText('e-prob-p1q4-dl-arg', "\\frac{x}{x+1} = x(1-x+x^2+o(x^2)) = x-x^2+o(x^2)");
+            setText('e-prob-p1q4-expu', "e^u = 1+u+\\frac{u^2}{2!}+o(u^2)");
+            setText('e-prob-p1q4-u', "u = x-x^2+o(x^2)");
+            setText('e-prob-p1q4-dl-exp', "e^{\\frac{x}{x+1}} = 1 + (x-x^2) + \\frac{(x-x^2)^2}{2} + o(x^2) = 1+x-x^2+\\frac{x^2}{2}+o(x^2) = 1+x-\\frac{x^2}{2}+o(x^2)");
+            setText('e-prob-p1q4-prod-dl', "f(x) = \\frac{1}{e} (1-x+x^2+o(x^2)) (1+x-\\frac{x^2}{2}+o(x^2))");
+            setText('e-prob-p1q4-distrib', "f(x) = \\frac{1}{e} (1(1+x-\\frac{x^2}{2}) -x(1+x) + x^2(1) + o(x^2)) = \\frac{1}{e} (1+x-\\frac{x^2}{2} -x-x^2+x^2+o(x^2))");
+            setText('e-prob-p1q4-final-dl', "f(x) = \\frac{1}{e} (1 - \\frac{x^2}{2} + o(x^2))");
+
+            setText('h-prob-p1q5-diff', "f(x)-y_{tangent}");
+            setText('k-prob-p1q5-taylor', "f(x) = f(0)+f'(0)x+\\frac{f''(0)}{2!}x^2+...+o(x^n)");
+            setText('k-prob-p1q5-dl', "f(x) = a_0+a_1x+a_2x^2+o(x^2)");
+            setText('k-prob-p1q5-x0', "x=0");
+            setText('k-prob-p1q5-tangent', "y=a_0+a_1x");
+            setText('k-prob-p1q5-diff', "f(x)-y");
+            setText('e-prob-p1q5-dl', "f(x) = \\frac{1}{e} - \\frac{x^2}{2e} + o(x^2)");
+            setText('e-prob-p1q5-tangent-eq', "y = f(0) + f'(0)x");
+            setText('e-prob-p1q5-dl2', "f(x) = \\frac{1}{e} + 0\\cdot x - \\frac{x^2}{2e} + o(x^2)");
+            setText('e-prob-p1q5-tangent-res', "y = \\frac{1}{e}");
+            setText('e-prob-p1q5-fprime0', "f'(0)=0");
+            setText('e-prob-p1q5-diff', "f(x) - y");
+            setText('e-prob-p1q5-diff-calc', "f(x) - y = (\\frac{1}{e} - \\frac{x^2}{2e} + o(x^2)) - \\frac{1}{e} = -\\frac{x^2}{2e} + o(x^2)");
+            setText('e-prob-p1q5-term', "-\\frac{x^2}{2e}");
+            setText('e-prob-p1q5-e', "e");
+            setText('e-prob-p1q5-x2', "x^2");
+            setText('e-prob-p1q5-xneq0', "x \\ne 0");
+            setText('e-prob-p1q5-sign', "f(x) - y < 0");
+
+            setText('h-prob-p1q6-gprime', "g'(x)");
+            setText('h-prob-p1q6-gprime2', "g'(x)");
+            setText('h-prob-p1q6-fprime', "f'(x)");
+            setText('k-prob-p1q6-sum-rule', "(u-v)' = u' - v'");
+            setText('e-prob-p1q6-gx', "g(x)=f(x)-x");
+            setText('e-prob-p1q6-gprime', "g'(x) = (f(x)-x)' = f'(x)-1");
+            setText('e-prob-p1q6-x', "x");
+            setText('e-prob-p1q6-fprime-sign', "f'(x) \\le 0");
+            setText('e-prob-p1q6-x-gt-0', "x \\ge 0");
+            setText('e-prob-p1q6-interval', "]0, 1]");
+            setText('e-prob-p1q6-fprime-neg', "f'(x) \\le 0");
+            setText('e-prob-p1q6-gprime2', "g'(x)");
+            setText('e-prob-p1q6-fprime2', "f'(x)");
+            setText('e-prob-p1q6-gprime-neg', "g'(x) = f'(x)-1 < 0");
+            setText('e-prob-p1q6-x-in-interval', "x \\in ]0, 1]");
+
+            setText('h-prob-p1q7-g0', "g(0)");
+            setText('h-prob-p1q7-g1', "g(1)");
+            setText('k-prob-p1q7-cond', "g(a) \cdot g(b) < 0");
+            setText('k-prob-p1q7-eq', "g(x)=0");
+            setText('e-prob-p1q7-galpha', "g(\\alpha)=0");
+            setText('e-prob-p1q7-g', "g");
+            setText('e-prob-p1q7-Rplus', "[0, +\\infty[");
+            setText('e-prob-p1q7-R', "\\mathbb{R}");
+            setText('e-prob-p1q7-g0', "g(0) = f(0) - 0 = \\frac{1}{e} > 0");
+            setText('e-prob-p1q7-g1', "g(1) = f(1) - 1 = \\frac{1}{1+1}e^{\\frac{-1}{1+1}} - 1 = \\frac{1}{2}e^{-1/2} - 1 = \\frac{1}{2\\sqrt{e}}-1");
+            setText('e-prob-p1q7-e-approx', "e \\approx 2.718");
+            setText('e-prob-p1q7-sqrt-e', "\\sqrt{e} \\approx 1.65");
+            setText('e-prob-p1q7-inv-sqrt-e', "\\frac{1}{2\\sqrt{e}} \\approx \\frac{1}{3.3} < 1");
+            setText('e-prob-p1q7-g1-neg', "g(1)");
+            setText('e-prob-p1q7-g0-pos', "g(0)>0");
+            setText('e-prob-p1q7-g1-neg2', "g(1)<0");
+            setText('e-prob-p1q7-prod-neg', "g(0) \cdot g(1) < 0");
+            setText('e-prob-p1q7-alpha', "\\alpha");
+            setText('e-prob-p1q7-galpha-0', "g(\\alpha)=0");
+            setText('e-prob-p1q7-falpha-alpha', "f(\\alpha)=\\alpha");
+            
+            setText('h-prob-p2q1-n0', "n=0");
+            setText('k-prob-p2q1-n', "n \\ge 0");
+            setText('k-prob-p2q1-ineq', "a < b \\implies f(a) > f(b)");
+            setText('e-prob-p2q1-Un', "(U_n)");
+            setText('e-prob-p2q1-prop', "\\frac{1}{3} < U_n \\le \\frac{1}{e}");
+            setText('e-prob-p2q1-U0', "U_0 = 1/e");
+            setText('e-prob-p2q1-ineq0', "\\frac{1}{3} < \\frac{1}{e} \\le \\frac{1}{e}");
+            setText('e-prob-p2q1-1overe-approx', "1/e \\approx 0.367");
+            setText('e-prob-p2q1-1tiers-approx', "1/3 \\approx 0.333");
+            setText('e-prob-p2q1-check0', "0.333 < 0.367");
+            setText('e-prob-p2q1-hyp', "\\frac{1}{3} < U_n \\le \\frac{1}{e}");
+            setText('e-prob-p2q1-goal', "\\frac{1}{3} < U_{n+1} \\le \\frac{1}{e}");
+            setText('e-prob-p2q1-Un1', "U_{n+1}=f(U_n)");
+            setText('e-prob-p2q1-Rplus', "[0, +\\infty[");
+            setText('e-prob-p2q1-hered-step1', "\\frac{1}{3} < U_n \\le \\frac{1}{e} \\implies f(\\frac{1}{3}) > f(U_n) \\ge f(\\frac{1}{e})");
+            setText('e-prob-p2q1-hered-step2', "f(\\frac{1}{e}) \\le U_{n+1} < f(\\frac{1}{3})");
+            setText('e-prob-p2q1-f-1overe', "f(1/e)");
+            setText('e-prob-p2q1-1overe-approx-2', "1/e \\approx 0.367");
+            setText('e-prob-p2q1-1overe-lt-alpha', "1/e < \\alpha");
+            setText('e-prob-p2q1-f-decr', "f");
+            setText('e-prob-p2q1-f-1overe-gt-alpha', "f(1/e) > \\alpha");
+            setText('e-prob-p2q1-prop-final', "P(n)");
+            setText('e-prob-p2q1-n', "n \\in \\mathbb{N}");
+            
+            setText('h-prob-p2q2-fof', "g = f \\circ f");
+            setText('h-prob-p2q2-U2n2', "U_{2n+2} = g(U_{2n})");
+            setText('e-prob-p2q2-Un', "(U_n)");
+            setText('e-prob-p2q2-Un1', "U_{n+1}=f(U_n)");
+            setText('e-prob-p2q2-U2n', "(U_{2n})");
+            setText('e-prob-p2q2-recur-even', "U_{2n+2} = f(U_{2n+1}) = f(f(U_{2n})) = (f \\circ f)(U_{2n})");
+            setText('e-prob-p2q2-g', "g=f \\circ f");
+            setText('e-prob-p2q2-U2n2', "(U_{2n})");
+            setText('e-prob-p2q2-U2n1', "(U_{2n+1})");
+            setText('e-prob-p2q2-Un-bounded', "(U_n)");
+            setText('e-prob-p2q2-U2n-bounded', "(U_{2n})");
+            setText('e-prob-p2q2-U2n1-bounded', "(U_{2n+1})");
+            setText('e-prob-p2q2-U2n-mono', "(U_{2n})");
+            setText('e-prob-p2q2-U2n1-mono', "(U_{2n+1})");
+
+            setText('k-prob-p2q3-Un', "(u_n)");
+            setText('k-prob-p2q3-U2n', "(u_{2n})");
+            setText('k-prob-p2q3-U2n1', "(u_{2n+1})");
+            setText('k-prob-p2q3-recur', "u_{n+1}=f(u_n)");
+            setText('k-prob-p2q3-fixe', "f(L)=L");
+            setText('e-prob-p2q3-U2n', "(U_{2n})");
+            setText('e-prob-p2q3-U2n1', "(U_{2n+1})");
+            setText('e-prob-p2q3-l', "l");
+            setText('e-prob-p2q3-lprime', "l'");
+            setText('e-prob-p2q3-Un', "(U_n)");
+            setText('e-prob-p2q3-cond', "l=l'");
+            setText('e-prob-p2q3-fixe', "f(L)=L");
+            setText('e-prob-p2q3-alpha', "\\alpha");
+            setText('e-prob-p2q3-alpha2', "\\alpha");
+            setText('e-prob-p2q3-l-lprime-alpha', "l=l'=\\alpha");
+            setText('e-prob-p2q3-alpha3', "\\alpha");
+            setText('e-prob-p2q3-alpha-in-01', "\\alpha \\in ]0,1[");
+            setText('e-prob-p2q3-g0-pos', "g(0)>0");
+            setText('e-prob-p2q3-g1-neg', "g(1)<0");
+
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 2: EXAMEN FINAL (09/09/2019) - Version Améliorée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 2</h1>
+            <p class="exam-subtitle">EXAMEN FINAL (le 09/09/2019)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>Soit la fonction g définie par <span class="katex-inline" data-id="ex1-q-func"></span></p>
+                        <p>1. Déterminer <span class="katex-inline" data-id="ex1-q1-dom"></span> le domaine de définition de g.</p>
+                        <p>2. Montrer que g n'est pas prolongeable par continuité au point <span class="katex-inline" data-id="ex1-q2-pt"></span>.</p>
+                        <p>3. Calculer la dérivée de g sur <span class="katex-inline" data-id="ex1-q3-dom"></span>.</p>
+                        <p>4. En déduire une expression plus simple de g sur [-1,0[ et sur ]0, 1].</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>On considère la fonction f définie par <span class="katex-inline" data-id="ex2-q-func"></span>.</p>
+                        <p>1. Déterminer le domaine de définition de f.</p>
+                        <p>2. En utilisant le développement limité, déterminer :</p>
+                        <p>(a) l'équation de la tangente à la courbe de f au point <span class="katex-inline" data-id="ex2-q2a-pt"></span>, ainsi que sa position par rapport à la courbe.</p>
+                        <p>(b) les équations des éventuelles asymptotes obliques et leurs positions par rapport au graphe de f.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>Soit <span class="katex-inline" data-id="ex3-q-int"></span>, pour <span class="katex-inline" data-id="ex3-q-n"></span>.</p>
+                        <p>1. Calculer <span class="katex-inline" data-id="ex3-q1-i1"></span>.</p>
+                        <p>2. En majorant la fonction à intégrer, montrer que <span class="katex-inline" data-id="ex3-q2-ineq"></span>.</p>
+                        <p>3. En déduire <span class="katex-inline" data-id="ex3-q3-lim"></span>.</p>
+                        <p>4. Calculer <span class="katex-inline" data-id="ex3-q4-sum"></span>.</p>
+                        <p>5. En déduire <span class="katex-inline" data-id="ex3-q5-lim"></span>.</p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 4</h3>
+                    <div class="exercise-content">
+                        <p>En utilisant les sommes de Riemann, calculer les limites suivantes :</p>
+                        <p><span class="katex-display" data-id="ex4-q-lim1"></span></p>
+                        <p><span class="katex-display" data-id="ex4-q-lim2"></span></p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>1. <strong>Domaine de définition <span class="katex-inline" data-id="sol1-p1-dom"></span></strong> : Il faut que <span class="katex-inline" data-id="sol1-p1-cond1"></span> et que le dénominateur soit non nul, <span class="katex-inline" data-id="sol1-p1-cond2"></span>. Donc, <span class="katex-inline" data-id="sol1-p1-res"></span>.</p>
+                        <p>2. <strong>Continuité en <span class="katex-inline" data-id="sol1-p2-pt"></span></strong> : <span class="katex-inline" data-id="sol1-p2-lim1"></span> et <span class="katex-inline" data-id="sol1-p2-lim2"></span>. Les limites à gauche et à droite sont différentes, donc g n'est pas prolongeable par continuité en 0.</p>
+                        <p>3. <strong>Dérivée de g sur <span class="katex-inline" data-id="sol1-p3-dom"></span></strong> :</p>
+                        <div class="katex-display" data-id="sol1-p3-deriv"></div>
+                        <p>4. <strong>Expression plus simple de g</strong> : On a <span class="katex-inline" data-id="sol1-p4-deriv"></span>, qui est la dérivée de arccos x. Donc <span class="katex-inline" data-id="sol1-p4-g-arccos"></span>. La constante peut être différente sur chaque intervalle.</p>
+                        <ul>
+                            <li class="text-slate-300">Sur ]0, 1] : on évalue en <span class="katex-inline" data-id="sol1-p4-pt1"></span>. <span class="katex-inline" data-id="sol1-p4-eval1"></span>. Donc <span class="katex-inline" data-id="sol1-p4-res1"></span>.</li>
+                            <li class="text-slate-300">Sur [-1, 0[ : on évalue en <span class="katex-inline" data-id="sol1-p4-pt2"></span>. <span class="katex-inline" data-id="sol1-p4-eval2"></span>. Donc <span class="katex-inline" data-id="sol1-p4-res2"></span>.</li>
+                        </ul>
+                        <div class="katex-display" data-id="sol1-p4-final"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                         <p>1. <strong>Domaine de définition <span class="katex-inline" data-id="sol2-p1-dom"></span></strong> : Il faut que <span class="katex-inline" data-id="sol2-p1-cond1"></span>. Comme <span class="katex-inline" data-id="sol2-p1-cond2"></span>, la condition est <span class="katex-inline" data-id="sol2-p1-cond3"></span> ou <span class="katex-inline" data-id="sol2-p1-cond4"></span>. Donc <span class="katex-inline" data-id="sol2-p1-res"></span>.</p>
+                        <p>2. (a) <strong>Tangente à la courbe en <span class="katex-inline" data-id="sol2-p2a-pt"></span></strong> : Au voisinage de 0, <span class="katex-inline" data-id="sol2-p2a-cond1"></span> et <span class="katex-inline" data-id="sol2-p2a-cond2"></span>, donc <span class="katex-inline" data-id="sol2-p2a-abs"></span>. <span class="katex-inline" data-id="sol2-p2a-f"></span>. Avec le DL <span class="katex-inline" data-id="sol2-p2a-dl"></span> et <span class="katex-inline" data-id="sol2-p2a-u"></span> : <span class="katex-inline" data-id="sol2-p2a-f-dl"></span>. L'équation de la tangente est <span class="katex-inline" data-id="sol2-p2a-tan"></span>. La position est donnée par <span class="katex-inline" data-id="sol2-p2a-pos"></span>. La courbe est en dessous de la tangente.</p>
+                        <p>(b) <strong>Asymptotes obliques</strong> : Au voisinage de <span class="katex-inline" data-id="sol2-p2b-vois"></span>, on pose <span class="katex-inline" data-id="sol2-p2b-y"></span>. <span class="katex-inline" data-id="sol2-p2b-f"></span>. <span class="katex-inline" data-id="sol2-p2b-fy"></span>. Donc <span class="katex-inline" data-id="sol2-p2b-fx"></span>. L'asymptote oblique est <span class="katex-inline" data-id="sol2-p2b-asy"></span>. Position : <span class="katex-inline" data-id="sol2-p2b-pos"></span>. La courbe est en dessous de l'asymptote.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-display" data-id="sol3-p1-i1"></span></p>
+                        <p>2. Pour <span class="katex-inline" data-id="sol3-p2-x"></span>, <span class="katex-inline" data-id="sol3-p2-cond"></span>. Donc <span class="katex-display" data-id="sol3-p2-ineq"></span></p>
+                        <p>3. Comme <span class="katex-inline" data-id="sol3-p3-cond"></span>, on a <span class="katex-inline" data-id="sol3-p3-ineq"></span>. Puisque <span class="katex-inline" data-id="sol3-p3-lim1"></span>, par le théorème des gendarmes, <span class="katex-inline" data-id="sol3-p3-lim2"></span>.</p>
+                        <p>4. <span class="katex-display" data-id="sol3-p4-sum"></span></p>
+                        <p>5. <span class="katex-inline" data-id="sol3-p5-sum"></span>. C'est une somme télescopique qui se simplifie en <span class="katex-inline" data-id="sol3-p5-simp"></span>. <span class="katex-inline" data-id="sol3-p5-lim"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 4</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-display" data-id="sol4-p1-lim"></span></p>
+                        <p>2. <span class="katex-display" data-id="sol4-p2-lim"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+            
+            <!-- Section: Applications in Computer Science -->
+            <section id="cs-applications">
+                <h2 class="section-title">Applications en Informatique</h2>
+                <div class="space-y-12">
+    
+                    <!-- CS Application 1: Continuity & Derivatives -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Continuité et Dérivées : L'Optimisation 🧠</h3>
+                        <p class="text-lg mb-4 text-slate-300">En apprentissage automatique (Machine Learning), l'entraînement d'un modèle consiste à minimiser une "fonction de coût" qui mesure son erreur. Pour trouver le minimum de cette fonction, on utilise des algorithmes d'optimisation comme la <strong>descente de gradient</strong>. Cet algorithme repose entièrement sur le calcul de la dérivée (le gradient) de la fonction de coût. La dérivée indique la direction de la plus forte pente ; en allant dans la direction opposée, on minimise l'erreur. La notion de continuité est cruciale car ces méthodes ne fonctionnent que sur des fonctions "lisses" (continues et dérivables).</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Ajustement d'un Modèle Linéaire</h4>
+                        <p class="mb-4 text-slate-400">Imaginez qu'on veuille trouver la meilleure droite (y = ax + b) qui passe par un nuage de points. La fonction de coût pourrait être la somme des carrés des distances verticales entre chaque point et la droite. Pour trouver les meilleures valeurs de 'a' et 'b', on calcule les dérivées partielles de cette fonction de coût par rapport à 'a' et 'b' et on les ajuste itérativement pour faire tendre ces dérivées vers zéro.</p>
+                        <pre class="language-pseudocode"><code>parameters = { a: random(), b: random() }
+learning_rate = 0.01
+
+function train(data) {
+  for (step in 1..1000) {
+    // Calculer la dérivée (gradient) de la fonction de coût
+    grad_a = cost_derivative_wrt_a(data, parameters)
+    grad_b = cost_derivative_wrt_b(data, parameters)
+
+    // Mettre à jour les paramètres dans la direction opposée au gradient
+    parameters.a -= learning_rate * grad_a
+    parameters.b -= learning_rate * grad_b
+  }
+}</code></pre>
+                    </div>
+    
+                    <!-- CS Application 2: Taylor Series / Limited Development -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Développements Limités : L'Approximation Efficace ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Beaucoup de fonctions mathématiques (sin, cos, exp, log...) sont coûteuses à calculer pour un ordinateur. Les développements limités (ou séries de Taylor) permettent d'obtenir une <strong>excellente approximation</strong> de ces fonctions en utilisant uniquement des polynômes (additions et multiplications), qui sont extrêmement rapides à calculer. En informatique, on n'a souvent pas besoin de la valeur exacte, mais d'une approximation suffisamment bonne. C'est le fondement de nombreuses bibliothèques scientifiques et de calcul.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Calcul de sin(x)</h4>
+                        <p class="mb-4 text-slate-400">Plutôt que d'utiliser une méthode complexe, une calculatrice ou un programme peut utiliser les premiers termes du développement limité de sin(x) autour de 0 pour obtenir un résultat très précis pour des petites valeurs de x. L'équation de la tangente est simplement le développement limité à l'ordre 1.</p>
+                         <pre class="language-pseudocode"><code>// DL de sin(x) = x - x^3/6 + x^5/120 - ...
+
+function fast_sin(x) {
+  // Pour x proche de 0, on peut se contenter des premiers termes
+  let x_squared = x * x;
+  let x_cubed = x_squared * x;
+  let x_quinte = x_cubed * x_squared;
+
+  // Approximation à l'ordre 5
+  return x - (x_cubed / 6.0) + (x_quinte / 120.0);
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Pour la question 4, une fois que vous avez la dérivée, reconnaissez qu'elle est la dérivée d'une fonction connue (arcsin ou arccos). Intégrez pour trouver g(x) + C, puis utilisez des points spécifiques pour trouver la constante C sur chaque intervalle.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Domaine de définition :</strong> Conditions pour que les expressions (racines carrées, dénominateurs, arguments de fonctions trigonométriques inverses) soient bien définies.</p><p><strong>Prolongement par continuité :</strong> Une fonction est prolongeable par continuité en un point si les limites à gauche et à droite en ce point existent et sont égales.</p><p><strong>Dérivée de fonctions composées :</strong> Règle de la chaîne <span class="katex-inline" data-id="k1-f1"></span>.</p><p><strong>Primitives usuelles :</strong> Connaître la dérivée de <span class="katex-inline" data-id="k1-f2"></span>.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Domaine de définition</h4><p>Pour que <span class="katex-inline" data-id="e1-p1-func"></span> soit définie, il faut deux conditions : 1) L'expression sous la racine carrée doit être non négative : <span class="katex-inline" data-id="e1-p1-cond1"></span>, ce qui implique <span class="katex-inline" data-id="e1-p1-res1"></span>. 2) Le dénominateur <span class="katex-inline" data-id="e1-p1-x"></span> doit être non nul. Le domaine est donc <span class="katex-inline" data-id="e1-p1-dom"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Continuité en 0</h4><p>On calcule les limites à gauche et à droite. Quand <span class="katex-inline" data-id="e1-p2-lim-r"></span>, <span class="katex-inline" data-id="e1-p2-arg-r"></span> tend vers <span class="katex-inline" data-id="e1-p2-inf-p"></span>, donc <span class="katex-inline" data-id="e1-p2-lim-val-r"></span>. Quand <span class="katex-inline" data-id="e1-p2-lim-l"></span>, <span class="katex-inline" data-id="e1-p2-arg-l"></span> tend vers <span class="katex-inline" data-id="e1-p2-inf-n"></span>, donc <span class="katex-inline" data-id="e1-p2-lim-val-l"></span>. Comme les limites sont différentes, la fonction n'est pas prolongeable par continuité en 0.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Dérivée</h4><p>On utilise la règle de dérivation de <span class="katex-inline" data-id="e1-p3-arctan"></span> et la règle du quotient. La dérivée de l'argument <span class="katex-inline" data-id="e1-p3-arg"></span> est <span class="katex-inline" data-id="e1-p3-arg-deriv"></span>. En appliquant la règle de la chaîne : <span class="katex-display" data-id="e1-p3-deriv"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. Expression simplifiée</h4><p>On reconnaît que <span class="katex-inline" data-id="e1-p4-deriv"></span> est la dérivée de <span class="katex-inline" data-id="e1-p4-arccos"></span>. Cela signifie que <span class="katex-inline" data-id="e1-p4-g-int"></span>. On doit trouver la constante <span class="katex-inline" data-id="e1-p4-c"></span> sur chaque intervalle. Pour <span class="katex-inline" data-id="e1-p4-int1"></span>, on prend la limite en <span class="katex-inline" data-id="e1-p4-x1"></span> : <span class="katex-inline" data-id="e1-p4-lim1"></span> et <span class="katex-inline" data-id="e1-p4-arccos1"></span>. Donc <span class="katex-inline" data-id="e1-p4-c1"></span>. Pour <span class="katex-inline" data-id="e1-p4-int2"></span>, on prend la limite en <span class="katex-inline" data-id="e1-p4-x-1"></span> : <span class="katex-inline" data-id="e1-p4-lim-1"></span> et <span class="katex-inline" data-id="e1-p4-arccos-1"></span>. Donc <span class="katex-inline" data-id="e1-p4-c2"></span>.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>Pour la question 2, utilisez le développement limité de <span class="katex-inline" data-id="h2-k1"></span> au voisinage de 0. Pour la partie (b), factorisez <span class="katex-inline" data-id="h2-k2"></span> sous la racine pour faire apparaître un terme en <span class="katex-inline" data-id="h2-k3"></span> et utilisez le même type de développement limité.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Développements limités (DL) :</strong> Connaissance des DL usuels, notamment <span class="katex-inline" data-id="k2-f1"></span>.</p><p><strong>Équation de la tangente :</strong> La tangente à la courbe de <span class="katex-inline" data-id="k2-f2"></span> en <span class="katex-inline" data-id="k2-f3"></span> est donnée par le DL à l'ordre 1 : <span class="katex-inline" data-id="k2-f4"></span>.</p><p><strong>Asymptote oblique :</strong> Si <span class="katex-inline" data-id="k2-f5"></span>, alors la droite <span class="katex-inline" data-id="k2-f6"></span> est une asymptote oblique.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Domaine de définition</h4><p>L'expression sous la racine, <span class="katex-inline" data-id="e2-p1-expr"></span>, doit être non-négative. Comme <span class="katex-inline" data-id="e2-p1-abs"></span> est toujours non-négatif, il suffit que <span class="katex-inline" data-id="e2-p1-cond"></span> (soit <span class="katex-inline" data-id="e2-p1-x1"></span>) ou que <span class="katex-inline" data-id="e2-p1-x2"></span>. Le domaine est donc <span class="katex-inline" data-id="e2-p1-dom"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. (a) Tangente en (0, f(0))</h4><p>Au voisinage de 0, <span class="katex-inline" data-id="e2-p2a-x"></span>, donc <span class="katex-inline" data-id="e2-p2a-abs"></span>. La fonction devient <span class="katex-inline" data-id="e2-p2a-f"></span>. On factorise <span class="katex-inline" data-id="e2-p2a-sqrt2"></span> et on utilise le DL de <span class="katex-inline" data-id="e2-p2a-dl-form"></span> avec <span class="katex-inline" data-id="e2-p2a-u"></span>. Après calcul, on obtient le DL de f(x) à l'ordre 2 : <span class="katex-inline" data-id="e2-p2a-f-dl"></span>. La partie d'ordre 1 donne l'équation de la tangente : <span class="katex-inline" data-id="e2-p2a-tan"></span>. Le terme suivant, <span class="katex-inline" data-id="e2-p2a-pos-term"></span>, est négatif, donc la courbe est en dessous de la tangente.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. (b) Asymptotes obliques</h4><p>On étudie la limite en <span class="katex-inline" data-id="e2-p2b-inf"></span>. Pour <span class="katex-inline" data-id="e2-p2b-x-neg"></span>, <span class="katex-inline" data-id="e2-p2b-abs"></span>. On factorise <span class="katex-inline" data-id="e2-p2b-x"></span> : <span class="katex-inline" data-id="e2-p2b-f"></span>. On pose <span class="katex-inline" data-id="e2-p2b-t"></span> et on utilise le même DL que précédemment pour obtenir <span class="katex-inline" data-id="e2-p2b-f-dl"></span>. L'asymptote est <span class="katex-inline" data-id="e2-p2b-asy"></span>. La position est donnée par le terme <span class="katex-inline" data-id="e2-p2b-pos-term"></span> qui est négatif pour <span class="katex-inline" data-id="e2-p2b-x-inf"></span>, donc la courbe est en dessous.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>Pour la question 4, calculez <span class="katex-inline" data-id="h3-k1"></span> en utilisant la définition de <span class="katex-inline" data-id="h3-k2"></span>. Pour la question 5, développez la somme et observez les annulations (somme télescopique).</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Intégration :</strong> Calcul de primitives de fonctions usuelles (<span class="katex-inline" data-id="k3-f1"></span>, <span class="katex-inline" data-id="k3-f2"></span>).</p><p><strong>Majoration d'intégrales :</strong> Si <span class="katex-inline" data-id="k3-f3"></span> pour tout <span class="katex-inline" data-id="k3-f4"></span>, alors <span class="katex-inline" data-id="k3-f5"></span>.</p><p><strong>Théorème des gendarmes :</strong> Si <span class="katex-inline" data-id="k3-f6"></span> et <span class="katex-inline" data-id="k3-f7"></span>, alors <span class="katex-inline" data-id="k3-f8"></span>.</p><p><strong>Sommes télescopiques :</strong> Sommes de la forme <span class="katex-inline" data-id="k3-f9"></span> qui se simplifient.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calcul de I₁</h4><p>L'intégrale est <span class="katex-inline" data-id="e3-p1-i1"></span>. C'est une primitive de la forme <span class="katex-inline" data-id="e3-p1-form"></span>, qui s'intègre en <span class="katex-inline" data-id="e3-p1-ln"></span>. En évaluant aux bornes, on obtient <span class="katex-inline" data-id="e3-p1-res"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Majoration</h4><p>Sur l'intervalle <span class="katex-inline" data-id="e3-p2-int"></span>, on a <span class="katex-inline" data-id="e3-p2-ex"></span>, donc <span class="katex-inline" data-id="e3-p2-denom"></span>, ce qui implique <span class="katex-inline" data-id="e3-p2-frac"></span>. En intégrant cette inégalité, on obtient : <span class="katex-display" data-id="e3-p2-ineq"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Limite de Iₙ</h4><p>On a l'encadrement <span class="katex-inline" data-id="e3-p3-enc"></span>. La limite du majorant est <span class="katex-inline" data-id="e3-p3-lim-maj"></span>. Par le théorème des gendarmes, la limite de <span class="katex-inline" data-id="e3-p3-in"></span> est également 0.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. Calcul de Iₙ + Iₙ₊₁</h4><p>On combine les deux intégrales : <span class="katex-display" data-id="e3-p4-sum"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">5. Limite de la somme</h4><p>La somme est <span class="katex-inline" data-id="e3-p5-sum"></span>. En utilisant le résultat de la question 4, on remplace chaque terme : <span class="katex-inline" data-id="e3-p5-sub"></span>. C'est une somme télescopique qui se simplifie en <span class="katex-inline" data-id="e3-p5-simp"></span>. Quand <span class="katex-inline" data-id="e3-p5-n-inf"></span>, <span class="katex-inline" data-id="e3-p5-in1-tend"></span> (d'après la question 3). La limite de la somme est donc <span class="katex-inline" data-id="e3-p5-i1"></span>.</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>Factorisez <span class="katex-inline" data-id="h4-k1"></span> au dénominateur pour faire apparaître le terme <span class="katex-inline" data-id="h4-k2"></span>, qui est la variable de la somme de Riemann.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Sommes de Riemann :</strong> La reconnaissance de la limite d'une somme comme une intégrale définie : <span class="katex-display" data-id="k4-f1"></span></p><p><strong>Primitives usuelles :</strong> Connaître les primitives de <span class="katex-inline" data-id="k4-f2"></span> et <span class="katex-inline" data-id="k4-f3"></span>.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Première limite</h4><p>On réécrit la somme : <span class="katex-inline" data-id="e4-p1-sum"></span>. C'est la somme de Riemann de la fonction <span class="katex-inline" data-id="e4-p1-f"></span> sur [0, 1]. La limite est donc l'intégrale : <span class="katex-display" data-id="e4-p1-int"></span></p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Seconde limite</h4><p>On réécrit la somme : <span class="katex-inline" data-id="e4-p2-sum"></span>. C'est la somme de Riemann de la fonction <span class="katex-inline" data-id="e4-p2-f"></span> sur [0, 1]. La limite est donc l'intégrale : <span class="katex-display" data-id="e4-p2-int"></span></p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                        el.textContent = `Erreur de rendu de la formule: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) { el.textContent = content; } 
+            }
+
+            // Questions
+            setText('ex1-q-func', "g(x) = \\arctan(\\frac{\\sqrt{1-x^2}}{x})");
+            setText('ex1-q1-dom', "D_g");
+            setText('ex1-q2-pt', "x=0");
+            setText('ex1-q3-dom', "D_g \\setminus \\{-1, 1\\}");
+            setText('ex2-q-func', "f(x) = \\sqrt{|x-2|(1-x)}");
+            setText('ex2-q2a-pt', "(0, f(0))");
+            setText('ex3-q-int', "I_n = \\int_{-1}^{0} \\frac{e^{nx}}{1+e^x} dx");
+            setText('ex3-q-n', "n \\in \\mathbb{N}^*");
+            setText('ex3-q1-i1', "I_1");
+            setText('ex3-q2-ineq', "I_n \\le \\frac{1}{n}(1-e^{-n})");
+            setText('ex3-q3-lim', "\\lim_{n \\to +\\infty} I_n");
+            setText('ex3-q4-sum', "I_n + I_{n+1}");
+            setText('ex3-q5-lim', "\\lim_{n \\to +\\infty} \\sum_{k=1}^{n} \\frac{(-1)^{k+1}}{k}(1-e^{-k})");
+            setText('ex4-q-lim1', "\\lim_{n \\to +\\infty} \\sum_{k=1}^{n} \\frac{1}{n+k}");
+            setText('ex4-q-lim2', "\\lim_{n \\to +\\infty} \\sum_{k=1}^{n} \\frac{n}{(n+k)^2}");
+
+            // Solutions
+            setText('sol1-p1-dom', "D_g");
+            setText('sol1-p1-cond1', "1-x^2 \\ge 0 \\Rightarrow x \\in [-1, 1]");
+            setText('sol1-p1-cond2', "x \\ne 0");
+            setText('sol1-p1-res', "D_g = [-1, 0[ \\cup ]0, 1]");
+            setText('sol1-p2-pt', "x=0");
+            setText('sol1-p2-lim1', "\\lim_{x \\to 0^+} g(x) = \\arctan(+\\infty) = \\frac{\\pi}{2}");
+            setText('sol1-p2-lim2', "\\lim_{x \\to 0^-} g(x) = \\arctan(-\\infty) = -\\frac{\\pi}{2}");
+            setText('sol1-p3-dom', "D_g \\setminus \\{-1, 1\\}");
+            setText('sol1-p3-deriv', "g'(x) = \\frac{1}{1+(\\frac{\\sqrt{1-x^2}}{x})^2} \\cdot \\frac{\\frac{-x}{\\sqrt{1-x^2}} \\cdot x - \\sqrt{1-x^2}}{x^2} = \\frac{x^2}{x^2+1-x^2} \\cdot \\frac{-x^2 - (1-x^2)}{x^2\\sqrt{1-x^2}} = \\frac{-1}{\\sqrt{1-x^2}}");
+            setText('sol1-p4-deriv', "g'(x) = \\frac{-1}{\\sqrt{1-x^2}}");
+            setText('sol1-p4-g-arccos', "g(x) = \\arccos x + C");
+            setText('sol1-p4-pt1', "x=1");
+            setText('sol1-p4-eval1', "g(1)=\\arctan(0)=0. \\arccos(1)+C_1=0+C_1=0 \\Rightarrow C_1=0");
+            setText('sol1-p4-res1', "g(x) = \\arccos x");
+            setText('sol1-p4-pt2', "x=-1");
+            setText('sol1-p4-eval2', "g(-1)=\\arctan(0)=0. \\arccos(-1)+C_2=\\pi+C_2=0 \\Rightarrow C_2=-\\pi");
+            setText('sol1-p4-res2', "g(x) = \\arccos x - \\pi");
+            setText('sol1-p4-final', "g(x) = \\begin{cases} \\arccos x - \\pi, & \\text{si } x \\in [-1, 0[ \\\\ \\arccos x, & \\text{si } x \\in ]0, 1] \\end{cases}");
+            
+            setText('sol2-p1-dom', "D_f");
+            setText('sol2-p1-cond1', "|x-2|(1-x) \\ge 0");
+            setText('sol2-p1-cond2', "|x-2| \\ge 0");
+            setText('sol2-p1-cond3', "1-x \\ge 0 \\text{ (soit } x \\le 1)");
+            setText('sol2-p1-cond4', "x-2=0 \\text{ (soit } x=2)");
+            setText('sol2-p1-res', "D_f = ]-\\infty, 1] \\cup \\{2\\}");
+            setText('sol2-p2a-pt', "(0,f(0))");
+            setText('sol2-p2a-cond1', "x \\le 1");
+            setText('sol2-p2a-cond2', "x-2 < 0");
+            setText('sol2-p2a-abs', "|x-2| = 2-x");
+            setText('sol2-p2a-f', "f(x) = \\sqrt{(2-x)(1-x)} = \\sqrt{2-3x+x^2} = \\sqrt{2}(1 - \\frac{3}{2}x + \\frac{1}{2}x^2)^{1/2}");
+            setText('sol2-p2a-dl', "(1+u)^{1/2} = 1 + \\frac{1}{2}u - \\frac{1}{8}u^2 + o(u^2)");
+            setText('sol2-p2a-u', "u = -\\frac{3}{2}x + \\frac{1}{2}x^2");
+            setText('sol2-p2a-f-dl', "f(x) = \\sqrt{2} - \\frac{3\\sqrt{2}}{4}x - \\frac{\\sqrt{2}}{32}x^2 + o(x^2)");
+            setText('sol2-p2a-tan', "y = \\sqrt{2} - \\frac{3\\sqrt{2}}{4}x");
+            setText('sol2-p2a-pos', "f(x)-y = -\\frac{\\sqrt{2}}{32}x^2 < 0");
+            setText('sol2-p2b-vois', "-\\infty");
+            setText('sol2-p2b-y', "y=1/x \\to 0");
+            setText('sol2-p2b-f', "f(x) = \\sqrt{x^2-3x+2} = |x|\\sqrt{1-3/x+2/x^2} = -x\\sqrt{1-3/x+2/x^2}");
+            setText('sol2-p2b-fy', "f(1/y) = -\\frac{1}{y}\\sqrt{1-3y+2y^2} = -\\frac{1}{y}(1-\\frac{3}{2}y-\\frac{1}{8}y^2+o(y^2)) = -\\frac{1}{y}+\\frac{3}{2}+\\frac{1}{8}y+o(y)");
+            setText('sol2-p2b-fx', "f(x) = -x+\\frac{3}{2}+\\frac{1}{8x}+o(1/x)");
+            setText('sol2-p2b-asy', "y = -x + 3/2");
+            setText('sol2-p2b-pos', "f(x)-y = \\frac{1}{8x} < 0");
+
+            setText('sol3-p1-i1', "I_1 = \\int_{-1}^{0} \\frac{e^x}{1+e^x} dx = [\\ln(1+e^x)]_{-1}^{0} = \\ln(2) - \\ln(1+e^{-1}) = \\ln(\\frac{2}{1+e^{-1}})");
+            setText('sol3-p2-x', "x \\in [-1, 0]");
+            setText('sol3-p2-cond', "1 \\le 1+e^x \\le 2 \\Rightarrow \\frac{1}{2} \\le \\frac{1}{1+e^x} \\le 1");
+            setText('sol3-p2-ineq', "I_n = \\int_{-1}^{0} \\frac{e^{nx}}{1+e^x} dx \\le \\int_{-1}^{0} e^{nx} dx = [\\frac{e^{nx}}{n}]_{-1}^{0} = \\frac{1}{n}(1-e^{-n})");
+            setText('sol3-p3-cond', "e^{nx} > 0 \\text{ et } 1+e^x > 0");
+            setText('sol3-p3-ineq', "0 \\le I_n \\le \\frac{1-e^{-n}}{n}");
+            setText('sol3-p3-lim1', "\\lim_{n \\to +\\infty} \\frac{1-e^{-n}}{n} = 0");
+            setText('sol3-p3-lim2', "\\lim_{n \\to +\\infty} I_n = 0");
+            setText('sol3-p4-sum', "I_n + I_{n+1} = \\int_{-1}^{0} \\frac{e^{nx}+e^{(n+1)x}}{1+e^x} dx = \\int_{-1}^{0} \\frac{e^{nx}(1+e^x)}{1+e^x} dx = \\int_{-1}^{0} e^{nx} dx = \\frac{1}{n}(1-e^{-n})");
+            setText('sol3-p5-sum', "\\sum_{k=1}^{n} \\frac{(-1)^{k+1}}{k}(1-e^{-k}) = \\sum_{k=1}^{n} (-1)^{k+1}(I_k + I_{k+1})");
+            setText('sol3-p5-simp', "I_1 + (-1)^{n+1}I_{n+1}");
+            setText('sol3-p5-lim', "\\lim_{n \\to +\\infty} (I_1 + (-1)^{n+1}I_{n+1}) = I_1 + 0 = \\ln(\\frac{2}{1+e^{-1}})");
+
+            setText('sol4-p1-lim', "\\lim_{n \\to +\\infty} \\sum_{k=1}^{n} \\frac{1}{n+k} = \\lim_{n \\to +\\infty} \\frac{1}{n} \\sum_{k=1}^{n} \\frac{1}{1+k/n} = \\int_{0}^{1} \\frac{dx}{1+x} = [\\ln(1+x)]_{0}^{1} = \\ln 2");
+            setText('sol4-p2-lim', "\\lim_{n \\to +\\infty} \\sum_{k=1}^{n} \\frac{n}{(n+k)^2} = \\lim_{n \\to +\\infty} \\frac{1}{n} \\sum_{k=1}^{n} \\frac{1}{(1+k/n)^2} = \\int_{0}^{1} \\frac{dx}{(1+x)^2} = [-\\frac{1}{1+x}]_{0}^{1} = -\\frac{1}{2} - (-1) = \\frac{1}{2}");
+            
+            // Modal formulas
+            setText('k1-f1', "(f(g(x)))' = f'(g(x)) g'(x)");
+            setText('k1-f2', "\\arccos x");
+            setText('e1-p1-func', "g(x) = \\arctan(\\frac{\\sqrt{1-x^2}}{x})");
+            setText('e1-p1-cond1', "1-x^2 \\ge 0");
+            setText('e1-p1-res1', "x \\in [-1,1]");
+            setText('e1-p1-x', "x");
+            setText('e1-p1-dom', "[-1,0[ \\cup ]0,1]");
+            setText('e1-p2-lim-r', "x \\to 0^+");
+            setText('e1-p2-arg-r', "\\frac{\\sqrt{1-x^2}}{x}");
+            setText('e1-p2-inf-p', "+\\infty");
+            setText('e1-p2-lim-val-r', "g(x) \\to \\pi/2");
+            setText('e1-p2-lim-l', "x \\to 0^-");
+            setText('e1-p2-arg-l', "\\frac{\\sqrt{1-x^2}}{x}");
+            setText('e1-p2-inf-n', "-\\infty");
+            setText('e1-p2-lim-val-l', "g(x) \\to -\\pi/2");
+            setText('e1-p3-arctan', "\\arctan(u)");
+            setText('e1-p3-arg', "\\frac{\\sqrt{1-x^2}}{x}");
+            setText('e1-p3-arg-deriv', "\\frac{-1}{x^2\\sqrt{1-x^2}}");
+            setText('e1-p3-deriv', "g'(x) = \\frac{1}{1+(\\frac{\\sqrt{1-x^2}}{x})^2} \\cdot (\\frac{-1}{x^2\\sqrt{1-x^2}}) = \\frac{-1}{\\sqrt{1-x^2}}");
+            setText('e1-p4-deriv', "g'(x) = \\frac{-1}{\\sqrt{1-x^2}}");
+            setText('e1-p4-arccos', "\\arccos x");
+            setText('e1-p4-g-int', "g(x) = \\arccos x + C");
+            setText('e1-p4-c', "C");
+            setText('e1-p4-int1', "]0,1]");
+            setText('e1-p4-x1', "x=1");
+            setText('e1-p4-lim1', "g(1)=0");
+            setText('e1-p4-arccos1', "\\arccos(1)=0");
+            setText('e1-p4-c1', "C_1=0");
+            setText('e1-p4-int2', "[-1,0[");
+            setText('e1-p4-x-1', "x=-1");
+            setText('e1-p4-lim-1', "g(-1)=0");
+            setText('e1-p4-arccos-1', "\\arccos(-1)=\\pi");
+            setText('e1-p4-c2', "C_2=-\\pi");
+
+            setText('h2-k1', "\\sqrt{1+u}");
+            setText('h2-k2', "x^2");
+            setText('h2-k3', "1/x");
+            setText('k2-f1', "\\sqrt{1+u} = 1 + \\frac{u}{2} - \\frac{u^2}{8} + o(u^2)");
+            setText('k2-f2', "f(x)");
+            setText('k2-f3', "x_0");
+            setText('k2-f4', "y = f(x_0) + f'(x_0)(x-x_0)");
+            setText('k2-f5', "\\lim_{x \\to \\infty} [f(x) - (ax+b)] = 0");
+            setText('k2-f6', "y=ax+b");
+
+            setText('e2-p1-expr', "|x-2|(1-x)");
+            setText('e2-p1-abs', "|x-2|");
+            setText('e2-p1-cond', "1-x \\ge 0");
+            setText('e2-p1-x1', "x \\le 1");
+            setText('e2-p1-x2', "x=2");
+            setText('e2-p1-dom', "]-\\infty, 1] \\cup \\{2\\}");
+            setText('e2-p2a-x', "x \\approx 0");
+            setText('e2-p2a-abs', "|x-2|=2-x");
+            setText('e2-p2a-f', "f(x)=\\sqrt{(2-x)(1-x)} = \\sqrt{2-3x+x^2}");
+            setText('e2-p2a-sqrt2', "\\sqrt{2}");
+            setText('e2-p2a-dl-form', "(1+u)^{1/2}");
+            setText('e2-p2a-u', "u = -\\frac{3}{2}x+\\frac{1}{2}x^2");
+            setText('e2-p2a-f-dl', "f(x) = \\sqrt{2} - \\frac{3\\sqrt{2}}{4}x - \\frac{\\sqrt{2}}{32}x^2 + o(x^2)");
+            setText('e2-p2a-tan', "y = \\sqrt{2} - \\frac{3\\sqrt{2}}{4}x");
+            setText('e2-p2a-pos-term', "-\\frac{\\sqrt{2}}{32}x^2");
+            setText('e2-p2b-inf', "-\\infty");
+            setText('e2-p2b-x-neg', "x < 0");
+            setText('e2-p2b-abs', "|x-2|=2-x");
+            setText('e2-p2b-x', "x");
+            setText('e2-p2b-f', "f(x) = |x|\\sqrt{1-3/x+2/x^2} = -x\\sqrt{1-3/x+2/x^2}");
+            setText('e2-p2b-t', "t=1/x");
+            setText('e2-p2b-f-dl', "f(x) = -x + \\frac{3}{2} + \\frac{1}{8x} + o(1/x)");
+            setText('e2-p2b-asy', "y=-x+3/2");
+            setText('e2-p2b-pos-term', "\\frac{1}{8x}");
+            setText('e2-p2b-x-inf', "x \\to -\\infty");
+
+            setText('h3-k1', "I_n+I_{n+1}");
+            setText('h3-k2', "I_n");
+            setText('k3-f1', "\\ln(u)");
+            setText('k3-f2', "e^u");
+            setText('k3-f3', "f(x) \\le g(x)");
+            setText('k3-f4', "x \\in [a,b]");
+            setText('k3-f5', "\\int_a^b f(x)dx \\le \\int_a^b g(x)dx");
+            setText('k3-f6', "g_n \\le u_n \\le h_n");
+            setText('k3-f7', "\\lim g_n = \\lim h_n = L");
+            setText('k3-f8', "\\lim u_n = L");
+            setText('k3-f9', "\\sum (a_{k+1}-a_k)");
+
+            setText('e3-p1-i1', "I_1 = \\int_{-1}^0 \\frac{e^x}{1+e^x} dx");
+            setText('e3-p1-form', "\\int u'/u");
+            setText('e3-p1-ln', "\\ln|u|");
+            setText('e3-p1-res', "[\\ln(1+e^x)]_{-1}^0 = \\ln(2) - \\ln(1+e^{-1})");
+            setText('e3-p2-int', "[-1, 0]");
+            setText('e3-p2-ex', "e^{-1} \\le e^x \\le 1");
+            setText('e3-p2-denom', "1+e^{-1} \\le 1+e^x \\le 2");
+            setText('e3-p2-frac', "\\frac{1}{1+e^x} \\le \\frac{1}{1+e^{-1}}");
+            setText('e3-p2-ineq', "I_n = \\int_{-1}^0 \\frac{e^{nx}}{1+e^x} dx \\le \\int_{-1}^0 e^{nx} dx = \\frac{1-e^{-n}}{n}");
+            setText('e3-p3-enc', "0 \\le I_n \\le \\frac{1-e^{-n}}{n}");
+            setText('e3-p3-lim-maj', "\\lim_{n \\to \\infty} \\frac{1-e^{-n}}{n} = 0");
+            setText('e3-p3-in', "I_n");
+            setText('e3-p4-sum', "I_n+I_{n+1} = \\int_{-1}^0 \\frac{e^{nx}(1+e^x)}{1+e^x} dx = \\int_{-1}^0 e^{nx} dx = \\frac{1-e^{-n}}{n}");
+            setText('e3-p5-sum', "\\sum_{k=1}^n \\frac{(-1)^{k+1}}{k}(1-e^{-k})");
+            setText('e3-p5-sub', "\\sum_{k=1}^n (-1)^{k+1}(I_k+I_{k+1})");
+            setText('e3-p5-simp', "I_1 + (-1)^{n+1}I_{n+1}");
+            setText('e3-p5-n-inf', "n \\to \\infty");
+            setText('e3-p5-in1-tend', "I_{n+1} \\to 0");
+            setText('e3-p5-i1', "I_1");
+
+            setText('h4-k1', "n");
+            setText('h4-k2', "k/n");
+            setText('k4-f1', "\\lim_{n \\to \\infty} \\frac{b-a}{n} \\sum_{k=1}^n f(a+k\\frac{b-a}{n}) = \\int_a^b f(x)dx");
+            setText('k4-f2', "1/(1+x)");
+            setText('k4-f3', "1/(1+x)^2");
+
+            setText('e4-p1-sum', "\\sum_{k=1}^n \\frac{1}{n+k} = \\frac{1}{n} \\sum_{k=1}^n \\frac{1}{1+k/n}");
+            setText('e4-p1-f', "f(x) = 1/(1+x)");
+            setText('e4-p1-int', "\\int_0^1 \\frac{1}{1+x} dx = [\\ln(1+x)]_0^1 = \\ln 2");
+            setText('e4-p2-sum', "\\sum_{k=1}^n \\frac{n}{(n+k)^2} = \\frac{1}{n} \\sum_{k=1}^n \\frac{1}{(1+k/n)^2}");
+            setText('e4-p2-f', "f(x) = 1/(1+x)^2");
+            setText('e4-p2-int', "\\int_0^1 \\frac{1}{(1+x)^2} dx = [-\\frac{1}{1+x}]_0^1 = -1/2 - (-1) = 1/2");
+
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

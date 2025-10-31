@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 1: Final Exam - Dark Theme</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+        
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+
+        h4 { /* Specific h4 style from original 10.html */
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #a5b4fc; /* Adjusted for dark theme */
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis 1</h1>
+            <p class="exam-subtitle">Final Exam (01/14/2015)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Statement</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex1-alpha"></span> be a real number strictly greater than 1. We define the numerical sequence <span class="katex-inline" data-id="ex1-un"></span> by:</p>
+                        <div class="katex-display" data-id="ex1-def"></div>
+                        
+                        <h4>Question 1</h4>
+                        <p>1. Show that <span class="katex-inline" data-id="ex1-q1-eq"></span>, <span class="katex-inline" data-id="ex1-q1-un-gt-1"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint1-1')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge1-1')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 2</h4>
+                        <p>2. Show that the sequence <span class="katex-inline" data-id="ex1-q2-un"></span> is strictly decreasing.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint1-2')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge1-2')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 3</h4>
+                        <p>3. Deduce that the sequence <span class="katex-inline" data-id="ex1-q3-un"></span> is convergent. Determine its limit.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint1-3')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge1-3')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 4</h4>
+                        <p>4. Let <span class="katex-inline" data-id="ex1-q4-A"></span>. Determine: sup A, inf A, max A and min A.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint1-4')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge1-4')">Prerequisites</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2</h3>
+                    <div class="exercise-content">
+                         <p>Let <span class="katex-inline" data-id="ex2-ab"></span> be two real numbers and f the function defined by</p>
+                         <div class="katex-display" data-id="ex2-def"></div>
+                        <h4>Question 1</h4>
+                        <p>1. Give the domain of definition of the function f.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint2-1')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge2-1')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 2</h4>
+                        <p>2. For which values of a and b is f continuous at the point <span class="katex-inline" data-id="ex2-q2-x0"></span>?</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint2-2')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge2-2')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 3</h4>
+                        <p>3. Can we find a and b, such that f is differentiable at the point <span class="katex-inline" data-id="ex2-q3-x0"></span>?</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint2-3')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge2-3')">Prerequisites</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>Let <span class="katex-inline" data-id="ex3-n"></span> and <span class="katex-inline" data-id="ex3-coeffs"></span> such that <span class="katex-inline" data-id="ex3-hypothese"></span>.</p>
+                        
+                        <h4>Question 1</h4>
+                        <p>1. Can Rolle's theorem be applied to the function f defined by: <span class="katex-inline" data-id="ex3-q1-fx"></span> on [0, 1]?</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint3-1')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge3-1')">Prerequisites</button>
+                        </div>
+                    </div>
+
+                    <div class="exercise-content">
+                        <h4>Question 2</h4>
+                        <p>2. Deduce that the equation <span class="katex-inline" data-id="ex3-q2-eq"></span> has a solution in the interval ]0, 1[.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint3-2')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge3-2')">Prerequisites</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>Let f and g be two functions from R to R defined by: <span class="katex-inline" data-id="ex4-fg-def"></span>.</p>
+
+                        <h4>Question 1</h4>
+                        <p>1. Calculate <span class="katex-inline" data-id="ex4-q1-derivs"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint4-1')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge4-1')">Prerequisites</button>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-content">
+                        <h4>Question 2</h4>
+                        <p>2. Using the Mean Value Theorem, show that we have: <span class="katex-inline" data-id="ex4-q2-ineq"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-primary" onclick="showModal('hint4-2')">Hint</button>
+                            <button class="btn btn-secondary" onclick="showModal('knowledge4-2')">Prerequisites</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 1</h3>
+                    
+                    <h4>Question 1</h4>
+                    <div class="exercise-content">
+                        <p>Let's prove by induction that <span class="katex-inline" data-id="sol1-1-p1"></span>. The inequality holds for n=0, since <span class="katex-inline" data-id="sol1-1-p2"></span>. Let's assume <span class="katex-inline" data-id="sol1-1-p3"></span>, and then show that <span class="katex-inline" data-id="sol1-1-p4"></span>. We have <span class="katex-inline" data-id="sol1-1-p5"></span>. Since <span class="katex-inline" data-id="sol1-1-p6"></span> by the induction hypothesis, <span class="katex-inline" data-id="sol1-1-p7"></span> and <span class="katex-inline" data-id="sol1-1-p8"></span>. Thus <span class="katex-inline" data-id="sol1-1-p9"></span>. So <span class="katex-inline" data-id="sol1-1-p10"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation1-1')">Detailed Explanation</button>
+                        </div>
+                    </div>
+
+                    <h4>Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Let's study the sign of <span class="katex-inline" data-id="sol1-2-p1"></span>. <span class="katex-inline" data-id="sol1-2-p2"></span>. Since <span class="katex-inline" data-id="sol1-2-p3"></span>, and <span class="katex-inline" data-id="sol1-2-p4"></span> and <span class="katex-inline" data-id="sol1-2-p5"></span>, then <span class="katex-inline" data-id="sol1-2-p6"></span>. Therefore, the sequence is strictly decreasing.</p>
+                         <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation1-2')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                    
+                    <h4>Question 3</h4>
+                    <div class="exercise-content">
+                        <p>The sequence <span class="katex-inline" data-id="sol1-3-p1"></span> is bounded below by 1 and is strictly decreasing, so it is convergent. Let l be its limit. Then l satisfies the relation: <span class="katex-inline" data-id="sol1-3-p2"></span>, which is equivalent to <span class="katex-inline" data-id="sol1-3-p3"></span>. Hence <span class="katex-inline" data-id="sol1-3-p4"></span>. Since <span class="katex-inline" data-id="sol1-3-p5"></span>, we have <span class="katex-inline" data-id="sol1-3-p6"></span>. Thus l=1.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation1-3')">Detailed Explanation</button>
+                        </div>
+                    </div>
+
+                    <h4>Question 4</h4>
+                    <div class="exercise-content">
+                        <p>We have <span class="katex-inline" data-id="sol1-4-p1"></span>. Since the sequence <span class="katex-inline" data-id="sol1-4-p2"></span> is strictly decreasing and <span class="katex-inline" data-id="sol1-4-p3"></span>, then sup A = max A = <span class="katex-inline" data-id="sol1-4-p4"></span>. The sequence <span class="katex-inline" data-id="sol1-4-p5"></span> is strictly decreasing, bounded below by 1 and converges to l=1. So inf A = 1. But inf A = 1 <span class="katex-inline" data-id="sol1-4-p6"></span> A (because <span class="katex-inline" data-id="sol1-4-p7"></span>), so min A does not exist.</p>
+                         <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation1-4')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 2</h3>
+                    
+                    <h4>Question 1</h4>
+                    <div class="exercise-content">
+                        <p>The domain of definition of the function f is <span class="katex-inline" data-id="sol2-1-p1"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation2-1')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                    
+                    <h4>Question 2</h4>
+                    <div class="exercise-content">
+                        <p>The function f is continuous at the point <span class="katex-inline" data-id="sol2-2-p1"></span> if and only if we have: <span class="katex-inline" data-id="sol2-2-p2"></span>. We have <span class="katex-inline" data-id="sol2-2-p3"></span>. <span class="katex-inline" data-id="sol2-2-p4"></span>. <span class="katex-inline" data-id="sol2-2-p5"></span>. So f is continuous at the point <span class="katex-inline" data-id="sol2-2-p6"></span>, for <span class="katex-inline" data-id="sol2-2-p7"></span> and for any <span class="katex-inline" data-id="sol2-2-p8"></span>.</p>
+                         <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation2-2')">Detailed Explanation</button>
+                        </div>
+                    </div>
+
+                    <h4>Question 3</h4>
+                    <div class="exercise-content">
+                        <p>The function f is differentiable at the point <span class="katex-inline" data-id="sol2-3-p1"></span> if and only if <span class="katex-inline" data-id="sol2-3-p2"></span> exists and is finite. We have <span class="katex-inline" data-id="sol2-3-p3"></span>. <span class="katex-inline" data-id="sol2-3-p4"></span>. For the right-hand limit, using L'Hôpital's rule: <span class="katex-inline" data-id="sol2-3-p5"></span>. For f to be differentiable at 0, the two limits must be equal, so <span class="katex-inline" data-id="sol2-3-p6"></span>. Consequently, f is differentiable at the point <span class="katex-inline" data-id="sol2-3-p7"></span> for <span class="katex-inline" data-id="sol2-3-p8"></span>.</p>
+                         <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation2-3')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 3</h3>
+
+                    <h4>Question 1</h4>
+                    <div class="exercise-content">
+                        <p>f is a polynomial function, so it is continuous and differentiable on R. Therefore, f is continuous on [0, 1] and differentiable on ]0, 1[. We check <span class="katex-inline" data-id="sol3-1-p1"></span>. <span class="katex-inline" data-id="sol3-1-p2"></span>. <span class="katex-inline" data-id="sol3-1-p3"></span>. By hypothesis, <span class="katex-inline" data-id="sol3-1-p4"></span>, so <span class="katex-inline" data-id="sol3-1-p5"></span>. The conditions of Rolle's theorem are satisfied.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation3-1')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                    
+                    <h4>Question 2</h4>
+                    <div class="exercise-content">
+                        <p>Rolle's theorem applied to f on [0, 1] implies that there exists a real number <span class="katex-inline" data-id="sol3-2-p1"></span> such that <span class="katex-inline" data-id="sol3-2-p2"></span>. We have <span class="katex-inline" data-id="sol3-2-p3"></span>. <span class="katex-inline" data-id="sol3-2-p4"></span>. From this, we deduce that the equation <span class="katex-inline" data-id="sol3-2-p5"></span> has a solution in the interval ]0, 1[.</p>
+                         <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation3-2')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 4</h3>
+                    
+                    <h4>Question 1</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol4-1-p1"></span> and <span class="katex-inline" data-id="sol4-1-p2"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation4-1')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                    
+                    <h4>Question 2</h4>
+                    <div class="exercise-content">
+                        <p>• For the first inequality <span class="katex-inline" data-id="sol4-2-p1"></span>: We apply the MVT to the function <span class="katex-inline" data-id="sol4-2-p2"></span> on <span class="katex-inline" data-id="sol4-2-p3"></span> with <span class="katex-inline" data-id="sol4-2-p4"></span>. There exists <span class="katex-inline" data-id="sol4-2-p5"></span> such that <span class="katex-inline" data-id="sol4-2-p6"></span>. <span class="katex-inline" data-id="sol4-2-p7"></span> and <span class="katex-inline" data-id="sol4-2-p8"></span>. So <span class="katex-inline" data-id="sol4-2-p9"></span>. Since <span class="katex-inline" data-id="sol4-2-p10"></span>, <span class="katex-inline" data-id="sol4-2-p11"></span> so <span class="katex-inline" data-id="sol4-2-p12"></span>. Since x>0, we have <span class="katex-inline" data-id="sol4-2-p13"></span>. Thus <span class="katex-inline" data-id="sol4-2-p14"></span>.</p>
+                        <p>• For the second inequality <span class="katex-inline" data-id="sol4-2-p15"></span>: We apply the MVT to the function <span class="katex-inline" data-id="sol4-2-p16"></span> on <span class="katex-inline" data-id="sol4-2-p17"></span> with <span class="katex-inline" data-id="sol4-2-p18"></span>. There exists <span class="katex-inline" data-id="sol4-2-p19"></span> such that <span class="katex-inline" data-id="sol4-2-p20"></span>. <span class="katex-inline" data-id="sol4-2-p21"></span> and <span class="katex-inline" data-id="sol4-2-p22"></span>. So <span class="katex-inline" data-id="sol4-2-p23"></span>. Since x>0, <span class="katex-inline" data-id="sol4-2-p24"></span>, <span class="katex-inline" data-id="sol4-2-p25"></span>, we have <span class="katex-inline" data-id="sol4-2-p26"></span>. So <span class="katex-inline" data-id="sol4-2-p27"></span>. Since <span class="katex-inline" data-id="sol4-2-p28"></span>, 1-x>0. We can divide: <span class="katex-inline" data-id="sol4-2-p29"></span>.</p>
+                        <div class="btn-container">
+                            <button class="btn btn-tertiary" onclick="showModal('explanation4-2')">Detailed Explanation</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Sequences and Convergence: The Essence of Iterative Algorithms ⚙️</h3>
+                        <p class="text-lg mb-4 text-slate-300">The study of sequences, as in Exercise 1, is the mathematical foundation of <strong>iterative algorithms</strong>. In computer science, many problems are solved not in a single step, but by refining a solution step-by-step. Each iteration produces a new value (a term of the sequence) that is hopefully closer to the final solution (the limit).</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Google's PageRank</h4>
+                        <p class="mb-4 text-slate-400">Google's original algorithm, PageRank, works this way. It assigns an importance score to each web page. The score of a page at step <span class="katex-inline">n+1</span> is calculated based on the scores of all pages linking to it at step <span class="katex-inline">n</span>. It's a massive recursive sequence! The algorithm stops when the scores barely change, meaning the sequence has <strong>converged</strong>.</p>
+                        <pre class="language-pseudocode"><code>// Initialize the scores of all pages to 1/N
+    scores = initializeScores(numPages);
+    
+    // Loop until convergence
+    while (not converged) {
+      new_scores = calculateNextScores(scores, webGraph);
+      
+      // Check if the scores have stopped changing significantly
+      if (distance(new_scores, scores) < epsilon) {
+        converged = true;
+      }
+      
+      scores = new_scores; // u_{n+1} = f(u_n)
+    }
+    return scores;</code></pre>
+                    </div>
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Continuity and Derivatives: The Engine of AI 🧠</h3>
+                        <p class="text-lg mb-4 text-slate-300">The concepts of continuity and differentiability (Exercise 2) are absolutely central to <strong>artificial intelligence</strong> and <strong>Machine Learning</strong>. To train an AI model, a "cost function" is defined to measure how wrong its predictions are. The goal is to minimize this cost.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Gradient Descent</h4>
+                        <p class="mb-4 text-slate-400">The most common method for minimizing this cost is "gradient descent." It relies on calculating the <strong>derivative</strong> (the gradient) of the cost function. The derivative indicates the direction of the steepest ascent. To reduce the error, the algorithm adjusts the model's parameters in the direction opposite to the derivative. This is only possible if the cost function is differentiable, and therefore continuous, at least piecewise.</p>
+                         <pre class="language-pseudocode"><code>// Model parameters (weights)
+    weights = random_initialization();
+    learning_rate = 0.01;
+    
+    // Training loop
+    for (epoch in 1..1000) {
+      // Calculate how wrong the prediction is
+      error = calculateError(data, weights);
+      
+      // Calculate the derivative of the error with respect to the weights
+      // f'(x)
+      gradient = calculateGradient(error, weights);
+      
+      // Adjust weights in the direction that minimizes the error
+      // x_new = x_old - learning_rate * f'(x)
+      weights -= learning_rate * gradient;
+    }
+    </code></pre>
+                    </div>
+                    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">3. Existence Theorems: Proving that an Algorithm Works 💡</h3>
+                        <p class="text-lg mb-4 text-slate-300">Rolle's Theorem (Exercise 3) and the Mean Value Theorem (MVT, Exercise 4) are "existence theorems." They don't give us the solution, but they <strong>guarantee that a solution exists</strong>. In theoretical computer science, these tools are essential for proving the <strong>correctness</strong> and <strong>stability</strong> of numerical algorithms.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Numerical Error Analysis</h4>
+                        <p class="mb-4 text-slate-400">When a computer performs a calculation, it uses approximations (e.g., floating-point numbers). The MVT is used to bound the error introduced by these approximations. It allows us to say: "I don't know the exact error, but I can guarantee (thanks to the MVT) that it will never exceed a certain value <span class="katex-inline">M \cdot |x-a|</span>." This guarantee is crucial for critical applications like aerospace simulations or financial calculations, where an uncontrolled error could be catastrophic.</p>
+                        <pre class="language-pseudocode"><code>// Concept of error analysis with the MVT
+    // We want to approximate f(x) near 'a'
+    // MVT says: f(x) - f(a) = f'(c) * (x-a) for some 'c' between a and x
+    
+    function approximate(f, x, a) {
+      // Our approximation (e.g., a straight line)
+      approximation = f(a); 
+      
+      // Real error = f(x) - approximation = f(x) - f(a)
+      real_error = f(x) - f(a);
+    
+      // We don't know 'c', but we can find the maximum value of f'(x)
+      // on the interval [a, x]
+      M = find_max(derivative(f), interval=[a, x]);
+    
+      // We can guarantee that the error is bounded
+      // |real_error| <= M * |x-a|
+      assert(abs(real_error) <= M * abs(x-a));
+      
+      return approximation;
+    }</code></pre>
+                    </div>
+    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('hint1-1')">&times;</span></div><p>Use a proof by induction. For the inductive step, calculate the difference <span class="katex-inline" data-id="h1-1-1"></span> and study its sign.</p></div></div>
+    <div id="knowledge1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('knowledge1-1')">&times;</span></div><p><strong>Proof by Induction:</strong> To prove that a property P(n) is true for every integer n, you must:</p><ol><li><strong>Base Case:</strong> Prove that P(0) is true.</li><li><strong>Inductive Step:</strong> Assume that P(n) is true for a given n (the induction hypothesis) and prove that P(n+1) is also true.</li></ol></div></div>
+    <div id="explanation1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.1</h3><span class="close-btn" onclick="closeModal('explanation1-1')">&times;</span></div><h4>Objective: Show that <span class="katex-inline" data-id="e1-1-1"></span>.</h4><p>We use a proof by induction.</p><p><strong>1. Base Case (for n=0):</strong></p><p>The proposition is <span class="katex-inline" data-id="e1-1-2"></span>. By definition, <span class="katex-inline" data-id="e1-1-3"></span>. The problem statement tells us that <span class="katex-inline" data-id="e1-1-4"></span>, so the inequality holds for n=0.</p><p><strong>2. Inductive Step:</strong></p><p>Assume that the proposition is true for a certain rank n, i.e., <span class="katex-inline" data-id="e1-1-5"></span> (this is our induction hypothesis).</p><p>We must show that the proposition is true for rank n+1, i.e., <span class="katex-inline" data-id="e1-1-6"></span>.</p><p>To do this, let's study the sign of the difference <span class="katex-inline" data-id="e1-1-7"></span>:</p><p><span class="katex-display" data-id="e1-1-8"></span></p><p>Now, let's use our induction hypothesis (<span class="katex-inline" data-id="e1-1-9"></span>) to determine the sign of the numerator and the denominator:</p><ul><li>Numerator: <span class="katex-inline" data-id="e1-1-10"></span> <span class="katex-inline" data-id="e1-1-11"></span>.</li><li>Denominator: <span class="katex-inline" data-id="e1-1-12"></span> <span class="katex-inline" data-id="e1-1-13"></span>.</li></ul><p>The quotient of two strictly positive numbers is strictly positive. Therefore, <span class="katex-inline" data-id="e1-1-14"></span>, which is equivalent to <span class="katex-inline" data-id="e1-1-15"></span>. The inductive step is proven.</p><p><strong>Conclusion:</strong> By the principle of induction, we have shown that <span class="katex-inline" data-id="e1-1-16"></span>.</p></div></div>
+
+    <div id="hint1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('hint1-2')">&times;</span></div><p>To study the monotonicity of the sequence, calculate the difference <span class="katex-inline" data-id="h1-2-1"></span> and study its sign using the result from the previous question.</p></div></div>
+    <div id="knowledge1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('knowledge1-2')">&times;</span></div><p><strong>Monotonicity of a Sequence:</strong></p><ul><li>A sequence <span class="katex-inline" data-id="k1-2-1"></span> is <strong>decreasing</strong> if <span class="katex-inline" data-id="k1-2-2"></span> for all n.</li><li>It is <strong>strictly decreasing</strong> if <span class="katex-inline" data-id="k1-2-3"></span> for all n.</li></ul><p>To determine this, we often study the sign of the difference <span class="katex-inline" data-id="k1-2-4"></span>.</p></div></div>
+    <div id="explanation1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.2</h3><span class="close-btn" onclick="closeModal('explanation1-2')">&times;</span></div><h4>Objective: Show that the sequence <span class="katex-inline" data-id="e1-2-1"></span> is strictly decreasing.</h4><p>For this, we need to show that <span class="katex-inline" data-id="e1-2-2"></span>, or equivalently, that <span class="katex-inline" data-id="e1-2-3"></span> for all <span class="katex-inline" data-id="e1-2-4"></span>.</p><p>Let's calculate the difference <span class="katex-inline" data-id="e1-2-5"></span>:</p><p><span class="katex-display" data-id="e1-2-6"></span></p><p>We factor the numerator, which is a difference of squares (<span class="katex-inline" data-id="e1-2-7"></span>):</p><p><span class="katex-display" data-id="e1-2-8"></span></p><p>Now, let's study the sign of each factor using the result from question 1, which is <span class="katex-inline" data-id="e1-2-9"></span>:</p><ul><li><span class="katex-inline" data-id="e1-2-10"></span>: Since <span class="katex-inline" data-id="e1-2-11"></span>, we have <span class="katex-inline" data-id="e1-2-12"></span>.</li><li><span class="katex-inline" data-id="e1-2-13"></span>: Since <span class="katex-inline" data-id="e1-2-14"></span>, we have <span class="katex-inline" data-id="e1-2-15"></span>.</li><li><span class="katex-inline" data-id="e1-2-16"></span>: Since <span class="katex-inline" data-id="e1-2-17"></span>, we have <span class="katex-inline" data-id="e1-2-18"></span>.</li></ul><p>In summary, the sign of the fraction is <span class="katex-inline" data-id="e1-2-19"></span>, which is negative.</p><p>Therefore, <span class="katex-inline" data-id="e1-2-20"></span> for all n.</p><p><strong>Conclusion:</strong> The sequence <span class="katex-inline" data-id="e1-2-21"></span> is strictly decreasing.</p></div></div>
+    
+    <div id="hint1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.3</h3><span class="close-btn" onclick="closeModal('hint1-3')">&times;</span></div><p>Use a theorem on the convergence of monotonic sequences. To find the limit <span class="katex-inline" data-id="h1-3-1"></span>, solve the equation <span class="katex-inline" data-id="h1-3-2"></span>.</p></div></div>
+    <div id="knowledge1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.3</h3><span class="close-btn" onclick="closeModal('knowledge1-3')">&times;</span></div><p><strong>Monotone Convergence Theorem:</strong></p><ul><li>Every <strong>decreasing</strong> and <strong>bounded below</strong> sequence is convergent.</li><li>Every <strong>increasing</strong> and <strong>bounded above</strong> sequence is convergent.</li></ul><p><strong>Limit of a Recursive Sequence:</strong> If a sequence defined by <span class="katex-inline" data-id="k1-3-1"></span> converges to a finite limit <span class="katex-inline" data-id="k1-3-2"></span> and the function f is continuous, then <span class="katex-inline" data-id="k1-3-3"></span> is a solution of the equation <span class="katex-inline" data-id="k1-3-4"></span>.</p></div></div>
+    <div id="explanation1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.3</h3><span class="close-btn" onclick="closeModal('explanation1-3')">&times;</span></div><h4>Part 1: Show that the sequence is convergent</h4><p>We have established two important facts:</p><ol><li>From question 1, the sequence <span class="katex-inline" data-id="e1-3-1"></span> is <strong>bounded below</strong> by 1 (since <span class="katex-inline" data-id="e1-3-2"></span>).</li><li>From question 2, the sequence <span class="katex-inline" data-id="e1-3-3"></span> is <strong>strictly decreasing</strong>.</li></ol><p>According to the <strong>Monotone Convergence Theorem</strong>, any sequence that is both decreasing and bounded below converges to a finite limit. Therefore, the sequence <span class="katex-inline" data-id="e1-3-4"></span> is convergent.</p><h4>Part 2: Determine the limit</h4><p>Let <span class="katex-inline" data-id="e1-3-5"></span> be the limit of the sequence <span class="katex-inline" data-id="e1-3-6"></span>. As <span class="katex-inline" data-id="e1-3-7"></span>, we have <span class="katex-inline" data-id="e1-3-8"></span> and <span class="katex-inline" data-id="e1-3-9"></span>. The recurrence relation <span class="katex-inline" data-id="e1-3-10"></span> becomes at the limit:</p><p><span class="katex-display" data-id="e1-3-11"></span></p><p>We must solve this equation to find the possible values of <span class="katex-inline" data-id="e1-3-12"></span>:</p><p><span class="katex-display" data-id="e1-3-13"></span></p><p>The possible solutions for the limit are therefore <span class="katex-inline" data-id="e1-3-14"></span> and <span class="katex-inline" data-id="e1-3-15"></span>.</p><p>However, we know that for all n, <span class="katex-inline" data-id="e1-3-16"></span>. By taking the limit, the limit must be greater than or equal to 1, i.e., <span class="katex-inline" data-id="e1-3-17"></span>. This eliminates the solution <span class="katex-inline" data-id="e1-3-18"></span>.</p><p><strong>Conclusion:</strong> The only possible limit is <span class="katex-inline" data-id="e1-3-19"></span>.</p></div></div>
+
+    <div id="hint1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1.4</h3><span class="close-btn" onclick="closeModal('hint1-4')">&times;</span></div><p>The supremum (sup) and maximum (max) are related to the largest value of the sequence. The infimum (inf) is related to the limit of the sequence. Ask yourself if this limit is reached by a term of the sequence to determine if the minimum (min) exists.</p></div></div>
+    <div id="knowledge1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1.4</h3><span class="close-btn" onclick="closeModal('knowledge1-4')">&times;</span></div><p><strong>Definitions:</strong> Let A be a set of real numbers.</p><ul><li><strong>Supremum (sup A):</strong> The least upper bound of A.</li><li><strong>Infimum (inf A):</strong> The greatest lower bound of A.</li><li><strong>Maximum (max A):</strong> The largest element in A. If the maximum exists, then max A = sup A.</li><li><strong>Minimum (min A):</strong> The smallest element in A. If the minimum exists, then min A = inf A.</li></ul><p>The maximum or minimum exists only if the supremum or infimum belongs to the set A.</p></div></div>
+    <div id="explanation1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1.4</h3><span class="close-btn" onclick="closeModal('explanation1-4')">&times;</span></div><h4>Objective: Determine sup A, inf A, max A, and min A for <span class="katex-inline" data-id="e1-4-1"></span>.</h4><p><strong>1. Supremum and Maximum:</strong></p><p>We have shown that the sequence <span class="katex-inline" data-id="e1-4-2"></span> is strictly decreasing. This means its first term is the largest of all terms:</p><p><span class="katex-display" data-id="e1-4-3"></span></p><p>The largest element of the set A is therefore <span class="katex-inline" data-id="e1-4-4"></span>. By definition, this is the <strong>maximum</strong> of A.</p><p>Since the maximum exists, the <strong>supremum</strong> is equal to the maximum.</p><p>Thus, <span class="katex-inline" data-id="e1-4-5"></span>.</p><p><strong>2. Infimum and Minimum:</strong></p><p>The sequence is decreasing and converges to 1. This means that the terms of the sequence get closer and closer to 1, without ever reaching it (since <span class="katex-inline" data-id="e1-4-6"></span> for all n). The value 1 is therefore the greatest lower bound.</p><p>By definition, the <strong>infimum</strong> of A is 1.</p><p>Thus, <span class="katex-inline" data-id="e1-4-7"></span>.</p><p>For the <strong>minimum</strong> to exist, the infimum (i.e., 1) would have to be an element of the set A. This would mean there exists an integer n such that <span class="katex-inline" data-id="e1-4-8"></span>. However, we have proven that <span class="katex-inline" data-id="e1-4-9"></span> for all n. Therefore, 1 does not belong to A.</p><p><strong>Conclusion:</strong> The minimum of A does not exist.</p></div></div>
+
+    <div id="hint2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('hint2-1')">&times;</span></div><p>Examine each piece of the function. The function <span class="katex-inline" data-id="h2-1-1"></span> is defined for which values of x? And the function <span class="katex-inline" data-id="h2-1-2"></span>? Are there any values of x for which neither expression is defined?</p></div></div>
+    <div id="knowledge2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('knowledge2-1')">&times;</span></div><p><strong>Domain of Definition:</strong> The set of all values for which a function is defined.</p><ul><li>The sine and cosine functions are defined on <span class="katex-inline" data-id="k2-1-1"></span>.</li><li>Fractions are not defined when their denominator is zero.</li></ul></div></div>
+    <div id="explanation2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2.1</h3><span class="close-btn" onclick="closeModal('explanation2-1')">&times;</span></div><h4>Objective: Determine the domain of definition of f.</h4><p>The function is defined piecewise:</p><p><span class="katex-display" data-id="e2-1-1"></span></p><p>We must examine each part:</p><ol><li><strong>For <span class="katex-inline" data-id="e2-1-2"></span>:</strong> The function is <span class="katex-inline" data-id="e2-1-3"></span>. The sine function is defined for any real number. This is a well-defined expression on the interval <span class="katex-inline" data-id="e2-1-4"></span>.</li><li><strong>For <span class="katex-inline" data-id="e2-1-5"></span>:</strong> The function is <span class="katex-inline" data-id="e2-1-6"></span>. The cosine function is defined everywhere. The only potential problem is division by zero. The denominator is <span class="katex-inline" data-id="e2-1-7"></span>, which is zero only if x=0. However, this expression is only used for <span class="katex-inline" data-id="e2-1-8"></span>, so the case x=0 is excluded. The expression is therefore well-defined on the interval <span class="katex-inline" data-id="e2-1-9"></span>.</li></ol><p>The function is defined for <span class="katex-inline" data-id="e2-1-10"></span> and for <span class="katex-inline" data-id="e2-1-11"></span>. The union of these two sets covers all real numbers.</p><p><strong>Conclusion:</strong> The domain of definition of f is the set of all real numbers, <span class="katex-inline" data-id="e2-1-12"></span>.</p></div></div>
+
+    <div id="hint2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('hint2-2')">&times;</span></div><p>For f to be continuous at 0, the left-hand limit, the right-hand limit, and the value of the function at 0 must be equal: <span class="katex-inline" data-id="h2-2-1"></span>. For the right-hand limit, you can use a known equivalent or L'Hôpital's rule.</p></div></div>
+    <div id="knowledge2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('knowledge2-2')">&times;</span></div><p><strong>Continuity at a Point:</strong> A function f is continuous at <span class="katex-inline" data-id="k2-2-1"></span> if <span class="katex-inline" data-id="k2-2-2"></span>.</p><p><strong>Common Limits:</strong> The limit <span class="katex-inline" data-id="k2-2-3"></span> is a fundamental limit to know. Alternatively, the trigonometric formula <span class="katex-inline" data-id="k2-2-4"></span> can be useful.</p></div></div>
+    <div id="explanation2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2.2</h3><span class="close-btn" onclick="closeModal('explanation2-2')">&times;</span></div><h4>Objective: Find a and b such that f is continuous at <span class="katex-inline" data-id="e2-2-1"></span>.</h4><p>The condition for continuity at 0 is that the left-hand limit, the right-hand limit, and the value of the function at 0 are equal:</p><p><span class="katex-display" data-id="e2-2-2"></span></p><p>Let's calculate these three values:</p><p><strong>1. Value of the function at 0:</strong></p><p>For <span class="katex-inline" data-id="e2-2-3"></span>, we use the first expression: <span class="katex-inline" data-id="e2-2-4"></span>.</p><p><strong>2. Left-hand limit (<span class="katex-inline" data-id="e2-2-5"></span>):</strong></p><p>As x approaches 0 from negative values, we use the first expression: <span class="katex-inline" data-id="e2-2-6"></span>.</p><p><strong>3. Right-hand limit (<span class="katex-inline" data-id="e2-2-7"></span>):</strong></p><p>As x approaches 0 from positive values, we use the second expression: <span class="katex-inline" data-id="e2-2-8"></span>. This is an indeterminate form 0/0. We can calculate it using the formula <span class="katex-inline" data-id="e2-2-9"></span>:</p><p><span class="katex-display" data-id="e2-2-10"></span></p><p>We know that <span class="katex-inline" data-id="e2-2-11"></span> when <span class="katex-inline" data-id="e2-2-12"></span>, so <span class="katex-inline" data-id="e2-2-13"></span> when <span class="katex-inline" data-id="e2-2-14"></span>. The limit becomes:</p><p><span class="katex-display" data-id="e2-2-15"></span></p><p><strong>Conclusion:</strong></p><p>For the function to be continuous, we need <span class="katex-inline" data-id="e2-2-16"></span>. This gives us the equation:</p><p><span class="katex-display" data-id="e2-2-17"></span></p><p>The value of 'a' does not affect the continuity at 0. Therefore, f is continuous if <span class="katex-inline" data-id="e2-2-18"></span> and 'a' can be any real number (<span class="katex-inline" data-id="e2-2-19"></span>).</p></div></div>
+    
+    <div id="hint2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2.3</h3><span class="close-btn" onclick="closeModal('hint2-3')">&times;</span></div><p>For f to be differentiable at 0, it must first be continuous. So, use the values found in the previous question. Then, calculate the limit of the difference quotient <span class="katex-inline" data-id="h2-3-1"></span> on the left and on the right. These two limits must be equal and finite.</p></div></div>
+    <div id="knowledge2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2.3</h3><span class="close-btn" onclick="closeModal('knowledge2-3')">&times;</span></div><p><strong>Differentiability at a Point:</strong> A function f is differentiable at <span class="katex-inline" data-id="k2-3-1"></span> if the limit of the difference quotient <span class="katex-inline" data-id="k2-3-2"></span> exists and is finite. This implies that the left and right-hand limits of this quotient must exist and be equal.</p><p><strong>L'Hôpital's Rule:</strong> Useful for calculating limits of indeterminate forms 0/0 or <span class="katex-inline" data-id="k2-3-3"></span>.</p></div></div>
+    <div id="explanation2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2.3</h3><span class="close-btn" onclick="closeModal('explanation2-3')">&times;</span></div><h4>Objective: Find a and b such that f is differentiable at <span class="katex-inline" data-id="e2-3-1"></span>.</h4><p>For f to be differentiable at 0, it must first be continuous at 0. From the previous question, we know this requires <span class="katex-inline" data-id="e2-3-2"></span>.</p><p>Now, we must check that the limit of the difference quotient exists at 0. We need to calculate the left-hand derivative and the right-hand derivative and check if they are equal.</p><p>The difference quotient is <span class="katex-inline" data-id="e2-3-3"></span>. With <span class="katex-inline" data-id="e2-3-4"></span>, this becomes <span class="katex-inline" data-id="e2-3-5"></span>.</p><p><strong>1. Left-hand derivative (<span class="katex-inline" data-id="e2-3-6"></span>):</strong></p><p><span class="katex-display" data-id="e2-3-7"></span></p><p><strong>2. Right-hand derivative (<span class="katex-inline" data-id="e2-3-8"></span>):</strong></p><p><span class="katex-display" data-id="e2-3-9"></span></p><p>This is an indeterminate form 0/0. We can use L'Hôpital's rule (by differentiating the numerator and the denominator):</p><p><span class="katex-display" data-id="e2-3-10"></span></p><p>Applying the rule a second time:</p><p><span class="katex-display" data-id="e2-3-11"></span></p><p>And a third time:</p><p><span class="katex-display" data-id="e2-3-12"></span></p><p><strong>Conclusion:</strong></p><p>For the function to be differentiable at 0, the left-hand derivative must equal the right-hand derivative:</p><p><span class="katex-display" data-id="e2-3-13"></span></p><p>Therefore, the function f is differentiable at 0 if and only if <span class="katex-inline" data-id="e2-3-14"></span> and <span class="katex-inline" data-id="e2-3-15"></span>.</p></div></div>
+    
+    <div id="hint3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('hint3-1')">&times;</span></div><p>Check the three conditions of Rolle's theorem: continuity on [0, 1], differentiability on ]0, 1[, and the equality <span class="katex-inline" data-id="h3-1-1"></span>. The hypothesis given in the problem statement is the key to verifying the third condition.</p></div></div>
+    <div id="knowledge3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('knowledge3-1')">&times;</span></div><p><strong>Rolle's Theorem:</strong> Let f be a function. If:</p><ol><li>f is continuous on the closed interval [a, b],</li><li>f is differentiable on the open interval ]a, b[,</li><li>f(a) = f(b),</li></ol><p>then there exists at least one real number c in ]a, b[ such that <span class="katex-inline" data-id="k3-1-1"></span>.</p><p><strong>Properties of Polynomials:</strong> A polynomial function is continuous and differentiable on <span class="katex-inline" data-id="k3-1-2"></span>.</p></div></div>
+    <div id="explanation3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.1</h3><span class="close-btn" onclick="closeModal('explanation3-1')">&times;</span></div><h4>Objective: Check if Rolle's theorem can be applied to f on [0, 1].</h4><p>We need to check the three conditions of Rolle's theorem for the function <span class="katex-inline" data-id="e3-1-1"></span> on the interval [0, 1].</p><p><strong>1. Continuity on [0, 1]:</strong></p><p>The function f is a polynomial function. Every polynomial function is continuous on the set of real numbers <span class="katex-inline" data-id="e3-1-2"></span>. Therefore, f is continuous on the interval [0, 1].</p><p><strong>2. Differentiability on ]0, 1[:</strong></p><p>Similarly, every polynomial function is differentiable on <span class="katex-inline" data-id="e3-1-3"></span>. So, f is differentiable on the interval ]0, 1[.</p><p><strong>3. Equality f(0) = f(1):</strong></p><p>We need to calculate f(0) and f(1) and check if they are equal.</p><ul><li>Calculation of f(0):<br><span class="katex-inline" data-id="e3-1-4"></span>.</li><li>Calculation of f(1):<br><span class="katex-inline" data-id="e3-1-5"></span>.</li></ul><p>The problem statement gives us the following hypothesis: <span class="katex-inline" data-id="e3-1-6"></span>.</p><p>Rearranging this hypothesis, we get: <span class="katex-inline" data-id="e3-1-7"></span>.</p><p>Substituting this into our expression for f(1), we find: <span class="katex-inline" data-id="e3-1-8"></span>.</p><p>We thus have <span class="katex-inline" data-id="e3-1-9"></span>.</p><p><strong>Conclusion:</strong> The three conditions of Rolle's theorem are satisfied. Yes, the theorem can be applied.</p></div></div>
+
+    <div id="hint3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('hint3-2')">&times;</span></div><p>Since the conditions of Rolle's theorem are met, there exists a <span class="katex-inline" data-id="h3-2-1"></span> such that <span class="katex-inline" data-id="h3-2-2"></span>. Calculate <span class="katex-inline" data-id="h3-2-3"></span> and you will see the desired equation appear.</p></div></div>
+    <div id="knowledge3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('knowledge3-2')">&times;</span></div><p><strong>Conclusion of Rolle's Theorem:</strong> If the conditions are met, the existence of a point c where the derivative is zero (<span class="katex-inline" data-id="k3-2-1"></span>) is guaranteed.</p><p><strong>Differentiation Rules for Polynomials:</strong> The derivative of <span class="katex-inline" data-id="k3-2-2"></span> is <span class="katex-inline" data-id="k3-2-3"></span>.</p></div></div>
+    <div id="explanation3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3.2</h3><span class="close-btn" onclick="closeModal('explanation3-2')">&times;</span></div><h4>Objective: Use Rolle's theorem to prove the existence of a solution to the equation.</h4><p>In the previous question, we showed that Rolle's theorem applies to the function f on the interval [0, 1].</p><p>The conclusion of Rolle's theorem is that there exists at least one real number <span class="katex-inline" data-id="e3-2-1"></span> such that <span class="katex-inline" data-id="e3-2-2"></span>.</p><p>Let's calculate the derivative <span class="katex-inline" data-id="e3-2-3"></span> of the function f:</p><p>Recall f(x): <span class="katex-inline" data-id="e3-2-4"></span>.</p><p>Differentiating term by term, we get:</p><p><span class="katex-display" data-id="e3-2-5"></span></p><p>Now, let's write what <span class="katex-inline" data-id="e3-2-6"></span> means for our existing <span class="katex-inline" data-id="e3-2-7"></span>:</p><p><span class="katex-display" data-id="e3-2-8"></span></p><p>Rearranging the terms, we get:</p><p><span class="katex-display" data-id="e3-2-9"></span></p><p>This means that the number <span class="katex-inline" data-id="e3-2-10"></span> is a solution to the equation <span class="katex-inline" data-id="e3-2-11"></span>.</p><p><strong>Conclusion:</strong> Since we know that <span class="katex-inline" data-id="e3-2-12"></span>, we have proven that the equation <span class="katex-inline" data-id="e3-2-13"></span> has at least one solution in the interval ]0, 1[.</p></div></div>
+
+    <div id="hint4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4.1</h3><span class="close-btn" onclick="closeModal('hint4-1')">&times;</span></div><p>For <span class="katex-inline" data-id="h4-1-1"></span>, differentiate term by term. For <span class="katex-inline" data-id="h4-1-2"></span>, don't forget to use the product rule for differentiation <span class="katex-inline" data-id="h4-1-3"></span>.</p></div></div>
+    <div id="knowledge4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4.1</h3><span class="close-btn" onclick="closeModal('knowledge4-1')">&times;</span></div><p><strong>Common Derivatives:</strong></p><ul><li>The derivative of <span class="katex-inline" data-id="k4-1-1"></span> is <span class="katex-inline" data-id="k4-1-2"></span>.</li><li>The derivative of x is 1.</li><li>The derivative of a constant is 0.</li></ul><p><strong>Product Rule:</strong> <span class="katex-inline" data-id="k4-1-3"></span>.</p></div></div>
+    <div id="explanation4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4.1</h3><span class="close-btn" onclick="closeModal('explanation4-1')">&times;</span></div><h4>Objective: Calculate <span class="katex-inline" data-id="e4-1-1"></span> and <span class="katex-inline" data-id="e4-1-2"></span>.</h4><p><strong>1. Calculation of <span class="katex-inline" data-id="e4-1-3"></span>:</strong></p><p>The function is <span class="katex-inline" data-id="e4-1-4"></span>. We differentiate each term:</p><p><span class="katex-display" data-id="e4-1-5"></span></p><p><strong>2. Calculation of <span class="katex-inline" data-id="e4-1-6"></span>:</strong></p><p>The function is <span class="katex-inline" data-id="e4-1-7"></span>. The first term, <span class="katex-inline" data-id="e4-1-8"></span>, is a product of functions. We use the product rule <span class="katex-inline" data-id="e4-1-9"></span> with <span class="katex-inline" data-id="e4-1-10"></span> and <span class="katex-inline" data-id="e4-1-11"></span>.</p><ul><li><span class="katex-inline" data-id="e4-1-12"></span></li><li><span class="katex-inline" data-id="e4-1-13"></span></li></ul><p>The derivative of the product is: <span class="katex-inline" data-id="e4-1-14"></span>.</p><p>Now, we calculate the entire <span class="katex-inline" data-id="e4-1-15"></span>:</p><p><span class="katex-display" data-id="e4-1-16"></span></p></div></div>
+
+    <div id="hint4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4.2</h3><span class="close-btn" onclick="closeModal('hint4-2')">&times;</span></div><p>For the first inequality, apply the MVT to the function f on the interval [0, x]. For the second, apply the MVT to the function g on the same interval [0, x]. Study the sign of the derivatives <span class="katex-inline" data-id="h4-2-1"></span> and <span class="katex-inline" data-id="h4-2-2"></span> on this interval.</p></div></div>
+    <div id="knowledge4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4.2</h3><span class="close-btn" onclick="closeModal('knowledge4-2')">&times;</span></div><p><strong>Mean Value Theorem (MVT):</strong> If a function h is continuous on [a, b] and differentiable on ]a, b[, then there exists a real number c in ]a, b[ such that:</p><p><span class="katex-display" data-id="k4-2-1"></span></p><p><strong>Properties of the Exponential Function:</strong> For <span class="katex-inline" data-id="k4-2-2"></span>, <span class="katex-inline" data-id="k4-2-3"></span>. The exponential function is strictly increasing.</p></div></div>
+    <div id="explanation4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4.2</h3><span class="close-btn" onclick="closeModal('explanation4-2')">&times;</span></div><h4>Objective: Show that <span class="katex-inline" data-id="e4-2-1"></span> for <span class="katex-inline" data-id="e4-2-2"></span>.</h4><p>This is done in two parts.</p><p><strong>Part 1: Prove <span class="katex-inline" data-id="e4-2-3"></span></strong></p><p>We apply the Mean Value Theorem (MVT) to the function <span class="katex-inline" data-id="e4-2-4"></span> on the interval [0, x], with <span class="katex-inline" data-id="e4-2-5"></span>.</p><p>f is continuous and differentiable. The MVT guarantees that there exists a <span class="katex-inline" data-id="e4-2-6"></span> such that:</p><p><span class="katex-display" data-id="e4-2-7"></span></p><p>Let's calculate the terms: <span class="katex-inline" data-id="e4-2-8"></span> and <span class="katex-inline" data-id="e4-2-9"></span>.</p><p>The equation becomes: <span class="katex-inline" data-id="e4-2-10"></span>.</p><p>Now, let's study the sign of <span class="katex-inline" data-id="e4-2-11"></span>. Since <span class="katex-inline" data-id="e4-2-12"></span>, we have <span class="katex-inline" data-id="e4-2-13"></span>, and since the exp function is increasing, <span class="katex-inline" data-id="e4-2-14"></span>. So <span class="katex-inline" data-id="e4-2-15"></span>.</p><p>Furthermore, since <span class="katex-inline" data-id="e4-2-16"></span>, we have x > 0. The product <span class="katex-inline" data-id="e4-2-17"></span> is therefore strictly positive. We have <span class="katex-inline" data-id="e4-2-18"></span>, which gives <span class="katex-inline" data-id="e4-2-19"></span>.</p><p><strong>Part 2: Prove <span class="katex-inline" data-id="e4-2-20"></span></strong></p><p>We apply the MVT to the function <span class="katex-inline" data-id="e4-2-21"></span> on the interval [0, x].</p><p>g is continuous and differentiable. There exists a <span class="katex-inline" data-id="e4-2-22"></span> such that:</p><p><span class="katex-display" data-id="e4-2-23"></span></p><p>Let's calculate the terms: <span class="katex-inline" data-id="e4-2-24"></span> and <span class="katex-inline" data-id="e4-2-25"></span>.</p><p>The equation becomes: <span class="katex-inline" data-id="e4-2-26"></span>.</p><p>Let's study the sign of <span class="katex-inline" data-id="e4-2-27"></span>. Since <span class="katex-inline" data-id="e4-2-28"></span>, we have <span class="katex-inline" data-id="e4-2-29"></span> and <span class="katex-inline" data-id="e4-2-30"></span>. So the term <span class="katex-inline" data-id="e4-2-31"></span> is strictly negative.</p><p>Since x > 0, the product <span class="katex-inline" data-id="e4-2-32"></span> is strictly negative. We have <span class="katex-inline" data-id="e4-2-33"></span>, which gives <span class="katex-inline" data-id="e4-2-34"></span>.</p><p>Since <span class="katex-inline" data-id="e4-2-35"></span>, we have 1-x > 0. We can divide the inequality by (1-x) without changing the direction: <span class="katex-inline" data-id="e4-2-36"></span>.</p></div></div>
+
+    <script>
+        function renderKatex() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.textContent;
+                    const displayMode = el.classList.contains('katex-display');
+                    try {
+                        katex.render(content, el, {
+                            throwOnError: false,
+                            displayMode: displayMode
+                        });
+                    } catch (e) {
+                        console.error("KaTeX render error:", e, "on element:", el);
+                        el.textContent = `Formula render error: ${content}`;
+                    }
+                });
+            }, 100);
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.error(`Element with data-id '${id}' not found.`);
+                }
+            }
+
+            // Exam Questions - Exercise 1
+            setText('ex1-alpha', "\\alpha");
+            setText('ex1-un', "(u_n)_n");
+            setText('ex1-def', "u_0 = \\alpha \\text{ and } u_{n+1} = \\frac{2u_n+1}{u_n+2} \\text{ for } n \\ge 0");
+            setText('ex1-q1-eq', "\\forall n \\in \\mathbb{N}");
+            setText('ex1-q1-un-gt-1', "u_n > 1");
+            setText('ex1-q2-un', "(u_n)_n");
+            setText('ex1-q3-un', "(u_n)_n");
+            setText('ex1-q4-A', "A = \\{u_n, n \\in \\mathbb{N}\\}");
+            
+            // Exam Questions - Exercise 2
+            setText('ex2-ab', "a, b");
+            setText('ex2-def', "f(x)=\\begin{cases}a~\\sin~x+b&\\text{if}~x\\le0\\\\ \\frac{1-\\cos~x}{x^{2}}&\\text{if}~x>0\\end{cases}");
+            setText('ex2-q2-x0', "x_0=0");
+            setText('ex2-q3-x0', "x_0=0");
+
+            // Exam Questions - Exercise 3
+            setText('ex3-n', "n \\in \\mathbb{N}^*");
+            setText('ex3-coeffs', "a_0, a_1, ..., a_{n-1} \\in \\mathbb{R}");
+            setText('ex3-hypothese', "a_0+\\frac{a_1}{2}+\\frac{a_2}{3}+...+\\frac{a_{n-1}}{n}=\\frac{1}{n+1}");
+            setText('ex3-q1-fx', "f(x)=a_0x+\\frac{a_1x^2}{2}+...+\\frac{a_{n-1}x^n}{n}-\\frac{x^{n+1}}{n+1}");
+            setText('ex3-q2-eq', "a_0+a_1x+a_2x^2+...+a_{n-1}x^{n-1}=x^n");
+
+            // Exam Questions - Exercise 4
+            setText('ex4-fg-def', "f(x)=\\exp(x)-x-1 \\text{ and } g(x)=(1-x)\\exp(x)-1");
+            setText('ex4-q1-derivs', "f'(x) \\text{ and } g'(x)");
+            setText('ex4-q2-ineq', "\\forall x \\in ]0,1[, 1+x < \\exp(x) < \\frac{1}{1-x}");
+
+            // Exam Solutions - Exercise 1
+            setText('sol1-1-p1', "\\forall n \\in \\mathbb{N}, u_n > 1");
+            setText('sol1-1-p2', "u_0 = \\alpha > 1");
+            setText('sol1-1-p3', "u_n > 1");
+            setText('sol1-1-p4', "u_{n+1} > 1");
+            setText('sol1-1-p5', "u_{n+1}-1 = \\frac{2u_n+1}{u_n+2}-1 = \\frac{u_n-1}{u_n+2}");
+            setText('sol1-1-p6', "u_n > 1");
+            setText('sol1-1-p7', "u_n-1 > 0");
+            setText('sol1-1-p8', "u_n+2 > 0");
+            setText('sol1-1-p9', "u_{n+1}-1 > 0");
+            setText('sol1-1-p10', "u_n > 1 \\; \\forall n \\in \\mathbb{N}");
+            setText('sol1-2-p1', "u_{n+1}-u_n");
+            setText('sol1-2-p2', "u_{n+1}-u_n = \\frac{2u_n+1}{u_n+2}-u_n = \\frac{1-u_n^2}{u_n+2} = \\frac{(1-u_n)(1+u_n)}{u_n+2}");
+            setText('sol1-2-p3', "u_n>1 \\iff 1-u_n<0");
+            setText('sol1-2-p4', "1+u_n>0");
+            setText('sol1-2-p5', "u_n+2>0");
+            setText('sol1-2-p6', "u_{n+1}-u_n < 0");
+            setText('sol1-3-p1', "(u_n)_n");
+            setText('sol1-3-p2', "l = \\frac{2l+1}{l+2}");
+            setText('sol1-3-p3', "l(l+2)=2l+1 \\Rightarrow l^2-1=0");
+            setText('sol1-3-p4', "l=\\pm1");
+            setText('sol1-3-p5', "\\forall n \\in \\mathbb{N}, u_n > 1");
+            setText('sol1-3-p6', "l \\ge 1");
+            setText('sol1-4-p1', "A = \\{u_n, n \\in \\mathbb{N}\\}");
+            setText('sol1-4-p2', "(u_n)");
+            setText('sol1-4-p3', "u_0=\\alpha");
+            setText('sol1-4-p4', "u_0=\\alpha");
+            setText('sol1-4-p5', "(u_n)");
+            setText('sol1-4-p6', "\\notin");
+            setText('sol1-4-p7', "u_n > 1");
+
+            // Exam Solutions - Exercise 2
+            setText('sol2-1-p1', "\\mathbb{R}");
+            setText('sol2-2-p1', "x_0=0");
+            setText('sol2-2-p2', "\\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^+}f(x) = f(0)");
+            setText('sol2-2-p3', "f(0) = a\\sin(0)+b=b");
+            setText('sol2-2-p4', "\\lim_{x\\to0^-}(a\\sin x+b)=b");
+            setText('sol2-2-p5', "\\lim_{x\\to0^+}\\frac{1-\\cos x}{x^2} = \\lim_{x\\to0^+}\\frac{2\\sin^2(x/2)}{x^2} = \\lim_{x\\to0^+}\\frac{2(x/2)^2}{x^2} = \\frac{1}{2}");
+            setText('sol2-2-p6', "x_0=0");
+            setText('sol2-2-p7', "b=\\frac{1}{2}");
+            setText('sol2-2-p8', "a \\in \\mathbb{R}");
+            setText('sol2-3-p1', "x_0=0");
+            setText('sol2-3-p2', "\\lim_{x\\to0}\\frac{f(x)-f(0)}{x}");
+            setText('sol2-3-p3', "f(0)=b=1/2");
+            setText('sol2-3-p4', "\\lim_{x\\to0^-}\\frac{a\\sin x + 1/2 - 1/2}{x} = \\lim_{x\\to0^-}\\frac{a\\sin x}{x}=a");
+            setText('sol2-3-p5', "\\lim_{x\\to0^+} \\frac{\\frac{1-\\cos x}{x^2} - \\frac{1}{2}}{x} = \\lim_{x\\to0^+} \\frac{2(1-\\cos x)-x^2}{2x^3} = ... = 0");
+            setText('sol2-3-p6', "a=0");
+            setText('sol2-3-p7', "x_0=0");
+            setText('sol2-3-p8', "a=0 \\text{ and } b=1/2");
+
+            // Exam Solutions - Exercise 3
+            setText('sol3-1-p1', "f(0)=f(1)");
+            setText('sol3-1-p2', "f(0)=0");
+            setText('sol3-1-p3', "f(1)=a_0+\\frac{a_1}{2}+...+\\frac{a_{n-1}}{n}-\\frac{1}{n+1}");
+            setText('sol3-1-p4', "a_0+\\frac{a_1}{2}+...+\\frac{a_{n-1}}{n}=\\frac{1}{n+1}");
+            setText('sol3-1-p5', "f(1)=0");
+            setText('sol3-2-p1', "c \\in ]0,1[");
+            setText('sol3-2-p2', "f'(c)=0");
+            setText('sol3-2-p3', "f'(x)=a_0+a_1x+...+a_{n-1}x^{n-1}-x^n");
+            setText('sol3-2-p4', "f'(c)=0 \\iff a_0+a_1c+...+a_{n-1}c^{n-1}=c^n");
+            setText('sol3-2-p5', "a_0+a_1x+...+a_{n-1}x^{n-1}=x^n");
+
+            // Exam Solutions - Exercise 4
+            setText('sol4-1-p1', "f'(x)=\\exp(x)-1");
+            setText('sol4-1-p2', "g'(x)=-\\exp(x)+(1-x)\\exp(x)=-x\\exp(x)");
+            setText('sol4-2-p1', "1+x < \\exp(x)");
+            setText('sol4-2-p2', "f(t)=\\exp(t)-t-1");
+            setText('sol4-2-p3', "[0,x]");
+            setText('sol4-2-p4', "x \\in ]0,1[");
+            setText('sol4-2-p5', "c_1 \\in ]0,x[");
+            setText('sol4-2-p6', "f(x)-f(0)=xf'(c_1)");
+            setText('sol4-2-p7', "f(0)=0");
+            setText('sol4-2-p8', "f'(c_1)=e^{c_1}-1");
+            setText('sol4-2-p9', "\\exp(x)-x-1 = x(e^{c_1}-1)");
+            setText('sol4-2-p10', "0 < c_1 < x < 1");
+            setText('sol4-2-p11', "e^{c_1}>e^0=1");
+            setText('sol4-2-p12', "e^{c_1}-1>0");
+            setText('sol4-2-p13', "x(e^{c_1}-1)>0");
+            setText('sol4-2-p14', "\\exp(x)-x-1 > 0 \\iff \\exp(x)>1+x");
+            setText('sol4-2-p15', "\\exp(x) < \\frac{1}{1-x}");
+            setText('sol4-2-p16', "g(t)=(1-t)\\exp(t)-1");
+            setText('sol4-2-p17', "[0,x]");
+            setText('sol4-2-p18', "x \\in ]0,1[");
+            setText('sol4-2-p19', "c_2 \\in ]0,x[");
+            setText('sol4-2-p20', "g(x)-g(0)=xg'(c_2)");
+            setText('sol4-2-p21', "g(0)=0");
+            setText('sol4-2-p22', "g'(c_2)=-c_2e^{c_2}");
+            setText('sol4-2-p23', "(1-x)\\exp(x)-1=x(-c_2e^{c_2})");
+            setText('sol4-2-p24', "c_2>0");
+            setText('sol4-2-p25', "e^{c_2}>0");
+            setText('sol4-2-p26', "x(-c_2e^{c_2}) < 0");
+            setText('sol4-2-p27', "(1-x)\\exp(x)-1 < 0 \\iff (1-x)\\exp(x) < 1");
+            setText('sol4-2-p28', "x \\in ]0,1[");
+            setText('sol4-2-p29', "\\exp(x) < \\frac{1}{1-x}");
+            
+            // Modals - Exercise 1
+            setText('h1-1-1', "u_{n+1}-1");
+            setText('e1-1-1', "\\forall n \\in \\mathbb{N}, u_n > 1");
+            setText('e1-1-2', "u_0 > 1");
+            setText('e1-1-3', "u_0 = \\alpha");
+            setText('e1-1-4', "\\alpha > 1");
+            setText('e1-1-5', "u_n > 1");
+            setText('e1-1-6', "u_{n+1} > 1");
+            setText('e1-1-7', "u_{n+1}-1");
+            setText('e1-1-8', "u_{n+1}-1 = \\frac{2u_n+1}{u_n+2} - 1 = \\frac{2u_n+1 - (u_n+2)}{u_n+2} = \\frac{u_n-1}{u_n+2}");
+            setText('e1-1-9', "u_n>1");
+            setText('e1-1-10', "u_n-1");
+            setText('e1-1-11', "u_n > 1 \\Rightarrow u_n-1 > 0");
+            setText('e1-1-12', "u_n+2");
+            setText('e1-1-13', "u_n > 1 \\Rightarrow u_n+2 > 3 > 0");
+            setText('e1-1-14', "u_{n+1}-1 > 0");
+            setText('e1-1-15', "u_{n+1} > 1");
+            setText('e1-1-16', "\\forall n \\in \\mathbb{N}, u_n > 1");
+            setText('h1-2-1', "u_{n+1} - u_n");
+            setText('k1-2-1', "(u_n)");
+            setText('k1-2-2', "u_{n+1} \\le u_n");
+            setText('k1-2-3', "u_{n+1} < u_n");
+            setText('k1-2-4', "u_{n+1} - u_n");
+            setText('e1-2-1', "(u_n)");
+            setText('e1-2-2', "u_{n+1} < u_n");
+            setText('e1-2-3', "u_{n+1} - u_n < 0");
+            setText('e1-2-4', "n \\in \\mathbb{N}");
+            setText('e1-2-5', "u_{n+1} - u_n");
+            setText('e1-2-6', "u_{n+1}-u_n = \\frac{2u_n+1}{u_n+2} - u_n = \\frac{2u_n+1 - u_n(u_n+2)}{u_n+2} = \\frac{2u_n+1 - u_n^2 - 2u_n}{u_n+2} = \\frac{1-u_n^2}{u_n+2}");
+            setText('e1-2-7', "a^2-b^2=(a-b)(a+b)");
+            setText('e1-2-8', "\\frac{1-u_n^2}{u_n+2} = \\frac{(1-u_n)(1+u_n)}{u_n+2}");
+            setText('e1-2-9', "u_n > 1");
+            setText('e1-2-10', "(1-u_n)");
+            setText('e1-2-11', "u_n > 1");
+            setText('e1-2-12', "1-u_n < 0");
+            setText('e1-2-13', "(1+u_n)");
+            setText('e1-2-14', "u_n > 1");
+            setText('e1-2-15', "1+u_n > 2 > 0");
+            setText('e1-2-16', "(u_n+2)");
+            setText('e1-2-17', "u_n > 1");
+            setText('e1-2-18', "u_n+2 > 3 > 0");
+            setText('e1-2-19', "\\frac{(-)(+)}{(+)}");
+            setText('e1-2-20', "u_{n+1}-u_n < 0");
+            setText('e1-2-21', "(u_n)");
+            setText('h1-3-1', "l");
+            setText('h1-3-2', "l = \\frac{2l+1}{l+2}");
+            setText('k1-3-1', "u_{n+1}=f(u_n)");
+            setText('k1-3-2', "l");
+            setText('k1-3-3', "l");
+            setText('k1-3-4', "x=f(x)");
+            setText('e1-3-1', "(u_n)");
+            setText('e1-3-2', "u_n > 1");
+            setText('e1-3-3', "(u_n)");
+            setText('e1-3-4', "(u_n)");
+            setText('e1-3-5', "l");
+            setText('e1-3-6', "(u_n)");
+            setText('e1-3-7', "n \\to \\infty");
+            setText('e1-3-8', "u_n \\to l");
+            setText('e1-3-9', "u_{n+1} \\to l");
+            setText('e1-3-10', "u_{n+1} = \\frac{2u_n+1}{u_n+2}");
+            setText('e1-3-11', "l = \\frac{2l+1}{l+2}");
+            setText('e1-3-12', "l");
+            setText('e1-3-13', "l(l+2) = 2l+1 \\\\ l^2+2l = 2l+1 \\\\ l^2-1 = 0 \\\\ (l-1)(l+1)=0");
+            setText('e1-3-14', "l=1");
+            setText('e1-3-15', "l=-1");
+            setText('e1-3-16', "u_n > 1");
+            setText('e1-3-17', "l \\ge 1");
+            setText('e1-3-18', "l=-1");
+            setText('e1-3-19', "l=1");
+            setText('e1-4-1', "A = \\{u_n, n \\in \\mathbb{N}\\}");
+            setText('e1-4-2', "(u_n)");
+            setText('e1-4-3', "\\alpha = u_0 > u_1 > u_2 > ...");
+            setText('e1-4-4', "u_0 = \\alpha");
+            setText('e1-4-5', "\\text{sup } A = \\text{max } A = \\alpha");
+            setText('e1-4-6', "u_n > 1");
+            setText('e1-4-7', "\\text{inf } A = 1");
+            setText('e1-4-8', "u_n = 1");
+            setText('e1-4-9', "u_n > 1");
+
+            // Modals - Exercise 2
+            setText('h2-1-1', "a \\sin x + b");
+            setText('h2-1-2', "\\frac{1-\\cos x}{x^2}");
+            setText('k2-1-1', "\\mathbb{R}");
+            setText('e2-1-1', "f(x)=\\begin{cases}a~\\sin~x+b&\\text{if}~x\\le0\\\\ \\frac{1-\\cos~x}{x^{2}}&\\text{if}~x>0\\end{cases}");
+            setText('e2-1-2', "x \\le 0");
+            setText('e2-1-3', "a \\sin x + b");
+            setText('e2-1-4', "]-\\infty, 0]");
+            setText('e2-1-5', "x > 0");
+            setText('e2-1-6', "\\frac{1-\\cos x}{x^2}");
+            setText('e2-1-7', "x^2");
+            setText('e2-1-8', "x > 0");
+            setText('e2-1-9', "]0, +\\infty[");
+            setText('e2-1-10', "x \\le 0");
+            setText('e2-1-11', "x > 0");
+            setText('e2-1-12', "\\mathbb{R}");
+            setText('h2-2-1', "\\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^+}f(x) = f(0)");
+            setText('k2-2-1', "x_0");
+            setText('k2-2-2', "\\lim_{x\\to x_0}f(x) = f(x_0)");
+            setText('k2-2-3', "\\lim_{x\\to 0} \\frac{1-\\cos x}{x^2} = \\frac{1}{2}");
+            setText('k2-2-4', "1-\\cos x = 2\\sin^2(x/2)");
+            setText('e2-2-1', "x_0=0");
+            setText('e2-2-2', "\\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^+}f(x) = f(0)");
+            setText('e2-2-3', "x=0");
+            setText('e2-2-4', "f(0) = a\\sin(0)+b = b");
+            setText('e2-2-5', "x \\to 0^-");
+            setText('e2-2-6', "\\lim_{x\\to0^-} f(x) = \\lim_{x\\to0^-} (a\\sin x + b) = b");
+            setText('e2-2-7', "x \\to 0^+");
+            setText('e2-2-8', "\\lim_{x\\to0^+} f(x) = \\lim_{x\\to0^+} \\frac{1-\\cos x}{x^2}");
+            setText('e2-2-9', "1-\\cos x = 2\\sin^2(x/2)");
+            setText('e2-2-10', "\\lim_{x\\to0^+} \\frac{2\\sin^2(x/2)}{x^2}");
+            setText('e2-2-11', "\\sin(u) \\sim u");
+            setText('e2-2-12', "u \\to 0");
+            setText('e2-2-13', "\\sin(x/2) \\sim x/2");
+            setText('e2-2-14', "x \\to 0");
+            setText('e2-2-15', "\\lim_{x\\to0^+} \\frac{2(x/2)^2}{x^2} = \\lim_{x\\to0^+} \\frac{2(x^2/4)}{x^2} = \\lim_{x\\to0^+} \\frac{x^2/2}{x^2} = \\frac{1}{2}");
+            setText('e2-2-16', "f(0) = \\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^+}f(x)");
+            setText('e2-2-17', "b = b = \\frac{1}{2}");
+            setText('e2-2-18', "b = 1/2");
+            setText('e2-2-19', "a \\in \\mathbb{R}");
+            setText('h2-3-1', "\\frac{f(x)-f(0)}{x-0}");
+            setText('k2-3-1', "x_0");
+            setText('k2-3-2', "\\lim_{x \\to x_0} \\frac{f(x)-f(x_0)}{x-x_0}");
+            setText('k2-3-3', "\\infty/\\infty");
+            setText('e2-3-1', "x_0=0");
+            setText('e2-3-2', "b = 1/2");
+            setText('e2-3-3', "\\frac{f(x)-f(0)}{x-0}");
+            setText('e2-3-4', "f(0)=b=1/2");
+            setText('e2-3-5', "\\frac{f(x)-1/2}{x}");
+            setText('e2-3-6', "x \\to 0^-");
+            setText('e2-3-7', "\\lim_{x\\to0^-} \\frac{(a\\sin x + 1/2) - 1/2}{x} = \\lim_{x\\to0^-} \\frac{a\\sin x}{x} = a \\cdot 1 = a");
+            setText('e2-3-8', "x \\to 0^+");
+            setText('e2-3-9', "\\lim_{x\\to0^+} \\frac{\\frac{1-\\cos x}{x^2} - \\frac{1}{2}}{x} = \\lim_{x\\to0^+} \\frac{2(1-\\cos x) - x^2}{2x^3}");
+            setText('e2-3-10', "\\lim_{x\\to0^+} \\frac{2\\sin x - 2x}{6x^2}");
+            setText('e2-3-11', "\\lim_{x\\to0^+} \\frac{2\\cos x - 2}{12x}");
+            setText('e2-3-12', "\\lim_{x\\to0^+} \\frac{-2\\sin x}{12} = \\frac{-2(0)}{12} = 0");
+            setText('e2-3-13', "a = 0");
+            setText('e2-3-14', "a = 0");
+            setText('e2-3-15', "b = 1/2");
+            
+            // Modals - Exercise 3
+            setText('h3-1-1', "f(0)=f(1)");
+            setText('k3-1-1', "f'(c)=0");
+            setText('k3-1-2', "\\mathbb{R}");
+            setText('e3-1-1', "f(x)=a_0x+\\frac{a_1x^2}{2}+...+\\frac{a_{n-1}x^n}{n}-\\frac{x^{n+1}}{n+1}");
+            setText('e3-1-2', "\\mathbb{R}");
+            setText('e3-1-3', "\\mathbb{R}");
+            setText('e3-1-4', "f(0) = a_0(0) + \\frac{a_1(0)^2}{2} + ... = 0");
+            setText('e3-1-5', "f(1) = a_0(1) + \\frac{a_1(1)^2}{2} + ... + \\frac{a_{n-1}(1)^n}{n} - \\frac{(1)^{n+1}}{n+1} = a_0 + \\frac{a_1}{2} + ... + \\frac{a_{n-1}}{n} - \\frac{1}{n+1}");
+            setText('e3-1-6', "a_0+\\frac{a_1}{2}+\\frac{a_2}{3}+...+\\frac{a_{n-1}}{n}=\\frac{1}{n+1}");
+            setText('e3-1-7', "(a_0+\\frac{a_1}{2}+...+\\frac{a_{n-1}}{n}) - \\frac{1}{n+1} = 0");
+            setText('e3-1-8', "f(1)=0");
+            setText('e3-1-9', "f(0)=f(1)=0");
+            setText('h3-2-1', "c \\in ]0,1[");
+            setText('h3-2-2', "f'(c)=0");
+            setText('h3-2-3', "f'(x)");
+            setText('k3-2-1', "f'(c)=0");
+            setText('k3-2-2', "kx^p");
+            setText('k3-2-3', "kpx^{p-1}");
+            setText('e3-2-1', "c \\in ]0, 1[");
+            setText('e3-2-2', "f'(c) = 0");
+            setText('e3-2-3', "f'(x)");
+            setText('e3-2-4', "f(x)=a_0x+\\frac{a_1x^2}{2}+...+\\frac{a_{n-1}x^n}{n}-\\frac{x^{n+1}}{n+1}");
+            setText('e3-2-5', "f'(x) = a_0 + a_1x + a_2x^2 + ... + a_{n-1}x^{n-1} - x^n");
+            setText('e3-2-6', "f'(c)=0");
+            setText('e3-2-7', "c");
+            setText('e3-2-8', "f'(c) = a_0 + a_1c + a_2c^2 + ... + a_{n-1}c^{n-1} - c^n = 0");
+            setText('e3-2-9', "a_0 + a_1c + a_2c^2 + ... + a_{n-1}c^{n-1} = c^n");
+            setText('e3-2-10', "c");
+            setText('e3-2-11', "a_0+a_1x+a_2x^2+...+a_{n-1}x^{n-1}=x^n");
+            setText('e3-2-12', "c \\in ]0, 1[");
+            setText('e3-2-13', "a_0+a_1x+...+a_{n-1}x^{n-1}=x^n");
+
+            // Modals - Exercise 4
+            setText('h4-1-1', "f'(x)");
+            setText('h4-1-2', "g'(x)");
+            setText('h4-1-3', "(uv)'=u'v+uv'");
+            setText('k4-1-1', "e^x");
+            setText('k4-1-2', "e^x");
+            setText('k4-1-3', "(uv)'=u'v+uv'");
+            setText('e4-1-1', "f'(x)");
+            setText('e4-1-2', "g'(x)");
+            setText('e4-1-3', "f'(x)");
+            setText('e4-1-4', "f(x)=\\exp(x)-x-1");
+            setText('e4-1-5', "f'(x) = (\\exp(x))' - (x)' - (1)' = \\exp(x) - 1 - 0 = \\exp(x) - 1");
+            setText('e4-1-6', "g'(x)");
+            setText('e4-1-7', "g(x)=(1-x)\\exp(x)-1");
+            setText('e4-1-8', "(1-x)\\exp(x)");
+            setText('e4-1-9', "(uv)'=u'v+uv'");
+            setText('e4-1-10', "u=1-x");
+            setText('e4-1-11', "v=\\exp(x)");
+            setText('e4-1-12', "u'=-1");
+            setText('e4-1-13', "v'=\\exp(x)");
+            setText('e4-1-14', "(-1)\\exp(x) + (1-x)\\exp(x) = -\\exp(x) + \\exp(x) - x\\exp(x) = -x\\exp(x)");
+            setText('e4-1-15', "g'(x)");
+            setText('e4-1-16', "g'(x) = ((1-x)\\exp(x))' - (1)' = -x\\exp(x) - 0 = -x\\exp(x)");
+            setText('h4-2-1', "f'(c_1)");
+            setText('h4-2-2', "g'(c_2)");
+            setText('k4-2-1', "h(b)-h(a) = (b-a)h'(c)");
+            setText('k4-2-2', "c>0");
+            setText('k4-2-3', "e^c > 1");
+            setText('e4-2-1', "1+x < \\exp(x) < \\frac{1}{1-x}");
+            setText('e4-2-2', "x \\in ]0,1[");
+            setText('e4-2-3', "1+x < \\exp(x)");
+            setText('e4-2-4', "f(x)=\\exp(x)-x-1");
+            setText('e4-2-5', "x \\in ]0,1[");
+            setText('e4-2-6', "c_1 \\in ]0,x[");
+            setText('e4-2-7', "f(x)-f(0) = (x-0)f'(c_1)");
+            setText('e4-2-8', "f(0)=\\exp(0)-0-1=0");
+            setText('e4-2-9', "f'(c_1)=\\exp(c_1)-1");
+            setText('e4-2-10', "\\exp(x)-x-1 - 0 = x(\\exp(c_1)-1)");
+            setText('e4-2-11', "x(\\exp(c_1)-1)");
+            setText('e4-2-12', "c_1 \\in ]0,x[");
+            setText('e4-2-13', "c_1 > 0");
+            setText('e4-2-14', "\\exp(c_1) > \\exp(0) = 1");
+            setText('e4-2-15', "\\exp(c_1)-1 > 0");
+            setText('e4-2-16', "x \\in ]0,1[");
+            setText('e4-2-17', "x(\\exp(c_1)-1)");
+            setText('e4-2-18', "\\exp(x)-x-1 > 0");
+            setText('e4-2-19', "\\exp(x) > 1+x");
+            setText('e4-2-20', "\\exp(x) < \\frac{1}{1-x}");
+            setText('e4-2-21', "g(x)=(1-x)\\exp(x)-1");
+            setText('e4-2-22', "c_2 \\in ]0,x[");
+            setText('e4-2-23', "g(x)-g(0) = (x-0)g'(c_2)");
+            setText('e4-2-24', "g(0)=(1-0)\\exp(0)-1=0");
+            setText('e4-2-25', "g'(c_2)=-c_2\\exp(c_2)");
+            setText('e4-2-26', "(1-x)\\exp(x)-1 - 0 = x(-c_2\\exp(c_2))");
+            setText('e4-2-27', "x(-c_2\\exp(c_2))");
+            setText('e4-2-28', "c_2 \\in ]0,x[");
+            setText('e4-2-29', "c_2 > 0");
+            setText('e4-2-30', "\\exp(c_2) > 0");
+            setText('e4-2-31', "-c_2\\exp(c_2)");
+            setText('e4-2-32', "x(-c_2\\exp(c_2))");
+            setText('e4-2-33', "(1-x)\\exp(x)-1 < 0");
+            setText('e4-2-34', "(1-x)\\exp(x) < 1");
+            setText('e4-2-35', "x \\in ]0,1[");
+            setText('e4-2-36', "\\exp(x) < \\frac{1}{1-x}");
+
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

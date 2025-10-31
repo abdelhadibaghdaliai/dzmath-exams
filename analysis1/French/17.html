@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 1 - Partiel 1 (08 Novembre 2009) - Dark Theme</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+    <style>
+        /* Custom styles from dark.html */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse 1</h1>
+            <p class="exam-subtitle">Partiel 1 (08 Novembre 2009)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <h3 class="exercise-title">Exercice 1 (4 pts)</h3>
+                <p class="mb-4 text-slate-400"><span class="katex-inline" data-id="ex1-notation-E"></span> désigne la partie entière du réel x.</p>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1.1</h4>
+                    <div class="exercise-content">
+                        <p>Démontrer par récurrence que pour tout entier naturel <span class="katex-inline" data-id="ex1-q1-n"></span> on a <span class="katex-display" data-id="ex1-q1-eq"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1.2</h4>
+                    <div class="exercise-content">
+                        <p>Montrer par l'absurde que <span class="katex-inline" data-id="ex1-q2-eq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1.3</h4>
+                    <div class="exercise-content">
+                        <p>Résoudre dans R l'équation: <span class="katex-inline" data-id="ex1-q3-eq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-3')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 1.4</h4>
+                    <div class="exercise-content">
+                        <p>Etablir que: <span class="katex-inline" data-id="ex1-q4-eq"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1-4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1-4')">Prérequis</button>
+                    </div>
+                </div>
+
+                <h3 class="exercise-title mt-12">Exercice 2 (6 pts)</h3>
+                <div class="text-slate-400 mb-4">
+                    <p>Soient <span class="katex-inline" data-id="ex2-suites-unvn"></span> deux suites définies par: <span class="katex-inline" data-id="ex2-init-cond"></span> et pour tout <span class="katex-inline" data-id="ex2-n-in-N"></span></p>
+                    <p class="my-2"><span class="katex-display" data-id="ex2-rec-un"></span><span class="katex-display" data-id="ex2-rec-vn"></span></p>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2.1</h4>
+                    <div class="exercise-content">
+                        <p>Montrer par récurrence que: <span class="katex-inline" data-id="ex2-q1-prop"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2.2</h4>
+                    <div class="exercise-content">
+                        <p>Prouver que <span class="katex-inline" data-id="ex2-q2-suites"></span> sont monotones.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-2')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2.3</h4>
+                    <div class="exercise-content">
+                        <p>En déduire que <span class="katex-inline" data-id="ex2-q3-suites"></span> sont convergentes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2.4</h4>
+                    <div class="exercise-content">
+                        <p>Démontrer par récurrence que: <span class="katex-inline" data-id="ex2-q4-prop"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-4')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 2.5</h4>
+                    <div class="exercise-content">
+                        <p>Préciser les limites de <span class="katex-inline" data-id="ex2-q5-suites"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2-5')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2-5')">Prérequis</button>
+                    </div>
+                </div>
+                
+                 <h3 class="exercise-title mt-12">Exercice 3 (4 pts)</h3>
+                <p class="mb-4 text-slate-400">Déterminer Sup, Inf, Max et Min, s'ils existent sur R, de:</p>
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 3.1 (Ensemble A)</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-display" data-id="ex3-q1-setA"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-1')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 3.2 (Ensemble B)</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-display" data-id="ex3-q2-setB"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3-2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3-2')">Prérequis</button>
+                    </div>
+                </div>
+                
+                <h3 class="exercise-title mt-12">Exercice 4 (4 pts)</h3>
+                <p class="mb-4 text-slate-400">Soit <span class="katex-inline" data-id="ex4-un-def"></span>.</p>
+                 <div class="exercise">
+                    <h4 class="exercise-title">Question 4.1</h4>
+                    <div class="exercise-content">
+                        <p>Calculer <span class="katex-inline" data-id="ex4-q1-calc"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4-1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4-1')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 4.2</h4>
+                    <div class="exercise-content">
+                        <p>Montrer que les deux suites suivantes: <span class="katex-inline" data-id="ex4-q2-suites"></span> sont adjacentes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4-2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4-2')">Prérequis</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Question 4.3</h4>
+                    <div class="exercise-content">
+                        <p>En déduire que <span class="katex-inline" data-id="ex4-q3-suite"></span> est convergente.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4-3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4-3')">Prérequis</button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="exam-solutions" class="mt-12">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 1.1</h4>
+                    <div class="exercise-content">
+                        <p>Pour <span class="katex-inline" data-id="sol1-1-n1"></span>: <span class="katex-inline" data-id="sol1-1-lhs"></span> et <span class="katex-inline" data-id="sol1-1-rhs"></span> Vrai. Supposons que <span class="katex-inline" data-id="sol1-1-hyp"></span>. Alors <span class="katex-inline" data-id="sol1-1-sum"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 1.2</h4>
+                    <div class="exercise-content">
+                        <p>Supposons que <span class="katex-inline" data-id="sol1-2-hyp"></span>, avec a et b premiers entre eux. <span class="katex-inline" data-id="sol1-2-eq1"></span> est pair <span class="katex-inline" data-id="sol1-2-imp1"></span> a est pair. Soit <span class="katex-inline" data-id="sol1-2-sub"></span>. <span class="katex-inline" data-id="sol1-2-eq2"></span>. a et b sont tous les deux pairs, ce qui contredit le fait qu'ils soient premiers entre eux. Donc <span class="katex-inline" data-id="sol1-2-concl"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 1.3</h4>
+                    <div class="exercise-content">
+                        <p>Le domaine de définition est [-5, 4/3]. Les solutions réelles sont <span class="katex-inline" data-id="sol1-3-sols"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-3')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 1.4</h4>
+                    <div class="exercise-content">
+                        <p>On a <span class="katex-inline" data-id="sol1-4-dev"></span>. On vérifie que <span class="katex-inline" data-id="sol1-4-ineq"></span>. En effet, <span class="katex-inline" data-id="sol1-4-ineq1"></span> ce qui est vrai, et <span class="katex-inline" data-id="sol1-4-ineq2"></span> ce qui est vrai. Donc <span class="katex-inline" data-id="sol1-4-part1"></span>. Finalement, <span class="katex-inline" data-id="sol1-4-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1-4')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 2.1</h4>
+                    <div class="exercise-content">
+                        <p>Par récurrence: Pour <span class="katex-inline" data-id="sol2-1-n0"></span>, <span class="katex-inline" data-id="sol2-1-base"></span> Vrai. Supposons <span class="katex-inline" data-id="sol2-1-hyp"></span>. Alors <span class="katex-inline" data-id="sol2-1-sum"></span>. Donc <span class="katex-inline" data-id="sol2-1-un1"></span> et <span class="katex-inline" data-id="sol2-1-vn1"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 2.2</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol2-2-un-diff"></span>. <span class="katex-inline" data-id="sol2-2-un-mono"></span> est décroissante. <span class="katex-inline" data-id="sol2-2-vn-diff"></span>. <span class="katex-inline" data-id="sol2-2-vn-mono"></span> est décroissante.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 2.3</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol2-3-un-conv"></span> est décroissante et minorée par 0, donc elle converge. <span class="katex-inline" data-id="sol2-3-vn-conv"></span> est décroissante et minorée par 0, donc elle converge.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-3')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 2.4</h4>
+                    <div class="exercise-content">
+                        <p>Pour <span class="katex-inline" data-id="sol2-4-n0"></span>, <span class="katex-inline" data-id="sol2-4-base"></span> Vrai. Supposons <span class="katex-inline" data-id="sol2-4-hyp"></span>. <span class="katex-inline" data-id="sol2-4-step"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-4')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 2.5</h4>
+                    <div class="exercise-content">
+                        <p>Soit <span class="katex-inline" data-id="sol2-5-lims"></span>. De <span class="katex-inline" data-id="sol2-5-eq1"></span>, on a à la limite <span class="katex-inline" data-id="sol2-5-lim1"></span>. De <span class="katex-inline" data-id="sol2-5-eq2"></span>, on a à la limite <span class="katex-inline" data-id="sol2-5-lim2"></span>. Si <span class="katex-inline" data-id="sol2-5-case1"></span>, alors <span class="katex-inline" data-id="sol2-5-lprime1"></span>. Si <span class="katex-inline" data-id="sol2-5-case2"></span> alors <span class="katex-inline" data-id="sol2-5-lneg"></span>. Mais <span class="katex-inline" data-id="sol2-5-pos"></span> donc <span class="katex-inline" data-id="sol2-5-lpos"></span>. Ce cas est impossible. Donc <span class="katex-inline" data-id="sol2-5-final"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2-5')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 3.1 (Ensemble A)</h4>
+                    <div class="exercise-content">
+                        <p>On étudie les cas <span class="katex-inline" data-id="sol3-1-cases"></span>. Pour <span class="katex-inline" data-id="sol3-1-n3k"></span>: <span class="katex-inline" data-id="sol3-1-a3k"></span>. Décroît de 5/3 à 1. Pour <span class="katex-inline" data-id="sol3-1-n3k1"></span>: <span class="katex-inline" data-id="sol3-1-a3k1"></span>. Décroît de 3/2 à -1/2. Pour <span class="katex-inline" data-id="sol3-1-n3k2"></span>: <span class="katex-inline" data-id="sol3-1-a3k2"></span>. Décroît de 1/2 à -1/2. <span class="katex-inline" data-id="sol3-1-sup"></span>. <span class="katex-inline" data-id="sol3-1-inf"></span>. min A n'existe pas.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 3.2 (Ensemble B)</h4>
+                    <div class="exercise-content">
+                        <p>On étudie les cas n pair et n impair. Pour <span class="katex-inline" data-id="sol3-2-n2k"></span>: <span class="katex-inline" data-id="sol3-2-b2k"></span>. Croît de -1/6 à 0. Pour <span class="katex-inline" data-id="sol3-2-n2k1"></span>: <span class="katex-inline" data-id="sol3-2-b2k1"></span>. Décroît de 3/2 à 0. <span class="katex-inline" data-id="sol3-2-sup"></span>. <span class="katex-inline" data-id="sol3-2-inf"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3-2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <h3 class="exercise-title">Solution de l'Exercice 4</h3>
+                <div class="exercise">
+                    <h4 class="exercise-title">Solution 4.1</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol4-1-u1"></span>, <span class="katex-inline" data-id="sol4-1-u2"></span>, <span class="katex-inline" data-id="sol4-1-u3"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4-1')">Explication Détaillée</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <h4 class="exercise-title">Solution 4.2</h4>
+                    <div class="exercise-content">
+                        <p><span class="katex-inline" data-id="sol4-2-u2n-diff"></span> donc <span class="katex-inline" data-id="sol4-2-u2n-mono"></span> est croissante. <span class="katex-inline" data-id="sol4-2-u2n1-diff"></span> donc <span class="katex-inline" data-id="sol4-2-u2n1-mono"></span> est décroissante. <span class="katex-inline" data-id="sol4-2-lim-diff"></span>. Les suites sont adjacentes.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4-2')">Explication Détaillée</button>
+                    </div>
+                </div>
+                 <div class="exercise">
+                    <h4 class="exercise-title">Solution 4.3</h4>
+                    <div class="exercise-content">
+                        <p>Comme les suites <span class="katex-inline" data-id="sol4-3-adj"></span> et <span class="katex-inline" data-id="sol4-3-adj2"></span> sont adjacentes, elles convergent vers la même limite. Les sous-suites paires et impaires convergeant vers la même limite, la suite <span class="katex-inline" data-id="sol4-3-un"></span> converge.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4-3')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('hint1-1')">&times;</span></div><p>Pour l'étape d'hérédité, supposez que la formule est vraie pour un entier n, et utilisez cette supposition pour prouver qu'elle est vraie pour n+1. Commencez par écrire la somme jusqu'à n+1 et isolez la somme jusqu'à n.</p></div></div>
+    <div id="knowledge1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('knowledge1-1')">&times;</span></div><p><strong>Principe de la démonstration par récurrence:</strong> Savoir établir un cas de base (généralement n=1), formuler une hypothèse de récurrence pour un rang n, et prouver que la propriété est vraie pour le rang n+1.</p><p><strong>Manipulation des fractions:</strong> Savoir additionner des fractions en trouvant un dénominateur commun et simplifier des expressions algébriques.</p></div></div>
+    <div id="explanation1-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.1</h3><span class="close-btn" onclick="closeModal('explanation1-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Prouver <span class="katex-inline" data-id="exp1-1-obj"></span></h4><p>Nous utilisons un raisonnement par récurrence.</p><p><strong>Étape 1: Initialisation (Cas de base)</strong><br>Pour <span class="katex-inline" data-id="exp1-1-n1"></span>, nous vérifions si la formule est vraie.<br>Membre de gauche: <span class="katex-inline" data-id="exp1-1-lhs"></span>.<br>Membre de droite: <span class="katex-inline" data-id="exp1-1-rhs"></span>.<br>Les deux membres sont égaux, donc la propriété est vraie pour <span class="katex-inline" data-id="exp1-1-n1-2"></span>.</p><p><strong>Étape 2: Hérédité</strong><br>Supposons que la propriété est vraie pour un entier <span class="katex-inline" data-id="exp1-1-n-ge-1"></span>. C'est notre <strong>hypothèse de récurrence</strong>:<span class="katex-display" data-id="exp1-1-hyp"></span></p><p>Nous devons montrer que la propriété est vraie pour <span class="katex-inline" data-id="exp1-1-n+1"></span>, c'est-à-dire:<span class="katex-display" data-id="exp1-1-goal"></span></p><p>Commençons par le membre de gauche de l'équation à prouver. On sépare le dernier terme de la somme:<span class="katex-display" data-id="exp1-1-calc1"></span></p><p>On peut maintenant utiliser notre hypothèse de récurrence pour remplacer la somme jusqu'à n:<span class="katex-display" data-id="exp1-1-calc2"></span></p><p>Mettons les deux fractions au même dénominateur <span class="katex-inline" data-id="exp1-1-denom"></span>:<span class="katex-display" data-id="exp1-1-calc3"></span></p><p>Développons et simplifions le numérateur:<span class="katex-display" data-id="exp1-1-calc4"></span></p><p>Le numérateur est une identité remarquable <span class="katex-inline" data-id="exp1-1-ident"></span>:<span class="katex-display" data-id="exp1-1-calc5"></span></p><p>On peut simplifier par <span class="katex-inline" data-id="exp1-1-simp"></span>:<span class="katex-display" data-id="exp1-1-calc6"></span></p><p>Ceci est exactement le membre de droite que nous voulions obtenir.</p><p><strong>Conclusion:</strong><br>La propriété est vraie pour n=1 et nous avons montré que si elle est vraie pour n, elle l'est aussi pour n+1. Par le principe de récurrence, la formule est vraie pour tout entier naturel <span class="katex-inline" data-id="exp1-1-n-star"></span>.</p></div></div>
+    
+    <div id="hint1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('hint1-2')">&times;</span></div><p>Supposez que <span class="katex-inline" data-id="h1-2-sqrt2"></span> peut s'écrire comme une fraction irréductible <span class="katex-inline" data-id="h1-2-ab"></span>. Montrez que cette supposition implique que le numérateur et le dénominateur doivent tous deux être pairs, ce qui contredit le fait que la fraction est irréductible.</p></div></div>
+    <div id="knowledge1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('knowledge1-2')">&times;</span></div><p><strong>Démonstration par l'absurde:</strong> Supposer le contraire de ce que l'on veut prouver et montrer que cela mène à une contradiction logique.</p><p><strong>Nombres rationnels (<span class="katex-inline" data-id="k1-2-Q"></span>):</strong> Un nombre est rationnel s'il peut s'écrire sous la forme d'une fraction <span class="katex-inline" data-id="k1-2-ab"></span> où a et b sont des entiers, avec <span class="katex-inline" data-id="k1-2-b-neq-0"></span>.</p><p><strong>Fraction irréductible:</strong> Une fraction où le numérateur et le dénominateur sont premiers entre eux (leur seul diviseur commun est 1).</p><p><strong>Propriétés des nombres pairs:</strong> Si le carré d'un nombre (<span class="katex-inline" data-id="k1-2-a2"></span>) est pair, alors le nombre lui-même (a) est pair.</p></div></div>
+    <div id="explanation1-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.2</h3><span class="close-btn" onclick="closeModal('explanation1-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Prouver que <span class="katex-inline" data-id="exp1-2-obj"></span> par l'absurde.</h4><p><strong>Étape 1: L'hypothèse absurde</strong><br>Supposons le contraire de ce que nous voulons prouver. Supposons que <span class="katex-inline" data-id="exp1-2-sqrt2"></span> est un nombre rationnel. Cela signifie qu'il peut s'écrire sous la forme d'une fraction irréductible:<span class="katex-display" data-id="exp1-2-hyp"></span>avec <span class="katex-inline" data-id="exp1-2-cond"></span> et a, b premiers entre eux.</p><p><strong>Étape 2: Développer l'hypothèse</strong><br>Élevons les deux côtés de l'équation au carré pour éliminer la racine:<span class="katex-display" data-id="exp1-2-calc1"></span><span class="katex-display" data-id="exp1-2-calc2"></span></p><p>Cette équation nous dit que <span class="katex-inline" data-id="exp1-2-a2"></span> est un multiple de 2, ce qui signifie que <span class="katex-inline" data-id="exp1-2-a2-pair"></span> est pair.</p><p><strong>Étape 3: Déduire les propriétés de a et b</strong><br>Une propriété mathématique clé est que si le carré d'un entier est pair, alors l'entier lui-même est pair. Donc, si <span class="katex-inline" data-id="exp1-2-a2-pair2"></span> est pair, alors <strong>a est pair</strong>.
+Puisque a est pair, on peut l'écrire sous la forme <span class="katex-inline" data-id="exp1-2-a-2a'"></span>, où <span class="katex-inline" data-id="exp1-2-a'"></span> est un autre entier. Remplaçons a par <span class="katex-inline" data-id="exp1-2-a-2a'2"></span> dans l'équation <span class="katex-inline" data-id="exp1-2-a2-2b2"></span>:<span class="katex-display" data-id="exp1-2-calc3"></span><span class="katex-display" data-id="exp1-2-calc4"></span><span class="katex-display" data-id="exp1-2-calc5"></span></p><p>Cette nouvelle équation nous dit que <span class="katex-inline" data-id="exp1-2-b2"></span> est pair. En utilisant la même propriété que pour a, si <span class="katex-inline" data-id="exp1-2-b2-pair"></span> est pair, alors <strong>b est pair</strong>.</p><p><strong>Étape 4: La contradiction</strong><br>Nous avons déduit que a est pair et que b est aussi pair. Si a et b sont tous les deux pairs, ils ont au moins un diviseur commun : 2. Cela contredit directement notre hypothèse de départ selon laquelle la fraction <span class="katex-inline" data-id="exp1-2-ab"></span> est irréductible (c'est-à-dire que a et b sont premiers entre eux).</p><p><strong>Conclusion:</strong><br>Notre supposition initiale que <span class="katex-inline" data-id="exp1-2-sqrt2-rat"></span> est rationnel mène à une contradiction logique. Par conséquent, cette supposition est fausse. Nous concluons que <span class="katex-inline" data-id="exp1-2-sqrt2-irrat"></span> est irrationnel.</p></div></div>
+    
+    <div id="hint1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.3</h3><span class="close-btn" onclick="closeModal('hint1-3')">&times;</span></div><p>Commencez par déterminer le domaine de définition de l'équation en vous assurant que toutes les expressions sous les racines carrées sont non négatives. Ensuite, regroupez les termes de manière astucieuse avant d'élever au carré pour simplifier les calculs.</p></div></div>
+    <div id="knowledge1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.3</h3><span class="close-btn" onclick="closeModal('knowledge1-3')">&times;</span></div><p><strong>Domaine de définition:</strong> Savoir trouver l'ensemble des valeurs pour lesquelles une fonction ou une équation est définie, en particulier pour les fonctions racines carrées (<span class="katex-inline" data-id="k1-3-sqrt"></span> impose <span class="katex-inline" data-id="k1-3-cond"></span>).</p><p><strong>Résolution d'équations avec radicaux:</strong> Maîtriser la technique d'élévation au carré pour éliminer les racines.</p><p><strong>Solutions étrangères:</strong> Comprendre que l'élévation au carré peut introduire des solutions qui ne satisfont pas l'équation originale, et qu'il est donc essentiel de vérifier les solutions trouvées.</p></div></div>
+    <div id="explanation1-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.3</h3><span class="close-btn" onclick="closeModal('explanation1-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Résoudre <span class="katex-inline" data-id="exp1-3-obj"></span></h4><p><strong>Étape 1: Déterminer le domaine de définition <span class="katex-inline" data-id="exp1-3-D"></span></strong><br>Pour que l'équation soit définie, chaque terme sous une racine carrée doit être supérieur ou égal à zéro.<br>1. <span class="katex-inline" data-id="exp1-3-c1"></span> <span class="katex-inline" data-id="exp1-3-r1"></span><br>2. <span class="katex-inline" data-id="exp1-3-c2"></span> <span class="katex-inline" data-id="exp1-3-r2"></span><br>3. <span class="katex-inline" data-id="exp1-3-c3"></span> <span class="katex-inline" data-id="exp1-3-r3"></span><br>4. <span class="katex-inline" data-id="exp1-3-c4"></span> <span class="katex-inline" data-id="exp1-3-r4"></span><br>Nous devons satisfaire toutes ces conditions simultanément. L'intersection de ces intervalles est <span class="katex-inline" data-id="exp1-3-D-final"></span>.</p><p><strong>Étape 2: Réarranger et élever au carré</strong><br>Réarrangeons l'équation pour avoir une racine de chaque côté (cela peut simplifier les calculs) :<span class="katex-display" data-id="exp1-3-rearr"></span>Élevons les deux côtés au carré :<span class="katex-display" data-id="exp1-3-sq1"></span><span class="katex-display" data-id="exp1-3-dev1"></span>Simplifions :<span class="katex-display" data-id="exp1-3-simp1"></span>Isolons le terme avec la racine :<span class="katex-display" data-id="exp1-3-iso1"></span>Élevons à nouveau au carré :<span class="katex-display" data-id="exp1-3-sq2"></span><span class="katex-display" data-id="exp1-3-dev2"></span>Mettons tout d'un côté pour obtenir une équation du second degré :<span class="katex-display" data-id="exp1-3-quad"></span></p><p><strong>Étape 3: Résoudre l'équation du second degré</strong><br>On peut factoriser l'équation :<span class="katex-display" data-id="exp1-3-fact"></span>Les solutions potentielles sont donc <span class="katex-inline" data-id="exp1-3-sol1"></span> et <span class="katex-inline" data-id="exp1-3-sol2"></span>.</p><p><strong>Étape 4: Vérification des solutions</strong><br>Comme nous avons élevé au carré, nous devons vérifier si ces solutions sont valides.<br>1. Elles doivent appartenir au domaine de définition <span class="katex-inline" data-id="exp1-3-D-check"></span>. <span class="katex-inline" data-id="exp1-3-s1-check"></span> et <span class="katex-inline" data-id="exp1-3-s2-check"></span>. Les deux sont dans le domaine.<br>2. Vérifions dans l'équation originale.<br>Pour <span class="katex-inline" data-id="exp1-3-x-1"></span>: <span class="katex-inline" data-id="exp1-3-v1-lhs"></span> et <span class="katex-inline" data-id="exp1-3-v1-rhs"></span>. L'égalité est vérifiée.<br>Pour <span class="katex-inline" data-id="exp1-3-x-1/2"></span>: <span class="katex-inline" data-id="exp1-3-v2-lhs"></span> et <span class="katex-inline" data-id="exp1-3-v2-rhs"></span>. L'égalité est vérifiée.<br></p><p><strong>Conclusion:</strong><br>Les deux solutions sont valides. L'ensemble des solutions est <span class="katex-inline" data-id="exp1-3-S-final"></span>.</p></div></div>
+    
+    <div id="hint1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1.4</h3><span class="close-btn" onclick="closeModal('hint1-4')">&times;</span></div><p>Commencez par développer l'expression <span class="katex-inline" data-id="h1-4-expr"></span>. Ensuite, pour trouver la partie entière du terme <span class="katex-inline" data-id="h1-4-term"></span>, encadrez-le entre deux entiers consécutifs en comparant son carré avec les carrés d'entiers bien choisis.</p></div></div>
+    <div id="knowledge1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1.4</h3><span class="close-btn" onclick="closeModal('knowledge1-4')">&times;</span></div><p><strong>Identités remarquables:</strong> <span class="katex-inline" data-id="k1-4-id"></span>.</p><p><strong>Définition de la partie entière (<span class="katex-inline" data-id="k1-4-E"></span>):</strong> <span class="katex-inline" data-id="k1-4-Edef"></span> si et seulement si <span class="katex-inline" data-id="k1-4-k-le-x"></span>.</p><p><strong>Propriétés de la partie entière:</strong> Pour tout entier k, <span class="katex-inline" data-id="k1-4-prop"></span>.</p><p><strong>Manipulation d'inégalités:</strong> Savoir comparer des expressions en élevant au carré (si les termes sont positifs).</p></div></div>
+    <div id="explanation1-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1.4</h3><span class="close-btn" onclick="closeModal('explanation1-4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Établir que <span class="katex-inline" data-id="exp1-4-obj"></span></h4><p><strong>Étape 1: Développer l'expression</strong><br>Commençons par développer le carré en utilisant l'identité remarquable <span class="katex-inline" data-id="exp1-4-id"></span>.<span class="katex-display" data-id="exp1-4-dev1"></span></p><p><strong>Étape 2: Utiliser les propriétés de la partie entière</strong><br>Nous cherchons <span class="katex-inline" data-id="exp1-4-E-obj"></span>. En utilisant la propriété <span class="katex-inline" data-id="exp1-4-prop"></span> (puisque <span class="katex-inline" data-id="exp1-4-2n1"></span> est un entier), on peut simplifier:<span class="katex-display" data-id="exp1-4-E-simp"></span></p><p>Il nous reste à déterminer la valeur de <span class="katex-inline" data-id="exp1-4-E-term"></span>.</p><p><strong>Étape 3: Encadrer le terme irrationnel</strong><br>Pour trouver la partie entière de <span class="katex-inline" data-id="exp1-4-term"></span>, nous devons l'encadrer entre deux entiers consécutifs. Pour ce faire, nous allons encadrer son carré, <span class="katex-inline" data-id="exp1-4-term-sq"></span>, entre les carrés de deux entiers consécutifs.<br>Essayons de comparer <span class="katex-inline" data-id="exp1-4-term-sq2"></span> avec les carrés des entiers qui l'entourent, soit <span class="katex-inline" data-id="exp1-4-2n-sq"></span> et <span class="katex-inline" data-id="exp1-4-2n1-sq"></span>.</p><p><u>Comparaison de gauche :</u><br><span class="katex-inline" data-id="exp1-4-left-comp"></span><br>Cette inégalité est vraie pour tout <span class="katex-inline" data-id="exp1-4-n-in-N"></span>.</p><p><u>Comparaison de droite :</u><br><span class="katex-inline" data-id="exp1-4-right-comp"></span><br>Cette inégalité est toujours vraie.</p><p>Nous avons donc établi l'encadrement suivant :<span class="katex-display" data-id="exp1-4-encad-sq"></span>Puisque tous les termes sont positifs, on peut prendre la racine carrée de chaque membre sans changer le sens des inégalités :<span class="katex-display" data-id="exp1-4-encad-root"></span></p><p>Par définition de la partie entière, cet encadrement signifie que :<span class="katex-display" data-id="exp1-4-E-term-val"></span></p><p><strong>Étape 4: Finaliser le calcul</strong><br>Remplaçons la valeur de <span class="katex-inline" data-id="exp1-4-E-term-val-2"></span> dans notre expression de l'étape 2 :<span class="katex-display" data-id="exp1-4-final-calc"></span></p><p><strong>Conclusion:</strong><br>Nous avons bien établi l'égalité demandée.</p></div></div>
+    
+    <div id="hint2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('hint2-1')">&times;</span></div><p>Utilisez une démonstration par récurrence. Après avoir vérifié le cas de base (n=0), supposez que <span class="katex-inline" data-id="h2-1-hyp"></span> et <span class="katex-inline" data-id="h2-1-hyp2"></span>. Regardez ensuite les expressions de <span class="katex-inline" data-id="h2-1-un1"></span> et <span class="katex-inline" data-id="h2-1-vn1"></span>. Quel est le signe du numérateur et du dénominateur ?</p></div></div>
+    <div id="knowledge2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('knowledge2-1')">&times;</span></div><p><strong>Principe de la démonstration par récurrence:</strong> Savoir établir un cas de base, formuler une hypothèse de récurrence pour un rang n, et prouver la propriété pour le rang n+1.</p><p><strong>Règles des signes:</strong> Le carré d'un nombre réel est toujours positif ou nul. Le quotient de deux nombres strictement positifs est strictement positif.</p></div></div>
+    <div id="explanation2-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.1</h3><span class="close-btn" onclick="closeModal('explanation2-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Prouver que <span class="katex-inline" data-id="exp2-1-obj"></span>.</h4><p>Nous utilisons une démonstration par récurrence.</p><p><strong>Étape 1: Initialisation (Cas de base)</strong><br>Pour <span class="katex-inline" data-id="exp2-1-n0"></span>, on nous donne <span class="katex-inline" data-id="exp2-1-u0"></span> et <span class="katex-inline" data-id="exp2-1-v0"></span>. Les deux sont bien strictement positifs. La propriété est donc vraie au rang 0.</p><p><strong>Étape 2: Hérédité</strong><br>Supposons que la propriété est vraie pour un entier <span class="katex-inline" data-id="exp2-1-n-ge-0"></span>. C'est notre <strong>hypothèse de récurrence</strong>: <span class="katex-inline" data-id="exp2-1-hyp"></span> et <span class="katex-inline" data-id="exp2-1-hyp2"></span>.</p><p>Nous devons montrer que la propriété est vraie pour <span class="katex-inline" data-id="exp2-1-n+1"></span>, c'est-à-dire que <span class="katex-inline" data-id="exp2-1-goal1"></span> et <span class="katex-inline" data-id="exp2-1-goal2"></span>.</p><p>Considérons l'expression de <span class="katex-inline" data-id="exp2-1-un1"></span>:<span class="katex-display" data-id="exp2-1-un1-form"></span></p><p>Analysons le signe de chaque partie de la fraction en utilisant notre hypothèse de récurrence:<br>- Le numérateur <span class="katex-inline" data-id="exp2-1-num-u"></span>. Puisque <span class="katex-inline" data-id="exp2-1-un-pos"></span>, son carré est aussi strictement positif.<br>- Le dénominateur <span class="katex-inline" data-id="exp2-1-denom"></span>. Puisque <span class="katex-inline" data-id="exp2-1-un-pos2"></span> et <span class="katex-inline" data-id="exp2-1-vn-pos2"></span>, leur somme est strictement positive.<br>Le quotient d'un nombre strictement positif par un nombre strictement positif est strictement positif. Donc, <span class="katex-inline" data-id="exp2-1-un1-pos"></span>.</p><p>Faisons de même pour <span class="katex-inline" data-id="exp2-1-vn1"></span>:<span class="katex-display" data-id="exp2-1-vn1-form"></span></p><p>- Le numérateur <span class="katex-inline" data-id="exp2-1-num-v"></span>. Puisque <span class="katex-inline" data-id="exp2-1-vn-pos3"></span>, son carré est strictement positif.<br>- Le dénominateur <span class="katex-inline" data-id="exp2-1-denom2"></span> est le même et est strictement positif.<br>Donc, <span class="katex-inline" data-id="exp2-1-vn1-pos"></span>.</p><p>Nous avons montré que si <span class="katex-inline" data-id="exp2-1-un-pos4"></span> et <span class="katex-inline" data-id="exp2-1-vn-pos4"></span>, alors <span class="katex-inline" data-id="exp2-1-un1-pos2"></span> et <span class="katex-inline" data-id="exp2-1-vn1-pos2"></span>. L'hérédité est prouvée.</p><p><strong>Conclusion:</strong><br>La propriété est vraie pour n=0 et elle est héréditaire. Par le principe de récurrence, elle est vraie pour tout <span class="katex-inline" data-id="exp2-1-n-in-N"></span>.</p></div></div>
+    
+    <div id="hint2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('hint2-2')">&times;</span></div><p>Pour étudier la monotonie d'une suite, étudiez le signe de la différence <span class="katex-inline" data-id="h2-2-diff"></span>. Mettez l'expression au même dénominateur et utilisez le résultat de la question précédente sur le signe de <span class="katex-inline" data-id="h2-2-un"></span> et <span class="katex-inline" data-id="h2-2-vn"></span>.</p></div></div>
+    <div id="knowledge2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('knowledge2-2')">&times;</span></div><p><strong>Monotonie d'une suite:</strong> Une suite <span class="katex-inline" data-id="k2-2-un"></span> est croissante si <span class="katex-inline" data-id="k2-2-inc"></span> pour tout n. Elle est décroissante si <span class="katex-inline" data-id="k2-2-dec"></span> pour tout n. Pour le déterminer, on étudie le signe de <span class="katex-inline" data-id="k2-2-diff"></span>.</p><p><strong>Manipulation d'expressions algébriques:</strong> Savoir mettre au même dénominateur et factoriser.</p></div></div>
+    <div id="explanation2-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.2</h3><span class="close-btn" onclick="closeModal('explanation2-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Prouver que les suites <span class="katex-inline" data-id="exp2-2-un"></span> et <span class="katex-inline" data-id="exp2-2-vn"></span> sont monotones.</h4><p><strong>Étude de la monotonie de <span class="katex-inline" data-id="exp2-2-un-2"></span></strong><br>Calculons la différence <span class="katex-inline" data-id="exp2-2-diff-un"></span>.<span class="katex-display" data-id="exp2-2-calc-un1"></span></p><p>Mettons tout au même dénominateur <span class="katex-inline" data-id="exp2-2-denom"></span>:<span class="katex-display" data-id="exp2-2-calc-un2"></span></p><p>Factorisons le numérateur par <span class="katex-inline" data-id="exp2-2-fact-un"></span>:<span class="katex-display" data-id="exp2-2-calc-un3"></span></p><p>D'après la question 2.1, nous savons que <span class="katex-inline" data-id="exp2-2-un-pos"></span>, <span class="katex-inline" data-id="exp2-2-vn-pos"></span>, et donc <span class="katex-inline" data-id="exp2-2-sum-pos"></span>. Par conséquent:<br>- <span class="katex-inline" data-id="exp2-2-num"></span> est le produit de deux nombres négatifs (<span class="katex-inline" data-id="exp2-2-un-neg-term"></span> et <span class="katex-inline" data-id="exp2-2-vn-neg-term"></span>), donc <span class="katex-inline" data-id="exp2-2-num-neg"></span>.<br>- <span class="katex-inline" data-id="exp2-2-denom-pos"></span>.<br>Le quotient est donc strictement négatif : <span class="katex-inline" data-id="exp2-2-diff-neg"></span>.<br>Puisque <span class="katex-inline" data-id="exp2-2-un1-un-neg"></span>, la suite <span class="katex-inline" data-id="exp2-2-un-dec"></span> est (strictement) décroissante.</p><p><strong>Étude de la monotonie de <span class="katex-inline" data-id="exp2-2-vn-2"></span></strong><br>Le calcul est très similaire. Calculons <span class="katex-inline" data-id="exp2-2-diff-vn"></span>.<span class="katex-display" data-id="exp2-2-calc-vn1"></span><span class="katex-display" data-id="exp2-2-calc-vn2"></span><span class="katex-display" data-id="exp2-2-calc-vn3"></span></p><p>Pour les mêmes raisons que précédemment, le numérateur et le dénominateur sont respectivement négatif et positif. Le quotient est donc strictement négatif : <span class="katex-inline" data-id="exp2-2-diff-vn-neg"></span>.<br>Puisque <span class="katex-inline" data-id="exp2-2-vn1-vn-neg"></span>, la suite <span class="katex-inline" data-id="exp2-2-vn-dec"></span> est (strictement) décroissante.</p></div></div>
+    
+    <div id="hint2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.3</h3><span class="close-btn" onclick="closeModal('hint2-3')">&times;</span></div><p>Utilisez un théorème fondamental sur la convergence des suites monotones. Vous avez montré à la question 2.2 que les suites sont décroissantes. Sont-elles minorées ?</p></div></div>
+    <div id="knowledge2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.3</h3><span class="close-btn" onclick="closeModal('knowledge2-3')">&times;</span></div><p><strong>Théorème de la convergence monotone:</strong><br>- Toute suite croissante et majorée est convergente.<br>- Toute suite décroissante et minorée est convergente.</p><p><strong>Suite minorée:</strong> Une suite <span class="katex-inline" data-id="k2-3-un"></span> est minorée s'il existe un nombre réel m tel que <span class="katex-inline" data-id="k2-3-un-ge-m"></span> pour tout n.</p></div></div>
+    <div id="explanation2-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.3</h3><span class="close-btn" onclick="closeModal('explanation2-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: En déduire que <span class="katex-inline" data-id="exp2-3-un"></span> et <span class="katex-inline" data-id="exp2-3-vn"></span> sont convergentes.</h4><p>Nous allons appliquer le théorème de la convergence monotone à chaque suite.</p><p><strong>Pour la suite <span class="katex-inline" data-id="exp2-3-un-2"></span>:</strong><br>1. <strong>Monotonie:</strong> À la question 2.2, nous avons prouvé que la suite <span class="katex-inline" data-id="exp2-3-un-dec"></span> est décroissante.<br>2. <strong>Minorée ?:</strong> À la question 2.1, nous avons prouvé que <span class="katex-inline" data-id="exp2-3-un-pos"></span> pour tout <span class="katex-inline" data-id="exp2-3-n"></span>. Cela signifie que la suite <span class="katex-inline" data-id="exp2-3-un-min"></span> est minorée par 0.<br><strong>Conclusion pour <span class="katex-inline" data-id="exp2-3-un-3"></span>:</strong> La suite <span class="katex-inline" data-id="exp2-3-un-4"></span> est décroissante et minorée. D'après le théorème de la convergence monotone, <span class="katex-inline" data-id="exp2-3-un-conv"></span> est convergente.</p><p><strong>Pour la suite <span class="katex-inline" data-id="exp2-3-vn-2"></span>:</strong><br>1. <strong>Monotonie:</strong> À la question 2.2, nous avons prouvé que la suite <span class="katex-inline" data-id="exp2-3-vn-dec"></span> est décroissante.<br>2. <strong>Minorée ?:</strong> À la question 2.1, nous avons prouvé que <span class="katex-inline" data-id="exp2-3-vn-pos"></span> pour tout <span class="katex-inline" data-id="exp2-3-n-2"></span>. Cela signifie que la suite <span class="katex-inline" data-id="exp2-3-vn-min"></span> est minorée par 0.<br><strong>Conclusion pour <span class="katex-inline" data-id="exp2-3-vn-3"></span>:</strong> La suite <span class="katex-inline" data-id="exp2-3-vn-4"></span> est décroissante et minorée. D'après le théorème de la convergence monotone, <span class="katex-inline" data-id="exp2-3-vn-conv"></span> est convergente.</p></div></div>
+    
+    <div id="hint2-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.4</h3><span class="close-btn" onclick="closeModal('hint2-4')">&times;</span></div><p>Procédez par récurrence. Pour l'hérédité, calculez la différence <span class="katex-inline" data-id="h2-4-diff"></span> en utilisant les définitions des suites. Vous devriez voir apparaître une identité remarquable.</p></div></div>
+    <div id="knowledge2-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.4</h3><span class="close-btn" onclick="closeModal('knowledge2-4')">&times;</span></div><p><strong>Principe de la démonstration par récurrence:</strong> Savoir établir un cas de base, formuler une hypothèse de récurrence et prouver la propriété pour le rang n+1.</p><p><strong>Identités remarquables:</strong> En particulier, <span class="katex-inline" data-id="k2-4-id"></span>.</p></div></div>
+    <div id="explanation2-4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.4</h3><span class="close-btn" onclick="closeModal('explanation2-4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Démontrer par récurrence que <span class="katex-inline" data-id="exp2-4-obj"></span>.</h4><p><strong>Étape 1: Initialisation (Cas de base)</strong><br>Pour <span class="katex-inline" data-id="exp2-4-n0"></span>, nous calculons <span class="katex-inline" data-id="exp2-4-diff0"></span>. On a <span class="katex-inline" data-id="exp2-4-u0"></span> et <span class="katex-inline" data-id="exp2-4-v0"></span>, donc <span class="katex-inline" data-id="exp2-4-u0-v0"></span>. La propriété est vraie au rang 0.</p><p><strong>Étape 2: Hérédité</strong><br>Supposons que la propriété est vraie pour un entier <span class="katex-inline" data-id="exp2-4-n-ge-0"></span>. C'est notre <strong>hypothèse de récurrence</strong>: <span class="katex-inline" data-id="exp2-4-hyp"></span>.</p><p>Nous devons montrer que la propriété est vraie pour <span class="katex-inline" data-id="exp2-4-n+1"></span>, c'est-à-dire que <span class="katex-inline" data-id="exp2-4-goal"></span>.</p><p>Calculons la différence <span class="katex-inline" data-id="exp2-4-diff-n+1"></span> en utilisant les définitions de <span class="katex-inline" data-id="exp2-4-un1"></span> et <span class="katex-inline" data-id="exp2-4-vn1"></span>.<span class="katex-display" data-id="exp2-4-calc1"></span></p><p>Le dénominateur est commun, on peut donc soustraire les numérateurs:<span class="katex-display" data-id="exp2-4-calc2"></span></p><p>Nous reconnaissons au numérateur l'identité remarquable <span class="katex-inline" data-id="exp2-4-id"></span>:<span class="katex-display" data-id="exp2-4-calc3"></span></p><p>On peut maintenant simplifier la fraction par le terme <span class="katex-inline" data-id="exp2-4-simp"></span> (qui est non nul d'après la question 2.1):<span class="katex-display" data-id="exp2-4-calc4"></span></p><p>Enfin, nous utilisons notre hypothèse de récurrence, <span class="katex-inline" data-id="exp2-4-hyp-use"></span>, pour conclure:<span class="katex-display" data-id="exp2-4-calc5"></span></p><p>L'hérédité est prouvée.</p><p><strong>Conclusion:</strong><br>La propriété est vraie pour n=0 et elle est héréditaire. Par le principe de récurrence, elle est vraie pour tout <span class="katex-inline" data-id="exp2-4-n-in-N"></span>.</p></div></div>
+    
+    <div id="hint2-5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2.5</h3><span class="close-btn" onclick="closeModal('hint2-5')">&times;</span></div><p>Appelez <span class="katex-inline" data-id="h2-5-l"></span> et <span class="katex-inline" data-id="h2-5-lprime"></span> les limites respectives de <span class="katex-inline" data-id="h2-5-un"></span> et <span class="katex-inline" data-id="h2-5-vn"></span>. Passez à la limite dans deux équations: celle de la question 2.4 (<span class="katex-inline" data-id="h2-5-eq1"></span>) et l'une des relations de récurrence, par exemple <span class="katex-inline" data-id="h2-5-eq2"></span>. Cela vous donnera un système de deux équations à deux inconnues.</p></div></div>
+    <div id="knowledge2-5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2.5</h3><span class="close-btn" onclick="closeModal('knowledge2-5')">&times;</span></div><p><strong>Opérations sur les limites de suites:</strong> Si deux suites <span class="katex-inline" data-id="k2-5-un"></span> et <span class="katex-inline" data-id="k2-5-vn"></span> convergent respectivement vers l, l', alors la suite somme, produit, quotient converge vers la somme, le produit, le quotient des limites (sous condition pour le quotient).</p><p><strong>Unicité de la limite:</strong> Une suite convergente a une unique limite.</p><p><strong>Limite d'une suite récurrente:</strong> Si <span class="katex-inline" data-id="k2-5-un-rec"></span> et que <span class="katex-inline" data-id="k2-5-un-conv"></span> converge vers l, alors l est un point fixe de f, i.e., <span class="katex-inline" data-id="k2-5-l-fix"></span> (si f est continue).</p></div></div>
+    <div id="explanation2-5" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2.5</h3><span class="close-btn" onclick="closeModal('explanation2-5')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Préciser les limites de <span class="katex-inline" data-id="exp2-5-un"></span> et <span class="katex-inline" data-id="exp2-5-vn"></span>.</h4><p>D'après la question 2.3, nous savons que les deux suites convergent. Notons leurs limites :<span class="katex-display" data-id="exp2-5-lim-def"></span></p><p>Nous allons utiliser deux relations que nous connaissons pour former un système d'équations avec l et l'.</p><p><strong>Équation 1: Utiliser la relation de la question 2.4</strong><br>Nous avons prouvé que pour tout n, <span class="katex-inline" data-id="exp2-5-rel1"></span>. En passant à la limite quand <span class="katex-inline" data-id="exp2-5-n-inf"></span>, on obtient:<span class="katex-display" data-id="exp2-5-lim1"></span></p><p><strong>Équation 2: Utiliser la relation de récurrence</strong><br>Prenons la définition de <span class="katex-inline" data-id="exp2-5-un1"></span>: <span class="katex-inline" data-id="exp2-5-un1-def"></span>. On peut la réécrire <span class="katex-inline" data-id="exp2-5-un1-cross"></span>. Passons à la limite de chaque côté de cette équation.<br>Puisque <span class="katex-inline" data-id="exp2-5-un1-to-l"></span> et <span class="katex-inline" data-id="exp2-5-un-to-l"></span>, on obtient :<span class="katex-display" data-id="exp2-5-lim2-calc1"></span><span class="katex-display" data-id="exp2-5-lim2-calc2"></span><span class="katex-display" data-id="exp2-5-lim2-calc3"></span><span class="katex-display" data-id="exp2-5-lim2-calc4"></span></p><p><strong>Résolution du système</strong><br>Nous avons le système :<br>1) <span class="katex-inline" data-id="exp2-5-sys1"></span><br>2) <span class="katex-inline" data-id="exp2-5-sys2"></span></p><p>L'équation (2) nous donne deux possibilités : soit <span class="katex-inline" data-id="exp2-5-l0"></span>, soit <span class="katex-inline" data-id="exp2-5-lprime0"></span>.<br>- <strong>Cas 1: <span class="katex-inline" data-id="exp2-5-l0-2"></span>.</strong> En utilisant l'équation (1), on trouve l': <span class="katex-inline" data-id="exp2-5-lprime-val"></span>. Ce qui donne la solution <span class="katex-inline" data-id="exp2-5-sol1"></span>.<br>- <strong>Cas 2: <span class="katex-inline" data-id="exp2-5-lprime0-2"></span>.</strong> En utilisant l'équation (1), on trouve l: <span class="katex-inline" data-id="exp2-5-l-val"></span>. Ce qui donne la solution <span class="katex-inline" data-id="exp2-5-sol2"></span>.</p><p><strong>Élimination du cas impossible</strong><br>Nous savons depuis la question 2.1 que <span class="katex-inline" data-id="exp2-5-un-pos"></span> pour tout n. La limite d'une suite de termes strictement positifs doit être positive ou nulle. Donc, <span class="katex-inline" data-id="exp2-5-l-ge-0"></span>. La solution <span class="katex-inline" data-id="exp2-5-l-neg1"></span> est donc impossible.</p><p><strong>Conclusion:</strong><br>La seule solution possible est la première. Les limites des suites sont donc :<span class="katex-display" data-id="exp2-5-final-lims"></span></p></div></div>
+    
+    <div id="hint3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('hint3-1')">&times;</span></div><p>Le terme <span class="katex-inline" data-id="h3-1-cos"></span> prend des valeurs différentes et cycliques. Étudiez le comportement de l'ensemble en séparant les valeurs de n en trois sous-suites: <span class="katex-inline" data-id="h3-1-n3k"></span>, <span class="katex-inline" data-id="h3-1-n3k1"></span>, et <span class="katex-inline" data-id="h3-1-n3k2"></span>.</p></div></div>
+    <div id="knowledge3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('knowledge3-1')">&times;</span></div><p><strong>Supremum (Sup) / Borne supérieure:</strong> Le plus petit des majorants.</p><p><strong>Infimum (Inf) / Borne inférieure:</strong> Le plus grand des minorants.</p><p><strong>Maximum (Max):</strong> Le supremum s'il appartient à l'ensemble.</p><p><strong>Minimum (Min):</strong> L'infimum s'il appartient à l'ensemble.</p><p><strong>Valeurs du cosinus:</strong> Connaître les valeurs de <span class="katex-inline" data-id="k3-1-cos"></span> pour des multiples de <span class="katex-inline" data-id="k3-1-pi3"></span>.</p></div></div>
+    <div id="explanation3-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.1</h3><span class="close-btn" onclick="closeModal('explanation3-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Déterminer Sup, Inf, Max, Min de <span class="katex-inline" data-id="exp3-1-A"></span>.</h4><p>Le terme <span class="katex-inline" data-id="exp3-1-cos"></span> est périodique de période 3. Il prend les valeurs suivantes:<br>- Si <span class="katex-inline" data-id="exp3-1-n3k"></span> (n=3, 6, 9,...), <span class="katex-inline" data-id="exp3-1-cos-v1"></span>.<br>- Si <span class="katex-inline" data-id="exp3-1-n3k1"></span> (n=1, 4, 7,...), <span class="katex-inline" data-id="exp3-1-cos-v2"></span>.<br>- Si <span class="katex-inline" data-id="exp3-1-n3k2"></span> (n=2, 5, 8,...), <span class="katex-inline" data-id="exp3-1-cos-v3"></span>.<br>Nous allons donc étudier les trois sous-suites d'éléments de A.</p><p><strong>Cas 1: <span class="katex-inline" data-id="exp3-1-n3k-2"></span> (<span class="katex-inline" data-id="exp3-1-k-ge-1"></span>)</strong><br>Les éléments sont <span class="katex-inline" data-id="exp3-1-a3k"></span>. C'est une suite décroissante.<br>Le premier terme (<span class="katex-inline" data-id="exp3-1-k1"></span>, donc <span class="katex-inline" data-id="exp3-1-n3"></span>) est <span class="katex-inline" data-id="exp3-1-a3"></span>.<br>La limite quand <span class="katex-inline" data-id="exp3-1-k-inf"></span> est 1.</p><p><strong>Cas 2: <span class="katex-inline" data-id="exp3-1-n3k1-2"></span> (<span class="katex-inline" data-id="exp3-1-k-ge-0"></span>)</strong><br>Les éléments sont <span class="katex-inline" data-id="exp3-1-a3k1"></span>. C'est une suite décroissante.<br>Le premier terme (<span class="katex-inline" data-id="exp3-1-k0"></span>, donc <span class="katex-inline" data-id="exp3-1-n1"></span>) est <span class="katex-inline" data-id="exp3-1-a1"></span>.<br>La limite quand <span class="katex-inline" data-id="exp3-1-k-inf-2"></span> est -1/2.</p><p><strong>Cas 3: <span class="katex-inline" data-id="exp3-1-n3k2-2"></span> (<span class="katex-inline" data-id="exp3-1-k-ge-0-2"></span>)</strong><br>Les éléments sont <span class="katex-inline" data-id="exp3-1-a3k2"></span>. C'est une suite décroissante.<br>Le premier terme (<span class="katex-inline" data-id="exp3-1-k0-2"></span>, donc <span class="katex-inline" data-id="exp3-1-n2"></span>) est <span class="katex-inline" data-id="exp3-1-a2"></span>.<br>La limite quand <span class="katex-inline" data-id="exp3-1-k-inf-3"></span> est -1/2.</p><p><strong>Conclusion</strong><br>- <strong>Supremum et Maximum:</strong> On cherche la plus grande valeur parmi tous les éléments. Les plus grandes valeurs de chaque sous-suite sont leurs premiers termes: 5/3, 3/2, 1/2. La plus grande de toutes est 5/3. Comme 5/3 est atteint (pour n=3), c'est un maximum. Donc <span class="katex-inline" data-id="exp3-1-supmax"></span>.</p><p>- <strong>Infimum et Minimum:</strong> On cherche la plus grande des bornes inférieures. Les limites des sous-suites sont 1, -1/2 et -1/2. La plus petite valeur vers laquelle on tend est -1/2. Donc <span class="katex-inline" data-id="exp3-1-inf"></span>. Est-ce que cette valeur est atteinte ? Non, car pour l'atteindre il faudrait que <span class="katex-inline" data-id="exp3-1-2n"></span> soit nul, ce qui est impossible pour <span class="katex-inline" data-id="exp3-1-n-in-Nstar"></span>. Donc, l'ensemble n'a pas de minimum.</p></div></div>
+    
+    <div id="hint3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('hint3-2')">&times;</span></div><p>Le terme <span class="katex-inline" data-id="h3-2-term"></span> alterne en signe. Séparez l'étude en deux cas : lorsque n est pair (<span class="katex-inline" data-id="h3-2-n2k"></span>) et lorsque n est impair (<span class="katex-inline" data-id="h3-2-n2k1"></span>). Analysez la monotonie et les limites de ces deux sous-suites.</p></div></div>
+    <div id="knowledge3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('knowledge3-2')">&times;</span></div><p><strong>Supremum (Sup) / Borne supérieure:</strong> Le plus petit des majorants.</p><p><strong>Infimum (Inf) / Borne inférieure:</strong> Le plus grand des minorants.</p><p><strong>Maximum (Max):</strong> Le supremum s'il appartient à l'ensemble.</p><p><strong>Minimum (Min):</strong> L'infimum s'il appartient à l'ensemble.</p><p><strong>Comportement de <span class="katex-inline" data-id="k3-2-term"></span>:</strong> Savoir que ce terme vaut 1 si n est pair et -1 si n est impair.</p></div></div>
+    <div id="explanation3-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3.2</h3><span class="close-btn" onclick="closeModal('explanation3-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Déterminer Sup, Inf, Max, Min de <span class="katex-inline" data-id="exp3-2-B"></span>.</h4><p>Le terme <span class="katex-inline" data-id="exp3-2-term"></span> dépend de la parité de n. Nous étudions donc deux sous-suites.</p><p><strong>Cas 1: n est pair (<span class="katex-inline" data-id="exp3-2-n2k"></span>, <span class="katex-inline" data-id="exp3-2-k-ge-1"></span>)</strong><br>Si n est pair, <span class="katex-inline" data-id="exp3-2-term-even"></span>. Les éléments de l'ensemble sont :<span class="katex-display" data-id="exp3-2-b2k"></span>C'est une suite croissante de termes négatifs.<br>Le premier terme (<span class="katex-inline" data-id="exp3-2-k1"></span>, donc <span class="katex-inline" data-id="exp3-2-n2"></span>) est <span class="katex-inline" data-id="exp3-2-b2"></span>.<br>La limite quand <span class="katex-inline" data-id="exp3-2-k-inf"></span> est 0.</p><p><strong>Cas 2: n est impair (<span class="katex-inline" data-id="exp3-2-n2k1"></span>, <span class="katex-inline" data-id="exp3-2-k-ge-1-2"></span>)</strong><br>Si n est impair, <span class="katex-inline" data-id="exp3-2-term-odd"></span>. Les éléments sont :<span class="katex-display" data-id="exp3-2-b2k1"></span>C'est une suite décroissante de termes positifs.<br>Le premier terme (<span class="katex-inline" data-id="exp3-2-k1-2"></span>, donc <span class="katex-inline" data-id="exp3-2-n1"></span>) est <span class="katex-inline" data-id="exp3-2-b1"></span>.<br>La limite quand <span class="katex-inline" data-id="exp3-2-k-inf-2"></span> est 0.</p><p><strong>Conclusion</strong><br>- <strong>Supremum et Maximum:</strong> La sous-suite des termes impairs commence à 3/2 et décroît vers 0. La sous-suite des termes pairs commence à -1/6 et croît vers 0. La plus grande valeur de tout l'ensemble est donc le premier terme de la suite impaire, 3/2. Comme cette valeur est atteinte pour n=1, c'est un maximum. Donc <span class="katex-inline" data-id="exp3-2-supmax"></span>.</p><p>- <strong>Infimum et Minimum:</strong> La plus petite valeur de tout l'ensemble est le premier terme de la suite paire, -1/6. Comme cette valeur est atteinte pour n=2, c'est un minimum. Donc <span class="katex-inline" data-id="exp3-2-infmin"></span>.</p></div></div>
+
+    <div id="hint4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4.1</h3><span class="close-btn" onclick="closeModal('hint4-1')">&times;</span></div><p>Appliquez directement la définition de la suite <span class="katex-inline" data-id="h4-1-un"></span> pour n=1, n=2, et n=3 en écrivant les termes de la somme.</p></div></div>
+    <div id="knowledge4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4.1</h3><span class="close-btn" onclick="closeModal('knowledge4-1')">&times;</span></div><p><strong>Compréhension de la notation sommatoire:</strong> Savoir interpréter une somme alternée écrite avec des points de suspension.</p><p><strong>Addition de fractions.</strong></p></div></div>
+    <div id="explanation4-1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4.1</h3><span class="close-btn" onclick="closeModal('explanation4-1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Calculer <span class="katex-inline" data-id="exp4-1-u123"></span></h4><p>La suite est définie par <span class="katex-inline" data-id="exp4-1-un-def"></span>.</p><p><strong>Calcul de <span class="katex-inline" data-id="exp4-1-u1"></span> (n=1)</strong><br>La somme s'arrête au premier terme (<span class="katex-inline" data-id="exp4-1-term1"></span>).<span class="katex-display" data-id="exp4-1-u1-calc"></span></p><p><strong>Calcul de <span class="katex-inline" data-id="exp4-1-u2"></span> (n=2)</strong><br>La somme a deux termes.<span class="katex-display" data-id="exp4-1-u2-calc"></span></p><p><strong>Calcul de <span class="katex-inline" data-id="exp4-1-u3"></span> (n=3)</strong><br>La somme a trois termes.<span class="katex-display" data-id="exp4-1-u3-calc"></span></p></div></div>
+    
+    <div id="hint4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4.2</h3><span class="close-btn" onclick="closeModal('hint4-2')">&times;</span></div><p>Pour prouver que deux suites sont adjacentes, vous devez montrer trois choses : l'une est croissante, l'autre est décroissante, et la limite de leur différence est nulle. Calculez <span class="katex-inline" data-id="h4-2-d1"></span> et <span class="katex-inline" data-id="h4-2-d2"></span> en écrivant les termes de la suite.</p></div></div>
+    <div id="knowledge4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4.2</h3><span class="close-btn" onclick="closeModal('knowledge4-2')">&times;</span></div><p><strong>Suites adjacentes:</strong> Deux suites <span class="katex-inline" data-id="k4-2-un"></span> et <span class="katex-inline" data-id="k4-2-vn"></span> sont adjacentes si :<br>1. L'une est croissante (<span class="katex-inline" data-id="k4-2-un-inc"></span>).<br>2. L'autre est décroissante (<span class="katex-inline" data-id="k4-2-vn-dec"></span>).<br>3. La limite de leur différence est zéro (<span class="katex-inline" data-id="k4-2-lim-diff"></span>).</p></div></div>
+    <div id="explanation4-2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4.2</h3><span class="close-btn" onclick="closeModal('explanation4-2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: Montrer que <span class="katex-inline" data-id="exp4-2-u2n"></span> et <span class="katex-inline" data-id="exp4-2-u2n1"></span> sont adjacentes.</h4><p>Notons <span class="katex-inline" data-id="exp4-2-vn"></span> et <span class="katex-inline" data-id="exp4-2-wn"></span>. Nous devons vérifier les trois conditions pour des suites adjacentes.</p><p><strong>1. Monotonie de <span class="katex-inline" data-id="exp4-2-vn-2"></span></strong><br>Calculons <span class="katex-inline" data-id="exp4-2-vn1-vn"></span>.<span class="katex-display" data-id="exp4-2-v-calc1"></span>Par définition, <span class="katex-inline" data-id="exp4-2-u2n2"></span> est la somme jusqu'au terme <span class="katex-inline" data-id="exp4-2-t2n2"></span>. Donc, <span class="katex-inline" data-id="exp4-2-u2n2-u2n"></span> correspond aux deux termes ajoutés pour passer de <span class="katex-inline" data-id="exp4-2-u2n-term"></span> à <span class="katex-inline" data-id="exp4-2-u2n2-term"></span>.<span class="katex-display" data-id="exp4-2-v-calc2"></span>Comme <span class="katex-inline" data-id="exp4-2-comp1"></span>, la différence <span class="katex-inline" data-id="exp4-2-diff-pos"></span>. Donc <span class="katex-inline" data-id="exp4-2-vn1-vn-pos"></span>, et la suite <span class="katex-inline" data-id="exp4-2-vn-inc"></span> est croissante.</p><p><strong>2. Monotonie de <span class="katex-inline" data-id="exp4-2-wn-2"></span></strong><br>Calculons <span class="katex-inline" data-id="exp4-2-wn1-wn"></span>.<span class="katex-display" data-id="exp4-2-w-calc1"></span>De même, cela correspond aux deux termes ajoutés pour passer de <span class="katex-inline" data-id="exp4-2-u2n1-term"></span> à <span class="katex-inline" data-id="exp4-2-u2n3-term"></span>.<span class="katex-display" data-id="exp4-2-w-calc2"></span>Comme <span class="katex-inline" data-id="exp4-2-comp2"></span>, la différence <span class="katex-inline" data-id="exp4-2-diff-neg"></span>. Donc <span class="katex-inline" data-id="exp4-2-wn1-wn-neg"></span>, et la suite <span class="katex-inline" data-id="exp4-2-wn-dec"></span> est décroissante.</p><p><strong>3. Limite de la différence</strong><br>Calculons <span class="katex-inline" data-id="exp4-2-lim-wn-vn"></span>.<span class="katex-display" data-id="exp4-2-diff-calc"></span>Le terme <span class="katex-inline" data-id="exp4-2-u2n1-u2n"></span> est simplement le dernier terme de <span class="katex-inline" data-id="exp4-2-u2n1-term2"></span>, qui est <span class="katex-inline" data-id="exp4-2-term-final"></span>.<span class="katex-display" data-id="exp4-2-lim-calc"></span></p><p><strong>Conclusion:</strong><br>Les trois conditions sont remplies: <span class="katex-inline" data-id="exp4-2-vn-final"></span> est croissante, <span class="katex-inline" data-id="exp4-2-wn-final"></span> est décroissante, et la limite de leur différence est zéro. Les suites sont donc adjacentes.</p></div></div>
+    
+    <div id="hint4-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4.3</h3><span class="close-btn" onclick="closeModal('hint4-3')">&times;</span></div><p>Quel est le principal théorème concernant les suites adjacentes ? Que pouvez-vous dire sur les sous-suites de rang pair et de rang impair de <span class="katex-inline" data-id="h4-3-un"></span> ?</p></div></div>
+    <div id="knowledge4-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4.3</h3><span class="close-btn" onclick="closeModal('knowledge4-3')">&times;</span></div><p><strong>Théorème des suites adjacentes:</strong> Si deux suites sont adjacentes, alors elles convergent et elles ont la même limite.</p><p><strong>Convergence d'une suite et de ses sous-suites:</strong> Une suite converge vers une limite L si et seulement si ses sous-suites de rang pair et de rang impair convergent toutes les deux vers cette même limite L.</p></div></div>
+    <div id="explanation4-3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4.3</h3><span class="close-btn" onclick="closeModal('explanation4-3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Objectif: En déduire que <span class="katex-inline" data-id="exp4-3-un"></span> est convergente.</h4><p><strong>Étape 1: Appliquer le théorème des suites adjacentes</strong><br>À la question 4.2, nous avons démontré que les suites <span class="katex-inline" data-id="exp4-3-u2n"></span> (la sous-suite des termes de rang pair de <span class="katex-inline" data-id="exp4-3-un-2"></span>) et <span class="katex-inline" data-id="exp4-3-u2n1"></span> (la sous-suite des termes de rang impair) sont adjacentes.</p><p>Le théorème des suites adjacentes stipule que si deux suites sont adjacentes, alors elles sont toutes les deux convergentes et elles convergent vers la même limite. Appelons cette limite commune L.<span class="katex-display" data-id="exp4-3-lim-L"></span></p><p><strong>Étape 2: Conclure sur la suite principale <span class="katex-inline" data-id="exp4-3-un-3"></span></strong><br>Nous avons montré que :<br>- La sous-suite des termes de rang pair, <span class="katex-inline" data-id="exp4-3-u2n-2"></span>, converge vers L.<br>- La sous-suite des termes de rang impair, <span class="katex-inline" data-id="exp4-3-u2n1-2"></span>, converge vers L.</p><p>Un théorème fondamental sur les suites stipule qu'une suite est convergente si et seulement si ses sous-suites de rang pair et de rang impair convergent vers la même limite.</p><p>Puisque c'est le cas ici, nous pouvons conclure que la suite "mère" <span class="katex-inline" data-id="exp4-3-un-4"></span> est convergente et sa limite est également L.</p></div></div>
+    
+    <script>
+        function renderKatex() {
+            document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                const content = el.textContent;
+                const displayMode = el.classList.contains('katex-display');
+                try {
+                    katex.render(content, el, {
+                        throwOnError: false,
+                        displayMode: displayMode
+                    });
+                } catch (e) {
+                    console.error("Erreur de rendu KaTeX:", e, "sur l'élément:", el);
+                    el.textContent = `Erreur de rendu de la formule: ${content}`;
+                }
+            });
+        }
+        
+        function fillFormulas() {
+            function setText(id, content) {
+                const el = document.querySelector(`[data-id='${id}']`);
+                if (el) {
+                    el.textContent = content;
+                } else {
+                    console.warn(`Élément avec data-id '${id}' non trouvé.`);
+                }
+            }
+            
+            // Exercise 1
+            setText('ex1-notation-E', "E(x)");
+            setText('ex1-q1-n', "n \\in \\mathbb{N}^{*}");
+            setText('ex1-q1-eq', "\\frac{1}{1\\cdot2}+\\frac{1}{2\\cdot3}+\\cdot\\cdot\\cdot+\\frac{1}{n(n+1)}=\\frac{n}{n+1}");
+            setText('ex1-q2-eq', "\\sqrt{2} \\notin \\mathbb{Q}");
+            setText('ex1-q3-eq', "\\sqrt{6-x}+\\sqrt{3-x}=\\sqrt{x+5}+\\sqrt{4-3x}");
+            setText('ex1-q4-eq', "\\forall n \\in \\mathbb{N}, E((\\sqrt{n+1}+\\sqrt{n})^{2})=4n+1");
+            
+            // Exercise 2
+            setText('ex2-suites-unvn', "(u_{n})_{n} \\text{ et } (v_{n})_{n}");
+            setText('ex2-init-cond', "u_{0}=1, v_{0}=2");
+            setText('ex2-n-in-N', "n \\in \\mathbb{N}");
+            setText('ex2-rec-un', "u_{n+1}=\\frac{u_{n}^{2}}{u_{n}+v_{n}}");
+            setText('ex2-rec-vn', "v_{n+1}=\\frac{v_{n}^{2}}{u_{n}+v_{n}}");
+            setText('ex2-q1-prop', "\\forall n \\in \\mathbb{N}, u_{n}>0 \\text{ et } v_{n}>0");
+            setText('ex2-q2-suites', "(u_{n})_{n} \\text{ et } (v_{n})_{n}");
+            setText('ex2-q3-suites', "(u_{n})_{n} \\text{ et } (v_{n})_{n}");
+            setText('ex2-q4-prop', "\\forall n \\in \\mathbb{N}, u_{n}-v_{n}=-1");
+            setText('ex2-q5-suites', "(u_{n})_{n} \\text{ et } (v_{n})_{n}");
+            
+            // Exercise 3
+            setText('ex3-q1-setA', "A=\\{\\frac{2}{n}+cos(\\frac{2n\\pi}{3}),n\\in\\mathbb{N}^{*}\\}" );
+            setText('ex3-q2-setB', "B=\\{\\frac{1}{n+1}-\\frac{(-1)^{n}}{n},n\\in\\mathbb{N}^{*}\\}" );
+            
+            // Exercise 4
+            setText('ex4-un-def', "u_{n}=1-\\frac{1}{2}+\\frac{1}{3}-\\frac{1}{4}+\\cdot\\cdot\\cdot+\\frac{(-1)^{n+1}}{n},n\\in\\mathbb{N}^{*}");
+            setText('ex4-q1-calc', "u_{1}, u_{2} \\text{ et } u_{3}");
+            setText('ex4-q2-suites', "(u_{2n})_{n} \\text{ et } (u_{2n+1})_{n}");
+            setText('ex4-q3-suite', "(u_{n})_{n}");
+
+            // Solutions Exercise 1
+            setText('sol1-1-n1', "n=1");
+            setText('sol1-1-lhs', "\\frac{1}{1 \\cdot 2} = \\frac{1}{2}");
+            setText('sol1-1-rhs', "\\frac{1}{1+1} = \\frac{1}{2}");
+            setText('sol1-1-hyp', "\\sum_{k=1}^{n}\\frac{1}{k(k+1)} = \\frac{n}{n+1}");
+            setText('sol1-1-sum', "\\sum_{k=1}^{n+1}\\frac{1}{k(k+1)}=\\frac{n}{n+1}+\\frac{1}{(n+1)(n+2)}=\\frac{n(n+2)+1}{(n+1)(n+2)}=\\frac{(n+1)^{2}}{(n+1)(n+2)}=\\frac{n+1}{n+2}");
+            setText('sol1-2-hyp', "\\sqrt{2} = \\frac{a}{b} \\in \\mathbb{Q}");
+            setText('sol1-2-eq1', "a^{2} = 2b^{2} \\Rightarrow a^{2}");
+            setText('sol1-2-imp1', "\\Rightarrow");
+            setText('sol1-2-sub', "a=2a'");
+            setText('sol1-2-eq2', "(2a')^{2}=2b^{2} \\Rightarrow 4a'^{2}=2b^{2} \\Rightarrow b^{2}=2a'^{2} \\Rightarrow b^{2} \\text{ est pair } \\Rightarrow b \\text{ est pair}");
+            setText('sol1-2-concl', "\\sqrt{2} \\notin \\mathbb{Q}");
+            setText('sol1-3-sols', "x=-1 \\text{ et } x=1/2");
+            setText('sol1-4-dev', "(\\sqrt{n+1}+\\sqrt{n})^{2} = 2n+1+2\\sqrt{n(n+1)}");
+            setText('sol1-4-ineq', "2n \\le 2\\sqrt{n(n+1)} < 2n+1");
+            setText('sol1-4-ineq1', "4n^{2} \\le 4n(n+1) \\iff 0 \\le 4n");
+            setText('sol1-4-ineq2', "4n(n+1) < (2n+1)^{2} \\iff 0 < 1");
+            setText('sol1-4-part1', "E(2\\sqrt{n(n+1)})=2n");
+            setText('sol1-4-final', "E((\\sqrt{n+1}+\\sqrt{n})^{2}) = 2n+1+E(2\\sqrt{n(n+1)}) = 2n+1+2n=4n+1");
+            
+            // Solutions Exercise 2
+            setText('sol2-1-n0', "n=0");
+            setText('sol2-1-base', "u_{0}=1>0, v_{0}=2>0");
+            setText('sol2-1-hyp', "u_{n}>0, v_{n}>0");
+            setText('sol2-1-sum', "u_{n}+v_{n}>0");
+            setText('sol2-1-un1', "u_{n+1}=\\frac{u_{n}^{2}}{u_{n}+v_{n}}>0");
+            setText('sol2-1-vn1', "v_{n+1}=\\frac{v_{n}^{2}}{u_{n}+v_{n}}>0");
+            setText('sol2-2-un-diff', "u_{n+1}-u_{n} = \\frac{-u_{n}v_{n}}{u_{n}+v_{n}} < 0");
+            setText('sol2-2-un-mono', "(u_n)");
+            setText('sol2-2-vn-diff', "v_{n+1}-v_{n} = \\frac{-u_{n}v_{n}}{u_{n}+v_{n}} < 0");
+            setText('sol2-2-vn-mono', "(v_n)");
+            setText('sol2-3-un-conv', "(u_n)");
+            setText('sol2-3-vn-conv', "(v_n)");
+            setText('sol2-4-n0', "n=0");
+            setText('sol2-4-base', "u_{0}-v_{0}=1-2=-1");
+            setText('sol2-4-hyp', "u_{n}-v_{n}=-1");
+            setText('sol2-4-step', "u_{n+1}-v_{n+1} = \\frac{u_{n}^{2}-v_{n}^{2}}{u_{n}+v_{n}} = \\frac{(u_n-v_n)(u_n+v_n)}{u_n+v_n}=u_n-v_n=-1");
+            setText('sol2-5-lims', "\\lim u_n = l, \\lim v_n = l'");
+            setText('sol2-5-eq1', "u_{n+1}(u_{n}+v_{n})=u_{n}^{2}");
+            setText('sol2-5-lim1', "l(l+l')=l^{2} \\Rightarrow ll'=0");
+            setText('sol2-5-eq2', "u_n-v_n=-1");
+            setText('sol2-5-lim2', "l-l'=-1");
+            setText('sol2-5-case1', "l=0");
+            setText('sol2-5-lprime1', "l'=l+1=1");
+            setText('sol2-5-case2', "l'=0");
+            setText('sol2-5-lneg', "l=l'-1=-1");
+            setText('sol2-5-pos', "u_n>0");
+            setText('sol2-5-lpos', "l \\ge 0");
+            setText('sol2-5-final', "\\lim u_n = 0 \\text{ et } \\lim v_n = 1");
+            
+            // Solution Exercise 3
+            setText('sol3-1-cases', "n=3k, 3k+1, 3k+2");
+            setText('sol3-1-n3k', "n=3k");
+            setText('sol3-1-a3k', "a_{3k}=\\frac{2}{3k}+1");
+            setText('sol3-1-n3k1', "n=3k+1");
+            setText('sol3-1-a3k1', "a_{3k+1}=\\frac{2}{3k+1}-\\frac{1}{2}");
+            setText('sol3-1-n3k2', "n=3k+2");
+            setText('sol3-1-a3k2', "a_{3k+2}=\\frac{2}{3k+2}-\\frac{1}{2}");
+            setText('sol3-1-sup', "\\sup A = \\max A = a_{3}=5/3");
+            setText('sol3-1-inf', "\\inf A = -1/2");
+            setText('sol3-2-n2k', "n=2k");
+            setText('sol3-2-b2k', "b_{2k}=\\frac{1}{2k+1}-\\frac{1}{2k}=\\frac{-1}{2k(2k+1)}");
+            setText('sol3-2-n2k1', "n=2k-1");
+            setText('sol3-2-b2k1', "b_{2k-1}=\\frac{1}{2k}+\\frac{1}{2k-1}");
+            setText('sol3-2-sup', "\\sup B = \\max B = b_1=3/2");
+            setText('sol3-2-inf', "\\inf B = \\min B = b_2=-1/6");
+
+            // Solution Exercise 4
+            setText('sol4-1-u1', "u_1 = 1");
+            setText('sol4-1-u2', "u_2 = 1 - 1/2 = 1/2");
+            setText('sol4-1-u3', "u_3 = 1 - 1/2 + 1/3 = 5/6");
+            setText('sol4-2-u2n-diff', "u_{2(n+1)}-u_{2n}=u_{2n+2}-u_{2n}=\\frac{1}{2n+1}-\\frac{1}{2n+2}>0");
+            setText('sol4-2-u2n-mono', "(u_{2n})");
+            setText('sol4-2-u2n1-diff', "u_{2(n+1)+1}-u_{2n+1}=u_{2n+3}-u_{2n+1}=-\\frac{1}{2n+2}+\\frac{1}{2n+3}<0");
+            setText('sol4-2-u2n1-mono', "(u_{2n+1})");
+            setText('sol4-2-lim-diff', "\\lim_{n\\to\\infty}(u_{2n+1}-u_{2n})=\\lim_{n\\to\\infty}\\frac{1}{2n+1}=0");
+            setText('sol4-3-adj', "(u_{2n})");
+            setText('sol4-3-adj2', "(u_{2n+1})");
+            setText('sol4-3-un', "(u_n)");
+            
+            // Modal Content
+            // 1.1
+            setText('exp1-1-obj', "\\frac{1}{1\\cdot2}+\\frac{1}{2\\cdot3}+\\cdot\\cdot\\cdot+\\frac{1}{n(n+1)}=\\frac{n}{n+1}");
+            setText('exp1-1-n1', "n=1");
+            setText('exp1-1-lhs', "\\frac{1}{1(1+1)} = \\frac{1}{2}");
+            setText('exp1-1-rhs', "\\frac{1}{1+1} = \\frac{1}{2}");
+            setText('exp1-1-n1-2', "n=1");
+            setText('exp1-1-n-ge-1', "n \\ge 1");
+            setText('exp1-1-hyp', "\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\frac{n}{n+1}");
+            setText('exp1-1-n+1', "n+1");
+            setText('exp1-1-goal', "\\sum_{k=1}^{n+1}\\frac{1}{k(k+1)}=\\frac{n+1}{(n+1)+1} = \\frac{n+1}{n+2}");
+            setText('exp1-1-calc1', "\\sum_{k=1}^{n+1}\\frac{1}{k(k+1)} = (\\sum_{k=1}^{n}\\frac{1}{k(k+1)}) + \\frac{1}{(n+1)(n+2)}");
+            setText('exp1-1-calc2', "= \\frac{n}{n+1} + \\frac{1}{(n+1)(n+2)}");
+            setText('exp1-1-denom', "(n+1)(n+2)");
+            setText('exp1-1-calc3', "= \\frac{n(n+2)}{(n+1)(n+2)} + \\frac{1}{(n+1)(n+2)} = \\frac{n(n+2)+1}{(n+1)(n+2)}");
+            setText('exp1-1-calc4', "= \\frac{n^2+2n+1}{(n+1)(n+2)}");
+            setText('exp1-1-ident', "(n+1)^2");
+            setText('exp1-1-calc5', "= \\frac{(n+1)^2}{(n+1)(n+2)}");
+            setText('exp1-1-simp', "(n+1)");
+            setText('exp1-1-calc6', "= \\frac{n+1}{n+2}");
+            setText('exp1-1-n-star', "n \\in \\mathbb{N}^*");
+            // 1.2
+            setText('h1-2-sqrt2', "\\sqrt{2}");
+            setText('h1-2-ab', "\\frac{a}{b}");
+            setText('k1-2-Q', "\\mathbb{Q}");
+            setText('k1-2-ab', "\\frac{a}{b}");
+            setText('k1-2-b-neq-0', "b \\ne 0");
+            setText('k1-2-a2', "a^2");
+            setText('exp1-2-obj', "\\sqrt{2} \\notin \\mathbb{Q}");
+            setText('exp1-2-sqrt2', "\\sqrt{2}");
+            setText('exp1-2-hyp', "\\sqrt{2} = \\frac{a}{b}");
+            setText('exp1-2-cond', "a, b \\in \\mathbb{Z}, b \\ne 0");
+            setText('exp1-2-calc1', "(\\sqrt{2})^2 = (\\frac{a}{b})^2");
+            setText('exp1-2-calc2', "2 = \\frac{a^2}{b^2} \\implies a^2 = 2b^2");
+            setText('exp1-2-a2', "a^2");
+            setText('exp1-2-a2-pair', "a^2");
+            setText('exp1-2-a2-pair2', "a^2");
+            setText('exp1-2-a-2a', "a=2a'");
+            setText('exp1-2-a', "a'");
+            setText('exp1-2-a-2a-2', "2a'");
+            setText('exp1-2-a2-2b2', "a^2 = 2b^2");
+            setText('exp1-2-calc3', "(2a')^2 = 2b^2");
+            setText('exp1-2-calc4', "4a'^2 = 2b^2");
+            setText('exp1-2-calc5', "b^2 = 2a'^2");
+            setText('exp1-2-b2', "b^2");
+            setText('exp1-2-b2-pair', "b^2");
+            setText('exp1-2-ab', "\\frac{a}{b}");
+            setText('exp1-2-sqrt2-rat', "\\sqrt{2}");
+            setText('exp1-2-sqrt2-irrat', "\\sqrt{2}");
+            // 1.3
+            setText('k1-3-sqrt', "\\sqrt{f(x)}");
+            setText('k1-3-cond', "f(x) \\ge 0");
+            setText('exp1-3-obj', "\\sqrt{6-x}+\\sqrt{3-x}=\\sqrt{x+5}+\\sqrt{4-3x}");
+            setText('exp1-3-D', "D_f");
+            setText('exp1-3-c1', "6-x \\ge 0");
+            setText('exp1-3-r1', "\\implies x \\le 6");
+            setText('exp1-3-c2', "3-x \\ge 0");
+            setText('exp1-3-r2', "\\implies x \\le 3");
+            setText('exp1-3-c3', "x+5 \\ge 0");
+            setText('exp1-3-r3', "\\implies x \\ge -5");
+            setText('exp1-3-c4', "4-3x \\ge 0");
+            setText('exp1-3-r4', "\\implies x \\le 4/3");
+            setText('exp1-3-D-final', "D_f = [-5, 4/3]");
+            setText('exp1-3-rearr', "\\sqrt{6-x}-\\sqrt{4-3x}=\\sqrt{x+5}-\\sqrt{3-x}");
+            setText('exp1-3-sq1', "(\\sqrt{6-x}-\\sqrt{4-3x})^2 = (\\sqrt{x+5}-\\sqrt{3-x})^2");
+            setText('exp1-3-dev1', "(6-x) - 2\\sqrt{(6-x)(4-3x)} + (4-3x) = (x+5) - 2\\sqrt{(x+5)(3-x)} + (3-x)");
+            setText('exp1-3-simp1', "10-4x - 2\\sqrt{3x^2-22x+24} = 8 - 2\\sqrt{-x^2-2x+15}");
+            setText('exp1-3-iso1', "1-2x = \\sqrt{3x^2-22x+24} - \\sqrt{-x^2-2x+15}");
+            setText('exp1-3-sq2', "(1-2x)^2 = ...");
+            setText('exp1-3-dev2', "...");
+            setText('exp1-3-quad', "2x^2+x-1=0");
+            setText('exp1-3-fact', "(2x-1)(x+1)=0");
+            setText('exp1-3-sol1', "x = 1/2");
+            setText('exp1-3-sol2', "x = -1");
+            setText('exp1-3-D-check', "D_f = [-5, 4/3]");
+            setText('exp1-3-s1-check', "-1 \\in D_f");
+            setText('exp1-3-s2-check', "1/2 \\in D_f");
+            setText('exp1-3-x-1', "x = -1");
+            setText('exp1-3-v1-lhs', "\\sqrt{7}+\\sqrt{4} = \\sqrt{7}+2");
+            setText('exp1-3-v1-rhs', "\\sqrt{4}+\\sqrt{7} = 2+\\sqrt{7}");
+            setText('exp1-3-x-1/2', "x = 1/2");
+            setText('exp1-3-v2-lhs', "\\sqrt{11/2}+\\sqrt{5/2}");
+            setText('exp1-3-v2-rhs', "\\sqrt{11/2}+\\sqrt{5/2}");
+            setText('exp1-3-S-final', "S = \\{-1, 1/2\\}");
+            // 1.4
+            setText('h1-4-expr', "(\\sqrt{n+1}+\\sqrt{n})^2");
+            setText('h1-4-term', "2\\sqrt{n(n+1)}");
+            setText('k1-4-id', "(a+b)^2 = a^2+2ab+b^2");
+            setText('k1-4-E', "E(x)");
+            setText('k1-4-Edef', "E(x)=k");
+            setText('k1-4-k-le-x', "k \\le x < k+1");
+            setText('k1-4-prop', "E(x+k) = E(x)+k");
+            setText('exp1-4-obj', "E((\\sqrt{n+1}+\\sqrt{n})^{2})=4n+1");
+            setText('exp1-4-id', "(a+b)^2 = a^2+2ab+b^2");
+            setText('exp1-4-dev1', "(\\sqrt{n+1}+\\sqrt{n})^{2} = (\\sqrt{n+1})^2 + 2\\sqrt{n+1}\\sqrt{n} + (\\sqrt{n})^2 = n+1+2\\sqrt{n(n+1)}+n = 2n+1+2\\sqrt{n(n+1)}");
+            setText('exp1-4-E-obj', "E(2n+1+2\\sqrt{n(n+1)})");
+            setText('exp1-4-prop', "E(x+k)=E(x)+k");
+            setText('exp1-4-2n1', "2n+1");
+            setText('exp1-4-E-simp', "E(2n+1+2\\sqrt{n(n+1)}) = 2n+1 + E(2\\sqrt{n(n+1)})");
+            setText('exp1-4-E-term', "E(2\\sqrt{n(n+1)})");
+            setText('exp1-4-term', "2\\sqrt{n(n+1)}");
+            setText('exp1-4-term-sq', "(2\\sqrt{n(n+1)})^2 = 4n(n+1) = 4n^2+4n");
+            setText('exp1-4-term-sq2', "4n^2+4n");
+            setText('exp1-4-2n-sq', "(2n)^2=4n^2");
+            setText('exp1-4-2n1-sq', "(2n+1)^2=4n^2+4n+1");
+            setText('exp1-4-left-comp', "4n^2 \\le 4n^2+4n \\iff 0 \\le 4n");
+            setText('exp1-4-n-in-N', "n \\in \\mathbb{N}");
+            setText('exp1-4-right-comp', "4n^2+4n < 4n^2+4n+1 \\iff 0 < 1");
+            setText('exp1-4-encad-sq', "(2n)^2 \\le (2\\sqrt{n(n+1)})^2 < (2n+1)^2");
+            setText('exp1-4-encad-root', "2n \\le 2\\sqrt{n(n+1)} < 2n+1");
+            setText('exp1-4-E-term-val', "E(2\\sqrt{n(n+1)}) = 2n");
+            setText('exp1-4-E-term-val-2', "E(2\\sqrt{n(n+1)})");
+            setText('exp1-4-final-calc', "2n+1 + 2n = 4n+1");
+            // 2.1
+            setText('h2-1-hyp', "u_n > 0");
+            setText('h2-1-hyp2', "v_n > 0");
+            setText('h2-1-un1', "u_{n+1}");
+            setText('h2-1-vn1', "v_{n+1}");
+            setText('exp2-1-obj', "\\forall n \\in \\mathbb{N}, u_n > 0 \\text{ et } v_n > 0");
+            setText('exp2-1-n0', "n=0");
+            setText('exp2-1-u0', "u_0=1>0");
+            setText('exp2-1-v0', "v_0=2>0");
+            setText('exp2-1-n-ge-0', "n \\ge 0");
+            setText('exp2-1-hyp', "u_n > 0");
+            setText('exp2-1-hyp2', "v_n > 0");
+            setText('exp2-1-n+1', "n+1");
+            setText('exp2-1-goal1', "u_{n+1}>0");
+            setText('exp2-1-goal2', "v_{n+1}>0");
+            setText('exp2-1-un1', "u_{n+1}");
+            setText('exp2-1-un1-form', "u_{n+1} = \\frac{u_n^2}{u_n+v_n}");
+            setText('exp2-1-num-u', "u_n^2");
+            setText('exp2-1-un-pos', "u_n > 0");
+            setText('exp2-1-denom', "u_n+v_n");
+            setText('exp2-1-un-pos2', "u_n > 0");
+            setText('exp2-1-vn-pos2', "v_n > 0");
+            setText('exp2-1-un1-pos', "u_{n+1} > 0");
+            setText('exp2-1-vn1', "v_{n+1}");
+            setText('exp2-1-vn1-form', "v_{n+1} = \\frac{v_n^2}{u_n+v_n}");
+            setText('exp2-1-num-v', "v_n^2");
+            setText('exp2-1-vn-pos3', "v_n > 0");
+            setText('exp2-1-denom2', "u_n+v_n");
+            setText('exp2-1-vn1-pos', "v_{n+1} > 0");
+            setText('exp2-1-un-pos4', "u_n>0");
+            setText('exp2-1-vn-pos4', "v_n>0");
+            setText('exp2-1-un1-pos2', "u_{n+1}>0");
+            setText('exp2-1-vn1-pos2', "v_{n+1}>0");
+            setText('exp2-1-n-in-N', "n \\in \\mathbb{N}");
+            // 2.2
+            setText('h2-2-diff', "u_{n+1}-u_n");
+            setText('h2-2-un', "u_n");
+            setText('h2-2-vn', "v_n");
+            setText('k2-2-un', "(u_n)");
+            setText('k2-2-inc', "u_{n+1} \\ge u_n");
+            setText('k2-2-dec', "u_{n+1} \\le u_n");
+            setText('k2-2-diff', "u_{n+1}-u_n");
+            setText('exp2-2-un', "(u_n)");
+            setText('exp2-2-vn', "(v_n)");
+            setText('exp2-2-un-2', "(u_n)");
+            setText('exp2-2-diff-un', "u_{n+1}-u_n");
+            setText('exp2-2-calc-un1', "u_{n+1}-u_n = \\frac{u_n^2}{u_n+v_n} - u_n");
+            setText('exp2-2-denom', "u_n+v_n");
+            setText('exp2-2-calc-un2', "= \\frac{u_n^2 - u_n(u_n+v_n)}{u_n+v_n} = \\frac{u_n^2 - u_n^2 - u_n v_n}{u_n+v_n}");
+            setText('exp2-2-fact-un', "-u_n v_n");
+            setText('exp2-2-calc-un3', "= \\frac{-u_n v_n}{u_n+v_n}");
+            setText('exp2-2-un-pos', "u_n > 0");
+            setText('exp2-2-vn-pos', "v_n > 0");
+            setText('exp2-2-sum-pos', "u_n+v_n > 0");
+            setText('exp2-2-num', "-u_n v_n");
+            setText('exp2-2-un-neg-term', "u_n");
+            setText('exp2-2-vn-neg-term', "v_n");
+            setText('exp2-2-num-neg', "-u_n v_n < 0");
+            setText('exp2-2-denom-pos', "u_n+v_n > 0");
+            setText('exp2-2-diff-neg', "u_{n+1}-u_n < 0");
+            setText('exp2-2-un1-un-neg', "u_{n+1} < u_n");
+            setText('exp2-2-un-dec', "(u_n)");
+            setText('exp2-2-vn-2', "(v_n)");
+            setText('exp2-2-diff-vn', "v_{n+1}-v_n");
+            setText('exp2-2-calc-vn1', "v_{n+1}-v_{n} = \\frac{v_n^2}{u_n+v_n} - v_n");
+            setText('exp2-2-calc-vn2', "= \\frac{v_n^2 - v_n(u_n+v_n)}{u_n+v_n}");
+            setText('exp2-2-calc-vn3', "= \\frac{-u_n v_n}{u_n+v_n}");
+            setText('exp2-2-diff-vn-neg', "v_{n+1}-v_n < 0");
+            setText('exp2-2-vn1-vn-neg', "v_{n+1} < v_n");
+            setText('exp2-2-vn-dec', "(v_n)");
+            // 2.3
+            setText('k2-3-un', "(u_n)");
+            setText('k2-3-un-ge-m', "u_n \\ge m");
+            setText('exp2-3-un', "(u_n)");
+            setText('exp2-3-vn', "(v_n)");
+            setText('exp2-3-un-2', "(u_n)");
+            setText('exp2-3-un-dec', "(u_n)");
+            setText('exp2-3-un-pos', "u_n > 0");
+            setText('exp2-3-n', "n");
+            setText('exp2-3-un-min', "(u_n)");
+            setText('exp2-3-un-3', "(u_n)");
+            setText('exp2-3-un-4', "(u_n)");
+            setText('exp2-3-un-conv', "(u_n)");
+            setText('exp2-3-vn-2', "(v_n)");
+            setText('exp2-3-vn-dec', "(v_n)");
+            setText('exp2-3-vn-pos', "v_n > 0");
+            setText('exp2-3-n-2', "n");
+            setText('exp2-3-vn-min', "(v_n)");
+            setText('exp2-3-vn-3', "(v_n)");
+            setText('exp2-3-vn-4', "(v_n)");
+            setText('exp2-3-vn-conv', "(v_n)");
+            // 2.4
+            setText('h2-4-diff', "u_{n+1}-v_{n+1}");
+            setText('k2-4-id', "a^2-b^2 = (a-b)(a+b)");
+            setText('exp2-4-obj', "\\forall n \\in \\mathbb{N}, u_n - v_n = -1");
+            setText('exp2-4-n0', "n=0");
+            setText('exp2-4-diff0', "u_0 - v_0");
+            setText('exp2-4-u0', "u_0=1");
+            setText('exp2-4-v0', "v_0=2");
+            setText('exp2-4-u0-v0', "1-2=-1");
+            setText('exp2-4-n-ge-0', "n \\ge 0");
+            setText('exp2-4-hyp', "u_n-v_n=-1");
+            setText('exp2-4-n+1', "n+1");
+            setText('exp2-4-goal', "u_{n+1}-v_{n+1}=-1");
+            setText('exp2-4-diff-n+1', "u_{n+1}-v_{n+1}");
+            setText('exp2-4-un1', "u_{n+1}");
+            setText('exp2-4-vn1', "v_{n+1}");
+            setText('exp2-4-calc1', "u_{n+1}-v_{n+1} = \\frac{u_n^2}{u_n+v_n} - \\frac{v_n^2}{u_n+v_n}");
+            setText('exp2-4-calc2', "= \\frac{u_n^2-v_n^2}{u_n+v_n}");
+            setText('exp2-4-id', "u_n^2-v_n^2=(u_n-v_n)(u_n+v_n)");
+            setText('exp2-4-calc3', "= \\frac{(u_n-v_n)(u_n+v_n)}{u_n+v_n}");
+            setText('exp2-4-simp', "u_n+v_n");
+            setText('exp2-4-calc4', "= u_n-v_n");
+            setText('exp2-4-hyp-use', "u_n-v_n=-1");
+            setText('exp2-4-calc5', "u_{n+1}-v_{n+1} = -1");
+            setText('exp2-4-n-in-N', "n \\in \\mathbb{N}");
+            // 2.5
+            setText('h2-5-l', "l");
+            setText('h2-5-lprime', "l'");
+            setText('h2-5-un', "(u_n)");
+            setText('h2-5-vn', "(v_n)");
+            setText('h2-5-eq1', "u_n - v_n = -1");
+            setText('h2-5-eq2', "u_{n+1} = \\frac{u_n^2}{u_n+v_n}");
+            setText('k2-5-un', "(u_n)");
+            setText('k2-5-vn', "(v_n)");
+            setText('k2-5-un-rec', "u_{n+1}=f(u_n)");
+            setText('k2-5-un-conv', "(u_n)");
+            setText('k2-5-l-fix', "l=f(l)");
+            setText('exp2-5-un', "(u_n)");
+            setText('exp2-5-vn', "(v_n)");
+            setText('exp2-5-lim-def', "\\lim_{n\\to\\infty} u_n = l \\quad \\text{et} \\quad \\lim_{n\\to\\infty} v_n = l'");
+            setText('exp2-5-rel1', "u_n - v_n = -1");
+            setText('exp2-5-n-inf', "n \\to \\infty");
+            setText('exp2-5-lim1', "\\lim(u_n - v_n) = \\lim(-1) \\implies l - l' = -1");
+            setText('exp2-5-un1', "u_{n+1}");
+            setText('exp2-5-un1-def', "u_{n+1} = \\frac{u_n^2}{u_n+v_n}");
+            setText('exp2-5-un1-cross', "u_{n+1}(u_n+v_n) = u_n^2");
+            setText('exp2-5-un1-to-l', "\\lim u_{n+1} = l");
+            setText('exp2-5-un-to-l', "\\lim u_n = l");
+            setText('exp2-5-lim2-calc1', "\\lim(u_{n+1}(u_n+v_n)) = \\lim(u_n^2)");
+            setText('exp2-5-lim2-calc2', "l(l+l')=l^2");
+            setText('exp2-5-lim2-calc3', "l^2 + ll' = l^2");
+            setText('exp2-5-lim2-calc4', "ll' = 0");
+            setText('exp2-5-sys1', "l - l' = -1");
+            setText('exp2-5-sys2', "ll' = 0");
+            setText('exp2-5-l0', "l=0");
+            setText('exp2-5-lprime0', "l'=0");
+            setText('exp2-5-l0-2', "l=0");
+            setText('exp2-5-lprime-val', "0 - l' = -1 \\implies l' = 1");
+            setText('exp2-5-sol1', "(l, l') = (0, 1)");
+            setText('exp2-5-lprime0-2', "l'=0");
+            setText('exp2-5-l-val', "l - 0 = -1 \\implies l = -1");
+            setText('exp2-5-sol2', "(l, l') = (-1, 0)");
+            setText('exp2-5-un-pos', "u_n>0");
+            setText('exp2-5-l-ge-0', "l \\ge 0");
+            setText('exp2-5-l-neg1', "l=-1");
+            setText('exp2-5-final-lims', "\\lim_{n\\to\\infty} u_n = 0 \\quad \\text{et} \\quad \\lim_{n\\to\\infty} v_n = 1");
+            // 3.1
+            setText('h3-1-cos', "\\cos(\\frac{2n\\pi}{3})");
+            setText('h3-1-n3k', "n=3k");
+            setText('h3-1-n3k1', "n=3k+1");
+            setText('h3-1-n3k2', "n=3k+2");
+            setText('k3-1-cos', "\\cos(x)");
+            setText('k3-1-pi3', "\\pi/3");
+            setText('exp3-1-A', "A=\\{\\frac{2}{n}+cos(\\frac{2n\\pi}{3}),n\\in\\mathbb{N}^{*}\\}" );
+            setText('exp3-1-cos', "\\cos(\\frac{2n\\pi}{3})");
+            setText('exp3-1-n3k', "n=3k");
+            setText('exp3-1-cos-v1', "\\cos(\\frac{6k\\pi}{3}) = \\cos(2k\\pi) = 1");
+            setText('exp3-1-n3k1', "n=3k+1");
+            setText('exp3-1-cos-v2', "\\cos(\\frac{2(3k+1)\\pi}{3}) = \\cos(2k\\pi+\\frac{2\\pi}{3}) = -1/2");
+            setText('exp3-1-n3k2', "n=3k+2");
+            setText('exp3-1-cos-v3', "\\cos(\\frac{2(3k+2)\\pi}{3}) = \\cos(2k\\pi+\\frac{4\\pi}{3}) = -1/2");
+            setText('exp3-1-n3k-2', "n=3k");
+            setText('exp3-1-k-ge-1', "k \\ge 1");
+            setText('exp3-1-a3k', "a_{3k} = \\frac{2}{3k}+1");
+            setText('exp3-1-k1', "k=1");
+            setText('exp3-1-n3', "n=3");
+            setText('exp3-1-a3', "a_3 = 2/3+1 = 5/3");
+            setText('exp3-1-k-inf', "k \\to \\infty");
+            setText('exp3-1-n3k1-2', "n=3k+1");
+            setText('exp3-1-k-ge-0', "k \\ge 0");
+            setText('exp3-1-a3k1', "a_{3k+1} = \\frac{2}{3k+1}-\\frac{1}{2}");
+            setText('exp3-1-k0', "k=0");
+            setText('exp3-1-n1', "n=1");
+            setText('exp3-1-a1', "a_1 = 2 - 1/2 = 3/2");
+            setText('exp3-1-k-inf-2', "k \\to \\infty");
+            setText('exp3-1-n3k2-2', "n=3k+2");
+            setText('exp3-1-k-ge-0-2', "k \\ge 0");
+            setText('exp3-1-a3k2', "a_{3k+2} = \\frac{2}{3k+2}-\\frac{1}{2}");
+            setText('exp3-1-k0-2', "k=0");
+            setText('exp3-1-n2', "n=2");
+            setText('exp3-1-a2', "a_2=2/4-1/2 = 0");
+            setText('exp3-1-k-inf-3', "k \\to \\infty");
+            setText('exp3-1-supmax', "\\sup A = \\max A = 5/3");
+            setText('exp3-1-inf', "\\inf A = -1/2");
+            setText('exp3-1-2n', "2/n");
+            setText('exp3-1-n-in-Nstar', "n \\in \\mathbb{N}^*");
+            // 3.2
+            setText('h3-2-term', "(-1)^n");
+            setText('h3-2-n2k', "n=2k");
+            setText('h3-2-n2k1', "n=2k-1");
+            setText('k3-2-term', "(-1)^n");
+            setText('exp3-2-B', "B=\\{\\frac{1}{n+1}-\\frac{(-1)^{n}}{n},n\\in\\mathbb{N}^{*}\\}" );
+            setText('exp3-2-term', "(-1)^n");
+            setText('exp3-2-n2k', "n=2k");
+            setText('exp3-2-k-ge-1', "k \\ge 1");
+            setText('exp3-2-term-even', "(-1)^n = 1");
+            setText('exp3-2-b2k', "b_{2k} = \\frac{1}{2k+1} - \\frac{1}{2k} = \\frac{2k-(2k+1)}{2k(2k+1)} = \\frac{-1}{2k(2k+1)}");
+            setText('exp3-2-k1', "k=1");
+            setText('exp3-2-n2', "n=2");
+            setText('exp3-2-b2', "b_2 = -1/6");
+            setText('exp3-2-k-inf', "k \\to \\infty");
+            setText('exp3-2-n2k1', "n=2k-1");
+            setText('exp3-2-k-ge-1-2', "k \\ge 1");
+            setText('exp3-2-term-odd', "(-1)^n = -1");
+            setText('exp3-2-b2k1', "b_{2k-1} = \\frac{1}{2k} + \\frac{1}{2k-1}");
+            setText('exp3-2-k1-2', "k=1");
+            setText('exp3-2-n1', "n=1");
+            setText('exp3-2-b1', "b_1 = 1/2+1/1=3/2");
+            setText('exp3-2-k-inf-2', "k \\to \\infty");
+            setText('exp3-2-supmax', "\\sup B = \\max B = 3/2");
+            setText('exp3-2-infmin', "\\inf B = \\min B = -1/6");
+            // 4.1
+            setText('h4-1-un', "u_n");
+            setText('exp4-1-u123', "u_1, u_2, u_3");
+            setText('exp4-1-un-def', "u_{n}=1-\\frac{1}{2}+\\frac{1}{3}-\\frac{1}{4}+\\cdot\\cdot\\cdot+\\frac{(-1)^{n+1}}{n}");
+            setText('exp4-1-u1', "u_1");
+            setText('exp4-1-term1', "(-1)^{1+1}/1 = 1");
+            setText('exp4-1-u1-calc', "u_1 = 1");
+            setText('exp4-1-u2', "u_2");
+            setText('exp4-1-u2-calc', "u_2 = 1 - \\frac{1}{2} = \\frac{1}{2}");
+            setText('exp4-1-u3', "u_3");
+            setText('exp4-1-u3-calc', "u_3 = 1 - \\frac{1}{2} + \\frac{1}{3} = \\frac{1}{2} + \\frac{1}{3} = \\frac{3+2}{6} = \\frac{5}{6}");
+            // 4.2
+            setText('h4-2-d1', "u_{2(n+1)}-u_{2n}");
+            setText('h4-2-d2', "u_{2(n+1)+1}-u_{2n+1}");
+            setText('k4-2-un', "(u_n)");
+            setText('k4-2-vn', "(v_n)");
+            setText('k4-2-un-inc', "(u_n) est croissante");
+            setText('k4-2-vn-dec', "(v_n) est décroissante");
+            setText('k4-2-lim-diff', "\\lim_{n\\to\\infty}(u_n-v_n)=0");
+            setText('exp4-2-u2n', "(u_{2n})");
+            setText('exp4-2-u2n1', "(u_{2n+1})");
+            setText('exp4-2-vn', "v_n = u_{2n}");
+            setText('exp4-2-wn', "w_n = u_{2n+1}");
+            setText('exp4-2-vn-2', "(v_n)");
+            setText('exp4-2-vn1-vn', "v_{n+1}-v_n = u_{2(n+1)}-u_{2n} = u_{2n+2}-u_{2n}");
+            setText('exp4-2-v-calc1', "v_{n+1}-v_n = u_{2(n+1)}-u_{2n} = u_{2n+2}-u_{2n}");
+            setText('exp4-2-u2n2', "u_{2n+2}");
+            setText('exp4-2-t2n2', "1/(2n+2)");
+            setText('exp4-2-u2n2-u2n', "u_{2n+2}-u_{2n}");
+            setText('exp4-2-u2n-term', "u_{2n}");
+            setText('exp4-2-u2n2-term', "u_{2n+2}");
+            setText('exp4-2-v-calc2', "u_{2n+2}-u_{2n} = \\frac{1}{2n+1} - \\frac{1}{2n+2}");
+            setText('exp4-2-comp1', "2n+1 < 2n+2 \\implies \\frac{1}{2n+1} > \\frac{1}{2n+2}");
+            setText('exp4-2-diff-pos', "\\frac{1}{2n+1} - \\frac{1}{2n+2} > 0");
+            setText('exp4-2-vn1-vn-pos', "v_{n+1}-v_n > 0");
+            setText('exp4-2-vn-inc', "(v_n) = (u_{2n})");
+            setText('exp4-2-wn-2', "(w_n)");
+            setText('exp4-2-wn1-wn', "w_{n+1}-w_n = u_{2(n+1)+1}-u_{2n+1} = u_{2n+3}-u_{2n+1}");
+            setText('exp4-2-w-calc1', "w_{n+1}-w_n = u_{2(n+1)+1}-u_{2n+1} = u_{2n+3}-u_{2n+1}");
+            setText('exp4-2-u2n1-term', "u_{2n+1}");
+            setText('exp4-2-u2n3-term', "u_{2n+3}");
+            setText('exp4-2-w-calc2', "u_{2n+3}-u_{2n+1} = -\\frac{1}{2n+2} + \\frac{1}{2n+3}");
+            setText('exp4-2-comp2', "2n+2 < 2n+3 \\implies \\frac{1}{2n+2} > \\frac{1}{2n+3}");
+            setText('exp4-2-diff-neg', "-\\frac{1}{2n+2} + \\frac{1}{2n+3} < 0");
+            setText('exp4-2-wn1-wn-neg', "w_{n+1}-w_n < 0");
+            setText('exp4-2-wn-dec', "(w_n) = (u_{2n+1})");
+            setText('exp4-2-lim-wn-vn', "\\lim_{n\\to\\infty} (w_n - v_n)");
+            setText('exp4-2-diff-calc', "w_n - v_n = u_{2n+1}-u_{2n}");
+            setText('exp4-2-u2n1-u2n', "u_{2n+1}-u_{2n}");
+            setText('exp4-2-u2n1-term2', "u_{2n+1}");
+            setText('exp4-2-term-final', "\\frac{1}{2n+1}");
+            setText('exp4-2-lim-calc', "\\lim_{n\\to\\infty} (u_{2n+1}-u_{2n}) = \\lim_{n\\to\\infty} \\frac{1}{2n+1} = 0");
+            setText('exp4-2-vn-final', "(u_{2n})");
+            setText('exp4-2-wn-final', "(u_{2n+1})");
+            // 4.3
+            setText('h4-3-un', "(u_n)");
+            setText('exp4-3-un', "(u_n)");
+            setText('exp4-3-u2n', "(u_{2n})");
+            setText('exp4-3-un-2', "(u_n)");
+            setText('exp4-3-u2n1', "(u_{2n+1})");
+            setText('exp4-3-lim-L', "\\lim_{n\\to\\infty} u_{2n} = \\lim_{n\\to\\infty} u_{2n+1} = L");
+            setText('exp4-3-un-3', "(u_n)");
+            setText('exp4-3-u2n-2', "(u_{2n})");
+            setText('exp4-3-u2n1-2', "(u_{2n+1})");
+            setText('exp4-3-un-4', "(u_n)");
+        }
+        
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            fillFormulas();
+            renderKatex();
+        });
+    </script>
+</body>
+</html>

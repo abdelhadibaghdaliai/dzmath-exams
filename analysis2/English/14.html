@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis 2: Final Exam (June 09, 2010) - Enhanced Version</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p, .exercise-content li, .modal-content li {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analysis</h1>
+            <p class="exam-subtitle">Final Exam (06/09/2009)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Exam Questions</h2>
+                
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 1 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Determine the asymptote to the graph of <span class="katex-inline" data-katex="f(x) = \sqrt[3]{x^3 - 1}"></span> as well as its position.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 2 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Calculate the following indefinite integrals:</p>
+                        <p>1. <span class="katex-display" data-katex="\int \frac{x}{\cos^2 x} dx"></span></p>
+                        <p>2. <span class="katex-display" data-katex="\int \frac{\cos x}{1 + \sin^2 x} dx"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 3 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Consider the rational fraction <span class="katex-inline" data-katex="F(x) = \frac{4x}{x^4 - 1}"></span>.</p>
+                        <p>1. Give the partial fraction decomposition of F.</p>
+                        <p>2. Calculate the antiderivatives of F.</p>
+                        <p>3. Give the antiderivative of F on <span class="katex-inline" data-katex="] -1, 1["></span> that is zero at 0.</p>
+                        <p>4. Determine the solutions of the differential equation <span class="katex-inline" data-katex="y' + F(x)y = 1"></span> defined on the interval <span class="katex-inline" data-katex="] -1, 1["></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prerequisites</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercise 4 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Let the differential equation be:</p>
+                        <div class="katex-display" data-katex="x^2 y'' - x(x+2)y' + (x+2)y = 0 \quad (1)"></div>
+                        <p>1. Verify that <span class="katex-inline" data-katex="\varphi(x) = x"></span> is a solution to (1).</p>
+                        <p>2. Find another solution to (1) of the form <span class="katex-inline" data-katex="\psi(x) = u(x)\varphi(x)"></span> where u is not constant.</p>
+                        <p>3. Show that <span class="katex-inline" data-katex="\varphi"></span> and <span class="katex-inline" data-katex="\psi"></span> are linearly independent.</p>
+                        <p>4. Solve the differential equation on <span class="katex-inline" data-katex="]0, +\infty["></span>:</p>
+                        <div class="katex-display" data-katex="x^2 y'' - x(x+2)y' + (x+2)y = x^3"></div>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Hint</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prerequisites</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Detailed Solutions</h2>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 1</h3>
+                    <div class="exercise-content">
+                        <p>We are looking for the asymptote of <span class="katex-inline" data-katex="f(x) = \sqrt[3]{x^3 - 1}"></span> in the vicinity of <span class="katex-inline" data-katex="\pm\infty"></span>. We have:</p>
+                        <div class="katex-display" data-katex="f(x) = \sqrt[3]{x^3(1 - \frac{1}{x^3})} = x(1 - \frac{1}{x^3})^{1/3}"></div>
+                        <p>Using the Taylor expansion <span class="katex-inline" data-katex="(1+u)^\alpha \approx 1 + \alpha u"></span>, we get:</p>
+                        <div class="katex-display" data-katex="f(x) = x(1 + \frac{1}{3}(-\frac{1}{x^3}) + o(\frac{1}{x^3})) = x - \frac{1}{3x^2} + o(\frac{1}{x^2})"></div>
+                        <p>The equation of the asymptote (D) is therefore <span class="katex-inline" data-katex="y = x"></span>.</p>
+                        <p>For the position of the curve, we study the sign of <span class="katex-inline" data-katex="f(x) - y = -\frac{1}{3x^2}"></span>. This quantity is always negative for <span class="katex-inline" data-katex="x \neq 0"></span>. Thus, the curve of f is below the asymptote D in the vicinity of <span class="katex-inline" data-katex="\pm\infty"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 2</h3>
+                    <div class="exercise-content">
+                        <p>1. For <span class="katex-inline" data-katex="\int \frac{x}{\cos^2 x} dx"></span>, we use integration by parts:</p>
+                        <div class="katex-display" data-katex="\int \frac{x}{\cos^2 x} dx = x \tan x - \int \tan x dx = x \tan x + \ln|\cos x| + C"></div>
+                        <p>2. For <span class="katex-inline" data-katex="\int \frac{\cos x}{1 + \sin^2 x} dx"></span>, we use a substitution:</p>
+                        <div class="katex-display" data-katex="\int \frac{\cos x}{1 + \sin^2 x} dx = \int \frac{dy}{1+y^2} = \arctan(y) + C = \arctan(\sin x) + C"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 3</h3>
+                    <div class="exercise-content">
+                        <p>1. The partial fraction decomposition of <span class="katex-inline" data-katex="F(x)"></span> is:</p>
+                        <div class="katex-display" data-katex="\frac{4x}{(x-1)(x+1)(x^2+1)} = \frac{1}{x-1} + \frac{1}{x+1} - \frac{2x}{x^2+1}"></div>
+                        <p>2. The antiderivatives of F are:</p>
+                        <div class="katex-display" data-katex="\int F(x) dx = \ln|x-1| + \ln|x+1| - \ln(x^2+1) + C = \ln|\frac{x^2-1}{x^2+1}| + C"></div>
+                        <p>3. On <span class="katex-inline" data-katex="]-1, 1["></span>, the antiderivative <span class="katex-inline" data-katex="A(x)"></span> that is zero at 0 is:</p>
+                        <div class="katex-display" data-katex="A(x) = \ln(\frac{1-x^2}{x^2+1})"></div>
+                        <p>4. The general solution of the differential equation <span class="katex-inline" data-katex="y' + F(x)y = 1"></span> is:</p>
+                        <div class="katex-display" data-katex="y(x) = \frac{x^2+1}{1-x^2}(-x + 2\arctan(x) + C)"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Detailed Explanation</button>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution to Exercise 4</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-inline" data-katex="\varphi(x) = x"></span> is indeed a solution to the homogeneous equation.</p>
+                        <p>2. Another solution is <span class="katex-inline" data-katex="\psi(x) = xe^x"></span>, found by setting <span class="katex-inline" data-katex="\psi(x) = xu(x)"></span> and solving <span class="katex-inline" data-katex="u'' - u' = 0"></span>.</p>
+                        <p>3. The Wronskian <span class="katex-inline" data-katex="W(x) = x^2 e^x"></span> is non-zero for <span class="katex-inline" data-katex="x > 0"></span>, so the solutions are linearly independent.</p>
+                        <p>4. The general solution of the non-homogeneous equation <span class="katex-inline" data-katex="x^2 y'' - x(x+2)y' + (x+2)y = x^3"></span> is:</p>
+                        <div class="katex-display" data-katex="y(x) = \alpha x + \beta xe^x - x^2"></div>
+                        <p>This is obtained by the method of variation of parameters, where the particular solution found is <span class="katex-inline" data-katex="y_p(x) = -x^2 - x"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Detailed Explanation</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="cs-applications">
+                <h2 class="section-title">Applications in Computer Science</h2>
+                <div class="space-y-12">
+    
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. Integration: Calculating Areas and Volumes 🖥️</h3>
+                        <p class="text-lg mb-4 text-slate-300">One of the most direct applications of integration in computer science is the calculation of areas and volumes in <strong>Computer-Aided Design (CAD)</strong> and 3D modeling software. To determine the surface area of a complex object (like a car body) or the volume of material needed, the software doesn't use simple formulas. It breaks down the surface or volume into a multitude of small elements (triangles, tetrahedra) and sums their areas or volumes. This is numerical integration, often performed by methods more sophisticated than simple Riemann sums.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Calculating the area of a plot of land</h4>
+                        <p class="mb-4 text-slate-400">Mapping software can calculate the area of an irregularly shaped piece of land by breaking it into a grid of small squares. It calculates the area of each square fully contained within the land, then approximates the area of the squares on the edges. Integration by parts is the continuous analog of algorithms like "summation by parts" (Abel's formula), used to speed up the calculation of certain complex sums.</p>
+                         <pre class="language-pseudocode"><code>function calculate_area(terrain_boundary, grid_size) {
+  let total_area = 0;
+  for (x from min_x to max_x step grid_size) {
+    for (y from min_y to max_y step grid_size) {
+      if (is_inside( (x, y), terrain_boundary )) {
+        total_area += grid_size * grid_size;
+      }
+    }
+  }
+  return total_area; // The approximated integral
+}</code></pre>
+                    </div>
+
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Differential Equations: System Simulation ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Differential equations are the language of continuous change. In computer science, they are used to model dynamic systems. This goes far beyond video game physics. They are used in epidemiology to model the spread of a virus, in finance to model the evolution of stock prices (Black-Scholes model), or in electrical engineering to describe the behavior of an RLC circuit (Resistor, Inductor, Capacitor).</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Practical Example: Charging a Capacitor</h4>
+                        <p class="mb-4 text-slate-400">The voltage <span class="katex-inline" data-katex="V(t)"></span> across a capacitor in a simple RC circuit is governed by a first-order linear differential equation, very similar to the one in the exercise: <span class="katex-inline" data-katex="RC \frac{dV}{dt} + V = V_s"></span> (where <span class="katex-inline" data-katex="V_s"></span> is the source voltage). Solving this equation (homogeneous solution + particular solution) allows us to predict exactly how the capacitor charges or discharges, which is fundamental for designing electronic circuits, filters, and timers.</p>
+                         <pre class="language-pseudocode"><code>// The solution to the differential equation is:
+// V(t) = V_s + (V_0 - V_s) * exp(-t / (R*C))
+
+function capacitorVoltage(t, initial_voltage, source_voltage, R, C) {
+  const tau = R * C; // Time constant
+  return source_voltage + (initial_voltage - source_voltage) * Math.exp(-t / tau);
+}
+
+// We can now simulate the circuit's evolution
+for (let time = 0; time < 10; time += 0.1) {
+  console.log(`Voltage at ${time}s:`, capacitorVoltage(time, 0, 5, 1000, 0.001));
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>To find the asymptote at <span class="katex-inline" data-katex="\pm\infty"></span>, factor out the dominant term <span class="katex-inline" data-katex="x^3"></span> from inside the cube root. Then, use a Taylor expansion of the form <span class="katex-inline" data-katex="(1+u)^\alpha"></span> around 0.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Taylor Expansions:</strong> Knowledge of the common expansion of <span class="katex-inline" data-katex="(1+u)^\alpha"></span> at 0. This is essential for analyzing the function's behavior at infinity.</p><p><strong>Oblique Asymptotes:</strong> Understanding that a line <span class="katex-inline" data-katex="y=ax+b"></span> is an oblique asymptote to <span class="katex-inline" data-katex="f(x)"></span> if <span class="katex-inline" data-katex="\lim_{x \to \infty} [f(x) - (ax+b)] = 0"></span>. Taylor expansion is a powerful method to find a and b and to study the relative position.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 1: Preparing for Taylor expansion</h4><p>We want to study <span class="katex-inline" data-katex="f(x)=\sqrt[3]{x^3-1}"></span> as <span class="katex-inline" data-katex="x \to \pm\infty"></span>. We factor out <span class="katex-inline" data-katex="x^3"></span>:</p><div class="katex-display" data-katex="f(x) = \sqrt[3]{x^3(1 - 1/x^3)} = x(1 - 1/x^3)^{1/3}"></div><p>As <span class="katex-inline" data-katex="x \to \pm\infty"></span>, the term <span class="katex-inline" data-katex="-1/x^3"></span> approaches 0. We can therefore use a Taylor expansion.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 2: Applying the Taylor expansion</h4><p>We use the formula <span class="katex-inline" data-katex="(1+u)^\alpha = 1 + \alpha u + o(u)"></span> with <span class="katex-inline" data-katex="u = -1/x^3"></span> and <span class="katex-inline" data-katex="\alpha = 1/3"></span>.</p><div class="katex-display" data-katex="f(x) = x(1 + \frac{1}{3}(-\frac{1}{x^3}) + o(\frac{1}{x^3})) = x - \frac{1}{3x^2} + o(\frac{1}{x^2})"></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Step 3: Identifying the asymptote and position</h4><p>The expression <span class="katex-inline" data-katex="f(x) = x - \frac{1}{3x^2} + o(\frac{1}{x^2})"></span> tells us that <span class="katex-inline" data-katex="\lim_{x\to\infty} (f(x) - x) = 0"></span>. The part <span class="katex-inline" data-katex="y=x"></span> is the equation of the oblique asymptote D.</p><p>For the position, we look at the sign of the next term: <span class="katex-inline" data-katex="f(x) - y = -\frac{1}{3x^2}"></span>. Since <span class="katex-inline" data-katex="x^2"></span> is always positive, <span class="katex-inline" data-katex="-\frac{1}{3x^2}"></span> is always negative. The curve <span class="katex-inline" data-katex="C_f"></span> is therefore always below its asymptote D.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>1. For the first integral, recognize a <span class="katex-inline" data-katex="u(x)v'(x)"></span> form. Integration by parts is the way to go. What is the antiderivative of <span class="katex-inline" data-katex="1/\cos^2 x"></span>?</p><p>2. For the second, the numerator <span class="katex-inline" data-katex="\cos x"></span> is the derivative of <span class="katex-inline" data-katex="\sin x"></span>. This strongly suggests a substitution of the form <span class="katex-inline" data-katex="y = \sin x"></span>.</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Integration by Parts (IBP):</strong> The formula <span class="katex-inline" data-katex="\int u v' dx = uv - \int u' v dx"></span> is fundamental for integrating products of functions.</p><p><strong>Substitution Method:</strong> Knowing how to apply the formula <span class="katex-inline" data-katex="\int f(g(x))g'(x)dx = \int f(u)du"></span> to simplify an integral.</p><p><strong>Common Antiderivatives:</strong> Knowing basic antiderivatives like <span class="katex-inline" data-katex="\int \tan x dx = -\ln|\cos x|"></span>, <span class="katex-inline" data-katex="\int \frac{1}{\cos^2 x} dx = \tan x"></span> and <span class="katex-inline" data-katex="\int \frac{1}{1+x^2} dx = \arctan x"></span>.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Integration by Parts</h4><p>We want to calculate <span class="katex-inline" data-katex="\int \frac{x}{\cos^2 x} dx"></span>. Let's set:</p><div class="katex-display" data-katex="u=x \Rightarrow u'=1 \quad | \quad v' = \frac{1}{\cos^2 x} \Rightarrow v = \tan x"></div><p>We apply the IBP formula <span class="katex-inline" data-katex="\int u v' = uv - \int u' v"></span>:</p><div class="katex-display" data-katex="\int \frac{x}{\cos^2 x} dx = x \tan x - \int 1 \cdot \tan x dx"></div><p>The antiderivative of <span class="katex-inline" data-katex="\tan x"></span> is <span class="katex-inline" data-katex="-\ln|\cos x|"></span>. So:</p><div class="katex-display" data-katex="x \tan x + \ln|\cos x| + C"></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Substitution Method</h4><p>We want to calculate <span class="katex-inline" data-katex="\int \frac{\cos x}{1+\sin^2 x} dx"></span>. We notice that the numerator is the derivative of sine. Let's set:</p><div class="katex-display" data-katex="y = \sin x \Rightarrow dy = \cos x dx"></div><p>The integral transforms into:</p><div class="katex-display" data-katex="\int \frac{dy}{1+y^2}"></div><p>We recognize the antiderivative of arctangent. We revert to the variable x:</p><div class="katex-display" data-katex="\arctan(y) + C = \arctan(\sin x) + C"></div></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>1. For the decomposition, first factor the denominator <span class="katex-inline" data-katex="x^4 - 1 = (x^2-1)(x^2+1)"></span>. Don't forget the irreducible quadratic factor.</p><p>4. The differential equation is a first-order linear equation, of the form <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>. The solution is <span class="katex-inline" data-katex="y(x) = e^{-A(x)}(\int b(x)e^{A(x)}dx + C)"></span>, where A(x) is an antiderivative of a(x).</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Partial Fraction Decomposition:</strong> Knowing how to decompose a rational fraction into a sum of simpler fractions, including terms of the first kind (<span class="katex-inline" data-katex="\frac{A}{x-a}"></span>) and second kind (<span class="katex-inline" data-katex="\frac{Bx+C}{x^2+bx+c}"></span>).</p><p><strong>Antiderivatives of Rational Functions:</strong> Calculating integrals of the type <span class="katex-inline" data-katex="\int \frac{dx}{x-a}"></span> and <span class="katex-inline" data-katex="\int \frac{u'(x)}{u(x)}dx"></span>.</p><p><strong>First-Order Linear Differential Equations:</strong> Mastering the method for solving equations of the form <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Partial Fraction Decomposition</h4><p>The denominator is <span class="katex-inline" data-katex="x^4-1 = (x-1)(x+1)(x^2+1)"></span>. The form of the decomposition is:</p><div class="katex-display" data-katex="\frac{4x}{x^4-1} = \frac{A}{x-1} + \frac{B}{x+1} + \frac{Cx+D}{x^2+1}"></div><p>By multiplying by <span class="katex-inline" data-katex="x-1"></span> and setting <span class="katex-inline" data-katex="x=1"></span>, we find A=1. Similarly, with <span class="katex-inline" data-katex="x+1"></span> and <span class="katex-inline" data-katex="x=-1"></span>, we find B=1. By identifying for <span class="katex-inline" data-katex="x=0"></span>, we find C=0 and D=-2. The decomposition is:</p><div class="katex-display" data-katex="F(x) = \frac{1}{x-1} + \frac{1}{x+1} - \frac{2x}{x^2+1}"></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Calculating Antiderivatives</h4><p>We integrate each term:</p><div class="katex-display" data-katex="\int (\frac{1}{x-1} + \frac{1}{x+1} - \frac{2x}{x^2+1}) dx"></div><p>For the last term, we recognize a <span class="katex-inline" data-katex="u'/u"></span> form. The result is:</p><div class="katex-display" data-katex="\ln|x-1| + \ln|x+1| - \ln(x^2+1) + C = \ln|\frac{x^2-1}{x^2+1}| + C"></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Antiderivative that is zero at 0</h4><p>On <span class="katex-inline" data-katex="]-1, 1["></span>, we have <span class="katex-inline" data-katex="|x^2-1| = 1-x^2"></span>. The antiderivative is <span class="katex-inline" data-katex="A(x) = \ln(\frac{1-x^2}{x^2+1}) + C"></span>. The condition <span class="katex-inline" data-katex="A(0)=0"></span> gives <span class="katex-inline" data-katex="\ln(1)+C=0 \Rightarrow C=0"></span>. So <span class="katex-inline" data-katex="A(x) = \ln(\frac{1-x^2}{x^2+1})"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. Differential Equation</h4><p>The solution to <span class="katex-inline" data-katex="y' + F(x)y = 1"></span> is <span class="katex-inline" data-katex="y(x) = e^{-A(x)}(\int 1 \cdot e^{A(x)}dx + C)"></span>. We already have <span class="katex-inline" data-katex="A(x) = \ln(\frac{1-x^2}{x^2+1})"></span>. Thus <span class="katex-inline" data-katex="e^{A(x)} = \frac{1-x^2}{x^2+1}"></span> and <span class="katex-inline" data-katex="e^{-A(x)} = \frac{x^2+1}{1-x^2}"></span>. We calculate the integral:</p><div class="katex-display" data-katex="\int \frac{1-x^2}{x^2+1}dx = \int \frac{-(x^2+1)+2}{x^2+1}dx = \int(-1 + \frac{2}{x^2+1})dx = -x + 2\arctan(x)"></div><p>The general solution is therefore:</p><div class="katex-display" data-katex="y(x) = \frac{x^2+1}{1-x^2}(-x + 2\arctan(x) + C)"></div></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Hint for Exercise 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>2. To find the second solution <span class="katex-inline" data-katex="\psi(x) = u(x)x"></span>, calculate <span class="katex-inline" data-katex="\psi'(x)"></span> and <span class="katex-inline" data-katex="\psi''(x)"></span>, substitute into equation (1). You will get a second-order differential equation in u, which can be reduced to a first-order equation by setting <span class="katex-inline" data-katex="v=u'"></span>.</p><p>4. For the non-homogeneous equation, use the method of variation of parameters. Look for a particular solution of the form <span class="katex-inline" data-katex="y_p(x) = u_1(x)\varphi(x) + u_2(x)\psi(x)"></span>.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prerequisites for Exercise 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Second-Order Linear Differential Equations:</strong> Knowledge of the structure of solutions (homogeneous solution + particular solution).</p><p><strong>Method of Reduction of Order:</strong> A technique to find a second linearly independent solution when a first solution is known.</p><p><strong>Wronskian:</strong> The determinant <span class="katex-inline" data-katex="W = \begin{vmatrix} y_1 & y_2 \\ y_1' & y_2' \end{vmatrix} = y_1y_2' - y_2y_1'"></span> allows testing for linear independence of two solutions.</p><p><strong>Method of Variation of Parameters:</strong> A general method for finding a particular solution to a non-homogeneous equation.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Detailed Explanation for Exercise 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Finding the second solution</h4><p>Let <span class="katex-inline" data-katex="\psi(x) = xu(x)"></span>. We have <span class="katex-inline" data-katex="\psi' = u + xu'"></span> and <span class="katex-inline" data-katex="\psi'' = 2u' + xu''"></span>. We substitute into the homogeneous equation (1). After simplification, the terms in <span class="katex-inline" data-katex="u(x)"></span> cancel out (because <span class="katex-inline" data-katex="\varphi(x)=x"></span> is a solution) and we get:</p><div class="katex-display" data-katex="x^3 u'' - x^3 u' = 0"></div><p>For <span class="katex-inline" data-katex="x \ne 0"></span>, we have <span class="katex-inline" data-katex="u'' - u' = 0"></span>. Setting <span class="katex-inline" data-katex="v = u'"></span>, we have <span class="katex-inline" data-katex="v' = v"></span>, a separable equation. A non-trivial solution is <span class="katex-inline" data-katex="v(x) = e^x"></span>. By integrating, <span class="katex-inline" data-katex="u(x) = e^x"></span>. The second solution is therefore <span class="katex-inline" data-katex="\psi(x) = xe^x"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Wronskian</h4><p>We calculate the determinant:</p><div class="katex-display" data-katex="W(x) = \begin{vmatrix} x & xe^x \\ 1 & e^x+xe^x \end{vmatrix} = x(e^x+xe^x) - xe^x = x^2e^x"></div><p>Since <span class="katex-inline" data-katex="W(x) \neq 0"></span> for <span class="katex-inline" data-katex="x > 0"></span>, the solutions are linearly independent.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">4. Variation of Parameters</h4><p>The general solution of the homogeneous equation is <span class="katex-inline" data-katex="y_h(x) = c_1 x + c_2 xe^x"></span>. We seek a particular solution <span class="katex-inline" data-katex="y_p(x) = u_1(x)x + u_2(x)xe^x"></span>. The functions <span class="katex-inline" data-katex="u_1(x)"></span> and <span class="katex-inline" data-katex="u_2(x)"></span> must satisfy the system:</p><div class="katex-display" data-katex="\begin{cases} u_1'x + u_2'xe^x = 0 \\ u_1'(1) + u_2'(e^x+xe^x) = \frac{x^3}{x^2} = x \end{cases}"></div><p>Solving this system gives <span class="katex-inline" data-katex="u_1' = -1"></span> and <span class="katex-inline" data-katex="u_2' = e^{-x}"></span>. By integrating, we find <span class="katex-inline" data-katex="u_1(x) = -x"></span> and <span class="katex-inline" data-katex="u_2(x) = -e^{-x}"></span>.</p><p>The particular solution is <span class="katex-inline" data-katex="y_p(x) = (-x)x + (-e^{-x})xe^x = -x^2 - x"></span>. The general solution is <span class="katex-inline" data-katex="y(x) = c_1 x + c_2 xe^x - x^2 - x"></span>, which can be rewritten as <span class="katex-inline" data-katex="y(x) = (c_1-1)x + c_2 xe^x - x^2 = \alpha x + \beta xe^x - x^2"></span>.</p></div></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.getAttribute('data-katex');
+                    // Ensure content is not empty to avoid KaTeX errors
+                    if (content) {
+                        const displayMode = el.classList.contains('katex-display');
+                        try {
+                            katex.render(content, el, {
+                                throwOnError: false, // Don't throw errors, log to console instead
+                                displayMode: displayMode
+                            });
+                        } catch (e) {
+                            console.error("KaTeX rendering error for content:", content, e);
+                            el.innerHTML = `<span style='color: red;'>LaTeX Error: ${content}</span>`;
+                        }
+                    }
+                });
+            }, 100);
+        });
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

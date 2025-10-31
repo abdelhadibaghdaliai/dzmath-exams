@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse 2: Épreuve Finale (09 Juin 2010) - Version Améliorée</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    
+    <style>
+        /* Custom styles for a more polished and modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-slate background */
+            color: #e2e8f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4v-9H0v-1h4V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h9V0h1v4h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5h-9v5h-1v-5H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5v-9H0v-1h5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1-v5h9V0h1v5h9V0h1v5h9V0h1v5Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .exam-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.5); /* Semi-transparent slate */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .exam-title {
+            font-size: 2.75rem;
+            color: #f1f5f9;
+            font-weight: 800;
+        }
+        
+        .exam-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #e2e8f0;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #4f46e5;
+        }
+        
+        .exercise {
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .exercise:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        .exercise-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #93c5fd; /* Light blue for titles */
+            margin-bottom: 1rem;
+        }
+
+        .exercise-content p, .modal-content p, .exercise-content li, .modal-content li {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 9999px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background-color: #4f46e5;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #475569;
+            color: white;
+        }
+        .btn-tertiary {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #1e293b;
+            margin: auto;
+            padding: 2.5rem;
+            border: 1px solid #475569;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+            color: #e2e8f0;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-title {
+            font-size: 1.75rem;
+            color: #f1f5f9;
+        }
+        
+        .close-btn {
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f5f9;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95) translateY(10px);}
+            to {opacity: 1; transform: scale(1) translateY(0);}
+        }
+
+        .katex-display {
+            background-color: #0f172a;
+            border-color: #334155;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .cs-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
+        }
+        .cs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3), 0 10px 10px -5px rgba(0,0,0,0.2);
+            border-color: #4f46e5;
+        }
+        
+        pre[class*="language-"] {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 1.5em;
+            margin: 1em 0;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1 class="exam-title">Analyse II</h1>
+            <p class="exam-subtitle">Épreuve Finale (09 Juin 2010)</p>
+        </header>
+
+        <main>
+            <section id="exam-questions">
+                <h2 class="section-title">Énoncé de l'Examen</h2>
+                
+                <!-- Exercise 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 1 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Résoudre l'équation différentielle suivante :</p>
+                        <div class="katex-display" data-katex="(x^2+1)y' - 2xy = \arctan x"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint1')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge1')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 2 (4 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Résoudre l'équation différentielle suivante :</p>
+                         <div class="katex-display" data-katex="y'' - 3y' + 2y = x"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint2')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge2')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 3 (8 pts)</h3>
+                    <div class="exercise-content">
+                        <p>Calculer les intégrales indéfinies :</p>
+                        <p>1. <span class="katex-inline" data-katex="\int \frac{x^4+2x+1}{(x-1)^3(x^2+1)}dx"></span></p>
+                        <p>2. <span class="katex-inline" data-katex="\int \frac{2x \ln(x^2+1)}{x^2+1}dx"></span></p>
+                        <p>3. <span class="katex-inline" data-katex="\int 2x \arctan(x) dx"></span></p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint3')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge3')">Prérequis</button>
+                    </div>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Exercice 4 (6 pts)</h3>
+                    <div class="exercise-content">
+                        <p>1. Calculer le D.L. d'ordre 4 au voisinage de 0 de la fonction <span class="katex-inline" data-katex="f(x) = (1+x)^{\sin x}"></span>.</p>
+                        <p>2. En déduire la valeur de la limite <span class="katex-inline" data-katex="\lim_{x \to 0} \frac{f(x) - x \ln(1+x) - 1}{x^4}"></span>.</p>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="showModal('hint4')">Indice</button>
+                        <button class="btn btn-secondary" onclick="showModal('knowledge4')">Prérequis</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exam-solutions">
+                <h2 class="section-title">Solutions Détaillées</h2>
+
+                <!-- Solution 1 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 1</h3>
+                    <div class="exercise-content">
+                        <p>La solution générale de l'équation est :</p>
+                        <div class="katex-display" data-katex="y(x) = \frac{(x^2+1)(\arctan x)^2}{4} + \frac{x \arctan x}{2} + \frac{1-x^2}{8} + C(x^2+1)"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation1')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 2</h3>
+                    <div class="exercise-content">
+                        <p>La solution générale de l'équation est :</p>
+                        <div class="katex-display" data-katex="y(x) = c_1 e^x + c_2 e^{2x} + \frac{1}{2}x + \frac{3}{4}"></div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation2')">Explication Détaillée</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 3</h3>
+                    <div class="exercise-content">
+                        <p>1. <span class="katex-inline" data-katex="\int \frac{x^4+2x+1}{(x-1)^3(x^2+1)}dx = \ln|x-1| - \frac{1}{x-1} - \frac{1}{(x-1)^2} + \arctan x + C"></span></p>
+                        <p>2. <span class="katex-inline" data-katex="\int \frac{2x \ln(x^2+1)}{x^2+1}dx = \frac{1}{2}(\ln(x^2+1))^2 + C"></span></p>
+                        <p>3. <span class="katex-inline" data-katex="\int 2x \arctan(x) dx = (x^2+1)\arctan x - x + C"></span></p>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation3')">Explication Détaillée</button>
+                    </div>
+                </div>
+                
+                <!-- Solution 4 -->
+                <div class="exercise">
+                    <h3 class="exercise-title">Solution de l'Exercice 4</h3>
+                    <div class="exercise-content">
+                        <p>1. Le développement limité d'ordre 4 est :</p>
+                        <div class="katex-display" data-katex="f(x) = 1 + x^2 - \frac{x^3}{2} + \frac{2}{3}x^4 + o(x^4)"></div>
+                        <p>2. La valeur de la limite est :</p>
+                        <div class="katex-display" data-katex="\lim_{x \to 0} \frac{f(x) - x \ln(1+x) - 1}{x^4} = \frac{1}{3}"></div>
+                    </div>
+                     <div class="btn-container">
+                        <button class="btn btn-tertiary" onclick="showModal('explanation4')">Explication Détaillée</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Applications in Computer Science -->
+            <section id="cs-applications">
+                <h2 class="section-title">Applications en Informatique</h2>
+                <div class="space-y-12">
+    
+                    <!-- CS Application 1: Limited Development & Asymptotes -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">1. DL et Asymptotes : L'Analyse d'Algorithmes 📈</h3>
+                        <p class="text-lg mb-4 text-slate-300">En informatique, l'analyse de la complexité d'un algorithme est cruciale. On cherche à savoir comment son temps d'exécution ou sa consommation de mémoire évolue lorsque la taille des données d'entrée (<span class="katex-inline" data-katex="n"></span>) devient très grande. Ce comportement "asymptotique" est exactement ce que l'on étudie en mathématiques avec les asymptotes. Les développements limités en <span class="katex-inline" data-katex="1/n"></span> sont un outil puissant pour analyser des formules de complexité complexes et en extraire le comportement dominant.</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : Complexité d'un Algorithme Récursif</h4>
+                        <p class="mb-4 text-slate-400">Le temps d'exécution <span class="katex-inline" data-katex="T(n)"></span> d'un algorithme "diviser pour régner" peut souvent être décrit par une relation de récurrence. La résolution de ces relations peut aboutir à des formules complexes. Utiliser un développement limité pour <span class="katex-inline" data-katex="n \to \infty"></span> permet de simplifier l'expression et de la comparer aux grandes classes de complexité (<span class="katex-inline" data-katex="O(n)"></span>, <span class="katex-inline" data-katex="O(n \log n)"></span>, <span class="katex-inline" data-katex="O(n^2)"></span>, etc.), qui sont les "asymptotes" de la performance de l'algorithme.</p>
+                         <pre class="language-pseudocode"><code>// Supposons que l'analyse nous donne un temps d'exécution :
+T(n) = n * log( (n+1)/n ) 
+
+// Pour n grand, on pose u = 1/n. T(n) devient (1/u) * log(1+u)
+// DL de log(1+u) = u - u^2/2 + ...
+// T(n) ≈ (1/u) * (u - u^2/2) = 1 - u/2 = 1 - 1/(2n)
+
+// Comportement asymptotique : T(n) tend vers 1.
+// L'algorithme a une complexité constante, O(1).
+</code></pre>
+                    </div>
+
+                    <!-- CS Application 2: Differential Equations -->
+                    <div class="cs-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-4">2. Équations Différentielles : La Simulation de Systèmes ⚡️</h3>
+                        <p class="text-lg mb-4 text-slate-300">Les équations différentielles sont le langage du changement continu. En informatique, elles sont utilisées pour modéliser des systèmes dynamiques. Cela va bien au-delà de la physique des jeux vidéo. On les utilise en épidémiologie pour modéliser la propagation d'un virus, en finance pour modéliser l'évolution des prix des actions (modèle de Black-Scholes), ou en génie électrique pour décrire le comportement d'un circuit RLC (Résistance, Inductance, Capacité).</p>
+                        <h4 class="text-xl font-semibold text-slate-200 mt-6 mb-2">Exemple Pratique : La Charge d'un Condensateur</h4>
+                        <p class="mb-4 text-slate-400">Le voltage <span class="katex-inline" data-katex="V(t)"></span> aux bornes d'un condensateur dans un circuit RC simple est régi par une équation différentielle linéaire du premier ordre, très similaire à celle de l'exercice : <span class="katex-inline" data-katex="RC \frac{dV}{dt} + V = V_s"></span> (où <span class="katex-inline" data-katex="V_s"></span> est la tension de la source). La résolution de cette équation (solution homogène + solution particulière) permet de prédire exactement comment le condensateur se charge ou se décharge, ce qui est fondamental pour la conception de circuits électroniques, de filtres et de temporisateurs.</p>
+                         <pre class="language-pseudocode"><code>// La solution de l'équation différentielle est :
+// V(t) = V_s + (V_0 - V_s) * exp(-t / (R*C))
+
+function capacitorVoltage(t, initial_voltage, source_voltage, R, C) {
+  const tau = R * C; // Constante de temps
+  return source_voltage + (initial_voltage - source_voltage) * Math.exp(-t / tau);
+}
+
+// On peut maintenant simuler l'évolution du circuit
+for (let time = 0; time < 10; time += 0.1) {
+  console.log(`Voltage at ${time}s:`, capacitorVoltage(time, 0, 5, 1000, 0.001));
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="hint1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('hint1')">&times;</span></div><p>Commencez par réécrire l'équation sous la forme standard d'une équation différentielle linéaire du premier ordre : <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>. Ensuite, trouvez le facteur intégrant.</p></div></div>
+    <div id="knowledge1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('knowledge1')">&times;</span></div><p><strong>Équations différentielles linéaires du 1er ordre :</strong> Une équation de la forme <span class="katex-inline" data-katex="y' + a(x)y = b(x)"></span>. La solution est trouvée en utilisant un facteur intégrant <span class="katex-inline" data-katex="I(x) = e^{\int a(x)dx}"></span>.</p><p><strong>Intégration par substitution trigonométrique :</strong> Utile pour les intégrales contenant des termes comme <span class="katex-inline" data-katex="x^2+a^2"></span>. La substitution <span class="katex-inline" data-katex="x = a \tan \theta"></span> est souvent efficace.</p></div></div>
+    <div id="explanation1" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 1</h3><span class="close-btn" onclick="closeModal('explanation1')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 1 : Forme Standard</h4><p>L'équation <span class="katex-inline" data-katex="(x^2+1)y' - 2xy = \arctan x"></span> est réécrite en divisant par <span class="katex-inline" data-katex="(x^2+1)"></span> pour obtenir la forme standard <span class="katex-inline" data-katex="y' - \frac{2x}{x^2+1}y = \frac{\arctan x}{x^2+1}"></span>. C'est une équation linéaire avec <span class="katex-inline" data-katex="a(x) = -\frac{2x}{x^2+1}"></span> et <span class="katex-inline" data-katex="b(x) = \frac{\arctan x}{x^2+1}"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 2 : Facteur Intégrant</h4><p>On calcule une primitive de <span class="katex-inline" data-katex="a(x)"></span> : <span class="katex-display" data-katex="A(x) = \int -\frac{2x}{x^2+1}dx = -\ln(x^2+1)"></span>. Le facteur intégrant est <span class="katex-inline" data-katex="I(x) = e^{A(x)} = e^{-\ln(x^2+1)} = \frac{1}{x^2+1}"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 3 : Solution Générale</h4><p>La solution est donnée par la formule <span class="katex-inline" data-katex="y(x) = \frac{1}{I(x)} (\int b(x)I(x)dx + C)"></span>. En remplaçant, on obtient : <span class="katex-display" data-katex="y(x) = (x^2+1) \left( \int \frac{\arctan x}{(x^2+1)^2} dx + C \right)"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 4 : Calcul de l'Intégrale</h4><p>Pour calculer <span class="katex-inline" data-katex="\int \frac{\arctan x}{(x^2+1)^2} dx"></span>, on utilise la substitution trigonométrique <span class="katex-inline" data-katex="x = \tan \theta"></span>. Cela donne <span class="katex-inline" data-katex="dx = \sec^2 \theta d\theta"></span> et <span class="katex-inline" data-katex="x^2+1 = \sec^2 \theta"></span>. L'intégrale devient <span class="katex-inline" data-katex="\int \theta \cos^2 \theta d\theta"></span>. On utilise l'identité <span class="katex-inline" data-katex="\cos^2 \theta = \frac{1+\cos(2\theta)}{2}"></span> et on intègre par parties pour trouver le résultat. Après avoir substitué en retour pour x, on obtient la solution finale.</p></div></div>
+    <div id="hint2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('hint2')">&times;</span></div><p>C'est une équation différentielle linéaire du second ordre à coefficients constants. Commencez par résoudre l'équation caractéristique de l'équation homogène. Ensuite, cherchez une solution particulière de la même forme que le second membre (un polynôme).</p></div></div>
+    <div id="knowledge2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('knowledge2')">&times;</span></div><p><strong>Équations différentielles linéaires du 2nd ordre :</strong> Une équation de la forme <span class="katex-inline" data-katex="ay'' + by' + cy = g(x)"></span>. La solution est <span class="katex-inline" data-katex="y = y_h + y_p"></span>, où <span class="katex-inline" data-katex="y_h"></span> est la solution de l'équation homogène et <span class="katex-inline" data-katex="y_p"></span> est une solution particulière.</p><p><strong>Méthode des coefficients indéterminés :</strong> Technique pour trouver <span class="katex-inline" data-katex="y_p"></span> lorsque le second membre est un polynôme, une exponentielle, un sinus ou un cosinus.</p></div></div>
+    <div id="explanation2" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 2</h3><span class="close-btn" onclick="closeModal('explanation2')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 1 : Solution de l'Équation Homogène</h4><p>L'équation homogène est <span class="katex-inline" data-katex="y'' - 3y' + 2y = 0"></span>. L'équation caractéristique <span class="katex-inline" data-katex="r^2 - 3r + 2 = 0 \Rightarrow (r-1)(r-2)=0"></span> a pour racines <span class="katex-inline" data-katex="r_1=1, r_2=2"></span>. La solution homogène est donc <span class="katex-inline" data-katex="y_h(x) = c_1 e^x + c_2 e^{2x}"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 2 : Recherche d'une Solution Particulière</h4><p>Le second membre est <span class="katex-inline" data-katex="x"></span>, un polynôme de degré 1. On cherche une solution particulière de la forme <span class="katex-inline" data-katex="y_p(x) = ax+b"></span>. On calcule ses dérivées : <span class="katex-inline" data-katex="y'_p = a, y''_p = 0"></span>. On substitue dans l'équation complète : <span class="katex-display" data-katex="0 - 3(a) + 2(ax+b) = x"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 3 : Identification des Coefficients</h4><p>En identifiant les coefficients des puissances de x, on obtient le système : <span class="katex-inline" data-katex="2a = 1"></span> et <span class="katex-inline" data-katex="2b-3a = 0"></span>. Cela donne <span class="katex-inline" data-katex="a = 1/2"></span> et <span class="katex-inline" data-katex="b = 3/4"></span>. La solution particulière est <span class="katex-inline" data-katex="y_p(x) = \frac{1}{2}x + \frac{3}{4}"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">Étape 4 : Solution Générale</h4><p>La solution générale est la somme de la solution homogène et de la solution particulière : <span class="katex-display" data-katex="y(x) = y_h(x) + y_p(x) = c_1 e^x + c_2 e^{2x} + \frac{1}{2}x + \frac{3}{4}"></span>.</p></div></div>
+    <div id="hint3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('hint3')">&times;</span></div><p>1. Pour la première intégrale, utilisez la décomposition en éléments simples. La forme sera <span class="katex-inline" data-katex="\frac{A}{x-1} + \frac{B}{(x-1)^2} + \frac{C}{(x-1)^3} + \frac{Dx+E}{x^2+1}"></span>.</p><p>2. Pour la deuxième, une substitution simple <span class="katex-inline" data-katex="u = \ln(x^2+1)"></span> est très efficace.</p><p>3. Pour la troisième, l'intégration par parties est la voie à suivre.</p></div></div>
+    <div id="knowledge3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('knowledge3')">&times;</span></div><p><strong>Décomposition en éléments simples :</strong> Pour intégrer des fractions rationnelles.</p><p><strong>Intégration par substitution (u-substitution) :</strong> Simplifie les intégrales en changeant la variable d'intégration.</p><p><strong>Intégration par parties :</strong> Basée sur la règle de dérivation d'un produit, utile pour intégrer des produits de fonctions. Formule : <span class="katex-inline" data-katex="\int u dv = uv - \int v du"></span>.</p></div></div>
+    <div id="explanation3" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 3</h3><span class="close-btn" onclick="closeModal('explanation3')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Intégrale par Décomposition en Éléments Simples</h4><p>L'intégrande <span class="katex-inline" data-katex="\frac{x^4+2x+1}{(x-1)^3(x^2+1)}"></span> est décomposé en <span class="katex-inline" data-katex="\frac{1}{x-1} + \frac{1}{(x-1)^2} + \frac{2}{(x-1)^3} + \frac{1}{x^2+1}"></span>. Après avoir trouvé les coefficients, on intègre chaque terme séparément pour obtenir <span class="katex-inline" data-katex="\ln|x-1| - \frac{1}{x-1} - \frac{1}{(x-1)^2} + \arctan x + C"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Intégrale par Substitution</h4><p>Pour <span class="katex-inline" data-katex="\int \frac{2x \ln(x^2+1)}{x^2+1}dx"></span>, on pose <span class="katex-inline" data-katex="u = \ln(x^2+1)"></span>. Alors <span class="katex-inline" data-katex="du = \frac{2x}{x^2+1}dx"></span>. L'intégrale devient <span class="katex-inline" data-katex="\int u du"></span>, qui s'intègre facilement en <span class="katex-inline" data-katex="\frac{1}{2}u^2 + C"></span>. En revenant à x, on a <span class="katex-inline" data-katex="\frac{1}{2}(\ln(x^2+1))^2 + C"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">3. Intégrale par Parties</h4><p>Pour <span class="katex-inline" data-katex="\int 2x \arctan(x) dx"></span>, on choisit <span class="katex-inline" data-katex="u = \arctan x"></span> et <span class="katex-inline" data-katex="dv = 2x dx"></span>. On calcule <span class="katex-inline" data-katex="du = \frac{1}{1+x^2}dx"></span> et <span class="katex-inline" data-katex="v = x^2"></span>. En appliquant la formule d'intégration par parties, on obtient <span class="katex-inline" data-katex="x^2 \arctan x - \int \frac{x^2}{1+x^2}dx"></span>. L'intégrale restante, <span class="katex-inline" data-katex="\int \frac{x^2}{1+x^2}dx"></span>, est simplifiée et calculée pour donner le résultat final <span class="katex-inline" data-katex="(x^2+1)\arctan x - x + C"></span>.</p></div></div>
+    <div id="hint4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Indice pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('hint4')">&times;</span></div><p>1. Pour calculer le D.L., utilisez la forme exponentielle <span class="katex-inline" data-katex="f(x) = e^{\sin x \ln(1+x)}"></span>. Calculez d'abord le D.L. de l'exposant <span class="katex-inline" data-katex="\sin x \ln(1+x)"></span>, puis composez-le avec le D.L. de <span class="katex-inline" data-katex="e^u"></span>.</p><p>2. Pour la limite, remplacez <span class="katex-inline" data-katex="f(x)"></span> et <span class="katex-inline" data-katex="x \ln(1+x)"></span> par leurs D.L. respectifs au numérateur et simplifiez.</p></div></div>
+    <div id="knowledge4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Prérequis pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('knowledge4')">&times;</span></div><p><strong>Développements Limités (D.L.) :</strong> Approximation d'une fonction par un polynôme au voisinage d'un point. Il faut connaître les D.L. usuels de <span class="katex-inline" data-katex="\sin x"></span>, <span class="katex-inline" data-katex="\ln(1+x)"></span> et <span class="katex-inline" data-katex="e^x"></span>.</p><p><strong>Opérations sur les D.L. :</strong> Savoir additionner, multiplier et composer des développements limités.</p><p><strong>Calcul de limites avec les D.L. :</strong> Le D.L. permet de trouver la partie principale d'une fonction pour lever les indéterminations.</p></div></div>
+    <div id="explanation4" class="modal"><div class="modal-content"><div class="modal-header"><h3 class="modal-title">Explication Détaillée pour l'Exercice 4</h3><span class="close-btn" onclick="closeModal('explanation4')">&times;</span></div><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">1. Calcul du Développement Limité</h4><p><strong>Étape 1 : Forme exponentielle.</strong> On écrit <span class="katex-inline" data-katex="f(x) = (1+x)^{\sin x} = e^{\sin x \ln(1+x)}"></span>.</p><p><strong>Étape 2 : D.L. de l'exposant.</strong> On multiplie les D.L. connus de <span class="katex-inline" data-katex="\sin x = x - \frac{x^3}{6} + o(x^4)"></span> et <span class="katex-inline" data-katex="\ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + o(x^4)"></span> en ne gardant que les termes jusqu'à l'ordre 4. <span class="katex-display" data-katex="(\sin x)(\ln(1+x)) = (x - \frac{x^3}{6})(x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4}) + o(x^4)"></span>. Le produit est <span class="katex-inline" data-katex="x^2 - \frac{x^3}{2} + \frac{x^4}{6} + o(x^4)"></span>.</p><p><strong>Étape 3 : Composition.</strong> On pose <span class="katex-inline" data-katex="u = x^2 - \frac{x^3}{2} + \frac{x^4}{6}"></span> et on utilise le D.L. de <span class="katex-inline" data-katex="e^u"></span>. On substitue <span class="katex-inline" data-katex="u"></span> dans le D.L. de <span class="katex-inline" data-katex="e^u = 1 + u + \frac{u^2}{2!} + o(u^2)"></span>, en faisant attention aux puissances de u. On obtient <span class="katex-inline" data-katex="f(x) = 1 + x^2 - \frac{x^3}{2} + \frac{2}{3}x^4 + o(x^4)"></span>.</p><h4 class="text-xl font-bold mt-4 mb-2 text-blue-300">2. Calcul de la Limite</h4><p><strong>Étape 1 : D.L. du numérateur.</strong> On calcule le D.L. de <span class="katex-inline" data-katex="f(x) - x\ln(1+x) - 1"></span>. Le D.L. de <span class="katex-inline" data-katex="x\ln(1+x)"></span> est <span class="katex-inline" data-katex="x(x - \frac{x^2}{2} + \frac{x^3}{3} + o(x^3)) = x^2 - \frac{x^3}{2} + \frac{x^4}{3} + o(x^4)"></span>. On soustrait ce D.L. et 1 du D.L. de f(x) trouvé précédemment : <span class="katex-display" data-katex="(1 + x^2 - \frac{x^3}{2} + \frac{2}{3}x^4) - (x^2 - \frac{x^3}{2} + \frac{x^4}{3}) - 1 + o(x^4) = \frac{1}{3}x^4 + o(x^4)"></span>.</p><p><strong>Étape 2 : Calcul de la limite.</strong> La limite devient <span class="katex-inline" data-katex="\lim_{x \to 0} \frac{\frac{1}{3}x^4 + o(x^4)}{x^4}"></span>. Le résultat est le coefficient du terme de plus bas degré, soit <span class="katex-inline" data-katex="\frac{1}{3}"></span>.</p></div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Defer rendering slightly to ensure all content is loaded
+            setTimeout(() => {
+                document.querySelectorAll('.katex-inline, .katex-display').forEach(el => {
+                    const content = el.getAttribute('data-katex');
+                    // Ensure content is not empty to avoid KaTeX errors
+                    if (content) {
+                        const displayMode = el.classList.contains('katex-display');
+                        try {
+                            katex.render(content, el, {
+                                throwOnError: false, // Don't throw errors, log to console instead
+                                displayMode: displayMode
+                            });
+                        } catch (e) {
+                            console.error("KaTeX rendering error for content:", content, e);
+                            el.innerHTML = `<span style='color: red;'>Erreur LaTeX: ${content}</span>`;
+                        }
+                    }
+                });
+            }, 100);
+        });
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
