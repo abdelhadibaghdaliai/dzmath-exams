@@ -20,6 +20,23 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
 }
 
 /* Navigation Bar */
@@ -37,354 +54,316 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--heading-color);
+    color: var(--accent-color);
 }
 
 .navbar-links {
     display: flex;
-    gap: 2rem;
-    /* Added to align button */
+    gap: 1.5rem;
     align-items: center;
 }
 
 .navbar-links a {
-    text-decoration: none;
     color: var(--text-color);
-    font-weight: 600;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.navbar-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--accent-color);
-    transition: width 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem;
 }
 
 .navbar-links a:hover {
-    color: var(--heading-color);
+    color: var(--accent-color);
 }
 
-.navbar-links a:hover::after {
-    width: 100%;
+.lang-button {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.lang-button:hover {
+    background-color: var(--primary-color);
+    opacity: 0.9;
 }
 
 .navbar-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 .navbar-toggle span {
+    display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--heading-color);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-/* Hamburger Menu (Mobile) */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-        width: 100%;
-        position: absolute;
-        top: 70px; /* Adjust as needed based on header height */
-        left: 0;
-        background-color: var(--card-color);
-        padding: 1.5rem 0;
-        border-bottom: 1px solid var(--primary-color);
-    }
-
-    .navbar-links.is-active {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
+    background-color: var(--text-color);
+    margin: 4px 0;
+    transition: all 0.3s;
 }
 
 /* Hero Section */
 .hero-section {
-    display: flex;
-    align-items: center;
-    /* Changed to center the single content block */
-    justify-content: center; 
-    padding: 4rem 5%;
-    max-width: 1400px;
-    margin: 2rem auto;
-    gap: 2rem;
+    text-align: center;
+    padding: 6rem 5% 4rem;
+    background: linear-gradient(135deg, #1e3a8a 0%, var(--background-color) 100%);
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
-    /* Added to center text */
-    text-align: center; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
     color: var(--heading-color);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
 }
 
-.hero-content .subtitle {
-    font-size: 1.1rem;
+.hero-content p {
+    font-size: 1.25rem;
     color: var(--subtle-text-color);
     margin-bottom: 2rem;
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--heading-color);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #1d4ed8; /* Darker blue */
     transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(37, 99, 235, 0.25);
 }
 
-/* Hero image style removed */
-
-@media (max-width: 900px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    /* Hero image media query removed */
+.cta-button:first-child {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
 }
 
-/* How It Works Section */
-.how-it-works, .featured-subjects {
+/* New Upload Button Styling */
+.cta-upload {
+    background-color: #10b981; /* A vibrant teal/green for attention */
+    color: var(--heading-color);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.5);
+}
+
+.cta-upload:hover {
+    background-color: #059669; /* Darker green on hover */
+    box-shadow: 0 8px 15px rgba(16, 185, 129, 0.7);
+}
+
+
+/* New: How It Works Section Styles */
+.how-it-works-section {
     padding: 4rem 5%;
-    max-width: 1400px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.how-it-works-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.how-it-works-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.how-it-works h2, .featured-subjects h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--heading-color);
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.steps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.step {
+.step-card {
     background-color: var(--card-color);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step:hover {
+.step-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
 }
 
-.step-number {
-    font-size: 1.5rem;
+.step-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--heading-color);
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
-.step h3 {
-    font-size: 1.25rem;
+.step-card h3 {
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--heading-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.step p {
+.step-card p {
     color: var(--subtle-text-color);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* Featured Subjects Section */
-.subjects-grid {
+
+/* Subjects Section */
+.subjects-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.subjects-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 3rem;
+}
+
+.subject-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .subject-card {
     background-color: var(--card-color);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #334155;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .subject-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .subject-card h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.subject-card:hover h3 {
     color: var(--heading-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
 }
 
 .subject-card p {
     color: var(--subtle-text-color);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .new-subject {
-    background: repeating-linear-gradient(
-        -45deg,
-        var(--card-color),
-        var(--card-color) 10px,
-        #27364d 10px,
-        #27364d 20px
-    );
     opacity: 0.7;
+    background-color: #1a2333;
+    cursor: default;
+}
+
+.new-subject:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.new-subject h3 {
+    color: var(--subtle-text-color);
+}
+
+.new-subject:hover h3 {
+    color: var(--subtle-text-color);
 }
 
 /* Footer */
 .main-footer-bottom {
-    text-align: center;
     padding: 2rem 5%;
-    border-top: 1px solid var(--card-color);
+    background-color: var(--card-color);
+    border-top: 1px solid #334155;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.main-footer-bottom p {
+    margin: 0;
     color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
 }
 
 .social-media a {
-    color: var(--subtle-text-color);
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
 .social-media a:hover {
-    color: var(--heading-color);
+    color: var(--accent-color);
 }
 
-/*
-=================================
-Scroll Animation Styles
-=================================
-*/
 
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    transition-delay: var(--delay, 0ms); /* Use CSS variable for delay */
-}
-
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/*
-=================================
-ADDED: Language Button Styles
-=================================
-*/
-
-.lang-button {
-    background-color: transparent;
-    color: var(--heading-color);
-    border: 1px solid var(--primary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 1rem; 
-}
-
-.lang-button:hover {
-    background-color: var(--primary-color);
-    color: var(--heading-color);
-}
-
-/* Responsive adjustment for button inside hamburger menu */
-@media (max-width: 768px) {
-    .lang-button {
-        margin-left: 0; /* Remove left margin in mobile view */
-        margin-top: 0.5rem; 
-        /* Make width consistent with nav links padding */
-        width: 100%; 
-        max-width: 200px; /* Set a max-width */
-        text-align: center;
-    }
-}
-
-/*
-=================================
-ADDED: Utility Class
-=================================
-*/
-/* This will be used by the script.js on the Analysis pages */
-.hidden {
-    display: none;
-}
-
-/*
-=================================
-ADDED: Exam Page Styles
-=================================
-*/
+/* Exam Page Specific Styles */
 .exam-page-main {
-    padding: 4rem 5%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    /* Ensure footer stays at bottom if content is short */
+    padding: 2rem 5%;
+    /* Ensures footer stays at bottom if content is short */
     flex-grow: 1; 
 }
 
@@ -423,27 +402,71 @@ ADDED: Exam Page Styles
     font-weight: 600;
     font-size: 1.1rem;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .exam-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
 }
 
-/* This is needed to make the sticky footer work 
-on the new exam pages, which might be short.
-*/
-body {
-    /* Make body a flex column */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.hidden {
+    display: none;
 }
 
-.main-content {
-    /* Make main content grow to fill space */
+/* --- Styles for About Page (NOW MODIFIED) --- */
+
+.about-page-main {
+    max-width: 900px; /* More narrow for text content */
+    margin: 0 auto;
+    padding: 2rem 5%;
     flex-grow: 1;
+}
+
+.about-page-main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+}
+
+/* THIS IS THE FIX: */
+.about-section {
+    /* Removed the card background for a cleaner, open look */
+    background-color: transparent;
+    border: none;
+    /* Remove padding, let the .about-page-main handle it */
+    padding: 0;
+}
+
+/* THIS IS THE FIX: */
+.about-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    /* Change headings from bright blue to a softer white */
+    color: var(--heading-color, #ffffff);
+    margin-bottom: 1rem;
+    margin-top: 2rem; /* Add more space between sections */
+}
+
+.about-section h2:first-of-type {
+    margin-top: 0;
+}
+
+/* THIS IS THE FIX: */
+.about-section p {
+    /* Use the more subtle text color for easier reading */
+    color: var(--subtle-text-color, #94a3b8);
+    font-size: 1.1rem; /* A comfortable reading size */
+    line-height: 1.8; /* More space between lines */
+    margin-bottom: 1rem;
+}
+
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
