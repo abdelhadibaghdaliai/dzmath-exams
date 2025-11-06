@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title will be set by the script -->
+    <title data-lang="about_page_title">About - ExamsNexus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- The inline <style> block from the previous attempt has been REMOVED -->
+    <!-- All styles are now correctly in style.css -->
+
+</head>
+<body>
+
+    <header class="main-header">
+<!-- ... (rest of the file is unchanged) ... -->
+        <nav class="navbar">
+            <div class="logo">
+                <div class="navbar-brand" data-lang="logo">ExamsNexus</div>
+            </div>
+            
+            <div class="navbar-links">
+                <!-- Links updated to point to correct pages -->
+                <a href="index.html" data-lang="nav_home">Home</a>
+                <a href="index.html#subjects" data-lang="nav_subjects">Subjects</a>
+                <a href="about.html" data-lang="nav_about">About</a>
+                <button id="lang-switcher" class="lang-button" data-lang-toggle="fr">
+                    FR
+                </button>
+            </div>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main content for the About page -->
+    <main class="about-page-main">
+        <h1 data-lang="about_title">About ExamsNexus</h1>
+
+        <section class="about-section" id="content-en">
+            <h2 data-lang="about_mission_title">Our Mission</h2>
+            <p data-lang="about_mission_text">
+                Our vision is to be the number one platform in Algeria for archiving and presenting university exams in a modern, engaging, and non-boring way. We want to move away from static files and create an interactive, helpful resource for all students.
+            </p>
+
+            <h2 data-lang="about_story_title">Our Story</h2>
+            <p data-lang="about_story_text">
+                ExamsNexus started with a simple idea: make studying for exams easier. We are currently offering <strong>17 exams for Analysis 1</strong> and <strong>17 exams for Analysis 2</strong> from the <strong>University of USTHB (L1 Computer Science)</strong>. This is just the beginning. Our goal is to rapidly expand to include more modules, more universities, and more resources to help you succeed.
+            </p>
+
+            <h2 data-lang="about_contribute_title">Help Us Grow!</h2>
+            <p data-lang="about_contribute_text">
+                This project relies on contributions from students like you! If you have university exams (with or without solutions), please upload them. We will do our best to convert them into interactive web pages for everyone to benefit from.
+            </p>
+            <div class="about-buttons">
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank" class="cta-button cta-upload" data-lang="hero_upload">
+                    Contribute & Upload Your Exam
+                </a>
+            </div>
+        </section>
+
+        <section class="about-section hidden" id="content-fr">
+            <h2 data-lang="about_mission_title_fr">Notre Mission</h2>
+            <p data-lang="about_mission_text_fr">
+                Notre vision est d'être la première plateforme en Algérie pour l'archivage et la présentation des examens universitaires d'une manière moderne, engageante et non ennuyeuse. Nous voulons nous éloigner des fichiers statiques et créer une ressource interactive et utile pour tous les étudiants.
+            </p>
+
+            <h2 data-lang="about_story_title_fr">Notre Histoire</h2>
+            <p data-lang="about_story_text_fr">
+                ExamsNexus a commencé avec une idée simple : faciliter la révision des examens. Nous proposons actuellement <strong>17 examens d'Analyse 1</strong> et <strong>17 examens d'Analyse 2</strong> de l'<strong>Université de l'USTHB (L1 Informatique)</strong>. Ce n'est que le début. Notre objectif est de nous étendre rapidement pour inclure plus de modules, plus d'universités et plus de ressources pour vous aider à réussir.
+            </p>
+
+            <h2 data-lang="about_contribute_title_fr">Aidez-nous à grandir !</h2>
+            <p data-lang="about_contribute_text_fr">
+                Ce projet repose sur les contributions d'étudiants comme vous ! Si vous avez des examens universitaires (avec ou sans solutions), veuillez les télécharger. Nous ferons de notre mieux pour les convertir en pages web interactives dont tout le monde pourra bénéficier.
+            </p>
+            <div class="about-buttons">
+                <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform" target="_blank" class="cta-button cta-upload" data-lang="hero_upload_fr">
+                    Contribuez et Uploadez Votre Examen
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-bottom">
+        <p data-lang="footer_created_by">Created by BAGHDALI ABDELHADI</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/examsnexus" target="_blank">Instagram</a>
+            <a href="https://t.me/examsnexus" target="_blank">Telegram</a>
+        </div>
+        <p data-lang="footer_copyright">&copy; 2025 ExamsNexus. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
